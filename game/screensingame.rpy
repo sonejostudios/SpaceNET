@@ -81,12 +81,12 @@ screen buttons:
     
 
     
-    
-    # mute all sounds
-    #key "m" action Preference("all mute", "toggle")
-    
-    # TOGGLE SUPERDEV
-    #key "d" action ToggleVariable("superdev")
+    if use_dev_keys == True:
+        # mute all sounds
+        key "m" action Preference("all mute", "toggle")
+        
+        # TOGGLE SUPERDEV
+        key "d" action ToggleVariable("superdev")
     
     
     

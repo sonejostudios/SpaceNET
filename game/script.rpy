@@ -332,7 +332,9 @@ image galaxy_intro:
 define config.main_menu_music = "music/space.ogg"
 
 #mouse cursor
-define config.mouse = {"default" : [("images/cursor_default.png", 30, 30)]}       
+#define config.mouse = {"default" : [("images/cursor_default.png", 30, 30)]}
+define config.mouse = None    
+
 
 # see also in option.py
         
@@ -342,20 +344,14 @@ init :
     # demo version
     $ demo_version = False
     
-    
-    # developer mode (True/False) activate with "d" key -> desactivate d key in screeningame.py
+    # developer mode (True/False). For release = False
     $ superdev = False
     
+    # use dev-keys and show superdev prefs button. For release = False
+    $ use_dev_keys = False
     
-    # ->comment screen _performance in space, togglebutton navigation screen
-    if not renpy.variant("pc"):
-        $ superdev = False
-        
-        
-    # point'n'click mode
-    $ pnc_mode = False
-    $ pnc_nodes_visible = True
-        
+
+
 
     
     $ imagemapsdir = "images/maps/"
@@ -450,8 +446,16 @@ init :
     
     
     
-## settings    
+## settings
+    # point'n'click mode
+    $ pnc_mode = False
+    $ pnc_nodes_visible = True
+    
+    
+    # cursor style
+    $ pnc_cursor = False
 
+    # display
     $ termfx_enable = 1
     $ shadow_enable = 1
     $ galaxy_enable = 1
@@ -459,7 +463,6 @@ init :
     # multiplicator for stars amount. for android = 1, for pc = 4
     # this as to set at compile time
     #$ starsamount = 1 this is set in animations.rpy
-    
 
     $ in_intro = True
  
@@ -527,9 +530,7 @@ label start:
     
     # reset coins
     $ coins = 0
-    
-    
-    
+
     
     #$ xylo_mine_used_dynamite = False
     #$ xylo_mine_minitrain_room_pick = False

@@ -362,7 +362,8 @@ screen navigation():
 
             textbutton _("Main Menu") action MainMenu() activate_sound "sounds/beep.ogg"
             
-            textbutton "Superdev" action ToggleVariable("superdev")
+            if use_dev_keys == True:
+                textbutton "Superdev" action ToggleVariable("superdev")
             
 
             
@@ -809,6 +810,21 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
+init 1 python:
+    def change_cursor(type="default"):
+        persistent.mouse = type
+        if type == "default":
+            setattr(config, "mouse", None)
+        elif type == "pnc":
+            setattr(config, "mouse", {"default" : [("images/cursor_default.png", 30, 30)]})
+            
+    if not hasattr(persistent, "mouse"):
+        change_cursor()
+    else:
+        change_cursor(persistent.mouse)
+
+
+
 screen preferences():
 
     tag menu
@@ -849,15 +865,22 @@ screen preferences():
                 #    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
                 
                 
-                null height 10
+                null height 20
                 vbox:
                     style_prefix "radio"
                     label _("Gameplay Mode")
-                    textbutton _("Touch Screen") action SetVariable("pnc_mode", False)
+                    textbutton _("Default") action SetVariable("pnc_mode", False)
                     textbutton _("Point'n'Click") action SetVariable("pnc_mode", True)
+                    
+                null height 20
+                vbox:
+                    style_prefix "radio"
+                    label _("Cursor Style")
+                    textbutton _("System") action [SetVariable("pnc_cursor", False), Function(change_cursor, type="default")]
+                    textbutton _("Retro") action [SetVariable("pnc_cursor", True), Function(change_cursor, type="pnc")]
                 
                 
-                null height 10
+                null height 20
                 vbox:
                     style_prefix "check"
                     #style_prefix "radio"
@@ -919,7 +942,7 @@ screen preferences():
                 ## added here, to add additional creator-defined preferences.
 
             #null height (4 * gui.pref_spacing)
-            null height 10
+            null height 20
             
             hbox:
                 style_prefix "slider"
@@ -938,7 +961,7 @@ screen preferences():
                     #bar value Preference("auto-forward time")
 
                 vbox:
-                    null height 10
+                    null height 20
 
                     if config.has_music:
                         label _("Music Volume")
@@ -977,7 +1000,7 @@ screen preferences():
                     #if config.has_music or config.has_sound or config.has_voice:
                     
                     #null height gui.pref_spacing
-                    null height 10
+                    null height 20
 
                     textbutton _("Mute All"):
                         action Preference("all mute", "toggle")

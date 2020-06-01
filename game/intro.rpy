@@ -32,7 +32,7 @@ init:
 
 # start intro
 label intro:
-    
+    $ pnc_nodes_visible = False
     
     $ superdev = False
     
