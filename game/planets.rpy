@@ -1,0 +1,163 @@
+#planet information
+
+# screen shown in orbital view
+screen planet_info:
+    vbox:
+        pos (50,100)
+        text "{color=#8dd35f}DATA"
+        null height 10
+        text "{color=#8dd35f}Name: [planet_name]"
+        text "{color=#8dd35f}Type: [planet_type]"
+        text "{color=#8dd35f}Size: [planet_size]"
+        text "{color=#8dd35f}Moon(s): [planet_moons]"
+        text "{color=#8dd35f}Atmosphere: [planet_atmosphere]"
+        text "{color=#8dd35f}Temperature: [planet_temperature]"
+        text "{color=#8dd35f}Radiations: [planet_radiations]"  
+        text "{color=#8dd35f}Habitable: [planet_habitable]"
+        text "{color=#8dd35f}Inhabited: [planet_inhabited]"
+        text "{color=#8dd35f}Auth. needed: [planet_auth_needed]"
+        text "{color=#8dd35f}Required ship: [planet_required_ship]"
+
+
+
+
+init:
+    
+    # set orbit of planet
+    $ planet = "none"
+    
+    #planet variables
+    $ planet_name = "-"
+    $ planet_type = "-"
+    $ planet_size = "-"
+    $ planet_moons = "-"
+    $ planet_atmosphere = "-"
+    $ planet_temperature = "-"
+    $ planet_radiations = "-"
+    $ planet_habitable = "-"
+    $ planet_inhabited = "-"
+    $ planet_auth_needed = "-"
+    $ planet_required_ship = "-"
+    
+    #specific planet variables
+    $ planetxy_auth = False
+
+
+# planet info called by orbital view
+label planet_info:
+    
+    #for testing only
+    #$ planet = "planet1"
+    
+    
+    if planet == "none":
+        $ planet_name = "-"
+        $ planet_type = "-"
+        $ planet_size = "-"
+        $ planet_moons = "-"
+        $ planet_atmosphere = "-"
+        $ planet_temperature = "-"
+        $ planet_radiations = "-"
+        $ planet_habitable = "-"
+        $ planet_inhabited = "-"
+        $ planet_auth_needed = "-"
+        $ planet_required_ship = "-"
+        
+    if planet == "megaship":
+        $ planet_name = "megaship"
+        $ planet_type = "spaceship"
+        $ planet_size = "2 km^3"
+        $ planet_moons = "none"
+        $ planet_atmosphere = "Yes"
+        $ planet_temperature = "24"
+        $ planet_radiations = "No"
+        $ planet_habitable = "Yes"
+        $ planet_inhabited = "Yes"
+        $ planet_auth_needed = "No"
+        $ planet_required_ship = "Any"
+        
+    
+    if planet == "xylo":
+        $ planet_name = "xylo"
+        $ planet_type = "Planet"
+        $ planet_size = "10000 km^3"
+        $ planet_moons = "2"
+        $ planet_atmosphere = "Yes"
+        $ planet_temperature = "22"
+        $ planet_radiations = "No"
+        $ planet_habitable = "Yes"
+        $ planet_inhabited = "Yes"
+        $ planet_auth_needed = "Yes"
+        $ planet_required_ship = "Any"
+        
+        
+    if planet == "demo":
+        $ planet_name = "Demo"
+        $ planet_type = "Planet"
+        $ planet_size = "12 km^3"
+        $ planet_moons = "3"
+        $ planet_atmosphere = "Yes"
+        $ planet_temperature = "26"
+        $ planet_radiations = "No"
+        $ planet_habitable = "Yes"
+        $ planet_inhabited = "Yes"
+        $ planet_auth_needed = "No"
+        $ planet_required_ship = "Any"
+        
+        
+    if planet == "io11":
+        $ planet_name = "Io-11"
+        $ planet_type = "Satellite"
+        $ planet_size = "10 m^3"
+        $ planet_moons = "none"
+        $ planet_atmosphere = "No"
+        $ planet_temperature = "-60"
+        $ planet_radiations = "No"
+        $ planet_habitable = "No"
+        $ planet_inhabited = "No"
+        $ planet_auth_needed = "No"
+        $ planet_required_ship = "SD2+"
+        
+        
+    if planet == "cargo":
+        $ planet_name = "Space Cargo"
+        $ planet_type = "Spaceship"
+        $ planet_size = "1 km^3"
+        $ planet_moons = "none"
+        $ planet_atmosphere = "Yes"
+        $ planet_temperature = "19"
+        $ planet_radiations = "No"
+        $ planet_habitable = "Yes"
+        $ planet_inhabited = "Yes"
+        $ planet_auth_needed = "No"
+        $ planet_required_ship = "Any"
+        
+    if planet == "isc":
+        $ planet_name = "Industrial Space City"
+        $ planet_type = "Space City"
+        $ planet_size = "10 km^3"
+        $ planet_moons = "none"
+        $ planet_atmosphere = "Yes"
+        $ planet_temperature = "20"
+        $ planet_radiations = "No"
+        $ planet_habitable = "Yes"
+        $ planet_inhabited = "Yes"
+        $ planet_auth_needed = "No"
+        $ planet_required_ship = "Any"
+        
+        
+    if planet == "sun":
+        $ planet_name = "Sun"
+        $ planet_type = "Star"
+        $ planet_size = "1000000 km^3"
+        $ planet_moons = "3"
+        $ planet_atmosphere = "No"
+        $ planet_temperature = "20000"
+        $ planet_radiations = "Yes"
+        $ planet_habitable = "No"
+        $ planet_inhabited = "No"
+        $ planet_auth_needed = "No"
+        $ planet_required_ship = "-"
+    
+    
+    return

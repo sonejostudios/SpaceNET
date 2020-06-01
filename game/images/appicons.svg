@@ -1,0 +1,3525 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="432"
+   height="432"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="appicons.svg"
+   inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/full_icon.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   style="enable-background:new">
+  <defs
+     id="defs4">
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2384"
+       effect="spiro" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2427"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2423"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2386"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2383"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2380"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2377"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2374"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2371"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2050"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2040"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2037"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2034"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2031"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2028"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2025"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2216"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect2214"
+       is_visible="true"
+       steps="1"
+       threshold="0.00783663"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2210"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect2208"
+       is_visible="true"
+       steps="1"
+       threshold="0.00783663"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2204"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect2202"
+       is_visible="true"
+       steps="1"
+       threshold="0.00783663"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect2198"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="simplify"
+       id="path-effect2196"
+       is_visible="true"
+       steps="1"
+       threshold="0.00783663"
+       smooth_angles="360"
+       helper_size="0"
+       simplify_individual_paths="false"
+       simplify_just_coalesce="false"
+       simplifyindividualpaths="false"
+       simplifyJustCoalesce="false" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1865"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect11545"
+       is_visible="true" />
+    <marker
+       inkscape:stockid="EmptyTriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="EmptyTriangleInM"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1612"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,1.8,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Sstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Sstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1470"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker10181"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path10179"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker9871"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path9869"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker9567"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path9565"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker9269"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path9267"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8977"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path8975"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8691"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path8689"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8411"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path8409"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker8137"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path8135"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker7869"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path7867"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker7607"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path7605"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker7351"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path7349"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker7101"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path7099"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker6857"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path6855"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker6619"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path6617"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker6387"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path6385"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker6161"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path6159"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5941"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5939"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5727"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5725"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5519"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5517"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5317"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5315"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker5121"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5119"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4931"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4929"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4747"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4745"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4569"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4567"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4397"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4395"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4231"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4229"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker4071"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4069"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3916"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3914"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3768"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3766"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3626"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3624"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3490"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3488"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3360"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3358"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3236"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3234"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3118"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3116"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker3006"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path3004"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2900"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2898"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2800"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2798"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2706"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2704"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2618"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2616"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2536"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2534"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1461"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2200"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2198"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2136"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2134"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2078"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2076"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker2026"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path2024"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1980"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1978"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1874"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1872"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1840"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1838"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1782"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1780"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="marker1742"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1740"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1458"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1456"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1452"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1448"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1442"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4342"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4339"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4336"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4333"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4330"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4327"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4265"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4261"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4257"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4253"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect4249"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4245"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect4241"
+       is_visible="true" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6303">
+      <stop
+         style="stop-color:#8dd35f;stop-opacity:1;"
+         offset="0"
+         id="stop6305" />
+      <stop
+         style="stop-color:#8dd35f;stop-opacity:0;"
+         offset="1"
+         id="stop6307" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6297"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop6299" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6275"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#112119;stop-opacity:1;"
+         offset="0"
+         id="stop6277" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient6269"
+       osb:paint="solid"
+       gradientTransform="translate(1580.5636,80.671739)">
+      <stop
+         style="stop-color:#8dd35f;stop-opacity:1;"
+         offset="0"
+         id="stop6271" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3474">
+      <stop
+         style="stop-color:#8dd35f;stop-opacity:1;"
+         offset="0"
+         id="stop3476" />
+      <stop
+         style="stop-color:#8dd35f;stop-opacity:0;"
+         offset="1"
+         id="stop3478" />
+    </linearGradient>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#pattern4184"
+       id="pattern5242"
+       patternTransform="translate(8012.1323,-405.36341)" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="614.25482"
+       height="397.9935"
+       patternTransform="translate(6114.2573,-405.3634)"
+       id="pattern4184">
+      <image
+         width="614.25482"
+         height="397.9935"
+         xlink:href="file:///home/vinz/RenPIGames/Rooms/game/sources/stars1.png"
+         id="image4181"
+         x="0"
+         y="0" />
+    </pattern>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3474"
+       id="linearGradient3480"
+       x1="1159.8101"
+       y1="601.67047"
+       x2="1160.8383"
+       y2="490.79712"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3474"
+       id="linearGradient6304"
+       gradientUnits="userSpaceOnUse"
+       x1="1159.8101"
+       y1="601.67047"
+       x2="1160.8383"
+       y2="490.79712" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3474"
+       id="linearGradient5446"
+       gradientUnits="userSpaceOnUse"
+       x1="1159.8101"
+       y1="601.67047"
+       x2="1160.8383"
+       y2="490.79712" />
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="614.25482"
+       height="397.9935"
+       patternTransform="translate(6114.2573,-405.3634)"
+       id="pattern4184-5">
+      <image
+         width="614.25482"
+         height="397.9935"
+         xlink:href="file:///home/vinz/RenPIGames/Rooms/game/sources/stars1.png"
+         id="image4181-4"
+         x="0"
+         y="0" />
+    </pattern>
+    <pattern
+       patternUnits="userSpaceOnUse"
+       width="614.25482"
+       height="397.9935"
+       patternTransform="translate(6114.2573,-405.3634)"
+       id="pattern4184-59">
+      <image
+         width="614.25482"
+         height="397.9935"
+         xlink:href="file:///home/vinz/RenPIGames/Rooms/game/sources/stars1.png"
+         id="image4181-2"
+         x="0"
+         y="0" />
+    </pattern>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6303"
+       id="linearGradient6347"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.81503939,0.81503939,-0.81503939,0.81503939,383.69821,1197.0919)"
+       x1="-505.77939"
+       y1="440.64557"
+       x2="-505.77939"
+       y2="417.69968" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6303"
+       id="linearGradient6350"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.81503939,0.81503939,-0.81503939,0.81503939,793.81293,1084.4766)"
+       x1="-505.77939"
+       y1="440.64557"
+       x2="-505.77939"
+       y2="417.69968" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect2386-3"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1442-3"
+       is_visible="true" />
+    <inkscape:path-effect
+       is_visible="true"
+       id="path-effect1448-6"
+       effect="spiro" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1452-7"
+       is_visible="true" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2655"
+       x="-0.5124"
+       width="2.0248"
+       y="-0.5124"
+       height="2.0248">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.5169322"
+         id="feGaussianBlur2657" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2598"
+       x="-0.20182142"
+       width="1.4036428"
+       y="-0.33538678"
+       height="1.6707736">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="8.9997806"
+         id="feGaussianBlur2600" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2655-5"
+       x="-0.51239997"
+       width="2.0248001"
+       y="-0.51239997"
+       height="2.0248001">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.5169322"
+         id="feGaussianBlur2657-6" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2598-4"
+       x="-0.20182142"
+       width="1.4036428"
+       y="-0.33538678"
+       height="1.6707736">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="8.9997806"
+         id="feGaussianBlur2600-3" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter7369"
+       x="-0.085407857"
+       width="1.1708157"
+       y="-1.2153568"
+       height="3.4307135">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="17.014994"
+         id="feGaussianBlur7371" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.87081275"
+     inkscape:cx="1224.5801"
+     inkscape:cy="139.5544"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer4"
+     showgrid="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="1014"
+     inkscape:window-x="116"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="true"
+     inkscape:snap-page="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1931" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="bg"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-620.3622)"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <path
+       style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 254.2295,488.82551 149.55308,-1.06066"
+       id="path4066"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+       x="6720.4883"
+       y="117.1218"
+       id="text4157"
+       transform="scale(0.97257305,1.0282004)"><tspan
+         sodipodi:role="line"
+         x="6720.4883"
+         y="117.1218"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.24523163px;line-height:50%;font-family:'Game Over';-inkscape-font-specification:'Game Over';text-align:start;writing-mode:lr-tb;text-anchor:start"
+         id="tspan4159"> </tspan></text>
+    <ellipse
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="path4108"
+       style="fill:none;stroke:#8dd35f;stroke-width:4.99999952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       cx="381.29208"
+       cy="284.6915"
+       rx="28.687185"
+       ry="6.1934619" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+       style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 381.82241,331.14071 -1.06066,-92.98454"
+       id="path4110"
+       inkscape:connector-curvature="0" />
+    <ellipse
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="path4116"
+       style="fill:none;stroke:#8dd35f;stroke-width:4.99999952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       cx="381.29208"
+       cy="268.0314"
+       rx="22.5"
+       ry="4.4687777" />
+    <ellipse
+       style="fill:none;stroke:#8dd35f;stroke-width:4.99999952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4118"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+       cx="381.29208"
+       cy="303.7403"
+       rx="22.5"
+       ry="4.4687777" />
+    <ellipse
+       style="fill:none;stroke:#8dd35f;stroke-width:4.99999952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4120"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+       cx="381.29208"
+       cy="253.94473"
+       rx="14.255738"
+       ry="3.2313404" />
+    <ellipse
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="path4122"
+       style="fill:none;stroke:#8dd35f;stroke-width:4.99999952;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       cx="381.29208"
+       cy="318.0592"
+       rx="14.255738"
+       ry="3.2313404" />
+    <circle
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sunpic.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="path3414"
+       style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       cx="576.45355"
+       cy="308.33652"
+       r="36.642136" />
+    <g
+       id="g4197"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-81.200784,-183.51377)">
+      <circle
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         transform="matrix(0.78691194,0,0,0.78691194,246.29881,81.827548)"
+         id="path5179"
+         style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:6.35395098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="130.5"
+         cy="507.86221"
+         r="37.5" />
+      <ellipse
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+         transform="matrix(1.0181176,0,0,0.63531136,20.138834,172.8903)"
+         id="path3422"
+         style="fill:none;stroke:#8dd35f;stroke-width:6.21695518;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="323"
+         cy="487.86218"
+         rx="55.5"
+         ry="17.5" />
+    </g>
+    <path
+       style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:5.00000048;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+       inkscape:transform-center-x="0.59726846"
+       inkscape:transform-center-y="2.1000504"
+       d="m 74.765636,307.56992 -15.51765,7.23849 -12.36808,10.23232 -13.52733,-6.46887 -11.68731,-14.68239 6.11699,-18.58536 6.18522,-11.95762 21.81005,-5.91595 11.00777,8.19059 1.26593,18.398 z"
+       id="path4192"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/meteorpic.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <circle
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic.png"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       id="path4195"
+       style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       cx="148.99608"
+       cy="296.54239"
+       r="29.509197" />
+    <g
+       id="g4323"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/planet3pic.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-81.200784,-183.51377)">
+      <circle
+         style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:6.35395098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4265"
+         transform="matrix(0.78691194,0,0,0.78691194,188.94093,169.01994)"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+         cx="130.5"
+         cy="507.86221"
+         r="37.5" />
+      <ellipse
+         style="fill:none;stroke:#8dd35f;stroke-width:6.6154933;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4267"
+         transform="matrix(0.89914343,0,0,0.63531136,1.2096127,260.08269)"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         cx="323"
+         cy="487.86218"
+         rx="55.5"
+         ry="17.5" />
+      <ellipse
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+         transform="matrix(1.1073022,0,0,0.63531136,-66.02567,260.08269)"
+         id="path4271"
+         style="fill:none;stroke:#8dd35f;stroke-width:5.96133614;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="323"
+         cy="487.86218"
+         rx="55.5"
+         ry="17.5" />
+    </g>
+    <g
+       id="g4315"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/stationpic.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="translate(-81.200784,-183.51377)">
+      <circle
+         style="fill:none;stroke:#8dd35f;stroke-width:27.62581062;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="path4291"
+         transform="matrix(0.38015302,0,0,0.08616908,368.67705,505.18712)"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+         cx="130.5"
+         cy="507.86221"
+         r="37.5" />
+      <circle
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         transform="matrix(0.38015302,0,0,0.08616908,368.67705,577.6766)"
+         id="path4293"
+         style="fill:none;stroke:#8dd35f;stroke-width:27.62581062;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="130.5"
+         cy="507.86221"
+         r="37.5" />
+      <g
+         transform="translate(-13.374998,3)"
+         id="g4311">
+        <path
+           inkscape:connector-curvature="0"
+           id="path4285"
+           d="m 439.31735,629.12368 -1.06066,-92.98455"
+           style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+        <path
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+           style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 425.06735,629.12368 -1.06066,-92.98455"
+           id="path4301"
+           inkscape:connector-curvature="0" />
+      </g>
+      <circle
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/prisonpic.png"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         transform="matrix(0.76499159,0,0,0.45849231,318.45562,352.78049)"
+         id="path4309"
+         style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:8.44258785;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="130.5"
+         cy="507.86221"
+         r="37.5" />
+    </g>
+    <rect
+       style="opacity:1;fill:#112119;fill-opacity:1;stroke:#000000;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.01574802;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect2425"
+       width="206.70345"
+       height="174.54958"
+       x="-262.52509"
+       y="321.4725"
+       rx="5.9938698"
+       ry="5.9938698" />
+    <rect
+       style="opacity:1;fill:#112119;fill-opacity:1;stroke:none;stroke-width:2.27789593;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.01574802;stroke-opacity:1;paint-order:stroke markers fill;enable-background:new"
+       id="rect2425-3"
+       width="432"
+       height="432.00006"
+       x="-7.1054274e-15"
+       y="620.36218"
+       rx="0"
+       ry="0" />
+    <circle
+       transform="matrix(0.43126538,0,0,0.43126538,-275.82664,275.477)"
+       r="3.5525343"
+       cy="684.4212"
+       cx="-78.257256"
+       id="use2960"
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.01574802;stroke-opacity:1;paint-order:stroke markers fill;filter:url(#filter2655)" />
+    <circle
+       transform="matrix(0.43126538,0,0,0.43126538,-232.22786,270.31485)"
+       r="3.5525343"
+       cy="684.4212"
+       cx="-78.257256"
+       id="use2962"
+       style="opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.01574802;stroke-opacity:1;paint-order:stroke markers fill;filter:url(#filter2655)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="spashscreen"
+     style="display:inline">
+    <rect
+       style="display:inline;opacity:1;fill:#112119;fill-opacity:1;stroke:none;stroke-width:3.26750064;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.01574802;stroke-opacity:1;paint-order:stroke markers fill;enable-background:new"
+       id="rect2425-3-2"
+       width="800"
+       height="480"
+       x="923.16565"
+       y="-68.561005"
+       rx="0"
+       ry="0"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       transform="translate(1107.1657,-74.560992)"
+       style="display:inline;enable-background:new"
+       id="g6810-3"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         transform="matrix(1.7385832,-1.0037715,1.0037715,1.7385832,-861.83563,-479.93474)"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/planet3pic.png"
+         id="g4323-6-3"
+         style="enable-background:new">
+        <circle
+           r="37.5"
+           cy="507.86221"
+           cx="130.5"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           transform="matrix(0.78691194,0,0,0.78691194,188.94093,169.01994)"
+           id="path4265-7-8"
+           style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:6.35395098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <ellipse
+           ry="17.5"
+           rx="55.5"
+           cy="487.86218"
+           cx="323"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           transform="matrix(0.89914343,0,0,0.63531136,1.2096127,260.08269)"
+           id="path4267-5-6"
+           style="fill:none;stroke:#8dd35f;stroke-width:6.6154933;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <ellipse
+           ry="17.5"
+           rx="55.5"
+           cy="487.86218"
+           cx="323"
+           style="fill:none;stroke:#8dd35f;stroke-width:5.96133614;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path4271-3-0"
+           transform="matrix(1.1073022,0,0,0.63531136,-66.02567,260.08269)"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+      </g>
+      <g
+         style="filter:url(#filter2598-4);enable-background:new"
+         id="g2472-4"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/planet3pic.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         transform="matrix(1.7385832,-1.0037715,1.0037715,1.7385832,-861.83563,-479.93474)">
+        <circle
+           style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:6.35395098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="circle2466-8"
+           transform="matrix(0.78691194,0,0,0.78691194,188.94093,169.01994)"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           cx="130.5"
+           cy="507.86221"
+           r="37.5" />
+        <ellipse
+           style="fill:none;stroke:#8dd35f;stroke-width:6.6154933;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="ellipse2468-8"
+           transform="matrix(0.89914343,0,0,0.63531136,1.2096127,260.08269)"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90"
+           cx="323"
+           cy="487.86218"
+           rx="55.5"
+           ry="17.5" />
+        <ellipse
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           transform="matrix(1.1073022,0,0,0.63531136,-66.02567,260.08269)"
+           id="ellipse2470-8"
+           style="fill:none;stroke:#8dd35f;stroke-width:5.96133614;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           cx="323"
+           cy="487.86218"
+           rx="55.5"
+           ry="17.5" />
+      </g>
+    </g>
+    <g
+       id="g1886"
+       transform="translate(16)">
+      <flowRoot
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+         transform="matrix(0.51666199,0,0,0.51666199,596.36041,66.191201)"
+         style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#8dd35e;fill-opacity:1;stroke:none"
+         id="flowRoot6857"
+         xml:space="preserve"><flowRegion
+           style="fill:#8dd35e;fill-opacity:1"
+           id="flowRegion6859"><rect
+             style="fill:#8dd35e;fill-opacity:1"
+             y="477.47244"
+             x="1167.6672"
+             height="81.200783"
+             width="555.41339"
+             id="rect6861" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;fill:#8dd35e;fill-opacity:1"
+           id="flowPara6863">Loading Universe....</flowPara></flowRoot>      <flowRoot
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+         xml:space="preserve"
+         id="flowRoot7315"
+         style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#8dd35e;fill-opacity:1;stroke:none;filter:url(#filter7369)"
+         transform="matrix(0.51666199,0,0,0.51666199,596.36041,66.191201)"><flowRegion
+           id="flowRegion7311"
+           style="fill:#8dd35e;fill-opacity:1"><rect
+             id="rect7309"
+             width="555.41339"
+             height="81.200783"
+             x="1167.6672"
+             y="477.47244"
+             style="fill:#8dd35e;fill-opacity:1" /></flowRegion><flowPara
+           id="flowPara7313"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;fill:#8dd35e;fill-opacity:1">Loading Universe....</flowPara></flowRoot>    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="stars"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <circle
+       style="display:inline;opacity:1;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:1.00157475;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:10.01574802;stroke-opacity:1;paint-order:stroke markers fill;filter:url(#filter2655-5);enable-background:new"
+       id="path2613"
+       cx="-78.257256"
+       cy="684.4212"
+       r="3.5525343"
+       transform="matrix(0.43126538,0,0,0.43126538,-66.972259,-467.16638)" />
+    <use
+       id="use3410"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(153.24793,204.65459)" />
+    <use
+       id="use3438"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(306.31832,213.11153)" />
+    <use
+       id="use3440"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(368.71301,217.93611)" />
+    <use
+       id="use3444"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(370.44973,228.73839)" />
+    <use
+       id="use3446"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(346.34884,189.64507)" />
+    <use
+       id="use3448"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(332.48741,205.45296)" />
+    <use
+       id="use3450"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(160.54113,250.78812)" />
+    <use
+       id="use3462"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(128.23524,238.68483)" />
+    <use
+       id="use3464"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(181.23051,218.65709)" />
+    <use
+       id="use3472"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(461.77643,188.09995)" />
+    <use
+       id="use3474"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(283.19866,202.30196)" />
+    <use
+       id="use3476"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(133.62897,257.65851)" />
+    <use
+       id="use3478"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(110.74231,299.16101)" />
+    <use
+       id="use3482"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(193.62568,303.07669)" />
+    <use
+       id="use3484"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(163.20637,217.35197)" />
+    <use
+       id="use3486"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(253.85868,222.81228)" />
+    <use
+       id="use3498"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(199.22495,286.02958)" />
+    <use
+       id="use3500"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(182.26653,321.03841)" />
+    <use
+       id="use3504"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(164.37858,284.4258)" />
+    <use
+       id="use3506"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(154.3729,300.08266)" />
+    <use
+       id="use3508"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(336.71566,264.92004)" />
+    <use
+       id="use3510"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(317.7762,299.00911)" />
+    <use
+       id="use3512"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(430.14513,306.63749)" />
+    <use
+       id="use3514"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(511.65978,201.5011)" />
+    <use
+       id="use3520"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(474.22859,244.70499)" />
+    <use
+       id="use3522"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(412.21458,281.5699)" />
+    <use
+       id="use3524"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(273.34475,300.9646)" />
+    <use
+       id="use3526"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(242.25964,378.44295)" />
+    <use
+       id="use3528"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(254.209,401.38431)" />
+    <use
+       id="use3530"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(337.30437,367.17729)" />
+    <use
+       id="use3532"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(412.14443,332.89753)" />
+    <use
+       id="use3542"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(500.45047,228.13009)" />
+    <use
+       id="use3544"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(455.00437,326.75252)" />
+    <use
+       id="use3546"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(362.89572,321.65754)" />
+    <use
+       id="use3548"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(156.38627,473.89604)" />
+    <use
+       id="use3552"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(137.61597,460.20139)" />
+    <use
+       id="use3556"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(115.25278,479.18666)" />
+    <use
+       id="use3558"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(208.08919,417.12165)" />
+    <use
+       id="use3560"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(507.86843,367.07074)" />
+    <use
+       id="use3568"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(343.05003,313.55059)" />
+    <use
+       id="use3570"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(152.87017,364.11607)" />
+    <use
+       id="use3578"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(512.44161,345.61934)" />
+    <use
+       id="use3580"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(311.71013,402.55227)" />
+    <use
+       id="use3582"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(202.33199,446.40758)" />
+    <use
+       id="use3584"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(130.12158,529.36449)" />
+    <use
+       id="use3586"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(181.11128,495.85362)" />
+    <use
+       id="use3588"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(217.1539,494.80951)" />
+    <use
+       id="use3590"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(188.60471,518.47462)" />
+    <use
+       id="use3592"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(281.97869,453.25174)" />
+    <use
+       id="use3594"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(447.07376,523.69149)" />
+    <use
+       id="use3598"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(465.42479,511.19122)" />
+    <use
+       id="use3600"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(411.62987,479.70064)" />
+    <use
+       id="use3602"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(359.15072,493.48374)" />
+    <use
+       id="use3604"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(137.30412,501.86624)" />
+    <use
+       id="use3612"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(273.3228,538.71701)" />
+    <use
+       id="use3614"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(347.57301,502.35477)" />
+    <use
+       id="use3616"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(385.91408,521.61793)" />
+    <use
+       id="use3630"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(512.00071,531.50233)" />
+    <use
+       id="use3632"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(464.1294,537.10377)" />
+    <use
+       id="use3658"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(257.13698,602.46291)" />
+    <use
+       id="use3662"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(310.11407,571.30953)" />
+    <use
+       id="use3664"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(331.23311,595.24361)" />
+    <use
+       id="use3666"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(411.32247,584.98993)" />
+    <use
+       id="use3676"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(411.30194,571.00805)" />
+    <use
+       id="use3678"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(429.32629,589.83056)" />
+    <use
+       id="use3682"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(356.15121,553.40126)" />
+    <use
+       id="use3684"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(324.3776,543.90749)" />
+    <use
+       id="use3686"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(387.61934,577.39154)" />
+    <use
+       id="use3688"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(524.36488,543.97458)" />
+    <use
+       id="use3692"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(440.00054,510.66478)" />
+    <use
+       id="use3698"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(150.8491,556.13377)" />
+    <use
+       id="use3700"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(218.50155,525.75789)" />
+    <use
+       id="use3702"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(487.58197,477.18198)" />
+    <use
+       id="use3714"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(449.30178,480.48119)" />
+    <use
+       id="use3716"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(261.58221,426.90655)" />
+    <use
+       id="use3718"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(167.01222,492.71512)" />
+    <use
+       id="use3720"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(156.41349,452.90587)" />
+    <use
+       id="use3722"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(182.39069,461.37692)" />
+    <use
+       id="use3724"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(345.57062,398.65392)" />
+    <use
+       id="use3738"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(470.74043,352.3921)" />
+    <use
+       id="use3740"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(172.04302,329.89897)" />
+    <use
+       id="use3742"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(184.47856,345.61564)" />
+    <use
+       id="use3744"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(135.70666,362.9379)" />
+    <use
+       id="use3746"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(241.41556,405.99017)" />
+    <use
+       id="use3748"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(203.74891,395.05504)" />
+    <use
+       id="use3750"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(257.83197,379.64635)" />
+    <use
+       id="use3752"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(396.43294,380.7651)" />
+    <use
+       id="use3760"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(489.04579,439.76616)" />
+    <use
+       id="use3762"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(480.04132,449.04347)" />
+    <use
+       id="use3764"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(382.04038,458.94851)" />
+    <use
+       id="use3766"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(444.20135,458.18593)" />
+    <use
+       id="use3768"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(370.32556,453.89847)" />
+    <use
+       id="use3770"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(383.09708,457.412)" />
+    <use
+       id="use3772"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(414.03844,482.28278)" />
+    <use
+       id="use3774"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(404.23145,478.086)" />
+    <use
+       id="use3776"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(393.55309,458.31064)" />
+    <use
+       id="use3778"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(461.02244,416.41761)" />
+    <use
+       id="use3780"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(440.10635,432.91184)" />
+    <use
+       id="use3782"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(422.58169,308.58298)" />
+    <use
+       id="use3784"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(377.5051,298.1702)" />
+    <use
+       id="use3786"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(334.41321,313.79931)" />
+    <use
+       id="use3788"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(210.22095,376.55833)" />
+    <use
+       id="use3790"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(166.63967,344.15642)" />
+    <use
+       id="use3792"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(174.17395,379.11828)" />
+    <use
+       id="use3794"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(157.02905,335.86546)" />
+    <use
+       id="use3796"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(120.00933,398.15358)" />
+    <use
+       id="use3798"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(195.67554,370.74751)" />
+    <use
+       id="use3800"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(268.84422,420.89858)" />
+    <use
+       id="use3802"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(350.6427,433.35758)" />
+    <use
+       id="use3810"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(321.25747,297.93055)" />
+    <use
+       id="use3812"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(335.77646,315.8929)" />
+    <use
+       id="use3814"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(458.31672,293.85688)" />
+    <use
+       id="use3816"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(510.98056,288.98228)" />
+    <use
+       id="use3820"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(271.23183,174.31296)" />
+    <use
+       id="use3824"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(116.58079,211.05879)" />
+    <use
+       id="use3826"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(183.39047,187.44725)" />
+    <use
+       id="use3828"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(261.58212,231.71711)" />
+    <use
+       id="use3832"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(492.78011,200.17221)" />
+    <use
+       id="use3842"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(345.96327,182.48429)" />
+    <use
+       id="use3844"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(336.58858,215.01245)" />
+    <use
+       id="use3846"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(255.18466,191.39861)" />
+    <use
+       id="use3848"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(208.30599,223.67822)" />
+    <use
+       id="use3850"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(272.89729,277.00136)" />
+    <use
+       id="use3852"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(270.73372,272.83978)" />
+    <use
+       id="use3854"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(286.62021,196.37105)" />
+    <use
+       id="use3856"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(279.78023,241.36988)" />
+    <use
+       id="use3858"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(311.09312,274.8645)" />
+    <use
+       id="use3860"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(273.99835,247.61016)" />
+    <use
+       id="use3862"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(244.17455,287.85587)" />
+    <use
+       id="use3864"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(159.44833,318.83401)" />
+    <use
+       id="use3866"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(186.03307,315.34852)" />
+    <use
+       id="use3868"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(182.6173,260.69586)" />
+    <use
+       id="use3870"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(131.55426,323.75799)" />
+    <use
+       id="use3872"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(266.71572,222.07621)" />
+    <use
+       id="use3874"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(323.33373,239.56468)" />
+    <use
+       id="use3876"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(345.07914,210.04416)" />
+    <use
+       id="use3878"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(344.60982,251.72181)" />
+    <use
+       id="use3880"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(297.55692,283.31433)" />
+    <use
+       id="use3882"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(324.75381,248.7103)" />
+    <use
+       id="use3884"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(295.68624,236.69658)" />
+    <use
+       id="use3886"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(424.50671,219.11751)" />
+    <use
+       id="use3888"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(454.51498,186.4351)" />
+    <use
+       id="use3900"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(400.66161,185.02007)" />
+    <use
+       id="use3902"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(388.21011,213.38357)" />
+    <use
+       id="use3904"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(335.92455,183.75314)" />
+    <use
+       id="use3906"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(311.39541,281.26556)" />
+    <use
+       id="use3924"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(453.85508,585.51922)" />
+    <use
+       id="use3928"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(502.90168,572.11134)" />
+    <use
+       id="use3930"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(449.23628,580.87919)" />
+    <use
+       id="use3934"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(364.40973,566.56879)" />
+    <use
+       id="use3944"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(469.30418,567.55613)" />
+    <use
+       id="use3948"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(517.27326,604.45166)" />
+    <use
+       id="use3952"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(525.56906,566.25539)" />
+    <use
+       id="use3954"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(465.16682,559.11498)" />
+    <use
+       id="use3956"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(419.60391,590.4088)" />
+    <use
+       id="use3960"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(497.2088,600.55011)" />
+    <use
+       id="use3962"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(474.92287,595.39169)" />
+    <use
+       id="use3966"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(499.37623,594.7145)" />
+    <use
+       id="use3968"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(434.23922,587.7922)" />
+    <use
+       id="use3980"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(160.71388,578.18512)" />
+    <use
+       id="use3982"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(151.96068,564.54034)" />
+    <use
+       id="use3990"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(331.143,589.09085)" />
+    <use
+       id="use3992"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(391.24036,539.51776)" />
+    <use
+       id="use3994"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(456.86919,594.93284)" />
+    <use
+       id="use3996"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(424.59467,549.79621)" />
+    <use
+       id="use3998"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(402.26025,533.89788)" />
+    <use
+       id="use4000"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(423.73441,574.83282)" />
+    <use
+       id="use4002"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(371.49338,498.60985)" />
+    <use
+       id="use4004"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(193.67156,571.45195)" />
+    <use
+       id="use4006"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(182.00443,581.81972)" />
+    <use
+       id="use4008"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(274.92253,543.15234)" />
+    <use
+       id="use4010"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(213.72684,552.36327)" />
+    <use
+       id="use4012"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(197.68526,579.31435)" />
+    <use
+       id="use4014"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(230.20133,553.1432)" />
+    <use
+       id="use4016"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(138.82147,582.70353)" />
+    <use
+       id="use4018"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(155.21756,547.27883)" />
+    <use
+       id="use4022"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(115.96978,556.60409)" />
+    <use
+       id="use4026"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(195.17771,544.01187)" />
+    <use
+       id="use4028"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(238.76701,577.85705)" />
+    <use
+       id="use4030"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(215.41658,550.68377)" />
+    <use
+       id="use4032"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(276.87102,512.17785)" />
+    <use
+       id="use4034"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(262.91848,577.74898)" />
+    <use
+       id="use4036"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(261.61205,490.11199)" />
+    <use
+       id="use4038"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(231.42328,555.25018)" />
+    <use
+       id="use4040"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(347.90945,516.67938)" />
+    <use
+       id="use4042"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(273.10567,482.50898)" />
+    <use
+       id="use4044"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(347.23616,525.76243)" />
+    <use
+       id="use4046"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(434.91356,516.35732)" />
+    <use
+       id="use4048"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(392.41741,462.27236)" />
+    <use
+       id="use4050"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(490.747,459.3704)" />
+    <use
+       id="use4052"
+       inkscape:spray-origin="#path2613"
+       xlink:href="#path2613"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%"
+       transform="translate(437.10539,465.48035)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="planet"
+     style="display:inline">
+    <g
+       id="g6810">
+      <g
+         transform="matrix(1.7385832,-1.0037715,1.0037715,1.7385832,-861.83563,-479.93474)"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/planet3pic.png"
+         id="g4323-6"
+         style="enable-background:new">
+        <circle
+           r="37.5"
+           cy="507.86221"
+           cx="130.5"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           transform="matrix(0.78691194,0,0,0.78691194,188.94093,169.01994)"
+           id="path4265-7"
+           style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:6.35395098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <ellipse
+           ry="17.5"
+           rx="55.5"
+           cy="487.86218"
+           cx="323"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           transform="matrix(0.89914343,0,0,0.63531136,1.2096127,260.08269)"
+           id="path4267-5"
+           style="fill:none;stroke:#8dd35f;stroke-width:6.6154933;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+        <ellipse
+           ry="17.5"
+           rx="55.5"
+           cy="487.86218"
+           cx="323"
+           style="fill:none;stroke:#8dd35f;stroke-width:5.96133614;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="path4271-3"
+           transform="matrix(1.1073022,0,0,0.63531136,-66.02567,260.08269)"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90" />
+      </g>
+      <g
+         style="filter:url(#filter2598);enable-background:new"
+         id="g2472"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/planet3pic.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         transform="matrix(1.7385832,-1.0037715,1.0037715,1.7385832,-861.83563,-479.93474)">
+        <circle
+           style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:6.35395098;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="circle2466"
+           transform="matrix(0.78691194,0,0,0.78691194,188.94093,169.01994)"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           cx="130.5"
+           cy="507.86221"
+           r="37.5" />
+        <ellipse
+           style="fill:none;stroke:#8dd35f;stroke-width:6.6154933;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="ellipse2468"
+           transform="matrix(0.89914343,0,0,0.63531136,1.2096127,260.08269)"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90"
+           cx="323"
+           cy="487.86218"
+           rx="55.5"
+           ry="17.5" />
+        <ellipse
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/planetpic2.png"
+           transform="matrix(1.1073022,0,0,0.63531136,-66.02567,260.08269)"
+           id="ellipse2470"
+           style="fill:none;stroke:#8dd35f;stroke-width:5.96133614;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           cx="323"
+           cy="487.86218"
+           rx="55.5"
+           ry="17.5" />
+      </g>
+    </g>
+  </g>
+</svg>

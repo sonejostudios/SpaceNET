@@ -1,0 +1,38 @@
+# Lift
+
+label megaship_lift2:
+    
+    call music_drops
+    
+    
+    # define the name of the 4 levels of this lift, None if there is no level
+    #$ liftlevel = ("- 01", None, None, "00")
+    
+    $ liftlevel = ("-01", "00", "01", "02")
+    
+    call liftengine
+    
+    #define what to do at level when arrived
+    if liftpos == 0:
+        $ startpos = 1
+        #m "...that looks like a spaceport ! {w=2.5} {nw}"
+        call sound_door
+        jump megaship_spaceport
+        
+    if liftpos == 1:
+        call sound_door
+        $ startpos = 2
+        $ multiposx = 1 
+        $ multiposy = 1
+        jump megaship_multimap1
+
+    if liftpos == 2:
+        $ startpos = 1
+        call sound_door
+        jump megaship_store
+        
+    if liftpos == 3:
+        m "There are a lot of people there...{w=2.0} {nw}"
+        m "To many for my taste. {w=2.0} {nw}"
+        #call sound_door_locked
+        jump megaship_lift2
