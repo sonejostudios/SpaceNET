@@ -7,17 +7,17 @@ A minimalistric retro space adventure.
 
 ![SpaceNET](./SpaceNET.png)
 
-![SpaceNET](./SpaceMenu.png)
+![SpaceMenu](./SpaceMenu.png)
 
-![SpaceNET](./XyloSea.png)
+![XyloSea](./XyloSea.png)
 
-![SpaceNET](./SurfaceLanding.png)
+![SurfaceLanding](./SurfaceLanding.png)
 
-![SpaceNET](./Inventory.png)
+![Inventory](./Inventory.png)
 
-![SpaceNET](./Cockpit.png)
+![Cockpit](./Cockpit.png)
 
-![SpaceNET](./Terminal.png)
+![Terminal](./Terminal.png)
 
 
 ...more info coming soon.
