@@ -7,7 +7,7 @@ A minimalistric retro space adventure.
 
 ![screenshot](./SpaceNET.png "SpaceNET")
 
-![SpaceNET](/SpaceNET.png){:class="img-responsive"}
+![SpaceNET](../screenshots/SpaceNET.png)
 
 
 ...more info coming soon.
