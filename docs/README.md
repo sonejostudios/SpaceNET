@@ -5,15 +5,19 @@ __Description:__
 
 A minimalistric retro space adventure.
 
-![screenshot](./SpaceNET.png "SpaceNET")
+![SpaceNET](./SpaceNET.png)
 
-![SpaceNET](../screenshots/SpaceMenu.png)
+![SpaceNET](./SpaceMenu.png)
 
-![SpaceNET](../screenshots/XyloSea.png)
+![SpaceNET](./XyloSea.png)
 
-![SpaceNET](../screenshots/SurfaceLanding.png)
+![SpaceNET](./SurfaceLanding.png)
 
-![SpaceNET](../screenshots/Inventory.png)
+![SpaceNET](./Inventory.png)
+
+![SpaceNET](./Cockpit.png)
+
+![SpaceNET](./Terminal.png)
 
 
 ...more info coming soon.
