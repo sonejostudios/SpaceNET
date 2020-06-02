@@ -5,7 +5,7 @@ __Description:__
 
 A minimalistric retro space adventure.
 
-![screenshot](SpaceNET.png "SpaceNET")
+![screenshot](./SpaceNET.png "SpaceNET")
 
 
 ...more info coming soon.
