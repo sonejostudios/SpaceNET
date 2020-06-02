@@ -9,5 +9,11 @@ A minimalistric retro space adventure.
 
 ![SpaceNET](../screenshots/SpaceMenu.png)
 
+![SpaceNET](../screenshots/XyloSea.png)
+
+![SpaceNET](../screenshots/SurfaceLanding.png)
+
+![SpaceNET](../screenshots/Inventory.png)
+
 
 ...more info coming soon.
