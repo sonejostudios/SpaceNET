@@ -6,7 +6,7 @@ __Description:__
 A minimalistric retro space adventure.
 More Info: www.spacenet.sonejo.net
 
-![screenshot](https://github.com/sonejostudios/SpaceNET/blob/master/SpaceNET.png "SpaceNET")
+[![SpaceNET](./docs/SpaceNETtrailer.png)](https://youtu.be/sTqJdsnIwag)
 
 
 ...more info coming soon.
