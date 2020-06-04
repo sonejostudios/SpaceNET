@@ -5,7 +5,7 @@ __Description:__
 
 A minimalistric retro space adventure.
 
-![SpaceNET](./SpaceNET.png)
+![SpaceNET](./SpaceNETtrailer.png)
 
 ![SpaceMenu](./SpaceMenu.png)
 
