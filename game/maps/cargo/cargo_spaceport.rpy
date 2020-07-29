@@ -2,8 +2,9 @@
 
 ############################################
 label cargo_spaceport:
+    $ pnc_nodes_visible = True
     
-    call atmo_spaceport
+    call atmo_spaceport from _call_atmo_spaceport_1
     
     
     image xylo_mine = imagemapsdir + "cargo_spaceport.png"
@@ -35,7 +36,7 @@ label cargo_spaceport:
     # check if spaceship is landing on this map or not
     # $ landing = False
     # $ landing = True
-    call landing_anim
+    call landing_anim from _call_landing_anim_1
     
     
     # set all variables for the map (nodes and path)
@@ -63,10 +64,10 @@ label cargo_spaceport:
 label loop_cargo_spaceport:
     
     # alarm
-    call alarm_check
+    call alarm_check from _call_alarm_check_7
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_22
 
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -78,7 +79,7 @@ label loop_cargo_spaceport:
         $ startpos = 1
         
         #call dialog_closed # door
-        call sound_door
+        call sound_door from _call_sound_door_46
         
         #jump cargo_multimap1
         jump cargo_movingwalls # to movingwalls
@@ -102,7 +103,7 @@ label loop_cargo_spaceport:
         $ startpos = 22
         
         $liftpos = 3
-        call sound_door
+        call sound_door from _call_sound_door_47
         jump loop_cargo_spaceport # go to lift
         
     if exitpos == 33:
@@ -111,8 +112,9 @@ label loop_cargo_spaceport:
         
     if exitpos == 44:
         $ startpos = 44
-        call sound_door
-        call takeoff_anim("withmenu") # go to takeoff
+        call sound_door from _call_sound_door_48
+        call takeoff_anim("withmenu") from _call_takeoff_anim_2 # go to takeoff
+        $ pnc_nodes_visible = True
         
         
         # straight to space
@@ -121,6 +123,8 @@ label loop_cargo_spaceport:
             $ space_anim = True
             
             $ alarm_on = False
+            
+            $ pnc_nodes_visible = False
             
             jump space
 

@@ -63,7 +63,7 @@ label cargo_movingwalls:
     
     stop atmo
     #call atmo_spaceship_station
-    call atmo_base
+    call atmo_base from _call_atmo_base
     
     image cargo_movingwalls = imagemapsdir + "mwbg.png"
     
@@ -119,7 +119,7 @@ label cargo_movingwalls:
 
 label loop_cargo_movingwalls:
     # alarm
-    call alarm_check
+    call alarm_check from _call_alarm_check_2
     
     #reset path
     $ pathA = (nodeA, nodeB, (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0))
@@ -144,11 +144,11 @@ label loop_cargo_movingwalls:
     
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_4
 
     # do something at node?
     if exitpos == 1:
-        call sound_door
+        call sound_door from _call_sound_door_14
         $ startpos = 2
         $ landing = False
         jump cargo_spaceport
@@ -188,7 +188,7 @@ label loop_cargo_movingwalls:
         $ startpos = 2
 
         #call dialog_closed
-        call sound_door
+        call sound_door from _call_sound_door_15
         
         $ multiposx = 0
         $ multiposy = 0
@@ -271,7 +271,7 @@ label cargo_movethewalls:
             linear 1 ypos 400
             
     
-    call sound_movingwall
+    call sound_movingwall from _call_sound_movingwall
     pause 1
 
     jump loop_cargo_movingwalls

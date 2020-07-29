@@ -11,7 +11,7 @@ label cargo_conveyor1:
     
     stop music fadeout 1.0
     # atmo sound
-    call atmo_conveyor
+    call atmo_conveyor from _call_atmo_conveyor
     
     
     image cargo_conveyor = imagemapsdir + "cargo_conveyor.png"
@@ -88,7 +88,7 @@ label cargo_conveyor1:
     $ nodeD = (636, 300)
 
     $ nodeAA = (636, 227)
-    $ nodeBB = (400, 60)
+    $ nodeBB = (400, 55)
     $ nodeCC = (692, 424)
     $ nodeDD = (632, 427)
 
@@ -134,14 +134,14 @@ label loop_cargo_conveyor1:
     
     while True:
         # alarm
-        call alarm_check
+        call alarm_check from _call_alarm_check_8
         
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_24
 
         # do something at node?
         if exitpos == 1:
-            call sound_door
+            call sound_door from _call_sound_door_53
             $ startpos = 2
             $ multiposx = 3
             $ multiposy = 3
@@ -160,13 +160,13 @@ label loop_cargo_conveyor1:
                         m "Hey, there is something metalic under the container!{w=3}{nw}"
                 
                 elif inventory_select == "magnet" and cargo_container_cash > 0:
-                    call use_and_keep_item
+                    call use_and_keep_item from _call_use_and_keep_item_11
                     m "Hey, there are some coins!{w=2}{nw}"
-                    call io_cash(cargo_container_cash)
+                    call io_cash(cargo_container_cash) from _call_io_cash_3
                     $ cargo_container_cash = 0
                     
                 else:
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_7
                 
             
             $ startpos = 2
@@ -213,7 +213,7 @@ label loop_cargo_conveyor1:
             
         if exitpos == 22:
             if startpos == 22:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_10
                 #jump cargo_conveyor2
                 
             $ startpos = 22
@@ -263,7 +263,7 @@ screen cargo_conveyor_panel1 zorder -999:
 
 
 label cargo_conveyor1_button_broken:
-    call sound_electroshock
+    call sound_electroshock from _call_sound_electroshock_7
     with hpunch
     m "This control panel is broken! {w=2.0} {nw}"
     hide screen cargo_conveyor_panel1

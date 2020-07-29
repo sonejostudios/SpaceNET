@@ -39,7 +39,7 @@ label map2:
 label loop_map2:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_69
     
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -57,7 +57,7 @@ label loop_map2:
     if exitpos == 4:
         $ startpos = 4
         
-        call find_bulb
+        call find_bulb from _call_find_bulb
         
         jump loop_map2 
     
@@ -89,7 +89,7 @@ label find_bulb:
         
         m "There is a light bulb! {w=3.0} {nw}"
 
-        call take_item("bulb")
+        call take_item("bulb") from _call_take_item_16
                 
     
     

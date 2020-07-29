@@ -11,11 +11,13 @@ screen dev_puddle:
 ############################################
 label megaship_cell:
     
-    call atmo_spaceship_hum
+    call atmo_spaceship_hum from _call_atmo_spaceship_hum_2
     
     #show screen dev_puddle
     
     image megaship_cell = imagemapsdir + "megaship_cell.png"
+    
+    $ pnc_nodes_visible = True
     
     
     if in_intro == True:
@@ -77,7 +79,7 @@ label loop_megaship_cell:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_19
 
         # do something at node?
         if exitpos == 1:
@@ -101,7 +103,7 @@ label loop_megaship_cell:
                 
                 if "newspaper" not in inventory:
                     m "There is a newspaper.{w=2.0} {nw}"
-                    call take_item("newspaper")
+                    call take_item("newspaper") from _call_take_item_10
                 
             $ startpos = 2
 
@@ -125,13 +127,13 @@ label loop_megaship_cell:
                     
                     menu:
                         "use newspaper with sink":
-                            call use_and_keep_item
-                            call sound_paper
+                            call use_and_keep_item from _call_use_and_keep_item_7
+                            call sound_paper from _call_sound_paper
                             #with flash
                             m "now the sink is blocked.{w=2.0} {nw}"
                             m "what will happen if I open the tap?{w=2.0} {nw}"
                             
-                            call sound_tap
+                            call sound_tap from _call_sound_tap_1
                             show puddle behind sink:
                                 anchor (0.5,0.5)
                                 alpha 0.0
@@ -151,11 +153,11 @@ label loop_megaship_cell:
                     m "there is a screw driver...{w=2.0} {nw}"
                     m "I could take it... {w=2.0} {nw}"
                     
-                    call take_item("screwdriver")
+                    call take_item("screwdriver") from _call_take_item_11
                     
                     if "screwdriver" in inventory:
                         $ m_megaship_cell_escape = 3
-                        call megaship_cell_robot_back
+                        call megaship_cell_robot_back from _call_megaship_cell_robot_back
                         pass
 
             $ startpos = 4
@@ -169,7 +171,7 @@ label loop_megaship_cell:
             
         if exitpos == 22:
             $ startpos = 22
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_8
             
             radio "what do you want, prisoner?{w=3.0} {nw}"
             
@@ -177,7 +179,7 @@ label loop_megaship_cell:
                 "the sink is broken" if m_megaship_cell_escape == 1:
                     m "the sink is broken.{w=2.0} {nw}"
                     radio "okay, i'll send a repair-robot to your cell.{w=3.0} {nw}"
-                    call megaship_cell_robot
+                    call megaship_cell_robot from _call_megaship_cell_robot
                 
                 "nothing":
                     #m "nothing.{w=1.0} {nw}"
@@ -187,7 +189,7 @@ label loop_megaship_cell:
         if exitpos == 33:
             
             if m_megaship_cell_escape == 4: # exit
-                call sound_screw
+                call sound_screw from _call_sound_screw_4
                 $ startpos = 1
                 jump megaship_aeration
             
@@ -198,11 +200,11 @@ label loop_megaship_cell:
                     m "This is an aeration shaft.{w=3.0} {nw}"
                 
                 if inventory_select == "screwdriver" and m_megaship_cell_escape == 3:
-                    call use_and_keep_item
-                    call sound_screw
+                    call use_and_keep_item from _call_use_and_keep_item_8
+                    call sound_screw from _call_sound_screw_5
                     $ m_megaship_cell_escape = 4
                     pause 2
-                    call sound_connected
+                    call sound_connected from _call_sound_connected_6
                     with flash
                     m "The grid is open now!{w=2.0} {nw}"
 
@@ -222,7 +224,7 @@ label megaship_cell_robot:
     image megaship_cell_robot = "images/guard2.png"
     hide megaship_cell_robot
     
-    call sound_door
+    call sound_door from _call_sound_door_38
     
 
     show megaship_cell_robot:
@@ -259,7 +261,7 @@ label megaship_cell_robot_back:
         linear 4 pos (635, 240)
 
     pause 7
-    call sound_door
+    call sound_door from _call_sound_door_39
     hide megaship_cell_robot
     
     return

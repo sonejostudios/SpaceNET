@@ -68,9 +68,9 @@ label xylo_minitrain:
     $ pnc_nodes_visible = True
     
     stop sound fadeout 1.0
-    call atmo_base
+    call atmo_base from _call_atmo_base_6
     
-    call music_xylo_mine
+    call music_xylo_mine from _call_music_xylo_mine_3
     
     image xylo_minitrain = imagemapsdir + "xylo_minitrain.png"
     
@@ -114,11 +114,11 @@ label xylo_minitrain:
 label loop_xylo_minitrain:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_60
 
     # do something at node?
     if exitpos == 1:       #if at node A
-        call sound_door
+        call sound_door from _call_sound_door_128
         $ liftpos == 0
         $ startpos = 1     # stay in A
         jump xylo_mine_lift2          # map loop to jump to
@@ -151,7 +151,7 @@ label loop_xylo_minitrain:
         $ startpos = 22
         
         $liftpos = 3
-        call sound_door
+        call sound_door from _call_sound_door_129
         jump loop_xylo_minitrain # go to lift
         
     if exitpos == 33:
@@ -170,11 +170,11 @@ label loop_xylo_minitrain:
 label minitrain_start:
     $ pnc_nodes_visible = False
     
-    call sound_minitrain_loop
+    call sound_minitrain_loop from _call_sound_minitrain_loop_1
     
     
     $ path = ((0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0))
-    call hidepaths
+    call hidepaths from _call_hidepaths_10
 
     
     show xylo_minitrain:

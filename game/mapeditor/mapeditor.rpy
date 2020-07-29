@@ -193,7 +193,7 @@ label path_editor:
     show screen notify("Choose the Node to set up its Paths.")
     
     
-    call show_nodes
+    call show_nodes from _call_show_nodes
     
     
     menu:
@@ -227,7 +227,7 @@ label path_editor:
             jump map_editor
 
     
-    call path_chooser
+    call path_chooser from _call_path_chooser
     
     
     #copy path to pathA, pathB etc

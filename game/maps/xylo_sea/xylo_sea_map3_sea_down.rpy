@@ -2,7 +2,7 @@
 ###########################################
 label xylo_map3:
     
-    call atmo_sea
+    call atmo_sea from _call_atmo_sea
     
     image xylo_map3 = imagemapsdir + "xylo_sea_p3.png"
     
@@ -38,7 +38,7 @@ label xylo_map3:
 label loop_xylo_map3:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_47
     
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -55,7 +55,7 @@ label loop_xylo_map3:
         if startpos == 3:
             if inventory_select == "":
                 m "There is an info board. {w=2.0} {nw}"
-            call xylo_sea_map3_info
+            call xylo_sea_map3_info from _call_xylo_sea_map3_info
 
         $ startpos = 3
         jump loop_xylo_map3
@@ -102,8 +102,8 @@ we will be happy to give you more info.
 
     """
     
-    call info_panel
+    call info_panel from _call_info_panel_9
     
-    call add_note("xylo sea boat company number: 05060708")
+    call add_note("xylo sea boat company number: 05060708") from _call_add_note_9
     
     return

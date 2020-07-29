@@ -6,9 +6,9 @@ label isc_wagon_anim_toright:
     $ pnc_nodes_visible = False
     
     stop music fadeout 1.0
-    call atmo_spaceship_station
+    call atmo_spaceship_station from _call_atmo_spaceship_station
     
-    call show_space
+    call show_space from _call_show_space
     
 
         
@@ -50,9 +50,9 @@ label isc_wagon_anim_toleft:
     $ pnc_nodes_visible = False
     
     stop music fadeout 1.0
-    call atmo_spaceship_station
+    call atmo_spaceship_station from _call_atmo_spaceship_station_1
     
-    call show_space
+    call show_space from _call_show_space_1
     
         
     show tube:

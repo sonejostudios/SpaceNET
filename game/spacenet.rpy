@@ -24,8 +24,8 @@ label spacenet_comp(snetnode):
             $ node_state = "inactive"
     
         
-        call sound_beep
-        call nodes_list_update
+        call sound_beep from _call_sound_beep_39
+        call nodes_list_update from _call_nodes_list_update_1
         
         $ showtext = """
     SpaceNET
@@ -46,19 +46,19 @@ label spacenet_comp(snetnode):
                             m "I have nothing to insert into this computer! {w=2.5} {nw}"
                         else:
                             $ inventory_select = ""
-                            call dialog_nosense
+                            call dialog_nosense from _call_dialog_nosense_19
                             
             "Install Software" if inventory_select == "spacenet" and spacenet_copied == False:
-                call use_and_keep_item
-                call sound_electroshock
+                call use_and_keep_item from _call_use_and_keep_item_27
+                call sound_electroshock from _call_sound_electroshock_20
                 with hpunch
                 m "The disk is empty, there is nothing to install! {w=3} {nw}"
                                 
             
             "Install SpaceNET Software" if inventory_select == "spacenet" and spacenet_copied == True:
-                call use_and_keep_item
+                call use_and_keep_item from _call_use_and_keep_item_28
                 $ inventory_select = ""
-                call server_progressbar
+                call server_progressbar from _call_server_progressbar_12
                 with flash
                 #$ inventory_select = ""
                 
@@ -79,15 +79,15 @@ label spacenet_comp(snetnode):
                 
                 pause 7
                     
-                call sound_modem
-                call server_progressbar
+                call sound_modem from _call_sound_modem_1
+                call server_progressbar from _call_server_progressbar_13
                 
                 if snetnode not in spacenetnodes:
                     $ spacenetnodes.append(snetnode)
                     
                     
         
-                call sound_connected
+                call sound_connected from _call_sound_connected_37
                 with flash
                 
                 $ showtext ="""

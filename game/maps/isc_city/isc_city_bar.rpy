@@ -8,9 +8,8 @@ init:
     
     $ sam_numpad_mission = 0
     
-    $ isc_bar_client1_flags = [0, 0, 0, 0]
-    
-    $ isc_bar_barman_flags = [0, 0, 0, 0]
+    default isc_bar_client1_flags = [0, 0, 0, 0]
+    default isc_bar_barman_flags = [0, 0, 0, 0]
     
     
     $ isc_sysadmin_move = 0
@@ -71,7 +70,7 @@ label isc_city_bar:
     # set all variables for the map (nodes and path)
     $ nodeA = (185, 246)
     $ nodeB = (371, 150)
-    $ nodeC = (615, 293)
+    $ nodeC = (612, 293)
     $ nodeD = (550, 345)
 
     $ nodeAA = (398, 345)
@@ -96,13 +95,13 @@ label loop_isc_city_bar:
     
     
     if isc_bar_music == 1:
-        call music_bar_village
+        call music_bar_village from _call_music_bar_village_1
     
     if isc_bar_music == 2:
-        call music_bar_chill
+        call music_bar_chill from _call_music_bar_chill_1
         
     if isc_bar_music == 3:
-        call music_outro_bar
+        call music_outro_bar from _call_music_outro_bar_1
     
     if isc_bar_music == 4:
         stop music fadeout 1.0
@@ -117,11 +116,11 @@ label loop_isc_city_bar:
 
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_26
 
         # do something at node?
         if exitpos == 1:
-            call sound_door
+            call sound_door from _call_sound_door_62
             $ startpos = 11
             
             $ drunk_level = 0
@@ -131,7 +130,7 @@ label loop_isc_city_bar:
         # barman
         if exitpos == 2:
             if startpos == 2:
-                call isc_barman
+                call isc_barman from _call_isc_barman
                 
             $ startpos = 2
 
@@ -140,10 +139,10 @@ label loop_isc_city_bar:
             if startpos == 3:
                 if isc_bar_client == True:
                     $ startpos = 1
-                    call sound_door
+                    call sound_door from _call_sound_door_63
                     jump isc_city_bar_toilets
                 else:
-                    call dialog_closed
+                    call dialog_closed from _call_dialog_closed_12
             $ startpos = 3
             
         
@@ -151,7 +150,7 @@ label loop_isc_city_bar:
         # client east
         if exitpos == 4:
             if startpos == 4:
-                call isc_bar_client_east
+                call isc_bar_client_east from _call_isc_bar_client_east
                 
             $ startpos = 4
            
@@ -160,14 +159,14 @@ label loop_isc_city_bar:
         #player
         if exitpos == 11:
             if startpos == 11:
-                call isc_bar_player
+                call isc_bar_player from _call_isc_bar_player
             $ startpos = 11 
 
 
         # sys admin
         if exitpos == 22: #client 1 sys admin
             if startpos == 22:
-                call isc_bar_sysadmin 
+                call isc_bar_sysadmin from _call_isc_bar_sysadmin 
             $ startpos = 22
 
             
@@ -175,11 +174,11 @@ label loop_isc_city_bar:
             if startpos == 33:
                 if sam_numpad_mission == 0:
                     $ inbox_new_message = "*"
-                    call notify_new_message
+                    call notify_new_message from _call_notify_new_message
                     
                     $ server_msglist[4] = "5. important meeting"
                 
-                call terminal
+                call terminal from _call_terminal_5
             $ startpos = 33
             
 
@@ -203,7 +202,7 @@ label isc_bar_client_east:
     clientisc3 "hi! {w=2}{nw}"
     
     if drunktime > 0:
-        call dialog_joke
+        call dialog_joke from _call_dialog_joke_3
         if joke == 1:
             clientisc3 "I know it already.{w=2.5} {nw}"
             clientisc3 "Please, stop bothering me with these not-funny-jokes. {w=4.5} {nw}"
@@ -300,7 +299,7 @@ label isc_bar_sysadmin:
     
 
     if isc_sysadmin_move == 1: # sys admin not in bar but at crane screen
-        call dialog_nothing 
+        call dialog_nothing from _call_dialog_nothing_24 
     
     if isc_sysadmin_move == 2:
         m "Hello again!{w=2} {nw}"
@@ -308,8 +307,8 @@ label isc_bar_sysadmin:
         sysadmin "Without you I couldn't fix the crane.{w=3} {nw}"
         sysadmin "I'd like to give you something for your help.{w=3} {nw}"
         sysadmin "Here! 100c!{w=2} {nw}"
-        call sound_collect
-        call io_cash(100)
+        call sound_collect from _call_sound_collect_3
+        call io_cash(100) from _call_io_cash_4
         pause 1
         m "Wow...{w=1} thank you!{w=2} {nw}"
         sysadmin "You are welcome! {w=2} Bye!{w=1.5} {nw}"
@@ -356,8 +355,8 @@ label isc_bar_player:
     # game
     if inventory_select == "cards":
 
-        call use_and_keep_item
-        call sound_connected
+        call use_and_keep_item from _call_use_and_keep_item_12
+        call sound_connected from _call_sound_connected_23
 
         m "Here, a card game. {w=2}{nw}"
         clientplayer "You've got a card game!{w=3}{nw}"
@@ -431,10 +430,10 @@ label isc_barman:
                 
                 menu:
                     "[drinks[0]]\n2c"if coins >= 2:
-                        m "A [drinks[0]] {w=1.5}{nw}"
+                        m "A [drinks[0]]. {w=1.5}{nw}"
                         m "This realy doesn't sound good, but I will try.{w=2.5}{nw}"
-                        barman_isc "1c, please. {w=1.5}{nw}"
-                        call io_cash(-2)
+                        barman_isc "2c, please. {w=1.5}{nw}"
+                        call io_cash(-2) from _call_io_cash_5
                         m "Beark! {w=1.5}{nw}"
                         m "This is horrible! {w=2}{nw}"
                         $ isc_bar_client = True
@@ -447,7 +446,7 @@ label isc_barman:
                     "[drinks[1]]\n15c"if coins >= 15:
                         m "A [drinks[1]]. {w=1.5}{nw}"
                         barman_isc "15c, please. {w=1.5}{nw}"
-                        call io_cash(-15)
+                        call io_cash(-15) from _call_io_cash_6
                         
                         $ isc_bar_client = True
                         $ isc_bar_wc_cash += 15
@@ -475,7 +474,7 @@ label isc_barman:
                     "[drinks[2]]\n23c"if coins >= 23:
                         m "A [drinks[2]]. {w=2.5}{nw}"
                         barman_isc "23c, please. {w=1.5}{nw}"
-                        call io_cash(-23)
+                        call io_cash(-23) from _call_io_cash_7
                         
                         $ isc_bar_client = True
                         $ isc_bar_wc_cash += 23
@@ -517,7 +516,7 @@ label isc_barman:
                             "50c" if coins >= 50:
                                 m "50c.{w=1}{nw}"
                                 barman_isc "Okay for now... have fun! {w=1.5}{nw}"
-                                call io_cash(-50)
+                                call io_cash(-50) from _call_io_cash_8
                                 m "Hmm, this is toooooooo tasty!{w=2}{nw}"
                                 $ isc_bar_client = True
                                 $ isc_bar_wc_cash += 50
@@ -549,7 +548,7 @@ label isc_barman:
     
 label alienshot_trip:
     
-    call sound_scan
+    call sound_scan from _call_sound_scan_5
     stop music fadeout 0.5
     
     $ drunktime = 0
@@ -581,7 +580,7 @@ label isc_bar_client1_out:
         linear 1 pos nodeA
                             
     pause 6
-    call sound_door
+    call sound_door from _call_sound_door_64
     hide client1
     $ isc_sysadmin_move = 1
     

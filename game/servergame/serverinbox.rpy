@@ -24,7 +24,7 @@ label server_inbox:
     
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
-    call server_msgitems
+    call server_msgitems from _call_server_msgitems
     
     if server_itemchoice == 0:
         jump server_start
@@ -56,7 +56,7 @@ label notify_new_message:
     show screen notify("{image=images/inventory/letter_idle.png}")
     #"Inbox: new message received!"
     $ inbox_new_message = "*"
-    call sound_connected
+    call sound_connected from _call_sound_connected_40
     return
 
 
@@ -78,7 +78,7 @@ label server_hellomsg:
     
     menu:
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_48
             jump server_inbox
                 
                 
@@ -101,14 +101,14 @@ label server_uncrypttoolmsg:
     
     menu:
         "download" if server_filelist[2] == "":
-            call sound_beep
-            call server_download
+            call sound_beep from _call_sound_beep_49
+            call server_download from _call_server_download
             $ server_filelist[2] = "3. uncrypter_install"
             $ server_fileitems = 3
             
             jump server_start
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_50
             jump server_inbox
             
             
@@ -119,17 +119,19 @@ label server_download:
     show text "Do you want to download it?" at termtextpos2
     menu:
         "download":
-            call sound_beep
+            call sound_beep from _call_sound_beep_51
             pass
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_52
             jump server_start
                 
     
-    show text "Downloading..." at termtextpos2
+    show text "Downloading...":
+        pos (274,240)
     pause 1
-    call server_progressbar
-    show text "Download completed." at termtextpos2
+    call server_progressbar from _call_server_progressbar_16
+    show text "Download completed.":
+        pos (274,240)
     pause 1
 
     
@@ -162,7 +164,7 @@ label server_welldonemsg:
             #$ inbox_new_message = "*"
             #"Add new message with instructions about satellite"
             
-            call sound_beep
+            call sound_beep from _call_sound_beep_53
             jump server_inbox
             
             
@@ -228,17 +230,17 @@ label server_satellitemsg:
     menu:
         "page 1":
             $ server_mail_page = 1
-            call sound_beep
+            call sound_beep from _call_sound_beep_54
             jump server_satellitemsg
         "page 2":
             $ server_mail_page = 2  
             
-            call sound_beep
+            call sound_beep from _call_sound_beep_55
             jump server_satellitemsg 
         "back":
-            call add_note("Terminal: locate io11\nio11 set new orbit to: X=350, Y=150\n4n0nym0u5 proxy phone number: 003007")
+            call add_note("Terminal: locate io11\nio11 set new orbit to: X=350, Y=150\n4n0nym0u5 proxy phone number: 003007") from _call_add_note_12
             
-            call sound_beep
+            call sound_beep from _call_sound_beep_56
             jump server_inbox
 
 
@@ -273,5 +275,5 @@ label server_numpad_sam_msg:
             #$ inbox_new_message = "*"
             #"Add new message with instructions about satellite"
             
-            call sound_beep
+            call sound_beep from _call_sound_beep_57
             jump server_inbox

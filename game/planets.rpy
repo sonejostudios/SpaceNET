@@ -149,10 +149,10 @@ label planet_info:
     if planet == "sun":
         $ planet_name = "Sun"
         $ planet_type = "Star"
-        $ planet_size = "1000000 km^3"
+        $ planet_size = "3246324768 km^3"
         $ planet_moons = "3"
         $ planet_atmosphere = "No"
-        $ planet_temperature = "20000"
+        $ planet_temperature = "200000"
         $ planet_radiations = "Yes"
         $ planet_habitable = "No"
         $ planet_inhabited = "No"

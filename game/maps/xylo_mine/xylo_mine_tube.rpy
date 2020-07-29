@@ -72,7 +72,7 @@ label loop_xylo_mine_tube:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_59
         
 
         # do something at node?
@@ -81,10 +81,10 @@ label loop_xylo_mine_tube:
                 if xylo_mine_tube_gem == True:
                     #md "Analyzing.{w=1}.{w=1}.{w=1}.{w=1}.{w=1}.{w=1} {nw}"
                     #md "Gem found. {w=2} {nw}"
-                    call take_gem
+                    call take_gem from _call_take_gem_6
                     $ xylo_mine_tube_gem = False
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_36
                     
             $ startpos = 1 
 
@@ -93,10 +93,10 @@ label loop_xylo_mine_tube:
             if startpos == 2:
                 if xylo_mine_tube_cash2 > 0:
                     md "There are some coins. {w=2} {nw}"
-                    call io_cash(xylo_mine_tube_cash2)
+                    call io_cash(xylo_mine_tube_cash2) from _call_io_cash_15
                     $ xylo_mine_tube_cash2 = 0
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_37
             $ startpos = 2
             
 
@@ -123,10 +123,10 @@ label loop_xylo_mine_tube:
             if startpos == 4:
                 if xylo_mine_tube_cash > 0:
                     md "There are some coins. {w=2} {nw}"
-                    call io_cash(xylo_mine_tube_cash)
+                    call io_cash(xylo_mine_tube_cash) from _call_io_cash_16
                     $ xylo_mine_tube_cash = 0
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_38
             $ startpos = 4
 
 

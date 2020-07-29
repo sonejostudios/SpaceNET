@@ -26,7 +26,7 @@ init:
 
 label term_commands:
     
-    call sound_beep
+    call sound_beep from _call_sound_beep_14
     
 
 # command help
@@ -61,7 +61,7 @@ label term_commands:
         
         #$ space_terminal = False
         
-        call sound_beep
+        call sound_beep from _call_sound_beep_15
         hide terminal
         hide text
         return
@@ -117,7 +117,7 @@ label term_commands:
                 menu:
                     "restart Io-11":
                         m "Okay let's do this. {w=1.5} {nw}"
-                        call server_progressbar
+                        call server_progressbar from _call_server_progressbar
                         $ sat_connected_to = "-"
 
                         
@@ -125,27 +125,27 @@ label term_commands:
                         menu:
                             "A.R.K. Network":
                                 if intercom_sat == False:
-                                    call server_progressbar
-                                    call sound_connected
+                                    call server_progressbar from _call_server_progressbar_1
+                                    call sound_connected from _call_sound_connected_9
                                     with flash
                                     $ sat_connected_to = "A.R.K. Network."
                                 else:
-                                    call server_progressbar
+                                    call server_progressbar from _call_server_progressbar_2
                                     $ sat_connected_to = "-"
-                                    call sound_beep
+                                    call sound_beep from _call_sound_beep_16
                                     with hpunch
                                     
                             
                             "SpaceNET":
                                 if intercom_sat == True:
-                                    call server_progressbar
-                                    call sound_connected
+                                    call server_progressbar from _call_server_progressbar_3
+                                    call sound_connected from _call_sound_connected_10
                                     with flash
                                     $ sat_connected_to = "SpaceNET"
                                 else:
-                                    call server_progressbar
+                                    call server_progressbar from _call_server_progressbar_4
                                     $ sat_connected_to = "-"
-                                    call sound_beep
+                                    call sound_beep from _call_sound_beep_17
                                     with hpunch
                             "exit":
                                 pass
@@ -165,7 +165,7 @@ label term_commands:
                             if not io11_new_orbit_y:
                                 io11_new_orbit_y = "-"
                         
-                        call server_progressbar
+                        call server_progressbar from _call_server_progressbar_5
                         
                         #"[io11_new_orbit_x], [io11_new_orbit_y]"
                         
@@ -185,7 +185,7 @@ label term_commands:
     Actual Position: ([io11_new_orbit_x],[io11_new_orbit_y])
     """
                             show text Text(showtext,text_align=termtext_align) at termtextpos
-                            call sound_connected
+                            call sound_connected from _call_sound_connected_11
                             with flash
                             
                             menu:
@@ -208,7 +208,7 @@ label term_commands:
     
     """
                             show text Text(showtext,text_align=termtext_align) at termtextpos
-                            call sound_beep
+                            call sound_beep from _call_sound_beep_18
                             with hpunch
                             menu:
                                 "Exit":
@@ -231,7 +231,7 @@ label term_commands:
     Remote Connection rejected !
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_beep
+        call sound_beep from _call_sound_beep_19
         with hpunch
         pause 3
         $ termtext = "help"
@@ -247,7 +247,7 @@ label term_commands:
     Remote Connection rejected !
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_beep
+        call sound_beep from _call_sound_beep_20
         with hpunch
         pause 3
         $ termtext = "help"
@@ -273,7 +273,7 @@ label term_commands:
     Do you really want to send a sos message?
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_beep
+        call sound_beep from _call_sound_beep_21
         
         menu:
             "send sos":
@@ -284,7 +284,7 @@ label term_commands:
     
         
         
-        call server_progressbar
+        call server_progressbar from _call_server_progressbar_6
         #show text "Sos sent!" at termtextpos2
         $ showtext = """
     SOS
@@ -294,7 +294,7 @@ label term_commands:
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         
-        call sound_connected
+        call sound_connected from _call_sound_connected_12
 
         pause 2.5
         $ termtext = "help"
@@ -312,7 +312,7 @@ label term_commands:
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         
-        call sound_connected
+        call sound_connected from _call_sound_connected_13
         pause 1
         
         radio "Welcome to sea view boat company.{w=3.0} {nw}"
@@ -365,7 +365,7 @@ label term_commands:
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         
-        call sound_connected
+        call sound_connected from _call_sound_connected_14
         pause 1
         
         radio "Hello, welcome to a.r.k. corporation. {w=2.5} {nw}"
@@ -380,10 +380,13 @@ label term_commands:
                 "[questions[0]]":
                     m "[questions[0]]"
                     radio "Yes, no problem. {w=1.5} {nw}"
-                    radio "We can make an appointment. {w=1.5} {nw}"
-                    radio "Just come to our building, our guard at the reception will let you in. {w=3.5} {nw}"
-                    m "Okay, thanks! {w=1} {nw}"
-                    radio "See you soon, bye!{w=1.5} {nw}"
+                    radio "We can make an appointment. {w=2} {nw}"
+                    radio "How is your name? {w=1.5} {nw}"
+                    m "My name is [playername]. {w=1.5} {nw}"
+                    radio "Alright!{w=1} Your are registered now. {w=2.5} {nw}"
+                    radio "Just come to our building, our guard at the reception will let you in. {w=4} {nw}"
+                    m "Okay, thanks! {w=1.5} {nw}"
+                    radio "See you soon, bye!{w=2} {nw}"
                     $ xylo_village1_building_reception = 2
                     
                     $ termtext = "help"
@@ -405,7 +408,7 @@ label term_commands:
     
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_beep
+        call sound_beep from _call_sound_beep_22
         with hpunch
         m "Cheating is not a good idea right now... {w=2.5} {nw}"
         $ termtext = "help"
@@ -422,10 +425,10 @@ label term_commands:
     You finished all missions!
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_connected
+        call sound_connected from _call_sound_connected_15
         with flash
         
-        call cheat_missions
+        call cheat_missions from _call_cheat_missions
         
         pause 3
         $ termtext = "help"
@@ -436,7 +439,7 @@ label term_commands:
 # command SpaceNET
     if termtext == "spacenet" :
         
-        call nodes_list_update
+        call nodes_list_update from _call_nodes_list_update
         
         $ showtext = """
     SpaceNET
@@ -457,15 +460,15 @@ label term_commands:
 
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_beep
+        call sound_beep from _call_sound_beep_23
         
         $ spacenetmenu = True
          
         menu:
             "launch SpaceNET" if intercom_sat == True and sat_connected_to == "SpaceNET" and active_nodes_amount == max_nodes_amount and spacenet_state == "offline":
                 m "Yes, finally! Let's launch it!! {w=2.5}{nw}"
-                call server_progressbar
-                call sound_collect
+                call server_progressbar from _call_server_progressbar_7
+                call sound_collect from _call_sound_collect_2
                 with flash
                 
                 $ spacenet_state = "online"
@@ -505,10 +508,8 @@ label term_commands:
     A nodes is just a SpaceNET server with
     the SpaceNET software.
 
-    Once all nodes are activated,
-    everybody will have access to all
-    the knowledge of the universe.
-    
+    SpaceNET also needs an intercom satellite 
+    to work properly.
 
     """
                 show text Text(showtext,text_align=termtext_align) at termtextpos
@@ -539,7 +540,7 @@ label term_commands:
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         
-        call sound_connected
+        call sound_connected from _call_sound_connected_16
         pause 1
         
         radio "Hello, welcome to the administration of the Industrial Space City. {w=3.5} {nw}"
@@ -554,7 +555,7 @@ label term_commands:
                 "[questions[0]]":
                     m "[questions[0]]"
                     radio "Yes, no problem. {w=1.5} {nw}"
-                    call sound_connected
+                    call sound_connected from _call_sound_connected_17
                     with flash
                     $ isc_spaceport_auth = True
                     
@@ -581,34 +582,34 @@ label term_commands:
 
 # command locate megaship
     if termtext == "locate megaship" :
-        call terminal_locate("megaship")
+        call terminal_locate("megaship") from _call_terminal_locate
         jump terminal
 
 # command locate xylo
     if termtext == "locate xylo" :
-        call terminal_locate("xylo")
+        call terminal_locate("xylo") from _call_terminal_locate_1
         jump terminal
         
 
 # command locate sun
     if termtext == "locate sun" :
-        call terminal_locate("sun")
+        call terminal_locate("sun") from _call_terminal_locate_2
         jump terminal
 
 
 # command locate satellite io11
     if termtext == "locate io11" :
-        call terminal_locate("io11")
+        call terminal_locate("io11") from _call_terminal_locate_3
         jump terminal
         
 # command locate cargo
     if termtext == "locate cargo" and cargo_remote_control != "none":
-        call terminal_locate("cargo")
+        call terminal_locate("cargo") from _call_terminal_locate_4
         jump terminal
         
 # command locate isc
     if termtext == "locate isc" :
-        call terminal_locate("isc")
+        call terminal_locate("isc") from _call_terminal_locate_5
         jump terminal
         
 
@@ -628,7 +629,7 @@ label term_commands:
         show text Text(showtext,text_align=termtext_align) at termtextpos
         
         if cargo_exploded == 2:
-            call sound_connected
+            call sound_connected from _call_sound_connected_18
             pause 1
             
             hacker "Hello! {w=1.5} {nw}"
@@ -642,17 +643,17 @@ label term_commands:
     
         if hacker_in_prison == 0:
             
-            call sound_connected
+            call sound_connected from _call_sound_connected_19
             pause 1
             
             hacker "Hello [playername]. Thank you for calling.{w=2.5} {nw}"
             hacker "Please, be careful with the satellite mission. {w=3} {nw}"
-            hacker "Before you flight to the stellite, you need to know a couple of important things... {w=4.5} {nw}"
+            hacker "Before you flight to the satellite, you need to know a couple of important things... {w=4.5} {nw}"
             hacker "First, thank you for the help. {w=2} {nw}"
             hacker "Without you we would not be able to accomplish our mission! {w=3} {nw}"
             hacker "Second, wait... {w=2} {nw}"
             
-            call music_intro
+            call music_intro from _call_music_intro
             
             hacker "... {w=2} {nw}"
             
@@ -683,7 +684,7 @@ label term_commands:
             hacker "Help!{w=2}{nw}"
             hacker "I'm coming closer to the spaceship...{w=3}{nw}"
             hacker "A huge door is opening right now... {w=3}{nw}"
-            hacker "My spaceship are going straight into it!{w=3}{nw}"
+            hacker "My spaceship is going straight into it!{w=3}{nw}"
             
             menu:
                 "[questions[3]]":
@@ -697,7 +698,7 @@ label term_commands:
             m "They will put you into a prison cell. {w=3}{nw}"
             m "But there is a way out! {w=3}{nw}"
             m "I could try to get there, but I'll need some tools. {w=3.5}{nw}"   
-            hacker "If you need anything, go to Sam in Xylo Village.{w=3.5}{nw}"
+            hacker "If you need anything, go to Sam.{w=3.5}{nw}"
             hacker "He can certainly help you.{w=3}{nw}"
             hacker "Please help me out!{w=3}{nw}"
             hacker "...{w=2}{nw}"
@@ -736,7 +737,7 @@ label term_commands:
         
         #if io11_pass_entry == "isccrane":
             
-        call sound_connected
+        call sound_connected from _call_sound_connected_20
         $ showtext = """
     ssh isc
     [ascii_line]
@@ -751,60 +752,60 @@ label term_commands:
         
         menu:
             "Move crane":
-                call sound_beep
+                call sound_beep from _call_sound_beep_24
                 
                 while True:
                     menu:
                         "North":
                             if isc_crane_pos_y < 1:
-                                call sound_movingwall
+                                call sound_movingwall from _call_sound_movingwall_1
                                 $ crane_pos_name = "moving..."
                                 show text Text(showtext,text_align=termtext_align) at termtextpos
                                 pause 1
                                 $ isc_crane_pos_y += 1
                             else:
-                                call sound_electroshock
+                                call sound_electroshock from _call_sound_electroshock_8
                                 with hpunch
                         "South":
                             if isc_crane_pos_y > 0:
-                                call sound_movingwall
+                                call sound_movingwall from _call_sound_movingwall_2
                                 $ crane_pos_name = "moving..."
                                 show text Text(showtext,text_align=termtext_align) at termtextpos
                                 pause 1
                                 $ isc_crane_pos_y -= 1
                             else:
-                                call sound_electroshock
+                                call sound_electroshock from _call_sound_electroshock_9
                                 with hpunch
                         "East":
                             if isc_crane_pos_x < 1:
-                                call sound_movingwall
+                                call sound_movingwall from _call_sound_movingwall_3
                                 $ crane_pos_name = "moving..."
                                 show text Text(showtext,text_align=termtext_align) at termtextpos
                                 pause 1
                                 $ isc_crane_pos_x += 1
                             else:
-                                call sound_electroshock
+                                call sound_electroshock from _call_sound_electroshock_10
                                 with hpunch
                         "West":
                             if isc_crane_pos_x > 0:
-                                call sound_movingwall
+                                call sound_movingwall from _call_sound_movingwall_4
                                 $ crane_pos_name = "moving..."
                                 show text Text(showtext,text_align=termtext_align) at termtextpos
                                 pause 1
                                 $ isc_crane_pos_x -= 1
                             else:
-                                call sound_electroshock
+                                call sound_electroshock from _call_sound_electroshock_11
                                 with hpunch
                         "Stow":
                             if isc_crane_pos_x == 1 or isc_crane_pos_y == 1:
-                                call sound_movingwall
+                                call sound_movingwall from _call_sound_movingwall_5
                                 $ crane_pos_name = "moving..."
                                 show text Text(showtext,text_align=termtext_align) at termtextpos
                                 pause 1
                                 $ isc_crane_pos_x = 0
                                 $ isc_crane_pos_y = 0
                             else:
-                                call sound_electroshock
+                                call sound_electroshock from _call_sound_electroshock_12
                                 with hpunch
                             
                         "Exit":
@@ -858,7 +859,7 @@ label term_commands:
             
             if cargo_remote_control == "enabled":
             
-                call sound_connected
+                call sound_connected from _call_sound_connected_21
                 $ showtext = """
     ssh cargo
     [ascii_line]
@@ -883,7 +884,7 @@ label term_commands:
                             $ countdown_sec = 0
                             $ countdown = False
                             
-                            call sound_connected
+                            call sound_connected from _call_sound_connected_22
                             
                             m "Okay... Now the reactor room is closed...{w=3.5}{nw}"
                             m "Nobody can enter it and restart the reactor!{w=3.5}{nw}"
@@ -908,7 +909,7 @@ label term_commands:
     Remote Connection rejected !
     """
                             show text Text(showtext,text_align=termtext_align) at termtextpos
-                            call sound_beep
+                            call sound_beep from _call_sound_beep_25
                             $ cargo_remote_control = "disabled"
                             m "Oh no! I think the crew restarted the reactor and disabled the remote control!{w=5}{nw}"
                             #pause 3
@@ -928,7 +929,7 @@ label term_commands:
     Remote Connection rejected !
     """
                 show text Text(showtext,text_align=termtext_align) at termtextpos
-                call sound_beep
+                call sound_beep from _call_sound_beep_26
                 pause 3
                 $ termtext = "help"
                 jump terminal
@@ -948,7 +949,7 @@ label term_commands:
         hacker "Hello [playername]!{w=3} {nw}"
         hacker "This is your cargo infiltration mission:{w=4} {nw}"
         
-        call isc_spaceflight_cargo_mission
+        call isc_spaceflight_cargo_mission from _call_isc_spaceflight_cargo_mission
         
         hacker "Good luck!{w=2} {nw}"
         

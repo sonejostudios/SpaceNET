@@ -9,7 +9,7 @@ label isc_city_bar_lift1:
     $ liftlevel = ("-01", None, None, "00")
     
     while True:
-        call liftengine
+        call liftengine from _call_liftengine
         
         #define what to do at level when arrived
         
@@ -17,22 +17,22 @@ label isc_city_bar_lift1:
         if liftpos == 0:
             #call dialog_closed
             $ startpos = 4
-            call sound_door
+            call sound_door from _call_sound_door_67
             jump isc_bar_lift_room
             
             
         #middle-down
         if liftpos == 1:
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_13
 
         #middle-up
         if liftpos == 2:
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_14
             
         #up
         if liftpos == 3:
             $ startpos = 11
-            call sound_door
+            call sound_door from _call_sound_door_68
             jump isc_city_bar_toilets
 
     

@@ -91,7 +91,7 @@ label multimap_startanim:
     $ nodeDD = (50,240)
     
     
-    call draw_multimap
+    call draw_multimap from _call_draw_multimap
     return
 
      

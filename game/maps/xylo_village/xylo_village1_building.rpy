@@ -6,10 +6,8 @@ init:
     $ xylo_village1_building_alarm = 0
     $ xylo_village1_building_reception = 0
     $ alarm_on = False
-    
 
-    
-    $ xylo_building_reception_flags = [0, 0, 0, 0]
+    default xylo_building_reception_flags = [0, 0, 0, 0]
     
     
     
@@ -42,7 +40,7 @@ label xylo_village1_building:
     
     stop atmo fadeout 1.0
     
-    call music_xylo_building
+    call music_xylo_building from _call_music_xylo_building
     
     
     image xylo_village1_building = imagemapsdir + "crossroom.png"
@@ -178,10 +176,10 @@ label xylo_village1_building:
 label loop_xylo_village1_building:
     
     # alarm
-    call alarm_check
+    call alarm_check from _call_alarm_check
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_3
 
     # do something at node?
     if exitpos == 1:
@@ -192,7 +190,7 @@ label loop_xylo_village1_building:
         $ startpos = 2
         
         if xylo_village1_building_reception >=3:
-            call sound_door
+            call sound_door from _call_sound_door_8
             jump xylo_village1_building_lift
             
         else:
@@ -208,7 +206,7 @@ label loop_xylo_village1_building:
             show player:
                 linear 1 pos nodeC
             pause 1
-            call sound_door
+            call sound_door from _call_sound_door_9
             $ startpos = 33
             jump xylo_village1
             
@@ -220,10 +218,10 @@ label loop_xylo_village1_building:
         if xylo_village1_building_alarm >= 1:
             $ xylo_village1_building_alarm = 1
         
-        call alarm_check
+        call alarm_check from _call_alarm_check_1
         
         $ startpos = 33
-        call sound_door
+        call sound_door from _call_sound_door_10
         stop music fadeout 1.0
         jump xylo_village1
         
@@ -241,7 +239,7 @@ label loop_xylo_village1_building:
                     guardxylo "What do you want? {w=2} {nw}" 
                     jump xylo_village1_building_reception # reception
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_5
                     
             else:
                 m "I'm on floor number [liftpos]. {w=2} {nw}"
@@ -279,7 +277,7 @@ label loop_xylo_village1_building:
                     pause 5.5
                     $xylo_village1_building_alarm = 2
                     hide npc
-                    call sound_door
+                    call sound_door from _call_sound_door_11
                     jump loop_xylo_village1_building
                     
                 "[questions[2]]":
@@ -306,7 +304,7 @@ label loop_xylo_village1_building:
             jump xylo_village1_building_kickout
             
         if startpos == 22 and liftpos == 2 and alarm_on == True:
-            call dialog_nothing
+            call dialog_nothing from _call_dialog_nothing_6
         
         $ startpos = 22
         jump loop_xylo_village1_building 
@@ -321,9 +319,9 @@ label loop_xylo_village1_building:
         if alarm_on == True: # get AccessCard
             if "accesscard" not in inventory:
                 m "Oh, there is an access card on the desk! {w=2.5} {nw}"
-                call take_item("accesscard")
+                call take_item("accesscard") from _call_take_item
             else:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_7
             
         
         $ startpos = 33
@@ -341,11 +339,11 @@ label loop_xylo_village1_building:
         
         if startpos == 44 and liftpos == 3 and alarm_on == True and cash_xylo_building > 0:
             m "There is some money on the desk. Oh nice, I'm rich!{w=3} {nw}"
-            call io_cash(cash_xylo_building)
+            call io_cash(cash_xylo_building) from _call_io_cash
             $ cash_xylo_building = 0
             
         if startpos == 44 and liftpos == 3 and alarm_on == True and cash_xylo_building == False:
-            call dialog_nothing
+            call dialog_nothing from _call_dialog_nothing_8
             
         $ startpos = 44
         
@@ -386,7 +384,7 @@ label xylo_village1_building_reception:
                 guardxylo "Our phone number is 01020304. {w=3} {nw}"
                 guardxylo "Just type it in the terminal to call us. {w=2} {nw}"
                 guardxylo "See you. {w=1} {nw}"
-                call add_note("A.R.K. Corporation Office number: 01020304")
+                call add_note("A.R.K. Corporation Office number: 01020304") from _call_add_note_1
                 
             "[questions[3]]" if xylo_village1_building_reception >= 2:
                 m "[questions[3]]"
@@ -395,7 +393,7 @@ label xylo_village1_building_reception:
                 guardxylo "Wait... {w=1.5} {nw}"
                 guardxylo "... {w=1.5} {nw}"
                 guardxylo "Okay, no problem, I'll let you in. {w=2.5} {nw}"
-                call sound_collect
+                call sound_collect from _call_sound_collect
                 with flash
                 guardxylo "Welcome to a.r.k. corporation! {w=3} {nw}"
                 $ xylo_village1_building_reception = 3
@@ -442,7 +440,7 @@ label xylo_village1_building_level3: # level 3
                         show player:
                             linear 1 pos nodeB
                         pause 1
-                        call sound_door
+                        call sound_door from _call_sound_door_12
                         jump xylo_village1_building_lift
                         
                     "[questions[1]]":
@@ -476,7 +474,7 @@ label xylo_village1_building_level3: # level 3
                 
                 
 label xylo_village1_building_kickout:
-    call sound_scan
+    call sound_scan from _call_sound_scan
     with flash
     show npc as guard:
         rotate 90
@@ -493,7 +491,7 @@ label xylo_village1_building_kickout:
         linear 1 pos nodeB
     pause 1
     
-    call sound_door
+    call sound_door from _call_sound_door_13
 
     $ startpos = 33
     jump xylo_village1

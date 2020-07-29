@@ -1254,12 +1254,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.87081275"
-     inkscape:cx="1224.5801"
-     inkscape:cy="139.5544"
+     inkscape:zoom="0.6157576"
+     inkscape:cx="1276.4677"
+     inkscape:cy="299.17347"
      inkscape:document-units="px"
      inkscape:current-layer="layer4"
-     showgrid="true"
+     showgrid="false"
      inkscape:window-width="1680"
      inkscape:window-height="1014"
      inkscape:window-x="116"
@@ -1570,14 +1570,55 @@
        y="-68.561005"
        rx="0"
        ry="0"
-       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/android-presplash.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
+    <g
+       id="g1905"
+       transform="translate(2.900846)"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/android-presplash.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <flowRoot
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+         xml:space="preserve"
+         id="flowRoot7315"
+         style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#8dd35e;fill-opacity:1;stroke:none;filter:url(#filter7369)"
+         transform="matrix(0.51666199,0,0,0.51666199,612.36041,66.191201)"><flowRegion
+           id="flowRegion7311"
+           style="fill:#8dd35e;fill-opacity:1"><rect
+             id="rect7309"
+             width="555.41339"
+             height="81.200783"
+             x="1167.6672"
+             y="477.47244"
+             style="fill:#8dd35e;fill-opacity:1" /></flowRegion><flowPara
+           id="flowPara7313"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;fill:#8dd35e;fill-opacity:1">Loading Universe...</flowPara></flowRoot>      <flowRoot
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+         transform="matrix(0.51666199,0,0,0.51666199,612.36041,66.191201)"
+         style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#8dd35e;fill-opacity:1;stroke:none"
+         id="flowRoot6857"
+         xml:space="preserve"><flowRegion
+           style="fill:#8dd35e;fill-opacity:1"
+           id="flowRegion6859"><rect
+             style="fill:#8dd35e;fill-opacity:1"
+             y="477.47244"
+             x="1167.6672"
+             height="81.200783"
+             width="555.41339"
+             id="rect6861" /></flowRegion><flowPara
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;fill:#8dd35e;fill-opacity:1"
+           id="flowPara6863">Loading Universe...</flowPara></flowRoot>    </g>
     <g
        transform="translate(1107.1657,-74.560992)"
        style="display:inline;enable-background:new"
        id="g6810-3"
-       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/android-presplash.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <g
@@ -1661,44 +1702,6 @@
            ry="17.5" />
       </g>
     </g>
-    <g
-       id="g1886"
-       transform="translate(16)">
-      <flowRoot
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
-         transform="matrix(0.51666199,0,0,0.51666199,596.36041,66.191201)"
-         style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#8dd35e;fill-opacity:1;stroke:none"
-         id="flowRoot6857"
-         xml:space="preserve"><flowRegion
-           style="fill:#8dd35e;fill-opacity:1"
-           id="flowRegion6859"><rect
-             style="fill:#8dd35e;fill-opacity:1"
-             y="477.47244"
-             x="1167.6672"
-             height="81.200783"
-             width="555.41339"
-             id="rect6861" /></flowRegion><flowPara
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;fill:#8dd35e;fill-opacity:1"
-           id="flowPara6863">Loading Universe....</flowPara></flowRoot>      <flowRoot
-         inkscape:export-ydpi="96"
-         inkscape:export-xdpi="96"
-         inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/android-presplash.png"
-         xml:space="preserve"
-         id="flowRoot7315"
-         style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;opacity:1;fill:#8dd35e;fill-opacity:1;stroke:none;filter:url(#filter7369)"
-         transform="matrix(0.51666199,0,0,0.51666199,596.36041,66.191201)"><flowRegion
-           id="flowRegion7311"
-           style="fill:#8dd35e;fill-opacity:1"><rect
-             id="rect7309"
-             width="555.41339"
-             height="81.200783"
-             x="1167.6672"
-             y="477.47244"
-             style="fill:#8dd35e;fill-opacity:1" /></flowRegion><flowPara
-           id="flowPara7313"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.33333206px;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;fill:#8dd35e;fill-opacity:1">Loading Universe....</flowPara></flowRoot>    </g>
   </g>
   <g
      inkscape:groupmode="layer"

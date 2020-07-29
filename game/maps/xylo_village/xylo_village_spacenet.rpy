@@ -59,7 +59,7 @@ screen xylo_village_spacenet_button zorder -999:
 
 label xylo_village_spacenet:
     
-    call atmo_spaceship
+    call atmo_spaceship from _call_atmo_spaceship_6
     
     scene bgcolor
     
@@ -131,7 +131,7 @@ label loop_xylo_village_spacenet:
             
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_62
 
     # do something at node?
     if exitpos == 1:
@@ -144,7 +144,7 @@ label loop_xylo_village_spacenet:
         
     if exitpos == 3: # terminal
         if startpos == 3:
-            call terminal
+            call terminal from _call_terminal_12
         
         $ startpos = 3
         
@@ -152,7 +152,7 @@ label loop_xylo_village_spacenet:
         
     if exitpos == 4:
         $ startpos = 11
-        call sound_door
+        call sound_door from _call_sound_door_138
         jump xylo_village2 # out 
         
 
@@ -192,7 +192,7 @@ label xylo_village_spacenet_comp:
     if shadow_enable == 1:
         show shadow:
             pos (270, 240)
-    call sound_beep
+    call sound_beep from _call_sound_beep_37
     
     if xylo_village_spacenet_button == False or xylo_village_spacenet_button_start == False :
         m "The computer interface is not running... {w=2} {nw}"
@@ -203,7 +203,7 @@ label xylo_village_spacenet_comp:
         jump xylo_village_spacenet
     
     
-    call spacenet_comp("xylo_village") # install spacenet
+    call spacenet_comp("xylo_village") from _call_spacenet_comp_3 # install spacenet
     
     jump xylo_village_spacenet
     

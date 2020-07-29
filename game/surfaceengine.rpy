@@ -55,7 +55,7 @@ label surface:
     
     stop atmo
     #call atmo_spaceship_hum
-    call music_intro
+    call music_intro from _call_music_intro_2
     
     
     
@@ -65,7 +65,7 @@ label surface:
     scene bgcolor
     
     if planet == "cargo" or planet == "isc":
-        call show_space
+        call show_space from _call_show_space_22
     
     
     if shadow_enable == 1:
@@ -90,7 +90,7 @@ label scroll:
             easein 2 anchor shippos
             
     if space_anim == True:
-        call landing_fromspace_anim
+        call landing_fromspace_anim from _call_landing_fromspace_anim
 
     show spaceship:
         pos (0.5,0.5)
@@ -99,10 +99,10 @@ label scroll:
 
     
     #call movescroll
-    call rotation
+    call rotation from _call_rotation
     
     
-    call airport 
+    call airport from _call_airport 
     
     $ ingame = True
     
@@ -115,10 +115,10 @@ label scroll:
     window hide
     pause
     
-    call sound_propulsion
+    call sound_propulsion from _call_sound_propulsion
     
     
-    call movescroll
+    call movescroll from _call_movescroll
 
     jump scroll
     
@@ -131,13 +131,13 @@ label movescroll:
     
     # surface border warning
     if shippos[0] == 0 and mousepos[0] < 300:
-        call surface_borders
+        call surface_borders from _call_surface_borders
     if shippos[0] == 1400 and mousepos[0] > 500: #1200
-        call surface_borders
+        call surface_borders from _call_surface_borders_1
     if shippos[1] == 0 and mousepos[1] < 140:
-        call surface_borders
+        call surface_borders from _call_surface_borders_2
     if shippos[1] == 1600 and mousepos[1] > 340: #1400
-        call surface_borders
+        call surface_borders from _call_surface_borders_3
 
     
     # set new position if position is not over bg boundaries 
@@ -220,20 +220,20 @@ label rotation:
 label airport:
     
     if shippos == airport1 and ingame == True:
-        call airport_name(airportname1)
-        call landing
+        call airport_name(airportname1) from _call_airport_name
+        call landing from _call_landing
     
     if shippos == airport2 and ingame == True:
-        call airport_name(airportname2)
-        call landing
+        call airport_name(airportname2) from _call_airport_name_1
+        call landing from _call_landing_1
         
     if shippos == airport3 and ingame == True:
-        call airport_name(airportname3)
-        call landing
+        call airport_name(airportname3) from _call_airport_name_2
+        call landing from _call_landing_2
         
     if shippos == airport4 and ingame == True:
-        call airport_name(airportname4)
-        call landing
+        call airport_name(airportname4) from _call_airport_name_3
+        call landing from _call_landing_3
         
     return
 
@@ -306,7 +306,7 @@ label landing:
                     $ startpos = 44
                     jump isc_city_spaceport
         
-        "exit":
+        "fly":
             $ ingame = False
             pass
             

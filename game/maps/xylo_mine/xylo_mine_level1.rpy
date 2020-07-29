@@ -20,7 +20,7 @@ label xylo_mine_level1:
     
     #call music_xylo_mine
     
-    call atmo_deep_ambiance
+    call atmo_deep_ambiance from _call_atmo_deep_ambiance
     
     
     image xylo_mine_level1 = imagemapsdir + "xylo_mine1.png"
@@ -87,7 +87,7 @@ label loop_xylo_mine_level1:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_15
 
         # do something at node?
         if exitpos == 1:
@@ -101,7 +101,7 @@ label loop_xylo_mine_level1:
             hide screen xylo_mine_earthquake
             $ multiposx = 0
             $ multiposy = 2
-            call sound_door
+            call sound_door from _call_sound_door_35
             jump xylo_mine_multimap1
             
             
@@ -110,17 +110,17 @@ label loop_xylo_mine_level1:
             if startpos == 2:
                 if xylo_mine_used_dynamite == False and inventory_select == "dynamite":
                     m "Okay, let's go! {w=2} {nw}"
-                    call sound_ignition
+                    call sound_ignition from _call_sound_ignition
                     show player:
                         linear 0.5 pos nodeC
                     if shadow_enable == 1:
                         show shadow:
                             linear 0.5 pos nodeC
                     $ startpos = 3
-                    call use_item
+                    call use_item from _call_use_item_1
                     m "3... {w=1} 2... {w=1} 1... {w=1}{nw}"
                     #pause 3
-                    call sound_explosion
+                    call sound_explosion from _call_sound_explosion
                     $ xylo_mine_used_dynamite = True
                     with flash
                     jump xylo_mine_level1
@@ -136,7 +136,7 @@ label loop_xylo_mine_level1:
                     jump loop_xylo_mine_level1
                     
                 if xylo_mine_used_dynamite == False and inventory_select != "":
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_6
                 
                 
             $ startpos = 2
@@ -144,29 +144,29 @@ label loop_xylo_mine_level1:
 
         if exitpos == 3:
             if startpos == 3:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_18
             $ startpos = 3
 
         if exitpos == 4:
             if startpos == 4:
                 if "pick" not in inventory:
                     m "There is a pick! {w=2} {nw}"
-                    call take_item("pick")
+                    call take_item("pick") from _call_take_item_8
                 else:    
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_19
                 
             $ startpos = 4
 
         #exits
         if exitpos == 11: 
             if startpos == 11:
-                call xylo_mine_level1_info     
+                call xylo_mine_level1_info from _call_xylo_mine_level1_info     
             $ startpos = 11    
 
         if exitpos == 22:
             hide screen xylo_mine_earthquake
             $ startpos = 1
-            call sound_door
+            call sound_door from _call_sound_door_36
             jump xylo_mine_spacenet
                 
             $ startpos = 22
@@ -198,7 +198,7 @@ this could trigger small earthquakes!
 You stay at your own risk.
     """
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel_1 # in animations
 
     return
 
@@ -207,7 +207,7 @@ You stay at your own risk.
 
 label xylo_mine_level1_earthquake:
             
-    call sound_earthquake
+    call sound_earthquake from _call_sound_earthquake
     with hpunch
     
     if xylo_mine_used_dynamite_dialog == False:
@@ -219,7 +219,7 @@ label xylo_mine_level1_earthquake:
     
     
     if showtext != "":
-        call xylo_mine_level1_info
+        call xylo_mine_level1_info from _call_xylo_mine_level1_info_1
 
     jump loop_xylo_mine_level1
     

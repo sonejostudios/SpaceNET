@@ -219,7 +219,7 @@ screen inventory:
             if inventory_item == "letter":
                 imagebutton idle inventory_dir + "letter_idle.png" selected_idle inventory_dir + "letter_selected_idle.png" selected_hover inventory_dir + "letter_selected_idle.png":
                     if inventory_select != "letter":
-                        action SelectedIf(inventory_select == "letter"), SetVariable("inventory_select", "letter"), SetVariable("item_info", "This is a simple old school letter.")
+                        action SelectedIf(inventory_select == "letter"), SetVariable("inventory_select", "letter"), SetVariable("item_info", "This is a simple old school letter.\nIt is sealed.")
                     else:
                         action SelectedIf(inventory_select == "letter"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
                         #action SelectedIf(inventory_select == "letter"), Show("letter_screen"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
@@ -300,8 +300,8 @@ label take_item(i):
             if i not in inventory:
                 $ inventory_select = i
                 $ inventory.append(i)
-                call sound_collect
-                call inventory_notify
+                call sound_collect from _call_sound_collect_4
+                call inventory_notify from _call_inventory_notify_1
                 with flash
         "leave it":
             return
@@ -317,8 +317,8 @@ label take_gem:
     
     $ gems += 1
     $ inventory_select = "gem"
-    call sound_collect
-    call inventory_notify
+    call sound_collect from _call_sound_collect_5
+    call inventory_notify from _call_inventory_notify_2
     with flash
     m "Gem(s): [gems]/[maxgems] {w=2} {nw}"
     
@@ -336,16 +336,16 @@ label take_gem:
 label use_item:
     if inventory_select in inventory:
         $ inventory.remove(inventory_select)
-        call sound_connected
+        call sound_connected from _call_sound_connected_33
         #with flash
-        call inventory_notify
+        call inventory_notify from _call_inventory_notify_3
     
     return
     
     
 label use_and_keep_item:
     #call sound_connected
-    call inventory_notify
+    call inventory_notify from _call_inventory_notify_4
     
     return
 
@@ -367,12 +367,12 @@ label buy_item(i, y):
                 $ inventory_select = i
                 $ inventory.append(i)
                 #call sound_collect
-                call inventory_notify
+                call inventory_notify from _call_inventory_notify_5
                 #with flash
                 
                 #$ coins -= y
                 
-                call io_cash(-y)
+                call io_cash(-y) from _call_io_cash_14
             
             else:
                 m "Here, [coins]c, that's all I have. {w=2.5} {nw}"
@@ -397,7 +397,7 @@ label io_cash(x):
     
     #show screen notify("{image=images/inventory/cash_idle.png}")
     
-    call sound_collect
+    call sound_collect from _call_sound_collect_6
     with flash
     
     $ coins += x
@@ -453,13 +453,13 @@ label add_note(i):
     if "notebook" in inventory:
         if i not in notebook_notes:
             $ notebook_notes.append(i)
-            m "This is an interessant information... {w=2}{nw}"
+            m "This is an interesting information... {w=2}{nw}"
             m "I'll write it down!{w=2}{nw}"
             
             $ inventory_select = "notebook"
-            call inventory_notify
+            call inventory_notify from _call_inventory_notify_6
             
-            call sound_collect
+            call sound_collect from _call_sound_collect_7
             with flash
     else:
         m "This is an interessant information, but unfortunately I have nothing to write it down...{w=5}{nw}"

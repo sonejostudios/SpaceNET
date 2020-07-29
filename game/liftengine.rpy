@@ -7,7 +7,7 @@ label liftengine:
     
     #stop music
     
-    call atmo_spaceship_hum
+    call atmo_spaceship_hum from _call_atmo_spaceship_hum_3
     
     #call music_lift
     
@@ -55,7 +55,7 @@ label liftengine:
             
             
     # alarm
-    call alarm_check
+    call alarm_check from _call_alarm_check_10
     
 
     
@@ -111,7 +111,7 @@ label liftengine:
             $ pnc_nodes_visible = True
             return
 
-    call sound_lift       
+    call sound_lift from _call_sound_lift_3       
     pause 3   # animation time
     
     jump liftengine

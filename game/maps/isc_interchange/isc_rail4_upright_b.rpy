@@ -10,14 +10,14 @@ init:
 
 label isc_rail4b:
     
-    call music_isc
-    call atmo_spaceship_station
+    call music_isc from _call_music_isc_1
+    call atmo_spaceship_station from _call_atmo_spaceship_station_7
     
     
     scene bgcolor
     #show screen notify("B")
     
-    call show_space
+    call show_space from _call_show_space_18
     
     show isc_rail4
     
@@ -98,7 +98,7 @@ label loop_isc_rail4b:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_74
 
         # do something at node?
         if exitpos == 1:
@@ -108,20 +108,20 @@ label loop_isc_rail4b:
             
         if exitpos == 2:
             if startpos == 2 and isc_containerpos4 == 2:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_39
                 
             if playertype == "minidroid":
-                call dialog_ndd
+                call dialog_ndd from _call_dialog_ndd_1
                 $ startpos = 2
                 jump loop_isc_rail4b
                 
             
             if isc_containerpos4 == 1:
-                call sound_door
+                call sound_door from _call_sound_door_154
                 show player:
                     pos (373,136)
                 pause 0.7
-                call sound_door
+                call sound_door from _call_sound_door_155
                 $ startpos = 2
                 jump isc_rail4a
             $ startpos = 2
@@ -144,7 +144,7 @@ label loop_isc_rail4b:
                 jump isc_rail4a
             
             if startpos == 3 and playertype == "player": 
-                call dialog_nosense
+                call dialog_nosense from _call_dialog_nosense_18
             
             $ startpos = 3
                 
@@ -156,19 +156,19 @@ label loop_isc_rail4b:
             if startpos == 4 and isc_containerpos4 == 1:
                 
                 if playertype == "minidroid":
-                    call sound_door_locked
+                    call sound_door_locked from _call_sound_door_locked_6
                     md "It is locked!{w=1.5} {nw}"
                 else:
-                    call dialog_closed
+                    call dialog_closed from _call_dialog_closed_40
                 
                 
             
             if isc_containerpos4 == 2:
-                call sound_door
+                call sound_door from _call_sound_door_156
                 show player:
                     pos (376,408)
                 pause 0.7
-                call sound_door
+                call sound_door from _call_sound_door_157
                 $ startpos = 4
                 jump isc_rail4a
             
@@ -179,9 +179,9 @@ label loop_isc_rail4b:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
             if playertype == "minidroid":
-                call dialog_ndd
+                call dialog_ndd from _call_dialog_ndd_2
             else:
-                call sound_door
+                call sound_door from _call_sound_door_158
                 $ startpos = 1
                 jump isc_city_center
             $ startpos = 11
@@ -198,7 +198,7 @@ label loop_isc_rail4b:
             
         if exitpos == 44:
             m "I can see on the other side....  but...{w=2} {nw}"
-            call dialog_nothing
+            call dialog_nothing from _call_dialog_nothing_51
             $ startpos = 44
             #jump isc_rail3
 

@@ -86,7 +86,7 @@ label loop_isc_city_bar_wcs:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_65
         
 
         # do something at node?
@@ -95,12 +95,12 @@ label loop_isc_city_bar_wcs:
                 if isc_wc == 1:
                     menu:
                         "flush":
-                            call sound_flush
+                            call sound_flush from _call_sound_flush
                             pause 5
                             m "It looks better now! {w=2} {nw}"
                             if isc_bar_wc_cash > 0:
                                 m "There are some coins! {w=2} {nw}"
-                                call io_cash(isc_bar_wc_cash)
+                                call io_cash(isc_bar_wc_cash) from _call_io_cash_17
                                 $ isc_bar_wc_cash = 0
                             #else:
                             #    call dialog_nothing
@@ -109,23 +109,23 @@ label loop_isc_city_bar_wcs:
                 if isc_wc == 2:
                     menu:
                         "flush":
-                            call sound_flush
+                            call sound_flush from _call_sound_flush_1
                             pause 5
                             m "It looks better now! {w=2} {nw}"
-                            call dialog_nothing
+                            call dialog_nothing from _call_dialog_nothing_39
                         "do nothing":
                             pass
                 if isc_wc == 3:
                     menu:
                         "flush":
-                            call sound_flush
+                            call sound_flush from _call_sound_flush_2
                             pause 5
                             m "It looks better now! {w=2} {nw}"
                             if isc_bar_wc_gem== True:
-                                call take_gem
+                                call take_gem from _call_take_gem_7
                                 $ isc_bar_wc_gem = False
                             else:
-                                call dialog_nothing
+                                call dialog_nothing from _call_dialog_nothing_40
                         "do nothing":
                             pass
                     
@@ -155,7 +155,7 @@ label loop_isc_city_bar_wcs:
                 #"[isc_wc]"
                 $ startpos = 4
             
-            call sound_door
+            call sound_door from _call_sound_door_141
             jump isc_city_bar_toilets
             
 

@@ -9,7 +9,7 @@ init:
     
     # planet positions
     $ megaship_pos = (180,200)
-    $ xylo_pos = (200,300)
+    $ xylo_pos = (200,320)
     $ demo_pos = (50,50)
     $ satellite_pos = (380,380)
     $ cargo_pos = (415, 300)
@@ -204,19 +204,19 @@ label cockpit_menu:
     
     menu:
         "navigate":
-            call sound_beep
+            call sound_beep from _call_sound_beep_8
             jump cockpit_map
             
         "space view":
-            call sound_beep
+            call sound_beep from _call_sound_beep_9
             $ inventory_button = False
             hide orbitmeter
             pause
-            call sound_beep
+            call sound_beep from _call_sound_beep_10
             jump cockpit_menu
             
         "exit":
-            call sound_beep
+            call sound_beep from _call_sound_beep_11
             jump space
          
          
@@ -298,7 +298,7 @@ label cockpit_map:
     # set new destination
     if target_active == True:
         
-        call planet_match
+        call planet_match from _call_planet_match
         
         show destx:
             easein 1 ypos destination_pos[1]
@@ -331,7 +331,7 @@ label cockpit_map2:
     #wait for player input
     pause
     
-    call sound_beep
+    call sound_beep from _call_sound_beep_12
     
     # jump to menu if click on destination
     if (destination_pos[0]-20) < mousepos[0] < (destination_pos[0]+20) and (destination_pos[1]-20) < mousepos[1] < (destination_pos[1]+20):
@@ -386,9 +386,9 @@ label cockpit_map_menu:
 
     menu:
         
-        "fly to":
+        "fly to" if destination_pos != spaceship_pos:
             $ hacker_space_meeting_done = False
-            call flight
+            call flight from _call_flight
             jump space
         
         "new destination":
@@ -400,7 +400,7 @@ label cockpit_map_menu:
             scene bgcolor
             hide screen mini_planets
             hide screen cockpit_map_screen
-            call terminal
+            call terminal from _call_terminal_3
             jump cockpit
             
         "exit":
@@ -411,7 +411,7 @@ label cockpit_map_menu:
             hide player
             hide solar_system
             
-            call sound_beep
+            call sound_beep from _call_sound_beep_13
             
             jump cockpit_menu
         
@@ -456,7 +456,7 @@ label flight:
     
     $ spaceship_pos = destination_pos
     
-    call hyperspace_anim
+    call hyperspace_anim from _call_hyperspace_anim
     
     $ target_active = False
     

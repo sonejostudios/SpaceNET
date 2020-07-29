@@ -12,15 +12,15 @@ label cargo_anim_down:
     $ pnc_nodes_visible = False
     
     stop music fadeout 0.1
-    call music_cargo
+    call music_cargo from _call_music_cargo_4
     
-    call atmo_spaceport
+    call atmo_spaceport from _call_atmo_spaceport_3
     
     
     # stop alarm
     $ alarm_on = False
     
-    call show_space
+    call show_space from _call_show_space_19
     
     show cargo_animbg
     
@@ -66,12 +66,12 @@ label cargo_anim_down:
 label cargo_anim_up:
     $ pnc_nodes_visible = False
     
-    call atmo_spaceport
+    call atmo_spaceport from _call_atmo_spaceport_4
     
     # stop alarm
     $ alarm_on = False
     
-    call show_space
+    call show_space from _call_show_space_20
 
     show cargo_animbg
     
@@ -122,9 +122,9 @@ label cargo_explosion_anim:
     $ pnc_nodes_visible = False
     # stop alarm
     $ alarm_on = False
-    call alarm_check
+    call alarm_check from _call_alarm_check_15
     
-    call show_space
+    call show_space from _call_show_space_21
     with pixellate
     
     image cargoship_anim:
@@ -140,7 +140,7 @@ label cargo_explosion_anim:
         "images/explosion.png"
         anchor (0.5,0.5)
         
-    call sound_explosion    
+    call sound_explosion from _call_sound_explosion_1    
     show explosion:
         alpha 0.5
         pos (400,240)
@@ -150,7 +150,7 @@ label cargo_explosion_anim:
         
     pause 0.5
     
-    call sound_explosion  
+    call sound_explosion from _call_sound_explosion_2  
     show explosion as explosion2:
         rotate 25
         alpha 0.5
@@ -163,7 +163,7 @@ label cargo_explosion_anim:
     
     hide cargoship_anim
     
-    call sound_explosion  
+    call sound_explosion from _call_sound_explosion_3  
     show explosion as explosion3:
         rotate 40
         alpha 0.5

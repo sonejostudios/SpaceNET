@@ -123,12 +123,32 @@ screen termfx:
         add "#ffffff"
 
         
+    
+    # shadow points
+    # maybe better  not as screen, but in moveengine, and show shadowpoints behind the nodes
+    # or through the idea, and implement path finding instead
+    
+    #if path[0] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeA
+    #if path[1] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeB
+    #if path[2] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeC
+    #if path[3] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeD
+        
+    #if path[4] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeAA
+    #if path[5] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeBB
+    #if path[6] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeCC
+    #if path[7] == (0,0):
+    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeDD
+        
+        
+        
 
-        
-        
-        
-    
-    
     
     # if red glasses on / in fire
     #add "#FF0000" alpha 0.2

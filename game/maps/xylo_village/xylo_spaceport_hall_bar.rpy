@@ -15,11 +15,13 @@ init:
     $ sam_known = False
     $ sam_meeting_mountains = False
     
-    $ xylo_bar_client1_flags = [0, 0, 0, 1, 1]
-    $ xylo_bar_client1_flags2 = [0, 0, 0, 0]
-    $ xylo_bar_client2_flags = [0, 0, 0]
-    $ xylo_bar_client4_flags = [0, 0, 0]
-    $ xylo_bar_barman_flags = [0, 0, 0, 0]
+    $ sam_numpad_mission = 0
+    
+    default xylo_bar_client1_flags = [0, 0, 0, 1, 1]
+    default xylo_bar_client1_flags2 = [0, 0, 0, 0]
+    default xylo_bar_client2_flags = [0, 0, 0]
+    default xylo_bar_client4_flags = [0, 0, 0]
+    default xylo_bar_barman_flags = [0, 0, 0, 0]
 
     $ game_end = False
     
@@ -107,13 +109,13 @@ label xylo_spaceport_hall_bar:
 label loop_xylo_spaceport_hall_bar:
     
     if xylo_village_bar_music == 1:
-        call music_bar_village
+        call music_bar_village from _call_music_bar_village
     
     if xylo_village_bar_music == 2:
-        call music_bar_chill
+        call music_bar_chill from _call_music_bar_chill
         
     if xylo_village_bar_music == 3:
-        call music_outro_bar
+        call music_outro_bar from _call_music_outro_bar
     
     if xylo_village_bar_music == 4:
         stop music fadeout 1.0
@@ -125,12 +127,12 @@ label loop_xylo_spaceport_hall_bar:
 
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_14
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 11
-            call sound_door
+            call sound_door from _call_sound_door_32
             
             if countdown_sec <= 0:
                 $ countdown = False
@@ -142,7 +144,7 @@ label loop_xylo_spaceport_hall_bar:
         # barman
         if exitpos == 2:
             if startpos == 2:
-                call xylo_village_barman
+                call xylo_village_barman from _call_xylo_village_barman
                 
             $ startpos = 2
 
@@ -162,26 +164,26 @@ label loop_xylo_spaceport_hall_bar:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
             if startpos == 11:
-                call xylo_village_client1 # packet client
+                call xylo_village_client1 from _call_xylo_village_client1 # packet client
             $ startpos = 11 
 
             
         if exitpos == 22:
             if startpos == 22:
-                call xylo_village_client2 # gem client
+                call xylo_village_client2 from _call_xylo_village_client2 # gem client
             $ startpos = 22
 
             
         if exitpos == 33:
             if startpos == 33:
                 if xylo_spaceport_hall_bar_client == True:
-                    call sound_door
+                    call sound_door from _call_sound_door_33
                     $ startpos = 4
                     jump xylo_spaceport_hall_bar_wcs
                     
                 else:
                     #m "This are the toilets of the bar. {w=2.5}{nw}"
-                    call dialog_closed
+                    call dialog_closed from _call_dialog_closed_6
             $ startpos = 33
             
 
@@ -189,9 +191,9 @@ label loop_xylo_spaceport_hall_bar:
         if exitpos == 44:
             if startpos == 44:
                 if countdown == False:
-                    call xylo_village_client4 # spacenet client
+                    call xylo_village_client4 from _call_xylo_village_client4 # spacenet client
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_16
             $ startpos = 44
             
 
@@ -241,7 +243,7 @@ label xylo_village_barman:
                         m "A [drinks[0]]. {w=1.5}{nw}"
                         m "This realy doesn't sound good, but I will try.{w=2.5}{nw}"
                         barman_xvil "1c, please. {w=1.5}{nw}"
-                        call io_cash(-1)
+                        call io_cash(-1) from _call_io_cash_1
                         m "Beark! {w=1.5}{nw}"
                         m "This is horrible! {w=2}{nw}"
                         $ xylo_spaceport_hall_bar_client = True
@@ -254,7 +256,7 @@ label xylo_village_barman:
                     "[drinks[1]]\n10c"if coins >= 10:
                         m "A [drinks[1]]. {w=1.5}{nw}"
                         barman_xvil "10c, please. {w=1.5}{nw}"
-                        call io_cash(-10)
+                        call io_cash(-10) from _call_io_cash_2
                         
                         $ xylo_spaceport_hall_bar_client = True
                         $ xylo_spaceport_hall_wc_cash_wc += 10
@@ -328,7 +330,7 @@ label xylo_village_client1:
     client1 "Hello...{w=2} {nw}"
     
     if drunktime > 0:
-        call dialog_joke
+        call dialog_joke from _call_dialog_joke
         if joke == 1:
             client1 "Ha. {w=1}Ha. {w=1}Ha. {w=2} {nw}"
 
@@ -374,7 +376,7 @@ label xylo_village_client1:
                     menu:
                         "What kind of mine was it?" if xylo_bar_client1_flags2[0] == 0:
                             m "What kind of mine was it?{w=2} {nw}"
-                            client1 "It was a silber mine. {w=2} {nw}"
+                            client1 "It was a silver mine. {w=2} {nw}"
                             client1 "It was really nice to work there! {w=2} {nw}"
                             $ xylo_bar_client1_flags2[0] = 1
                             
@@ -420,7 +422,7 @@ label xylo_village_client1:
                 $ xylo_bar_client1_flags[2] = 1
                 
                 
-            "Can I help you somehow?" if "letter" not in inventory and xylo_bar_client1_flags[3] == 0:
+            "Can I help you somehow?" if "letter" not in inventory and xylo_sea_bar_client1_letter != 1 and xylo_bar_client1_flags[3] == 0:
                 m "Can I help you somehow?{w=2} {nw}"
                 client1 "Maybe... {w=1}Look. {w=1}As I left, I found this letter.{w=3} {nw}"
                 client1 "There are some personal documents of a friend of mine.{w=3} {nw}"
@@ -435,7 +437,7 @@ label xylo_village_client1:
                         client1 "That's really nice, thanks!{w=3} {nw}"
                         client1 "Here is the letter.{w=2} {nw}"
                         
-                        call take_item("letter")
+                        call take_item("letter") from _call_take_item_6
                         
                         $ xylo_bar_client1_flags[4] = 0
 
@@ -466,7 +468,7 @@ label xylo_village_client1:
 label xylo_village_client2:
     
     if inventory_select == "gem":
-        call use_and_keep_item
+        call use_and_keep_item from _call_use_and_keep_item_5
         
         client2gem "Beautiful!{w=2}{nw}"
         if gems != maxgems:
@@ -485,7 +487,7 @@ label xylo_village_client2:
             client2gem "I feel you are a good person.{w=2}{nw}"
             client2gem "Would you like to keep them for a while?{w=3}{nw}"
             client2gem "At least until the peace is back here.{w=3}{nw}"
-            client2gem "Maybe one day, good people will know how to use them for good things{w=5}{nw}"
+            client2gem "Maybe one day, good people will know how to use them for good things.{w=5}{nw}"
             m "No problem.{w=2}{nw}"
             client2gem "Thank you very much!{w=3}{nw}"
             m "You are really welcome.{w=2}{nw}"
@@ -508,7 +510,7 @@ label xylo_village_client2:
     
     
     if drunktime > 0:
-        call dialog_joke
+        call dialog_joke from _call_dialog_joke_1
         if joke >= 1:
             client2gem "Please, let me meditate.  {w=3} {nw}"
             client2gem "Ask somebody else.  {w=2} {nw}"
@@ -536,7 +538,7 @@ label xylo_village_client2:
             "[questions_client[1]]" if gems != maxgems and xylo_bar_client2_flags[1] == 0: # doing?
                 m "[questions_client[1]]"
                 client2gem "I am a zen master.{w=2} {nw}"
-                client2gem "There are many things disturbing th peace of our world...{w=4} {nw}"
+                client2gem "There are many things disturbing the peace of our world...{w=4} {nw}"
                 client2gem "Of course, bad people and their need for power.{w=4} {nw}"
                 client2gem "There are many precious gems full of energy in this world.{w=4} {nw}"
                 client2gem "If the governement find them, this could be a disaster...{w=4} {nw}"
@@ -548,7 +550,7 @@ label xylo_village_client2:
                 
                 if xylo_bar_gem == True:
                     client2gem "Here, I give you one sample. It is for you.{w=4} {nw}"
-                    call take_gem
+                    call take_gem from _call_take_gem_1
                     $ xylo_bar_gem = False
                     
                     
@@ -598,7 +600,11 @@ label xylo_village_client4:
         
     
     if game_end == True:
-        call dialog_nothing
+        call dialog_nothing from _call_dialog_nothing_17
+        return
+        
+    if drunktime > 0:
+        samclient "Please, don't bother me. {w=2} {nw}"
         return
         
 
@@ -654,7 +660,7 @@ label xylo_village_client4:
                         linear 2 pos nodeA
                     
                     pause 6
-                    call sound_door
+                    call sound_door from _call_sound_door_34
                     hide client4
                     
                     $ countdown = True
@@ -684,7 +690,7 @@ label xylo_village_client4:
                     sam "I have this small laser here, do you think it is strong enough for that task?{w=4}{nw}"
                     m "I don't know...{w=2} But I could try.{w=2}{nw}"
                     sam "Okay, just take this laser.{w=2}{nw}"
-                    call take_item("laser")
+                    call take_item("laser") from _call_take_item_7
                     if "laser" in inventory:
                         sam "Okay, please go now and free 4n0nym0us!{w=3}{nw}"
                         sam "Good luck.{w=2}{nw}"
@@ -698,7 +704,8 @@ label xylo_village_client4:
                     return
                     
         
-        elif 1 >= sam_numpad_mission <= 2 and cargo_exploded == 0:
+        elif cargo_exploded == 0 and (sam_numpad_mission == 1 or sam_numpad_mission == 2):
+            #if sam_numpad_mission == 1 or sam_numpad_mission == 2 :
             sam "Hey [playername]!{w=1.5}{nw}"
             sam "I'm happy you've seen my message in your inbox.{w=2.5}{nw}"
             sam "I just met 4n0nym0us.{w=2}{nw}"
@@ -716,7 +723,7 @@ label xylo_village_client4:
             sam "The pin is 12458.{w=2}{nw}"
             sam "It doesn't matter in which order you enter the numbers.{w=3}{nw}"
             
-            call add_note("isc space gateway pin : 12458")
+            call add_note("isc space gateway pin : 12458") from _call_add_note_2
             
             sam "When you are done, just open the door.{w=2.5}{nw}"
             sam "Now let me see when you could meet 4n0nym0us there.{w=3}{nw}"
@@ -734,6 +741,8 @@ label xylo_village_client4:
                 "Not yet, sorry":
                     m "Not yet, sorry{w=2}{nw}"
                     pass
+                    
+
             
             
         elif cargo_exploded == 2:

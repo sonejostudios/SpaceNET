@@ -12,7 +12,7 @@ init:
 label isc_interchange:
     
     stop music fadeout 1.0
-    call atmo_spaceport 
+    call atmo_spaceport from _call_atmo_spaceport_5 
     
     image isc_interchange = imagemapsdir + "spaceport.png"
     
@@ -80,7 +80,7 @@ label isc_interchange:
     
     if landing == True:
          $ isc_spaceship_interchange = True
-         call landing_anim
+         call landing_anim from _call_landing_anim_7
     
     if isc_spaceship_interchange == True:
         #call landing_anim
@@ -145,7 +145,7 @@ label isc_interchange:
             pos (650,380)
         $ startpos = 3
         $ isctrain_anim = False
-        call sound_door
+        call sound_door from _call_sound_door_169
         
     else:
         show isctrain:
@@ -169,29 +169,31 @@ label loop_isc_interchange:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_78
 
         # do something at node?
         if exitpos == 1:       #if at node A
 
             if isc_spaceship_interchange == True:
-                call sound_door
+                call sound_door from _call_sound_door_170
                 $ startpos = 1  
                 jump isc_spaceshipport
             else:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_45
                 
             $ startpos = 1   
 
             
         if exitpos == 2:
+            if startpos == 2:
+                m "This is the spaceship interchange station of the Industrial Space City.{w=5.0} {nw}"
             $ startpos = 2
 
             
         if exitpos == 3:
             if startpos == 3:
                 #call dialog_closed
-                call sound_door
+                call sound_door from _call_sound_door_171
                 #pause 0.2
                 hide player
                 
@@ -199,7 +201,7 @@ label loop_isc_interchange:
                     rotate 0
                     easeout 2 xpos 850
                 pause 0.5
-                call sound_train
+                call sound_train from _call_sound_train_1
                 pause 1.5
                 jump isc_wagon_anim_toright
                 
@@ -209,10 +211,10 @@ label loop_isc_interchange:
         if exitpos == 4:
             if startpos == 4:
                 if isc_interchange_gem == True:
-                    call take_gem
+                    call take_gem from _call_take_gem_9
                     $ isc_interchange_gem = False
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_58
             $ startpos = 4
 
             
@@ -223,6 +225,8 @@ label loop_isc_interchange:
 
             
         if exitpos == 22:
+            if startpos == 22:
+                call dialog_nothing from _call_dialog_nothing_59
             $ startpos = 22
 
             
@@ -233,8 +237,8 @@ label loop_isc_interchange:
         if exitpos == 44:
             $ startpos = 44
             if isc_spaceship_interchange == True:
-                call sound_door
-                call takeoff_anim("withmenu") # go to takeoff
+                call sound_door from _call_sound_door_172
+                call takeoff_anim("withmenu") from _call_takeoff_anim_9 # go to takeoff
                 
                 $ isc_spaceship_interchange = False
                 

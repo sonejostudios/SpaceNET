@@ -9,7 +9,7 @@ init:
 label xylo_map1:
     
     stop music fadeout 1.0
-    call atmo_ground
+    call atmo_ground from _call_atmo_ground
     
     image xylo_map1 = imagemapsdir + "xylo_sea_map1.png"
     
@@ -62,7 +62,7 @@ label xylo_map1:
 label loop_xylo_map1:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_17
 
     # do something at node?
     if exitpos == 1:   
@@ -82,8 +82,8 @@ label loop_xylo_map1:
                 m "Remove the board...{w=1.5} {nw}"
                 m "And go through!{w=1.5} {nw}"
                 
-                call use_and_keep_item
-                call sound_screw
+                call use_and_keep_item from _call_use_and_keep_item_6
+                call sound_screw from _call_sound_screw_3
                 
                 $ xylo_sea_bunker_info = True
                 
@@ -92,7 +92,7 @@ label loop_xylo_map1:
             if xylo_sea_bunker_info == False:
                 if inventory_select == "":
                     m "There is an information board.{w=2} {nw}"
-                call xylo_sea_bunker_info
+                call xylo_sea_bunker_info from _call_xylo_sea_bunker_info
             
             else:
                 hide buttonscreen
@@ -130,7 +130,7 @@ label loop_xylo_map1:
     if exitpos == 44:
         #$ startpos = 22
         $ liftpos = 0
-        call sound_door
+        call sound_door from _call_sound_door_37
         jump xylo_lift1
 
 
@@ -149,6 +149,6 @@ You shall not pass
 
     """
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel_2 # in animations
 
     return

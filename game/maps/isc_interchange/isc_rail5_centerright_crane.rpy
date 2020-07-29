@@ -13,7 +13,7 @@ label isc_rail5:
     #scene bgcolor
     #show screen notify("Industrial Space City")
     
-    call show_space
+    call show_space from _call_show_space_10
     
     show isc_rail5:
         pos (0,0)
@@ -97,7 +97,7 @@ label loop_isc_rail5:
         
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_39
 
         # do something at node?
         if exitpos == 1:
@@ -115,12 +115,12 @@ label loop_isc_rail5:
         if exitpos == 4:
             if startpos == 4:
                 if inventory_select != "":
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_14
                     $ startpos = 4
                     jump loop_isc_rail5
                     
                 if playertype == "player":
-                    call dialog_notfitting
+                    call dialog_notfitting from _call_dialog_notfitting_4
                 
                 
             $ startpos = 4
@@ -152,7 +152,7 @@ label loop_isc_rail5:
                             sysadmin "I hope this will solve our problem! {w=3} {nw}"
                         
                     elif inventory_select == "bulb":
-                        call use_item
+                        call use_item from _call_use_item_5
                         $ isc_crane_repared = True
                         
                         m "Here a light bulb. {w=2} {nw}"
@@ -163,7 +163,7 @@ label loop_isc_rail5:
                         sysadmin "The command is: ssh isc{w=2.5} {nw}"
                         sysadmin "Please, set the crane position to the city center (x1, y1){w=2.5} {nw}"
                         
-                        call add_note("ISC remote access: ssh isc")
+                        call add_note("ISC remote access: ssh isc") from _call_add_note_6
                         
                         sysadmin "Thanks!{w=1.5} {nw}"
                         
@@ -179,7 +179,7 @@ label loop_isc_rail5:
                 
                 
                 else:
-                    call isc_crane_screen
+                    call isc_crane_screen from _call_isc_crane_screen
                     
                     
             $ startpos = 22
@@ -230,7 +230,7 @@ Crane position : [crane_pos_name] (x[isc_crane_pos_x], y[isc_crane_pos_y])
 
     """
 
-    call info_panel
+    call info_panel from _call_info_panel_7
     
     return
 

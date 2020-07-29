@@ -56,8 +56,8 @@ label positionA:
         pos nodeA
     
     $ path = pathA
-    call place
-    call hidepaths
+    call place from _call_place
+    call hidepaths from _call_hidepaths_1
     
     jump clickngo      
     
@@ -72,8 +72,8 @@ label positionB:
         pos nodeB
     
     $ path = pathB
-    call place
-    call hidepaths
+    call place from _call_place_1
+    call hidepaths from _call_hidepaths_2
     
     
     jump clickngo
@@ -88,8 +88,8 @@ label positionC:
         pos nodeC
     
     $ path = pathC
-    call place
-    call hidepaths
+    call place from _call_place_2
+    call hidepaths from _call_hidepaths_3
     
     
     jump clickngo
@@ -104,8 +104,8 @@ label positionD:
         pos nodeD
     
     $ path = pathD
-    call place
-    call hidepaths
+    call place from _call_place_3
+    call hidepaths from _call_hidepaths_4
     
     
     jump clickngo
@@ -122,8 +122,8 @@ label positionAA:
         pos nodeAA
     
     $ path = pathAA
-    call place
-    call hidepaths
+    call place from _call_place_4
+    call hidepaths from _call_hidepaths_5
     
     
     jump clickngo      
@@ -138,8 +138,8 @@ label positionBB:
         pos nodeBB
     
     $ path = pathBB
-    call place
-    call hidepaths
+    call place from _call_place_5
+    call hidepaths from _call_hidepaths_6
     
     
     jump clickngo
@@ -154,8 +154,8 @@ label positionCC:
         pos nodeCC
     
     $ path = pathCC
-    call place
-    call hidepaths
+    call place from _call_place_6
+    call hidepaths from _call_hidepaths_7
     
     
     jump clickngo
@@ -170,8 +170,8 @@ label positionDD:
         pos nodeDD
     
     $ path = pathDD
-    call place
-    call hidepaths
+    call place from _call_place_7
+    call hidepaths from _call_hidepaths_8
     
     
     jump clickngo

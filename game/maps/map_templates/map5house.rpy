@@ -31,7 +31,7 @@ label map5:
 label loop_map5:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_35
     
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -42,7 +42,7 @@ label loop_map5:
         $ startpos = 2
         
         
-        call map5_bulb
+        call map5_bulb from _call_map5_bulb
         
         jump loop_map5
         
@@ -59,13 +59,13 @@ label loop_map5:
         #$ exitpos = 44       
         $ startpos = 11     #go to CC
         
-        call map5_talk1  #go to map5_talk1
+        call map5_talk1 from _call_map5_talk1  #go to map5_talk1
         
         jump map5           # map to jump to
         
     if exitpos == 22:
         $ startpos = 44
-        call sound_door
+        call sound_door from _call_sound_door_90
         jump map4
         
     if exitpos == 33:
@@ -89,7 +89,7 @@ label map5_talk1:
         e "Thank you for your help, I'm happy now.{w=3.0} {nw}"
     
     if inventory_select == "bulb":
-        call use_item
+        call use_item from _call_use_item_4
         e "Thank you for the light bulb!!{w=3.0} {nw}"
         $ m_step_eileen1 = 2
     
@@ -97,7 +97,7 @@ label map5_talk1:
         e "Have you found a light bulb? I'm still waiting!{w=3.0} {nw}"
     
     if m_step_eileen1 == 0:
-        call new_mission
+        call new_mission from _call_new_mission
         e "I'm looking for a light bulb, do you have one?{w=3.0} {nw}"
         $ m_step_eileen1 = 1
     
@@ -113,7 +113,7 @@ label map5_bulb:
         
         m "There is a light bulb!{w=2.0} {nw}"
         
-        call take_item("bulb")
+        call take_item("bulb") from _call_take_item_13
 
     return
     

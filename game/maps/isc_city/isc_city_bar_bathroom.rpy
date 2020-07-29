@@ -24,13 +24,13 @@ label isc_city_bar_toilets:
     
     
     if isc_bar_music == 1:
-        call music_bar_village_deep
+        call music_bar_village_deep from _call_music_bar_village_deep
     
     if isc_bar_music == 2:
-        call music_bar_chill_deep
+        call music_bar_chill_deep from _call_music_bar_chill_deep
         
     if isc_bar_music == 3:
-        call music_outro_deep
+        call music_outro_deep from _call_music_outro_deep
     
     if isc_bar_music == 4:
         stop music fadeout 1.0
@@ -50,7 +50,7 @@ label isc_city_bar_toilets:
     
     
     # set all variables for the map (nodes and path)
-    $ nodeA = (80, 239)
+    $ nodeA = (84, 239)
     $ nodeB = (150, 172)
     $ nodeC = (317, 172)
     $ nodeD = (482, 172)
@@ -99,18 +99,18 @@ label loop_isc_city_bar_toilets:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_13
 
         # do something at node?
         if exitpos == 1:
-            call sound_door
+            call sound_door from _call_sound_door_27
             $ startpos = 3
             jump isc_city_bar
 
 
         if exitpos == 2:
             if startpos == 2:
-                call sound_door
+                call sound_door from _call_sound_door_28
                 $ startpos = 3 
                 $ isc_wc = 1
                 jump isc_city_bar_wcs
@@ -119,7 +119,7 @@ label loop_isc_city_bar_toilets:
             
         if exitpos == 3:
             if startpos == 3:
-                call sound_door
+                call sound_door from _call_sound_door_29
                 $ startpos = 3 
                 $ isc_wc = 2
                 jump isc_city_bar_wcs
@@ -128,7 +128,7 @@ label loop_isc_city_bar_toilets:
         
         if exitpos == 4:
             if startpos == 4:
-                call sound_door
+                call sound_door from _call_sound_door_30
                 $ startpos = 3 
                 $ isc_wc = 3
                 jump isc_city_bar_wcs
@@ -139,6 +139,11 @@ label loop_isc_city_bar_toilets:
         if exitpos == 11:
             if startpos == 11:
                 #call dialog_closed
+                
+                if drunktime > 0:
+                    m "This button panel looks really,{w=1.0} really,{w=1.0} really,{w=1.0} really...{w=1.0} complicated.{w=2.0} {nw}"
+                    jump loop_isc_city_bar_toilets
+
                 
                 show screen isc_bar_numpad
                 
@@ -154,19 +159,19 @@ label loop_isc_city_bar_toilets:
                 if drunktime > 0:
                     if isc_bar_bathroom_gem== True:
                         m "This sinks looks interesting. {w=2} {nw}"
-                        call take_gem
+                        call take_gem from _call_take_gem
                         $ isc_bar_bathroom_gem = False
                     else:
-                        call dialog_nothing
+                        call dialog_nothing from _call_dialog_nothing_15
                     
                 else:
                     m "There are the sinks. {w=1.5} {nw}"
                     m "I could wash my hands.... {w=1.5} {nw}"
                     menu:
                         "wash your hands":
-                            call sound_tap
+                            call sound_tap from _call_sound_tap
                             pause 4
-                            call sound_connected
+                            call sound_connected from _call_sound_connected_4
                             with flash
                             m "Yeah! My hands are clean now!{w=2.5} {nw}"
                         "do nothing":
@@ -293,10 +298,10 @@ screen isc_bar_numpad zorder -999:
 label isc_numpad_open:
     
     if isc_numpad_1 == 1 and isc_numpad_2 == 1 and isc_numpad_4 == 1 and isc_numpad_5 == 1 and isc_numpad_8 == 1 and isc_numpad_3 == 0 and isc_numpad_6 == 0 and isc_numpad_7 == 0 and isc_numpad_9 == 0:
-        call sound_connected
+        call sound_connected from _call_sound_connected_5
         with flash
         hide screen isc_bar_numpad
-        call sound_door
+        call sound_door from _call_sound_door_31
         $ liftpos = 3
         
         stop music fadeout 1.0
@@ -305,7 +310,7 @@ label isc_numpad_open:
         
     else:
         #hide screen isc_bar_numpad
-        call sound_electroshock
+        call sound_electroshock from _call_sound_electroshock_5
         with hpunch
         jump loop_isc_city_bar_toilets
         

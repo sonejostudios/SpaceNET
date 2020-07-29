@@ -2,7 +2,7 @@
 ##############################################
 label megaship_multimap1:
     
-    call atmo_spaceship_hum
+    call atmo_spaceship_hum from _call_atmo_spaceship_hum
     
     
     
@@ -40,16 +40,16 @@ label megaship_multimap1:
 
 label loop_megaship_multimap1:
     # draw special objects (doors and items) in special places
-    call specialplaces_megaship_multimap1 
+    call specialplaces_megaship_multimap1 from _call_specialplaces_megaship_multimap1 
 
     # start enter in animation
-    call multimap_startanim
+    call multimap_startanim from _call_multimap_startanim
     
     # special nodes
-    call specialnodes_megaship_multimap1
+    call specialnodes_megaship_multimap1 from _call_specialnodes_megaship_multimap1
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_2
     #$ pathA = pathviewall
     
 
@@ -67,13 +67,13 @@ label loop_megaship_multimap1:
         
         #to lift1
         if multiposx == 0 and multiposy == 0:
-            call sound_door
+            call sound_door from _call_sound_door_6
             $ liftpos = 3
             jump megaship_lift1
     
         # to lift2
         if multiposx == 1 and multiposy == 1:
-            call sound_door
+            call sound_door from _call_sound_door_7
             $ liftpos = 1
             jump megaship_lift2
         

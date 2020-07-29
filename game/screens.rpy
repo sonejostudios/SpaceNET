@@ -447,10 +447,17 @@ screen main_menu():
         #        style "main_menu_version"
         
     
-    if demo_version == True:
-        vbox:
+    
+    vbox:
+        text ""
+        if pre_version != "":
+            text "[pre_version]":
+                style "main_menu_version"
+                
+        if demo_version == True:
             text "demo":
                 style "main_menu_version"
+                
                 
         #text "demo":
         #    pos (0.7,0.5)
@@ -1008,7 +1015,7 @@ screen preferences():
                             
         
     #null height 20
-    label "[config.version]":
+    label "[pre_version] [config.version]":
         align (0.99,0.02)
 
 

@@ -22,7 +22,7 @@ init:
 
 label xylo_sea_bunker_liftmap:
     
-    call music_cargo
+    call music_cargo from _call_music_cargo_2
     
 
     scene bgcolor
@@ -85,10 +85,10 @@ label xylo_sea_bunker_liftmap:
         
         if "cable" not in inventory:
             m "There is a cable... {w=2} {nw}"
-            call take_item("cable")
+            call take_item("cable") from _call_take_item_12
         
         else:
-            call dialog_nothing
+            call dialog_nothing from _call_dialog_nothing_25
         
         
     if liftpos == 2: #-01
@@ -123,7 +123,7 @@ label loop_xylo_sea_bunker_liftmap:
     while True:
 
         
-        call startpos
+        call startpos from _call_startpos_29
 
         #m " I can't go there, it is to dangerous! {w=3} {nw}"
         
@@ -156,7 +156,7 @@ label loop_xylo_sea_bunker_liftmap:
             
         if exitpos == 33:
             $ startpos = 2
-            call sound_door
+            call sound_door from _call_sound_door_75
             jump xylo_sea_bunker_liftroom
 
             
@@ -165,16 +165,16 @@ label loop_xylo_sea_bunker_liftmap:
                 if inventory_select == "rope":
                     m "It is quite dangerous, but why not? {w=2} {nw}"
                     $ xylo_sea_bunker_rope = True
-                    call sound_electroshock
+                    call sound_electroshock from _call_sound_electroshock_13
                     with flash
                     
-                    call use_item
+                    call use_item from _call_use_item_2
                     
                     jump xylo_sea_bunker_liftmap
             
 
             $ startpos = 1
-            call sound_door
+            call sound_door from _call_sound_door_76
             jump xylo_sea_bunker
             
 

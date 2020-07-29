@@ -48,16 +48,16 @@ label multimap1:
 
 label loop_multimap1:
     # draw special objects (doors and items) in special places
-    call specialplaces_multimap1 
+    call specialplaces_multimap1 from _call_specialplaces_multimap1 
 
     # start enter in animation
-    call multimap_startanim
+    call multimap_startanim from _call_multimap_startanim_3
     
     # special nodes
-    call specialnodes_multimap1
+    call specialnodes_multimap1 from _call_specialnodes_multimap1
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_72
     #$ pathA = pathviewall
     
 
@@ -75,37 +75,37 @@ label loop_multimap1:
         
         # doorh1
         if multiposx == 0 and multiposy == 1:
-            call sound_door
+            call sound_door from _call_sound_door_149
             $ multiposx = 0
             $ multiposy = 2
             jump multimap1
         
         # doorh2
         if multiposx == 0 and multiposy == 2:
-            call sound_door
+            call sound_door from _call_sound_door_150
             $ multiposx = 0
             $ multiposy = 1
             jump multimap1
             
         #door v1
         if multiposx == 2 and multiposy == 1:
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_36
         
         # door button
         if multiposx == 3 and multiposy == 3 and button_multimap1 == True:
-            call sound_door
+            call sound_door from _call_sound_door_151
             $ multiposx = 4
             $ multiposy = 3
             
             $ showcircles = False
             jump multimap1
         if multiposx == 3 and multiposy == 3 and button_multimap1 == False:
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_37
             jump multimap1
         
         # door button back
         if multiposx == 4 and multiposy == 3:
-            call sound_door
+            call sound_door from _call_sound_door_152
             $ multiposx = 3
             $ multiposy = 3
             
@@ -114,7 +114,7 @@ label loop_multimap1:
             
         # door locked
         if multiposx == 0 and multiposy == 3:
-            call button_multimap1
+            call button_multimap1 from _call_button_multimap1
             
         jump loop_multimap1
         
@@ -323,7 +323,7 @@ label specialnodes_multimap1:
 
 label button_multimap1:
     
-    call buttons
+    call buttons from _call_buttons_2
     # set button_multimap1 like buttons
     $ button_multimap1 = buttons
     

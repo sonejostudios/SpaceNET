@@ -40,7 +40,7 @@ label map4:
 label loop_map4:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_53
     
     # do something at node?
     if exitpos == 1:        #if at node A
@@ -58,7 +58,7 @@ label loop_map4:
     if exitpos == 3:
         $ startpos = 3
         
-        call map4button # button
+        call map4button from _call_map4button # button
         
         jump loop_map4
         
@@ -82,12 +82,12 @@ label loop_map4:
     if exitpos == 44:
         if button_house == True:
             $ startpos = 22
-            call sound_door
+            call sound_door from _call_sound_door_119
             jump map5 # go to house
             
         else:
             $ startpos = 44
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_27
             jump loop_map4
 
 
@@ -95,7 +95,7 @@ label loop_map4:
 
 label map4button:
     
-    call buttons
+    call buttons from _call_buttons_1
     # set button_house like buttons
     $ button_house = buttons
     

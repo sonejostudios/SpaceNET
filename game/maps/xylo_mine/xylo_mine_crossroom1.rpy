@@ -4,7 +4,7 @@
 label xylo_mine_crossroom1:
     
     
-    call atmo_cave
+    call atmo_cave from _call_atmo_cave_1
     
     image crossroom = imagemapsdir + "crossroom.png"
     
@@ -69,7 +69,7 @@ label loop_xylo_mine_crossroom1:
     
     #darkroom (in moveengine)
     if darkroom == True:
-        call darkroom
+        call darkroom from _call_darkroom
     else:
         hide  darkroombg
         #reset paths
@@ -78,13 +78,13 @@ label loop_xylo_mine_crossroom1:
         $ pathD = (nodeA, nodeB, nodeC, nodeD, nodeAA, (0, 0), (0, 0), (0, 0))
         
         $ inventory_select = "lamp"
-        call use_and_keep_item
+        call use_and_keep_item from _call_use_and_keep_item_18
         
         
 
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_41
     
 
     # do something at node?
@@ -99,13 +99,13 @@ label loop_xylo_mine_crossroom1:
         
         # special use of node B with darkroom
         if inventory_select == "lamp":
-            call use_and_keep_item
-            call sound_connected
+            call use_and_keep_item from _call_use_and_keep_item_19
+            call sound_connected from _call_sound_connected_29
             #with flash
             $ darkroom = False
             jump loop_xylo_mine_crossroom1
         else:
-            call sound_door
+            call sound_door from _call_sound_door_99
             $ liftpos = 0
             #stop music
             jump xylo_mine_lift1
@@ -121,7 +121,7 @@ label loop_xylo_mine_crossroom1:
             jump loop_xylo_mine_crossroom1
             
         else:
-            call sound_door
+            call sound_door from _call_sound_door_100
             $ startpos = 2
             $ multiposx = 2
             $ multiposy = 0
@@ -136,7 +136,7 @@ label loop_xylo_mine_crossroom1:
             $ darkroom = False
             jump loop_xylo_mine_crossroom1
         else:
-            call sound_door
+            call sound_door from _call_sound_door_101
             $ liftpos = 3
             jump xylo_mine_lift2
 
@@ -145,7 +145,7 @@ label loop_xylo_mine_crossroom1:
     #exits routing "got to map and set position for next map"
     if exitpos == 11:
         if startpos == 11:
-            call dialog_nothing
+            call dialog_nothing from _call_dialog_nothing_30
         $ startpos = 11     
         jump loop_xylo_mine_crossroom1   
         

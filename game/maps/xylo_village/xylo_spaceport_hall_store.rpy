@@ -4,7 +4,7 @@
 label xylo_spaceport_hall_store:
     
     stop atmo
-    call music_shop
+    call music_shop from _call_music_shop_1
     
     
     image xylo_spaceport_hall_store = imagemapsdir + "crossroom.png"
@@ -92,73 +92,75 @@ label xylo_spaceport_hall_store:
 
 
 label loop_xylo_spaceport_hall_store:
+    
+    while True:
 
-    # start "move through the map" loop
-    call startpos
+        # start "move through the map" loop
+        call startpos from _call_startpos_66
 
-    # do something at node?
-    if exitpos == 1:
-        $ startpos = 1 
-        jump loop_xylo_spaceport_hall_store 
-        
-    if exitpos == 2:
-        $ startpos = 2
-        jump loop_xylo_spaceport_hall_store
-        
-    if exitpos == 3:
-        $ startpos = 4
-        call sound_door
-        jump xylo_spaceport_hall # out
-        
-    if exitpos == 4:
-        if startpos == 4:
-            call xylo_spaceport_shop_info
+        # do something at node?
+        if exitpos == 1:
+            $ startpos = 1 
+
             
-            if superdev == 1:
-                while True:
-                    menu:
-                        "coins + 10":
-                            $ coins += 10
-                        "coins - 10":
-                            $ coins -= 10
-                        "coins = 0":
-                            $ coins = 0
-                        "delete all items":
-                            $ inventory = []
-                        "exit":
-                            jump loop_xylo_spaceport_hall_store 
-            
-        $ startpos = 4
-        jump loop_xylo_spaceport_hall_store 
-        
+        if exitpos == 2:
+            $ startpos = 2
 
-    #exits routing "got to map and set position for next map"
-    if exitpos == 11:
-        show npc:
-            linear 1 rotate 180
-            linear 1 pos (400,85)
-        
-        #if startpos == 11: # vendor
-            #call xylo_spaceport_hall_vendor
-        #    jump loop_xylo_spaceport_hall_store 
-        
-        $ startpos = 11
-        $ position = nodeAA
-        call xylo_spaceport_hall_vendor
-        
-        jump loop_xylo_spaceport_hall_store   
-        
-    if exitpos == 22:
-        $ startpos = 22
-        jump loop_xylo_spaceport_hall_store 
-        
-    if exitpos == 33:
-        $ startpos = 33
-        jump loop_xylo_spaceport_hall_store
-        
-    if exitpos == 44:
-        $ startpos = 44
-        jump loop_xylo_spaceport_hall_store
+            
+        if exitpos == 3:
+            $ startpos = 4
+            call sound_door from _call_sound_door_142
+            jump xylo_spaceport_hall # out
+            
+        if exitpos == 4:
+            if startpos == 4:
+                call xylo_spaceport_shop_info from _call_xylo_spaceport_shop_info
+                
+                if superdev == 1:
+                    while True:
+                        menu:
+                            "coins + 10":
+                                $ coins += 10
+                            "coins - 10":
+                                $ coins -= 10
+                            "coins = 0":
+                                $ coins = 0
+                            "delete all items":
+                                $ inventory = []
+                            "exit":
+                                jump loop_xylo_spaceport_hall_store 
+                
+            $ startpos = 4
+
+            
+
+        #exits routing "got to map and set position for next map"
+        if exitpos == 11:
+            show npc:
+                linear 1 rotate 180
+                linear 1 pos (400,85)
+            
+            #if startpos == 11: # vendor
+                #call xylo_spaceport_hall_vendor
+            #    jump loop_xylo_spaceport_hall_store 
+            
+            $ startpos = 11
+            $ position = nodeAA
+            call xylo_spaceport_hall_vendor from _call_xylo_spaceport_hall_vendor
+            
+
+            
+        if exitpos == 22:
+            $ startpos = 22
+
+            
+        if exitpos == 33:
+            $ startpos = 33
+
+            
+        if exitpos == 44:
+            $ startpos = 44
+
 
 
 
@@ -178,7 +180,7 @@ knife = 70c
 mirror = 50c
 
 """
-    call info_panel # in animations
+    call info_panel from _call_info_panel_14 # in animations
     return
     
     
@@ -192,22 +194,27 @@ label xylo_spaceport_hall_vendor:
         vendor "[text_i_dont_need_anything]"
         return
         
+    
+    if demo_version == True:
+        vendor "I'm really sorry, but I'm not allowed to sell you anything in the demo version!{w=6.0} {nw}"
+        return
+    
     vendor "Hello, what do you want to buy?{w=3.0} {nw}"
 
     menu:
         #"{image=images/inventory/lamp_idle.png}":
         #    pass
         "lamp\n100c":
-            call buy_item("lamp", 100)
+            call buy_item("lamp", 100) from _call_buy_item_3
         "knife\n70c":
-            call buy_item("knife", 70)
+            call buy_item("knife", 70) from _call_buy_item_4
         "mirror\n50c":
             if xylo_village_mirror_state == 1:
                 m "This is a stupid idea...{w=2.0} {nw}"
                 m "I already bought one and used it at the laser fence.{w=3.5} {nw}"
                 m "I could just get it back!{w=2.0} {nw}"
             else:
-                call buy_item("mirror", 50)
+                call buy_item("mirror", 50) from _call_buy_item_5
         
         "nothing, thanks.":
             m "Nothing, thanks.{w=2.0} {nw}"

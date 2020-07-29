@@ -14,14 +14,14 @@ label credits:
     
 
     if game_end == False:
-        call end_background
+        call end_background from _call_end_background
         with Dissolve(2)
 
         
     
     pause 1
     
-    call music_outro
+    call music_outro from _call_music_outro
 
 
     show text "A game by\nVincent Rateau" at truecenter
@@ -123,13 +123,15 @@ yevgverh
 
 freesound.org
 
+SpaceNET is licensed under GPL 3.0
+
 
     """
             
     show text Text(showtext,text_align=0.5):
         anchor (0.5, 1)
         pos (400, 480)
-        linear 30 pos (400, -1340) 
+        linear 30 pos (400, -1400) 
 
     
     
@@ -139,7 +141,7 @@ freesound.org
 
     # spacenet logo
     show spacenet_logo
-    call sound_hyperspace
+    call sound_hyperspace from _call_sound_hyperspace
     #call sound_title
     with Dissolve(2)
     
@@ -149,7 +151,7 @@ freesound.org
     
     #call music_space
     
-    call sound_take_off
+    call sound_take_off from _call_sound_take_off_1
     #call sound_scan
     
     $ renpy.music.play("music/space.ogg", channel="music", fadein=1, fadeout=0, tight=True, if_changed=True)

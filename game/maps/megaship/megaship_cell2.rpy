@@ -7,7 +7,7 @@
 ############################################
 label megaship_cell2:
     
-    call atmo_spaceship_hum
+    call atmo_spaceship_hum from _call_atmo_spaceship_hum_5
     
     show screen notify("prison cell 2")
     
@@ -50,13 +50,13 @@ label loop_megaship_cell2:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_71
 
         # do something at node?
         if exitpos == 1:
             if startpos == 1:
                 if megaship_cell2_gem == True:
-                    call take_gem
+                    call take_gem from _call_take_gem_8
                     $ megaship_cell2_gem = False
                 else:
                     m "I'm in cell number 2. {w=2.0} {nw}"
@@ -66,7 +66,7 @@ label loop_megaship_cell2:
         if exitpos == 2: # gem
             if startpos == 2:
                 m "This is a table.{w=2.0} {nw}"
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_47
                 
             $ startpos = 2
 
@@ -74,14 +74,14 @@ label loop_megaship_cell2:
         if exitpos == 3: 
             if startpos == 3:
                 m "This is a bed.{w=2.0} {nw}"
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_48
             $ startpos = 3
 
             
         if exitpos == 4:
             if startpos == 4:
                 m "This is the sink and the wc.{w=2.0} {nw}"
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_49
             $ startpos = 4
 
             
@@ -93,12 +93,12 @@ label loop_megaship_cell2:
             
         if exitpos == 22:
             $ startpos = 22
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_35
             
 
             
         if exitpos == 33:
-            call sound_screw
+            call sound_screw from _call_sound_screw_12
             $ startpos = 2
             jump megaship_aeration
             $ startpos = 33

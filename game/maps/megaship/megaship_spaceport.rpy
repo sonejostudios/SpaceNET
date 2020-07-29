@@ -4,8 +4,9 @@
 
 ############################################
 label megaship_spaceport:
+    $ pnc_nodes_visible = True
     
-    call atmo_spaceport
+    call atmo_spaceport from _call_atmo_spaceport
     stop music fadeout 1.0
     
     image megaship_spaceport = imagemapsdir + "megaship_spaceport.png"
@@ -139,12 +140,12 @@ label megaship_spaceport:
         
         with flash
         m "haaa! there is no air to breath!{w=3.0} {nw}"
-        call sound_door
+        call sound_door from _call_sound_door
         jump megaship_lift2
     
     else:
         $ inventory_select = "spacesuit"
-        call inventory_notify
+        call inventory_notify from _call_inventory_notify
     
     
     
@@ -155,18 +156,18 @@ label loop_megaship_spaceport:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 1
             $ liftpos = 0
-            call sound_door
+            call sound_door from _call_sound_door_1
             jump megaship_lift2
             
         if exitpos == 2:
             if startpos == 2:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing
             $ startpos = 2
             
             
@@ -182,14 +183,14 @@ label loop_megaship_spaceport:
                     m "This spaceship there is quite nice... {w=3.0} {nw}"
                     m "Somehow better than mine ! {w=3.0} {nw}"
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_1
                 
             $ startpos = 3
             
             
         if exitpos == 4:
             if startpos == 4:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_2
             $ startpos = 4
             
             
@@ -205,7 +206,7 @@ label loop_megaship_spaceport:
             #if startpos == 22:
             #m "This is my spaceship ! {w=2.0} {nw}"
             
-            call sound_door
+            call sound_door from _call_sound_door_2
             hide player
             
             menu:
@@ -228,7 +229,7 @@ label loop_megaship_spaceport:
                             ease 2 pos (800, 240)
                         
                         #pause 1
-                        call sound_take_off
+                        call sound_take_off from _call_sound_take_off
                         pause 3
                         stop music
                         jump space
@@ -236,7 +237,7 @@ label loop_megaship_spaceport:
                         m "I don't want to start now if the door is closed ! {w=3.0} {nw}"
                     
                 "leave":
-                    call sound_door
+                    call sound_door from _call_sound_door_3
                     show player
                     pass
                     
@@ -248,14 +249,14 @@ label loop_megaship_spaceport:
             if startpos == 33 and hacker_in_prison == 1:
                 m "This is the spaceship of 4n0nym0us. {w=2.5} {nw}"
             else:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_3
             $ startpos = 33
             
             
             
         if exitpos == 44:
             if startpos == 44:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_4
             $ startpos = 44
             
 
@@ -334,6 +335,6 @@ label megaship_landing:
         
     pause 5
 
-    call sound_door
+    call sound_door from _call_sound_door_4
     jump megaship_spaceport
 

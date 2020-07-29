@@ -8,7 +8,7 @@
 label xylo_sea_bunker_spacenet:
     
     stop music
-    call atmo_spaceship
+    call atmo_spaceship from _call_atmo_spaceship_3
     
     scene bgcolor
     
@@ -80,18 +80,18 @@ label loop_xylo_sea_bunker_spacenet:
                 
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_46
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 1
-            call sound_door
+            call sound_door from _call_sound_door_107
             jump xylo_sea_bunker_lift1
             
         if exitpos == 2:
             if startpos == 2:
                 if "xylo_sea" in spacenetnodes:
-                    call terminal
+                    call terminal from _call_terminal_9
                 else:
                     m "This terminal is not working right now. {w=2.5} {nw}"
                
@@ -135,9 +135,9 @@ label xylo_sea_bunker_spacenet_comp:
     if shadow_enable == 1:
         show shadow:
             pos (270, 240)
-    call sound_beep
+    call sound_beep from _call_sound_beep_35
     
-    call spacenet_comp("xylo_sea") # install spacenet
+    call spacenet_comp("xylo_sea") from _call_spacenet_comp_1 # install spacenet
     
     jump xylo_sea_bunker_spacenet
     

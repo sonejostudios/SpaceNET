@@ -21,6 +21,8 @@ init:
     
     $ termlogin = ""
     $ termpass = ""
+    
+    $ term_login_done= False
 
 
 
@@ -33,7 +35,7 @@ label terminal:
     
     show terminal at topleft
     #show screen notify("terminal")
-    call sound_beep
+    call sound_beep from _call_sound_beep_28
     
     if shadow_enable == 1:
         show shadow:
@@ -76,7 +78,7 @@ label term_menu:
             
             #$ space_terminal = False
             
-            call sound_beep
+            call sound_beep from _call_sound_beep_29
             hide terminal
             hide text
             return
@@ -97,10 +99,12 @@ label term_menu:
 
 # login
 label term_login:
-    call sound_beep
+    call sound_beep from _call_sound_beep_30
     
-    #for testing only
-    #jump server_start
+    # skip login if already logged in in game
+    if term_login_done == True:
+        jump server_start
+    
     
     if superdev == 1:
         "try ID: [playername], Password: freedom"
@@ -111,17 +115,18 @@ label term_login:
         if not termlogin:
             termlogin = "no entry"
             
-    call sound_beep
+    call sound_beep from _call_sound_beep_31
     python:
         termpass = renpy.input(_("Password:"))
         termpass = termpass.strip()
         if not termpass:
             termpass = "no entry"
             
-    call sound_beep
+    call sound_beep from _call_sound_beep_32
     if termlogin == playername and termpass == "freedom":
         #show text "ID: [termlogin] - Password: [termpass]" at termtextpos2
         #m "Now i'm in!"
+        $ term_login_done= True
         jump server_start
     
     jump terminal
@@ -140,10 +145,9 @@ label term_login:
 label terminal_locate(i):
     
     $ planet2 = planet
-    
     $ planet = i
     
-    call planet_info
+    call planet_info from _call_planet_info_1
     
     $ showtext = """
     Locate
@@ -152,7 +156,7 @@ label terminal_locate(i):
     [i] - object found in universe!
     
     DATA:
-    
+
     Name: [planet_name]
     Type: [planet_type]
     Size: [planet_size]
@@ -165,10 +169,12 @@ label terminal_locate(i):
     Auth. needed: [planet_auth_needed]
     Required ship: [planet_required_ship]
     """
+    
+
     show text Text(showtext,text_align=termtext_align) at termtextpos
-    call sound_beep
+    call sound_beep from _call_sound_beep_33
     
-    
+
     menu:
         "add [planet] to cockpit map" if space_terminal == True:
             pass
@@ -181,13 +187,12 @@ label terminal_locate(i):
     
     #call server_progressbar
     
-    call sound_connected
+    call sound_connected from _call_sound_connected_25
     with flash
     
     # planet list
     if i not in planetlist:
         $ planetlist.append(i)
-        
 
     $ showtext = """
     Locate
@@ -199,7 +204,7 @@ label terminal_locate(i):
     """
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
-    call sound_connected
+    call sound_connected from _call_sound_connected_26
     #pause 3
     $ termtext = "help"
     

@@ -4,7 +4,7 @@
 label isc_city_shop:
     
     stop atmo
-    call music_shop
+    call music_shop from _call_music_shop
     
     
     #$ inventory = ["newspaper", "screwdriver", "spacesuit", "lamp", "bulb", "mirror", "spacenet", "accesscard", "rope", 
@@ -99,7 +99,7 @@ label loop_isc_city_shop:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_58
 
         # do something at node?
         if exitpos == 1:
@@ -110,12 +110,12 @@ label loop_isc_city_shop:
             
         if exitpos == 3:
             $ startpos = 2
-            call sound_door
+            call sound_door from _call_sound_door_127
             jump isc_city_center # out
             
         if exitpos == 4:
             if startpos == 4:
-                call isc_city_shop_info
+                call isc_city_shop_info from _call_isc_city_shop_info
                 
                 if superdev == 1:
                     while True:
@@ -146,7 +146,7 @@ label loop_isc_city_shop:
             
             $ startpos = 11
             $ position = nodeAA
-            call isc_city_shop_vendor
+            call isc_city_shop_vendor from _call_isc_city_shop_vendor
             
             
         if exitpos == 22:
@@ -176,7 +176,7 @@ light bulb = 10c
 safety hook = 99c
 
 """
-    call info_panel # in animations
+    call info_panel from _call_info_panel_11 # in animations
     return
     
     
@@ -197,11 +197,11 @@ label isc_city_shop_vendor:
         #"{image=images/inventory/lamp_idle.png}":
         #    pass
         "card game\n15c":
-            call buy_item("cards", 15)
+            call buy_item("cards", 15) from _call_buy_item
         "light bulb\n10c":
-            call buy_item("bulb", 10)
+            call buy_item("bulb", 10) from _call_buy_item_1
         "safety hook\n99c":
-            call buy_item("hook", 99)
+            call buy_item("hook", 99) from _call_buy_item_2
         "nothing, thanks.":
             m "Nothing, thanks.{w=2.0} {nw}"
             vendor "Okay!{w=2.0} {nw}"

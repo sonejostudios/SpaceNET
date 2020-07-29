@@ -35,13 +35,14 @@ label hacker_meeting:
             "Here, the star of the rebel alliance." if "star" in inventory:
                 
                 $ inventory_select = "star"
-                call use_and_keep_item
+                call sound_connected
+                call use_and_keep_item from _call_use_and_keep_item
                 m "Here, the star of the rebel alliance.{w=3} {nw}"
                 m "I'm part of the crew.{w=2} {nw}"
                 $ inventory_select = ""
-                call sound_connected
-                with flash
-                pause 1
+                #call sound_connected from _call_sound_connected
+                #with flash
+                pause 2
                 hacker "Good. I was waiting for you.{w=2.5} {nw}"
 
                 hacker "Okay... first, we need to install the new SpaceNET software on all SpaceNet nodes.{w=6} {nw}"
@@ -51,7 +52,7 @@ label hacker_meeting:
                 hacker "The password is 'freedom'.{w=3.5} {nw}"
                 
                 $ terminal_login_text = "Login ID: " + playername + ", Password: freedom"
-                call add_note(terminal_login_text)
+                call add_note(terminal_login_text) from _call_add_note
                 #call add_note("Terminal login password: freedom")
                 
                 hacker "Once you are in, go to your mailbox.{w=2.5} I'll send you more instructions.{w=3}{nw}"

@@ -8,14 +8,14 @@ init:
 
 label isc_city_gateway:
     
-    call atmo_spaceship_station 
+    call atmo_spaceship_station from _call_atmo_spaceship_station_3 
     
     image isc_city_gateway = imagemapsdir + "isc_city_gateway.png"
     
     #scene bgcolor
     show screen notify("ISC Gateway")
     
-    call show_space
+    call show_space from _call_show_space_4
     
     show crane:
         anchor (0.5,0.5)
@@ -59,7 +59,7 @@ label isc_city_gateway:
     
 
     if isc_flight == True:
-        call isc_city_gateway_spaceship_back
+        call isc_city_gateway_spaceship_back from _call_isc_city_gateway_spaceship_back
         
         
     #if waiting for hacker, move crane away
@@ -89,14 +89,14 @@ label loop_isc_city_gateway:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_28
 
         # do something at node?
         if exitpos == 1:
             
             $ countdown = False
             
-            call sound_door
+            call sound_door from _call_sound_door_69
             $liftpos = 0
             jump isc_city_bar_lift2
             $ startpos = 1
@@ -143,7 +143,7 @@ label loop_isc_city_gateway:
                 
             else:
                 $ inventory_select = "hook"
-                call use_and_keep_item
+                call use_and_keep_item from _call_use_and_keep_item_13
                 m "Let's go! {w=2} {nw}"
                 $ startpos = 1
                 jump isc_city_gateway_crane
@@ -179,7 +179,7 @@ label loop_isc_city_gateway:
 label isc_city_gateway_spaceship:
     
     
-    call sound_hyperspace
+    call sound_hyperspace from _call_sound_hyperspace_1
     
     $ countdown = False
     $ countdown_sec = 0
@@ -190,14 +190,14 @@ label isc_city_gateway_spaceship:
 
     hacker "Come in! {w=2.5} {nw}"
     
-    call music_satellite
+    call music_satellite from _call_music_satellite
     
     
     $ isc_flight = False
 
     menu:
         "Let's go!":
-            call sound_door
+            call sound_door from _call_sound_door_70
             hide player
             hide pathnodeA
             hide pathnodeB
@@ -209,7 +209,7 @@ label isc_city_gateway_spaceship:
             stop music fadeout 1.0
     
     
-    call sound_hyperspace
+    call sound_hyperspace from _call_sound_hyperspace_2
     
     show spaceship3u:
         pos (535,240)
@@ -226,7 +226,7 @@ label isc_city_gateway_spaceship:
     
 label isc_city_gateway_spaceship_back:
     
-    call sound_hyperspace
+    call sound_hyperspace from _call_sound_hyperspace_3
     
     if shadow_enable == 1:
         show shadow at truecenter
@@ -243,10 +243,10 @@ label isc_city_gateway_spaceship_back:
     
     $ isc_flight = False
     
-    call sound_door
+    call sound_door from _call_sound_door_71
     
     pause 0.5
-    call sound_hyperspace
+    call sound_hyperspace from _call_sound_hyperspace_4
     
     show spaceship3u zorder 900:
         pos (535,240)
@@ -264,7 +264,7 @@ label isc_spaceflight:
     #call music_satellite
     
     scene bgcolor
-    call show_space
+    call show_space from _call_show_space_5
     show spaceship3s at inspace_idle
     with pixellate
     pause 1
@@ -274,7 +274,7 @@ label isc_spaceflight:
     
     while True:
         
-        call isc_spaceflight_cargo_mission
+        call isc_spaceflight_cargo_mission from _call_isc_spaceflight_cargo_mission_1
 
         hacker "...{w=2} {nw}"
         hacker "Are you ready?{w=2} {nw}"
@@ -286,7 +286,7 @@ label isc_spaceflight:
                 hacker "I'll archive a voice message for you.{w=3} {nw}"
                 hacker "Just call 111999 in the terminal.{w=3} {nw}"
 
-                call add_note("cargo mission voice message : 111999")
+                call add_note("cargo mission voice message : 111999") from _call_add_note_3
                 
                 hacker "Okay... {w=2} {nw}"
                 hacker "I'll bring you back to the gateway.{w=3} {nw}"

@@ -7,7 +7,7 @@ init:
 ############################################
 label megaship_store:
     
-    call atmo_spaceship
+    call atmo_spaceship from _call_atmo_spaceship_1
     stop music fadeout 1.0
     
     image megaship_store = imagemapsdir + "megaship_store.png"
@@ -63,11 +63,11 @@ label loop_megaship_store:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_10
 
         # do something at node?
         if exitpos == 1:
-            call sound_door
+            call sound_door from _call_sound_door_24
             $ startpos = 1 
             jump megaship_lift2
             
@@ -83,7 +83,7 @@ label loop_megaship_store:
             if startpos == 4:
                 if "spacesuit" not in inventory:
                     m "This looks like a terminal.{w=2.0} {nw}"
-                call terminal
+                call terminal from _call_terminal_1
             $ startpos = 4
             
 
@@ -92,20 +92,20 @@ label loop_megaship_store:
             if startpos == 11: # key
                 if megaship_key_open == False:
                     if inventory_select == "key":
-                        call use_and_keep_item
-                        call sound_screw
+                        call use_and_keep_item from _call_use_and_keep_item_4
+                        call sound_screw from _call_sound_screw
                         m "Now it's open!{w=2.0} {nw}" 
                         $ megaship_key_open = True
                     else:
-                        call dialog_closed
+                        call dialog_closed from _call_dialog_closed_3
                 else:
                     if "minidroid" not in inventory: # get minidroid
                         m "There is a small droid there. {w=2.0} {nw}"
                         m "It is written 'minidroid' on it. {w=2.5} {nw}"
                         m "I think this could be really useful to explore narrow places. {w=4.0} {nw}"
-                        call take_item("minidroid")
+                        call take_item("minidroid") from _call_take_item_3
                     else:
-                        call dialog_nothing
+                        call dialog_nothing from _call_dialog_nothing_11
             
             $ startpos = 11         
             
@@ -114,9 +114,9 @@ label loop_megaship_store:
                 if "notebook" not in inventory:
                     m "There is a notebook!{w=2.0} {nw}"
                     m "This will be really handy to remember things.{w=3.0} {nw}"
-                    call take_item("notebook")
+                    call take_item("notebook") from _call_take_item_4
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_12
             $ startpos = 22
             
             
@@ -125,17 +125,17 @@ label loop_megaship_store:
                 
                 if "spacesuit" not in inventory:
                     m "There is a space suit!{w=2.0} {nw}"
-                    call take_item("spacesuit")
+                    call take_item("spacesuit") from _call_take_item_5
                 
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_13
                 #call dialog_closed  
             $ startpos = 33
 
             
         if exitpos == 44:
             if startpos == 44:
-                call dialog_closed  
+                call dialog_closed from _call_dialog_closed_4  
             $ startpos = 44
 
 

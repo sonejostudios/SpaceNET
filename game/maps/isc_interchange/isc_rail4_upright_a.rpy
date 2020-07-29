@@ -15,7 +15,7 @@ label isc_rail4a:
     scene bgcolor
     #show screen notify("A")
     
-    call show_space
+    call show_space from _call_show_space_9
     
     
     show isc_rail4
@@ -95,11 +95,11 @@ label loop_isc_rail4a:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_38
 
         # do something at node?
         if exitpos == 1:
-            call sound_door
+            call sound_door from _call_sound_door_93
             $ startpos = 22
             jump isc_rail3
 
@@ -109,14 +109,14 @@ label loop_isc_rail4a:
             
         if exitpos == 2:
             if startpos == 2 and isc_containerpos4 == 2:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_16
             
             if isc_containerpos4 == 1:
-                call sound_door
+                call sound_door from _call_sound_door_94
                 show player:
                     pos (373,136)
                 pause 0.7
-                call sound_door
+                call sound_door from _call_sound_door_95
                 $ startpos = 2
                 jump isc_rail4b
             $ startpos = 2
@@ -126,16 +126,16 @@ label loop_isc_rail4a:
         if exitpos == 3:
             if isc_containerpos4 == 2:
                 if inventory_select == "":
-                    call dialog_notfitting
+                    call dialog_notfitting from _call_dialog_notfitting_3
                 
                 if inventory_select != "minidroid" and inventory_select != "":
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_12
                 
                 if inventory_select == "minidroid":
                     
                     m "I can use the mini droid... let's go ! {w=2.5} {nw}"
-                    call use_and_keep_item
-                    call sound_connected
+                    call use_and_keep_item from _call_use_and_keep_item_17
+                    call sound_connected from _call_sound_connected_28
                     with flash
                     show minidroid:
                         pos nodeC
@@ -151,7 +151,7 @@ label loop_isc_rail4a:
                     jump isc_rail4b
                 
             else:
-                call dialog_nosense
+                call dialog_nosense from _call_dialog_nosense_13
                     
             
             $ startpos = 3
@@ -163,15 +163,15 @@ label loop_isc_rail4a:
         if exitpos == 4:
             if startpos == 4 and isc_containerpos4 == 1:
                 #call dialog_closed
-                call sound_door_locked
+                call sound_door_locked from _call_sound_door_locked_1
                 md "It is locked!{w=1.5} {nw}"
             
             if isc_containerpos4 == 2:
-                call sound_door
+                call sound_door from _call_sound_door_96
                 show player:
                     pos (376,406)
                 pause 0.7
-                call sound_door
+                call sound_door from _call_sound_door_97
                 $ startpos = 4
                 jump isc_rail4b
             $ startpos = 4
@@ -197,7 +197,7 @@ label loop_isc_rail4a:
             
         if exitpos == 44:
             m "I can see on the other side....  but...{w=2} {nw}"
-            call dialog_nothing
+            call dialog_nothing from _call_dialog_nothing_29
             $ startpos = 44
             #jump isc_rail3
 
@@ -254,7 +254,7 @@ label isc_movingroom_anim4:
         show isc_moving_room:
             pos (376,408)
             linear 3 pos (376,138)
-        call sound_lift
+        call sound_lift from _call_sound_lift_4
         pause 3
         
 
@@ -263,7 +263,7 @@ label isc_movingroom_anim4:
         show isc_moving_room:
             pos (376,138)
             linear 3 pos (376,408)
-        call sound_lift
+        call sound_lift from _call_sound_lift_5
         pause 3
         
     

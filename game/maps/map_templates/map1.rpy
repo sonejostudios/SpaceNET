@@ -42,7 +42,7 @@ label map1:
 label loop_map1:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_63
 
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -77,5 +77,5 @@ label loop_map1:
         
     if exitpos == 44:
         #$ startpos = 22
-        call sound_door
+        call sound_door from _call_sound_door_139
         jump lift1

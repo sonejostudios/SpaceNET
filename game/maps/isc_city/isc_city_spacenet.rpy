@@ -5,7 +5,7 @@
 
 label isc_city_spacenet:
     
-    call atmo_spaceship
+    call atmo_spaceship from _call_atmo_spaceship
     
     scene bgcolor
     
@@ -78,18 +78,18 @@ label loop_isc_city_spacenet:
                 
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_1
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 2
-            call sound_door
+            call sound_door from _call_sound_door_5
             jump isc_gateway_crane_to_spacenet
             
             
         if exitpos == 2:
             if startpos == 2:
-                call terminal
+                call terminal from _call_terminal
             $ startpos = 2
             
             
@@ -132,9 +132,9 @@ label isc_city_spacenet_comp:
     if shadow_enable == 1:
         show shadow:
             pos (270, 240)
-    call sound_beep
+    call sound_beep from _call_sound_beep
     
-    call spacenet_comp("isc_city") # install spacenet
+    call spacenet_comp("isc_city") from _call_spacenet_comp # install spacenet
     
     jump isc_city_spacenet
     

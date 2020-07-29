@@ -7,13 +7,14 @@ init:
 
 
 label isc_rail2:
+    $ pnc_nodes_visible = True
     
     image isc_rail2 = imagemapsdir + "isc_rail2.png"
     
     #scene bgcolor
     #show screen notify("Industrial Space City")
     
-    call show_space
+    call show_space from _call_show_space_7
     
     show isc_rail2:
         pos (0,0)
@@ -33,7 +34,7 @@ label isc_rail2:
     
     
     # set all variables for the map (nodes and path)
-    $ nodeA = (392, 40)
+    $ nodeA = (395, 42)
     $ nodeB = (463, 139)
     $ nodeC = (682, 139)
     $ nodeD = (660, 25)
@@ -74,12 +75,12 @@ label loop_isc_rail2:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_34
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 4
-            call sound_door
+            call sound_door from _call_sound_door_84
             jump isc_rail1
                 
                 
@@ -88,16 +89,16 @@ label loop_isc_rail2:
         if exitpos == 2:
             if startpos == 2:
                 if inventory_select == "":
-                    call dialog_notfitting
+                    call dialog_notfitting from _call_dialog_notfitting_2
                 
                 if inventory_select != "minidroid" and inventory_select != "":
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_10
                 
                 if inventory_select == "minidroid":
                     
                     m "I can use the minidroid... let's go! {w=2.5} {nw}"
-                    call use_and_keep_item
-                    call sound_connected
+                    call use_and_keep_item from _call_use_and_keep_item_15
+                    call sound_connected from _call_sound_connected_27
                     with flash
                     show minidroid:
                         pos nodeB
@@ -144,7 +145,7 @@ label loop_isc_rail2:
                 if inventory_select == "":
                     m "This is a huge propeller! {w=2.0} {nw}"
                 else:
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_11
             $ startpos = 11 
 
             
@@ -153,7 +154,7 @@ label loop_isc_rail2:
                 m "The view is absolutely amazing... {w=2.0} {nw}"
                 if cash_isc_rail2 == True:
                     m "There are some coins!{w=2} {nw}"
-                    call io_cash(+10)
+                    call io_cash(+10) from _call_io_cash_11
                     $ cash_isc_rail2 = False
 
             $ startpos = 22
@@ -166,7 +167,7 @@ label loop_isc_rail2:
             
         if exitpos == 44:
             $ startpos = 44
-            call sound_door
+            call sound_door from _call_sound_door_85
 
             
 

@@ -7,7 +7,7 @@
 label xylo_mountain1:
     
     stop music fadeout 1.0
-    call atmo_nature
+    call atmo_wind from _call_atmo_wind_1
     
     
     image xylo_mountain1 = imagemapsdir + "xylo_mountain1.png"
@@ -26,7 +26,7 @@ label xylo_mountain1:
     # check if spaceship is landing on this map or not
     # $ landing = False
     # $ landing = True
-    call landing_anim
+    call landing_anim from _call_landing_anim_6
     
     
     # set all variables for the map (nodes and path)
@@ -54,7 +54,7 @@ label xylo_mountain1:
 label loop_xylo_mountain1:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_56
 
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -89,7 +89,7 @@ label loop_xylo_mountain1:
         if startpos == 22:
             #if inventory_select == "":
             #    m "There is an information table at the tree. {w=2.5} {nw}"
-            call xylo_mountain1_info
+            call xylo_mountain1_info from _call_xylo_mountain1_info
 
         
         $ startpos = 22
@@ -101,8 +101,8 @@ label loop_xylo_mountain1:
         
     if exitpos == 44:
         $ startpos = 44
-        call sound_door
-        call takeoff_anim("withmenu") # go to takeoff
+        call sound_door from _call_sound_door_125
+        call takeoff_anim("withmenu") from _call_takeoff_anim_8 # go to takeoff
         
         
         # straight to space
@@ -139,7 +139,7 @@ at the same time, in a sky full of stars.
 
     """
 
-    call info_panel
+    call info_panel from _call_info_panel_10
 
     return
 

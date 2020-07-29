@@ -57,7 +57,7 @@ label intro_logo:
     
     #sound
     #call sound_hyperspace
-    call sound_title
+    call sound_title from _call_sound_title
     
     stop music fadeout 1.0
     
@@ -85,7 +85,7 @@ label intro_logo:
     #show starsmid u2d
     #show starsbig u2d
     
-    call end_background
+    call end_background from _call_end_background_2
     
     window hide
     with Dissolve(2)
@@ -118,7 +118,7 @@ label intro_logo:
 # intro1
 label intro1:
     
-    call music_intro
+    call music_intro from _call_music_intro_1
     
     scene bgcolor
     with Dissolve(2)
@@ -220,7 +220,7 @@ label intro3: # spaceport
     
     
     
-    call atmo_spaceport
+    call atmo_spaceport from _call_atmo_spaceport_2
     
     
     show megaship_bigdoor:
@@ -254,7 +254,7 @@ label intro3: # spaceport
         
         
         
-    call sound_crane_sound
+    call sound_crane_sound from _call_sound_crane_sound
     pause 7
     stop sound fadeout 1.0
     
@@ -275,14 +275,14 @@ label intro3: # spaceport
     
     # alarm
     $ alarm_on = True
-    call alarm_check
+    call alarm_check from _call_alarm_check_12
     
     show megaship_bigdoor:
         linear 5 pos (800, 240)
     show megaship_bigdoor as megaship_bigdoor2:
         linear 5 pos (800, 240)
         
-    call sound_crane_sound
+    call sound_crane_sound from _call_sound_crane_sound_1
     pause 5
     stop sound fadeout 1.0
     
@@ -294,7 +294,7 @@ label intro3: # spaceport
     #pause 2
     
     $ alarm_on = False
-    call alarm_check
+    call alarm_check from _call_alarm_check_13
 
     jump intro4
 
@@ -310,7 +310,7 @@ label intro4:
     
     stop atmo fadeout 1.0
     
-    call sound_scan
+    call sound_scan from _call_sound_scan_7
     
     jump megaship_cell
 

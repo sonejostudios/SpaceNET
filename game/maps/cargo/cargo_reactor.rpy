@@ -12,7 +12,7 @@ label cargo_reactor:
     $ pnc_nodes_visible = True
     
             
-    call atmo_reactor
+    call atmo_reactor from _call_atmo_reactor
     
     
     scene bgcolor
@@ -102,15 +102,15 @@ label loop_cargo_reactor:
     while True:
         
         # alarm
-        call alarm_check
+        call alarm_check from _call_alarm_check_9
         
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_30
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 33
-            call sound_door
+            call sound_door from _call_sound_door_77
             
             # stop reactor sound
             stop atmo
@@ -121,7 +121,7 @@ label loop_cargo_reactor:
         if exitpos == 2:
             if startpos == 2:
                 
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_15
                 
                 #if superdev == 1:
                     #jump cargo_explosion_anim
@@ -168,7 +168,7 @@ label cargo_reactor_computer:
     
     
     scene terminal at topleft
-    call sound_beep
+    call sound_beep from _call_sound_beep_27
     
     $ showtext = """
     Cargo Reactor Control
@@ -200,7 +200,7 @@ label cargo_reactor_computer:
             
         
         "Enable Remote Control" if cargo_remote_control == "disabled":
-            call server_progressbar
+            call server_progressbar from _call_server_progressbar_8
             $ showtext ="""
     Remote Control enabled!
     
@@ -209,11 +209,11 @@ label cargo_reactor_computer:
             show text Text(showtext,text_align=termtext_align) at termtextpos
             
             $ cargo_remote_control = "enabled"
-            call add_note("Cargo remote control: ssh cargo. Pass: convoy")
+            call add_note("Cargo remote control: ssh cargo. Pass: convoy") from _call_add_note_4
             pause 4
 
         "Disable Remote Control" if cargo_remote_control == "enabled":
-            call server_progressbar
+            call server_progressbar from _call_server_progressbar_9
             $ showtext ="""
     Remote Control disabled!
             

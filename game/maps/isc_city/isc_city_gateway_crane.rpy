@@ -11,12 +11,12 @@ label isc_city_gateway_crane:
     #$ inventory = []
     
     $ inventory_select = "spacesuit"
-    call use_and_keep_item
+    call use_and_keep_item from _call_use_and_keep_item_16
     
     
     scene bgcolor
     
-    call show_space
+    call show_space from _call_show_space_8
     
     show crane as crane2:
         anchor (0.5, 0.5)
@@ -89,7 +89,7 @@ label loop_isc_city_gateway_crane:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_37
 
         # do something at node?
         if exitpos == 1:       #if at node A
@@ -99,14 +99,14 @@ label loop_isc_city_gateway_crane:
             
         if exitpos == 2:
             if startpos == 2:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_26
             
             $ startpos = 2
 
             
         if exitpos == 3:
             if startpos == 3:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_27
             $ startpos = 3
 
             
@@ -120,7 +120,7 @@ label loop_isc_city_gateway_crane:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:       #if going out at AA
             if startpos == 11:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_28
             $ startpos = 11    #go to CC
 
             
@@ -129,7 +129,7 @@ label loop_isc_city_gateway_crane:
                 if "magnet" not in inventory:
                     m "There is something glueing to the crane...{w=2} {nw}"
                     m "Wait... {w=1}this is a magnet! {w=2} {nw}"
-                    call take_item("magnet")
+                    call take_item("magnet") from _call_take_item_14
                 else:
                     m "The view is unbelievable!{w=2} {nw}"
                     

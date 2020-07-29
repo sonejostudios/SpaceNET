@@ -31,7 +31,7 @@ label map6:
     # check if spaceship is landing on this map or not
     # $ landing = False
     # $ landing = True
-    call landing_anim
+    call landing_anim from _call_landing_anim_5
     
     
     # set all variables for the map (nodes and path)
@@ -59,7 +59,7 @@ label map6:
 label loop_map6:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_55
 
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -73,11 +73,11 @@ label loop_map6:
         
     if exitpos == 3: # switch board
         if startpos == 3:
-            call shipchoice
+            call shipchoice from _call_shipchoice
         $ startpos = 3
         
         if inventory_select == "cable":
-            call use_cable_with_switchboard
+            call use_cable_with_switchboard from _call_use_cable_with_switchboard
 
         jump loop_map6
         
@@ -94,7 +94,7 @@ label loop_map6:
     if exitpos == 22:
         $ startpos = 44
         $ liftpos = 3
-        call sound_door
+        call sound_door from _call_sound_door_123
         jump lift1 # go to lift
         
     if exitpos == 33:
@@ -103,8 +103,8 @@ label loop_map6:
         
     if exitpos == 44:
         $ startpos = 44
-        call sound_door
-        call takeoff_anim # go to takeoff
+        call sound_door from _call_sound_door_124
+        call takeoff_anim from _call_takeoff_anim_7 # go to takeoff
         
         if landing == True:
             $ shippos = (400,0) # set position in surface engine
@@ -122,21 +122,21 @@ label shipchoice:
         
         "spaceship 1":
             $ spaceshiptype = "1"
-            call sound_connected
+            call sound_connected from _call_sound_connected_34
             return
         
         "spaceship 2":
             $ spaceshiptype = "2"
-            call sound_connected
+            call sound_connected from _call_sound_connected_35
             return
         
         "spaceship 3":
             $ spaceshiptype = "3"
-            call sound_connected
+            call sound_connected from _call_sound_connected_36
             return
             
         "terminal":
-            call terminal
+            call terminal from _call_terminal_10
             jump map6
         
         "exit":
@@ -148,7 +148,7 @@ label shipchoice:
 label use_cable_with_switchboard:
     
     if inventory_select == "cable":
-        call sound_electroshock
+        call sound_electroshock from _call_sound_electroshock_16
         with hpunch
         m "Wow, I made a short circuit! I hope everything is okay. !!!!! {w=4.0} {nw}"
             

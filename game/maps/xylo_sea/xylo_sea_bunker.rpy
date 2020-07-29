@@ -71,7 +71,7 @@ screen xylo_sea_bunker_lift_control zorder -999:
 label xylo_bunker_move_lift:
     
     if xylo_bunker_lift_control_broken == True and liftpos == 2:
-        call sound_electroshock
+        call sound_electroshock from _call_sound_electroshock_3
         $ xylo_bunker_lift_level = 1
         with hpunch
         hide screen xylo_sea_bunker_lift_control
@@ -83,7 +83,7 @@ label xylo_bunker_move_lift:
     
     
     else:
-        call sound_lift
+        call sound_lift from _call_sound_lift
         pause 3.75
         
         hide screen xylo_sea_bunker_lift_control
@@ -133,9 +133,13 @@ label xylo_sea_bunker:
         anchor (0.0,0.0)
         pos (220,230)
         alpha 0.05
-    
-    
-    
+        
+        
+    if liftpos == 1:  # level -2
+        show box:
+            pos (260,240)
+            
+
     
     
     # set all variables for the map (nodes and path)
@@ -168,14 +172,14 @@ label loop_xylo_sea_bunker:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_12
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 1
             
             hide text2
-            call sound_door
+            call sound_door from _call_sound_door_26
             
             if liftpos == 2:                        # -01
                 if xylo_bunker_lift_level == 1:
@@ -198,8 +202,8 @@ label loop_xylo_sea_bunker:
             if startpos == 2:
                 if xylo_bunker_lift_control_broken == True and inventory_select == "cable":
                     
-                    call sound_electroshock
-                    call use_item
+                    call sound_electroshock from _call_sound_electroshock_4
+                    call use_item from _call_use_item
                     m "I can try to fix it with this cable. {w=2} {nw}"
                     
                     #with flash
@@ -218,7 +222,7 @@ label loop_xylo_sea_bunker:
             
         if exitpos == 4:
             if startpos == 4:
-               call xylo_sea_bunker_level_info
+               call xylo_sea_bunker_level_info from _call_xylo_sea_bunker_level_info
             $ startpos = 4
 
 
@@ -232,7 +236,7 @@ label loop_xylo_sea_bunker:
                     m "This is quite strange... {w=1.5} {nw}"
                     
                 if liftpos == 1:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_14
 
              
             $ startpos = 11     
@@ -262,6 +266,6 @@ Level [liftlevelname]
 Emergency Exit
     """
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel # in animations
 
     return

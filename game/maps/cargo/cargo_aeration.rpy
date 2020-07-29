@@ -5,7 +5,7 @@
 ############################################
 label cargo_aeration:
     
-    call atmo_base
+    call atmo_base from _call_atmo_base_5
     
     
     scene bgcolor
@@ -45,10 +45,10 @@ label loop_cargo_aeration:
     while True:
         
         # alarm
-        call alarm_check
+        call alarm_check from _call_alarm_check_11
         
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_44
 
         # do something at node?
         if exitpos == 1:

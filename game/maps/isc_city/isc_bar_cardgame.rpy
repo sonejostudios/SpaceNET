@@ -121,7 +121,7 @@ label isc_city_bar_cardgame:
     if clientcards != playercards:
         #client "You loosed!{w=1.5}{nw}"
         
-        call sound_beep
+        call sound_beep from _call_sound_beep_2
         #with hpunch
         #clientplayer "You lost the game! {w=2.5}{nw}"
         
@@ -141,7 +141,7 @@ label isc_city_bar_cardgame:
         $ countdown = False
         $ countdown_sec = 0
         
-        call sound_collect
+        call sound_collect from _call_sound_collect_1
         with flash
         
         clientplayer "You won the game!{w=3}{nw}"
@@ -149,12 +149,12 @@ label isc_city_bar_cardgame:
         if cardgame_gem == True:
             clientplayer "Here, my gift for you.{w=3}{nw}"
             $ cardgame_gem = False
-            call take_gem
+            call take_gem from _call_take_gem_2
             
         clientplayer "Really well played!{w=2.5}{nw}"
         clientplayer "You looks like an treasure hunter...{w=3}{nw}"
         clientplayer "I'll tell you something...{w=3}{nw}"
-        clientplayer "I lost another gem somewhere around the spaceport interchange of th ISC.{w=5}{nw}"
+        clientplayer "I lost another gem somewhere around the spaceport interchange of the ISC.{w=5}{nw}"
         clientplayer "But I'm so rich and I don't need it.{w=3}{nw}"
         clientplayer "Maybe you'd like to find it?{w=3}{nw}"
         clientplayer "It's up to you!{w=2.5}{nw}"

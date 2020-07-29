@@ -48,7 +48,7 @@ label crossroom:
 label loop_crossroom:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_18
 
     # do something at node?
     if exitpos == 1:

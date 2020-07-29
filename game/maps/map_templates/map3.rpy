@@ -36,7 +36,7 @@ label map3:
 label loop_map3:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_45
     
     # do something at node?
     if exitpos == 1:       #if at node A

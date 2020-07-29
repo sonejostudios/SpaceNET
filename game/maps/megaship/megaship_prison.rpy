@@ -42,7 +42,7 @@ screen megaship_buttons1 zorder -999:
 
 label megaship_prison:
     
-    call atmo_spaceship
+    call atmo_spaceship from _call_atmo_spaceship_4
     stop music fadeout 1.0
     
     image megaship_prison = imagemapsdir + "megaship_prison.png"
@@ -89,11 +89,11 @@ label loop_megaship_prison:
 
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_50
 
         # do something at node?
         if exitpos == 1:
-            call sound_screw
+            call sound_screw from _call_sound_screw_7
             $ startpos = 11
             jump megaship_aeration 
             
@@ -107,20 +107,20 @@ label loop_megaship_prison:
             
         if exitpos == 3:
             if startpos == 3:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_22
             $ startpos = 3
 
             
         if exitpos == 4:
             if startpos == 4:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_23
             $ startpos = 4
 
             
 
         if exitpos == 11:
             if startpos ==11:
-                call dialog_closed    
+                call dialog_closed from _call_dialog_closed_24    
             $ startpos = 11        
 
             
@@ -133,10 +133,10 @@ label loop_megaship_prison:
         if exitpos == 33:
             if startpos == 33:
                 if megaship_prisondoor_button == False:
-                    call dialog_closed
+                    call dialog_closed from _call_dialog_closed_25
 
                 else:
-                    call sound_door
+                    call sound_door from _call_sound_door_112
                     $ liftpos = 0
                     jump megaship_lift1
             

@@ -11,21 +11,21 @@ label server_menu:
     $ server_itemchoice = 0
     
     if inbox_new_message == "*":
-        call notify_new_message
+        call notify_new_message from _call_notify_new_message_1
     
     menu:
         #"start":
         #    call sound_beep
         #    jump server_start
         "files":
-            call sound_beep
+            call sound_beep from _call_sound_beep_58
             jump server_files
         "[inbox_new_message]inbox[inbox_new_message]":
-            call sound_beep
+            call sound_beep from _call_sound_beep_59
             $ inbox_new_message = ""
             jump server_inbox
         "exit":
-            call sound_beep
+            call sound_beep from _call_sound_beep_60
             jump terminal
         
     return
@@ -37,18 +37,18 @@ label server_fileitems:
     $ server_itemchoice = 0
     menu:
         "1":
-            call sound_beep
+            call sound_beep from _call_sound_beep_61
             $ server_itemchoice = 1
         "2":
-            call sound_beep
+            call sound_beep from _call_sound_beep_62
             $ server_itemchoice = 2
         
         "3" if server_filelist[2] !="":
-            call sound_beep
+            call sound_beep from _call_sound_beep_63
             $ server_itemchoice = 3
         
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_64
             $ server_itemchoice = 0
             return
             #jump server_start
@@ -63,26 +63,26 @@ label server_msgitems:
     $ server_itemchoice = 0
     menu:
         "1":
-            call sound_beep
+            call sound_beep from _call_sound_beep_65
             $ server_itemchoice = 1
         "2":
-            call sound_beep
+            call sound_beep from _call_sound_beep_66
             $ server_itemchoice = 2
         
         "3" if server_msglist[2] != "":
-            call sound_beep
+            call sound_beep from _call_sound_beep_67
             $ server_itemchoice = 3
         
         "4" if server_msglist[3] != "":
-            call sound_beep
+            call sound_beep from _call_sound_beep_68
             $ server_itemchoice = 4
             
         "5" if server_msglist[4] != "":
-            call sound_beep
+            call sound_beep from _call_sound_beep_69
             $ server_itemchoice = 5
         
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_70
             $ server_itemchoice = 0
             return
             #jump server_start
@@ -120,7 +120,7 @@ label server_progressbar:
         $ server_progress += 1
     
     pause 1
-    call sound_connected
+    call sound_connected from _call_sound_connected_41
         
     return
     

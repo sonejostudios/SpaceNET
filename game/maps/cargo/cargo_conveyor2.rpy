@@ -9,7 +9,7 @@ init:
 ############################################
 label cargo_conveyor2:
     
-    call atmo_conveyor
+    call atmo_conveyor from _call_atmo_conveyor_1
     
     scene bgcolor
     show screen notify("cargo conveyor room")
@@ -84,7 +84,7 @@ label cargo_conveyor2:
         
     # atmo sound
     if renpy.music.is_playing(channel='atmo') == False:
-        call sound_conveyor
+        call sound_conveyor from _call_sound_conveyor
     
     
     
@@ -156,10 +156,10 @@ label loop_cargo_conveyor2:
 
     while True:
         # alarm
-        call alarm_check
+        call alarm_check from _call_alarm_check_14
         
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_73
 
         # do something at node?
         if exitpos == 1:
@@ -179,19 +179,19 @@ label loop_cargo_conveyor2:
                     jump cargo_aeration
                 else:
                     if inventory_select == "":
-                        call dialog_notfitting
+                        call dialog_notfitting from _call_dialog_notfitting_5
                     
                     elif inventory_select == "minidroid":
                         m "Why going that way if I can walk normally?{w=3}{nw}"
                         m "I should focus on the mission!{w=3}{nw}"
                     else:
-                        call dialog_nosense
+                        call dialog_nosense from _call_dialog_nosense_17
             $ startpos = 1
 
             
         if exitpos == 2:
             if startpos == 2:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_50
             
             $ startpos = 2
             
@@ -244,7 +244,7 @@ label loop_cargo_conveyor2:
             
         if exitpos == 22:
             if startpos == 22:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_38
                 #jump cargo_conveyor1
                 
             $ startpos = 22
@@ -252,10 +252,10 @@ label loop_cargo_conveyor2:
             
         if exitpos == 33:
             if playertype == "minidroid":
-                call dialog_ndd
+                call dialog_ndd from _call_dialog_ndd
             else:
                 if startpos == 33:
-                    call sound_door
+                    call sound_door from _call_sound_door_153
                     $ startpos = 1
                     
                     # stop conveyor sound

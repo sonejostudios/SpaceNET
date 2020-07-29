@@ -57,7 +57,7 @@ screen xylo_sea_guard:
 label xylo_map7:
     
     #stop atmo fadeout 1.0
-    call music_cargo
+    call music_cargo from _call_music_cargo
     
     show screen xylo_sea_guard
     
@@ -117,7 +117,7 @@ label xylo_map7:
 label loop_xylo_map7:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_11
     
     # do something at node?
     if exitpos == 1:       #if at node A
@@ -144,7 +144,7 @@ label loop_xylo_map7:
     if exitpos == 11:       #if going out at AA
         if xylo_sea_map7_button == True: # button
             $ startpos = 11
-            call sound_door
+            call sound_door from _call_sound_door_25
             m "The door is open!"
             hide screen xylo_sea_guard
             $ liftpos = 3
@@ -152,7 +152,7 @@ label loop_xylo_map7:
             
         else:
             $ startpos = 11
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_5
             jump loop_xylo_map7         # map to jump to
         
     if exitpos == 22:
@@ -179,7 +179,7 @@ label xylo_map7guard:
     hide screen xylo_sea_map7_button
     
     pause 0.3
-    call sound_scan
+    call sound_scan from _call_sound_scan_1
     with flash
     
     robotguard "You are not allowed to be here! {w=3.0} {nw}"

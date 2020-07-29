@@ -13,12 +13,12 @@ label satellite_io11:
     $ pnc_nodes_visible = True
     
     stop music fadeout 10.0
-    call atmo_spaceship
+    call atmo_spaceship from _call_atmo_spaceship_2
     
     image satellite_io11 = imagemapsdir + "satellite_map1.png"
     
     scene bgcolor
-    call show_space
+    call show_space from _call_show_space_11
     show satellite_io11 at inspace_idle
     
     show screen notify("satellite io11")
@@ -55,14 +55,14 @@ label loop_satellite_io11:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_42
 
         # do something at node?
         if exitpos == 1:
-            call sound_door
+            call sound_door from _call_sound_door_102
             $ startpos = 1
             
-            call show_space
+            call show_space from _call_show_space_12
             jump leave_docking 
             
         if exitpos == 2:
@@ -72,7 +72,7 @@ label loop_satellite_io11:
             
         if exitpos == 3:
             if startpos == 3:
-                call sound_electroshock
+                call sound_electroshock from _call_sound_electroshock_14
                 with hpunch
                 m "No! The terminal is broken... {w=2.0} {nw}"
                 #call terminal
@@ -91,14 +91,14 @@ label loop_satellite_io11:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
             if startpos == 11:
-                call dialog_idontknow
+                call dialog_idontknow from _call_dialog_idontknow
       
             $ startpos = 11     
 
             
         if exitpos == 22:
             $ startpos = 22
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_17
 
             
         if exitpos == 33:
@@ -115,7 +115,7 @@ label satellite_io11_computer:
     $ pnc_nodes_visible = False
     
     scene terminal at topleft
-    call sound_beep
+    call sound_beep from _call_sound_beep_34
     
     $ showtext = """
     Welcome to 
@@ -140,7 +140,7 @@ label satellite_io11_computer:
     menu:            
         
         "Enable Remote Control" if io11_remote_control == "disabled":
-            call server_progressbar
+            call server_progressbar from _call_server_progressbar_10
             $ showtext ="""
     Remote Control enabled!
     
@@ -148,11 +148,11 @@ label satellite_io11_computer:
             show text Text(showtext,text_align=termtext_align) at termtextpos
             
             $ io11_remote_control = "enabled"
-            call add_note("io11 remote command: ssh io11")
+            call add_note("io11 remote command: ssh io11") from _call_add_note_7
             pause 4
 
         "Disable Remote Control" if io11_remote_control == "enabled":
-            call server_progressbar
+            call server_progressbar from _call_server_progressbar_11
             $ showtext ="""
     Remote Control disabled!
             
@@ -171,7 +171,7 @@ label satellite_io11_computer:
             
             if io11_pass != "none":
                 $ io11_pass_text = "io11 remote password: " + io11_pass
-                call add_note(io11_pass_text)
+                call add_note(io11_pass_text) from _call_add_note_8
             
             jump satellite_io11_computer
             

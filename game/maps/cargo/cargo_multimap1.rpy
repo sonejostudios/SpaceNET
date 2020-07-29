@@ -6,7 +6,7 @@ init:
 
 label cargo_multimap1:
     
-    call music_cargo
+    call music_cargo from _call_music_cargo_1
     
     image circles_bg:
         imagemapsdir + "/multimap/circlesbg.png"
@@ -52,20 +52,20 @@ label cargo_multimap1:
 
 label loop_cargo_multimap1:
     # alarm
-    call alarm_check
+    call alarm_check from _call_alarm_check_6
     
     
     # draw special objects (doors and items) in special places
-    call specialplaces_cargo_multimap1 
+    call specialplaces_cargo_multimap1 from _call_specialplaces_cargo_multimap1 
 
     # start enter in animation
-    call multimap_startanim
+    call multimap_startanim from _call_multimap_startanim_2
     
     # special nodes
-    call specialnodes_cargo_multimap1
+    call specialnodes_cargo_multimap1 from _call_specialnodes_cargo_multimap1
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_20
     #$ pathA = pathviewall
     
 
@@ -83,7 +83,7 @@ label loop_cargo_multimap1:
         
         # doorh0 - entrance
         if multiposx == 0 and multiposy == 0:
-            call sound_door
+            call sound_door from _call_sound_door_40
             $ multiposx = 0
             $ multiposy = 0
             $ startpos = 33
@@ -91,14 +91,14 @@ label loop_cargo_multimap1:
         
         # doorh1 - sortcut
         if multiposx == 0 and multiposy == 1:
-            call sound_door
+            call sound_door from _call_sound_door_41
             $ multiposx = 0
             $ multiposy = 2
             jump cargo_multimap1
         
         # doorh2 - shortcut
         if multiposx == 0 and multiposy == 2:
-            call sound_door
+            call sound_door from _call_sound_door_42
             $ multiposx = 0
             $ multiposy = 1
             jump cargo_multimap1
@@ -106,7 +106,7 @@ label loop_cargo_multimap1:
         # info panel
         if multiposx == 0 and multiposy == 3:
             if startpos == 2:
-                call cargo_multimap_info
+                call cargo_multimap_info from _call_cargo_multimap_info
             jump cargo_multimap1
             
         
@@ -114,20 +114,20 @@ label loop_cargo_multimap1:
         if multiposx == 2 and multiposy == 1:
             
             if inventory_select == "robotcard":
-                call use_and_keep_item
-                call sound_door
+                call use_and_keep_item from _call_use_and_keep_item_9
+                call sound_door from _call_sound_door_43
                 m "Check!{w=1}{nw}"
                 $ startpos = 4
                 jump cargo_smallroom_tube
             
             else:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_9
 
         
         
         # door v2 button bottom right
         if multiposx == 3 and multiposy == 3:
-            call sound_door
+            call sound_door from _call_sound_door_44
             #call dialog_closed
             #$ multiposx = 0
             #$ multiposy = 0
@@ -144,7 +144,7 @@ label loop_cargo_multimap1:
         if multiposx == 3 and multiposy == 0:
             
             $ startpos = 3
-            call sound_door
+            call sound_door from _call_sound_door_45
             jump cargo_smallroom
             
  
@@ -463,7 +463,7 @@ This area is for crew robots only.
     # {font=marvosym.ttf}{size=70}haj{/size}{/font}
     # {font=symbolx.ttf}{size=70}bpr{/size}{/font}
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel_3 # in animations
     
     
     return

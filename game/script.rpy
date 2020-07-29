@@ -123,6 +123,9 @@ image green = "#8dd35f"
 image shadow:
     "images/shadow.png"
     anchor (0.5,0.5)
+    
+    
+    
 
 image player:
     #"images/position.png"
@@ -344,16 +347,19 @@ init :
     # demo version
     $ demo_version = False
     
+    # pre version. For release = ""
+    $ pre_version = "alpha"
+    
     # developer mode (True/False). For release = False
     $ superdev = False
     
     # use dev-keys and show superdev prefs button. For release = False
-    $ use_dev_keys = False
+    $ use_dev_keys = True
     
 
 
 
-    
+    # DEFAULT VARS
     $ imagemapsdir = "images/maps/"
 
     # spaceship type, as string, so it is possible to add 1b, 1c etc.
@@ -552,8 +558,8 @@ label start:
     #$ liftpos = 3
     $ startpos = 1
     
-    
-    $ planet = "isc"
+
+            
     #jump xylo_village1
     
     
@@ -573,6 +579,20 @@ label start:
     $ planetxy_auth = True
     #$ hacker_in_prison = 1
     
+    menu:
+        "megaship":
+            $ planet = "megaship"
+        "xylo":
+            $ planet = "xylo"
+        "isc":
+            $ planet = "isc"
+        "io11":
+            $ planet = "io11"
+        "sun":
+            $ planet = "sun"
+        "cargo":
+            $ planet = "cargo"
+            
     jump space
     #jump xylo_map5house
     #jump docking

@@ -48,7 +48,7 @@ label dialog_closed:
         m "This access card doesn't fit to this door! {w=3.0} {nw}"
     elif inventory_select == "cable":
         m "I could make a short circuit... {w=1.5} {nw}"
-        call sound_electroshock
+        call sound_electroshock from _call_sound_electroshock_1
         with hpunch
         m "Haaa... bad idea! {w=1.5} {nw}"
         m "Nothing happens... {w=1.5} {nw}"
@@ -62,10 +62,10 @@ label dialog_closed:
         m "This key is useless with this door, forget it! {w=3.5} {nw}"
     
     elif inventory_select != "":
-        call dialog_nosense
+        call dialog_nosense from _call_dialog_nosense_5
         
     else:
-        call sound_door_locked
+        call sound_door_locked from _call_sound_door_locked
         $ say_closed = renpy.random.choice( ["It is closed.", 
                                             "I can't open it.", 
                                             "It's not open.",
@@ -100,7 +100,7 @@ label dialog_notfitting:
      
      
 label dialog_ndd:
-    call sound_electroshock
+    call sound_electroshock from _call_sound_electroshock_2
     with hpunch
     md "This is a ndd, a non-droid door...{w=2} {nw}" 
     md "I can't go through! {w=2} {nw}"

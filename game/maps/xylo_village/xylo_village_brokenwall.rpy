@@ -50,7 +50,7 @@ label loop_xylo_village_brokenwall:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_21
         
 
         # do something at node?
@@ -77,10 +77,10 @@ label loop_xylo_village_brokenwall:
         if exitpos == 11:
             if startpos == 11:
                 if xylo_village_brokenwall_gem == True:
-                    call take_gem
+                    call take_gem from _call_take_gem_3
                     $ xylo_village_brokenwall_gem = False
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_23
             $ startpos = 11
  
             

@@ -26,7 +26,7 @@ init python:
 define gui.accent_color = '#8dd35f'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#555555'
+define gui.idle_color = '#ffffff'#'#555555'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
@@ -37,7 +37,7 @@ define gui.hover_color = "#8dd35f" #'#8dd35f'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#ffffff'
+define gui.selected_color = "#8dd35f"#'#ffffff'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#5555557f'
@@ -199,7 +199,8 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## For example, you can uncomment the following line to set the width of a
 ## navigation button.
 
-# define gui.navigation_button_width = 250
+#define gui.navigation_button_width = 250
+
 
 
 ## Choice Buttons ##############################################################

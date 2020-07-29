@@ -7,11 +7,11 @@
 # spaceport GEM
 label isc_gateway_crane_to_spacenet:
     
-    call atmo_spaceship_station 
+    call atmo_spaceship_station from _call_atmo_spaceship_station_5 
     
     scene bgcolor
     
-    call show_space
+    call show_space from _call_show_space_15
     
     
     show crane as crane2:
@@ -76,12 +76,12 @@ label loop_isc_gateway_crane_to_spacenet:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_52
 
         # do something at node?
         if exitpos == 1:       #if at node A
             $ inventory_select = "hook"
-            call use_and_keep_item
+            call use_and_keep_item from _call_use_and_keep_item_22
             m "Let's go! {w=2} {nw}"
             
             $ startpos = 4
@@ -91,7 +91,7 @@ label loop_isc_gateway_crane_to_spacenet:
         if exitpos == 2:
             if startpos == 2:
                 $ startpos = 1
-                call sound_door
+                call sound_door from _call_sound_door_118
                 jump isc_city_spacenet
             $ startpos = 2
 
@@ -100,10 +100,10 @@ label loop_isc_gateway_crane_to_spacenet:
             if startpos == 3:
                 if isc_gateway_spacenet_cash > 0:
                     m "There are some coins! {w=1.5} {nw}"
-                    call io_cash(isc_gateway_spacenet_cash)
+                    call io_cash(isc_gateway_spacenet_cash) from _call_io_cash_13
                     $ isc_gateway_spacenet_cash = 0
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_33
                 
             $ startpos = 3
 

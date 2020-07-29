@@ -11,7 +11,7 @@ screen xylo_mine_spacenet_earthquake:
 label xylo_mine_spacenet:
     
     stop music
-    call atmo_spaceship
+    call atmo_spaceship from _call_atmo_spaceship_5
     
     scene bgcolor
     
@@ -84,19 +84,19 @@ label loop_xylo_mine_spacenet:
                 
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_57
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 22
             hide screen xylo_mine_spacenet_earthquake
-            call sound_door
+            call sound_door from _call_sound_door_126
             jump xylo_mine_level1
             
         if exitpos == 2:
             if startpos == 2:
                 hide screen xylo_mine_spacenet_earthquake
-                call terminal
+                call terminal from _call_terminal_11
             $ startpos = 2
             jump loop_xylo_mine_spacenet
             
@@ -140,9 +140,9 @@ label xylo_mine_spacenet_comp:
     if shadow_enable == 1:
         show shadow:
             pos (270, 240)
-    call sound_beep
+    call sound_beep from _call_sound_beep_36
     
-    call spacenet_comp("xylo_mine") # install spacenet
+    call spacenet_comp("xylo_mine") from _call_spacenet_comp_2 # install spacenet
     
     jump xylo_mine_spacenet
     
@@ -153,7 +153,7 @@ label xylo_mine_spacenet_comp:
 
 label xylo_mine_spacenet_earthquake:
             
-    call sound_earthquake
+    call sound_earthquake from _call_sound_earthquake_2
     with hpunch
     
     if xylo_mine_used_dynamite_dialog == False:

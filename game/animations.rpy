@@ -66,8 +66,9 @@ init:
 
 # surface to spaceport
 label takeoff_anim(x):
+    $ pnc_nodes_visible = False
     
-    call hidepaths
+    call hidepaths from _call_hidepaths
     hide player
     
     if x != "nomenu":
@@ -80,7 +81,8 @@ label takeoff_anim(x):
                 pass
             "leave":
                 $ landing = False
-                call sound_door
+                call sound_door from _call_sound_door_82
+                $ pnc_nodes_visible = True
                 return
     
     #pause 1
@@ -94,7 +96,7 @@ label takeoff_anim(x):
             pos (250, 240)
             easeout 4 pos (-300, 240)
     
-    call sound_take_off
+    call sound_take_off from _call_sound_take_off_2
     pause 4
     
     show spaceship:
@@ -110,6 +112,7 @@ label takeoff_anim(x):
 
 # landing to ground
 label landing_anim:
+    $ pnc_nodes_visible = True
     
     if landing == False:
         show spaceship:
@@ -127,7 +130,7 @@ label landing_anim:
             show shadow:
                 pos (-300, 240)
                 easein 4 pos (250, 240)
-        call sound_take_off
+        call sound_take_off from _call_sound_take_off_3
         
         pause 4
 
@@ -136,7 +139,7 @@ label landing_anim:
             pos (250, 240)
             zoom 0.75
         
-        call sound_door
+        call sound_door from _call_sound_door_83
         
         # show inventory button
         $ inventory_button = True
@@ -147,6 +150,7 @@ label landing_anim:
 
 # surface to space transition animation
 label takeoff_tospace_anime:
+    $ pnc_nodes_visible = False
     
     show spaceship:
         pos (0.5, 0.5)
@@ -157,7 +161,7 @@ label takeoff_tospace_anime:
             pos (0.5, 0.5)
             easeout 3 pos (0.5, -0.5)
     
-    call sound_take_off
+    call sound_take_off from _call_sound_take_off_4
     pause 3
     
     $ space_anim = True
@@ -169,6 +173,9 @@ label takeoff_tospace_anime:
 
 
 label landing_fromspace_anim:
+    $ pnc_nodes_visible = False
+    
+    
     show spaceship:
         rotate 90
         zoom 2.0
@@ -191,6 +198,7 @@ label landing_fromspace_anim:
 
 # space to surface called from space label
 label takeoff_space_anim:
+    $ pnc_nodes_visible = False
     
     #call sound_take_off
     
@@ -213,7 +221,7 @@ label takeoff_space_anim:
     
 label landing_space_anim:
     
-    call sound_take_off
+    call sound_take_off from _call_sound_take_off_5
     
     show spaceshipside:
         pos (0.5, 0.5)
@@ -238,7 +246,7 @@ label hyperspace_anim:
     
     $ inventory_select = ""
     
-    call sound_hyperspace
+    call sound_hyperspace from _call_sound_hyperspace_5
     
     hide screen cockpit_map_screen
     hide screen mini_planets
@@ -275,7 +283,7 @@ label hyperspace_anim:
 label alarm_check:
     if alarm_on == True:
         if renpy.music.is_playing(channel='alarm_channel') == False:
-            call sound_alarm
+            call sound_alarm from _call_sound_alarm
         
         if renpy.showing("white") != True:
             show white zorder 999:
@@ -299,7 +307,7 @@ label info_panel:
     $ pnc_nodes_visible = False
     
     if inventory_select != "":
-        call dialog_nosense
+        call dialog_nosense from _call_dialog_nosense_9
         $ pnc_nodes_visible = True
         return
     
@@ -450,15 +458,15 @@ label info_panel:
 label game_end_anim:
     $ pnc_nodes_visible = False
     
-    call music_outro
+    call music_outro from _call_music_outro_2
 
-    call show_space
+    call show_space from _call_show_space_6
     
     hide screen buttons
     hide screen notify
 
     if space_anim == True:
-        call takeoff_space_anim
+        call takeoff_space_anim from _call_takeoff_space_anim_1
     
     # show spaceship with transform
     show spaceshipside at inspace_idle
@@ -472,7 +480,7 @@ label game_end_anim:
         
     pause 10
     #"YOU WON THE GAME!"
-    call end_background
+    call end_background from _call_end_background_1
     
     jump end_finished
   
@@ -581,11 +589,11 @@ label end_finished:
 
     #call music_bar_village
     
-    call sound_hyperspace
+    call sound_hyperspace from _call_sound_hyperspace_6
     
     show spacenet_logo
     
-    show text "{color=#8dd35f}Finished with [game_percents]%":
+    show text "{color=#8dd35f}[game_percents]% finished.":
         pos (400,360)
         alpha 0.5
         

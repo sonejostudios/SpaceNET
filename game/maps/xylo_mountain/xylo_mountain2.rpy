@@ -60,7 +60,7 @@ label loop_xylo_mountain2:
 
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_68
 
         # do something at node?
         if exitpos == 1: #if at node A
@@ -68,6 +68,7 @@ label loop_xylo_mountain2:
             $ landing = False
             $ startpos = 1     # stay in A
             
+            #this needs to be here so it is set up even if playeralready in map
             if countdown_sec <= 0:
                 $ countdown = False
                 $ sam_meeting_mountains = False
@@ -78,7 +79,7 @@ label loop_xylo_mountain2:
             if startpos == 2:
                 #if inventory_select == "":
                     #m "There is an information table there. {w=2.5} {nw}"
-                call xylo_mountain2_info
+                call xylo_mountain2_info from _call_xylo_mountain2_info
                 
             $ startpos = 2
 
@@ -87,10 +88,10 @@ label loop_xylo_mountain2:
             if startpos == 3: # cash
                 if cash_xylo_mountain1 >0:
                     m "There are some coins!{w=2} {nw}"
-                    call io_cash(cash_xylo_mountain1)
+                    call io_cash(cash_xylo_mountain1) from _call_io_cash_18
                     $ cash_xylo_mountain1 = 0
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_42
             $ startpos = 3
 
 
@@ -99,9 +100,9 @@ label loop_xylo_mountain2:
             
             if startpos == 4:
                 if sam_meeting_mountains == True:
-                    call xylo_mountain2_spacenet_guy
+                    call xylo_mountain2_spacenet_guy from _call_xylo_mountain2_spacenet_guy
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_43
             
             $ startpos = 4
 
@@ -110,7 +111,7 @@ label loop_xylo_mountain2:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
             if startpos == 11:
-                call dialog_nothing       #if going out at AA
+                call dialog_nothing from _call_dialog_nothing_44       #if going out at AA
             $ startpos = 11    #go to CC
 
             
@@ -149,7 +150,7 @@ but it was abandonned and destroyed by winds and storms.
 
     """
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel_16 # in animations
     
     return
 
@@ -197,8 +198,8 @@ label xylo_mountain2_spacenet_guy:
         sam "Here, I give you an official sign, the Star of the Rebel Alliance. {w=3.5} {nw}"
         $ inventory_select = "star"
         $ inventory.append("star")
-        call sound_collect
-        call inventory_notify
+        call sound_collect from _call_sound_collect_9
+        call inventory_notify from _call_inventory_notify_7
         with flash
         m "Thank you very much.{w=1.5}{nw}"
         
@@ -220,7 +221,7 @@ label xylo_mountain2_spacenet_guy:
     sam "Good luck!{w=1.5} {nw}"
     
     $ sam_hacker_meeting_text_workaround = "Meet 4n0nym0u5 in space around " + str(hacker_pos)
-    call add_note(sam_hacker_meeting_text_workaround)
+    call add_note(sam_hacker_meeting_text_workaround) from _call_add_note_11
     
     
     return

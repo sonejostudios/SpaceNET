@@ -24,7 +24,7 @@ label xylo_sea_bunker_liftroom:
     $ pnc_nodes_visible = True
     
     stop music
-    call atmo_base
+    call atmo_base from _call_atmo_base_3
     
     image xylo_sea_bunker_liftroom = imagemapsdir + "crossroom.png"
     
@@ -91,7 +91,7 @@ label loop_xylo_sea_bunker_liftroom:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_8
 
         # do something at node?
         if exitpos == 1:
@@ -101,11 +101,11 @@ label loop_xylo_sea_bunker_liftroom:
             
             if xylo_sea_bunker_liftroom_lock1 == False:
                 $ startpos = 33
-                call sound_door
+                call sound_door from _call_sound_door_21
                 jump xylo_sea_bunker_liftmap
             else:
                 $ startpos = 2
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_1
 
             
         if exitpos == 3: # software disc
@@ -113,9 +113,9 @@ label loop_xylo_sea_bunker_liftroom:
                 if "spacenet" not in inventory:
                     m "There is a computer disc on the desk. {w=2.5} {nw}"
                     m "It seems to be empty. {w=2} {nw}"
-                    call take_item("spacenet")
+                    call take_item("spacenet") from _call_take_item_2
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_10
                     
             $ startpos = 3
 
@@ -151,7 +151,7 @@ label xylo_sea_bunker_liftroom_computer:
     $ pnc_nodes_visible = False
     
     scene terminal at topleft
-    call sound_beep
+    call sound_beep from _call_sound_beep_1
     
     $ unlock_text1 = "unlocked"
     $ unlock_text3 = "unlocked"
@@ -180,7 +180,7 @@ label xylo_sea_bunker_liftroom_computer:
     menu:
         "Lock 00":
             m "If I do that, I can't go out of the bunker anymore! {w=3.5} {nw}"
-            call dialog_nosense
+            call dialog_nosense from _call_dialog_nosense_3
             
         "Lock -01" if xylo_sea_bunker_liftroom_lock1 == False:
             m "Why should I actally do that? {w=2} {nw}"
@@ -196,7 +196,7 @@ label xylo_sea_bunker_liftroom_computer:
 
             
         "Lock -02":
-            call dialog_nosense
+            call dialog_nosense from _call_dialog_nosense_4
             
         "Lock -03" if xylo_sea_bunker_liftroom_lock3 == False:
             $ xylo_sea_bunker_liftroom_lock3 = True

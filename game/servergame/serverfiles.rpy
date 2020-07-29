@@ -17,7 +17,7 @@ label server_files:
     
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
-    call server_fileitems
+    call server_fileitems from _call_server_fileitems
     
     if server_itemchoice == 0:
         jump server_start
@@ -27,7 +27,7 @@ label server_files:
         jump server_file2
     if server_itemchoice == 3:
         if server_filelist[2] == "3. uncrypter_install":
-            call server_install
+            call server_install from _call_server_install
             $ server_filelist[2] = "3. uncrypter"
             jump server_start
         else:
@@ -54,7 +54,7 @@ label server_helpfile:
     
     menu:
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_40
             jump server_files
                 
                 
@@ -73,9 +73,9 @@ label server_file2:
             "decrypt with uncrypter" if server_filelist[2] == "3. uncrypter":
                 $ server_filelist[1] = "2. SpaceNET"
 
-                call sound_beep
+                call sound_beep from _call_sound_beep_41
                 pause 1
-                call sound_connected
+                call sound_connected from _call_sound_connected_38
                 
                 $ server_msglist[2] = "3. well done!"
                 
@@ -85,7 +85,7 @@ label server_file2:
                 jump server_files
                 
             "back":
-                call sound_beep
+                call sound_beep from _call_sound_beep_42
                 jump server_files
                 
     else:
@@ -120,12 +120,12 @@ label server_file2:
         while True:
             menu:
                 "copy to disc" if spacenet_copied == False:
-                    call sound_beep
+                    call sound_beep from _call_sound_beep_43
                     if inventory_select == "spacenet":
-                        call use_and_keep_item
-                        call server_progressbar
+                        call use_and_keep_item from _call_use_and_keep_item_29
+                        call server_progressbar from _call_server_progressbar_14
                         $ inventory_select = ""
-                        call sound_connected
+                        call sound_connected from _call_sound_connected_39
                         with flash
                         $ spacenet_copied = True
                         m "Yes, it works!{w=2.5} {nw}"
@@ -140,7 +140,7 @@ label server_file2:
                     
                     
                 "back":
-                    call sound_beep
+                    call sound_beep from _call_sound_beep_44
 
                     jump server_files
         
@@ -149,17 +149,19 @@ label server_install:
     show text "Do you want to install it?" at termtextpos2
     menu:
         "install":
-            call sound_beep
+            call sound_beep from _call_sound_beep_45
             pass
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_46
             jump server_start
                 
     
-    show text "Installing..." at termtextpos2
+    show text "Installing...":
+        pos (274,240)
     pause 1
-    call server_progressbar
-    show text "Install completed." at termtextpos2
+    call server_progressbar from _call_server_progressbar_15
+    show text "Install completed.":
+        pos (274,240)
     pause 1
     
     return
@@ -178,7 +180,7 @@ label server_uncrypter:
     
     menu:
         "back":
-            call sound_beep
+            call sound_beep from _call_sound_beep_47
             jump server_files
 
 

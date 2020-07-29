@@ -4,7 +4,7 @@
 
 label xylo_map2:
     
-    call atmo_sea
+    call atmo_sea from _call_atmo_sea_1
 
     image xylo_map2 = imagemapsdir + "xylo_sea_p2.png"
     
@@ -55,7 +55,7 @@ label loop_xylo_map2:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_70
         
         # do something at node?
         if exitpos == 1:       #if at node A
@@ -71,9 +71,9 @@ label loop_xylo_map2:
                 if "rope" not in inventory and xylo_sea_bunker_rope == False:
                     
                     if inventory_select == "knife":
-                        call use_and_keep_item
+                        call use_and_keep_item from _call_use_and_keep_item_26
                         m "Let's take a piece of this rope.{w=3.0} {nw}"
-                        call take_item("rope")
+                        call take_item("rope") from _call_take_item_17
                         
                         if inventory_notify == "rope":
                             hide rope_sea
@@ -83,12 +83,12 @@ label loop_xylo_map2:
                         m "It is tight to the pier.{w=2.0} {nw}"
                         
                     else:
-                        call dialog_nosense
+                        call dialog_nosense from _call_dialog_nosense_16
                         
                     
                     
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_45
                 
             $ startpos = 3
 
@@ -98,11 +98,11 @@ label loop_xylo_map2:
             if startpos == 4:
                 if cash_xylo_sea_map2 > 0:
                     m "There is some money on the ground... {w=2.0} {nw}"
-                    call io_cash(cash_xylo_sea_map2)
+                    call io_cash(cash_xylo_sea_map2) from _call_io_cash_19
                     $ cash_xylo_sea_map2 = 0
                     
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_46
             
             $ startpos = 4
 

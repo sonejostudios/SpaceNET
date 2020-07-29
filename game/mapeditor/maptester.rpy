@@ -212,7 +212,7 @@ label map_tester:
 label loop_mapeditor:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_33
 
     # do something at node?
     if exitpos == 1:       #if at node A

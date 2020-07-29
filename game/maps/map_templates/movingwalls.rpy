@@ -91,11 +91,11 @@ label loop_movingwalls:
     
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_76
 
     # do something at node?
     if exitpos == 1:
-        call sound_door
+        call sound_door from _call_sound_door_163
         $ startpos = 1
         jump mapdemos
         
@@ -131,7 +131,7 @@ label loop_movingwalls:
         jump loop_movingwalls 
         
     if exitpos == 33:
-        call sound_door
+        call sound_door from _call_sound_door_164
         $ startpos = 1
         jump mapdemos
         
@@ -211,7 +211,7 @@ label movethewalls:
             linear 1 ypos 400
             
     
-    call sound_movingwall
+    call sound_movingwall from _call_sound_movingwall_6
     pause 1
 
     jump loop_movingwalls

@@ -19,7 +19,7 @@ screen xylo_mine_minitrain_room_earthquake:
 label xylo_mine_minitrain_room:
     
     stop music
-    call atmo_deep_ambiance
+    call atmo_deep_ambiance from _call_atmo_deep_ambiance_1
     
     image xylo_mine_minitrain_room = imagemapsdir + "xylo_mine_minitrain_room.png"
     image xylo_mine_minitrain_room2 = imagemapsdir + "xylo_mine_minitrain_room2.png"
@@ -74,12 +74,12 @@ label loop_xylo_mine_minitrain_room:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_54
 
         # do something at node?
         if exitpos == 1:
             $ startpos = 1
-            call sound_door
+            call sound_door from _call_sound_door_120
             hide screen xylo_mine_minitrain_room_earthquake
             jump xylo_minitrain2
 
@@ -90,12 +90,12 @@ label loop_xylo_mine_minitrain_room:
 
         if exitpos == 3:
             if startpos == 3:
-                call xylo_mine_level1_info
+                call xylo_mine_level1_info from _call_xylo_mine_level1_info_2
             $ startpos = 3
 
         if exitpos == 4:
             if startpos == 4:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_34
             $ startpos = 4
 
         #exits
@@ -105,11 +105,11 @@ label loop_xylo_mine_minitrain_room:
                     hide screen xylo_mine_minitrain_room_earthquake
                     
                     m "Let's dig and free the way!{w=2} {nw}"
-                    call use_and_keep_item
-                    call sound_dig
+                    call use_and_keep_item from _call_use_and_keep_item_23
+                    call sound_dig from _call_sound_dig_1
                     
                     pause 1
-                    call sound_collect
+                    call sound_collect from _call_sound_collect_8
                     with flash
                     $ xylo_mine_minitrain_room_pick = True
                     show screen xylo_mine_minitrain_room_earthquake
@@ -130,7 +130,7 @@ label loop_xylo_mine_minitrain_room:
                 hide screen xylo_mine_minitrain_room_earthquake
                 m "There is some old dynamite... {w=2} {nw}"
                 if "dynamite" not in inventory:
-                    call take_item ("dynamite")
+                    call take_item ("dynamite") from _call_take_item_15
                 else:
                     m "I have already one, this is enough for now. {w=2} {nw}"
                 show screen xylo_mine_minitrain_room_earthquake
@@ -140,7 +140,7 @@ label loop_xylo_mine_minitrain_room:
 
         if exitpos == 33:
             if startpos == 33:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_35
             $ startpos = 33
 
             
@@ -153,7 +153,7 @@ label loop_xylo_mine_minitrain_room:
 
 label xylo_mine_minitrain_room_earthquake:
             
-    call sound_earthquake
+    call sound_earthquake from _call_sound_earthquake_1
     with hpunch
     
     if xylo_mine_minitrain_room_earthquake_dialog == False:
@@ -164,7 +164,7 @@ label xylo_mine_minitrain_room_earthquake:
     
     
     if showtext != "":
-        call xylo_mine_level1_info
+        call xylo_mine_level1_info from _call_xylo_mine_level1_info_3
 
     jump loop_xylo_mine_minitrain_room
 

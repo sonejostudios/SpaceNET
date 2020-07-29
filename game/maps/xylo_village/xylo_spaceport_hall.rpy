@@ -5,7 +5,7 @@
 init:
     $ xylo_spaceport_hall_term = False
     
-    $ xylo_village_oldman_flags = [0, 0, 0, 0]
+    default xylo_village_oldman_flags = [0, 0, 0, 0]
 
 
 
@@ -13,7 +13,7 @@ label xylo_spaceport_hall:
     
     
     stop music fadeout 1.0
-    call atmo_village
+    call atmo_village from _call_atmo_village_1
     
     
     image xylo_spaceport_hall = imagemapsdir + "xylo_spaceport_hall.png"
@@ -68,14 +68,21 @@ label loop_xylo_spaceport_hall:
                 repeat
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_23
 
         # do something at node?
-        if exitpos == 1:       #if at node A
-            $ startpos = 3    # stay in A
-            call sound_door
+        if exitpos == 1:     
+            if drunktime > 0:
+                if startpos == 1:
+                    m "Flying around is not a good idea right now...{w=3.0} {nw}"
+                $ startpos = 1
+                jump loop_xylo_spaceport_hall
+            
+            
+            $ startpos = 3  
+            call sound_door from _call_sound_door_49
             $ landing = False
-            jump xylo_spaceport          # map loop to jump to
+            jump xylo_spaceport         
             
         if exitpos == 2:
             $ startpos = 2
@@ -84,21 +91,21 @@ label loop_xylo_spaceport_hall:
         if exitpos == 3:
             
             if startpos == 3 and xylo_spaceport_hall_term == True:
-                call terminal
+                call terminal from _call_terminal_4
             
             if startpos == 3 and xylo_spaceport_hall_term == False:
                 if inventory_select != "screwdriver":
                     m "This terminal is broken... {w=1.5} {nw}"
                 
                 if inventory_select == "screwdriver":
-                    call use_and_keep_item
+                    call use_and_keep_item from _call_use_and_keep_item_10
                     m "Let's see if I can repaire it... {w=2.0} {nw}"
                     $ xylo_spaceport_hall_term = True
-                    call sound_screw
+                    call sound_screw from _call_sound_screw_6
                     pause 1
-                    call sound_electroshock
+                    call sound_electroshock from _call_sound_electroshock_6
                     pause 1
-                    call sound_connected
+                    call sound_connected from _call_sound_connected_8
                     #with flash
                     m "Yeah, I fixed it! Now it seems to work again. {w=2.0} {nw}"
                 
@@ -108,26 +115,32 @@ label loop_xylo_spaceport_hall:
             
             
         if exitpos == 4:
+            if drunktime > 0:
+                if startpos == 4:
+                    m "I'm not in a shopping mood right now... {w=3.0} {nw}"
+                $ startpos = 4
+                jump loop_xylo_spaceport_hall
+            
             $ startpos = 3
-            call sound_door
+            call sound_door from _call_sound_door_50
             jump xylo_spaceport_hall_store # to store
             
 
         #exits routing "got to map and set position for next map"
         if exitpos == 11:       #if going out at AA
-            call sound_door
+            call sound_door from _call_sound_door_51
             $ startpos = 1    #go to CC
             jump xylo_spaceport_hall_bar          # map to jump to
             
         if exitpos == 22:
-            call sound_door
+            call sound_door from _call_sound_door_52
             $ startpos = 1
             jump xylo_village1 # to village1
             
        
         if exitpos == 33:
             if startpos == 33:
-                call xylo_spaceport_hall_oldman #npc
+                call xylo_spaceport_hall_oldman from _call_xylo_spaceport_hall_oldman #npc
             
             $ startpos = 33
 
@@ -156,7 +169,7 @@ label xylo_spaceport_hall_oldman:
     
     
     if drunktime > 0:
-        call dialog_joke
+        call dialog_joke from _call_dialog_joke_2
         if joke == 1:
             oldman "Oh, I know this joke already.  {w=3} {nw}"
             oldman "It is not funny at all!  {w=2} {nw}"
@@ -172,7 +185,7 @@ label xylo_spaceport_hall_oldman:
             if xylo_village_oldman_gem == True:
                 oldman "Here. {w=1}That's for you.{w=3}{nw}"
                 $ xylo_village_oldman_gem = False
-                call take_gem
+                call take_gem from _call_take_gem_4
 
         if joke == 3:
             oldman "The space bar! {w=2}{nw}"

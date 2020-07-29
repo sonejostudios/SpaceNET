@@ -6,7 +6,7 @@
 label xylo_mine:
     
     stop music fadeout 1.0
-    call atmo_wind
+    call atmo_wind from _call_atmo_wind
     
     
     image xylo_mine = imagemapsdir + "spaceportlift.png"
@@ -52,7 +52,7 @@ label xylo_mine:
     # check if spaceship is landing on this map or not
     # $ landing = False
     # $ landing = True
-    call landing_anim
+    call landing_anim from _call_landing_anim_2
     
     
     # set all variables for the map (nodes and path)
@@ -102,7 +102,7 @@ label loop_xylo_mine:
 
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_31
 
         # do something at node?
         if exitpos == 1:       #if at node A
@@ -112,16 +112,16 @@ label loop_xylo_mine:
                 
                 if inventory_select == "":
                     m "This is an aeration tube.{w=2} {nw}"
-                    call dialog_notfitting
+                    call dialog_notfitting from _call_dialog_notfitting_1
                 
                 if inventory_select != "minidroid" and inventory_select != "":
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_8
                 
                 if inventory_select == "minidroid":
                     
                     m "I can use the minidroid... let's go! {w=2.5} {nw}"
-                    call use_and_keep_item
-                    call sound_connected
+                    call use_and_keep_item from _call_use_and_keep_item_14
+                    call sound_connected from _call_sound_connected_24
                     with flash
                     show minidroid:
                         pos nodeA
@@ -139,22 +139,24 @@ label loop_xylo_mine:
             if startpos == 2:
                 if xylo_mine_spaceport > 0:
                     m "There are [xylo_mine_spaceport]c on the floor... {w=2.5} {nw}"
-                    call io_cash(xylo_mine_spaceport)
+                    call io_cash(xylo_mine_spaceport) from _call_io_cash_9
                     m "Nice! {w=1.5} {nw}"
                     $ xylo_mine_spaceport = 0
+                else:
+                    call dialog_nothing
             $ startpos = 2
 
             
         if exitpos == 3:
             if startpos == 3:
-                call xylo_mine_spaceport_isc # advertisement isc
+                call xylo_mine_spaceport_isc from _call_xylo_mine_spaceport_isc # advertisement isc
             $ startpos = 3
 
 
             
         if exitpos == 4:
             if startpos == 4:
-                call xylo_mine_spaceport_info # info
+                call xylo_mine_spaceport_info from _call_xylo_mine_spaceport_info # info
             $ startpos = 4
 
             
@@ -168,7 +170,7 @@ label loop_xylo_mine:
             $ startpos = 22
             
             $liftpos = 3
-            call sound_door
+            call sound_door from _call_sound_door_78
             jump xylo_mine_lift1 # go to lift
             
         if exitpos == 33:
@@ -177,8 +179,8 @@ label loop_xylo_mine:
             
         if exitpos == 44:
             $ startpos = 44
-            call sound_door
-            call takeoff_anim("withmenu") # go to takeoff
+            call sound_door from _call_sound_door_79
+            call takeoff_anim("withmenu") from _call_takeoff_anim_3 # go to takeoff
             
             
             # straight to space
@@ -219,7 +221,7 @@ This mine is a property of
     """
     
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel_5 # in animations
 
     return
     
@@ -242,7 +244,7 @@ Just 'locate isc' in a terminal!
     
     
     
-    call info_panel # in animations
-    call add_note("terminal: locate isc")
+    call info_panel from _call_info_panel_6 # in animations
+    call add_note("terminal: locate isc") from _call_add_note_5
 
     return

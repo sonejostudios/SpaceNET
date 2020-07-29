@@ -10,7 +10,7 @@ label xylo_village1:
     
     stop music
     
-    call atmo_village
+    call atmo_village from _call_atmo_village_2
     
     image xylo_village1 = imagemapsdir + "xylo_village1.png"
     
@@ -55,12 +55,12 @@ label xylo_village1:
 label loop_xylo_village1:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_75
 
     # do something at node?
     if exitpos == 1:       #if at node A
         $ startpos = 22    # stay in A
-        call sound_door
+        call sound_door from _call_sound_door_159
         jump xylo_spaceport_hall        # map loop to jump to
         
     if exitpos == 2:
@@ -72,11 +72,11 @@ label loop_xylo_village1:
         
     if exitpos == 3: 
         $ startpos = 3
-        call dialog_closed
+        call dialog_closed from _call_dialog_closed_41
         jump loop_xylo_village1
         
     if exitpos == 4:
-        call dialog_closed
+        call dialog_closed from _call_dialog_closed_42
         $ startpos = 4
         jump loop_xylo_village1 
         
@@ -84,7 +84,7 @@ label loop_xylo_village1:
     #exits routing "got to map and set position for next map"
     if exitpos == 11:
         if startpos == 11:    #if going out at AA
-            call xylo_village1_info
+            call xylo_village1_info from _call_xylo_village1_info
         $ startpos = 11     #go to CC
         jump loop_xylo_village1          # map to jump to
         
@@ -95,7 +95,7 @@ label loop_xylo_village1:
                 m "There is something on the floor... {w=2} {nw}"
                 m "This is one coin! {w=2} {nw}"
                 m "I'm rich! {w=1.5} {nw}"
-                call io_cash(xylo_village1_cash)
+                call io_cash(xylo_village1_cash) from _call_io_cash_20
                 $ xylo_village1_cash = 0
                 
         $ startpos = 22
@@ -103,7 +103,7 @@ label loop_xylo_village1:
         
     if exitpos == 33:
         $ startpos = 3
-        call sound_door
+        call sound_door from _call_sound_door_160
         $ liftpos = 0
 
         jump xylo_village1_building
@@ -147,6 +147,6 @@ There is no difference!
 """
 
 
-    call info_panel
+    call info_panel from _call_info_panel_17
     
     return

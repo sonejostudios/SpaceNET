@@ -58,8 +58,8 @@ screen xylo_mine_level1_buttons zorder -999:
 
 label xylo_mine_multimap1:
     
-    call music_xylo_mine
-    call atmo_cave
+    call music_xylo_mine from _call_music_xylo_mine
+    call atmo_cave from _call_atmo_cave
     
     image walls_mm1:
         imagemapsdir + "/multimap/multimap1.png"
@@ -99,16 +99,16 @@ label xylo_mine_multimap1:
 
 label loop_xylo_mine_multimap1:
     # draw special objects (doors and items) in special places
-    call specialplaces_xylo_mines_multimap1 
+    call specialplaces_xylo_mines_multimap1 from _call_specialplaces_xylo_mines_multimap1 
 
     # start enter in animation
-    call multimap_startanim
+    call multimap_startanim from _call_multimap_startanim_1
     
     # special nodes
-    call specialnodes_xylo_mine_multimap1
+    call specialnodes_xylo_mine_multimap1 from _call_specialnodes_xylo_mine_multimap1
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_9
     #$ pathA = pathviewall
     
 
@@ -129,7 +129,7 @@ label loop_xylo_mine_multimap1:
         
         # doorh0 - entrance
         if multiposx == 2 and multiposy == 0:
-            call sound_door
+            call sound_door from _call_sound_door_22
             $ startpos = 3
             jump xylo_mine_crossroom1
             
@@ -137,11 +137,11 @@ label loop_xylo_mine_multimap1:
         if multiposx == 0 and multiposy == 2:
             
             if xylo_mine_level1_button1 == False and xylo_mine_level1_button2 == False and xylo_mine_level1_button3 == False:
-                call sound_door
+                call sound_door from _call_sound_door_23
                 $ startpos = 1
                 jump xylo_mine_level1
             else:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_2
                 m "There is a digital display on the door. {w=3} {nw}"
                 m "Lock 1: [xylo_mine_level1_button1] \nLock 2: [xylo_mine_level1_button2] \nLock 3: [xylo_mine_level1_button3] {w=4} {nw}"
             

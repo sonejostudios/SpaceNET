@@ -35,7 +35,7 @@ label docking:
     
     $ pnc_nodes_visible = False
     
-    call music_satellite
+    call music_satellite from _call_music_satellite_1
     
     image satellite:
         "images/satellite.png"
@@ -72,7 +72,7 @@ label docking:
                 jump start_docking
             
             else:
-                call sound_beep
+                call sound_beep from _call_sound_beep_38
                 with hpunch
                 m "My spaceship doesn't have a docking hatch!{w=3.0} {nw}"
                 jump space
@@ -119,7 +119,7 @@ label start_docking:
         hide screen docking_screen
         
         $ startpos = 1
-        call sound_door
+        call sound_door from _call_sound_door_140
         jump satellite_io11
     
     else:
@@ -134,13 +134,13 @@ label start_docking:
 label leave_docking: # anim back from sattelite
     $ pnc_nodes_visible = False
     
-    call music_space
+    call music_space from _call_music_space_1
 
     if shadow_enable == 1:
         show shadow zorder 999:
             pos (0.5, 0.5)
             
-    call sound_take_off
+    call sound_take_off from _call_sound_take_off_6
     hide screen docking_screen
     show satellite:
         pos (400,240)
@@ -158,7 +158,7 @@ label leave_docking: # anim back from sattelite
         
     pause 2
     
-    call takeoff_space_anim
+    call takeoff_space_anim from _call_takeoff_space_anim_2
     with Dissolve(1)
     jump space
         
@@ -166,9 +166,9 @@ label leave_docking: # anim back from sattelite
 label leave_docking2: #leave docking from menu
     $ pnc_nodes_visible = False
     
-    call music_space
+    call music_space from _call_music_space_2
 
-    call sound_take_off
+    call sound_take_off from _call_sound_take_off_7
     hide screen docking_screen
 
 
@@ -182,7 +182,7 @@ label leave_docking2: #leave docking from menu
         
     pause 2
     
-    call takeoff_space_anim
+    call takeoff_space_anim from _call_takeoff_space_anim_3
     with Dissolve(1)
     jump space
     

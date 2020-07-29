@@ -10,7 +10,7 @@ init:
 label cargo_smallroom: 
     
     stop music fadeout 1.0
-    call atmo_base
+    call atmo_base from _call_atmo_base_1
     
     
     image crossroomsmall = imagemapsdir + "crossroomsmall.png"
@@ -73,10 +73,10 @@ label loop_cargo_smallroom:
     while True:
         
         # alarm
-        call alarm_check
+        call alarm_check from _call_alarm_check_3
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_5
         
 
         # do something at node?
@@ -90,7 +90,7 @@ label loop_cargo_smallroom:
 
         if exitpos == 3:
             $ startpos = 2
-            call sound_door
+            call sound_door from _call_sound_door_16
             jump cargo_multimap1
             
 
@@ -112,7 +112,7 @@ label loop_cargo_smallroom:
                     m "Hey! There is something there.{w=3}{nw}"
                     m "It looks like an id card.{w=3}{nw}"
                     
-                    call take_item("robotcard")
+                    call take_item("robotcard") from _call_take_item_1
 
                     
             $ startpos = 11
@@ -141,7 +141,7 @@ label loop_cargo_smallroom:
 label cargo_smallroom_tube: 
     
     stop music fadeout 1.0
-    call atmo_base
+    call atmo_base from _call_atmo_base_2
     
     image crossroomsmall = imagemapsdir + "crossroomsmall.png"
     
@@ -214,10 +214,10 @@ label loop_cargo_smallroom_tube:
     while True:
         
         # alarm
-        call alarm_check
+        call alarm_check from _call_alarm_check_4
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_6
         
 
         # do something at node?
@@ -236,7 +236,7 @@ label loop_cargo_smallroom_tube:
             
         if exitpos == 4:
             $ startpos = 2
-            call sound_door
+            call sound_door from _call_sound_door_17
             jump cargo_multimap1
             $ startpos = 4
 
@@ -249,8 +249,8 @@ label loop_cargo_smallroom_tube:
                 
                     if inventory_select == "minidroid":
                         m "I can use the minidroid to enter it...{w=2} Let's try! {w=2}{nw}"
-                        call use_and_keep_item
-                        call sound_connected
+                        call use_and_keep_item from _call_use_and_keep_item_1
+                        call sound_connected from _call_sound_connected_1
                         with flash
                         show minidroid:
                             pos nodeAA
@@ -268,10 +268,10 @@ label loop_cargo_smallroom_tube:
                         
                         
                     elif inventory_select == "" :
-                        call dialog_notfitting
+                        call dialog_notfitting from _call_dialog_notfitting
                     
                     else:
-                        call dialog_nosense
+                        call dialog_nosense from _call_dialog_nosense
                 
                 
                 if cargo_grate == True:
@@ -281,15 +281,15 @@ label loop_cargo_smallroom_tube:
                     
                     if inventory_select == "laser":
                         m "Let's see if I can open it.{w=2}{nw}"
-                        call use_and_keep_item
-                        call sound_electroshock
+                        call use_and_keep_item from _call_use_and_keep_item_2
+                        call sound_electroshock from _call_sound_electroshock
                         with flash
                         $ cargo_grate = False
                         hide grate
                         m "Now it is open!{w=2}{nw}"
                     
                     if inventory_select != "laser" and inventory_select != "":
-                        call dialog_nosense
+                        call dialog_nosense from _call_dialog_nosense_1
                         
                         
                     

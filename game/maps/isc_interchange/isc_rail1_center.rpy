@@ -10,9 +10,9 @@ init:
 
 
 label isc_rail1:
-    
-    call music_isc
-    call atmo_spaceship_station
+
+    call music_isc from _call_music_isc
+    call atmo_spaceship_station from _call_atmo_spaceship_station_2
     
     
     image isc_rail1 = imagemapsdir + "isc_rail1.png"
@@ -20,7 +20,7 @@ label isc_rail1:
     scene bgcolor
     show screen notify("Industrial Space City")
     
-    call show_space
+    call show_space from _call_show_space_3
     
     show isc_rail1
     
@@ -99,7 +99,7 @@ label isc_rail1:
         
         $ startpos = 1
         $ isctrain_anim = False
-        call sound_door
+        call sound_door from _call_sound_door_54
         
     else:
         show isctrain:
@@ -114,7 +114,7 @@ label isc_rail1:
     if triptime == True:
         $ triptime = False
         $ startpos = 1
-        call sound_scan
+        call sound_scan from _call_sound_scan_4
         #with Dissolve(0.5)
         with pixellate
 
@@ -122,24 +122,25 @@ label isc_rail1:
 
 
 label loop_isc_rail1:
+    $ pnc_nodes_visible = True
     
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_25
 
         # do something at node?
         if exitpos == 1:
             
             if startpos == 1:
                 #call dialog_closed
-                call sound_door
+                call sound_door from _call_sound_door_55
                 hide player
                 show isctrain:
                     rotate 180
                     easeout 2 xpos -200
                 pause 0.5
-                call sound_train
+                call sound_train from _call_sound_train
                 pause 1.5
                 $ startpos = 2  
                 jump isc_wagon_anim_toleft
@@ -152,21 +153,21 @@ label loop_isc_rail1:
 
             
         if exitpos == 2:
-            call sound_door
+            call sound_door from _call_sound_door_56
             $ startpos = 1
             jump isc_rail3
 
             
         if exitpos == 3:
             if startpos == 3 and isc_containerpos == 2:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_11
             
             if isc_containerpos == 1:
-                call sound_door
+                call sound_door from _call_sound_door_57
                 show player:
                     pos (520,115)
                 pause 0.7
-                call sound_door
+                call sound_door from _call_sound_door_58
                 show player:
                     pos nodeCC
                 $ startpos = 33
@@ -179,7 +180,7 @@ label loop_isc_rail1:
             
         if exitpos == 4:
             $ startpos = 1
-            call sound_door
+            call sound_door from _call_sound_door_59
             jump isc_rail2
 
             
@@ -199,11 +200,11 @@ label loop_isc_rail1:
             
         if exitpos == 33:
             #if startpos == 33:
-            call sound_door
+            call sound_door from _call_sound_door_60
             show player:
                 pos (520,115)
             pause 0.7
-            call sound_door
+            call sound_door from _call_sound_door_61
             show player:
                 pos nodeC
             $ startpos = 3
@@ -271,7 +272,7 @@ label isc_movingroom_anim:
         show isc_moving_room:
             pos (525,400)
             linear 3 pos (525,116)
-        call sound_lift
+        call sound_lift from _call_sound_lift_1
         pause 3
         
 
@@ -280,7 +281,7 @@ label isc_movingroom_anim:
         show isc_moving_room:
             pos (525,116)
             linear 3 pos (525,400)
-        call sound_lift
+        call sound_lift from _call_sound_lift_2
         pause 3
         
     

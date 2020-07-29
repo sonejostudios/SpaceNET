@@ -8,10 +8,11 @@ init:
 
 
 label xylo_spaceport:
+    $ pnc_nodes_visible = True
     
     
     stop music
-    call atmo_village
+    call atmo_village from _call_atmo_village
     
     
     $ planet = "xylo"
@@ -76,7 +77,7 @@ label xylo_spaceport:
     # check if spaceship is landing on this map or not
     # $ landing = False
     # $ landing = True
-    call landing_anim
+    call landing_anim from _call_landing_anim
     
     
     # set all variables for the map (nodes and path)
@@ -136,7 +137,7 @@ label loop_xylo_spaceport:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_7
 
         
         # GAME END
@@ -170,12 +171,12 @@ label loop_xylo_spaceport:
                         pause 1
                         
                        
-                        call sound_door
+                        call sound_door from _call_sound_door_18
                         hide player
                         
                         pause 0.7
                         
-                        call takeoff_anim("nomenu") # go to takeoff
+                        call takeoff_anim("nomenu") from _call_takeoff_anim # go to takeoff
                         
                         $ takeoftospace = True
                         # straight to space
@@ -197,7 +198,7 @@ label loop_xylo_spaceport:
 
         if exitpos == 2:
             if startpos == 2:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_9
             $ startpos = 2
          
 
@@ -205,11 +206,11 @@ label loop_xylo_spaceport:
         if exitpos == 3:
             if planetxy_register == True:
                 $ startpos = 1
-                call sound_door
+                call sound_door from _call_sound_door_19
                 jump xylo_spaceport_hall
             else:
                 $ startpos = 3
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed
                 
             
             
@@ -229,16 +230,16 @@ label loop_xylo_spaceport:
                     
                 elif inventory_select == "pick":
                     m "I can use the pick and open it completely. \nLet's go!{w=3.5} {nw}"
-                    call use_and_keep_item
-                    call sound_dig
+                    call use_and_keep_item from _call_use_and_keep_item_3
+                    call sound_dig from _call_sound_dig
                     pause 1.5
-                    call sound_connected
+                    call sound_connected from _call_sound_connected_2
                     with flash
                     $ xylo_spaceport_brokenwall = True
                     jump loop_xylo_spaceport
                     
                 else:
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_2
                     
                 
             $ startpos = 4
@@ -272,7 +273,7 @@ label loop_xylo_spaceport:
                         m "[questions[1]]"
                         radio "Sure.{w=1} No problem.{w=1} {nw}"
                         radio "Wait...{w=2} {nw}"
-                        call sound_connected
+                        call sound_connected from _call_sound_connected_3
                         with flash
                         $ planetxy_register = True
                         radio "Your spaceship and you are now registered.{w=3} {nw}"
@@ -295,8 +296,8 @@ label loop_xylo_spaceport:
             
         if exitpos == 44:
             $ startpos = 44
-            call sound_door
-            call takeoff_anim("withmenu") # go to takeoff
+            call sound_door from _call_sound_door_20
+            call takeoff_anim("withmenu") from _call_takeoff_anim_1 # go to takeoff
             
             
             # straight to space

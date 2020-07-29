@@ -15,7 +15,7 @@ label isc_rail3:
     scene bgcolor
     #show screen notify("Industrial Space City")
     
-    call show_space
+    call show_space from _call_show_space_17
     
     show isc_rail3
     
@@ -92,11 +92,11 @@ label loop_isc_rail3:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_67
 
         # do something at node?
         if exitpos == 1:
-            call sound_door
+            call sound_door from _call_sound_door_143
             $ startpos = 2
             jump isc_rail1
 
@@ -106,14 +106,14 @@ label loop_isc_rail3:
             
         if exitpos == 2:
             if startpos == 2 and isc_containerpos3 == 2:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_34
             
             if isc_containerpos3 == 1:
-                call sound_door
+                call sound_door from _call_sound_door_144
                 show player:
                     pos (337,250)
                 pause 0.7
-                call sound_door
+                call sound_door from _call_sound_door_145
                 show player:
                     pos nodeAA
                 $ startpos = 11
@@ -140,7 +140,7 @@ label loop_isc_rail3:
                 
                 # demo panel
                 else:
-                    call demo_panel
+                    call demo_panel from _call_demo_panel
             
             $ startpos = 4
             #jump loop_isc_rail3
@@ -150,11 +150,11 @@ label loop_isc_rail3:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:       #if going out at AA
             if isc_containerpos3 == 1:
-                call sound_door
+                call sound_door from _call_sound_door_146
                 show player:
                     pos (337,250)
                 pause 0.7
-                call sound_door
+                call sound_door from _call_sound_door_147
                 show player:
                     pos nodeB
                 $ startpos = 2
@@ -165,16 +165,16 @@ label loop_isc_rail3:
         if exitpos == 22:
             #call dialog_closed
             $ startpos = 1
-            call sound_door
+            call sound_door from _call_sound_door_148
             jump isc_rail4a
 
             
         if exitpos == 33:
             if startpos == 33:
                 if inventory_select == "":
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_41
                 else:
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_15
             $ startpos = 33
 
             
@@ -241,7 +241,7 @@ Now shut down your computer and go to sleep!
 
 """
 
-    call info_panel
+    call info_panel from _call_info_panel_15
     
     #call sound_scan
     #with pixellate
@@ -263,7 +263,7 @@ label isc_movingroom_anim3:
         show isc_moving_room:
             pos (700,255)
             linear 3 pos (337,255)
-        call sound_lift
+        call sound_lift from _call_sound_lift_6
         pause 3
         
 
@@ -272,7 +272,7 @@ label isc_movingroom_anim3:
         show isc_moving_room:
             pos (337,255)
             linear 3 pos (700,255)
-        call sound_lift
+        call sound_lift from _call_sound_lift_7
         pause 3
         
     

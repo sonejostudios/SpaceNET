@@ -21,7 +21,7 @@ label isc_bar_lift_room:
     
     
     # set all variables for the map (nodes and path)
-    $ nodeA = (400, 165)
+    $ nodeA = (400, 170)
     $ nodeB = (475, 240)
     $ nodeC = (400, 315)
     $ nodeD = (325, 240)
@@ -51,19 +51,19 @@ label loop_isc_bar_lift_room:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_27
         
 
         # do something at node?
         if exitpos == 1:
             if startpos ==1 :
-                call isc_bar_lift_info 
+                call isc_bar_lift_info from _call_isc_bar_lift_info 
             $ startpos = 1 
 
             
         if exitpos == 2:
             $ liftpos = 3
-            call sound_door
+            call sound_door from _call_sound_door_65
             jump isc_city_bar_lift2
             $ startpos = 2
             
@@ -75,7 +75,7 @@ label loop_isc_bar_lift_room:
             
         if exitpos == 4:
             $ liftpos = 0
-            call sound_door
+            call sound_door from _call_sound_door_66
             jump isc_city_bar_lift1
             $ startpos = 4
 
@@ -121,7 +121,7 @@ will be punished by law.
     # {font=marvosym.ttf}{size=70}haj{/size}{/font}
     # {font=symbolx.ttf}{size=70}bpr{/size}{/font}
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel_4 # in animations
     
     
     return

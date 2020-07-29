@@ -2,10 +2,9 @@
 ##############################################
 
 init:
-    $ xylo_sea_barman_flags = [0, 0]
-    
-    $ xylo_sea_bar_client1_flags = [0, 0, 0]
-    
+    default xylo_sea_barman_flags = [0, 0]
+    default xylo_sea_bar_client1_flags = [0, 0, 0]
+
     $ xylo_sea_bar_client1_letter = 0
     
     $ xylo_sea_bar_music = 3
@@ -14,7 +13,7 @@ init:
 label xylo_map5house:
     
     stop atmo fadeout 1.0
-    call music_bar_sea
+    call music_bar_sea from _call_music_bar_sea
     
     image xylo_bar = imagemapsdir + "crossroom.png"
     
@@ -85,13 +84,13 @@ label loop_xylo_map5house:
     
     
     if xylo_sea_bar_music == 1:
-        call music_bar_village
+        call music_bar_village from _call_music_bar_village_2
     
     if xylo_sea_bar_music == 2:
-        call music_bar_chill
+        call music_bar_chill from _call_music_bar_chill_2
         
     if xylo_sea_bar_music == 3:
-        call music_outro
+        call music_outro from _call_music_outro_1
     
     if xylo_sea_bar_music == 4:
         stop music fadeout 1.0
@@ -100,12 +99,12 @@ label loop_xylo_map5house:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_32
         
         # do something at node?
         if exitpos == 1:       #if at node A
             if startpos == 1:
-                call xylo_sea_bar_barman
+                call xylo_sea_bar_barman from _call_xylo_sea_bar_barman
             
             $ startpos = 1     # stay in A
             
@@ -117,7 +116,7 @@ label loop_xylo_map5house:
             
         if exitpos == 4:
             if startpos == 4:
-                call terminal
+                call terminal from _call_terminal_6
             
             $ startpos = 4
 
@@ -125,14 +124,14 @@ label loop_xylo_map5house:
         #exits routing "got to map"
         if exitpos == 11:      
             if startpos == 11:
-                call xylo_sea_bar_client1
+                call xylo_sea_bar_client1 from _call_xylo_sea_bar_client1
                     
             $ startpos = 11  
 
             
         if exitpos == 22:
             $ startpos = 44
-            call sound_door
+            call sound_door from _call_sound_door_80
             jump xylo_map4
             
         if exitpos == 33:
@@ -186,7 +185,7 @@ label xylo_sea_bar_barman:
             linear 0.5 pos nodeBB
         pause 0.5
         
-        call sound_door
+        call sound_door from _call_sound_door_81
         $ startpos = 44
         jump xylo_map4
         #return
@@ -249,7 +248,7 @@ label xylo_sea_bar_client1:
         
         
     elif inventory_select == "letter":
-        call use_item
+        call use_item from _call_use_item_3
         m "I think this belong to you.{w=2}{nw}"
         m "A miner I met in xylos colony bar gave me this letter for you.{w=4}{nw}"
         
@@ -259,7 +258,7 @@ label xylo_sea_bar_client1:
         clientsea "I'll give you 100c for this favor!{w=2}{nw}"
         clientsea "Thank you very much!{w=2}{nw}"
         
-        call io_cash(100)
+        call io_cash(100) from _call_io_cash_10
 
         m "Nice, thank you!{w=2}{nw}"
         

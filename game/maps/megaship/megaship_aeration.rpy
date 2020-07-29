@@ -8,7 +8,7 @@ init:
 ############################################
 label megaship_aeration:
     
-    call atmo_spaceship_hum
+    call atmo_spaceship_hum from _call_atmo_spaceship_hum_4
     
     image megaship_aeration = imagemapsdir + "megaship_aeration.png"
     
@@ -44,12 +44,12 @@ label loop_megaship_aeration:
     
     while True:
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_64
 
         # do something at node?
         if exitpos == 1:
             if startpos == 1:
-                call sound_screw
+                call sound_screw from _call_sound_screw_8
                 $ startpos = 33 
                 jump megaship_cell 
             $ startpos = 1
@@ -61,16 +61,16 @@ label loop_megaship_aeration:
                         
                         m "I can cut the areation grid with this laser tool. {w=3.0} {nw}"
                         m "Let's do it! {w=1.5} {nw}"
-                        call use_and_keep_item
-                        call sound_electroshock
+                        call use_and_keep_item from _call_use_and_keep_item_24
+                        call sound_electroshock from _call_sound_electroshock_18
                         with flash
                         $ megaship_cell2 = True
                 
                     else:
-                        call dialog_closed
+                        call dialog_closed from _call_dialog_closed_31
                         m "How to cut this metal grid? {w=3} {nw}"
                 else:
-                    call sound_screw
+                    call sound_screw from _call_sound_screw_9
                     $ startpos = 33 
                     jump megaship_cell2
                     
@@ -83,17 +83,17 @@ label loop_megaship_aeration:
                 if megaship_cell3 == False:
                     if inventory_select == "laser":
                         
-                        call use_and_keep_item
-                        call sound_electroshock
+                        call use_and_keep_item from _call_use_and_keep_item_25
+                        call sound_electroshock from _call_sound_electroshock_19
                         with flash
                         $ megaship_cell3 = True
                         m "Great tool, this laser. {w=2.0} {nw}"
                 
                     else:
-                        call dialog_closed
+                        call dialog_closed from _call_dialog_closed_32
                         m "I'll need a metal cutting tool to open this. {w=3} {nw}"
                 else:
-                    call sound_screw
+                    call sound_screw from _call_sound_screw_10
                     $ startpos = 33 
                     jump megaship_cell3
                     
@@ -107,13 +107,13 @@ label loop_megaship_aeration:
 
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
-            call sound_screw    
+            call sound_screw from _call_sound_screw_11    
             $ startpos = 1       
             jump megaship_prison   
             
         if exitpos == 22:
             if startpos == 22:
-                call dialog_closed
+                call dialog_closed from _call_dialog_closed_33
             $ startpos = 22
             
 

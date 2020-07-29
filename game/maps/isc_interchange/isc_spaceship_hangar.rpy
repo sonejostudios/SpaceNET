@@ -87,13 +87,13 @@ label loop_isc_spaceshipport:
     while True:
 
         # start "move through the map" loop
-        call startpos
+        call startpos from _call_startpos_77
 
         # do something at node?
         if exitpos == 1:       #if at node A
             $ startpos = 1     # stay in A
             
-            call sound_door
+            call sound_door from _call_sound_door_165
             $ landing = False
             $ isc_spaceship_interchange = True
             jump isc_interchange
@@ -111,7 +111,7 @@ label loop_isc_spaceshipport:
                 if spaceshiptype != "2":
                     m "This spaceship is beautiful!{w=2} {nw}"
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_52
             $ startpos = 3
             
         if exitpos == 4:
@@ -119,7 +119,7 @@ label loop_isc_spaceshipport:
                 if spaceshiptype != "1":
                     m "This is a basic spaceship.{w=2} {nw}"
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_53
             $ startpos = 4
 
             
@@ -130,25 +130,25 @@ label loop_isc_spaceshipport:
                 if spaceshiptype != "3":
                     m "This spaceship looks weird, but it seems to have a lot of space in it!{w=4} {nw}"
                 else:
-                    call dialog_nothing 
+                    call dialog_nothing from _call_dialog_nothing_54 
             $ startpos = 11  
 
             
         if exitpos == 22:
             if startpos == 22:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_55
             $ startpos = 22
 
             
         if exitpos == 33:
             if startpos ==33:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_56
             $ startpos = 33
 
             
         if exitpos == 44:
             if startpos == 44:
-                call dialog_nothing
+                call dialog_nothing from _call_dialog_nothing_57
             $ startpos = 44
 
 
@@ -182,7 +182,7 @@ label select_spaceship:
             pos nodeB
             
 
-    call sound_crane
+    call sound_crane from _call_sound_crane
     
     if spaceship_choice_number == 1:
         jump crane_anime1
@@ -215,7 +215,7 @@ label crane_anime1:
         ease 0.5 pos nodeA
     pause 0.5
     
-    call sound_door
+    call sound_door from _call_sound_door_166
     $ startpos = 1
     jump isc_interchange
 
@@ -241,7 +241,7 @@ label crane_anime2:
         ease 0.5 pos nodeA
     pause 0.5
     
-    call sound_door
+    call sound_door from _call_sound_door_167
     $ startpos = 1
     jump isc_interchange
 
@@ -267,7 +267,7 @@ label crane_anime3:
         ease 0.5 pos nodeA
     pause 0.5
     
-    call sound_door
+    call sound_door from _call_sound_door_168
     $ startpos = 1
     jump isc_interchange
 

@@ -67,14 +67,14 @@ label space:
     #call atmo_spaceship
     #
     
-    call music_space
+    call music_space from _call_music_space
     
     
     hide screen cockpit_screen
     
     # stop alarm
     $ alarm_on = False
-    call alarm_check
+    call alarm_check from _call_alarm_check_5
 
     
     
@@ -85,7 +85,7 @@ label space:
     show screen superdev
 
     
-    call show_space
+    call show_space from _call_show_space_2
     
     $ inventory_select = ""
     
@@ -94,7 +94,7 @@ label space:
     
     
     if space_anim == True:
-        call takeoff_space_anim
+        call takeoff_space_anim from _call_takeoff_space_anim
     
     
     # show spaceship with transform
@@ -137,7 +137,7 @@ label space:
         show screen notify("free in space")
         
     if planet == "hacker":
-        call hacker_meeting
+        call hacker_meeting from _call_hacker_meeting
         $ planet = "none"
 
         
@@ -146,6 +146,7 @@ label space:
 
 # show space background with background color, galaxy and stars
 label show_space:
+
     
     $ inventory_select = ""
         
@@ -177,7 +178,7 @@ label space_loop:
     #with irisout
     
     # open space menu with transform
-    call sound_scan
+    call sound_scan from _call_sound_scan_2
     show spacemenu at inspace_idle with irisout
     
     #wait for action
@@ -185,7 +186,7 @@ label space_loop:
     $ clickpos = mousepos
     
     # close space menu
-    call sound_scan
+    call sound_scan from _call_sound_scan_3
     hide spacemenu with irisin
     
     
@@ -211,7 +212,7 @@ label space_loop:
         
         #$ space_terminal = True
         
-        call terminal
+        call terminal from _call_terminal_2
         jump space
         
     
@@ -228,16 +229,16 @@ label space_loop:
     
 label land_to_planet:
     
-    $ pnc_nodes_visible = True
+    $ pnc_nodes_visible = False
     
     if planet == "none" or planet == "hacker":
         with hpunch
-        call sound_beep
+        call sound_beep from _call_sound_beep_3
         m "I'm free in space, there is nothing for landing!"
         jump space_loop
     
     if planet == "megaship":
-        call landing_space_anim
+        call landing_space_anim from _call_landing_space_anim
         
         $ startpos = 22
         jump megaship_landing
@@ -246,7 +247,7 @@ label land_to_planet:
     # the future idea is to land every time randomly on the surface
     if planet == "xylo":
         if planetxy_auth == True:
-            call landing_space_anim
+            call landing_space_anim from _call_landing_space_anim_1
             $ landing = True
             
             if planetxy_first == False:
@@ -257,7 +258,7 @@ label land_to_planet:
                 jump surface_xylo
                 
         else:
-            call sound_beep
+            call sound_beep from _call_sound_beep_4
             with hpunch
             radio "Landing autorization denied. {w=2.5} {nw}"
             jump space_loop
@@ -270,21 +271,21 @@ label land_to_planet:
     
         
     if planet == "io11":
-        call landing_space_anim
+        call landing_space_anim from _call_landing_space_anim_2
         
         jump docking
         #$ startpos = 1
         #jump satellite_io11
         
     if planet == "cargo" and cargo_exploded == 0:
-        call landing_space_anim
+        call landing_space_anim from _call_landing_space_anim_3
         $ landing = True
         jump surface_cargo
         
 
         
     if planet == "isc":
-        call landing_space_anim
+        call landing_space_anim from _call_landing_space_anim_4
         $ landing = True
         jump surface_isc
         
@@ -292,7 +293,7 @@ label land_to_planet:
     if planet == "sun":
         #call landing_space_anim
         #$ landing = True
-        call sound_beep
+        call sound_beep from _call_sound_beep_5
         with hpunch
         m "No way I will land on the sun! {w=3.0}{nw}"
         jump space_loop
@@ -307,15 +308,12 @@ label orbital_view:
     #$ inventory_button = False
     
     image orbitfocus = "images/orbitfocus.png"
-    image planetpic = "images/planets/planetpic.png"
-    image planetpic2 = "images/planets/planetpic2.png"
-    image planetpic3 = "images/planets/planetpic3.png"
+    image xylo_small = "images/planets/xylo_small.png"
     
     image megaspaceship_small = "images/planets/megaspaceship_small.png"
     image cargo_small = "images/planets/cargo_small.png"
     image isc_small = "images/planets/isc_small.png"
-    
-    image sunpic = "images/planets/sunpic.png"
+
     image sunbig = "images/planets/sunbig.png"
     
     
@@ -343,11 +341,11 @@ label orbital_view:
         show megaspaceship_small at truecenter, inspace_idle:
     
     if planet == "xylo":
-        show planetpic3 at truecenter, inspace_idle:
-            rotate -25
+        show xylo_small at truecenter, inspace_idle
+            #rotate -25
         
     if planet == "demo":
-        show planetpic at truecenter, inspace_idle
+        show xylo_small at truecenter, inspace_idle
         
     if planet == "io11":
         show satellite at truecenter, inspace_idle:
@@ -370,7 +368,7 @@ label orbital_view:
     
     #$ planet = "none"
     
-    call planet_info
+    call planet_info from _call_planet_info
     
     show screen planet_info 
     with wipedown
@@ -381,13 +379,13 @@ label orbital_view:
     menu:
 
         "map" if planet != "none":
-            call sound_beep
+            call sound_beep from _call_sound_beep_6
             jump map_view
             
         "ask for landing authorization" if planet_auth_needed == "Yes":
-            call sound_modem
+            call sound_modem from _call_sound_modem
             radio "Authorisation request.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0} {nw}"
-            call sound_connected
+            call sound_connected from _call_sound_connected_7
             radio "Authorisation granted! {w=2.0} {nw}"
             
             
@@ -407,7 +405,7 @@ label orbital_view:
         "exit":
             
             hide screen planet_info
-            call sound_beep
+            call sound_beep from _call_sound_beep_7
             jump space
             
     
@@ -429,16 +427,13 @@ label map_view:
         alpha 0.2
     
     hide screen planet_info
-    hide planetpic2
-    hide planetpic3
     hide satellite
     hide orbitfocus
     hide megaspaceship_small
-    hide planetpic
     hide cargo_small
     hide isc_small
-    hide sunpic
     hide sunbig
+    hide xylo_small
     
     if planet == "megaship":
         show megaspaceship:

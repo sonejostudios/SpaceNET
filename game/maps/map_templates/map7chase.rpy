@@ -81,13 +81,13 @@ label map7:
 label loop_map7:
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_51
     
     # do something at node?
     if exitpos == 1:       #if at node A
         $ startpos = 1     # stay in A
         
-        call map7button # button
+        call map7button from _call_map7button # button
         
         jump loop_map7          # map to jump to
         
@@ -108,13 +108,13 @@ label loop_map7:
     if exitpos == 11:       #if going out at AA
         if button_chase == True: # button
             $ startpos = 11
-            call sound_door
+            call sound_door from _call_sound_door_117
             m "The door is open!"
             jump loop_map7 # go to house
             
         else:
             $ startpos = 11
-            call dialog_closed
+            call dialog_closed from _call_dialog_closed_26
             jump loop_map7         # map to jump to
         
     if exitpos == 22:
@@ -139,7 +139,7 @@ label loop_map7:
 
 label map7button:
     
-    call buttons
+    call buttons from _call_buttons
     # set button_house like buttons
     $ button_chase = buttons
     
@@ -150,7 +150,7 @@ label map7button:
 label map7guard:
     hide screen guard
     
-    call sound_scan
+    call sound_scan from _call_sound_scan_6
     with flash
     
     guard "You are not allowed to be here!! {w=3.0} {nw}"

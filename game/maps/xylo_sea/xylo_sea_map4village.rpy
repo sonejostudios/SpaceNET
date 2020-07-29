@@ -4,13 +4,13 @@
 
 init:
     
-    $ xylo_sea_village_fisher_flags = [0,0,0,0]
+    default xylo_sea_village_fisher_flags = [0,0,0,0]
 
 
 label xylo_map4:
     
     stop music fadeout 1.0
-    call atmo_ground
+    call atmo_ground from _call_atmo_ground_1
     
     image xylo_map4 = imagemapsdir + "xylo_sea_p4.png"
     
@@ -61,7 +61,7 @@ label loop_xylo_map4:
             repeat
 
     # start "move through the map" loop
-    call startpos
+    call startpos from _call_startpos_40
     
     # do something at node?
     if exitpos == 1:        #if at node A
@@ -82,7 +82,7 @@ label loop_xylo_map4:
     if exitpos == 3:
         
         if startpos == 3:
-            call xylo_sea_village_info
+            call xylo_sea_village_info from _call_xylo_sea_village_info
 
 
         $ startpos = 3
@@ -111,7 +111,7 @@ label loop_xylo_map4:
         
     if exitpos == 44:
         $ startpos = 22
-        call sound_door
+        call sound_door from _call_sound_door_98
         jump xylo_map5house # go to house
 
     
@@ -132,7 +132,7 @@ Go east to go to the sea and enjoy the coast road !
 
     """
     
-    call info_panel # in animations
+    call info_panel from _call_info_panel_8 # in animations
 
     return
 
