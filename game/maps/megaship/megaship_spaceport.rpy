@@ -181,7 +181,7 @@ label loop_megaship_spaceport:
             if startpos == 3:
                 if spaceship_deco_bounds == (276,34):
                     m "This spaceship there is quite nice... {w=3.0} {nw}"
-                    m "Somehow better than mine ! {w=3.0} {nw}"
+                    m "Somehow better than mine! {w=3.0} {nw}"
                 else:
                     call dialog_nothing from _call_dialog_nothing_1
                 
@@ -198,13 +198,13 @@ label loop_megaship_spaceport:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
             if startpos == 11:
-                m "This is a huge door ! {w=2.0} {nw}"
+                m "This is a huge door! {w=2.0} {nw}"
             $ startpos = 11      
             
             
         if exitpos == 22:
             #if startpos == 22:
-            #m "This is my spaceship ! {w=2.0} {nw}"
+            #m "This is my spaceship! {w=2.0} {nw}"
             
             call sound_door from _call_sound_door_2
             hide player
@@ -219,7 +219,7 @@ label loop_megaship_spaceport:
                     if bigdoor_bounds[1] == -120:
                     
                         
-                        m "Let's go ! {w=0.7} {nw}"
+                        m "Let's go! {w=0.7} {nw}"
                         hide player
                         show spaceship zorder 950:
                             zoom 0.5
@@ -234,7 +234,7 @@ label loop_megaship_spaceport:
                         stop music
                         jump space
                     else:
-                        m "I don't want to start now if the door is closed ! {w=3.0} {nw}"
+                        m "I don't want to start now if the door is closed! {w=3.0} {nw}"
                     
                 "leave":
                     call sound_door from _call_sound_door_3

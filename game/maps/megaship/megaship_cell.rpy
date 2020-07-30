@@ -3,6 +3,8 @@
 init:
     $ m_megaship_cell_escape = 0
     
+    $ m_megaship_cell_first_talk = 0
+    
     
 screen dev_puddle:
     text "[m_megaship_cell_escape]" at truecenter
@@ -84,7 +86,7 @@ label loop_megaship_cell:
         # do something at node?
         if exitpos == 1:
             if startpos == 1:
-                if m_megaship_cell_escape < 4:
+                if m_megaship_cell_escape < 4 and m_megaship_cell_first_talk == 0:
                     m "I'm in prison! {w=2.0} {nw}"
                     m "And I don't remember anything... {w=2.5} {nw}"
                     m "Except my name, [playername]... {w=2.5} {nw}"
@@ -92,6 +94,7 @@ label loop_megaship_cell:
                     m "But what does it mean?... {w=2.5} {nw}"
                     m "SpaceNET... {w=2.5} {nw}"
                     m "And what to do now? {w=2.5} {nw}"
+                    $ m_megaship_cell_first_talk = 1
                 else:
                     m "I'm in cell number 1. {w=2.0} {nw}"
             $ startpos = 1   
