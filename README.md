@@ -39,7 +39,7 @@ __Features:__
 
 __ALPHA VERSION:__
 
-This game is still in alpha version. If you find bugs, please report them! This Build tested only with LinuxMint19 and Windows10 (no MacOS test). The Android Debug version should work on all android devices.
+This game is still in alpha version. If you find bugs, please report them! This build is only ​tested with LinuxMint19 and Windows10 (no MacOS test). The Android debug version should work on all android devices.
 
 
 __DOWNLOAD BINARIES:__
