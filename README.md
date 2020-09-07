@@ -39,12 +39,9 @@ __Links:__
 More Info: www.spacenet.sonejo.net
 
 
-
-
 __ALPHA VERSION:__
+This game is still in alpha version. If you find bugs, please report them! This Build tested only with LinuxMint19 and Windows10 (no MacOS test). The Android Debug version should work on all android devices.
 
-This game is still in alpha version. If you find bugs, please report them!
-This Build tested only with LinuxMint19 and Windows10 (no MacOS test)
 
 __DOWNLOAD BINARIES:__
 https://sonejo.itch.io/spacenet
