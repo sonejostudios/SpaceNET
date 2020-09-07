@@ -5,7 +5,7 @@
 init:
     $ xylo_sea_map7_button = False
 
-screen xylo_sea_map7_button zorder -999:
+screen xylo_sea_map7_button() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)
@@ -32,7 +32,7 @@ screen xylo_sea_map7_button zorder -999:
 
 
 ## special guard screen
-screen xylo_sea_guard:
+screen xylo_sea_guard():
     timer 0.1 action [SetVariable("guardpos", 5)]
     
     timer 4 repeat True action [SetVariable("guardpos", guardpos -1)]

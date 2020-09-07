@@ -231,8 +231,8 @@ label specialplaces_multimap1:
         
     # button
     if multiposx == 0 and multiposy == 3:
-        show buttons as button1 zorder -80:
-            pos multiobjectposN
+        #show buttons as button1 zorder -80:
+        #    pos multiobjectposN
             
         if renpy.showing("propeller4") != True:
             show propeller as propeller4 zorder -99:
@@ -323,7 +323,7 @@ label specialnodes_multimap1:
 
 label button_multimap1:
     
-    call buttons from _call_buttons_2
+    #call buttons from _call_buttons_2
     # set button_multimap1 like buttons
     $ button_multimap1 = buttons
     

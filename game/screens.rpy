@@ -1015,7 +1015,7 @@ screen preferences():
                             
         
     #null height 20
-    label "[pre_version] [config.version]":
+    label "[pre_version] [config.version] [build_date]":
         align (0.99,0.02)
 
 

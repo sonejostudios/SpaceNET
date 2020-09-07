@@ -6,9 +6,9 @@ label xylo_minitrain2:
     $ pnc_nodes_visible = True
     
     stop sound fadeout 1.0
-    call atmo_base from _call_atmo_base_4
+    call atmo_deep_ambiance from _call_atmo_deep_ambiance_1
     
-    call music_xylo_mine from _call_music_xylo_mine_1
+    #call music_xylo_mine from _call_music_xylo_mine_1
     
     image xylo_minitrain = imagemapsdir + "xylo_minitrain.png"
     

@@ -6,7 +6,7 @@ init:
     $ megaship_prisondoor_button = False
 
 
-screen megaship_buttons1 zorder -999:
+screen megaship_buttons1() zorder -999:
     #add "#112119"
     
     on "show" action SetVariable("pnc_nodes_visible", False)

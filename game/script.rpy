@@ -18,7 +18,6 @@ define barman_xsea = Character("Barman", image="barman3", color="#ffffff")
 define barman_isc = Character("Barman", image="barman", color="#ffffff")
 
 define vendor = Character("Vendor", image="vendor", color="#ffffff")
-#define vendor_isc = Character("Vendor", image="vendor2", color="#ffffff")
 
 define oldman = Character("Man", image="oldman", color="#ffffff")
 define fisher = Character("Fisher", image="fisher", color="#ffffff")
@@ -48,11 +47,10 @@ define hacker = Character("4n0nym0u5", image="hacker", color="#ffffff")
 define hackerradio = Character("4n0nym0u5", image="radio", color="#ffffff")
 
 
-
 define sysadmin = Character("Sys Admin", image="sysadmin", color="#ffffff")
 
 #side images
-image side person = "sides/person.png"
+#image side person = "sides/person.png"
 image side radio = "sides/radio.png"
 
 
@@ -221,14 +219,6 @@ image spaceship3s:
     anchor (0.5,0.5)
 
 
-
-
-# delete?
-image buttons:
-    anchor (0.5,0.5) 
-    ConditionSwitch(
-        "buttons==False", "images/buttonoff.png",
-        "buttons==True", "images/buttonon.png")
         
         
 image doorh:
@@ -290,10 +280,6 @@ image tube:
     anchor (0.5,0.5)
     
     
-image rails:
-    "/images/rails.png"
-    anchor (0.5,0.5)
-    
 image rails2:
     "/images/rails2.png"
     anchor (0.5,0.5)
@@ -332,7 +318,7 @@ image galaxy_intro:
 
 
 # main menu music
-define config.main_menu_music = "music/space.ogg"
+define config.main_menu_music = "music/space-amb.ogg"
 
 #mouse cursor
 #define config.mouse = {"default" : [("images/cursor_default.png", 30, 30)]}
@@ -350,11 +336,14 @@ init :
     # pre version. For release = ""
     $ pre_version = "alpha"
     
+    # build date. Set date for release.
+    $ build_date = "2020-09-07"
+    
     # developer mode (True/False). For release = False
     $ superdev = False
     
     # use dev-keys and show superdev prefs button. For release = False
-    $ use_dev_keys = True
+    $ use_dev_keys = False
     
 
 
@@ -419,7 +408,7 @@ init :
     #default planetlist = ["megaship", "xylo"]
     
     $ gems = 0
-    $ maxgems = 10
+    $ maxgems = 11
     
     $ active_nodes_amount = 0
     $ max_nodes_amount = 4

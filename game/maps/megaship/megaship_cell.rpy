@@ -6,7 +6,7 @@ init:
     $ m_megaship_cell_first_talk = 0
     
     
-screen dev_puddle:
+screen dev_puddle():
     text "[m_megaship_cell_escape]" at truecenter
 
 

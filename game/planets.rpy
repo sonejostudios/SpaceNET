@@ -1,7 +1,7 @@
 #planet information
 
 # screen shown in orbital view
-screen planet_info:
+screen planet_info():
     vbox:
         pos (50,100)
         text "{color=#8dd35f}DATA"

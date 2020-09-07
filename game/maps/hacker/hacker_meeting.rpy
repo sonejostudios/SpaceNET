@@ -35,7 +35,7 @@ label hacker_meeting:
             "Here, the star of the rebel alliance." if "star" in inventory:
                 
                 $ inventory_select = "star"
-                call sound_connected
+                call sound_connected from _call_sound_connected
                 call use_and_keep_item from _call_use_and_keep_item
                 m "Here, the star of the rebel alliance.{w=3} {nw}"
                 m "I'm part of the crew.{w=2} {nw}"

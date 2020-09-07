@@ -8,9 +8,9 @@ label map4:
     show screen notify("map4")
 
     #button. set buttons like button_house
-    $ buttons = button_house
-    show buttons:
-        pos (630,140)
+    #$ buttons = button_house
+    #show buttons:
+    #    pos (630,140)
         
     #show light:
     #    pos (630,140)
@@ -95,7 +95,7 @@ label loop_map4:
 
 label map4button:
     
-    call buttons from _call_buttons_1
+    #call buttons from _call_buttons_1
     # set button_house like buttons
     $ button_house = buttons
     

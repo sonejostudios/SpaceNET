@@ -85,6 +85,10 @@ label xylo_mine:
     if startpos == 1:
         show playercross:
             pos nodeA
+            
+        if shadow_enable == 1:
+            show shadow zorder 1000:
+                pos nodeA
         
         show minidroid:
             pos (522,-20)
@@ -143,7 +147,7 @@ label loop_xylo_mine:
                     m "Nice! {w=1.5} {nw}"
                     $ xylo_mine_spaceport = 0
                 else:
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_61
             $ startpos = 2
 
             
@@ -234,8 +238,10 @@ label xylo_mine_spaceport_isc:
     $ showtext = """
 Advertisement:
 
+
 Are you looking for a new spaceship?
 A better - faster - stronger - bigger one?
+
 Just go to Spaceship Interchange at
 the Industrial Space City.
 

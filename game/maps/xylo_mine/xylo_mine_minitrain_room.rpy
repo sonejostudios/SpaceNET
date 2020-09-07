@@ -9,7 +9,7 @@ init:
     
     
     
-screen xylo_mine_minitrain_room_earthquake:
+screen xylo_mine_minitrain_room_earthquake():
     
     timer 7 repeat True action Jump("xylo_mine_minitrain_room_earthquake")
 
@@ -19,7 +19,7 @@ screen xylo_mine_minitrain_room_earthquake:
 label xylo_mine_minitrain_room:
     
     stop music
-    call atmo_deep_ambiance from _call_atmo_deep_ambiance_1
+    call atmo_cave from _call_atmo_cave_3
     
     image xylo_mine_minitrain_room = imagemapsdir + "xylo_mine_minitrain_room.png"
     image xylo_mine_minitrain_room2 = imagemapsdir + "xylo_mine_minitrain_room2.png"

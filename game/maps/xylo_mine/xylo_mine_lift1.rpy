@@ -2,7 +2,7 @@
 
 label xylo_mine_lift1:
     
-    call music_xylo_mine from _call_music_xylo_mine_2
+    call music_drops from _call_music_drops_4
     
     
     # define the name of the 4 levels of this lift, None if there is no level

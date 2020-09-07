@@ -124,7 +124,6 @@ label xylo_village1_info:
 
 
 Welcome to xylo's colony village!
-
 We hope you'll have fun there.
 
 Enjoy!

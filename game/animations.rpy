@@ -79,7 +79,7 @@ label takeoff_anim(x):
                 pass
             "take off to surface":
                 pass
-            "leave":
+            "exit":
                 $ landing = False
                 call sound_door from _call_sound_door_82
                 $ pnc_nodes_visible = True
@@ -342,12 +342,12 @@ label info_panel:
         "images/symbols/symatom.png"
         anchor (0.5,0.5)
         
-    image symexit:
-        "images/symbols/symexit.png"
-        anchor (0.5,0.5)
-        
     image symdanger:
         "images/symbols/symdanger.png"
+        anchor (0.5,0.5)
+        
+    image symexit:
+        "images/symbols/symexit.png"
         anchor (0.5,0.5)
         
     image symquake:

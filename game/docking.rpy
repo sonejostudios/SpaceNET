@@ -10,7 +10,7 @@ init:
     $ new_docking_pos2 = [0,0]
     
     
-screen docking_screen:
+screen docking_screen():
     imagebutton auto "images/dockup_%s.png" action SetVariable("docking_posy", -5), Play("sound", "sounds/small-propulsion.ogg") align (0.5, 0.0)
     imagebutton auto "images/dockdown_%s.png" action SetVariable("docking_posy", 5), Play("sound", "sounds/small-propulsion.ogg") align (0.5, 1.0)
     imagebutton auto "images/dockleft_%s.png" action SetVariable("docking_posx", -5), Play("sound", "sounds/small-propulsion.ogg") align (0.0, 0.5)
@@ -75,7 +75,7 @@ label docking:
                 call sound_beep from _call_sound_beep_38
                 with hpunch
                 m "My spaceship doesn't have a docking hatch!{w=3.0} {nw}"
-                jump space
+                jump leave_docking2
             
             
             

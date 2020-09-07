@@ -22,7 +22,7 @@ init:
     $ xylo_bunker_lift_control_broken = True
 
 
-screen xylo_sea_bunker_lift_control zorder -999:
+screen xylo_sea_bunker_lift_control() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)

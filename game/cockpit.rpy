@@ -31,7 +31,7 @@ init:
 
 
 # screen cockpit
-screen cockpit_screen:
+screen cockpit_screen():
     timer 0.2 repeat True action [SetVariable("space_distance", space_distance+1)]
     timer 3 repeat True action [SetVariable("space_velocity", space_velocity+renpy.random.randint(-2, 2))]
     vbox:
@@ -44,7 +44,7 @@ screen cockpit_screen:
 
 
 # screen cockpit map
-screen cockpit_map_screen:
+screen cockpit_map_screen():
     vbox:
         pos (30,380)
         text "{color=#8dd35f}DATA"
@@ -56,7 +56,7 @@ screen cockpit_map_screen:
 
 
 # screen map mini planets
-screen mini_planets:
+screen mini_planets():
     if "megaship" in planetlist:
         add "images/planets/miniplanet.png" anchor (0.5,0.5) pos megaship_pos
         text "{color=#8dd35f}{size=12}  megaship" anchor (0,0.5) pos megaship_pos
@@ -227,7 +227,6 @@ label cockpit2space:
     hide target
     hide mapgrid
     hide player
-    hide solar_system
     jump cockpit_menu
     #call sound_beep
     #jump space
@@ -259,9 +258,7 @@ label cockpit_map:
         anchor (0.5,0.5)
         "target.png"
         
-    image solar_system:
-        "images/circles.png"
-        alpha 0.1
+
 
     
     hide orbitmeter
@@ -277,7 +274,6 @@ label cockpit_map:
     show player:
         pos spaceship_pos
     
-    #show solar_system at truecenter
     
     
     # show lines at spaceship position
@@ -320,9 +316,9 @@ label cockpit_map:
     $ target_active = True
     
     #pause 1
-    
-    #jump cockpit_map_menu
-    jump cockpit_map2
+    $ destination_pos = spaceship_pos
+    jump cockpit_map_menu
+    #jump cockpit_map2
     
     
 
@@ -409,7 +405,7 @@ label cockpit_map_menu:
             hide target
             hide mapgrid
             hide player
-            hide solar_system
+
             
             call sound_beep from _call_sound_beep_13
             

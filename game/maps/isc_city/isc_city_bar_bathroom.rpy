@@ -56,13 +56,13 @@ label isc_city_bar_toilets:
     $ nodeD = (482, 172)
 
     $ nodeAA = (650, 172)
-    $ nodeBB = (388, 290)
+    $ nodeBB = (388, 286)
     $ nodeCC = (379, 428)
     $ nodeDD = (517, 434)
     
 
     if drunktime > 0:
-        $ nodeBB = (287, 290)    
+        $ nodeBB = (287, 286)    
 
 
     $ pathA = (nodeA, nodeB, nodeC, nodeD, nodeAA, nodeBB, (0, 0), (0, 0))
@@ -191,7 +191,7 @@ label loop_isc_city_bar_toilets:
      
     
     
-screen isc_bar_numpad zorder -999:
+screen isc_bar_numpad() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)

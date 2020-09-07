@@ -43,7 +43,7 @@ label term_commands:
     Here some useful commands to start:
 
     Commands:
-    locate = search in the databank.
+    locate = search in the space databank.
     help = show this help file.
     More: exit, login, cheat, sos...
     
@@ -75,7 +75,7 @@ label term_commands:
     Locate
     [ascii_line]
 
-    locate = search in the databank.
+    locate = search in the space databank.
     
     Exemple:
         locate sun
@@ -415,24 +415,6 @@ label term_commands:
         jump terminal
         
 
-
-# command cheat missions
-    if termtext == "cheat missions" :
-        $ showtext = """
-    Cheat missions
-    [ascii_line]
-    
-    You finished all missions!
-    """
-        show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_connected from _call_sound_connected_15
-        with flash
-        
-        call cheat_missions from _call_cheat_missions
-        
-        pause 3
-        $ termtext = "help"
-        jump terminal
         
        
         
@@ -694,7 +676,7 @@ label term_commands:
                     m "[questions[4]]"
                     
             
-            m "You are capturated by the prison megaship of the governement. {w=4}{nw}"
+            m "You are capturated by the prison megaship of the government. {w=4}{nw}"
             m "They will put you into a prison cell. {w=3}{nw}"
             m "But there is a way out! {w=3}{nw}"
             m "I could try to get there, but I'll need some tools. {w=3.5}{nw}"   
@@ -962,7 +944,14 @@ label term_commands:
 ######################################
 
 #if nothing happens, then
-    show text (_("Command: [termtext] - command not found.")) at termtextpos2
+    $ showtext = """
+    Terminal
+    [ascii_line]
+    
+    Command: [termtext] - command not found.
+    """
+    show text Text(showtext,text_align=termtext_align) at termtextpos
+    #show text (_("Command: [termtext] - command not found.")) at termtextpos2
     pause 2
     $ termtext = "help"
     jump terminal

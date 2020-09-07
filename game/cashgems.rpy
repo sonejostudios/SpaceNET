@@ -34,6 +34,9 @@ init:
 # isc bar bathroom
     $ isc_bar_bathroom_gem = True
     
+# isc sysadmin gem
+    $ isc_bar_sysadmin_gem = True
+    
 
     
     
@@ -80,6 +83,7 @@ init:
     $ isc_bar_wc_cash = 20 # refilled by bar drinks
     $ isc_gateway_spacenet_cash = 35
     $ isc_spaceport_cash = 20
+    $ isc_sysadmin_cash = 100
     
 # cargo
     $ cargo_container_cash = 75

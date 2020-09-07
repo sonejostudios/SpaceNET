@@ -413,7 +413,7 @@ label save_to_file:
     
 
 
-screen map_editor_screen:
+screen map_editor_screen():
     zorder 1
          
     # get every 0.1 sec mouse position
@@ -427,7 +427,7 @@ screen map_editor_screen:
     
     
 
-screen map_editor_summary:
+screen map_editor_summary():
     
     add color("#112119")
     

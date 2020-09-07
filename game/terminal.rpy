@@ -52,6 +52,13 @@ label terminal:
 label term_menu:
     menu:
         "terminal":
+            call sound_beep from _call_sound_beep_71
+            $ showtext = """
+    Terminal
+    [ascii_line]
+    """
+            show text Text(showtext,text_align=termtext_align) at termtextpos
+            #hide text
             python:
                 termtext = renpy.input(_("type a command:"))
                 termtext = termtext.strip()

@@ -9,9 +9,12 @@ init:
 
     default xylo_building_reception_flags = [0, 0, 0, 0]
     
+    default xylo_building_level1_flages = [0, 0, 0, 0]
+    default xylo_building_level3_flages = [0, 0, 0, 0]
     
     
-screen xylo_village1_building_alarm_button zorder -999:
+    
+screen xylo_village1_building_alarm_button() zorder -999:
     #add "#112119"
     
     on "show" action SetVariable("pnc_nodes_visible", False)
@@ -70,7 +73,7 @@ label xylo_village1_building:
     show text "{color=#8dd35f}{size=+140}[liftpos]{/size}{/color}":
         anchor (0.0,0.0)
         pos (220,50)
-        alpha 0.05
+        alpha 0.1
     
     
     
@@ -96,6 +99,15 @@ label xylo_village1_building:
         if xylo_village1_building_alarm < 2:
             show npc:
                 pos (480, 90)
+                
+        show box:
+            pos (260,380)
+            
+        show box as box2:
+            pos (400,380)
+            
+        show box as box3:
+            pos (540,380)
 
             
     if liftpos == 2:
@@ -110,6 +122,9 @@ label xylo_village1_building:
         if alarm_on != True:
             show npc:
                 pos (480, 400)
+                
+        show box:
+            pos (260,380)
             
             
     if liftpos == 3:
@@ -122,20 +137,29 @@ label xylo_village1_building:
             show npc:
                 pos (240, 300)
                 rotate 90
+                
+        show box:
+            pos (440,100)
+            
+        show box as box2:
+            pos (540,100)
+        
+        show box as box3:
+            pos (540,380)
 
     
     
     # set all variables for the map (nodes and path)
     $ nodeA = (400, 75)
-    $ nodeB = (570, 240)
-    $ nodeC = (400, 410)
+    $ nodeB = (566, 240)
+    $ nodeC = (400, 405)
     $ nodeD = (235, 240)
     
 
     $ nodeAA = (400, 240)
     
-    $ nodeBB = (480, 174)
-    $ nodeCC = (480, 316)
+    $ nodeBB = (480, 170)
+    $ nodeCC = (480, 318)
     $ nodeDD = (330, 300)
 
     $ pathA = (nodeA, nodeB, nodeC, nodeD, nodeAA, (0, 0), (0, 0), (0, 0))
@@ -256,9 +280,10 @@ label loop_xylo_village1_building:
                             "Nothing, thank you. {w=1.0} {nw}"]
                             
             menu:
-                "[questions[0]]":
+                "[questions[0]]" if xylo_building_level3_flages[0] == 0:
                     m "[questions[0]]"
                     worker1 "I don't have time to talk with you, sorry! {w=2.0} {nw}"
+                    $ xylo_building_level3_flages[0] = 1
                     
                 "[questions[1]]" if xylo_village1_building_alarm == 1:
                     m "[questions[1]]"
@@ -418,18 +443,20 @@ label xylo_village1_building_level3: # level 3
     
     while True:
         menu:
-            "[questions[0]]":
+            "[questions[0]]" if xylo_building_level3_flages[0] == 0:
                 m "[questions[0]]"
                 worker3 "This is a restricted area... {w=2} {nw}"
                 worker3 "There is nothing to see here! {w=2} {nw}"
                 worker3 "If you continue asking I'll call the guard! {w=3} {nw}"
+                $ xylo_building_level3_flages[0] = 1
                 
-            "[questions[1]]":
+            "[questions[1]]" if xylo_building_level3_flages[1] == 0:
                 m "[questions[1]]"
                 worker3 "Hey, that's my business, not yours. {w=2} {nw}"
                 worker3 "Go out!{w=1.5} {nw}"
                 worker3 "You don't want to go out? {w=2} {nw}"
                 worker3 "I'll call the guard now! {w=2} {nw}"
+                $ xylo_building_level3_flages[1] = 1
                 
                 
                 $ questions = ["Please don't! I will go...{w=2} {nw}", 
@@ -451,7 +478,7 @@ label xylo_village1_building_level3: # level 3
                         jump xylo_village1_building_kickout
                 
                 
-            "[questions[2]]":
+            "[questions[2]]" if xylo_building_level3_flages[2] == 0:
                 m "[questions[2]]"
                 worker3 "Oh... hello inspector. {w=2} {nw}"
                 worker3 "I'm so sorry I thought you were a annoying guy. {w=3} {nw}"
@@ -463,6 +490,8 @@ label xylo_village1_building_level3: # level 3
                 $ xylo_village1_building_alarm = 1
                 
                 m "Okay, thank you for the information, bye! {w=3} {nw}"
+                
+                $ xylo_building_level3_flages[2] = 1
                 
             
             "[questions[3]]":

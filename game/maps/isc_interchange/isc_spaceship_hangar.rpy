@@ -282,7 +282,7 @@ label buy_spaceship:
 
 # spaceship interchange display
 
-screen isc_hangar_screen zorder -999:
+screen isc_hangar_screen() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)
@@ -378,7 +378,7 @@ label isc_spaceship_info:
         show spaceship3s zorder 100:
             ypos 0.3
             xpos 400
-        $ spaceship_choice_infotext = ["sf-3", "700 km/h", "20 m^2", "2000 c", "a small cargo spaceship"]
+        $ spaceship_choice_infotext = ["sf-3", "700 km/h", "20 m^2", "2000 c", "a scientific spaceship"]
     
     show screen isc_hangar_screen
     
@@ -399,7 +399,7 @@ label isc_spaceship_info:
 
     
     hide spaceship1s
-    hide spaceship1u2
+    hide spaceship1u
     
     
     $ info_panel_symbol = ""

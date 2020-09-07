@@ -43,8 +43,8 @@ label cargo_anim_down:
     
     show spaceshipside:
         zoom 0.7
-        pos (400, -50)
-        linear 4 pos (410, 320) rotate 90
+        pos (390, -50)
+        linear 4 pos (400, 320) rotate 90
         linear 4 pos (430, 450) rotate 0
         linear 2 pos (430, 520)
         

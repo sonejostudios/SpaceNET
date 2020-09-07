@@ -12,7 +12,7 @@ init:
 
 
 
-screen xylo_minitrain_button1 zorder -999:
+screen xylo_minitrain_button1() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)
@@ -68,9 +68,11 @@ label xylo_minitrain:
     $ pnc_nodes_visible = True
     
     stop sound fadeout 1.0
-    call atmo_base from _call_atmo_base_6
+    call atmo_deep_ambiance from _call_atmo_deep_ambiance
     
-    call music_xylo_mine from _call_music_xylo_mine_3
+    #call music_xylo_mine from _call_music_xylo_mine_3
+    
+    stop music fadeout 1.0
     
     image xylo_minitrain = imagemapsdir + "xylo_minitrain.png"
     

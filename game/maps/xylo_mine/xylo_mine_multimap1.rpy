@@ -8,7 +8,7 @@ init:
     
     
 
-screen xylo_mine_level1_buttons zorder -999:
+screen xylo_mine_level1_buttons() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)
@@ -58,7 +58,7 @@ screen xylo_mine_level1_buttons zorder -999:
 
 label xylo_mine_multimap1:
     
-    call music_xylo_mine from _call_music_xylo_mine
+    call music_drops from _call_music_drops_2
     call atmo_cave from _call_atmo_cave
     
     image walls_mm1:

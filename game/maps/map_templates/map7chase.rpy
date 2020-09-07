@@ -1,6 +1,6 @@
 
 ## special guard screen
-screen guard:
+screen guard():
     timer 0.1 action [SetVariable("guardpos", 5)]
     
     timer 4 repeat True action [SetVariable("guardpos", guardpos -1)]
@@ -33,9 +33,9 @@ label map7:
     show screen notify("map7 chase")
 
     #button. set buttons like button_house
-    $ buttons = button_chase
-    show buttons:
-        pos (220,105)
+    #$ buttons = button_chase
+    #show buttons:
+    #    pos (220,105)
         
     show guard:
         transform_anchor True
@@ -139,7 +139,7 @@ label loop_map7:
 
 label map7button:
     
-    call buttons from _call_buttons
+    #call buttons from _call_buttons
     # set button_house like buttons
     $ button_chase = buttons
     

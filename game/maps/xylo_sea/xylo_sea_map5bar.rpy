@@ -276,7 +276,7 @@ label xylo_sea_bar_client1:
  
  
 #button screen
-screen xylo_sea_bar_jukebox zorder -999:
+screen xylo_sea_bar_jukebox() zorder -999:
     #add "#112119"
     
     on "show" action SetVariable("pnc_nodes_visible", False)

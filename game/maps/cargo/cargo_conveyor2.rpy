@@ -84,7 +84,7 @@ label cargo_conveyor2:
         
     # atmo sound
     if renpy.music.is_playing(channel='atmo') == False:
-        call sound_conveyor from _call_sound_conveyor
+        call atmo_conveyor from _call_atmo_conveyor_2
     
     
     
@@ -276,7 +276,7 @@ label loop_cargo_conveyor2:
 
 
 #button screen
-screen cargo_conveyor_panel2 zorder -999:
+screen cargo_conveyor_panel2() zorder -999:
     #add "#112119"
     
     on "show" action SetVariable("pnc_nodes_visible", False)

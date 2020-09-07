@@ -18,7 +18,7 @@ init:
     
     
 
-screen inventory:
+screen inventory():
     zorder 91
     modal True
     #timer 1:
@@ -284,7 +284,7 @@ screen inventory:
 
 
 # show which item is selected on main screen
-screen selected_item:
+screen selected_item():
     zorder 100
     
     if inventory_select != "":
@@ -423,7 +423,7 @@ label io_cash(x):
 
 
 # notebook
-screen notebook_screen zorder 100:
+screen notebook_screen() zorder 100:
     
     if notebook_count < len(notebook_notes):
         for i in notebook_notes:
@@ -462,7 +462,7 @@ label add_note(i):
             call sound_collect from _call_sound_collect_7
             with flash
     else:
-        m "This is an interessant information, but unfortunately I have nothing to write it down...{w=5}{nw}"
+        m "This is an interesting information, but unfortunately I have nothing to write it down...{w=5}{nw}"
     
     return
     
@@ -470,7 +470,7 @@ label add_note(i):
     
 
 # letter
-screen letter_screen zorder 100:
+screen letter_screen() zorder 100:
     
     add "#112119"
     

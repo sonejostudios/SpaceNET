@@ -129,11 +129,9 @@ label xylo_mountain1_info:
 
 
 This is a ancient sacred place.
-
 This tree was planted to remember this place.
 
 At night, it is possible to see the two moons of xylo 
-
 at the same time, in a sky full of stars.
 
 

@@ -8,14 +8,14 @@ init:
     $ movingwall3 = 3
 
 
-screen dev:
+screen dev():
     text "[movingwall1] - [movingwall2] - [movingwall3]" at truecenter
     
     
     
 
 #button screen
-screen cargo_movingwall_buttons_panel zorder -999:
+screen cargo_movingwall_buttons_panel() zorder -999:
     #add "#112119"
     
     on "show" action SetVariable("pnc_nodes_visible", False)

@@ -3,7 +3,7 @@
 ############################################
 
 
-screen xylo_mine_spacenet_earthquake:
+screen xylo_mine_spacenet_earthquake():
     
     timer 7 repeat True action Jump("xylo_mine_spacenet_earthquake")
 

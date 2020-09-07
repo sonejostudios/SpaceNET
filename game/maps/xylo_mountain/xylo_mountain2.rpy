@@ -144,7 +144,6 @@ label xylo_mountain2_info:
 This lake was an ancient sacred place.
 
 A long time ago, a temple was built here, 
-
 but it was abandonned and destroyed by winds and storms.
 
 

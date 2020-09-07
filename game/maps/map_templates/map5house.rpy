@@ -86,19 +86,19 @@ label loop_map5:
 label map5_talk1:
     
     if m_step_eileen1 == 2:
-        e "Thank you for your help, I'm happy now.{w=3.0} {nw}"
+        sam "Thank you for your help, I'm happy now.{w=3.0} {nw}"
     
     if inventory_select == "bulb":
         call use_item from _call_use_item_4
-        e "Thank you for the light bulb!!{w=3.0} {nw}"
+        sam "Thank you for the light bulb!!{w=3.0} {nw}"
         $ m_step_eileen1 = 2
     
     if m_step_eileen1 == 1:
-        e "Have you found a light bulb? I'm still waiting!{w=3.0} {nw}"
+        sam "Have you found a light bulb? I'm still waiting!{w=3.0} {nw}"
     
     if m_step_eileen1 == 0:
-        call new_mission from _call_new_mission
-        e "I'm looking for a light bulb, do you have one?{w=3.0} {nw}"
+        #call new_mission from _call_new_mission
+        sam "I'm looking for a light bulb, do you have one?{w=3.0} {nw}"
         $ m_step_eileen1 = 1
     
 

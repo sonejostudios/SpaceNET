@@ -7,6 +7,8 @@ label xylo_mine_lift2:
     
     $ liftlevel = ("-01", None, None, "00")
     
+    call music_drops from _call_music_drops_3
+    
     call liftengine from _call_liftengine_6
     
     #define what to do at level when arrived

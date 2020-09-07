@@ -479,7 +479,7 @@ label xylo_village_client2:
         
         else:
             client2gem "You collected all the [maxgems] gems, this is great, thanks! {w=4}{nw}"
-            client2gem "Now the governement can't find them.{w=2.5}{nw}"
+            client2gem "Now the government can't find them.{w=2.5}{nw}"
             client2gem "Thank you very much!{w=2}{nw}"
             client2gem "As a zen master, I don't need them.{w=2}{nw}"
             client2gem "I don't need any precious stones to be happy.{w=3}{nw}"
@@ -541,7 +541,7 @@ label xylo_village_client2:
                 client2gem "There are many things disturbing the peace of our world...{w=4} {nw}"
                 client2gem "Of course, bad people and their need for power.{w=4} {nw}"
                 client2gem "There are many precious gems full of energy in this world.{w=4} {nw}"
-                client2gem "If the governement find them, this could be a disaster...{w=4} {nw}"
+                client2gem "If the government find them, this could be a disaster...{w=4} {nw}"
                 client2gem "Somebody has to collect them before they now their existance.{w=4} {nw}"
                 client2gem "To say it exactly, I know about [maxgems] gems.{w=4} {nw}"
                 client2gem "Could you collect them before it is too late?{w=4} {nw}"
@@ -710,8 +710,8 @@ label xylo_village_client4:
             sam "I'm happy you've seen my message in your inbox.{w=2.5}{nw}"
             sam "I just met 4n0nym0us.{w=2}{nw}"
             sam "She told me she just figured out a very important information about A.R.K. Corporation.{w=3}{nw}"
-            sam "They sent a big cargo ship full of weapons to the governement.{w=3}{nw}"
-            sam "They propably want to start a war!{w=2}{nw}"
+            sam "They sent a big cargo ship full of weapons to the government.{w=3}{nw}"
+            sam "They propably want to start a civil war!{w=2}{nw}"
             sam "We really need to stop this before it is too late!{w=2.5}{nw}"
             sam "I will organize a meeting with 4n0nym0us for you.{w=2.5}{nw}"
             sam "She has a good idea how to stop this cargo ship and how you can help us.{w=3.5}{nw}"
@@ -767,7 +767,7 @@ label xylo_village_client4:
                 sam "All SpaceNET nodes are activated.{w=3}{nw}"
                 sam "And SpaceNET is online again!{w=2}{nw}"
                 sam "This is great!{w=2}{nw}"
-                sam "With the power of SpaceNET's information network, the governement has no influence anymore...{w=6}{nw}"
+                sam "With the power of SpaceNET's information network, the government has no influence anymore...{w=6}{nw}"
                 sam "Now we can start a new life in peace...{w=3}{nw}"
                 sam "Thank you very much!{w=2}{nw}"
                 sam "...{w=1}{nw}"
@@ -800,7 +800,7 @@ label xylo_village_client4:
 
     
 #button screen
-screen xylo_village_bar_jukebox zorder -999:
+screen xylo_village_bar_jukebox() zorder -999:
     #add "#112119"
     
     on "show" action SetVariable("pnc_nodes_visible", False)

@@ -8,7 +8,7 @@ init:
     $ movingwall3 = 3
 
 
-screen dev:
+screen dev():
     text "[movingwall1] - [movingwall2] - [movingwall3]" at truecenter
 
 
@@ -223,7 +223,7 @@ label movethewalls:
 
 
 #button screen
-screen movingwall_buttons_panel zorder -999:
+screen movingwall_buttons_panel() zorder -999:
     #add "#112119"
     
     imagebutton: 

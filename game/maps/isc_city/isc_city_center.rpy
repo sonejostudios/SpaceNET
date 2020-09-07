@@ -151,7 +151,6 @@ label isc_city_center_info:
 
 
 Welcome to the city center of the
-
 Industrial Space City.
 
 Enjoy the bar, the shop, and many more!
@@ -159,7 +158,6 @@ Enjoy the bar, the shop, and many more!
 ---
 
 To access the spaceport, 
-
 you'll need a landing authorisation.
 
     """
@@ -170,7 +168,6 @@ you'll need a landing authorisation.
 
 
 Do you know the Space Adventure Game SF-IO?
-
 You should play it!
 
 """
@@ -188,9 +185,7 @@ label isc_city_center_info_admin:
 
 
 If you have any question concerning
-
 the Industrial Space City,
-
 please call the administration under 007008.
 
 The next terminal is in the bar.

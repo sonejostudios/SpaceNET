@@ -127,7 +127,7 @@ Welcome to our beautiful sea coast village.
 
 Go north to go to the industrial harbour.
 
-Go east to go to the sea and enjoy the coast road !
+Go east to go to the sea and enjoy the coast road!
 
 
     """
@@ -144,7 +144,6 @@ label xylo_sea_village_fisher:
     show npc:
         linear 1 pos (550,360) rotate 180
     pause 1.5
-    #m "Hello ! {w=1.5} {nw}"
     fisher "Hello. How can I help you? {w=2.5} {nw}"
       
     

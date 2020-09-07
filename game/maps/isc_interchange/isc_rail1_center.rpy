@@ -221,7 +221,7 @@ label loop_isc_rail1:
 
 
 
-screen isc_rail1_button1 zorder -999:
+screen isc_rail1_button1() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)

@@ -236,6 +236,7 @@ label loop_cargo_smallroom_tube:
             
         if exitpos == 4:
             $ startpos = 2
+            stop atmo fadeout 1.0
             call sound_door from _call_sound_door_17
             jump cargo_multimap1
             $ startpos = 4

@@ -382,7 +382,7 @@ label orbital_view:
             call sound_beep from _call_sound_beep_6
             jump map_view
             
-        "ask for landing authorization" if planet_auth_needed == "Yes":
+        "ask for landing authorization" if planet_auth_needed == "Yes" and planetxy_register == False:
             call sound_modem from _call_sound_modem
             radio "Authorisation request.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0} {nw}"
             call sound_connected from _call_sound_connected_7
@@ -396,12 +396,19 @@ label orbital_view:
                 
                 $ planetxy_auth = True
                 $ planetxy_register = False
-            
-            
-            
-            
+
             jump orbital_view
             
+            
+        "measure direct radiation" if spaceshiptype == "3" and planet == "sun":
+            call sound_scan from _call_sound_scan_8
+            with flash
+            radio "Measured direct radiation: 6272 W/m^2{w=3.0} {nw}"
+        
+            call add_note("Direct radiation of the sun: 6272 W/m^2") from _call_add_note_13
+            $ isc_sysadmin_sun = 2
+        
+        
         "exit":
             
             hide screen planet_info

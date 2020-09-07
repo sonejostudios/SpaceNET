@@ -15,7 +15,7 @@ init python:
 
 
 
-screen buttons:
+screen buttons():
     zorder 90
     
     # up right, time, coins, exit
@@ -94,7 +94,7 @@ screen buttons:
 
     
     
-screen termfx:
+screen termfx():
     zorder 1000
     if termfx_enable == 1:
         add "images/termfx.png"
@@ -165,7 +165,7 @@ screen termfx:
 
 
 
-screen superdev zorder 2000:
+screen superdev() zorder 2000:
     if superdev == True:
         # show mouse position for devs
         text "[mousepos]" at left
@@ -194,13 +194,10 @@ screen superdev zorder 2000:
         
     
 
-
-
 init:
     $ nodeclicksize = 40
 
-
-screen setpos:
+screen setpos():
     zorder 100
     # get every 0.1 sec mouse position
     timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())]

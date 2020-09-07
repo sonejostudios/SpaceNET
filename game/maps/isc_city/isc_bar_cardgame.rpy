@@ -182,7 +182,7 @@ label isc_city_bar_cardgame_lost:
     
     
 
-screen isc_cardgame_check:
+screen isc_cardgame_check():
     
     if countdown_sec < 2:
         timer 1.0 repeat True action [Jump("isc_city_bar_cardgame_lost")]

@@ -230,7 +230,7 @@ label loop_cargo_conveyor1:
 
 
 #button screen
-screen cargo_conveyor_panel1 zorder -999:
+screen cargo_conveyor_panel1() zorder -999:
     #add "#112119"
     
     on "show" action SetVariable("pnc_nodes_visible", False)

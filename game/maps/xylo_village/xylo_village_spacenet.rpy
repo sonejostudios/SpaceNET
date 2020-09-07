@@ -9,7 +9,7 @@ init:
     $ xylo_village_spacenet_button_lock = True
 
 
-screen xylo_village_spacenet_button zorder -999:
+screen xylo_village_spacenet_button() zorder -999:
     
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)
@@ -160,7 +160,7 @@ label loop_xylo_village_spacenet:
     if exitpos == 11:
         if startpos == 11:
             m "This room is full of computers. {w=2} {nw}"
-            m "And I thought this is a dangerous area ? {w=2} {nw}"
+            m "And I thought this is a dangerous area? {w=2} {nw}"
             m "Something is weird here... {w=2} {nw}"
         $ startpos = 11     
         jump loop_xylo_village_spacenet   

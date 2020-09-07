@@ -448,15 +448,18 @@ label specialnodes_cargo_multimap1:
 
 label cargo_multimap_info:
     
-    $ info_panel_symbol = "noentry"
+    $ info_panel_symbol = "atom"
 
     $ showtext = """
-    
-    
+
+
+
 - A.R.K. Cargo Spaceship -
 
+This cargo container contains nuclear weapons.
 
-This area is for crew robots only.
+This area is strictly prohibided 
+and reserved for crew robots.
 
     """
     

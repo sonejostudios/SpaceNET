@@ -94,7 +94,7 @@ label sound_screw:
     return
     
 label sound_search:
-    play sound "sounds/search.ogg" 
+    #play sound "sounds/search.ogg" 
     return
     
     
@@ -224,18 +224,18 @@ label atmo_base:
     $ renpy.music.play("sounds/base.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
     
-label atmo_polarbase:
-    $ renpy.music.play("sounds/polarbase.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
-    return
+#label atmo_polarbase:
+#    $ renpy.music.play("sounds/polarbase.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
+#    return
     
 label atmo_spaceship_station:
     $ renpy.music.play("sounds/spaceship-station.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
     
     
-label atmo_nature:
-    $ renpy.music.play("sounds/nature.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
-    return
+#label atmo_nature:
+#    $ renpy.music.play("sounds/nature.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
+#    return
 
 
 
@@ -337,27 +337,9 @@ label music_xylo_building:
     
     
 
-# xylo mine
-label music_xylo_mine:
-    $ renpy.music.play("music/xylo-mine.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
-    return
-    
-
-# xylo bunker
-label music_xylo_bunker:
-    $ renpy.music.play("music/xylo-bunker.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
-    return
-    
-    
-    
-
-    
-    
-    
-    
     
 label music_satellite:
-    $ renpy.music.play("music/space-amb.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
+    $ renpy.music.play("<from 54.60>music/space-amb.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
     
 label music_cargo:

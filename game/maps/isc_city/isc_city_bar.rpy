@@ -14,6 +14,9 @@ init:
     
     $ isc_sysadmin_move = 0
     
+    $ isc_sysadmin_sun = 0
+
+    
     $ isc_bar_music = 1
     
     $ spacebar_joke = False
@@ -251,7 +254,7 @@ label isc_bar_sysadmin:
         clientsysadmin "hello!{w=2}{nw}"
         
         $ questions = ["I'm just looking around.{w=2.0} {nw}", 
-                        "What are you doing here ?{w=2.0} {nw}", 
+                        "What are you doing here?{w=2.0} {nw}", 
                         "I can help you if you like. {w=2.0} {nw}", 
                         "Work? You are having a beer in the bar! {w=2.0} {nw}", 
                         "Nothing, thank you. {w=1.0} {nw}"]
@@ -306,16 +309,63 @@ label isc_bar_sysadmin:
         sysadmin "Hi! Thank you very much for your help.{w=3} {nw}"
         sysadmin "Without you I couldn't fix the crane.{w=3} {nw}"
         sysadmin "I'd like to give you something for your help.{w=3} {nw}"
-        sysadmin "Here! 100c!{w=2} {nw}"
+        sysadmin "Here! [isc_sysadmin_cash]c!{w=2} {nw}"
         call sound_collect from _call_sound_collect_3
-        call io_cash(100) from _call_io_cash_4
+        call io_cash(isc_sysadmin_cash) from _call_io_cash_4
         pause 1
         m "Wow...{w=1} thank you!{w=2} {nw}"
-        sysadmin "You are welcome! {w=2} Bye!{w=1.5} {nw}"
+        sysadmin "You are welcome! {w=3}{nw}"
         $ isc_sysadmin_move = 3
         
     if isc_sysadmin_move == 3:
+        
+        if isc_bar_sysadmin_gem == True and isc_sysadmin_sun == 1:
+            sysadmin "What about the actual direct radiation of the sun?{w=3} {nw}"
+            m "I'm working on it.{w=2} {nw}"
+            sysadmin "Okay...{w=1.5} {nw}"
+            
+        
+        if isc_bar_sysadmin_gem == True and isc_sysadmin_sun == 0:
+            sysadmin "If you like, I have another job for you.{w=3} {nw}"
+            m "Well... why not?{w=2} {nw}"
+            sysadmin "I would like to adjust the sun protection shield of the ISC.{w=4} {nw}"
+            sysadmin "But for this, I need an actual measurement of the sun's direct radiation.{w=5} {nw}"
+            sysadmin "Could you fly to the sun and make this measurement for me?{w=4} {nw}"
+            
+            menu:
+                "Okay, I'll do it.":
+                    m "Okay, I'll do it.{w=2} {nw}"
+                    sysadmin "This is great! see you later.{w=3} {nw}"
+                    $ isc_sysadmin_sun = 1
+                    
+                "No, sorry.":
+                    m "No, sorry.{w=2} {nw}"
+                    sysadmin "Okay, never mind.{w=2} {nw}"
+                    
+                    
+        if isc_bar_sysadmin_gem == True and isc_sysadmin_sun == 2:
+            sysadmin "Do you know the actual direct radiation of the sun?{w=4} {nw}"
+            sysadmin "I need it to adjust the sun protection shield of the Industrial Space City.{w=5} {nw}"
+            m "Yes, I measured it.{w=2} {nw}"
+            m "Right now, the amount is 6272 W/m^2.{w=3} {nw}"
+            sysadmin "Oh, this is great!{w=3} {nw}"
+            sysadmin "Thank you very much.{w=3} {nw}"
+            sysadmin "Unfortunately I don't have any money for you right now...{w=4} {nw}"
+            sysadmin "But would you like this gem?{w=3} {nw}"
+            m "Sure!{w=1} {nw}"
+            call take_gem from _call_take_gem_10
+            $ isc_bar_sysadmin_gem = False
+            
+            
+
         sysadmin "Thank you for your help.{w=2} {nw}"
+        sysadmin "Bye!{w=1.5} {nw}"
+                    
+            
+            
+        
+        
+        
 
     #else:
     #    call dialog_nothing 
@@ -591,7 +641,7 @@ label isc_bar_client1_out:
     
 
 #button screen
-screen isc_bar_jukebox zorder -999:
+screen isc_bar_jukebox() zorder -999:
     #add "#112119"
     on "show" action SetVariable("pnc_nodes_visible", False)
     on "hide" action SetVariable("pnc_nodes_visible", True)

@@ -151,7 +151,7 @@ define config.save_directory = "spacenet_saves"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/full_icon_250b.png"
+define config.window_icon = "gui/window-icon.png"
 
 
 ## Build configuration #########################################################

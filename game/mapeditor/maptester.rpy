@@ -254,6 +254,6 @@ label loop_mapeditor:
 
 
 
-screen map_tester_exit:
+screen map_tester_exit():
     
     textbutton "exit" action [Jump("map_editor")] at topright

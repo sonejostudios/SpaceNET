@@ -44,6 +44,9 @@ init:
    
 
 
+screen surface_screen():
+    imagebutton auto "images/tospace_%s.png" action Jump("takeoff_from_surface_to_space") align (1.0, 0.99)
+    #imagebutton auto "images/dockup_%s.png" action Jump("takeoff_from_surface_to_space") align (1.0, 0.99)
 
 
 
@@ -51,6 +54,8 @@ label surface:
     $ pnc_nodes_visible = False
     
     $ inventory_select = ""
+    
+    show screen surface_screen
     
     
     stop atmo
@@ -248,17 +253,24 @@ label airport_name(i):
 
 
 
+label takeoff_from_surface_to_space:
+        $ pnc_nodes_visible = False
+        $ ingame = False
+        hide screen surface_screen
+        jump takeoff_tospace_anime
+
 
 # landing to spaceports
 label landing:
  
     menu:
-        "take off to space":
-            $ pnc_nodes_visible = False
-            $ ingame = False
-            jump takeoff_tospace_anime
+        #"take off to space":
+        #    jump takeoff_from_surface_to_space
+
             
         "start landing":
+            hide screen surface_screen
+            
             $ pnc_nodes_visible = True
             $ ingame = False
             

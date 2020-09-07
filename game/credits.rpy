@@ -135,7 +135,7 @@ SpaceNET is licensed under GPL 3.0
 
     
     
-    pause 30
+    pause 31
     hide text
 
 
@@ -154,7 +154,7 @@ SpaceNET is licensed under GPL 3.0
     call sound_take_off from _call_sound_take_off_1
     #call sound_scan
     
-    $ renpy.music.play("music/space.ogg", channel="music", fadein=1, fadeout=0, tight=True, if_changed=True)
+    $ renpy.music.play("music/space-amb.ogg", channel="music", fadein=1, fadeout=0, tight=True, if_changed=True)
     
     with pixellate
     

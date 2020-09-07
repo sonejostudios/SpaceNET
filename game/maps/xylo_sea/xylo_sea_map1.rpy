@@ -137,13 +137,15 @@ label loop_xylo_map1:
 
 label xylo_sea_bunker_info:
     
-    $ info_panel_symbol = ""
+    $ info_panel_symbol = "biohazard"
     $ showtext = """
+    
+    
+    
 - A.R.K. Corporation -
 
 
 Private property
-
 You shall not pass
 
 

@@ -9,7 +9,7 @@ init:
 
 
 
-screen xylo_mine_earthquake:
+screen xylo_mine_earthquake():
     
     timer 7 repeat True action Jump("xylo_mine_level1_earthquake")
 
@@ -20,7 +20,7 @@ label xylo_mine_level1:
     
     #call music_xylo_mine
     
-    call atmo_deep_ambiance from _call_atmo_deep_ambiance
+    call atmo_cave from _call_atmo_cave_2
     
     
     image xylo_mine_level1 = imagemapsdir + "xylo_mine1.png"
@@ -184,8 +184,9 @@ label loop_xylo_mine_level1:
 
 label xylo_mine_level1_info:
     
-    $ info_panel_symbol = "quake"
+    $ info_panel_symbol = "danger"
     $ showtext = """
+    
     
     
 Danger! Seismic Activity!
