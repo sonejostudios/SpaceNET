@@ -14,6 +14,7 @@ https://www.youtube.com/watch?v=sTqJdsnIwag
 
 
 __Features:__
+
 * Minimalist story-driven point-and-click adventure
 * Non-linear story: you can move freely and achieve different things at the same time.
 * Minimalist graphics
@@ -36,13 +37,16 @@ __Features:__
 * Save the universe!
 
 __Links:__
+
 More Info: www.spacenet.sonejo.net
 
 
 __ALPHA VERSION:__
+
 This game is still in alpha version. If you find bugs, please report them! This Build tested only with LinuxMint19 and Windows10 (no MacOS test). The Android Debug version should work on all android devices.
 
 
 __DOWNLOAD BINARIES:__
-https://sonejo.itch.io/spacenet
+
+[https://sonejo.itch.io/spacenet](https://sonejo.itch.io/spacenet)
 
