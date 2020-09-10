@@ -126,7 +126,6 @@ label xylo_sea_village_info:
 Welcome to our beautiful sea coast village.
 
 Go north to go to the industrial harbour.
-
 Go east to go to the sea and enjoy the coast road!
 
 

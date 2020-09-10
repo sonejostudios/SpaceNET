@@ -7,8 +7,8 @@
 init:
     $ xylo_spaceport_hall_bar_client = False
     
-    $ questions_client = ["Hello, how are you? {w=2.5}{nw}", 
-                            "What are you doing here?{w=2.5} {nw}", 
+    $ questions_client = ["Hello, how are you doing? {w=3}{nw}", 
+                            "What are you doing here?{w=3} {nw}", 
                             "Have you heard about SpaceNET? {w=3} {nw}", 
                             "Bye bye. {w=1.5} {nw}"]
                             

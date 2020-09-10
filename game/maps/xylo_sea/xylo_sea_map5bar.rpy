@@ -175,7 +175,7 @@ label xylo_sea_bar_barman:
         return
     
     
-    elif inventory_select == "accesscard":
+    elif inventory_select == "accesscard" or inventory_select == "robotcard":
         #barman "This is the wrong card, sorry. {w=3}{nw}"
         barman_xsea "Whaat? Are you from A.R.K. Corporation? {w=3}{nw}"
         barman_xsea "Go out this room, right now! {w=3}{nw}"
@@ -207,7 +207,7 @@ label xylo_sea_bar_client1:
         
         clientsea "Hello! {w=2} {nw}"
         
-        $ questions_client = ["Hello, how are you? {w=3} {nw}", 
+        $ questions_client = ["Hello, how are you doing? {w=3} {nw}", 
                                 "What are you doing here?{w=3} {nw}", 
                                 "Have you heard about SpaceNET? {w=3} {nw}", 
                                 "Okay, bye. {w=1.5} {nw}"]

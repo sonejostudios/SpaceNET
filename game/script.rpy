@@ -408,7 +408,7 @@ init :
     #default planetlist = ["megaship", "xylo"]
     
     $ gems = 0
-    $ maxgems = 11
+    $ maxgems = 12
     
     $ active_nodes_amount = 0
     $ max_nodes_amount = 4

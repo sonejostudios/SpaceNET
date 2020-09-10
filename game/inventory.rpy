@@ -345,7 +345,8 @@ label use_item:
     
 label use_and_keep_item:
     #call sound_connected
-    call inventory_notify from _call_inventory_notify_4
+    if inventory_select != "":
+        call inventory_notify from _call_inventory_notify_4
     
     return
 

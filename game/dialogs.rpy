@@ -89,7 +89,12 @@ label dialog_nosense:
                                         "Why?",
                                         "This won't do anything.",
                                         "Useless idea..."])
+    
+    
+    #call use_and_keep_item
     m "[say_nosense] {w=2.0} {nw}"
+    $ inventory_select = ""
+    
     return
 
 

@@ -65,8 +65,12 @@ label loop_xylo_mountain1:
         
     if exitpos == 2:
         if startpos == 2:
-            m "I'm on the top of the mountain. {w=2.5} {nw}"
-            m "The view here is amazing! {w=2.5} {nw}"
+            if inventory_select == "":
+                m "I'm on the top of the mountain. {w=2.5} {nw}"
+                m "The view here is amazing! {w=2.5} {nw}"
+            else:
+                call dialog_nosense  
+                
         $ startpos = 2
         jump loop_xylo_mountain1
         

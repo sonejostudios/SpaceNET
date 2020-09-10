@@ -77,21 +77,39 @@ label loop_xylo_mountain2:
             
         if exitpos == 2:
             if startpos == 2:
-                #if inventory_select == "":
-                    #m "There is an information table there. {w=2.5} {nw}"
-                call xylo_mountain2_info from _call_xylo_mountain2_info
+                if inventory_select == "":
+                    call xylo_mountain2_info from _call_xylo_mountain2_info
+                elif inventory_select == "pick":
+                    call sound_dig
+                    call use_and_keep_item
+                    pause 1.5
+                    call dialog_nothing
+                    $ inventory_select = ""
+                else:
+                    call dialog_nosense
                 
             $ startpos = 2
 
             
         if exitpos == 3:
             if startpos == 3: # cash
-                if cash_xylo_mountain1 >0:
-                    m "There are some coins!{w=2} {nw}"
-                    call io_cash(cash_xylo_mountain1) from _call_io_cash_18
-                    $ cash_xylo_mountain1 = 0
+                if inventory_select == "":
+                    if cash_xylo_mountain1 > 0:
+                        m "There are some coins!{w=2} {nw}"
+                        call io_cash(cash_xylo_mountain1) from _call_io_cash_18
+                        $ cash_xylo_mountain1 = 0
+                    else:
+                        call dialog_nothing from _call_dialog_nothing_42
+                    
+                elif inventory_select == "pick":
+                    call sound_dig
+                    call use_and_keep_item
+                    pause 1.5
+                    call dialog_nothing
+                    $ inventory_select = ""
                 else:
-                    call dialog_nothing from _call_dialog_nothing_42
+                    call dialog_nosense
+                
             $ startpos = 3
 
 
@@ -99,10 +117,21 @@ label loop_xylo_mountain2:
         if exitpos == 4: # spacnet guy meeting
             
             if startpos == 4:
-                if sam_meeting_mountains == True:
-                    call xylo_mountain2_spacenet_guy from _call_xylo_mountain2_spacenet_guy
+                if inventory_select == "":
+                    if sam_meeting_mountains == True:
+                        call xylo_mountain2_spacenet_guy from _call_xylo_mountain2_spacenet_guy
+                    else:
+                        call dialog_nothing from _call_dialog_nothing_43
+                    
+                elif inventory_select == "pick":
+                    call sound_dig
+                    call use_and_keep_item
+                    pause 1.5
+                    call dialog_nothing
+                    $ inventory_select = ""
+                
                 else:
-                    call dialog_nothing from _call_dialog_nothing_43
+                    call dialog_nosense
             
             $ startpos = 4
 
@@ -111,14 +140,45 @@ label loop_xylo_mountain2:
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
             if startpos == 11:
-                call dialog_nothing from _call_dialog_nothing_44       #if going out at AA
+                if inventory_select == "":
+                    call dialog_nothing from _call_dialog_nothing_44       #if going out at AA
+                
+                elif inventory_select == "pick":
+                    call sound_dig
+                    call use_and_keep_item
+                    pause 1.5
+                    $ inventory_select = ""
+                    
+                    if xylo_mountain_gem == True:
+                        call take_gem
+                        $ xylo_mountain_gem = False
+                    else:
+                        call dialog_nothing
+                    
+                else:
+                    call dialog_nosense  
+                
             $ startpos = 11    #go to CC
 
             
         if exitpos == 22:
             if startpos == 22:
-                m "There is a lake. {w=2.5} {nw}"
-                m "The view here is amazing! {w=2.5} {nw}"     
+                if inventory_select == "":
+                    m "There is a lake. {w=2.5} {nw}"
+                    m "The view here is amazing! {w=2.5} {nw}"     
+                
+                elif inventory_select == "pick":
+                    call sound_dig
+                    call use_and_keep_item
+                    pause 1.5
+                    call dialog_nothing
+                    $ inventory_select = ""
+                    
+                else:
+                    call dialog_nosense  
+                
+                
+                
             $ startpos = 22
 
             
@@ -146,6 +206,9 @@ This lake was an ancient sacred place.
 A long time ago, a temple was built here, 
 but it was abandonned and destroyed by winds and storms.
 
+The legend says, there is a treasure. 
+But nobody has found it until now. 
+Is it really existing?
 
     """
     

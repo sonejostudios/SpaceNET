@@ -16,6 +16,9 @@ init:
 # xylo mine tube
     $ xylo_mine_tube_gem = True
     
+# xylo mountain2
+    $ xylo_mountain_gem = True
+    
 # megaship cell2
     $ megaship_cell2_gem = True
     

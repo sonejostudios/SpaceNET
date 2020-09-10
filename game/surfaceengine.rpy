@@ -266,7 +266,9 @@ label landing:
     menu:
         #"take off to space":
         #    jump takeoff_from_surface_to_space
-
+        "continue flying":
+            $ ingame = False
+            pass
             
         "start landing":
             hide screen surface_screen
@@ -318,9 +320,7 @@ label landing:
                     $ startpos = 44
                     jump isc_city_spaceport
         
-        "fly":
-            $ ingame = False
-            pass
+
             
     return
     
