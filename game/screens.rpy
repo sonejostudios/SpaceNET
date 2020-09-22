@@ -873,25 +873,33 @@ screen preferences():
                 
                 
                 null height 20
-                vbox:
-                    style_prefix "radio"
-                    label _("Gameplay Mode")
-                    textbutton _("Default") action SetVariable("pnc_mode", False)
-                    textbutton _("Point'n'Click") action SetVariable("pnc_mode", True)
+                
+                if not renpy.variant("touch"):
                     
-                null height 20
-                vbox:
-                    style_prefix "radio"
-                    label _("Cursor Style")
-                    textbutton _("System") action [SetVariable("pnc_cursor", False), Function(change_cursor, type="default")]
-                    textbutton _("Retro") action [SetVariable("pnc_cursor", True), Function(change_cursor, type="pnc")]
-                
-                
-                null height 20
+                    vbox:
+                        style_prefix "radio"
+                        
+                        label _("Cursor Style")
+                        textbutton _("System") action [SetVariable("pnc_cursor", False), Function(change_cursor, type="default")]
+                        textbutton _("Retro") action [SetVariable("pnc_cursor", True), Function(change_cursor, type="pnc")]
+                    
+
+                    null height 20
+                    
+                    vbox:
+                        style_prefix "radio"
+                        
+                        label _("Gameplay Mode*")
+                        textbutton _("Default") action SetVariable("pnc_mode", False)
+                        textbutton _("Point'n'Click") action SetVariable("pnc_mode", True)
+                    
+                    null height 20
+                    
                 vbox:
                     style_prefix "check"
                     #style_prefix "radio"
-                    label _("Graphics")
+                    
+                    label _("Graphics*")
                     textbutton _("Disable TV-FX") action ToggleVariable("termfx_enable", true_value=0, false_value=1)
                     textbutton _("Disable Shadow") action ToggleVariable("shadow_enable", true_value=0, false_value=1)
                     textbutton _("Disable Galaxy") action ToggleVariable("galaxy_enable", true_value=0, false_value=1)
@@ -899,7 +907,9 @@ screen preferences():
                     textbutton _("Disable Moving") action ToggleVariable("moving_speed", true_value=0, false_value=0.5)
                     
                     
-
+                null height 20
+                label _("{size=10}*Some of these settings only apply on the next scene.{/size}")
+                null height 20
 
                 if superdev == True:
                     #null height 10
@@ -950,6 +960,7 @@ screen preferences():
 
             #null height (4 * gui.pref_spacing)
             null height 20
+            label _("Music and Sounds")
             
             hbox:
                 style_prefix "slider"
@@ -968,10 +979,14 @@ screen preferences():
                     #bar value Preference("auto-forward time")
 
                 vbox:
+                    #textbutton _("Mute All"):
+                    #    action Preference("all mute", "toggle")
+                    #    style "mute_all_button"
+                        
                     null height 20
 
                     if config.has_music:
-                        label _("Music Volume")
+                        text _("Music Volume")
 
                         hbox:
                             bar value Preference("music volume")
@@ -979,12 +994,12 @@ screen preferences():
                     
                     if config.has_sound:
                         
-                        label _("Ambiance Volume")
+                        text _("Ambiance Volume")
                         hbox:
                             bar value Preference("atmo volume")
                         
 
-                        label _("Sound Volume")
+                        text _("Sound Volume")
                         hbox:
                             bar value Preference("sound volume")
 
@@ -1015,7 +1030,7 @@ screen preferences():
                             
         
     #null height 20
-    label "[pre_version] [config.version] [build_date]":
+    label "[config.version] [pre_version] [build_date]":
         align (0.99,0.02)
 
 

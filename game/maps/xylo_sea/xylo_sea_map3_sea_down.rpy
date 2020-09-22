@@ -88,15 +88,15 @@ label xylo_sea_map3_info:
     
     $ info_panel_symbol = ""
     $ showtext = """
+    
+    
 - Sea View Boat Company -
 
 
 If you are interested for a boat trip, 
-
 please call 05060708.
 
 Just type our phone number in the terminal,
-
 we will be happy to give you more info.
 
 

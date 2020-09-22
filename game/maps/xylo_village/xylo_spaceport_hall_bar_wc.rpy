@@ -43,9 +43,9 @@ label xylo_spaceport_hall_bar_wcs:
 
     # set all variables for the map (nodes and path)
     $ nodeA = (400, 170)
-    $ nodeB = (435, 240)
+    $ nodeB = (433, 240)
     $ nodeC = (400, 320)
-    $ nodeD = (320, 240)
+    $ nodeD = (325, 240)
     
 
     $ nodeAA = (400, 240)
@@ -149,11 +149,9 @@ label xylo_spaceport_hall_bar_wcs_info:
 
 
 Do you need some holidays?
-
 Spend some time at the xylo sea. 
 
 Enjoy its beautiful coast, the sunsets, 
-
 the beach and the boat trips.
 
 """

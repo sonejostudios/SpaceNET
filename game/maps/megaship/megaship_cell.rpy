@@ -2,8 +2,11 @@
 
 init:
     $ m_megaship_cell_escape = 0
-    
     $ m_megaship_cell_first_talk = 0
+    
+    $ m_megaship_cell_door = 0
+    
+    default megaship_cell_door_radio = [0, 0, 0]
     
     
 screen dev_puddle():
@@ -20,6 +23,10 @@ label megaship_cell:
     image megaship_cell = imagemapsdir + "megaship_cell.png"
     
     $ pnc_nodes_visible = True
+    
+    
+    if pnc_cursor == True:
+        $ change_cursor(type="pnc")
     
     
     if in_intro == True:
@@ -97,23 +104,41 @@ label loop_megaship_cell:
                     $ m_megaship_cell_first_talk = 1
                 else:
                     m "I'm in cell number 1. {w=2.0} {nw}"
+                    
             $ startpos = 1   
 
             
         if exitpos == 2:
             if startpos == 2:
-                m "This is a table.{w=2.0} {nw}"
+                if inventory_select == "newspaper":
+                    m "I just took this newspaper from the table.{w=2.5} {nw}"
+                    m "Why should I put it back?{w=2.5} {nw}"
+                    #call dialog_nosense
+                    
+                elif inventory_select == "screwdriver":
+                    call dialog_nosense from _call_dialog_nosense_26
                 
-                if "newspaper" not in inventory:
-                    m "There is a newspaper.{w=2.0} {nw}"
-                    call take_item("newspaper") from _call_take_item_10
+                else:
+                    m "This is a table.{w=2.0} {nw}"
+                    
+                    if "newspaper" not in inventory:
+                        m "There is a newspaper.{w=2.0} {nw}"
+                        call take_item("newspaper") from _call_take_item_10
                 
             $ startpos = 2
 
             
         if exitpos == 3: 
             if startpos == 3:
-                m "This is a bed.{w=2.0} {nw}"
+                if inventory_select == "newspaper":
+                    m "I don't think it is a good idea now to lie down and read a newspaper.{w=4} {nw}"
+                    #call dialog_nosense
+                    
+                elif inventory_select == "screwdriver":
+                    call dialog_nosense from _call_dialog_nosense_27
+                    
+                else:
+                    m "This is a bed.{w=2.0} {nw}"
             $ startpos = 3
 
             
@@ -121,7 +146,10 @@ label loop_megaship_cell:
             if startpos == 4:
                 
                 if inventory_select != "newspaper":
-                    m "This is the sink and the wc.{w=2.0} {nw}"
+                    if inventory_select == "screwdriver":
+                        m "I don't want to repair it now.{w=2.0} {nw}"
+                    else:
+                        m "This is the sink and the wc.{w=2.0} {nw}"
                     
                 if m_megaship_cell_escape == 1:
                     m "It is completely flooded and doesn't work anymore.{w=3.0} {nw}"
@@ -162,6 +190,9 @@ label loop_megaship_cell:
                         $ m_megaship_cell_escape = 3
                         call megaship_cell_robot_back from _call_megaship_cell_robot_back
                         pass
+                        
+                if inventory_select == "newspaper" and m_megaship_cell_escape >= 2:
+                    m "The sink is already blocked.{w=2.0} {nw}"
 
             $ startpos = 4
 
@@ -173,20 +204,58 @@ label loop_megaship_cell:
  
             
         if exitpos == 22:
-            $ startpos = 22
-            call dialog_closed from _call_dialog_closed_8
-            
-            radio "what do you want, prisoner?{w=3.0} {nw}"
-            
-            menu:
-                "the sink is broken" if m_megaship_cell_escape == 1:
-                    m "the sink is broken.{w=2.0} {nw}"
-                    radio "okay, i'll send a repair-robot to your cell.{w=3.0} {nw}"
-                    call megaship_cell_robot from _call_megaship_cell_robot
+            if startpos == 22:
+                if inventory_select == "newspaper":
+                    #call dialog_nosense
+                    m "This is a useless idea.{w=2} {nw}"
+                    m "I can't open a door with a newspaper!{w=3.5} {nw}"
                 
-                "nothing":
-                    #m "nothing.{w=1.0} {nw}"
-                    pass
+                elif inventory_select == "screwdriver":
+                    call dialog_nosense from _call_dialog_nosense_28
+                
+                else:
+                    if m_megaship_cell_door == 0:
+                        m "This is the door of the prison cell.{w=3} {nw}"
+                        call dialog_closed from _call_dialog_closed_8
+                        m "But there is an intercom device.{w=3} {nw}"
+                        $ m_megaship_cell_door = 1
+                    
+                    radio "What do you want, prisoner?{w=3.0} {nw}"
+                    
+                    menu:
+                        "The sink is broken" if m_megaship_cell_escape == 1:
+                            m "The sink is broken.{w=2.0} {nw}"
+                            radio "Okay, i'll send a repair-robot to your cell.{w=3.0} {nw}"
+                            call megaship_cell_robot from _call_megaship_cell_robot
+                        
+                        "I've found a newspaper" if "newspaper" in inventory and megaship_cell_door_radio != [1,1,1]:
+                            m "I've found a newspaper.{w=2} {nw}"
+                            radio "Nice for you.{w=2.0} {nw}"
+                            radio "I hope is interesting!{w=2.0} {nw}"
+                            menu:
+                                "Not really" if megaship_cell_door_radio[0] == 0:
+                                    m "Not really.{w=2} {nw}"
+                                    radio "Well... then try to build a paper plane with it!{w=3.0} {nw}"
+                                    $ megaship_cell_door_radio[0] = 1
+                                    
+                                "It is really old" if megaship_cell_door_radio[1] == 0:
+                                    m "It is really old.{w=2} {nw}"
+                                    radio "Well... then read about history!{w=3.0} {nw}"
+                                    $ megaship_cell_door_radio[1] = 1
+                                    
+                                "There is nothing interesting inside" if megaship_cell_door_radio[2] == 0:
+                                    m "There is nothing interesting inside.{w=3} {nw}"
+                                    radio "Well... then read it backward!{w=3.0} {nw}"
+                                    $ megaship_cell_door_radio[2] = 1
+                            
+                            radio "Ha{w=0.2} ha{w=0.2} ha{w=0.2} ha{w=0.2} ha! {w=2.0}{nw}"
+                                
+                        
+                        "Nothing":
+                            #m "nothing.{w=1.0} {nw}"
+                            pass
+                    
+            $ startpos = 22
 
             
         if exitpos == 33:
@@ -198,9 +267,13 @@ label loop_megaship_cell:
             
             
             if startpos == 33:
+                if inventory_select == "newspaper":
+                    m "This is a stupid idea.{w=2} {nw}"
+                    m "I can't open a metal grid with a newspaper!{w=3.5} {nw}"
                     
-                if inventory_select != "screwdriver":
+                if inventory_select != "screwdriver" and inventory_select != "newspaper":
                     m "This is an aeration shaft.{w=3.0} {nw}"
+                    m "A metal grid is closing it.{w=3.0} {nw}"
                 
                 if inventory_select == "screwdriver" and m_megaship_cell_escape == 3:
                     call use_and_keep_item from _call_use_and_keep_item_8

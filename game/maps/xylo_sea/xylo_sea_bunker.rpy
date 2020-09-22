@@ -259,7 +259,10 @@ label xylo_sea_bunker_level_info:
     
     $ info_panel_symbol = "exit"
     $ showtext = """
+    
+    
 - A.R.K. Corporation -
+
 
 Level [liftlevelname]
 

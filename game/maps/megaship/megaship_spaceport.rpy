@@ -110,7 +110,7 @@ label megaship_spaceport:
     
     
     # set all variables for the map (nodes and path)
-    $ nodeA = (47, 239)
+    $ nodeA = (54, 240)
     $ nodeB = (150, 156)
     $ nodeC = (299, 157)
     $ nodeD = (428, 157)

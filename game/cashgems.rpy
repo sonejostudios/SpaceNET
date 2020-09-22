@@ -61,8 +61,8 @@ init:
     
 # xylo village
     $ xylo_village1_cash = 1
-    $ xylo_village2_cash = 30
-    $ xylo_spaceport_hall_wc_cash_wc = 30 # refilled by bar drinks
+    $ xylo_village2_cash = 33
+    $ xylo_spaceport_hall_wc_cash_wc = 32 # refilled by bar drinks
     $ xylo_spaceport_hall_wc_cash = 19
     $ cash_xylo_building = 16
     

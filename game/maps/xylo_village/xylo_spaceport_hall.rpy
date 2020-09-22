@@ -95,6 +95,8 @@ label loop_xylo_spaceport_hall:
             
             if startpos == 3 and xylo_spaceport_hall_term == False:
                 if inventory_select != "screwdriver":
+                    call sound_electroshock from _call_sound_electroshock_25
+                    with hpunch
                     m "This terminal is broken... {w=1.5} {nw}"
                 
                 if inventory_select == "screwdriver":

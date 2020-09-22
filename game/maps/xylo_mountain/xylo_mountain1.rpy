@@ -69,7 +69,7 @@ label loop_xylo_mountain1:
                 m "I'm on the top of the mountain. {w=2.5} {nw}"
                 m "The view here is amazing! {w=2.5} {nw}"
             else:
-                call dialog_nosense  
+                call dialog_nosense from _call_dialog_nosense_25  
                 
         $ startpos = 2
         jump loop_xylo_mountain1

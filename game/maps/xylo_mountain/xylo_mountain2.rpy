@@ -80,13 +80,13 @@ label loop_xylo_mountain2:
                 if inventory_select == "":
                     call xylo_mountain2_info from _call_xylo_mountain2_info
                 elif inventory_select == "pick":
-                    call sound_dig
-                    call use_and_keep_item
+                    call sound_dig from _call_sound_dig_2
+                    call use_and_keep_item from _call_use_and_keep_item_33
                     pause 1.5
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_62
                     $ inventory_select = ""
                 else:
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_20
                 
             $ startpos = 2
 
@@ -102,13 +102,13 @@ label loop_xylo_mountain2:
                         call dialog_nothing from _call_dialog_nothing_42
                     
                 elif inventory_select == "pick":
-                    call sound_dig
-                    call use_and_keep_item
+                    call sound_dig from _call_sound_dig_3
+                    call use_and_keep_item from _call_use_and_keep_item_34
                     pause 1.5
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_63
                     $ inventory_select = ""
                 else:
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_21
                 
             $ startpos = 3
 
@@ -124,14 +124,14 @@ label loop_xylo_mountain2:
                         call dialog_nothing from _call_dialog_nothing_43
                     
                 elif inventory_select == "pick":
-                    call sound_dig
-                    call use_and_keep_item
+                    call sound_dig from _call_sound_dig_4
+                    call use_and_keep_item from _call_use_and_keep_item_35
                     pause 1.5
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_64
                     $ inventory_select = ""
                 
                 else:
-                    call dialog_nosense
+                    call dialog_nosense from _call_dialog_nosense_22
             
             $ startpos = 4
 
@@ -144,19 +144,19 @@ label loop_xylo_mountain2:
                     call dialog_nothing from _call_dialog_nothing_44       #if going out at AA
                 
                 elif inventory_select == "pick":
-                    call sound_dig
-                    call use_and_keep_item
+                    call sound_dig from _call_sound_dig_5
+                    call use_and_keep_item from _call_use_and_keep_item_36
                     pause 1.5
                     $ inventory_select = ""
                     
                     if xylo_mountain_gem == True:
-                        call take_gem
+                        call take_gem from _call_take_gem_11
                         $ xylo_mountain_gem = False
                     else:
-                        call dialog_nothing
+                        call dialog_nothing from _call_dialog_nothing_65
                     
                 else:
-                    call dialog_nosense  
+                    call dialog_nosense from _call_dialog_nosense_23  
                 
             $ startpos = 11    #go to CC
 
@@ -168,14 +168,14 @@ label loop_xylo_mountain2:
                     m "The view here is amazing! {w=2.5} {nw}"     
                 
                 elif inventory_select == "pick":
-                    call sound_dig
-                    call use_and_keep_item
+                    call sound_dig from _call_sound_dig_6
+                    call use_and_keep_item from _call_use_and_keep_item_37
                     pause 1.5
-                    call dialog_nothing
+                    call dialog_nothing from _call_dialog_nothing_66
                     $ inventory_select = ""
                     
                 else:
-                    call dialog_nosense  
+                    call dialog_nosense from _call_dialog_nosense_24  
                 
                 
                 
@@ -208,7 +208,7 @@ but it was abandonned and destroyed by winds and storms.
 
 The legend says, there is a treasure. 
 But nobody has found it until now. 
-Is it really existing?
+Does it really exist?
 
     """
     

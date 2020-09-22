@@ -322,7 +322,7 @@ define config.main_menu_music = "music/space-amb.ogg"
 
 #mouse cursor
 #define config.mouse = {"default" : [("images/cursor_default.png", 30, 30)]}
-define config.mouse = None    
+define config.mouse = None 
 
 
 # see also in option.py
@@ -336,8 +336,11 @@ init :
     # pre version. For release = ""
     $ pre_version = "alpha"
     
+    ## The version of the game.
+    define config.version = "0.73"
+    
     # build date. Set date for release.
-    $ build_date = "2020-09-07"
+    $ build_date = "2020-09-22"
     
     # developer mode (True/False). For release = False
     $ superdev = False

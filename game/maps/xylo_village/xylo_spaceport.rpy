@@ -23,7 +23,7 @@ label xylo_spaceport:
     image xylo_spaceport = imagemapsdir + "xylo_spaceport.png"
     
     scene xylo_spaceport
-    show screen notify("xylo spaceport")
+    show screen notify("xylo village spaceport")
     
     show bgcolor behind xylo_spaceport
     
