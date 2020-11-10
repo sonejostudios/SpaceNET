@@ -92,6 +92,10 @@ init:
     $ cargo_container_cash = 75
     
     
+# tutorial
+    $ tutorial_cash = 5
+    
+    
 
 
     

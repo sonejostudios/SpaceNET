@@ -145,7 +145,7 @@ label loop_xylo_map7:
         if xylo_sea_map7_button == True: # button
             $ startpos = 11
             call sound_door from _call_sound_door_25
-            m "The door is open!"
+            #m "The door is open!"
             hide screen xylo_sea_guard
             $ liftpos = 3
             jump xylo_sea_bunker_lift1 # go to bunker

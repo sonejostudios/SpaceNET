@@ -350,7 +350,7 @@ label planet_match:
     if xylo_pos[0]-flight_match < destination_pos[0] < xylo_pos[0]+flight_match and xylo_pos[1]-flight_match < destination_pos[1] < xylo_pos[1]+flight_match :
         $ destination_pos = xylo_pos
         
-    # io11
+    # sattelite io11
     if satellite_pos[0]-flight_match < destination_pos[0] < satellite_pos[0]+flight_match and satellite_pos[1]-flight_match < destination_pos[1] < satellite_pos[1]+flight_match :
         $ destination_pos = satellite_pos
     

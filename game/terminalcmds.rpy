@@ -20,7 +20,7 @@ init:
     
     $ cargo_firedoors = "open"
     
-    $ xylo_sea_boat_company_call_flags = [0,0,0,0]
+    default xylo_sea_boat_company_call_flags = [0,0,0,0]
 
 
 
@@ -216,7 +216,7 @@ label term_commands:
                             
  
                         
-                    "exit":
+                    "Exit":
                         $ termtext = "help"
                         jump terminal
 
@@ -447,11 +447,16 @@ label term_commands:
         $ spacenetmenu = True
          
         menu:
+            #"reset spacenet state":
+            #    $ spacenet_state = "offline"
+            
             "launch SpaceNET" if intercom_sat == True and sat_connected_to == "SpaceNET" and active_nodes_amount == max_nodes_amount and spacenet_state == "offline":
-                m "Yes, finally! Let's launch it!! {w=2.5}{nw}"
+                m "Yes, finally! Let's launch it! {w=2.5}{nw}"
+                call sound_modem from _call_sound_modem_2
                 call server_progressbar from _call_server_progressbar_7
-                call sound_collect from _call_sound_collect_2
+                call sound_connected from _call_sound_connected_15
                 with flash
+                
                 
                 $ spacenet_state = "online"
                 
@@ -487,7 +492,7 @@ label term_commands:
     to each other to allow SpaceNet to work.
 
     A node can be everywhere.
-    A nodes is just a SpaceNET server with
+    A node is just a SpaceNET server with
     the SpaceNET software.
 
     SpaceNET also needs an intercom satellite 
@@ -629,8 +634,7 @@ label term_commands:
             pause 1
             
             hacker "Hello [playername]. Thank you for calling.{w=2.5} {nw}"
-            hacker "Please, be careful with the satellite mission. {w=3} {nw}"
-            hacker "Before you flight to the satellite, you need to know a couple of important things... {w=4.5} {nw}"
+            hacker "I need to tell you a couple of important things... {w=4.5} {nw}"
             hacker "First, thank you for the help. {w=2} {nw}"
             hacker "Without you we would not be able to accomplish our mission! {w=3} {nw}"
             hacker "Second, wait... {w=2} {nw}"
@@ -642,6 +646,7 @@ label term_commands:
             $ questions = ["Are you okay? {w=2} {nw}",
                             "What's wrong? {w=2.0} {nw}",
                             "I think I know what's happening! {w=2.0} {nw}",
+                            "I experienced something similar. {w=2.0} {nw}",
                             "I think I know where you are. {w=2.0} {nw}",
                             "Please, keep calm and listen. {w=2.0} {nw}"]
 
@@ -661,6 +666,9 @@ label term_commands:
                 "[questions[2]]":
                     m "[questions[2]]"
                     
+                "[questions[3]]":
+                    m "[questions[3]]"
+                    
             m "Is there a huge spaceship close to you? {w=3} {nw}"
             hacker "Yes... {w=1} And it is controlling my spaceship!{w=2} They are getting me!{w=2}{nw}"
             hacker "Help!{w=2}{nw}"
@@ -669,11 +677,11 @@ label term_commands:
             hacker "My spaceship is going straight into it!{w=3}{nw}"
             
             menu:
-                "[questions[3]]":
-                    m "[questions[3]]"
-                    
                 "[questions[4]]":
                     m "[questions[4]]"
+                    
+                "[questions[5]]":
+                    m "[questions[5]]"
                     
             
             m "You are capturated by the prison megaship of the government. {w=4}{nw}"
@@ -681,8 +689,8 @@ label term_commands:
             m "But there is a way out! {w=3}{nw}"
             m "I could try to get there, but I'll need some tools. {w=3.5}{nw}"   
             hacker "If you need anything, go to Sam.{w=3.5}{nw}"
-            hacker "He can certainly help you.{w=3}{nw}"
-            hacker "Please help me out!{w=3}{nw}"
+            hacker "He might help you.{w=2.5}{nw}"
+            hacker "Please help me out!{w=2.5}{nw}"
             hacker "...{w=2}{nw}"
             
             stop music fadeout 3.0
@@ -869,7 +877,7 @@ label term_commands:
                             call sound_connected from _call_sound_connected_22
                             
                             m "Okay... Now the reactor room is closed...{w=3.5}{nw}"
-                            m "Nobody can enter it and restart the reactor!{w=3.5}{nw}"
+                            m "Now, nobody can enter it and restart the reactor.{w=3.5}{nw}"
                             m "The cooling systems are also down.{w=3}{nw}"
                             m "The reactor will overheat!{w=3}{nw}"
                             m "Let's see...{w=2}{nw}"
@@ -888,7 +896,7 @@ label term_commands:
     ssh cargo 
     [ascii_line]
     
-    Remote Connection rejected !
+    Remote Connection rejected!
     """
                             show text Text(showtext,text_align=termtext_align) at termtextpos
                             call sound_beep from _call_sound_beep_25
@@ -908,7 +916,7 @@ label term_commands:
     ssh cargo 
     [ascii_line]
     
-    Remote Connection rejected !
+    Remote Connection rejected!
     """
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 call sound_beep from _call_sound_beep_26

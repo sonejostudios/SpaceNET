@@ -11,7 +11,8 @@ init:
 
 screen xylo_mine_earthquake():
     
-    timer 7 repeat True action Jump("xylo_mine_level1_earthquake")
+    if moving == False:
+        timer 5 repeat True action Jump("xylo_mine_level1_earthquake")
 
 
 label xylo_mine_level1:
@@ -183,7 +184,8 @@ label loop_xylo_mine_level1:
 
 
 label xylo_mine_level1_info:
-    
+
+
     $ info_panel_symbol = "danger"
     $ showtext = """
     

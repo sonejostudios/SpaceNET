@@ -60,7 +60,6 @@ label positionA:
     call hidepaths from _call_hidepaths_1
     
     jump clickngo      
-    
     jump positionA
             
             
@@ -241,15 +240,26 @@ label clickngo:
     #$ exitpos = startpos
     
     
+    # unflag moving
+    $ moving = False
+    
+    
+    
     
     
     
     # wait for click to move player to next node
     pause
+
+
+
+
+
+    # flag moving
+    if startpos != gotopos:
+        $ moving = True    
     
-
-
-
+    
     
     if gotopos == 1 and nodeA in path:
         show player:

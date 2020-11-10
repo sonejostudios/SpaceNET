@@ -84,7 +84,7 @@ label xylo_spaceport:
     $ nodeA = (419, 395)
     $ nodeB = (470,240)
     $ nodeC = (600,423)
-    $ nodeD = (470,45)
+    $ nodeD = (470,48)
     
     $ nodeAA = (400,25)
     $ nodeBB = (632,168)
@@ -156,8 +156,8 @@ label loop_xylo_spaceport:
                 sam "We are done now.{w=2}{nw}"
                 
                 menu:
-                    "Allright, see you!":
-                        m "Allright, see you!{w=2}{nw}"
+                    "Alright, see you soon!":
+                        m "Alright, see you soon!{w=2}{nw}"
                         sam "Bye!{w=2}{nw}"
                         
                         show player:

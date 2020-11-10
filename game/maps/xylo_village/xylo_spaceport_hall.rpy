@@ -85,6 +85,8 @@ label loop_xylo_spaceport_hall:
             jump xylo_spaceport         
             
         if exitpos == 2:
+            if startpos == 2:
+                m "I'm in the hall of the spaceport.{w=3.0} {nw}"
             $ startpos = 2
 
             

@@ -9,6 +9,8 @@ label isc_gateway_crane_to_spacenet:
     
     call atmo_spaceship_station from _call_atmo_spaceship_station_5 
     
+    call music_satellite from _call_music_satellite_2
+    
     scene bgcolor
     
     call show_space from _call_show_space_15

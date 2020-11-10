@@ -53,64 +53,69 @@ label xylo_village1:
 
 
 label loop_xylo_village1:
-
-    # start "move through the map" loop
-    call startpos from _call_startpos_75
-
-    # do something at node?
-    if exitpos == 1:       #if at node A
-        $ startpos = 22    # stay in A
-        call sound_door from _call_sound_door_159
-        jump xylo_spaceport_hall        # map loop to jump to
-        
-    if exitpos == 2:
-        if startpos == 2:
-            m "I'm in the middle of the village. {w=2.0} {nw}"
-            m "What a beautiful place! {w=2.0} {nw}"
-        $ startpos = 2
-        jump loop_xylo_village1
-        
-    if exitpos == 3: 
-        $ startpos = 3
-        call dialog_closed from _call_dialog_closed_41
-        jump loop_xylo_village1
-        
-    if exitpos == 4:
-        call dialog_closed from _call_dialog_closed_42
-        $ startpos = 4
-        jump loop_xylo_village1 
-        
-
-    #exits routing "got to map and set position for next map"
-    if exitpos == 11:
-        if startpos == 11:    #if going out at AA
-            call xylo_village1_info from _call_xylo_village1_info
-        $ startpos = 11     #go to CC
-        jump loop_xylo_village1          # map to jump to
-        
-    if exitpos == 22:
-        if startpos == 22:
-            m "Nice river. {w=1.0} {nw}"
-            if xylo_village1_cash > 0:
-                m "There is something on the floor... {w=2} {nw}"
-                m "This is one coin! {w=2} {nw}"
-                m "I'm rich! {w=1.5} {nw}"
-                call io_cash(xylo_village1_cash) from _call_io_cash_20
-                $ xylo_village1_cash = 0
-                
-        $ startpos = 22
-        jump loop_xylo_village1
-        
-    if exitpos == 33:
-        $ startpos = 3
-        call sound_door from _call_sound_door_160
-        $ liftpos = 0
-
-        jump xylo_village1_building
     
-    if exitpos == 44:
-        $ startpos = 1
-        jump xylo_village2
+    while True:
+
+        # start "move through the map" loop
+        call startpos from _call_startpos_75
+
+        # do something at node?
+        if exitpos == 1:       #if at node A
+            $ startpos = 22    # stay in A
+            call sound_door from _call_sound_door_159
+            jump xylo_spaceport_hall        # map loop to jump to
+            
+        if exitpos == 2:
+            if startpos == 2:
+                m "I'm in the middle of the village. {w=2.0} {nw}"
+                m "What a beautiful place! {w=2.0} {nw}"
+            $ startpos = 2
+            
+            
+        if exitpos == 3: 
+            if startpos == 3:
+                call dialog_closed from _call_dialog_closed_41
+                
+            $ startpos = 3
+            
+        if exitpos == 4:
+            if startpos == 4:
+                call dialog_closed from _call_dialog_closed_42
+
+            $ startpos = 4
+            
+
+        #exits routing "got to map and set position for next map"
+        if exitpos == 11:
+            if startpos == 11:    #if going out at AA
+                call xylo_village1_info from _call_xylo_village1_info
+            
+            $ startpos = 11     #go to CC
+
+            
+        if exitpos == 22:
+            if startpos == 22:
+                m "Nice river. {w=1.0} {nw}"
+                if xylo_village1_cash > 0:
+                    m "There is something on the floor... {w=2} {nw}"
+                    m "This is one coin! {w=2} {nw}"
+                    m "I'm rich! {w=1.5} {nw}"
+                    call io_cash(xylo_village1_cash) from _call_io_cash_20
+                    $ xylo_village1_cash = 0
+                    
+            $ startpos = 22
+
+            
+        if exitpos == 33:
+            $ startpos = 3
+            call sound_door from _call_sound_door_160
+            $ liftpos = 0
+            jump xylo_village1_building
+
+        
+        if exitpos == 44:
+            $ startpos = 1
+            jump xylo_village2
 
 
 

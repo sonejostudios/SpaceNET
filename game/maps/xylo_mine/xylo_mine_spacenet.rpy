@@ -5,7 +5,8 @@
 
 screen xylo_mine_spacenet_earthquake():
     
-    timer 7 repeat True action Jump("xylo_mine_spacenet_earthquake")
+    if moving == False:
+        timer 5 repeat True action Jump("xylo_mine_spacenet_earthquake")
 
 
 label xylo_mine_spacenet:
@@ -49,11 +50,10 @@ label xylo_mine_spacenet:
     # set all variables for the map (nodes and path)
     $ nodeA = (400, 75)
     $ nodeB = (530, 278)
-    $ nodeC = (400, 337)
-    $ nodeD = (312, 240)
+    $ nodeC = (400, 335)
+    $ nodeD = (315, 240)
     
     $ nodeAA = (400, 240)
-    
     $ nodeBB = (400, 140)
     $ nodeCC = (490, 180)
     $ nodeDD = (-100, -100)

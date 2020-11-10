@@ -42,11 +42,11 @@ label spacenet_comp(snetnode):
         menu:
             "Insert" if inventory_select != "spacenet":
                 if inventory_select != "spacenet":
-                        if inventory_select == "":
-                            m "I have nothing to insert into this computer! {w=2.5} {nw}"
-                        else:
-                            $ inventory_select = ""
-                            call dialog_nosense from _call_dialog_nosense_19
+                    if inventory_select == "":
+                        m "I have nothing to insert into this computer! {w=2.5} {nw}"
+                    else:
+                        $ inventory_select = ""
+                        call dialog_nosense from _call_dialog_nosense_19
                             
             "Install Software" if inventory_select == "spacenet" and spacenet_copied == False:
                 call use_and_keep_item from _call_use_and_keep_item_27
@@ -56,11 +56,17 @@ label spacenet_comp(snetnode):
                                 
             
             "Install SpaceNET Software" if inventory_select == "spacenet" and spacenet_copied == True:
+                if snetnode in spacenetnodes:
+                    m "The SpaceNET software is already installed on this computer! {w=3.5} {nw}"
+                    m "I should better do something else. {w=2.5} {nw}"
+                    $ inventory_select = ""
+                    return
+                    
                 call use_and_keep_item from _call_use_and_keep_item_28
+                call sound_collect from _call_sound_collect_2
                 $ inventory_select = ""
                 call server_progressbar from _call_server_progressbar_12
                 with flash
-                #$ inventory_select = ""
                 
                 $ showtext ="""
     SpaceNET
@@ -118,7 +124,7 @@ label spacenet_comp(snetnode):
         
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 menu:
-                    "back":
+                    "Back":
                         pass
 
             "Info":
@@ -136,7 +142,7 @@ label spacenet_comp(snetnode):
         
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 menu:
-                    "back":
+                    "Back":
                         pass
             
             

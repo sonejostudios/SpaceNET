@@ -11,15 +11,14 @@ init:
     default isc_bar_client1_flags = [0, 0, 0, 0]
     default isc_bar_barman_flags = [0, 0, 0, 0]
     
-    
     $ isc_sysadmin_move = 0
-    
     $ isc_sysadmin_sun = 0
 
-    
-    $ isc_bar_music = 1
-    
     $ spacebar_joke = False
+    
+    $ isc_bar_music = 2
+    
+
     
     
 
@@ -350,7 +349,7 @@ label isc_bar_sysadmin:
             m "Right now, the amount is 6272 W/m^2.{w=3} {nw}"
             sysadmin "Oh, this is great!{w=3} {nw}"
             sysadmin "Thank you very much.{w=3} {nw}"
-            sysadmin "Unfortunately I don't have any money for you right now...{w=4} {nw}"
+            sysadmin "Unfortunately I don't have any money left for you right now...{w=4} {nw}"
             sysadmin "But would you like this gem?{w=3} {nw}"
             m "Sure!{w=1} {nw}"
             call take_gem from _call_take_gem_10
@@ -414,7 +413,7 @@ label isc_bar_player:
         clientplayer "If you win the game, I'll give you something!{w=4}{nw}"
         menu:
             "let's play!":
-                clientplayer "Allright, try to get the same cards.{w=4}{nw}"
+                clientplayer "Alright, try to get the same cards.{w=4}{nw}"
                 clientplayer "You have one minute, let's go!{w=3}{nw}"
                 
                 $ countdown = True

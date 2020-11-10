@@ -113,7 +113,7 @@ label sound_ignition:
     return
 
 label sound_explosion:
-    play sound "sounds/boom.ogg"
+    play audio "sounds/boom.ogg"
     return
     
 label sound_earthquake:
@@ -339,8 +339,11 @@ label music_xylo_building:
 
     
 label music_satellite:
-    $ renpy.music.play("<from 54.60>music/space-amb.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
+    $ renpy.music.play("<from 54.70>music/space-amb.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
+    
+
+
     
 label music_cargo:
     $ renpy.music.play("music/cargo.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)

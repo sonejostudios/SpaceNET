@@ -404,10 +404,10 @@ label xylo_village1_building_reception:
                 
             "[questions[2]]" if xylo_village1_building_reception >= 1:
                 m "[questions[2]]"
-                guardxylo "It is not possible to visit the building right now, sorry... {w=3.0} {nw}"
-                guardxylo "Please call us to make an appointment if you want to visit... {w=3} {nw}"
+                guardxylo "It is not possible to visit the building right now, sorry... {w=3.5} {nw}"
+                guardxylo "Please call the A.R.K. central to make an appointment if you want to visit... {w=5} {nw}"
                 guardxylo "Our phone number is 01020304. {w=3} {nw}"
-                guardxylo "Just type it in the terminal to call us. {w=2} {nw}"
+                guardxylo "Just type it in the terminal to call us. {w=3} {nw}"
                 guardxylo "See you. {w=1} {nw}"
                 call add_note("A.R.K. Corporation Office number: 01020304") from _call_add_note_1
                 

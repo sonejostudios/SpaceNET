@@ -396,7 +396,15 @@ label info_panel:
     if info_panel_symbol == "noentry":
         show symnoentry: 
             ypos 0.3
-            xpos 0.5         
+            xpos 0.5  
+            
+    if info_panel_symbol == "node":
+        show node as sysnode: 
+            ypos 0.17
+            xpos 0.5
+            anchor (0.5, 0.5)
+            
+                   
         
     #shadow
     if shadow_enable == 1:
@@ -438,6 +446,7 @@ label info_panel:
     hide symdanger
     hide symquake
     hide symnoentry
+    hide sysnode
     
     $ info_panel_symbol = ""
     $ showtext = ""
@@ -593,7 +602,7 @@ label end_finished:
     
     show spacenet_logo
     
-    show text "{color=#8dd35f}[game_percents]% finished.":
+    show text "{color=#8dd35f}[game_percents]% finished":
         pos (400,360)
         alpha 0.5
         

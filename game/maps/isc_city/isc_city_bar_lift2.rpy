@@ -1,6 +1,7 @@
 label isc_city_bar_lift2:
     
-    #"sea colony lift"
+    stop music
+    
     
     # define the name of the 4 levels of this lift, None if there is no level
     #$ liftlevel = ("- 01", None, None, "00")

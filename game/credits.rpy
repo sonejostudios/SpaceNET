@@ -131,7 +131,7 @@ SpaceNET is licensed under GPL 3.0
     show text Text(showtext,text_align=0.5):
         anchor (0.5, 1)
         pos (400, 480)
-        linear 30 pos (400, -1400) 
+        linear 30 pos (400, -1450) 
 
     
     

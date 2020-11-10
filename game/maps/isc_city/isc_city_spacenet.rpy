@@ -5,6 +5,8 @@
 
 label isc_city_spacenet:
     
+    stop music
+    
     call atmo_spaceship from _call_atmo_spaceship
     
     scene bgcolor

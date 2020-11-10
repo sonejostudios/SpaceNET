@@ -7,7 +7,8 @@ init:
 
 
 label isc_city_gateway:
-    
+
+
     call atmo_spaceship_station from _call_atmo_spaceship_station_3 
     
     image isc_city_gateway = imagemapsdir + "isc_city_gateway.png"
@@ -79,6 +80,11 @@ label isc_city_gateway:
         $ pathB = (nodeA, nodeB, nodeC, (0, 0), (0, 0), (0, 0), (0, 0), (0, 0))
         
         
+        # play music if hook in iventory and crane in gateway position
+        if "hook" in inventory:
+            call music_satellite from _call_music_satellite_3
+        
+        
 
     
     
@@ -144,6 +150,8 @@ label loop_isc_city_gateway:
             else:
                 $ inventory_select = "hook"
                 call use_and_keep_item from _call_use_and_keep_item_13
+                #call music_satellite
+                
                 m "Let's go! {w=2} {nw}"
                 $ startpos = 1
                 jump isc_city_gateway_crane

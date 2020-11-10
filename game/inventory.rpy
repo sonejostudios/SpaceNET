@@ -244,7 +244,7 @@ screen inventory():
             if inventory_item == "robotcard":
                 imagebutton idle inventory_dir + "robotcard_idle.png" selected_idle inventory_dir + "robotcard_selected_idle.png" selected_hover inventory_dir + "robotcard_selected_idle.png":
                     if inventory_select != "robotcard":
-                        action SelectedIf(inventory_select == "robotcard"), SetVariable("inventory_select", "robotcard"), SetVariable("item_info", "This is a id card of a crew robot.")
+                        action SelectedIf(inventory_select == "robotcard"), SetVariable("inventory_select", "robotcard"), SetVariable("item_info", "This is an id card of a crew robot.")
                     else:
                         action SelectedIf(inventory_select == "robotcard"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
                         

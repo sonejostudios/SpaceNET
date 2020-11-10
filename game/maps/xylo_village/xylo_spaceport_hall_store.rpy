@@ -206,8 +206,10 @@ label xylo_spaceport_hall_vendor:
         #    pass
         "lamp\n100c":
             call buy_item("lamp", 100) from _call_buy_item_3
+        
         "knife\n70c":
             call buy_item("knife", 70) from _call_buy_item_4
+        
         "mirror\n50c":
             if xylo_village_mirror_state == 1:
                 m "This is a stupid idea...{w=2.0} {nw}"

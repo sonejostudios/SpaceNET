@@ -116,126 +116,128 @@ label xylo_village2:
 
 
 label loop_xylo_village2:
-
-    # start "move through the map" loop
-    call startpos from _call_startpos_79
-
-
-    # do something at node?
-    if exitpos == 1:       #if at node A
-        $ startpos = 44    # stay in A
-        jump xylo_village1     # map loop to jump to
-        
     
-    if exitpos == 2:
-        if startpos == 2:    #info
-            call xylo_village2_info from _call_xylo_village2_info
-            
-        $ startpos = 2
-        jump loop_xylo_village2
-        
-    
-    if exitpos == 3:
-        if startpos == 3  and inventory_select != "mirror" and xylo_village_mirror_state == 0:
-            call sound_electroshock from _call_sound_electroshock_21
-            with hpunch
-            m "This is a laser fence! {w=1} {nw}"
-            m "It looks really dangerous... {w=1} {nw}"
-            
-            
-        if startpos == 3  and xylo_village_mirror_state == 1:
-            
-            m "There is a mirror disturbing the laser. {w=2} {nw}"
-            call xylo_village2_mirror_take from _call_xylo_village2_mirror_take
-            
-      
-            
-        if inventory_select == "mirror" and xylo_village_mirror_state == 0:
-            
-            m "A laser and a mirror, that's a good idea!{w=2} {nw}"
-            m "I'm looking forward to see the result... {w=2} {nw}"
-            call use_and_keep_item from _call_use_and_keep_item_30
-            
-            call sound_electroshock from _call_sound_electroshock_22
-            with flash
-            call xylo_village2_mirror from _call_xylo_village2_mirror_1
+    while True:
 
-            
-        $ startpos = 3
-        jump loop_xylo_village2
-        
-        
-        
-    if exitpos == 4:
-        if startpos == 4  and xylo_village_mirror_state == 1:
-            
-            m "Now I'm inside thanks to this mirror! {w=2} {nw}"
-            call xylo_village2_mirror_take from _call_xylo_village2_mirror_take_1
-            jump loop_xylo_village2 
-            
-        if inventory_select == "mirror" and xylo_village_mirror_state == 0:
-            call use_and_keep_item from _call_use_and_keep_item_31
-            call sound_electroshock from _call_sound_electroshock_23
-            with flash
-            call xylo_village2_mirror from _call_xylo_village2_mirror_2
+        # start "move through the map" loop
+        call startpos from _call_startpos_79
 
 
-        if inventory_select == "" and xylo_village_mirror_state == 0:
-            call sound_electroshock from _call_sound_electroshock_24
-            with hpunch
-            m "There is a laser fence! {w=1.5} {nw}"
-            m "I can't pass through. {w=1.5} {nw}"
+        # do something at node?
+        if exitpos == 1:       #if at node A
+            $ startpos = 44    # stay in A
+            jump xylo_village1     # map loop to jump to
+            
+        
+        if exitpos == 2:
+            if startpos == 2:    #info
+                call xylo_village2_info from _call_xylo_village2_info
+                
+            $ startpos = 2
+            
+            
+        
+        if exitpos == 3:
+            if startpos == 3  and inventory_select != "mirror" and xylo_village_mirror_state == 0:
+                call sound_electroshock from _call_sound_electroshock_21
+                with hpunch
+                m "This is a laser fence! {w=2} {nw}"
+                m "It looks really dangerous... {w=2} {nw}"
+                
+                
+            if startpos == 3  and xylo_village_mirror_state == 1:
+                
+                m "There is a mirror diverting the laser fence. {w=3} {nw}"
+                call xylo_village2_mirror_take from _call_xylo_village2_mirror_take
+                
+          
+                
+            if inventory_select == "mirror" and xylo_village_mirror_state == 0:
+                
+                m "A laser and a mirror, that's a good idea!{w=3} {nw}"
+                m "I'm looking forward to see the result... {w=3} {nw}"
+                call use_and_keep_item from _call_use_and_keep_item_30
+                
+                call sound_electroshock from _call_sound_electroshock_22
+                with flash
+                call xylo_village2_mirror from _call_xylo_village2_mirror_1
 
-        
-        $ startpos = 4
-        jump loop_xylo_village2 
-        
+                
+            $ startpos = 3
+            
+            
+            
+            
+        if exitpos == 4:
+            if startpos == 4  and xylo_village_mirror_state == 1:
+                m "Now I'm inside thanks to this mirror! {w=3} {nw}"
+                call xylo_village2_mirror_take from _call_xylo_village2_mirror_take_1
+                jump loop_xylo_village2
+                
+                
+            if startpos == 4 and inventory_select == "mirror" and xylo_village_mirror_state == 0:
+                call use_and_keep_item from _call_use_and_keep_item_31
+                call sound_electroshock from _call_sound_electroshock_23
+                with flash
+                call xylo_village2_mirror from _call_xylo_village2_mirror_2
 
-    #exits routing "got to map and set position for next map"
-    if exitpos == 11:
-        
-        if startpos == 11 and inventory_select != "accesscard":
-            call dialog_closed from _call_dialog_closed_46
-            m "There is a slot for an access card... {w=2.5} {nw}"
+
+            if startpos == 4 and inventory_select == "" and xylo_village_mirror_state == 0:
+                call sound_electroshock from _call_sound_electroshock_24
+                with hpunch
+                m "There is a laser fence! {w=1.5} {nw}"
+                m "I can't pass through. {w=1.5} {nw}"
+
+            
+            $ startpos = 4
+            
+            
+
+        #exits routing "got to map and set position for next map"
+        if exitpos == 11:
+            
+            if startpos == 11 and inventory_select != "accesscard":
+                call dialog_closed from _call_dialog_closed_46
+                m "There is a slot for an access card... {w=2.5} {nw}"
+                $ startpos = 11
+                
+
+
+            if startpos == 11 and inventory_select == "accesscard":
+                call use_and_keep_item from _call_use_and_keep_item_32
+                call sound_collect from _call_sound_collect_10
+                pause 1.5
+                $ startpos = 4 
+                call sound_door from _call_sound_door_173
+                jump xylo_village_spacenet
+            
             $ startpos = 11
-            jump loop_xylo_village2
-
-
-        if startpos == 11 and inventory_select == "accesscard":
-            call use_and_keep_item from _call_use_and_keep_item_32
-            call sound_collect from _call_sound_collect_10
-            pause 1.5
-            $ startpos = 4 
-            call sound_door from _call_sound_door_173
-            jump xylo_village_spacenet
-        
-        $ startpos = 11
-        jump loop_xylo_village2
-
-        
-    if exitpos == 22:
-        if startpos == 22:
-            m "This area is really well protected with this laser fence... {w=2} {nw}"
-            m "This seams to be important... {w=1.5} {nw}"
-            m "Interesting! {w=1.5} {nw}"
             
-            if xylo_village2_cash > 0:
-                m "... {w=1.5} {nw}"
-                m "There is something on the floor... {w=2} {nw}"
-                call io_cash(xylo_village2_cash) from _call_io_cash_21
-                $ xylo_village2_cash = 0
+
+            
+        if exitpos == 22:
+            if startpos == 22:
+                m "This area is really well protected with this laser fence... {w=3} {nw}"
+                m "This seams to be important... {w=1.5} {nw}"
+                m "Interesting! {w=1.5} {nw}"
                 
-                
-        $ startpos = 22
-        jump loop_xylo_village2
-        
-    if exitpos == 33:
-        $ startpos = 33
-        jump loop_xylo_village2
-        
-    if exitpos == 44:
-        $ startpos = 44
-        jump loop_xylo_village2
+                if xylo_village2_cash > 0:
+                    m "... {w=1.5} {nw}"
+                    m "There is something on the floor... {w=2} {nw}"
+                    call io_cash(xylo_village2_cash) from _call_io_cash_21
+                    $ xylo_village2_cash = 0
+                    
+                    
+            $ startpos = 22
+            
+            
+        if exitpos == 33:
+            $ startpos = 33
+           
+            
+        if exitpos == 44:
+            $ startpos = 44
+            
 
 
 

@@ -129,7 +129,11 @@ label space:
             linear 1 pos (50,150)
             repeat 
         
-        show screen notify("in orbit of [planet]")
+        if planet == "sun":
+            show screen notify("in orbit of the [planet]")
+        else:
+            show screen notify("in orbit of [planet]")
+        
     
     if planet == "none" or planet == "hacker":
         hide orbitmeter

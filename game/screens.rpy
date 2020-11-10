@@ -133,7 +133,9 @@ screen say(who, what):
         
         text what id "what"
         
-        # SFIO say screen animation
+        
+        
+        # Spacenet say screen animation
         #at textdissolve
 
 
@@ -344,6 +346,8 @@ screen navigation():
                 textbutton _("Map Editor") action Start("map_editor_init") activate_sound "sounds/beep.ogg"
 
             textbutton _("Start") action Start("intro") activate_sound "sounds/scan.ogg"
+            
+            textbutton _("Tutorial") action Start("tutorial_room1") activate_sound "sounds/scan.ogg"
 
         else:
 

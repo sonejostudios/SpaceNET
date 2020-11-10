@@ -334,13 +334,13 @@ init :
     $ demo_version = False
     
     # pre version. For release = ""
-    $ pre_version = "alpha"
+    $ pre_version = "beta"
     
     ## The version of the game.
-    define config.version = "0.73"
+    define config.version = "0.74"
     
     # build date. Set date for release.
-    $ build_date = "2020-09-22"
+    $ build_date = "2020-11-10"
     
     # developer mode (True/False). For release = False
     $ superdev = False
@@ -541,6 +541,8 @@ label start:
     #$ sat_connected_to = "SpaceNET"
     
     #$ game_end = True
+    
+    $ spacenet_copied = True
 
 
     $ isc_spaceport_auth = True

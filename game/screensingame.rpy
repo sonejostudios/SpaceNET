@@ -78,6 +78,10 @@ screen buttons():
     
 
     
+    # pre-version type
+    text "{color=#8dd35f}[pre_version]" size 16 xpos 0.01 ypos 0.94 xanchor 0.0
+
+    
     
 
     
@@ -171,7 +175,7 @@ screen superdev() zorder 2000:
         text "[mousepos]" at left
         
         # move engine values
-        text "exitpos: [exitpos]\nstartpos: [startpos]\ngotopos: [gotopos]\n\n" at right
+        text "exitpos: [exitpos]\nstartpos: [startpos]\ngotopos: [gotopos]\nmoving: [moving]\n\n" at right
         
         # surface values
         text "shippos [shippos]  - maplink [maplink] - ingame [ingame]" at center

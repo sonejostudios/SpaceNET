@@ -11,7 +11,8 @@ init:
     
 screen xylo_mine_minitrain_room_earthquake():
     
-    timer 7 repeat True action Jump("xylo_mine_minitrain_room_earthquake")
+    if moving == False:
+        timer 5 repeat True action Jump("xylo_mine_minitrain_room_earthquake")
 
 
 
@@ -85,6 +86,8 @@ label loop_xylo_mine_minitrain_room:
 
 
         if exitpos == 2:
+            if startpos == 2:
+                m "I'm at level -2 of the mine. {w=2} {nw}"
             $ startpos = 2
             
 
@@ -140,7 +143,7 @@ label loop_xylo_mine_minitrain_room:
 
         if exitpos == 33:
             if startpos == 33:
-                call dialog_nothing from _call_dialog_nothing_35
+                m "Stones, stones, stones... {w=2} {nw}"
             $ startpos = 33
 
             
@@ -152,6 +155,7 @@ label loop_xylo_mine_minitrain_room:
 
 
 label xylo_mine_minitrain_room_earthquake:
+    
             
     call sound_earthquake from _call_sound_earthquake_1
     with hpunch

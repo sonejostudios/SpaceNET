@@ -198,10 +198,18 @@ label isc_city_shop_vendor:
         #    pass
         "card game\n15c":
             call buy_item("cards", 15) from _call_buy_item
+        
         "light bulb\n10c":
-            call buy_item("bulb", 10) from _call_buy_item_1
+            if isc_crane_repared == True:
+                m "This is a stupid idea...{w=2.0} {nw}"
+                m "I already bought one and gave it to the system administrator.{w=4} {nw}"
+                m "I don't think I will need another one!{w=3.0} {nw}"
+            else:    
+                call buy_item("bulb", 10) from _call_buy_item_1
+        
         "safety hook\n99c":
             call buy_item("hook", 99) from _call_buy_item_2
+        
         "nothing, thanks.":
             m "Nothing, thanks.{w=2.0} {nw}"
             vendor "Okay!{w=2.0} {nw}"

@@ -104,15 +104,18 @@ label cargo_movingwalls:
     # show walls first
     show movingwall as mwall1 behind cargo_movingwalls:
         xpos 300
-        ypos 80
+        #ypos 80
         
     show movingwall as mwall2 behind cargo_movingwalls:
         xpos 430
-        ypos 240
+        #ypos 240
         
     show movingwall as mwall3 behind cargo_movingwalls:
         xpos 560
-        ypos 400
+        #ypos 400
+        
+    # set walls ypos
+    call cargo_setthewalls from _call_cargo_setthewalls
 
 
 
@@ -278,6 +281,43 @@ label cargo_movethewalls:
     
     
 
-
+# set wall positions
+label cargo_setthewalls:
+    
+    # move wall1
+    if movingwall1 == 1:
+        show movingwall as mwall1:
+            ypos 80
+    if movingwall1 == 2 or movingwall1 == 4:
+        show movingwall as mwall1:
+            ypos 240
+    if movingwall1 == 3:
+        show movingwall as mwall1:
+            ypos 400
+            
+    # move wall2
+    if movingwall2 == 1:
+        show movingwall as mwall2:
+            ypos 80
+    if movingwall2 == 2 or movingwall2 == 4:
+        show movingwall as mwall2:
+            ypos 240
+    if movingwall2 == 3:
+        show movingwall as mwall2:
+            ypos 400
+            
+    # move wall3
+    if movingwall3 == 1:
+        show movingwall as mwall3:
+            ypos 80
+    if movingwall3 == 2 or movingwall3 == 4:
+        show movingwall as mwall3:
+            ypos 240
+    if movingwall3 == 3:
+        show movingwall as mwall3:
+            ypos 400
+            
+    return
+           
 
 

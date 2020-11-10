@@ -13,6 +13,8 @@ label isc_city_gateway_crane:
     $ inventory_select = "spacesuit"
     call use_and_keep_item from _call_use_and_keep_item_16
     
+    #call music_satellite
+    
     
     scene bgcolor
     
