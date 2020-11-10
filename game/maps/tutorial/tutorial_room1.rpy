@@ -231,7 +231,6 @@ Your inventory is in the bottom-right corner of the screen.
 The game menu is in the top-right corner.
 To exit this panel, or any other, just click somewhere on it.
 
---
 
 The exit door is closed.
 To open it, you'll need to find its access card.
