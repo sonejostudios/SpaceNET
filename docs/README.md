@@ -6,7 +6,7 @@ __Description:__
 SpaceNET is a non-linear retro sci-fi adventure. Less graphics, more story! Along with an amazing soundtrack, the minimalist graphics allows a deeper immersion into the story.
 You are flying peacefully with your spaceship and you get caught by a mysterious spaceship. You wake up in a prison cell and your memory is gone. You just remember a name: SpaceNET. But what is this?
 
-Hint: Be prepaired to save the universe! 
+Hint: Be prepared to save the universe! 
 
 
 __Features:__
@@ -15,7 +15,7 @@ __Features:__
 * Non-linear story: you can move freely and achieve different things at the same time.
 * Minimalist graphics
 * Amazing soundtrack and immersive ambient sounds
-* Standard interface optimised for touchscreen
+* Standard interface optimized for touchscreen
 * Retro interface for mouse devices
 * Fly in space between planets and spaceships
 * Fly on the surface of the planets
@@ -25,7 +25,7 @@ __Features:__
 * Use a full featured terminal to hack things in the game
 * Find money, buy objects
 * Have a drink at the bar
-* Receive emails, decrypt files and install software
+* Receive emails, uncrypt files and install software
 * Dock to a satellite
 * Choose between 3 different spaceships
 * Collect gems
