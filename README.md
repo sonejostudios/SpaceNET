@@ -3,7 +3,7 @@ A Space Adventure - BETA VERSION
 
 __Description:__
 
-SpaceNET is a non-linear retro sci-fi adventure. Less graphics, more story! Along with an amazing soundtrack, the minimalist graphics allows a deeper immersion into the story.
+SpaceNET is a non-linear retro sci-fi adventure. Less graphics, more story! Along with an amazing soundtrack and a really atmospheric soundscape, the minimalist graphics allows a deeper immersion into the story.
 You are flying peacefully with your spaceship and you get caught by a mysterious spaceship. You wake up in a prison cell and your memory is gone. You just remember a name: SpaceNET. But what is this?
 
 Hint: Be prepared to save the universe! 
@@ -37,9 +37,9 @@ __Features:__
 * Save the universe!
 
 
-__ALPHA VERSION:__
+__BETA VERSION:__
 
-This game is still in beta version. If you find bugs, please report them! This build is only ​tested with LinuxMint19 and Windows10 (no MacOS test). The Android debug version should work on all android devices.
+This game is still in beta version. If you find bugs, please report them! This build is only ​tested with LinuxMint19 and Windows10 (no MacOS test). The android debug version should work on all android devices.
 
 
 __DOWNLOAD BINARIES:__
