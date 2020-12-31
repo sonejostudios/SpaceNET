@@ -9,8 +9,8 @@ You are flying peacefully with your spaceship and you get caught by a mysterious
 Hint: Be prepared to save the universe! 
 
 
-[![SpaceNET](./docs/SpaceNETtrailer.png)](https://www.youtube.com/watch?v=sTqJdsnIwag)
-https://www.youtube.com/watch?v=sTqJdsnIwag
+[![SpaceNET](./docs/SpaceNETtrailer.png)](https://youtu.be/XSDFSUtP3B8)
+https://youtu.be/XSDFSUtP3B8
 
 
 __Features:__

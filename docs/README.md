@@ -56,9 +56,9 @@ GPL 3.0 (Open Source)
 
 
 
-[![SpaceNET](./SpaceNETtrailer.png)](https://www.youtube.com/watch?v=sTqJdsnIwag)
+[![SpaceNET](./SpaceNETtrailer.png)](https://youtu.be/XSDFSUtP3B8)
 
-[https://www.youtube.com/watch?v=sTqJdsnIwag](https://www.youtube.com/watch?v=sTqJdsnIwag)
+[https://youtu.be/XSDFSUtP3B8](https://youtu.be/XSDFSUtP3B8)
 
 ![SpaceNET](./SpaceNET.png)
 
