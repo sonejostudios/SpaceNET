@@ -277,7 +277,7 @@ label loop_xylo_spaceport:
                         with flash
                         $ planetxy_register = True
                         radio "Your spaceship and you are now registered.{w=3} {nw}"
-                        radio "Your are now allowed to land everywhere on Xylo.{w=3} {nw}"
+                        radio "You are now allowed to land everywhere on Xylo.{w=3} {nw}"
                         radio "Thank you for the registration.{w=2.5} {nw}"
                         radio "Bye.{w=1} {nw}"
                         #m "Oh, that's nice, thanks!{w=2.5} {nw}"

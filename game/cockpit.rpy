@@ -387,7 +387,7 @@ label cockpit_map_menu:
             call flight from _call_flight
             jump space
         
-        "new destination":
+        "set destination":
             jump cockpit_map2
 
             

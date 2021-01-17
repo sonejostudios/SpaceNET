@@ -33,12 +33,12 @@ label xylo_village1:
     # set all variables for the map (nodes and path)
     $ nodeA = (180, 75)
     $ nodeB = (244, 239)
-    $ nodeC = (132, 322)
-    $ nodeD = (370, 130)
+    $ nodeC = (136, 322)
+    $ nodeD = (369, 131)
 
     $ nodeAA = (80, 104)
     $ nodeBB = (660, 240)
-    $ nodeCC = (737, 157)
+    $ nodeCC = (743, 157)
     $ nodeDD = (772, 240)
 
     $ pathA = (nodeA, nodeB, nodeC, nodeD, nodeAA, (0, 0), (0, 0), (0, 0))
@@ -128,7 +128,7 @@ label xylo_village1_info:
 - Xylo's Colony Village -
 
 
-Welcome to xylo's colony village!
+Welcome to xylo's colony village.
 We hope you'll have fun there.
 
 Enjoy!

@@ -334,13 +334,13 @@ init :
     $ demo_version = False
     
     # pre version. For release = ""
-    $ pre_version = "beta"
+    $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "0.74"
+    define config.version = "1.0"
     
     # build date. Set date for release.
-    $ build_date = "2020-11-10"
+    $ build_date = "2021-01-17"
     
     # developer mode (True/False). For release = False
     $ superdev = False
@@ -362,6 +362,8 @@ init :
     $ playertype = "player"
     
     $ playername = "hero"
+    
+    $ tutorial_done = False
     
     
     $ planet = "megaship"
@@ -479,6 +481,7 @@ init :
     $ darkroom = True
     
     $ spacenetmenu = False
+    $ loginmenu = False
     
     $ info_panel_symbol = ""
     

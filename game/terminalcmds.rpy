@@ -259,6 +259,7 @@ label term_commands:
     
 # command login
     if termtext == "login" :
+        $ loginmenu = True
         jump term_login
         
         

@@ -32,6 +32,9 @@ init:
 
 # start intro
 label intro:
+    
+    hide screen buttons
+    
     $ pnc_nodes_visible = False
     
     $ superdev = False
@@ -69,7 +72,7 @@ label intro_logo:
     #call atmo_spaceship
     
     
-    $ renpy.music.play("sounds/spaceship.ogg", channel="atmo", fadein=5, fadeout=0, tight=True, if_changed=True)
+    $ renpy.music.play("sounds/spaceship.ogg", channel="atmo", fadein=5, fadeout=1, tight=True, if_changed=True)
 
 
     
@@ -107,6 +110,21 @@ label intro_logo:
     #call atmo_spaceship
     #call sound_beep
     
+    # redirect to tutorial if not done
+    if tutorial_done == False:
+        show text "It is the first time you are playing SpaceNET.\nDo you first want to do the tutorial?":
+            #ypos 0.2
+            xpos 0.35
+        with Dissolve(1)
+
+        menu:
+            "yes":
+                call sound_beep from _call_sound_beep_72
+                jump tutorial_room1
+            "no":
+                call sound_beep from _call_sound_beep_73
+    
+    hide text
     # ask for player name
     python:
         playername = renpy.input(_("Enter your name:"))

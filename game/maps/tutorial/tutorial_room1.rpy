@@ -134,8 +134,8 @@ label loop_tutorial_room1:
                 if inventory_select != "accesscard":
                     call dialog_closed from _call_dialog_closed_47
                 else:
-                    with hpunch
                     call sound_electroshock from _call_sound_electroshock_26
+                    with hpunch
                     m "This access card doesn't work on this door.{w=3.0} {nw}"
                     $ inventory_select = ""
             
@@ -169,6 +169,9 @@ label loop_tutorial_room1:
                     $ coins = 0
                     stop atmo
                     $ renpy.music.play("music/space-amb.ogg", channel="music", fadein=1, fadeout=0, tight=True, if_changed=True)
+                    
+                    $ tutorial_done = True
+                    
                     jump _invoke_main_menu
                     
                 
@@ -179,9 +182,9 @@ label loop_tutorial_room1:
         if exitpos == 11:  
             #jump tutorial_room1
             if startpos == 11:
-                m "This is the tutorial room.{w=3.0} {nw}"
-                m "On the right, there is an information panel.{w=3.0} {nw}"
-                m "Close to the aeration, there is a button panel.{w=3.0} {nw}"
+                m "This is the tutorial room.{w=2.5} {nw}"
+                m "On the right, there is an information panel.{w=3.5} {nw}"
+                m "Close to the aeration, there is a button panel.{w=3.5} {nw}"
             $ startpos = 11     
  
             
@@ -223,9 +226,9 @@ SpaceNET          Tutorial
 
 The dashed circles are action points. Just click on one
 to move to it. When you are on an action point, click on it
-again to perform an action (look, talk, take, etc). 
+again to perform an action (look, talk, take, etc.). 
 If an item of the inventory is selected (click it twice), 
-you will then perform an action with this item (use, give, etc).
+you will then perform an action with this item (use, give, etc.).
 
 Your inventory is in the bottom-right corner of the screen.
 The game menu is in the top-right corner.

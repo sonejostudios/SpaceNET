@@ -128,7 +128,7 @@ label loop_xylo_mine_level1:
                     
                 
                 if xylo_mine_used_dynamite == False and inventory_select == "":
-                    m "There is a lot of stones... {w=2} {nw}"
+                    m "There are a lot of stones... {w=2} {nw}"
                     m "It looks like they have fallen from the ceiling... {w=3} {nw}"
                     m "Now the way is blocked! {w=2} {nw}"
                     

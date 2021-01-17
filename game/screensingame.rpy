@@ -181,7 +181,7 @@ screen superdev() zorder 2000:
         text "shippos [shippos]  - maplink [maplink] - ingame [ingame]" at center
         
         # inventory values
-        text "            inv_select : [inventory_select] - inv_notify : [inventory_notify] - planet : [planet] \n           nodes : [spacenetnodes]\n             liftpos - [liftpos]" at topleft
+        text "            inv_select : [inventory_select] - inv_notify : [inventory_notify] - planet : [planet] \n           nodes : [spacenetnodes]\n             liftpos - [liftpos] - isc_spaceship_interchange [isc_spaceship_interchange]" at topleft
         
         # mousepos
         timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())]

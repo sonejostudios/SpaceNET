@@ -1,5 +1,5 @@
 # SpaceNET
-A Space Adventure - BETA VERSION
+A Space Adventure
 
 __Description:__
 
@@ -28,18 +28,12 @@ __Features:__
 * Use your inventory system
 * Use a full featured terminal to hack things in the game
 * Find money, buy objects
-* Have a drink at the bar
-* Receive emails, uncrypt files and install software
 * Dock to a satellite
 * Choose between 3 different spaceships
 * Collect gems
 * Find the network nodes
 * Save the universe!
 
-
-__BETA VERSION:__
-
-This game is still in beta version. If you find bugs, please report them! This build is only ​tested with LinuxMint19 and Windows10 (no MacOS test). The android debug version should work on all android devices.
 
 
 __DOWNLOAD BINARIES:__

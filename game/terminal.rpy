@@ -67,7 +67,8 @@ label term_menu:
 
             jump term_commands
             
-        "login":
+        "login" if loginmenu == True:
+            $ termtext = "login"
             jump term_login
             #jump term_menu
             
@@ -108,7 +109,7 @@ label term_menu:
 label term_login:
     call sound_beep from _call_sound_beep_30
     
-    # skip login if already logged in in game
+    # skip login if already logged in once in game
     if term_login_done == True:
         jump server_start
     

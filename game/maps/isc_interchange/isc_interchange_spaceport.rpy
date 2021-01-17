@@ -61,16 +61,11 @@ label isc_interchange:
     show rails2:
         pos (950,380)
         
-        
 
-   
-    
-    
-    if landing == True:
-        show isctrain:
-            anchor (0.35,0.5)
-            pos (650,380)
-    
+    show isctrain:
+        anchor (0.35,0.5)
+        pos (650,380)
+        
 
     # check if spaceship is landing on this map or not
     # $ landing = False
@@ -78,9 +73,11 @@ label isc_interchange:
     
     #"[isc_spaceship_interchange]"
     
+    
     if landing == True:
-         $ isc_spaceship_interchange = True
-         call landing_anim from _call_landing_anim_7
+        $ isc_spaceship_interchange = True
+        call landing_anim from _call_landing_anim_7
+    
     
     if isc_spaceship_interchange == True:
         #call landing_anim
