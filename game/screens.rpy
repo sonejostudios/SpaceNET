@@ -821,20 +821,6 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
-init 1 python:
-    def change_cursor(type="default"):
-        persistent.mouse = type
-        if type == "default":
-            setattr(config, "mouse", None)
-        elif type == "pnc":
-            setattr(config, "mouse", {"default" : [("images/cursor_default.png", 30, 30)]})
-            
-    if not hasattr(persistent, "mouse"):
-        change_cursor()
-    else:
-        change_cursor(persistent.mouse)
-
-
 
 screen preferences():
 
@@ -875,29 +861,24 @@ screen preferences():
                 #    textbutton _("After Choices") action Preference("after choices", "toggle")
                 #    textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
                 
-                
                 null height 20
                 
                 if not renpy.variant("touch"):
                     
                     vbox:
                         style_prefix "radio"
-                        
                         label _("Cursor Style")
-                        textbutton _("System") action [SetVariable("pnc_cursor", False), Function(change_cursor, type="default")]
-                        textbutton _("Retro") action [SetVariable("pnc_cursor", True), Function(change_cursor, type="pnc")]
-                    
-
+                        textbutton _('System') action Preference('system cursor', 'enable')
+                        textbutton _('Retro') action Preference('system cursor', 'disable')
                     null height 20
                     
                     vbox:
                         style_prefix "radio"
-                        
                         label _("Gameplay Mode*")
                         textbutton _("Default") action SetVariable("pnc_mode", False)
                         textbutton _("Point'n'Click") action SetVariable("pnc_mode", True)
-                    
                     null height 20
+                    
                     
                 vbox:
                     style_prefix "check"

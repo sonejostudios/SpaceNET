@@ -90,7 +90,7 @@ define gui.title_text_size = 40
 #define gui.game_menu_background = "gui/main_menu.png"
 
 ## Should we show the name and version of the game?
-define gui.show_name = True
+#define gui.show_name = True
 
 
 ## Dialogue ####################################################################

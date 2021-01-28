@@ -70,7 +70,7 @@ label isc_city_bar:
     
     
     # set all variables for the map (nodes and path)
-    $ nodeA = (185, 246)
+    $ nodeA = (188, 246)
     $ nodeB = (371, 150)
     $ nodeC = (612, 293)
     $ nodeD = (550, 345)

@@ -317,12 +317,27 @@ image galaxy_intro:
     
 
 
+
 # main menu music
 define config.main_menu_music = "music/space-amb.ogg"
 
-#mouse cursor
-#define config.mouse = {"default" : [("images/cursor_default.png", 30, 30)]}
-define config.mouse = None 
+
+# set retro mouse and deactivate it
+define config.mouse = {"default" : [("images/cursor_default.png", 30, 30)]}
+default preferences.system_cursor = True
+
+
+#revert incompatibilities with 7.4.1
+define config.hw_video = True
+define config.side_image_requires_attributes = False
+define config.pause_with_transition = True
+
+# enable model-based renderer, otherwise the game freezes on mobile devices
+#define config.gl2 = True
+
+
+
+
 
 
 # see also in option.py
@@ -330,17 +345,18 @@ define config.mouse = None
 
 init :
     
+    
     # demo version
     $ demo_version = False
     
-    # pre version. For release = ""
+    # pre version (alpha/beta/rc). For release = ""
     $ pre_version = ""
     
     ## The version of the game.
     define config.version = "1.0"
     
     # build date. Set date for release.
-    $ build_date = "2021-01-17"
+    $ build_date = "2021-01-28"
     
     # developer mode (True/False). For release = False
     $ superdev = False
@@ -497,6 +513,9 @@ init :
 
 label start:
     #jump space
+    if superdev == False:
+        jump intro
+        
     
     show screen setpos
     show screen buttons

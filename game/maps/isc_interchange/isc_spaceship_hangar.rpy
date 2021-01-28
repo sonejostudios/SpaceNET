@@ -49,7 +49,7 @@ label isc_spaceshipport:
 
     
     # set all variables for the map (nodes and path)
-    $ nodeA = (671, 425)
+    $ nodeA = (671, 422)
     $ nodeB = (696, 240)
     $ nodeC = (518, 200)
     $ nodeD = (444, 280)

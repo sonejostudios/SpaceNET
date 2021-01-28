@@ -42,13 +42,13 @@ label isc_rail1:
     
     # set all variables for the map (nodes and path)
     $ nodeA = (290, 220)
-    $ nodeB = (344, 50)
-    $ nodeC = (421, 112)
-    $ nodeD = (344, 430)
+    $ nodeB = (344, 52)
+    $ nodeC = (420, 112)
+    $ nodeD = (344, 428)
 
     $ nodeAA = (640, 455)
     $ nodeBB = (675, 360)
-    $ nodeCC = (630, 115)
+    $ nodeCC = (633, 115)
     $ nodeDD = (650, 20)
 
     $ pathA = (nodeA, nodeB, nodeC, nodeD, (0, 0), (0, 0), (0, 0), (0, 0))

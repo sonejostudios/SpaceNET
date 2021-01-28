@@ -168,7 +168,7 @@ you'll need a landing authorisation.
 
 
 Do you know the Space Adventure Game SF-IO?
-You should play it!
+If you like SpaceNET, you should give it a try!
 
 """
 
@@ -188,7 +188,7 @@ If you have any question concerning
 the Industrial Space City,
 please call the administration under 007008.
 
-The next terminal is in the bar.
+The closest terminal is in the bar.
 
 """
 
@@ -203,7 +203,7 @@ IOnet.
 
 The people were free and the life was good.
 But unfortunately the time changed and
-a new military governemt took the power.
+a new military government took the power.
 
 They shut down the IOnet and since then,
 we can't educate ourselves and we can't know the truth.
