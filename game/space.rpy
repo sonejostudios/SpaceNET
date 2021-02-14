@@ -386,7 +386,7 @@ label orbital_view:
             call sound_beep from _call_sound_beep_6
             jump map_view
             
-        "ask for landing authorization" if planet_auth_needed == "Yes" and planetxy_register == False:
+        "ask for landing authorization" if planet_auth_needed == "Yes" and planetxy_auth == False:
             call sound_modem from _call_sound_modem
             radio "Authorisation request.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0} {nw}"
             call sound_connected from _call_sound_connected_7

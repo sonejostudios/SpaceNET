@@ -137,6 +137,19 @@ label term_login:
         $ term_login_done= True
         jump server_start
     
+    else:
+        $ showtext = """
+    Terminal
+    [ascii_line]
+    
+    Login Error! Try again.
+    """
+        show text Text(showtext,text_align=termtext_align) at termtextpos
+        call sound_electroshock from _call_sound_electroshock_27
+        with hpunch
+        pause 2
+        $ termtext = "help"
+    
     jump terminal
 
 

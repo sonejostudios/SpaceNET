@@ -260,7 +260,7 @@ label loop_xylo_village1_building:
             if liftpos == 0:
                 if alarm_on != True:
                     guardxylo "Hi.{w=2} {nw}"
-                    guardxylo "What do you want? {w=2} {nw}" 
+                    guardxylo "What do you want? {w=2} {nw}"
                     jump xylo_village1_building_reception # reception
                 else:
                     call dialog_nothing from _call_dialog_nothing_5
@@ -397,7 +397,7 @@ label xylo_village1_building_reception:
                 m "[questions[1]]"
                 guardxylo "The this the building of a.r.k. corporation. {w=2.5} {nw}"
                 guardxylo "We are a universal company with the goal, {w=2.5} {nw}"
-                guardxylo "doing as much as possible to help the governement. {w=2.5} {nw}"
+                guardxylo "doing as much as possible to help the government. {w=2.5} {nw}"
                 guardxylo "If you have any questions, just ask me. {w=2.5} {nw}"
                 $ xylo_village1_building_reception = 1
                 $ xylo_building_reception_flags[1] = 1

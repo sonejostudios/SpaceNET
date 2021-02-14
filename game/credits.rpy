@@ -9,6 +9,7 @@ label credits:
     hide spacenet_logo
 
     hide screen main_menu
+    hide screen buttons
     
     show screen termfx
     

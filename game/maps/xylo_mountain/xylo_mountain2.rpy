@@ -37,10 +37,10 @@ label xylo_mountain2:
     # set all variables for the map (nodes and path)
     $ nodeA = (655, 447)
     $ nodeB = (619, 200)
-    $ nodeC = (231, 88)
+    $ nodeC = (200, 88)
     $ nodeD = (64, 246)
 
-    $ nodeAA = (221, 419)
+    $ nodeAA = (190, 419)
     $ nodeBB = (518, 370)
     $ nodeCC = (765, 155)
     $ nodeDD = (768, 197)

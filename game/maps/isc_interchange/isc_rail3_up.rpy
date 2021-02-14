@@ -134,14 +134,8 @@ label loop_isc_rail3:
         # button screen - demo panel
         if exitpos == 4:
             if startpos == 4:
+                show screen isc_rail3_button1
                 
-                if demo_version == False:
-                    show screen isc_rail3_button1
-                
-                # demo panel
-                else:
-                    call demo_panel from _call_demo_panel
-            
             $ startpos = 4
             #jump loop_isc_rail3
 

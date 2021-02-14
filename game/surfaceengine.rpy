@@ -45,8 +45,7 @@ init:
 
 
 screen surface_screen():
-    imagebutton auto "images/tospace_%s.png" action Jump("takeoff_from_surface_to_space") align (1.0, 0.99)
-    #imagebutton auto "images/dockup_%s.png" action Jump("takeoff_from_surface_to_space") align (1.0, 0.99)
+    imagebutton auto "images/tospace_%s.png" action Jump("takeoff_from_surface_to_space") align (1.0, 1.0)
 
 
 
@@ -266,7 +265,7 @@ label landing:
     menu:
         #"take off to space":
         #    jump takeoff_from_surface_to_space
-        "continue flying":
+        "fly":
             $ ingame = False
             pass
             

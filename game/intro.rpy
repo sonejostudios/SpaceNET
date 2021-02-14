@@ -112,7 +112,7 @@ label intro_logo:
     
     # redirect to tutorial if not done
     if tutorial_done == False:
-        show text "It is the first time you are playing SpaceNET.\nDo you first want to do the tutorial?":
+        show text "{color=#8dd35f}It is the first time you are playing SpaceNET.\nDo you first want to do the tutorial?":
             #ypos 0.2
             xpos 0.35
         with Dissolve(1)

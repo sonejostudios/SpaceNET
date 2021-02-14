@@ -34,7 +34,11 @@ __Features:__
 
 __DOWNLOAD BINARIES:__
 
-[https://sonejo.itch.io/spacenet](https://sonejo.itch.io/spacenet)
+[SpaceNET on Steam](https://store.steampowered.com/app/1511240/SpaceNET/)
+
+[SpaceNET on GooglePlay](https://play.google.com/store/apps/details?id=net.sonejo.spacenet)
+
+[SpaceNET on Itch.io](https://sonejo.itch.io/spacenet)
 
 
 __Links:__

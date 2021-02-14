@@ -107,6 +107,15 @@ label loop_xylo_village1:
 
             
         if exitpos == 33:
+            
+            if demo_version == True:
+                if startpos == 33:
+                    call dialog_closed from _call_dialog_closed_49
+                    jump loop_xylo_village1
+                else:
+                    $ startpos = 33
+                    jump loop_xylo_village1
+                
             $ startpos = 3
             call sound_door from _call_sound_door_160
             $ liftpos = 0

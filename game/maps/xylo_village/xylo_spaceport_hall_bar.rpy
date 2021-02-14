@@ -239,7 +239,7 @@ label xylo_village_barman:
                 $ xylo_bar_barman_flags[0] = 1
 
                 menu:
-                    "[drinks[0]]\n1c"if coins >= 1:
+                    "[drinks[0]]\n1c" if coins >= 1:
                         m "A [drinks[0]]. {w=1.5}{nw}"
                         m "This realy doesn't sound good, but I will try.{w=2.5}{nw}"
                         barman_xvil "1c, please. {w=1.5}{nw}"
@@ -253,7 +253,7 @@ label xylo_village_barman:
                         
                         
                         
-                    "[drinks[1]]\n10c"if coins >= 10:
+                    "[drinks[1]]\n10c" if coins >= 10 and demo_version == False:
                         m "A [drinks[1]]. {w=1.5}{nw}"
                         barman_xvil "10c, please. {w=1.5}{nw}"
                         call io_cash(-10) from _call_io_cash_2

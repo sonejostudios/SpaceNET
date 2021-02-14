@@ -345,18 +345,21 @@ define config.pause_with_transition = True
 
 init :
     
-    
     # demo version
     $ demo_version = False
     
-    # pre version (alpha/beta/rc). For release = ""
+    # version type (alpha/beta). For release = ""
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.0"
+    define config.version = "1.01"
     
     # build date. Set date for release.
-    $ build_date = "2021-01-28"
+    $ build_date = "2021-02-14"
+    
+    # game name
+    define config.name = "SpaceNET"
+    define build.name = "SpaceNET"
     
     # developer mode (True/False). For release = False
     $ superdev = False
@@ -364,6 +367,15 @@ init :
     # use dev-keys and show superdev prefs button. For release = False
     $ use_dev_keys = False
     
+    
+    
+    # overwrites for the demo version
+    if demo_version == True:
+        $ pre_version = "demo"
+        define config.name = "SpaceNET-Demo"
+        define build.name = "SpaceNET-Demo"
+    
+
 
 
 
@@ -404,6 +416,7 @@ init :
  
     $ startpos = 11
     $ exitpos = 33
+    $ moving = False
     
     $ path = (nodeA, nodeB, nodeC, nodeD, nodeAA, nodeBB, nodeCC, nodeDD)
     
@@ -502,6 +515,8 @@ init :
     $ info_panel_symbol = ""
     
     $ showtext = ""
+    
+    
     
 
     

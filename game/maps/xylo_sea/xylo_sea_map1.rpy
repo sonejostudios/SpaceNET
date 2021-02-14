@@ -90,8 +90,6 @@ label loop_xylo_map1:
                 $ pathB = (nodeA, nodeB, (0,0), (0,0), nodeAA, (0,0), nodeCC, nodeDD)
             
             if xylo_sea_bunker_info == False:
-                if inventory_select == "":
-                    m "There is an information board.{w=2} {nw}"
                 call xylo_sea_bunker_info from _call_xylo_sea_bunker_info
             
             else:

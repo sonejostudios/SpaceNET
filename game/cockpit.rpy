@@ -456,5 +456,15 @@ label flight:
     
     $ target_active = False
     
+    
+    # demo end
+    if demo_version == True:
+        if planet in ["hacker", "io11", "cargo", "isc"]:
+            jump end_demo
+    
+    
     return
     
+
+
+

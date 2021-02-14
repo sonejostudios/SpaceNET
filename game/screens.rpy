@@ -458,9 +458,9 @@ screen main_menu():
             text "[pre_version]":
                 style "main_menu_version"
                 
-        if demo_version == True:
-            text "demo":
-                style "main_menu_version"
+        #if demo_version == True:
+        #    text "demo":
+        #        style "main_menu_version"
                 
                 
         #text "demo":

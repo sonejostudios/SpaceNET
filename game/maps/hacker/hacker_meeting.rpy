@@ -6,6 +6,7 @@ label hacker_meeting:
     
     #"[hacker_in_prison]"
     
+    
     if hacker_in_prison >= 1:
         #call dialog_nothing
         return

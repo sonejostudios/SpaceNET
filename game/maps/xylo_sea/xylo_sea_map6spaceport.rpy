@@ -108,10 +108,22 @@ label loop_xylo_map6spaceport:
 
             
         if exitpos == 22:
+            
+            if demo_version == True:
+                if startpos == 22:
+                    call dialog_closed from _call_dialog_closed_50
+                    jump loop_xylo_map6spaceport
+                else:
+                    $ startpos = 22
+                    jump loop_xylo_map6spaceport
+                    
+                
+                
             $ startpos = 44
             $ liftpos = 3
             call sound_door from _call_sound_door_103
             jump xylo_lift1 # go to lift
+            
             
         if exitpos == 33:
             $ startpos = 11

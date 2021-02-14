@@ -622,9 +622,14 @@ label end_finished:
         
     
     
+label end_demo:
+    call sound_scan from _call_sound_scan_9
+    call show_space from _call_show_space_23
+    with flash
+    centered "{color=#8dd35f}End of the demo.\n\nBut you still have to save the universe!"
+    hide screen buttons
+    jump credits
+    
+    
+    
 
-    
-    
-    
-    
-    
