@@ -38,7 +38,7 @@ __Features:__
 
 __DOWNLOAD BINARIES:__
 
-[![SpaceNET on Steam](https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg)](https://store.steampowered.com/app/1511240/SpaceNET/)
+[![SpaceNET on Steam|20%](https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg)](https://store.steampowered.com/app/1511240/SpaceNET/)
 
 [SpaceNET on Steam](https://store.steampowered.com/app/1511240/SpaceNET/)
 
