@@ -1,5 +1,5 @@
 # SpaceNET
-A Space Adventure - BETA VERSION
+A Space Adventure
 
 __Description:__
 
