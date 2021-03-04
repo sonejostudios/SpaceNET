@@ -218,7 +218,7 @@ label loop_xylo_village2:
         if exitpos == 22:
             if startpos == 22:
                 m "This area is really well protected with this laser fence... {w=3} {nw}"
-                m "This seams to be important... {w=1.5} {nw}"
+                m "This seems to be important... {w=1.5} {nw}"
                 m "Interesting! {w=1.5} {nw}"
                 
                 if xylo_village2_cash > 0:

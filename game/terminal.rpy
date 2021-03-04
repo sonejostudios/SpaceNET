@@ -61,7 +61,7 @@ label term_menu:
             #hide text
             python:
                 termtext = renpy.input(_("type a command:"))
-                termtext = termtext.strip()
+                termtext = termtext.strip().lower()
                 if not termtext:
                     termtext = "no entry"
 
@@ -119,19 +119,19 @@ label term_login:
     
     python:
         termlogin = renpy.input(_("ID:"))
-        termlogin = termlogin.strip()
+        termlogin = termlogin.strip().lower()
         if not termlogin:
             termlogin = "no entry"
             
     call sound_beep from _call_sound_beep_31
     python:
         termpass = renpy.input(_("Password:"))
-        termpass = termpass.strip()
+        termpass = termpass.strip().lower()
         if not termpass:
             termpass = "no entry"
             
     call sound_beep from _call_sound_beep_32
-    if termlogin == playername and termpass == "freedom":
+    if termlogin == playername.lower() and termpass == "freedom":
         #show text "ID: [termlogin] - Password: [termpass]" at termtextpos2
         #m "Now i'm in!"
         $ term_login_done= True

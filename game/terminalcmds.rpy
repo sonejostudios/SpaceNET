@@ -409,9 +409,10 @@ label term_commands:
     
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
-        call sound_beep from _call_sound_beep_22
+        call sound_electroshock from _call_sound_electroshock_28
         with hpunch
-        m "Cheating is not a good idea right now... {w=2.5} {nw}"
+        m "Cheating is not a good idea right now... {w=3} {nw}"
+        call sound_beep from _call_sound_beep_22
         $ termtext = "help"
         jump terminal
         

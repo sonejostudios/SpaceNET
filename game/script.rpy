@@ -336,6 +336,11 @@ define config.pause_with_transition = True
 #define config.gl2 = True
 
 
+# disable self voicing
+define config.keymap['self_voicing'] = []
+define config.keymap['clipboard_voicing'] = []
+
+
 
 
 
@@ -352,10 +357,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.01"
+    define config.version = "1.02"
     
     # build date. Set date for release.
-    $ build_date = "2021-02-14"
+    $ build_date = "2021-03-04"
     
     # game name
     define config.name = "SpaceNET"

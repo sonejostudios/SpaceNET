@@ -23,7 +23,7 @@ label hacker_meeting:
     hacker "Hi...{w=1.5} {nw}"
     
     hacker "Please identify yourself.{w=2} {nw}"
-    hacker "How is your name?{w=2} {nw}"
+    hacker "What is your name?{w=2} {nw}"
     m "My name is [playername].{w=2} {nw}"
     hacker "Please show me a sign.{w=3} {nw}"
     #hacker "I'm waiting.{w=1}.{w=1}.{w=1}.{w=1}.{w=1}.{w=1}.{w=1} {nw}"

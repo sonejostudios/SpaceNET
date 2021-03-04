@@ -229,7 +229,7 @@ label xylo_spaceport_hall_oldman:
                 
             "[questions[3]]" if xylo_village_oldman_flags[3]  == 0:
                 m "[questions[3]]"
-                oldman "No, I don't know what are you talking about. {w=2} {nw}"
+                oldman "No, I don't know what are you talking about. {w=3} {nw}"
                 $ xylo_village_oldman_flags[3] = 1
             
             "[questions[4]]": #bye

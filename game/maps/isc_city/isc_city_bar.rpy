@@ -255,7 +255,7 @@ label isc_bar_sysadmin:
         $ questions = ["I'm just looking around.{w=2.0} {nw}", 
                         "What are you doing here?{w=2.0} {nw}", 
                         "I can help you if you like. {w=2.0} {nw}", 
-                        "Work? You are having a beer in the bar! {w=2.0} {nw}", 
+                        "Work? You are having a drink in the bar! {w=2.0} {nw}", 
                         "Nothing, thank you. {w=1.0} {nw}"]
         
         while True:
@@ -462,7 +462,7 @@ label isc_barman:
                     
     $ drinks = ["Recycled Water", 
                 "Galactic Beer", 
-                "Cocktails with exotic fruits from different planets", 
+                "Cocktail with exotic fruits from different planets", 
                 "Forbidden Alien Shot"]
     
 
