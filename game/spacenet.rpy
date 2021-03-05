@@ -43,7 +43,7 @@ label spacenet_comp(snetnode):
             "Insert" if inventory_select != "spacenet":
                 if inventory_select != "spacenet":
                     if inventory_select == "":
-                        m "I have nothing to insert into this computer! {w=2.5} {nw}"
+                        m "I have nothing to insert in this computer! {w=2.5} {nw}"
                     else:
                         $ inventory_select = ""
                         call dialog_nosense from _call_dialog_nosense_19

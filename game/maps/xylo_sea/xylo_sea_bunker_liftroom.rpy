@@ -108,10 +108,10 @@ label loop_xylo_sea_bunker_liftroom:
                 call dialog_closed from _call_dialog_closed_1
 
             
-        if exitpos == 3: # software disc
+        if exitpos == 3: # software disk
             if startpos == 3:
                 if "spacenet" not in inventory:
-                    m "There is a computer disc on the desk. {w=2.5} {nw}"
+                    m "There is a computer disk on the desk. {w=2.5} {nw}"
                     m "It seems to be empty. {w=2} {nw}"
                     call take_item("spacenet") from _call_take_item_2
                 else:

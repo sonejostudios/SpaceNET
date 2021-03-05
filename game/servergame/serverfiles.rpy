@@ -95,10 +95,10 @@ label server_file2:
     
     TOP SECRET.
     
-    Copy this software to a disc. 
+    Copy this software to a disk. 
     This will also create an  autostart for the 
-    installer. As soon as the disc is ready, just 
-    insert it to a computer. SpaceNET will 
+    installer. As soon as the disk is ready, just 
+    insert it in a computer. SpaceNET will 
     automatically install and configure itself.
     
     Keep in mind, this is a top secret software, 
@@ -119,7 +119,7 @@ label server_file2:
 
         while True:
             menu:
-                "copy to disc" if spacenet_copied == False:
+                "copy to disk" if spacenet_copied == False:
                     call sound_beep from _call_sound_beep_43
                     if inventory_select == "spacenet":
                         call use_and_keep_item from _call_use_and_keep_item_29
@@ -129,13 +129,13 @@ label server_file2:
                         with flash
                         $ spacenet_copied = True
                         m "Yes, it works!{w=2.5} {nw}"
-                        m "Now the SpaceNET software is on the disc.{w=3} {nw}"
+                        m "Now the SpaceNET software is on the disk.{w=3} {nw}"
                         m "I can't wait to install it everywhere! {w=3} {nw}"
                         
                         $ inbox_new_message = "*"
                         $ server_msglist[3] = "4. satellite"
                     else:
-                        m "I need to insert a disc first.{w=3} {nw}"
+                        m "I need to insert a disk first.{w=3} {nw}"
                     
                     
                     

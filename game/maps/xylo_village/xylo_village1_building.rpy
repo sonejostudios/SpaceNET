@@ -395,8 +395,8 @@ label xylo_village1_building_reception:
             
             "[questions[1]]" if xylo_building_reception_flags[1] == 0:
                 m "[questions[1]]"
-                guardxylo "The this the building of a.r.k. corporation. {w=2.5} {nw}"
-                guardxylo "We are a universal company with the goal, {w=2.5} {nw}"
+                guardxylo "This is the building of a.r.k. corporation. {w=2.5} {nw}"
+                guardxylo "We are an universal company with the goal, {w=2.5} {nw}"
                 guardxylo "doing as much as possible to help the government. {w=2.5} {nw}"
                 guardxylo "If you have any questions, just ask me. {w=2.5} {nw}"
                 $ xylo_village1_building_reception = 1
@@ -408,12 +408,12 @@ label xylo_village1_building_reception:
                 guardxylo "Please call the A.R.K. central to make an appointment if you want to visit... {w=5} {nw}"
                 guardxylo "Our phone number is 01020304. {w=3} {nw}"
                 guardxylo "Just type it in the terminal to call us. {w=3} {nw}"
-                guardxylo "See you. {w=1} {nw}"
+                guardxylo "See you. {w=1.5} {nw}"
                 call add_note("A.R.K. Corporation Office number: 01020304") from _call_add_note_1
                 
             "[questions[3]]" if xylo_village1_building_reception >= 2:
                 m "[questions[3]]"
-                guardxylo "How is your name? {w=2.5} {nw}"
+                guardxylo "What is your name? {w=2.5} {nw}"
                 m "My name is [playername]. {w=2.5} {nw}"
                 guardxylo "Wait... {w=1.5} {nw}"
                 guardxylo "... {w=1.5} {nw}"

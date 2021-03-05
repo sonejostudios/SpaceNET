@@ -65,7 +65,7 @@ screen inventory():
             if inventory_item == "spacesuit":
                 imagebutton idle inventory_dir + "spacesuit_idle.png" selected_idle inventory_dir + "spacesuit_selected_idle.png" selected_hover inventory_dir + "spacesuit_selected_idle.png":
                     if inventory_select != "spacesuit":
-                        action SelectedIf(inventory_select == "spacesuit"), SetVariable("inventory_select", "spacesuit"), SetVariable("item_info", "This is a space suit.\nI'll need it to breath in space.")
+                        action SelectedIf(inventory_select == "spacesuit"), SetVariable("inventory_select", "spacesuit"), SetVariable("item_info", "This is a space suit.\nI'll need it to breathe in space.")
                     else:
                         action SelectedIf(inventory_select == "spacesuit"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
 
@@ -108,7 +108,7 @@ screen inventory():
                         if spacenet_copied == True:
                             action SelectedIf(inventory_select == "spacenet"), SetVariable("inventory_select", "spacenet"), SetVariable("item_info", "This is the spaceNET software.\nI should install it on the computer nodes.")
                         else:
-                            action SelectedIf(inventory_select == "spacenet"), SetVariable("inventory_select", "spacenet"), SetVariable("item_info", "This is a computer disc.\nIt seems to be empty.")
+                            action SelectedIf(inventory_select == "spacenet"), SetVariable("inventory_select", "spacenet"), SetVariable("item_info", "This is a computer disk.\nIt seems to be empty.")
                     else:
                         action SelectedIf(inventory_select == "spacenet"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
        

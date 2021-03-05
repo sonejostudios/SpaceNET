@@ -169,7 +169,7 @@ label isc_city_shop_info:
 - Industrial Space City Shop -
 
 
-Today's special prices :
+Today's special prices:
 
 card game = 15c
 light bulb = 10c

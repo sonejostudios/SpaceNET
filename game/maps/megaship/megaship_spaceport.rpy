@@ -139,7 +139,7 @@ label megaship_spaceport:
             pos nodeA
         
         with flash
-        m "haaa! there is no air to breath!{w=3.0} {nw}"
+        m "haaa! there is no air to breathe!{w=3.0} {nw}"
         call sound_door from _call_sound_door
         jump megaship_lift2
     
@@ -180,7 +180,7 @@ label loop_megaship_spaceport:
             
             if startpos == 3:
                 if spaceship_deco_bounds == (276,34):
-                    m "This spaceship there is quite nice... {w=3.0} {nw}"
+                    m "This spaceship is quite nice... {w=3.0} {nw}"
                     m "Somehow better than mine! {w=3.0} {nw}"
                 else:
                     call dialog_nothing from _call_dialog_nothing_1

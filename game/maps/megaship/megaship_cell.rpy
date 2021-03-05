@@ -231,7 +231,7 @@ label loop_megaship_cell:
                         "I've found a newspaper" if "newspaper" in inventory and megaship_cell_door_radio != [1,1,1]:
                             m "I've found a newspaper.{w=2} {nw}"
                             radio "Nice for you.{w=2.0} {nw}"
-                            radio "I hope is interesting!{w=2.0} {nw}"
+                            radio "I hope it is interesting!{w=2.0} {nw}"
                             menu:
                                 "Not really" if megaship_cell_door_radio[0] == 0:
                                     m "Not really.{w=2} {nw}"

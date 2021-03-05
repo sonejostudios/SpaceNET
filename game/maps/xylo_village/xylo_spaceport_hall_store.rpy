@@ -173,7 +173,7 @@ label xylo_spaceport_shop_info:
 - Xylo's Spaceport Shop -
 
 
-Today's special prices :
+Today's special prices:
 
 lamp = 100c
 knife = 70c

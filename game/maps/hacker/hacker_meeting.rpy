@@ -58,7 +58,7 @@ label hacker_meeting:
                 #call add_note("Terminal login password: freedom")
                 
                 hacker "Once you are in, go to your mailbox.{w=2.5} I'll send you more instructions.{w=3}{nw}"
-                hacker "Copy it to a disc as soon as you have it.{w=4} {nw}"
+                hacker "Copy it to a disk as soon as you have it.{w=4} {nw}"
                 
                 hacker "Now, let's go back...{w=3}{nw}"
                 

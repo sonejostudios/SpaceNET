@@ -148,8 +148,8 @@ label server_welldonemsg:
     I've seen, you decrypted the file 
     sucessfully, that's great!
     
-    Now insert a disc into the Terminal and
-    copy the SpaceNET software to the disc.
+    Now insert a disk in the Terminal and
+    copy the SpaceNET software to the disk.
     
     Then, try to find the secret SpaceNET nodes
     and install the SpaceNET software on them.

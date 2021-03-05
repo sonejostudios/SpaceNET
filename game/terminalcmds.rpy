@@ -382,7 +382,7 @@ label term_commands:
                     m "[questions[0]]"
                     radio "Yes, no problem. {w=1.5} {nw}"
                     radio "We can make an appointment. {w=2} {nw}"
-                    radio "How is your name? {w=1.5} {nw}"
+                    radio "What is your name? {w=1.5} {nw}"
                     m "My name is [playername]. {w=1.5} {nw}"
                     radio "Alright!{w=1} Your are registered now. {w=2.5} {nw}"
                     radio "Just come to our building, our guard at the reception will let you in. {w=4} {nw}"

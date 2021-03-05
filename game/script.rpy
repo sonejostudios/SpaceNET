@@ -357,7 +357,7 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.02"
+    define config.version = "1.04"
     
     # build date. Set date for release.
     $ build_date = "2021-03-04"
