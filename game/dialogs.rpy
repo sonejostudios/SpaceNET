@@ -8,8 +8,8 @@ init:
 
 
 label surface_borders:
-    $ say_surfaceborder = renpy.random.choice(  ["I should not fly to far away...", 
-                                                "This seems interesting, but it is too far.", 
+    $ say_surfaceborder = renpy.random.choice(  ["I should not fly too far away...", 
+                                                "This seems interesting, but it is too far away.", 
                                                 "Why going so far?", 
                                                 "No no, I don't want to fly there.", 
                                                 "I don't have time to fly around..."])
@@ -66,10 +66,10 @@ label dialog_closed:
         
     else:
         call sound_door_locked from _call_sound_door_locked
-        $ say_closed = renpy.random.choice( ["It is closed.", 
+        $ say_closed = renpy.random.choice( ["It's locked.", 
                                             "I can't open it.", 
                                             "It's not open.",
-                                            "It seems to be closed.",
+                                            "It seems to be locked.",
                                             "It is locked."])
         m "[say_closed] {w=2.0} {nw}"
         
@@ -81,6 +81,7 @@ label dialog_closed:
 label dialog_nosense:
     $ say_nosense = renpy.random.choice( ["This doesn't make sense!", 
                                         "Why should I do that?", 
+                                        "Why would I do that?",
                                         "I think this doesn't makes sense.",
                                         "I don't know why I should do this.",
                                         "This is not the solution.",
@@ -88,6 +89,7 @@ label dialog_nosense:
                                         "No way I will do this.",
                                         "Why?",
                                         "This won't do anything.",
+                                        "Someday, I may be able to do that, but not today.",
                                         "Useless idea..."])
     
     
@@ -100,7 +102,7 @@ label dialog_nosense:
 
 
 label dialog_notfitting:
-    m "No way I'm fitting into this!{w=2} {nw}"
+    m "There's no way I'm fitting into this!{w=2} {nw}"
     return
      
      
@@ -108,7 +110,7 @@ label dialog_ndd:
     call sound_electroshock from _call_sound_electroshock_2
     with hpunch
     md "This is a ndd, a non-droid door...{w=2} {nw}" 
-    md "I can't go through! {w=2} {nw}"
+    md "I can't go through there! {w=2} {nw}"
     return
     
     
@@ -117,12 +119,12 @@ label dialog_joke:
     m "What about a joke? {w=2} {nw}"
     menu:
         
-        "What is an spaceship pilote's favourite place on a computer?" if spacebar_joke == True:
-            m "What is an spaceship pilote's favourite place on a computer?{w=5} {nw}"
+        "What is a spaceships' pilote's favourite place on a computer?" if spacebar_joke == True:
+            m "What is a spaceships' pilote's favourite place on a computer?{w=5} {nw}"
             $ joke = 3
         
-        "What is the difference between the government and A.R.K Corporation?" if gov_joke == True:
-            m "What is the difference between the government and A.R.K Corporation? {w=5} {nw}"
+        "What is the difference between the government and the A.R.K Corporation?" if gov_joke == True:
+            m "What is the difference between the government and the A.R.K Corporation? {w=5} {nw}"
             $ joke = 2
             
         
