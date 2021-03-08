@@ -145,7 +145,7 @@ label server_welldonemsg:
     Well done!
     [ascii_line]
     
-    I've seen, you decrypted the file 
+    I've seen you decrypted the file 
     sucessfully, that's great!
     
     Now insert a disk in the Terminal and

@@ -19,7 +19,7 @@ screen docking_screen():
     add "images/dockingtarget.png" align (0.5,0.5)
 
     
-    #text "[docking_posx] [docking_posy]- [new_docking_pos] - [docking_zoom]" at truecenter
+    #text "[docking_posx] [docking_posy]- [new_docking_pos] - [new_docking_pos2] - [docking_zoom]" at truecenter
     
     vbox:
         pos (30,380)
@@ -107,7 +107,7 @@ label start_docking:
         
     
     
-    # docking?
+    # is docking?
     if -10 <= new_docking_pos2[0] <= 10 and -10 <= new_docking_pos2[1] <= 10 :
         
         show satellite:
@@ -123,10 +123,10 @@ label start_docking:
         jump satellite_io11
     
     else:
-        
-
         jump leave_docking
         
+        
+
     return
     
     
@@ -162,6 +162,8 @@ label leave_docking: # anim back from sattelite
     with Dissolve(1)
     jump space
         
+     
+     
         
 label leave_docking2: #leave docking from menu
     $ pnc_nodes_visible = False

@@ -84,7 +84,7 @@ label loop_xylo_spaceport_hall_bar_wcs:
             
         if exitpos == 2:
             if startpos == 2:
-                m "This is the wc... {w=1}it is really dirty! {w=2} {nw}"
+                m "This is the toilet... {w=1}it is really dirty! {w=2} {nw}"
                 menu:
                     "flush":
                         call sound_flush from _call_sound_flush_3
@@ -165,7 +165,7 @@ It looks like you had
 too many galactic beers!
 
 Please, 
-don't forget to flush the wc 
+don't forget to flush the toilet
 when you are done!
 
 

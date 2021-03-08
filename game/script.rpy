@@ -330,7 +330,6 @@ default preferences.system_cursor = True
 #revert incompatibilities with 7.4.1
 define config.hw_video = True
 define config.side_image_requires_attributes = False
-define config.pause_with_transition = True
 
 # enable model-based renderer, otherwise the game freezes on mobile devices
 #define config.gl2 = True
@@ -357,10 +356,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.04"
+    define config.version = "1.05"
     
     # build date. Set date for release.
-    $ build_date = "2021-03-04"
+    $ build_date = "2021-03-08"
     
     # game name
     define config.name = "SpaceNET"

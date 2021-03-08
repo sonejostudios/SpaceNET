@@ -18,7 +18,7 @@ label isc_city_bar_wcs:
     
     scene bgcolor
     show crossroomsmall at truecenter
-    show screen notify("wc")
+    show screen notify("toilet [isc_wc]")
     
     image wc = "/images/wc.png"
     

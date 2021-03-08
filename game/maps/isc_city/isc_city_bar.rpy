@@ -580,7 +580,7 @@ label isc_barman:
                 
             "[questions[1]]" if isc_bar_client == False:
                 m "[questions[1]]"
-                barman_isc "The toilets are only for the clients. {w=2.5} {nw}"
+                barman_isc "The bathroom is only for the clients. {w=2.5} {nw}"
                 barman_isc "I'm sorry. {w=1} {nw}"
 
                     

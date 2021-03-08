@@ -132,7 +132,7 @@ label spacenet_comp(snetnode):
     SpaceNET
     [ascii_line]
     
-    To install or update a software, 
+    To install or update software, 
     please insert the medium.
     
     For more information about the 

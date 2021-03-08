@@ -1,6 +1,6 @@
 
 init:
-    default server_filelist = ["1. help.txt", "2. SpaceNET.xxx", "", ""]
+    default server_filelist = ["1. help", "2. SpaceNET.xxx", "", ""]
 
 
 label server_files:
@@ -101,11 +101,11 @@ label server_file2:
     insert it in a computer. SpaceNET will 
     automatically install and configure itself.
     
-    Keep in mind, this is a top secret software, 
+    Keep in mind, this is top secret software, 
     keep it always by yourself.
     
     Once the software is installed on a computer
-    node, it will show informations about the 
+    node, it will show information about the 
     SpaceNET network. It will also create a bridge
     to the terminal, type 'spacenet' in a terminal 
     to access it.
