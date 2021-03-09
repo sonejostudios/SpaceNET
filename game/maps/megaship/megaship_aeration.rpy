@@ -71,7 +71,7 @@ label loop_megaship_aeration:
                             call dialog_nosense from _call_dialog_nosense_29
                         else:
                             call dialog_closed from _call_dialog_closed_31
-                        m "How to cut this metal grid? {w=3} {nw}"
+                        m "How do you want me to cut this metal grid? {w=3} {nw}"
                 else:
                     call sound_screw from _call_sound_screw_9
                     $ startpos = 33 
@@ -90,7 +90,7 @@ label loop_megaship_aeration:
                         call sound_electroshock from _call_sound_electroshock_19
                         with flash
                         $ megaship_cell3 = True
-                        m "Great tool, this laser. {w=2.0} {nw}"
+                        m "Hm, this laser is really a great tool! {w=2.0} {nw}"
                 
                     else:
                         if inventory_select == "screwdriver":
