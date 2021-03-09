@@ -97,7 +97,7 @@ label loop_megaship_cell:
                     m "I'm in prison! {w=2.0} {nw}"
                     m "And I don't remember anything... {w=2.5} {nw}"
                     m "Except my name, [playername]... {w=2.5} {nw}"
-                    m "And an other name: SpaceNET... {w=3.5} {nw}"
+                    m "And another name: SpaceNET... {w=3.5} {nw}"
                     m "But what does it mean?... {w=2.5} {nw}"
                     m "SpaceNET... {w=2.5} {nw}"
                     m "And what to do now? {w=2.5} {nw}"
@@ -131,7 +131,7 @@ label loop_megaship_cell:
         if exitpos == 3: 
             if startpos == 3:
                 if inventory_select == "newspaper":
-                    m "I don't think it is a good idea now to lie down and read a newspaper.{w=4} {nw}"
+                    m "I don't think it's a good idea to lie down and read a newspaper now.{w=4} {nw}"
                     #call dialog_nosense
                     
                 elif inventory_select == "screwdriver":
@@ -149,7 +149,7 @@ label loop_megaship_cell:
                     if inventory_select == "screwdriver":
                         m "I don't want to repair it now.{w=2.0} {nw}"
                     else:
-                        m "This is the sink and the wc.{w=2.0} {nw}"
+                        m "This is the sink and the toilet.{w=2.0} {nw}"
                     
                 if m_megaship_cell_escape == 1:
                     m "It is completely flooded and doesn't work anymore.{w=3.0} {nw}"
@@ -207,7 +207,7 @@ label loop_megaship_cell:
             if startpos == 22:
                 if inventory_select == "newspaper":
                     #call dialog_nosense
-                    m "This is a useless idea.{w=2} {nw}"
+                    m "This idea is useless.{w=2} {nw}"
                     m "I can't open a door with a newspaper!{w=3.5} {nw}"
                 
                 elif inventory_select == "screwdriver":
@@ -215,7 +215,7 @@ label loop_megaship_cell:
                 
                 else:
                     if m_megaship_cell_door == 0:
-                        m "This is the door of the prison cell.{w=3} {nw}"
+                        m "This is the prison cell door.{w=3} {nw}"
                         call dialog_closed from _call_dialog_closed_8
                         m "But there is an intercom device.{w=3} {nw}"
                         $ m_megaship_cell_door = 1
@@ -230,8 +230,8 @@ label loop_megaship_cell:
                         
                         "I've found a newspaper" if "newspaper" in inventory and megaship_cell_door_radio != [1,1,1]:
                             m "I've found a newspaper.{w=2} {nw}"
-                            radio "Nice for you.{w=2.0} {nw}"
-                            radio "I hope it is interesting!{w=2.0} {nw}"
+                            radio "Good for you.{w=2.0} {nw}"
+                            radio "I hope it's interesting!{w=2.0} {nw}"
                             menu:
                                 "Not really" if megaship_cell_door_radio[0] == 0:
                                     m "Not really.{w=2} {nw}"
@@ -245,7 +245,7 @@ label loop_megaship_cell:
                                     
                                 "There is nothing interesting inside" if megaship_cell_door_radio[2] == 0:
                                     m "There is nothing interesting inside.{w=3} {nw}"
-                                    radio "Well... then read it backward!{w=3.0} {nw}"
+                                    radio "Well... then read it backwards!{w=3.0} {nw}"
                                     $ megaship_cell_door_radio[2] = 1
                             
                             radio "Ha{w=0.2} ha{w=0.2} ha{w=0.2} ha{w=0.2} ha! {w=2.0}{nw}"
@@ -273,7 +273,7 @@ label loop_megaship_cell:
                     
                 if inventory_select != "screwdriver" and inventory_select != "newspaper":
                     m "This is an aeration shaft.{w=3.0} {nw}"
-                    m "A metal grid is closing it.{w=3.0} {nw}"
+                    m "It is sealed by a metal grid.{w=3.0} {nw}"
                 
                 if inventory_select == "screwdriver" and m_megaship_cell_escape == 3:
                     call use_and_keep_item from _call_use_and_keep_item_8
@@ -282,7 +282,7 @@ label loop_megaship_cell:
                     pause 2
                     call sound_connected from _call_sound_connected_6
                     with flash
-                    m "The grid is open now!{w=2.0} {nw}"
+                    m "The aeration shaft is open now!{w=2.0} {nw}"
 
                 
             $ startpos = 33
@@ -313,7 +313,7 @@ label megaship_cell_robot:
         linear 2 pos (240,310)
         
     robot "I will repair your sink.{w=2.0} {nw}"
-    robot "Don't try to go out, the door will remain closed.{w=3.0} {nw}"
+    robot "Don't try to get out, the door will remain closed.{w=3.0} {nw}"
     
     $ m_megaship_cell_escape = 2
     
@@ -323,7 +323,7 @@ label megaship_cell_robot:
 label megaship_cell_robot_back:
     
     pause 2
-    robot "I don't find my screw driver.{w=2.0} {nw}"
+    robot "I can't find my screw driver.{w=2.0} {nw}"
     robot "I can't repair your sink right now.{w=3.0} {nw}"
     robot "I'll be back.{w=2.0} {nw}"
     
