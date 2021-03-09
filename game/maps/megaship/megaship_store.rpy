@@ -101,8 +101,8 @@ label loop_megaship_store:
                 else:
                     if "minidroid" not in inventory: # get minidroid
                         m "There is a small droid there. {w=2.0} {nw}"
-                        m "It is written 'minidroid' on it. {w=2.5} {nw}"
-                        m "I think this could be really useful to explore narrow places. {w=4.0} {nw}"
+                        m "A label 'minidroid' is written on it. {w=2.5} {nw}"
+                        m "I think this could be really useful to explore narrow spaces. {w=4.0} {nw}"
                         call take_item("minidroid") from _call_take_item_3
                     else:
                         call dialog_nothing from _call_dialog_nothing_11
