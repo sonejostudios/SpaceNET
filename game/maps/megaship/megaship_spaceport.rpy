@@ -180,8 +180,8 @@ label loop_megaship_spaceport:
             
             if startpos == 3:
                 if spaceship_deco_bounds == (276,34):
-                    m "This spaceship is quite nice... {w=3.0} {nw}"
-                    m "Somehow better than mine! {w=3.0} {nw}"
+                    m "This spaceship looks quite nice... {w=3.0} {nw}"
+                    m "Somehow, it looks better than mine! {w=3.0} {nw}"
                 else:
                     call dialog_nothing from _call_dialog_nothing_1
                 
@@ -234,7 +234,7 @@ label loop_megaship_spaceport:
                         stop music
                         jump space
                     else:
-                        m "I don't want to start now if the door is closed! {w=3.0} {nw}"
+                        m "I don't want to take off now while the door is closed! {w=3.0} {nw}"
                     
                 "leave":
                     call sound_door from _call_sound_door_3
@@ -247,7 +247,7 @@ label loop_megaship_spaceport:
             
         if exitpos == 33:
             if startpos == 33 and hacker_in_prison == 1:
-                m "This is the spaceship of 4n0nym0us. {w=2.5} {nw}"
+                m "This is 4n0nym0us' spaceship. {w=2.5} {nw}"
             else:
                 call dialog_nothing from _call_dialog_nothing_3
             $ startpos = 33
