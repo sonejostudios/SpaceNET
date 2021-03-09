@@ -80,7 +80,7 @@ label loop_megaship_cell2:
             
         if exitpos == 4:
             if startpos == 4:
-                m "This is the sink and the wc.{w=2.0} {nw}"
+                m "This is the sink and the toilet.{w=2.0} {nw}"
                 call dialog_nothing from _call_dialog_nothing_49
             $ startpos = 4
 
