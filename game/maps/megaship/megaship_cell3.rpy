@@ -65,11 +65,11 @@ label loop_megaship_cell3:
                     
                     if "key" not in inventory:
                         hacker "Hello [playername]! {w=2.0} {nw}"
-                        hacker "Thank you for coming. {w=1.0}I'm really happy you made it throught the aeration shaft.{w=2.0}{nw}"
+                        hacker "Thank you for coming. {w=1.0}I'm really happy you made it!{w=2.0}{nw}"
                         hacker "Listen... {w=2.0} {nw}"
                         hacker "I really need to leave for my next mission. {w=3.5} {nw}"
-                        hacker "While the guards were trying to put me in this cell, I managed to steal them a key. {w=4.5} {nw}"
-                        hacker "But I have no clue where to use it. {w=2.5} {nw}"
+                        hacker "While the guards were trying to put me in this cell, I managed to steal their key. {w=4.5} {nw}"
+                        hacker "But I have no clue as where to use it. {w=2.5} {nw}"
                         hacker "Maybe you'll find the place? {w=2.5} {nw}"
 
                         call take_item("key") from _call_take_item_9
@@ -119,7 +119,7 @@ label loop_megaship_cell3:
             
         if exitpos == 4:
             if startpos == 4:
-                m "This is the sink and the wc.{w=2.0} {nw}"
+                m "This is the sink and the toilet.{w=2.0} {nw}"
                 call dialog_nothing from _call_dialog_nothing_22
             $ startpos = 4
 
