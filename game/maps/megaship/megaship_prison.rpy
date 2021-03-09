@@ -99,9 +99,9 @@ label loop_megaship_prison:
             
         if exitpos == 2:
             if startpos == 2:
-                m "This is the prison main hall. {w=2.0} {nw}"
+                m "This is the main prison hall. {w=2.0} {nw}"
                 if megaship_prisondoor_button == False:
-                    m "Maybe I can find the way out of the prison? {w=4.0} {nw}"
+                    m "Maybe I can find a way out of this prison? {w=4.0} {nw}"
             $ startpos = 2
 
             
