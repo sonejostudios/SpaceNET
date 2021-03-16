@@ -71,7 +71,7 @@ label loop_megaship_aeration:
                             call dialog_nosense from _call_dialog_nosense_29
                         else:
                             call dialog_closed from _call_dialog_closed_31
-                        m "How do you want me to cut this metal grid? {w=3} {nw}"
+                        m "How could I cut this metal grid? {w=3} {nw}"
                 else:
                     call sound_screw from _call_sound_screw_9
                     $ startpos = 33 

@@ -335,9 +335,30 @@ define config.side_image_requires_attributes = False
 #define config.gl2 = True
 
 
-# disable self voicing
+# disable renpy keys
 define config.keymap['self_voicing'] = []
 define config.keymap['clipboard_voicing'] = []
+define config.keymap['debug_voicing'] = []
+define config.keymap['accessibility'] = []
+define config.keymap['developer'] = []
+define config.keymap['director'] = []
+define config.keymap['hide_windows'] = []
+define config.keymap['help'] = []
+define config.keymap['progress_screen'] = []
+define config.keymap['performance'] = []
+define config.keymap['image_load_log'] = []
+define config.keymap['profile_once'] = []
+define config.keymap['memory_profile'] = []
+define config.keymap['console'] = []
+define config.keymap['toggle_skip'] = []
+define config.keymap['skip'] = []
+define config.keymap['fast_skip'] = []
+define config.keymap['choose_renderer'] = []
+define config.keymap['inspector'] = []
+define config.keymap['full_inspector'] = []
+define config.keymap['launch_editor'] = []
+define config.keymap['rollback'] = []
+define config.keymap['rollforward'] = []
 
 
 
@@ -356,10 +377,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.05"
+    define config.version = "1.06"
     
     # build date. Set date for release.
-    $ build_date = "2021-03-08"
+    $ build_date = "2021-03-16"
     
     # game name
     define config.name = "SpaceNET"
@@ -371,6 +392,11 @@ init :
     # use dev-keys and show superdev prefs button. For release = False
     $ use_dev_keys = False
     
+    # allow roll back and forward for superdev
+    if superdev == True:
+        define config.keymap['rollback'] = ['mousedown_4']
+        define config.keymap['rollforward'] = ['mousedown_5']
+    
     
     
     # overwrites for the demo version
@@ -379,6 +405,7 @@ init :
         define config.name = "SpaceNET-Demo"
         define build.name = "SpaceNET-Demo"
     
+
 
 
 

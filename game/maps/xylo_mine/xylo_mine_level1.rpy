@@ -133,7 +133,7 @@ label loop_xylo_mine_level1:
                     m "Now the way is blocked! {w=2} {nw}"
                     
                 if xylo_mine_used_dynamite == False and inventory_select == "pick":
-                    m "There are to many stones, this is just to much work now! {w=3} {nw}"
+                    m "There are too many stones, this is just too much work for now! {w=3} {nw}"
                     jump loop_xylo_mine_level1
                     
                 if xylo_mine_used_dynamite == False and inventory_select != "":

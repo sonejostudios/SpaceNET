@@ -76,8 +76,10 @@ label takeoff_anim(x):
             "take off to space":
                 $ takeoftospace = True
                 $ ingame = False
+                $ isc_spaceship_interchange = False
                 pass
             "take off to surface":
+                $ isc_spaceship_interchange = False
                 pass
             "exit":
                 $ landing = False

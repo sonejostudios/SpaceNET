@@ -5,6 +5,8 @@
 label xylo_minitrain2:
     $ pnc_nodes_visible = True
     
+    show screen buttons
+    
     stop sound fadeout 1.0
     call atmo_deep_ambiance from _call_atmo_deep_ambiance_1
     
@@ -102,6 +104,8 @@ label loop_xylo_minitrain2:
 label minitrain_cross10:
     #"10"
     
+    hide screen buttons
+    
     call sound_minitrain_loop from _call_sound_minitrain_loop
     
     $ path = ((0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0))
@@ -110,7 +114,8 @@ label minitrain_cross10:
     show xylo_minitrain:
         easeout 2 anchor (1400,640)
         linear 5 anchor (700, 640)
-    pause 7
+    #pause 7
+    $ renpy.pause(7, hard='True')
 
     jump minitrain_loopback
     

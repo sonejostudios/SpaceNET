@@ -237,16 +237,12 @@ label loop_isc_interchange:
                 call sound_door from _call_sound_door_172
                 call takeoff_anim("withmenu") from _call_takeoff_anim_9 # go to takeoff
                 
-                $ isc_spaceship_interchange = False
-                
-                
                 # straight to space
                 if takeoftospace == True:
                     $ takeoftospace = False
                     $ space_anim = True
                     jump space
 
-                
                 # to surface
                 if landing == True:
                     $ shippos = (0,1000) # set position in surface engine

@@ -67,6 +67,8 @@ screen xylo_minitrain_button1() zorder -999:
 label xylo_minitrain:
     $ pnc_nodes_visible = True
     
+    show screen buttons
+    
     stop sound fadeout 1.0
     call atmo_deep_ambiance from _call_atmo_deep_ambiance
     
@@ -177,12 +179,16 @@ label minitrain_start:
     
     $ path = ((0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0))
     call hidepaths from _call_hidepaths_10
+    
+    
+    hide screen buttons
 
     
     show xylo_minitrain:
         pos (400,240)
         easeout 2 anchor (700,240)
-    pause 2  
+    #pause 2
+    $ renpy.pause(2, hard='True')
     
     if minitrain_way[0] == False:  
         jump minitrain_cross1
@@ -197,7 +203,8 @@ label minitrain_cross1:
         linear 4 anchor (1400,140)
         linear 3 anchor (1400,640)
     
-    pause 8
+    #pause 8
+    $ renpy.pause(8, hard='True')
     
     jump minitrain_cross2
     
@@ -206,7 +213,8 @@ label minitrain_cross2:
     #"2"
     show xylo_minitrain:
         linear 2 anchor (1000,640)
-    pause 2
+    #pause 2
+    $ renpy.pause(2, hard='True')
     
     jump minitrain_cross3
 
@@ -215,7 +223,8 @@ label minitrain_cross3:
     #"3"
     show xylo_minitrain:
         linear 2 anchor (700,640)
-    pause 2
+    #pause 2
+    $ renpy.pause(2, hard='True')
     
     jump minitrain_loopback
     
@@ -227,7 +236,8 @@ label minitrain_loopback:
         linear 2 anchor (200,340)
         linear 2 anchor (400,340)
         easein 2 anchor (400,240)
-    pause 9
+    #pause 9
+    $ renpy.pause(9, hard='True')
     
     
     jump xylo_minitrain
@@ -239,7 +249,8 @@ label minitrain_cross5:
     show xylo_minitrain:
         linear 1 anchor (700,340)
         linear 2 anchor (1000,340)
-    pause 3
+    #pause 3
+    $ renpy.pause(3, hard='True')
     
     if minitrain_way[1] == True:
         jump minitrain_cross6
@@ -251,7 +262,8 @@ label minitrain_cross6:
     #"6"
     show xylo_minitrain:
         linear 2 anchor (1000,640)
-    pause 2
+    #pause 2
+    $ renpy.pause(2, hard='True')
     
     jump minitrain_cross3
     
@@ -262,7 +274,8 @@ label minitrain_cross7:
         linear 2 anchor (1200,340)
         linear 3 anchor (1200,740)
         linear 3 anchor (700,740)
-    pause 8
+    #pause 8
+    $ renpy.pause(8, hard='True')
     
     if minitrain_way[2] == False:
         jump minitrain_cross8
@@ -276,7 +289,9 @@ label minitrain_cross8:
     #"8"
     show xylo_minitrain:
         linear 1 anchor (700,640)
-    pause 1
+    #pause 1
+    $ renpy.pause(1, hard='True')
+    
     jump minitrain_loopback
 
 
@@ -286,7 +301,8 @@ label minitrain_cross9:
         linear 4 anchor (100,740)
         linear 1 anchor (100,840)
         linear 7 anchor (1400,840)
-    pause 12
+    #pause 12
+    $ renpy.pause(12, hard='True')
     
     stop sound fadeout 1.0
     

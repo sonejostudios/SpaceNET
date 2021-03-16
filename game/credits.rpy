@@ -84,7 +84,7 @@ inspectorj
 ingeos
 black-boe
 walter-odington
-davidworksonline,
+davidworksonline
 sergenious
 lorenzosu
 cgeffex
@@ -124,6 +124,17 @@ yevgverh
 
 freesound.org
 
+
+
+- Special Thanks to -
+
+Dirk Schippers
+(beta-testing/english)
+
+
+
+- License -
+
 SpaceNET is licensed under GPL 3.0
 
 
@@ -132,11 +143,11 @@ SpaceNET is licensed under GPL 3.0
     show text Text(showtext,text_align=0.5):
         anchor (0.5, 1)
         pos (400, 480)
-        linear 30 pos (400, -1450) 
+        linear 33 pos (400, -1700) 
 
     
     
-    pause 31
+    pause 34
     hide text
 
 

@@ -165,7 +165,7 @@ label loop_xylo_mountain2:
             if startpos == 22:
                 if inventory_select == "":
                     m "There is a lake. {w=2.5} {nw}"
-                    m "The view here is amazing! {w=2.5} {nw}"     
+                    m "It seems to be really deep. {w=2.5} {nw}"     
                 
                 elif inventory_select == "pick":
                     call sound_dig from _call_sound_dig_6
