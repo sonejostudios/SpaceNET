@@ -26,9 +26,6 @@ label isc_rail4a:
     #    pos (570,240)
     #    rotate 90
 
-    
-    
-    
     #show light:
     #    pos (115,30)
     #    
@@ -79,15 +76,7 @@ label isc_rail4a:
             pos (376,408)
         #$ pathC = (nodeA, nodeB, nodeC, nodeD, (0, 0), (0, 0), (0, 0), (0, 0))
         
-        
 
-    # shadow
-    #if shadow_enable == 1:
-    #    show shadow zorder 800:
-    #        pos nodeA
-            
-            
-            
 
 
 label loop_isc_rail4a:
@@ -133,7 +122,7 @@ label loop_isc_rail4a:
                 
                 if inventory_select == "minidroid":
                     
-                    m "I can use the mini droid... let's go ! {w=2.5} {nw}"
+                    m "I could use the minidroid... let's go ! {w=2.5} {nw}"
                     call use_and_keep_item from _call_use_and_keep_item_17
                     call sound_connected from _call_sound_connected_28
                     with flash

@@ -132,7 +132,7 @@ label isc_city_bar_cardgame:
                 hide screen isc_cardgame_check
                 $ countdown = False
                 $ countdown_sec = 0
-                m "Okay, enough, Bye!{w=2.5}{nw}"
+                m "Okay, enough, bye!{w=2.5}{nw}"
                 clientplayer "Bye.{w=2}{nw}"
                 jump isc_city_bar
                 
@@ -152,7 +152,7 @@ label isc_city_bar_cardgame:
             call take_gem from _call_take_gem_2
             
         clientplayer "Really well played!{w=2.5}{nw}"
-        clientplayer "You looks like an treasure hunter...{w=3}{nw}"
+        clientplayer "You look like a treasure hunter...{w=3}{nw}"
         clientplayer "I'll tell you something...{w=3}{nw}"
         clientplayer "I lost another gem somewhere around the spaceport interchange of the ISC.{w=5}{nw}"
         clientplayer "But I'm so rich and I don't need it.{w=3}{nw}"

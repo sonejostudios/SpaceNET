@@ -116,7 +116,7 @@ screen inventory():
             if inventory_item == "accesscard":
                 imagebutton idle inventory_dir + "accesscard_idle.png" selected_idle inventory_dir + "accesscard_selected_idle.png" selected_hover inventory_dir + "accesscard_selected_idle.png":
                     if inventory_select != "accesscard":
-                        action SelectedIf(inventory_select == "accesscard"), SetVariable("inventory_select", "accesscard"), SetVariable("item_info", "This is an access card to go somewhere.\nIt is written A.R.K. Corporation on it.")
+                        action SelectedIf(inventory_select == "accesscard"), SetVariable("inventory_select", "accesscard"), SetVariable("item_info", "This is an access card.\nIt is written A.R.K. Corporation on it.")
                     else:
                         action SelectedIf(inventory_select == "accesscard"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
       
@@ -124,7 +124,7 @@ screen inventory():
             if inventory_item == "rope":
                 imagebutton idle inventory_dir + "rope_idle.png" selected_idle inventory_dir + "rope_selected_idle.png" selected_hover inventory_dir + "rope_selected_idle.png":
                     if inventory_select != "rope":
-                        action SelectedIf(inventory_select == "rope"), SetVariable("inventory_select", "rope"), SetVariable("item_info", "This is a big rope.\nSure I can use it somehow.")
+                        action SelectedIf(inventory_select == "rope"), SetVariable("inventory_select", "rope"), SetVariable("item_info", "This is a big rope.\nSure I could use it somehow.")
                     else:
                         action SelectedIf(inventory_select == "rope"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
                    
@@ -244,7 +244,7 @@ screen inventory():
             if inventory_item == "robotcard":
                 imagebutton idle inventory_dir + "robotcard_idle.png" selected_idle inventory_dir + "robotcard_selected_idle.png" selected_hover inventory_dir + "robotcard_selected_idle.png":
                     if inventory_select != "robotcard":
-                        action SelectedIf(inventory_select == "robotcard"), SetVariable("inventory_select", "robotcard"), SetVariable("item_info", "This is an id card of a crew robot.")
+                        action SelectedIf(inventory_select == "robotcard"), SetVariable("inventory_select", "robotcard"), SetVariable("item_info", "This is an ID card of a crew robot.")
                     else:
                         action SelectedIf(inventory_select == "robotcard"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
                         
@@ -296,14 +296,14 @@ screen selected_item():
 label take_item(i):
     
     menu:
-        "take it":
+        "Take it":
             if i not in inventory:
                 $ inventory_select = i
                 $ inventory.append(i)
                 call sound_collect from _call_sound_collect_4
                 call inventory_notify from _call_inventory_notify_1
                 with flash
-        "leave it":
+        "Leave it":
             return
     return
     

@@ -13,7 +13,7 @@ label xylo_mountain1:
     image xylo_mountain1 = imagemapsdir + "xylo_mountain1.png"
     
     scene bgcolor
-    show screen notify("top of the mountain")
+    show screen notify("Top of the mountain")
     
  
     show xylo_mountain1

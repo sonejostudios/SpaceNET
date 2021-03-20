@@ -9,7 +9,7 @@ label xylo_village_brokenwall:
     
     scene bgcolor
     show crossroomsmall at truecenter
-    show screen notify("secret room")
+    show screen notify("Secret room")
 
 
     show brokenwall open:

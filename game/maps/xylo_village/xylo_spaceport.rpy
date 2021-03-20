@@ -23,20 +23,12 @@ label xylo_spaceport:
     image xylo_spaceport = imagemapsdir + "xylo_spaceport.png"
     
     scene xylo_spaceport
-    show screen notify("xylo village spaceport")
+    show screen notify("Xylo village spaceport")
     
     show bgcolor behind xylo_spaceport
     
     show doorh:
         pos (600,445)
-    
-    #show hexagon:
-    #    pos (630,80)
-    #    rotate 15
-    #show hexagon as hexa2:
-    #    pos (720,150)
-    #    rotate 15
-        
 
     
     show light:
@@ -51,12 +43,7 @@ label xylo_spaceport:
     show light as light4:
         pos (355,345)
         
-        
-    #show npc:
-    #    pos (695, 105)
-    #    rotate 45
-    
-    
+
     
     if game_end == True and spacenet_state == "online":
         show npc:
@@ -143,6 +130,7 @@ label loop_xylo_spaceport:
         # GAME END
         if exitpos == 1:  
             if startpos == 1 and game_end == True and spacenet_state == "online":
+                $ inventory_select = ""
                 sam "You've done a great job, thank you!{w=2}{nw}"
                 sam "Now we can live...{w=2}{nw}"
                 sam "With the SpaceNET network, anybody has now access to information.{w=4}{nw}"
@@ -189,7 +177,7 @@ label loop_xylo_spaceport:
                     
                     "Wait, I'll be back":
                         pass
-                        #m "Wait, I'll be back...{w=2}{nw}"
+
  
             $ startpos = 1
         
@@ -229,7 +217,7 @@ label loop_xylo_spaceport:
                     m "This is overkill... no way! {w=2.5} {nw}"
                     
                 elif inventory_select == "pick":
-                    m "I can use the pick and open it completely. \nLet's go!{w=3.5} {nw}"
+                    m "I could use the pick and open it completely. \nLet's go!{w=3.5} {nw}"
                     call use_and_keep_item from _call_use_and_keep_item_3
                     call sound_dig from _call_sound_dig
                     pause 1.5
@@ -258,8 +246,8 @@ label loop_xylo_spaceport:
                 radio "Welcome to Xylo Village! What can I do for you?{w=3.5}{nw}"
                 
                 $ questions = ["Hi. Where I am? {w=1.5} {nw}",
-                    "I need to register my spaceship. {w=2.5} {nw}",
-                    "I'm fine, thank you. {w=1.0} {nw}"]
+                                "I need to register my spaceship. {w=2.5} {nw}",
+                                "I'm fine, thank you. {w=1.0} {nw}"]
                 
                 menu:
                     "[questions[0]]":

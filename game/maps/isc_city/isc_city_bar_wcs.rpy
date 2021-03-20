@@ -94,7 +94,7 @@ label loop_isc_city_bar_wcs:
             if startpos == 1:
                 if isc_wc == 1:
                     menu:
-                        "flush":
+                        "Flush":
                             call sound_flush from _call_sound_flush
                             pause 5
                             m "It looks better now! {w=2} {nw}"
@@ -104,20 +104,20 @@ label loop_isc_city_bar_wcs:
                                 $ isc_bar_wc_cash = 0
                             #else:
                             #    call dialog_nothing
-                        "do nothing":
+                        "Do nothing":
                             pass
                 if isc_wc == 2:
                     menu:
-                        "flush":
+                        "Flush":
                             call sound_flush from _call_sound_flush_1
                             pause 5
                             m "It looks better now! {w=2} {nw}"
                             call dialog_nothing from _call_dialog_nothing_39
-                        "do nothing":
+                        "Do nothing":
                             pass
                 if isc_wc == 3:
                     menu:
-                        "flush":
+                        "Flush":
                             call sound_flush from _call_sound_flush_2
                             pause 5
                             m "It looks better now! {w=2} {nw}"
@@ -126,7 +126,7 @@ label loop_isc_city_bar_wcs:
                                 $ isc_bar_wc_gem = False
                             else:
                                 call dialog_nothing from _call_dialog_nothing_40
-                        "do nothing":
+                        "Do nothing":
                             pass
                     
                             

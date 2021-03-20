@@ -10,7 +10,7 @@ label xylo_mine_tube:
     
     scene bgcolor
     show crossroomsmall at truecenter
-    show screen notify("aeration")
+    show screen notify("Aeration")
     
 
     hide tube

@@ -26,7 +26,7 @@ label xylo_mine_minitrain_room:
     image xylo_mine_minitrain_room2 = imagemapsdir + "xylo_mine_minitrain_room2.png"
     
     scene bgcolor
-    show screen notify("abandonned mine")
+    show screen notify("Abandonned mine")
     
     show xylo_mine_minitrain_room
     
@@ -120,8 +120,8 @@ label loop_xylo_mine_minitrain_room:
                 
                 if xylo_mine_minitrain_room_pick == False:
                     m "There are a lot of stones there.{w=2} {nw}"
-                    m "These stones looks not stable...{w=2} {nw}"
-                    m "Tey looks like they just have fallen down from the ceiling.{w=3} {nw}"
+                    m "These stones don't look really stable...{w=2.5} {nw}"
+                    m "They look like they just have fallen down from the ceiling.{w=3} {nw}"
                     m "Maybe there is a way behind?{w=2} {nw}"
                 #call dialog_nothing 
             $ startpos = 11
@@ -162,8 +162,8 @@ label xylo_mine_minitrain_room_earthquake:
     
     if xylo_mine_minitrain_room_earthquake_dialog == False:
         $ xylo_mine_minitrain_room_earthquake_dialog = True
-        m "Wow! This feels like seismic actvity! {w=2} {nw}"
-        m "I think it would be better not to stay longer! {w=3} {nw}"
+        m "Wow! This feels like seismic actvity! {w=2.5} {nw}"
+        m "I think it would be better not to stay here longer! {w=3.5} {nw}"
         
     
     

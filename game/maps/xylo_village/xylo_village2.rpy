@@ -170,7 +170,7 @@ label loop_xylo_village2:
             
         if exitpos == 4:
             if startpos == 4  and xylo_village_mirror_state == 1:
-                m "Now I'm inside thanks to this mirror! {w=3} {nw}"
+                m "Now I'm inside, thanks to this mirror. {w=3} {nw}"
                 call xylo_village2_mirror_take from _call_xylo_village2_mirror_take_1
                 jump loop_xylo_village2
                 
@@ -218,7 +218,7 @@ label loop_xylo_village2:
         if exitpos == 22:
             if startpos == 22:
                 m "This area is really well protected with this laser fence... {w=3} {nw}"
-                m "This seems to be important... {w=1.5} {nw}"
+                m "It seems to be important... {w=2} {nw}"
                 m "Interesting! {w=1.5} {nw}"
                 
                 if xylo_village2_cash > 0:

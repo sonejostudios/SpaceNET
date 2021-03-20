@@ -206,23 +206,11 @@ label loop_cargo_movingwalls:
 
 # moving buttons   
 label cargo_movingwall_buttons:
-    
-    
+
     show screen cargo_movingwall_buttons_panel
     
     pause 
-    #menu:
-    #    "button 1":
-    #        $ movingwall1 += 1
-    #    "button 2":
-    #        $ movingwall1 += 1
-    #        $ movingwall3 += 1
-    #    "button 3":
-    #        $ movingwall2 += 1
-    #        $ movingwall3 += 1
-    #    "exit":
-    #        return
-    
+
     jump loop_cargo_movingwalls
 
 

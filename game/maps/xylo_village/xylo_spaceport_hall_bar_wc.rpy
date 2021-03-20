@@ -86,7 +86,7 @@ label loop_xylo_spaceport_hall_bar_wcs:
             if startpos == 2:
                 m "This is the toilet... {w=1}it is really dirty! {w=2} {nw}"
                 menu:
-                    "flush":
+                    "Flush":
                         call sound_flush from _call_sound_flush_3
                         pause 5
                         m "It looks better now. {w=2} {nw}"
@@ -95,7 +95,7 @@ label loop_xylo_spaceport_hall_bar_wcs:
                             call io_cash(xylo_spaceport_hall_wc_cash_wc) from _call_io_cash_22
                             $ xylo_spaceport_hall_wc_cash_wc = 0
                     
-                    "do nothing":
+                    "Do nothing":
                         pass
             $ startpos = 2
             
@@ -149,7 +149,7 @@ label xylo_spaceport_hall_bar_wcs_info:
 
 
 Do you need some holidays?
-Spend some time at the xylo sea. 
+Spend some time at the Xylo sea. 
 
 Enjoy its beautiful coast, the sunsets, 
 the beach and the boat trips.
@@ -170,9 +170,6 @@ when you are done!
 
 
 """
-
-
-
 
     
     call info_panel from _call_info_panel_19 # in animations

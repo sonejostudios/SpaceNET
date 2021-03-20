@@ -6,11 +6,8 @@
 init:
     $ steps_sound = "concrete"
     
-    
     $ renpy.music.register_channel("alarm_channel", mixer=None, loop=None, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=False)
-    
     $ renpy.music.set_volume(0.5, delay=0, channel='music')
-    
     
     
     # atmo channel

@@ -79,7 +79,7 @@ label xylo_minitrain:
     image xylo_minitrain = imagemapsdir + "xylo_minitrain.png"
     
     scene bgcolor
-    show screen notify("mine train")
+    show screen notify("Mine train")
     
     show xylo_minitrain:
         anchor (400,240)

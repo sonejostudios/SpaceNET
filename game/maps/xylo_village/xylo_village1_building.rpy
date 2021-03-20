@@ -52,7 +52,7 @@ label xylo_village1_building:
     show xylo_village1_building at truecenter
     
     if liftpos == 0:
-        show screen notify("a.r.k. corp. building")
+        show screen notify("A.R.K. Corp. building")
     
     show bgcolor behind xylo_village1_building
     
@@ -259,8 +259,6 @@ label loop_xylo_village1_building:
         if startpos == 11:
             if liftpos == 0:
                 if alarm_on != True:
-                    guardxylo "Hi.{w=2} {nw}"
-                    guardxylo "What do you want? {w=2} {nw}"
                     jump xylo_village1_building_reception # reception
                 else:
                     call dialog_nothing from _call_dialog_nothing_5
@@ -273,6 +271,11 @@ label loop_xylo_village1_building:
     
     if exitpos == 22:
         if startpos == 22 and liftpos == 1 and xylo_village1_building_alarm < 2: # level 1 worker
+            
+            if inventory_select != "":
+                call npc_dont_need_item(worker1) from _call_npc_dont_need_item_11
+                jump loop_xylo_village1_building   
+            
             worker1 "What do you want? {w=1.5} {nw}"
                 
             $ questions = ["I'm just looking around. {w=2.0} {nw}", 
@@ -282,7 +285,7 @@ label loop_xylo_village1_building:
             menu:
                 "[questions[0]]" if xylo_building_level3_flages[0] == 0:
                     m "[questions[0]]"
-                    worker1 "I don't have time to talk with you, sorry! {w=2.0} {nw}"
+                    worker1 "I don't have time to have a talk with you, sorry! {w=3.0} {nw}"
                     $ xylo_building_level3_flages[0] = 1
                     
                 "[questions[1]]" if xylo_village1_building_alarm == 1:
@@ -314,7 +317,10 @@ label loop_xylo_village1_building:
             if alarm_on != True:
                 m "There is the fire alarm...{w=2.0} {nw}"
             
-            show screen xylo_village1_building_alarm_button
+            if inventory_select != "":
+                call dialog_nosense from _call_dialog_nosense_32
+            else:
+                show screen xylo_village1_building_alarm_button
             
             
 
@@ -337,6 +343,11 @@ label loop_xylo_village1_building:
     if exitpos == 33:
 
         if startpos == 33 and liftpos == 2 and alarm_on != True: # level 2
+            
+            if inventory_select != "":
+                call npc_dont_need_item(worker2) from _call_npc_dont_need_item_12
+                jump loop_xylo_village1_building  
+            
             worker2 "Hmm? {w=1} {nw}"
             worker2 "What are you doing here? {w=2.0} {nw}"
             worker2 "Please don't bother me and let me do my work. {w=2.5} {nw}"
@@ -356,9 +367,6 @@ label loop_xylo_village1_building:
     if exitpos == 44:
         
         if startpos == 44 and liftpos == 3 and alarm_on != True: # level 3
-            worker3 "Hello... {w=1} {nw}"
-            worker3 "what can I do for you? {w=2.5} {nw}"
-       
             jump xylo_village1_building_level3
             
         
@@ -378,6 +386,27 @@ label loop_xylo_village1_building:
 
 
 label xylo_village1_building_reception:
+    
+    if inventory_select != "":
+        
+        if inventory_select == "accesscard":
+            guardxylo "Hey! Where have you found this access card? {w=3} {nw}"
+            guardxylo "Give it to me! {w=2} {nw}"
+            m "No!{w=2} {nw}"
+            $ inventory_select = ""
+            show player:
+                linear 0.5 pos nodeC
+            pause 0.5
+            call sound_door from _call_sound_door_176
+            $ startpos = 33
+            jump xylo_village1
+        
+        call npc_dont_need_item(guardxylo) from _call_npc_dont_need_item_13
+        jump loop_xylo_village1_building   
+        
+    
+    guardxylo "Hi.{w=2} {nw}"
+    guardxylo "What do you want? {w=2} {nw}"
 
     $ questions = ["I'm just looking around...{w=2.0} {nw}", 
                         "What is inside this building? {w=2.0} {nw}",
@@ -395,7 +424,7 @@ label xylo_village1_building_reception:
             
             "[questions[1]]" if xylo_building_reception_flags[1] == 0:
                 m "[questions[1]]"
-                guardxylo "This is the building of a.r.k. corporation. {w=2.5} {nw}"
+                guardxylo "This is the building of A.R.K. Corporation. {w=2.5} {nw}"
                 guardxylo "We are an universal company with the goal, {w=2.5} {nw}"
                 guardxylo "doing as much as possible to help the government. {w=2.5} {nw}"
                 guardxylo "If you have any questions, just ask me. {w=2.5} {nw}"
@@ -420,7 +449,7 @@ label xylo_village1_building_reception:
                 guardxylo "Okay, no problem, I'll let you in. {w=2.5} {nw}"
                 call sound_collect from _call_sound_collect
                 with flash
-                guardxylo "Welcome to a.r.k. corporation! {w=3} {nw}"
+                guardxylo "Welcome to A.R.K. Corporation! {w=3} {nw}"
                 $ xylo_village1_building_reception = 3
                 jump loop_xylo_village1_building 
                 
@@ -434,6 +463,14 @@ label xylo_village1_building_reception:
     
     
 label xylo_village1_building_level3: # level 3
+    
+    if inventory_select != "":
+        call npc_dont_need_item(worker3) from _call_npc_dont_need_item_14
+        jump loop_xylo_village1_building  
+    
+    worker3 "Hello... {w=1} {nw}"
+    worker3 "what can I do for you? {w=2.5} {nw}"
+       
  
     
     $ questions = ["Nothing, I'm just looking around. {w=2.0} {nw}", 
@@ -481,7 +518,7 @@ label xylo_village1_building_level3: # level 3
             "[questions[2]]" if xylo_building_level3_flages[2] == 0:
                 m "[questions[2]]"
                 worker3 "Oh... hello inspector. {w=2} {nw}"
-                worker3 "I'm so sorry I thought you were a annoying guy. {w=3} {nw}"
+                worker3 "I'm so sorry I thought you were an annoying guy. {w=3} {nw}"
                 worker3 "Here is nothing you need to worry about! {w=3} {nw}"
                 worker3 "What can I do for you? {w=2} {nw}"
                 m "Do you have a functional fire alarm in your building? {w=3} {nw}"

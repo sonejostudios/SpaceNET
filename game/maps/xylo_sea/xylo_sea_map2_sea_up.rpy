@@ -9,7 +9,7 @@ label xylo_map2:
     image xylo_map2 = imagemapsdir + "xylo_sea_p2.png"
     
     scene bgcolor
-    show screen notify("xylo sea coast")
+    show screen notify("Xylo sea coast")
     
     show xylo_map2
 
@@ -80,7 +80,7 @@ label loop_xylo_map2:
                     
                     elif inventory_select == "":
                         m "There is a rope on the floor.{w=2.0} {nw}"
-                        m "It is tight to the pier.{w=2.0} {nw}"
+                        m "It is tied to the pier.{w=2.0} {nw}"
                         
                     else:
                         call dialog_nosense from _call_dialog_nosense_16
@@ -126,17 +126,3 @@ label loop_xylo_map2:
     
 
 
-
-
-#label find_bulb:
-#    if "bulb" not in inventory:
-        
-        #call hidepaths
-        
-#        m "There is a light bulb! {w=3.0} {nw}"
-
-#        call take_item("bulb")
-                
-    
-    
-#    return

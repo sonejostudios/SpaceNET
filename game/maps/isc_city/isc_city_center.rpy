@@ -188,7 +188,7 @@ If you have any question concerning
 the Industrial Space City,
 please call the administration under 007008.
 
-The closest terminal is in the bar.
+The nearest terminal is in the bar.
 
 """
 

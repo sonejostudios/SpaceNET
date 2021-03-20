@@ -131,7 +131,7 @@ label loop_isc_rail3:
                 
             
             
-        # button screen - demo panel
+        # button screen
         if exitpos == 4:
             if startpos == 4:
                 show screen isc_rail3_button1
@@ -218,31 +218,6 @@ screen isc_rail3_button1() zorder -999:
         add "images/shadow.png" align (0.5,0.5)
                 
                 
-    
-
-# demo panel
-label demo_panel:
-
-    $ info_panel_symbol = "exit"
-    
-    $ showtext = """
-
-
-- End of demo -
-
-You reached the end of the demo version....
-Now shut down your computer and go to sleep!
-
-"""
-
-    call info_panel from _call_info_panel_15
-    
-    #call sound_scan
-    #with pixellate
-    
-    return
-
-
 
 
 

@@ -168,13 +168,13 @@ label loop_isc_city_bar_toilets:
                     m "There are the sinks. {w=1.5} {nw}"
                     m "I could wash my hands.... {w=1.5} {nw}"
                     menu:
-                        "wash your hands":
+                        "Wash your hands":
                             call sound_tap from _call_sound_tap
                             pause 4
                             call sound_connected from _call_sound_connected_4
                             with flash
                             m "Yeah! My hands are clean now!{w=2.5} {nw}"
-                        "do nothing":
+                        "Do nothing":
                             #with hpunch
                             m "I prefer it dirty.{w=1.5} {nw}"
             $ startpos = 22

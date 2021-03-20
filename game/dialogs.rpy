@@ -5,8 +5,6 @@ init:
     
     $ text_i_dont_need_anything = "I don't need anything, thanks. {w=2.5}{nw}"
 
-
-
 label surface_borders:
     $ say_surfaceborder = renpy.random.choice(  ["I should not fly too far away...", 
                                                 "This seems interesting, but it is too far away.", 
@@ -139,7 +137,42 @@ label dialog_joke:
 
 
 
-
+label npc_dont_need_item(npc):
+    
+    if inventory_select in ["accesscard", "spacenet", "robotcard", "bulb"]:
+        $ npc_noneed_say = renpy.random.randint(1, 3)
+    else:
+        $ npc_noneed_say = renpy.random.randint(1, 9)
+    
+    
+    # unspecific items
+    if npc_noneed_say == 1:
+        npc "I don't need anything, thanks. {w=2.5}{nw}"
+    if npc_noneed_say == 2:
+        npc "I don't need that, thanks. {w=2.5}{nw}"
+    if npc_noneed_say == 3:
+        npc "I'm not interested, sorry. {w=3.5}{nw}"
+    
+        
+    # talk about item
+    if npc_noneed_say == 4:
+        npc "I don't need any [inventory_select], thanks. {w=3}{nw}"
+    if npc_noneed_say == 5:
+        npc "Do I look like I would really need any [inventory_select]? {w=4}{nw}"
+    if npc_noneed_say == 6:
+        npc "Please, don't bother me with your [inventory_select]. {w=3.5}{nw}"
+    if npc_noneed_say == 7:
+        npc "What do your want with your [inventory_select]? {w=3.5}{nw}"
+    if npc_noneed_say == 8:
+        npc "What's the thing with this [inventory_select]? {w=3}{nw}"
+        npc "Please don't bother me with it. {w=3.5}{nw}"
+    if npc_noneed_say == 9:
+        npc "If I need your [inventory_select], I'll let you know. {w=4}{nw}"
+        
+    
+    $ inventory_select = ""
+    
+    return
 
 
 

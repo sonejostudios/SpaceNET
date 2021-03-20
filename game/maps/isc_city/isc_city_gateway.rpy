@@ -124,7 +124,7 @@ label loop_isc_city_gateway:
                         m "Let's climb on the crane!{w=2} {nw}"
                     else:
                         m "The crane... {w=1} I could walk on it... {w=2.5} {nw}"
-                        m "I this it is very dangerous... {w=2}  Should I? {w=1} {nw}"
+                        m "I think it is very dangerous... {w=2}  Should I? {w=1} {nw}"
                 
                 else:
                     m "Wow... {w=1.5} {nw}"
@@ -288,8 +288,8 @@ label isc_spaceflight:
         hacker "Are you ready?{w=2} {nw}"
 
         menu:
-            "okay, let's go!":
-                m "okay, let's go!{w=2} {nw}"
+            "Okay, let's go!":
+                m "Okay, let's go!{w=2} {nw}"
                 
                 hacker "I'll archive a voice message for you.{w=3} {nw}"
                 hacker "Just call 111999 in the terminal.{w=3} {nw}"
@@ -302,8 +302,8 @@ label isc_spaceflight:
                 
                 jump isc_city_gateway
             
-            "no, please explain me again":
-                m "no, please explain me again.{w=2} {nw}"
+            "No, please explain me again":
+                m "No, please explain me again.{w=2} {nw}"
                 pass
             
 

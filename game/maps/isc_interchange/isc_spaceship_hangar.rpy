@@ -274,9 +274,6 @@ label crane_anime3:
 
 
 
-label buy_spaceship:
-    m "Today, all ships are for free! {w=3} {nw}"
-    jump isc_spaceship_info
 
 
 
@@ -306,15 +303,6 @@ screen isc_hangar_screen() zorder -999:
 
     
     hbox xalign 0.5 yalign 0.8:
-        #vbox xalign 0.5:
-            #label "buy" at center
-            #null height 10
-            #imagebutton: 
-            #    auto "images/buttonbig_%s.png"
-            #    action Play("sound", "sounds/collect.ogg"), Jump("buy_spaceship") at center
-            #label "buy" at center
-                
-        #null width 100
         
         vbox xalign 0.5:
             #label "select" at center

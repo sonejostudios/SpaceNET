@@ -67,7 +67,7 @@ label server_hellomsg:
     Hello!
     [ascii_line]
     
-    How are you?
+    How are you doing?
     
     Here is your inbox, you'll find all messages 
     sent to your private messaging system.
@@ -92,7 +92,7 @@ label server_uncrypttoolmsg:
     You'll need to download and install it 
     properly to use it.
     
-    I hope it will be useful for you!...
+    I hope it will be useful to you!...
     Bye
     
     - 4n0nym0u5 -
@@ -100,14 +100,14 @@ label server_uncrypttoolmsg:
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
     menu:
-        "download" if server_filelist[2] == "":
+        "Download" if server_filelist[2] == "":
             call sound_beep from _call_sound_beep_49
             call server_download from _call_server_download
             $ server_filelist[2] = "3. uncrypter_install"
             $ server_fileitems = 3
             
             jump server_start
-        "back":
+        "Back":
             call sound_beep from _call_sound_beep_50
             jump server_inbox
             
@@ -118,10 +118,10 @@ label server_uncrypttoolmsg:
 label server_download:
     show text "Do you want to download it?" at termtextpos2
     menu:
-        "download":
+        "Download":
             call sound_beep from _call_sound_beep_51
             pass
-        "back":
+        "Back":
             call sound_beep from _call_sound_beep_52
             jump server_start
                 
@@ -148,7 +148,7 @@ label server_welldonemsg:
     I've seen you decrypted the file 
     sucessfully, that's great!
     
-    Now insert a disk in the Terminal and
+    Now insert a disk in the terminal and
     copy the SpaceNET software to the disk.
     
     Then, try to find the secret SpaceNET nodes
@@ -159,7 +159,7 @@ label server_welldonemsg:
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
     menu:
-        "back":
+        "Back":
             #call notify_new_message
             #$ inbox_new_message = "*"
             #"Add new message with instructions about satellite"
@@ -228,16 +228,16 @@ label server_satellitemsg:
     
     
     menu:
-        "page 1":
+        "Page 1":
             $ server_mail_page = 1
             call sound_beep from _call_sound_beep_54
             jump server_satellitemsg
-        "page 2":
+        "Page 2":
             $ server_mail_page = 2  
             
             call sound_beep from _call_sound_beep_55
             jump server_satellitemsg 
-        "back":
+        "Back":
             call add_note("Terminal: locate io11\nio11 set new orbit to: X=350, Y=150\n4n0nym0u5 proxy phone number: 003007") from _call_add_note_12
             
             call sound_beep from _call_sound_beep_56
@@ -259,8 +259,8 @@ label server_numpad_sam_msg:
     It is too dangerous to send it to you 
     via the terminal.
     
-    Please meet me at the bar of xylo village.
-    See you,
+    Please meet me at the bar of Xylo village.
+    See you there,
         
     - Sam -
     """
@@ -270,7 +270,7 @@ label server_numpad_sam_msg:
     $ sam_numpad_mission = 1
     
     menu:
-        "back":
+        "Back":
             #call notify_new_message
             #$ inbox_new_message = "*"
             #"Add new message with instructions about satellite"

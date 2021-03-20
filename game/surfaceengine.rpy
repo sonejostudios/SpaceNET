@@ -265,11 +265,11 @@ label landing:
     menu:
         #"take off to space":
         #    jump takeoff_from_surface_to_space
-        "fly":
+        "Fly":
             $ ingame = False
             pass
             
-        "start landing":
+        "Start landing":
             hide screen surface_screen
             
             $ pnc_nodes_visible = True

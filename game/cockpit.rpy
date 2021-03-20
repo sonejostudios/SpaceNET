@@ -101,7 +101,7 @@ label cockpit:
     
     $ inventory_select = ""
     
-    show screen notify("cockpit")
+    show screen notify("Cockpit")
     
     scene bgcolor
     
@@ -203,11 +203,11 @@ label cockpit_menu:
     #        linear 1 alpha 1
     
     menu:
-        "navigate":
+        "Navigate":
             call sound_beep from _call_sound_beep_8
             jump cockpit_map
             
-        "space view":
+        "Space view":
             call sound_beep from _call_sound_beep_9
             $ inventory_button = False
             hide orbitmeter
@@ -215,7 +215,7 @@ label cockpit_menu:
             call sound_beep from _call_sound_beep_10
             jump cockpit_menu
             
-        "exit":
+        "Exit":
             call sound_beep from _call_sound_beep_11
             jump space
          
@@ -382,16 +382,16 @@ label cockpit_map_menu:
 
     menu:
         
-        "fly to" if destination_pos != spaceship_pos:
+        "Fly to" if destination_pos != spaceship_pos:
             $ hacker_space_meeting_done = False
             call flight from _call_flight
             jump space
         
-        "set destination":
+        "Set destination":
             jump cockpit_map2
 
             
-        "terminal":
+        "Terminal":
             #$ space_terminal = True
             scene bgcolor
             hide screen mini_planets
@@ -399,7 +399,7 @@ label cockpit_map_menu:
             call terminal from _call_terminal_3
             jump cockpit
             
-        "exit":
+        "Exit":
             hide destx
             hide desty
             hide target

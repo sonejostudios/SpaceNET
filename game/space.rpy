@@ -54,13 +54,6 @@ label space:
     $ space_terminal = True
     
     
-    # dev only
-    if superdev == True:
-        show screen _performance
-    else:
-        hide screen _performance
-
-
     #stop music
     stop atmo
     
@@ -130,9 +123,9 @@ label space:
             repeat 
         
         if planet == "sun":
-            show screen notify("in orbit of the [planet]")
+            show screen notify("In orbit of the [planet]")
         else:
-            show screen notify("in orbit of [planet]")
+            show screen notify("In orbit of [planet]")
         
     
     if planet == "none" or planet == "hacker":
@@ -382,11 +375,11 @@ label orbital_view:
     
     menu:
 
-        "map" if planet != "none":
+        "Map" if planet != "none":
             call sound_beep from _call_sound_beep_6
             jump map_view
             
-        "ask for landing authorization" if planet_auth_needed == "Yes" and planetxy_auth == False:
+        "Ask for landing authorization" if planet_auth_needed == "Yes" and planetxy_auth == False:
             call sound_modem from _call_sound_modem
             radio "Authorisation request.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0} {nw}"
             call sound_connected from _call_sound_connected_7
@@ -404,16 +397,16 @@ label orbital_view:
             jump orbital_view
             
             
-        "measure direct radiation" if spaceshiptype == "3" and planet == "sun":
+        "Measure direct irradiation" if spaceshiptype == "3" and planet == "sun":
             call sound_scan from _call_sound_scan_8
             with flash
-            radio "Measured direct radiation: 6272 W/m^2{w=3.0} {nw}"
+            radio "Measured direct irradiation: 6272 W/m^2{w=3.0} {nw}"
         
-            call add_note("Direct radiation of the sun: 6272 W/m^2") from _call_add_note_13
+            call add_note("Direct irradiation of the sun: 6272 W/m^2") from _call_add_note_13
             $ isc_sysadmin_sun = 2
         
         
-        "exit":
+        "Exit":
             
             hide screen planet_info
             call sound_beep from _call_sound_beep_7

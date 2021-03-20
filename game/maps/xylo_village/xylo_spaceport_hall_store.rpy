@@ -13,7 +13,7 @@ label xylo_spaceport_hall_store:
     show xylo_spaceport_hall_store at truecenter
     
     if startpos != 11:
-        show screen notify("xylo's spaceport shop")
+        show screen notify("Xylo's spaceport shop")
     
     show bgcolor behind xylo_spaceport_hall_store
     
@@ -190,8 +190,7 @@ mirror = 50c
 
 label xylo_spaceport_hall_vendor:
     if inventory_select != "":
-        $ inventory_select = ""
-        vendor "[text_i_dont_need_anything]"
+        call npc_dont_need_item(vendor) from _call_npc_dont_need_item
         return
         
     
@@ -204,13 +203,13 @@ label xylo_spaceport_hall_vendor:
     menu:
         #"{image=images/inventory/lamp_idle.png}":
         #    pass
-        "lamp\n100c":
+        "Lamp\n100c":
             call buy_item("lamp", 100) from _call_buy_item_3
         
-        "knife\n70c":
+        "Knife\n70c":
             call buy_item("knife", 70) from _call_buy_item_4
         
-        "mirror\n50c":
+        "Mirror\n50c":
             if xylo_village_mirror_state == 1:
                 m "This is a stupid idea...{w=2.0} {nw}"
                 m "I already bought one and used it at the laser fence.{w=3.5} {nw}"
@@ -218,14 +217,12 @@ label xylo_spaceport_hall_vendor:
             else:
                 call buy_item("mirror", 50) from _call_buy_item_5
         
-        "nothing, thanks.":
+        "Nothing, thanks.":
             m "Nothing, thanks.{w=2.0} {nw}"
             vendor "Okay!{w=2.0} {nw}"
             vendor "Come back if you need anything.{w=3.0} {nw}"
             
-    #show npc:
-    #    linear 1 rotate 90
-    #pause 1
+
     
     return
     

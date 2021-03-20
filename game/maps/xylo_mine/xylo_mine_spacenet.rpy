@@ -159,7 +159,7 @@ label xylo_mine_spacenet_earthquake:
     if xylo_mine_used_dynamite_dialog == False:
         $ xylo_mine_used_dynamite_dialog = True
         m "I think the explosion was too loud... {w=2} {nw}"
-        m "I just triggered sismic activity ! {w=2} {nw}"
+        m "I just triggered seismic activity ! {w=2} {nw}"
         m "I definitely should't stay here longer... {w=2} {nw}"
         
 

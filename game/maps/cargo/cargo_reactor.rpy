@@ -176,7 +176,7 @@ label cargo_reactor_computer:
     
     Reactor state: [cargo_reactor_state]
     
-    Remote Control is : [cargo_remote_control]
+    Remote Control is: [cargo_remote_control]
 
     """
     
@@ -204,8 +204,8 @@ label cargo_reactor_computer:
             $ showtext ="""
     Remote Control enabled!
     
-    Terminal Command : ssh cargo
-    Password : convoy"""
+    Terminal Command: ssh cargo
+    Password: convoy"""
             show text Text(showtext,text_align=termtext_align) at termtextpos
             
             $ cargo_remote_control = "enabled"

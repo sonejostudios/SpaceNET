@@ -40,7 +40,7 @@ label xylo_spaceport_hall_bar:
     image xylo_spaceport_hall_bar = imagemapsdir + "xylo_spaceport_hall_bar.png"
     
     scene bgcolor
-    show screen notify("Xylo Village Bar")
+    show screen notify("Xylo village bar")
     
     show xylo_spaceport_hall_bar
     
@@ -202,8 +202,7 @@ label loop_xylo_spaceport_hall_bar:
 label xylo_village_barman:
     
     if inventory_select != "":
-        $ inventory_select = ""
-        barman_xvil "[text_i_dont_need_anything]"
+        call npc_dont_need_item(barman_xvil) from _call_npc_dont_need_item_15
         return
     
     
@@ -213,7 +212,7 @@ label xylo_village_barman:
         linear 1 rotate 0
     #pause 2
     if xylo_bar_barman_flags[0] == 0:
-        barman_xvil "Hi, welcome to official bar of xylo village. {w=2}{nw}"
+        barman_xvil "Hi, welcome to the official bar of xylo village. {w=2}{nw}"
         barman_xvil "How can I help you? {w=2}{nw}"
     
     $ questions = ["I want a drink... {w=2.5} {nw}", 
@@ -233,7 +232,7 @@ label xylo_village_barman:
             "[questions[0]]":
                 m "[questions[0]]"
                 if xylo_bar_barman_flags[0] == 0:
-                    barman_xvil "Oh yeah, we have plenty of drinks.\nEverything you need!{w=3}{nw}"
+                    barman_xvil "Oh yeah, we've got plenty of drinks.\nEverything you need!{w=3}{nw}"
                     barman_xvil "We offer:\n1. [drinks[0]] (1c)\n2. [drinks[1]] (10c)\nAnd many more... {w=6} {nw}"
                 
                 $ xylo_bar_barman_flags[0] = 1
@@ -280,7 +279,7 @@ label xylo_village_barman:
                         jump loop_xylo_spaceport_hall_bar
                         
                         
-                    "nothing, thanks":
+                    "Nothing, thanks":
                         jump loop_xylo_spaceport_hall_bar
                             
         
@@ -322,8 +321,7 @@ label xylo_village_barman:
 label xylo_village_client1:
     
     if inventory_select != "":
-        $ inventory_select = ""
-        client1 "[text_i_dont_need_anything]"
+        call npc_dont_need_item(client1) from _call_npc_dont_need_item_16
         return
         
     
@@ -391,13 +389,13 @@ label xylo_village_client1:
                             
                         "Who is the owner?"if xylo_bar_client1_flags2[2] == 0:
                             m "Who is the owner? {w=2} {nw}"
-                            client1 "The owner? it is General Mining Corporation.{w=4} {nw}"
+                            client1 "The owner? It is General Mining Corporation.{w=4} {nw}"
                             client1 "But there is no office there.{w=3} {nw}"
                             $ xylo_bar_client1_flags2[2] = 1
                             
                         "Why did they close it?"if xylo_bar_client1_flags2[3] == 0:
                             m "Why did they close it? {w=2} {nw}"
-                            client1 "They said it is because of seismic activity.{w=4} {nw}"
+                            client1 "They said, it is because of seismic activity.{w=4} {nw}"
                             client1 "It is now too dangerous to work there.{w=3} {nw}"
                             client1 "But rumours are saying, they found something special there.{w=3} {nw}"
                             client1 "...{w=2} {nw}"
@@ -427,8 +425,8 @@ label xylo_village_client1:
                 client1 "Maybe... {w=1}Look. {w=1}As I left, I found this letter.{w=3} {nw}"
                 client1 "There are some personal documents of a friend of mine.{w=3} {nw}"
                 client1 "I'm sure, he would love to have them back.{w=3} {nw}"
-                client1 "But unfortunately I can't go to him because I don't own a spaceship!{w=4} {nw}"
-                client1 "He is now living on the sea coast, in the really south-east of here. {w=4} {nw}"
+                client1 "But unfortunately I can't go to him because I don't own any spaceship!{w=4} {nw}"
+                client1 "He is now living on the sea coast, in the really south-east. {w=4} {nw}"
                 client1 "Would you like to help and bring him the documents? {w=4} {nw}"
                 client1 "I'm sure he will be grateful.{w=3} {nw}"
                 menu:
@@ -501,8 +499,7 @@ label xylo_village_client2:
     
     
     if inventory_select != "" and inventory_select != "gem":
-        $ inventory_select = ""
-        client2gem "[text_i_dont_need_anything]"
+        call npc_dont_need_item(client2gem) from _call_npc_dont_need_item_17
         return
     
     
@@ -589,6 +586,7 @@ label xylo_village_client2:
 # SpaceNET info client - SAM
 label xylo_village_client4:
 
+
     # show/hide sam
     if countdown == False:
         show npc as client4:
@@ -607,10 +605,10 @@ label xylo_village_client4:
         samclient "Please, don't bother me. {w=2} {nw}"
         return
         
-
+        
     if inventory_select != "":
-        $ inventory_select = ""
-        sam "[text_i_dont_need_anything]"
+        if sam_meeting_mountains == False or game_end == False:
+            call npc_dont_need_item(samclient) from _call_npc_dont_need_item_18
         return
         
 
@@ -714,7 +712,7 @@ label xylo_village_client4:
             sam "They propably want to start a civil war!{w=2}{nw}"
             sam "We really need to stop this before it is too late!{w=2.5}{nw}"
             sam "I will organize a meeting with 4n0nym0us for you.{w=2.5}{nw}"
-            sam "She has a good idea how to stop this cargo ship and how you can help us.{w=3.5}{nw}"
+            sam "She has a good idea how to stop this cargo ship and how you could help us.{w=3.5}{nw}"
             sam "4n0nym0us is close to the industrial space city right now...{w=3.5}{nw}"
             sam "She will pick you up there at the space gateway.{w=2.5}{nw}"
             sam "It is a prohibided area, but I'll tell you how to get there.{w=3}{nw}"
@@ -728,7 +726,7 @@ label xylo_village_client4:
             sam "When you are done, just open the door.{w=2.5}{nw}"
             sam "Now let me see when you could meet 4n0nym0us there.{w=3}{nw}"
             sam "... {w=1}... {w=1}... {w=1}... {w=1}... {w=1}... {w=1}{nw}"
-            sam "Okay. She will pass by in 3 minutes!{w=2.5}{nw}"
+            sam "Okay. She will pass by now!{w=2.5}{nw}"
             sam "Are you ready?{w=2}{nw}"
             menu:
                 "Okay, let's go!":
@@ -767,7 +765,7 @@ label xylo_village_client4:
                 sam "All SpaceNET nodes are activated.{w=3}{nw}"
                 sam "And SpaceNET is online again!{w=2}{nw}"
                 sam "This is great!{w=2}{nw}"
-                sam "With the power of SpaceNET's information network, the government has no influence anymore...{w=6}{nw}"
+                sam "With the power of SpaceNET's information network, the corrupted government has no influence anymore...{w=6.5}{nw}"
                 sam "Now we can start a new life in peace...{w=3}{nw}"
                 sam "Thank you very much!{w=2}{nw}"
                 sam "...{w=1}{nw}"

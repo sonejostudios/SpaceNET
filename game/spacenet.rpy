@@ -31,9 +31,9 @@ label spacenet_comp(snetnode):
     SpaceNET
     [ascii_line]
     
-    Node Name : [snetnode]
+    Node Name: [snetnode]
     
-    State : [node_state]
+    State: [node_state]
     """
         
         show text Text(showtext,text_align=termtext_align) at termtextpos

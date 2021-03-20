@@ -73,15 +73,15 @@ label takeoff_anim(x):
     
     if x != "nomenu":
         menu:
-            "take off to space":
+            "Take off to space":
                 $ takeoftospace = True
                 $ ingame = False
                 $ isc_spaceship_interchange = False
                 pass
-            "take off to surface":
+            "Take off to surface":
                 $ isc_spaceship_interchange = False
                 pass
-            "exit":
+            "Exit":
                 $ landing = False
                 call sound_door from _call_sound_door_82
                 $ pnc_nodes_visible = True
@@ -253,7 +253,7 @@ label hyperspace_anim:
     hide screen cockpit_map_screen
     hide screen mini_planets
     
-    show screen notify("hyperspace")
+    show screen notify("Hyperspace")
     
     scene bgcolor
     

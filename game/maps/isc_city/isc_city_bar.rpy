@@ -25,9 +25,7 @@ init:
 label isc_city_bar:
     
     stop atmo
-    
-    #"sam_numpad_mission : [sam_numpad_mission]"
-    
+
     #$ steps_sound = "concrete"
     
     image isc_city_bar = imagemapsdir + "isc_city_bar.png"
@@ -36,8 +34,6 @@ label isc_city_bar:
     show screen notify("ISC City Bar")
     
     hide screen isc_cardgame_check
-    
-    #call show_space
     
     show isc_city_bar:
         pos (0,0)
@@ -197,11 +193,10 @@ label loop_isc_city_bar:
 # client east
 label isc_bar_client_east:
     if inventory_select != "":
-        $ inventory_select = ""
-        clientisc3 "[text_i_dont_need_anything]"
+        call npc_dont_need_item(clientisc3) from _call_npc_dont_need_item_7
         return
         
-    clientisc3 "hi! {w=2}{nw}"
+    clientisc3 "Hi! {w=2}{nw}"
     
     if drunktime > 0:
         call dialog_joke from _call_dialog_joke_3
@@ -240,7 +235,7 @@ label isc_bar_client_east:
     m "...Have you heard about SpaceNET? {w=3}{nw}"
     clientisc3 "No, sorry. {w=1.5}{nw}"
     
-    m "okay, bye... {w=1.5}{nw}"
+    m "Okay, bye... {w=1.5}{nw}"
     clientisc3 "Bye bye! {w=1.5}{nw}"
     
     return
@@ -249,8 +244,13 @@ label isc_bar_client_east:
 
 # sysadmin
 label isc_bar_sysadmin:
+    if inventory_select != "" and isc_sysadmin_move != 1:
+        call npc_dont_need_item(clientsysadmin) from _call_npc_dont_need_item_8
+        return
+    
+    
     if isc_sysadmin_move == 0:
-        clientsysadmin "hello!{w=2}{nw}"
+        clientsysadmin "Hello!{w=2}{nw}"
         
         $ questions = ["I'm just looking around.{w=2.0} {nw}", 
                         "What are you doing here?{w=2.0} {nw}", 
@@ -267,27 +267,27 @@ label isc_bar_sysadmin:
                 
                 "[questions[1]]" if isc_bar_client1_flags[1]  == 0:
                     m "[questions[1]]"
-                    clientsysadmin "I'm the system administrator of the industrial space station.{w=4} {nw}"
+                    clientsysadmin "I'm the system administrator of the Industrial Space Station.{w=4} {nw}"
                     clientsysadmin "I'm just having a rest before I'll fix the next problem here.{w=4} {nw}"
                     clientsysadmin "They are tons of things to do here!{w=2} {nw}"
                     $ isc_bar_client1_flags[1] = 1
                 
                 "[questions[2]]" if isc_bar_client1_flags[2] == 0 and isc_bar_client1_flags[1]  == 1:
                     m "[questions[2]]"
-                    clientsysadmin "You? helping me? I don't think so you can help me.{w=4} {nw}"
+                    clientsysadmin "You? helping me? I don't think you can help me.{w=4} {nw}"
                     clientsysadmin "Please let me do my work.{w=3} {nw}"
                     $ isc_bar_client1_flags[2] = 1
                     
                 "[questions[3]]" if isc_bar_client1_flags[3]  == 0 and isc_bar_client1_flags[1]  == 1:
                     m "[questions[3]]"
                     clientsysadmin "What?? Of course I have things to do!{w=3} {nw}"
-                    clientsysadmin "For example, I really need to repaire the space crane...{w=4} {nw}"
+                    clientsysadmin "For example, I really need to repair the space crane...{w=4} {nw}"
                     clientsysadmin "Usually it is possible to control the space crane remotely via the terminal.{w=4} {nw}"
                     clientsysadmin "But the controller of the space crane is broken.{w=3}{nw}"
                     clientsysadmin "No access for now!{w=3}{nw}"
                     m "I thing you should repair it.{w=2} {nw}"
                     m "A lot of engineers need it!{w=2} {nw}"
-                    clientsysadmin "Well.{w=1} ... {w=1}... {w=1}... {w=1}{nw}"
+                    clientsysadmin "Well...{w=1} ... {w=1}... {w=1}... {w=1}{nw}"
                     clientsysadmin "You are right.{w=2} I'll have a look now.{w=2}{nw}"
                     $ isc_bar_client1_flags[3] = 1
                     
@@ -301,7 +301,10 @@ label isc_bar_sysadmin:
     
 
     if isc_sysadmin_move == 1: # sys admin not in bar but at crane screen
-        call dialog_nothing from _call_dialog_nothing_24 
+        if inventory_select != "":
+            call dialog_nosense from _call_dialog_nosense_31
+        else:    
+            call dialog_nothing from _call_dialog_nothing_24 
     
     if isc_sysadmin_move == 2:
         m "Hello again!{w=2} {nw}"
@@ -319,7 +322,7 @@ label isc_bar_sysadmin:
     if isc_sysadmin_move == 3:
         
         if isc_bar_sysadmin_gem == True and isc_sysadmin_sun == 1:
-            sysadmin "What about the actual direct radiation of the sun?{w=3} {nw}"
+            sysadmin "What about the actual direct irradiation of the sun?{w=3} {nw}"
             m "I'm working on it.{w=2} {nw}"
             sysadmin "Okay...{w=1.5} {nw}"
             
@@ -328,13 +331,13 @@ label isc_bar_sysadmin:
             sysadmin "If you like, I have another job for you.{w=3} {nw}"
             m "Well... why not?{w=2} {nw}"
             sysadmin "I would like to adjust the sun protection shield of the ISC.{w=4} {nw}"
-            sysadmin "But for this, I need an actual measurement of the sun's direct radiation.{w=5} {nw}"
+            sysadmin "But for this, I need an actual measurement of the sun's direct irradiation.{w=5} {nw}"
             sysadmin "Could you fly to the sun and make this measurement for me?{w=4} {nw}"
             
             menu:
                 "Okay, I'll do it.":
                     m "Okay, I'll do it.{w=2} {nw}"
-                    sysadmin "This is great! see you later.{w=3} {nw}"
+                    sysadmin "This is great! See you later.{w=3} {nw}"
                     $ isc_sysadmin_sun = 1
                     
                 "No, sorry.":
@@ -343,7 +346,7 @@ label isc_bar_sysadmin:
                     
                     
         if isc_bar_sysadmin_gem == True and isc_sysadmin_sun == 2:
-            sysadmin "Do you know the actual direct radiation of the sun?{w=4} {nw}"
+            sysadmin "Do you know the actual direct irradiation of the sun?{w=4} {nw}"
             sysadmin "I need it to adjust the sun protection shield of the Industrial Space City.{w=5} {nw}"
             m "Yes, I measured it.{w=2} {nw}"
             m "Right now, the amount is 6272 W/m^2.{w=3} {nw}"
@@ -393,8 +396,8 @@ label isc_bar_player:
     
     
     if inventory_select == "":
-        clientplayer "hello!{w=2}{nw}"
-        m "hi! {w=1}{nw}"
+        clientplayer "Hello!{w=2}{nw}"
+        m "Hi! {w=1}{nw}"
         clientplayer "I know a really nice space card game.{w=3.5}{nw}"
         clientplayer "Do you want to try?{w=3}{nw}"
         clientplayer "Unfortunately I don't have any card game...{w=4}{nw}"
@@ -402,7 +405,7 @@ label isc_bar_player:
         
 
     # game
-    if inventory_select == "cards":
+    elif inventory_select == "cards":
 
         call use_and_keep_item from _call_use_and_keep_item_12
         call sound_connected from _call_sound_connected_23
@@ -425,13 +428,13 @@ label isc_bar_player:
 
             
             
-            "no, thanks":
-                m "no, thanks... bye! {w=2}{nw}"
-                clientplayer "okay, bye.{w=1.5}{nw}"
+            "No, thanks":
+                m "No, thanks... bye! {w=2}{nw}"
+                clientplayer "Okay, bye.{w=1.5}{nw}"
                 
     
-    if inventory_select != "cards" and inventory_select != "":
-        clientplayer "I don't need that, thanks.{w=3}{nw}"
+    else:
+        call npc_dont_need_item(clientplayer) from _call_npc_dont_need_item_9
                 
                 
     return
@@ -442,16 +445,16 @@ label isc_bar_player:
 
 # barman
 label isc_barman:
-    if inventory_select != "":
-        $ inventory_select = ""
-        barman_isc "[text_i_dont_need_anything]"
-        return
-    
-    barman_isc "hello! {w=1}{nw}"
     show npc as barman:
         linear 2 pos (370, 55)
         linear 1 rotate 180
     #pause 2
+    if inventory_select != "":
+        call npc_dont_need_item(barman_isc) from _call_npc_dont_need_item_10
+        return
+    
+    barman_isc "Hello! {w=1}{nw}"
+
     if isc_bar_barman_flags[0] == 0:
         barman_isc "Hi, welcome to my humble bar. {w=2}{nw}"
         barman_isc "How can I help you? {w=2}{nw}"
@@ -472,8 +475,8 @@ label isc_barman:
             "[questions[0]]":
                 m "[questions[0]]"
                 if isc_bar_barman_flags[0] == 0:
-                    barman_isc "Oh yeah, we have plenty of drinks.\nEverything you need!{w=3}{nw}"
-                    barman_isc "We have:\n1. [drinks[0]] (2c)\n2. [drinks[1]] (15c)\n3. [drinks[2]] (23c)\n4. [drinks[3]] (?c)\nAnd many more... {w=6} {nw}"
+                    barman_isc "Oh yeah, we've got plenty of drinks.\nEverything you need!{w=3}{nw}"
+                    barman_isc "We've got:\n1. [drinks[0]] (2c)\n2. [drinks[1]] (15c)\n3. [drinks[2]] (23c)\n4. [drinks[3]] (?c)\nAnd many more... {w=6} {nw}"
                 
                     $ isc_bar_barman_flags[0] = 1
                 
@@ -573,7 +576,7 @@ label isc_barman:
                                 jump alienshot_trip
 
                         
-                    "nothing, thanks":
+                    "Nothing, thanks":
                         pass
                             
         

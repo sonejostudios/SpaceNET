@@ -164,7 +164,7 @@ label xylo_sea_bar_barman:
                 m "Do you know where I can buy a drink?{w=2}{nw}"
                 barman_xsea "If you are not a member, you can't, I'm sorry.{w=3}{nw}"
                 m "What?{w=2}{nw}"
-                barman_xsea "Yes, it is like this, only member are allowed to buy drinks here.{w=4}{nw}"
+                barman_xsea "Yes, it is like this, only members are allowed to buy drinks here.{w=4}{nw}"
                 barman_xsea "Now, let me do my work.{w=3}{nw}"
                 barman_xsea "Bye.{w=1}{nw}"
                 $ xylo_sea_barman_flags[1] = 1
@@ -191,7 +191,7 @@ label xylo_sea_bar_barman:
         #return
     
     else:
-        barman_xsea "I don't need anything, thanks. {w=3}{nw}"
+        call npc_dont_need_item(barman_xsea) from _call_npc_dont_need_item_2
         return
     
     
@@ -222,7 +222,7 @@ label xylo_sea_bar_client1:
                 "[questions_client[1]]" if xylo_sea_bar_client1_flags[1] == 0: #how are you
                     m "[questions_client[1]]"
                     clientsea "What I'm doing here? Drinking to forget! {w=3} {nw}"
-                    clientsea "I worked in the silber mine in the north. {w=3} {nw}"
+                    clientsea "I worked in the silver mine in the north. {w=3} {nw}"
                     clientsea "But they closed it, so now I don't know what to do! {w=4} {nw}"
                     clientsea "The worse, they didn't give me back my personal documents. {w=4} {nw}"
                     clientsea "So I can't apply for a new job anywhere... {w=3} {nw}"
@@ -249,14 +249,14 @@ label xylo_sea_bar_client1:
         
     elif inventory_select == "letter":
         call use_item from _call_use_item_3
-        m "I think this belong to you.{w=2}{nw}"
-        m "A miner I met in xylos colony bar gave me this letter for you.{w=4}{nw}"
+        m "I think this belongs to you.{w=2}{nw}"
+        m " I met a miner in xylos colony bar. He gave me this letter for you.{w=4.5}{nw}"
         
         clientsea "Oh, that's amazing!{w=2}{nw}"
         clientsea "This are my personal documents!{w=2}{nw}"
         clientsea "Thank you very much.{w=2}{nw}"
         clientsea "I'll give you 100c for this favor!{w=2}{nw}"
-        clientsea "Thank you very much!{w=2}{nw}"
+        clientsea "Thank you so much!{w=2}{nw}"
         
         call io_cash(100) from _call_io_cash_10
 
@@ -268,7 +268,7 @@ label xylo_sea_bar_client1:
         
     
     else:
-        clientsea "I don't need anything, thanks. {w=3}{nw}"
+        call npc_dont_need_item(clientsea) from _call_npc_dont_need_item_3
         return
 
     

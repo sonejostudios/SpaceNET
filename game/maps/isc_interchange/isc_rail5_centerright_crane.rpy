@@ -31,7 +31,7 @@ label isc_rail5:
             linear 1 rotate 40
             repeat
             
-    # show broken crane all the time of only if sys admin is there?
+
     
     if isc_crane_pos_x == 0 and isc_crane_pos_y == 0:
         if isc_sysadmin_move < 2:
@@ -174,7 +174,7 @@ label loop_isc_rail5:
                         sysadmin "Are you crazy? I want to fix it, not to break it. {w=3.5} {nw}"
                         
                     else:
-                        sysadmin "I don't need that. {w=2.5} {nw}"
+                        call npc_dont_need_item(sysadmin) from _call_npc_dont_need_item_5
                         
                 
                 

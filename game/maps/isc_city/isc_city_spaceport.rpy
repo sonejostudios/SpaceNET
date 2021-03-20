@@ -6,9 +6,7 @@ init:
     $ isc_spaceport_auth = False
     #$ isc_spaceport_auth = True # set to false before release
 
-
     $ isc_spaceport_usehook = False
-    
     $ walk_on_crane_idea = False
 
 

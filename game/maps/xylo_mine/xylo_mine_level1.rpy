@@ -28,7 +28,7 @@ label xylo_mine_level1:
     image xylo_mine_level2 = imagemapsdir + "xylo_mine2.png"
     
     scene bgcolor
-    show screen notify("high security area")
+    show screen notify("High security area")
     
     show xylo_mine_level1
     

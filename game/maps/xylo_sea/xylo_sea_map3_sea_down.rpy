@@ -7,7 +7,7 @@ label xylo_map3:
     image xylo_map3 = imagemapsdir + "xylo_sea_p3.png"
     
     scene bgcolor
-    show screen notify("sea colony coast")
+    show screen notify("Sea colony coast")
     
     show xylo_map3
     show waves behind xylo_map3
@@ -104,6 +104,6 @@ we will be happy to give you more info.
     
     call info_panel from _call_info_panel_9
     
-    call add_note("xylo sea boat company number: 05060708") from _call_add_note_9
+    call add_note("Xylo sea boat company number: 05060708") from _call_add_note_9
     
     return

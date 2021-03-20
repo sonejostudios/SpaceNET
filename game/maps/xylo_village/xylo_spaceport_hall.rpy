@@ -19,12 +19,10 @@ label xylo_spaceport_hall:
     image xylo_spaceport_hall = imagemapsdir + "xylo_spaceport_hall.png"
     
     scene xylo_spaceport_hall
-    show screen notify("xylo spaceport hall")
+    show screen notify("Xylo spaceport hall")
     
     show bgcolor behind xylo_spaceport_hall    
     
-
-        
 
     # check if spaceship is landing on this map or not
     # $ landing = False
@@ -159,14 +157,14 @@ label loop_xylo_spaceport_hall:
 
 label xylo_spaceport_hall_oldman: 
     
+    if inventory_select != "":
+        call npc_dont_need_item(oldman) from _call_npc_dont_need_item_4
+        return
+        
     show npc:
         linear 1 pos (440,380) rotate 90
     pause 1.5
     
-    if inventory_select != "":
-        $ inventory_select = ""
-        oldman "[text_i_dont_need_anything]"
-        return
     
     m "Hello! {w=1.5} {nw}"
     oldman "What do you want? {w=2.0} {nw}"
@@ -212,7 +210,7 @@ label xylo_spaceport_hall_oldman:
         menu:
             "[questions[0]]" if xylo_village_oldman_flags[0]  == 0:
                 m "[questions[0]]"
-                oldman "Okay, than look around, hopefully you'll see something, hahaha! {w=4} {nw}"
+                oldman "Okay, then look around, hopefully you'll see something, hahaha! {w=4} {nw}"
                 $ xylo_village_oldman_flags[0] = 1
                 
             "[questions[1]]" if xylo_village_oldman_flags[1]  == 0:

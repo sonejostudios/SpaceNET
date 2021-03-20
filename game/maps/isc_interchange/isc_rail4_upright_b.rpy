@@ -22,16 +22,12 @@ label isc_rail4b:
     show isc_rail4
     
 
-    
-    
     #show warningfloor:
     #    anchor (0.5,0.5)
     #    pos (570,240)
     #    rotate 90
 
-    
-    
-    
+
     #show light:
     #    pos (115,30)
     #    
@@ -82,15 +78,6 @@ label isc_rail4b:
             pos (376,408)
         #$ pathC = (nodeA, nodeB, nodeC, nodeD, (0, 0), (0, 0), (0, 0), (0, 0))
         
-        
-
-    # shadow
-    #if shadow_enable == 1:
-    #    show shadow zorder 800:
-    #        pos nodeA
-            
-            
-            
 
 
 label loop_isc_rail4b:
@@ -200,12 +187,9 @@ label loop_isc_rail4b:
             m "I can see on the other side....  but...{w=2} {nw}"
             call dialog_nothing from _call_dialog_nothing_51
             $ startpos = 44
-            #jump isc_rail3
-
-            
 
 
-                
+
 
 
 

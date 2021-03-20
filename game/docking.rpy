@@ -64,10 +64,10 @@ label docking:
             
     pause 4
 
-    show screen notify("ready for docking")
+    show screen notify("Ready for docking")
         
     menu:
-        "start docking":
+        "Start docking":
             if spaceshiptype == "2":
                 jump start_docking
             
@@ -79,7 +79,7 @@ label docking:
             
             
             
-        "leave":
+        "Leave":
             jump leave_docking2
     
         
@@ -115,7 +115,7 @@ label start_docking:
             
         $ new_docking_pos2 = [0,0]
         $ docking_zoom2 = 0.0
-        radio "docking successful!{w=2.0} {nw}"
+        radio "Docking successful!{w=2.0} {nw}"
         hide screen docking_screen
         
         $ startpos = 1

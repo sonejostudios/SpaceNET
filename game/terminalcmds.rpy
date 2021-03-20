@@ -38,7 +38,7 @@ label term_commands:
     
     The terminal gives you the access to your 
     entire system.
-    Type a command and press Enter.
+    Type a command and press enter.
 
     Here some useful commands to start:
 
@@ -77,7 +77,7 @@ label term_commands:
 
     locate = search in the space databank.
     
-    Exemple:
+    Examples:
         locate sun
         locate megaship
         locate xylo
@@ -103,25 +103,25 @@ label term_commands:
         if io11_pass_entry == io11_pass:
             while True:
                 $ showtext = """
-    Satellite Io-11
+    Satellite io-11
     [ascii_line]
     
     Actual Position : [satellite_pos]
     
-    Satellite Connected to : [sat_connected_to]
+    Satellite connected to : [sat_connected_to]
     
     What do you want to do?
     """
             
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 menu:
-                    "restart Io-11":
+                    "Restart io-11":
                         m "Okay let's do this. {w=1.5} {nw}"
                         call server_progressbar from _call_server_progressbar
                         $ sat_connected_to = "-"
 
                         
-                    "connect to network":
+                    "Connect to network":
                         menu:
                             "A.R.K. Network":
                                 if intercom_sat == False:
@@ -147,20 +147,20 @@ label term_commands:
                                     $ sat_connected_to = "-"
                                     call sound_beep from _call_sound_beep_17
                                     with hpunch
-                            "exit":
+                            "Exit":
                                 pass
                                 
                                             
-                    "change orbit":
+                    "Change orbit":
                         m "Okay let's try this... {w=1.5} {nw}"
                         
                         python:
-                            io11_new_orbit_x = renpy.input(_("New Orbit X Position:"), allow= "0123456789",  length= 3 )
+                            io11_new_orbit_x = renpy.input(_("New orbit X position:"), allow= "0123456789",  length= 3 )
                             io11_new_orbit_x = io11_new_orbit_x.strip()
                             if not io11_new_orbit_x:
                                 io11_new_orbit_x = "-"
                         python:
-                            io11_new_orbit_y = renpy.input(_("New Orbit Y Position:"), allow= "0123456789",  length= 3 )
+                            io11_new_orbit_y = renpy.input(_("New orbit Y position:"), allow= "0123456789",  length= 3 )
                             io11_new_orbit_y = io11_new_orbit_y.strip()
                             if not io11_new_orbit_y:
                                 io11_new_orbit_y = "-"
@@ -182,7 +182,7 @@ label term_commands:
     
     New orbit validated!
     
-    Actual Position: ([io11_new_orbit_x],[io11_new_orbit_y])
+    Actual position: ([io11_new_orbit_x],[io11_new_orbit_y])
     """
                             show text Text(showtext,text_align=termtext_align) at termtextpos
                             call sound_connected from _call_sound_connected_11
@@ -194,10 +194,10 @@ label term_commands:
                         
                         else:
                             $ showtext ="""
-    Satellite Io-11 
+    Satellite io-11 
     [ascii_line]
     
-    Requested Position: ([io11_new_orbit_x],[io11_new_orbit_y])
+    Requested position: ([io11_new_orbit_x],[io11_new_orbit_y])
         
     Wrong position!
     
@@ -223,12 +223,12 @@ label term_commands:
         
         else:
          $ showtext ="""
-    Satellite Io-11 
+    Satellite io-11 
     [ascii_line]
     
     Wrong password. 
     
-    Remote Connection rejected !
+    Remote connection rejected !
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         call sound_beep from _call_sound_beep_19
@@ -241,10 +241,10 @@ label term_commands:
         
     if termtext == "ssh io11" and io11_remote_control == "disabled" :
         $ showtext ="""
-    Satellite Io-11 
+    Satellite io-11 
     [ascii_line]
     
-    Remote Connection rejected !
+    Remote connection rejected !
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         call sound_beep from _call_sound_beep_20
@@ -271,15 +271,15 @@ label term_commands:
     SOS
     [ascii_line]
     
-    Do you really want to send a sos message?
+    Do you really want to send a SOS message?
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         call sound_beep from _call_sound_beep_21
         
         menu:
-            "send sos":
+            "Send sos":
                 pass
-            "exit":
+            "Exit":
                 $ termtext = "help"
                 jump terminal
     
@@ -316,12 +316,12 @@ label term_commands:
         call sound_connected from _call_sound_connected_13
         pause 1
         
-        radio "Welcome to sea view boat company.{w=3.0} {nw}"
+        radio "Welcome to the Sea View Boat Company.{w=3.0} {nw}"
         
         
         $ questions = ["Hello!{w=1} {nw}", 
                         "Have you heard about SpaceNET? {w=2.0} {nw}", 
-                        "I'd like to have some info about the boat trips on the xylo sea.{w=4.0} {nw}", 
+                        "I'd like to have some info about the boat trips on the Xylo sea.{w=4.0} {nw}", 
                         "Bye bye.{w=2.0} {nw}"]
         
         while True:
@@ -369,7 +369,7 @@ label term_commands:
         call sound_connected from _call_sound_connected_14
         pause 1
         
-        radio "Hello, welcome to a.r.k. corporation. {w=2.5} {nw}"
+        radio "Hello, welcome to A.R.K. Corporation. {w=2.5} {nw}"
         radio "How can I help you? {w=2} {nw}"
         
         
@@ -452,7 +452,7 @@ label term_commands:
             #"reset spacenet state":
             #    $ spacenet_state = "offline"
             
-            "launch SpaceNET" if intercom_sat == True and sat_connected_to == "SpaceNET" and active_nodes_amount == max_nodes_amount and spacenet_state == "offline":
+            "Launch SpaceNET" if intercom_sat == True and sat_connected_to == "SpaceNET" and active_nodes_amount == max_nodes_amount and spacenet_state == "offline":
                 m "Yes, finally! Let's launch it! {w=2.5}{nw}"
                 call sound_modem from _call_sound_modem_2
                 call server_progressbar from _call_server_progressbar_7
@@ -481,7 +481,7 @@ label term_commands:
                 
                 
             
-            "info":
+            "Info":
                 $ showtext = """
     SpaceNET
     [ascii_line]
@@ -503,12 +503,12 @@ label term_commands:
     """
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 menu:
-                    "back":
+                    "Back":
                         $ termtext = "spacenet"
                         jump term_commands
         
             
-            "exit":
+            "Exit":
                 pass
                 
         $ termtext = "help"
@@ -672,7 +672,7 @@ label term_commands:
                     m "[questions[3]]"
                     
             m "Is there a huge spaceship close to you? {w=3} {nw}"
-            hacker "Yes... {w=1} And it is controlling my spaceship!{w=2} They are getting me!{w=2}{nw}"
+            hacker "Yes... {w=1} And it is controlling my spaceship!{w=2} They are catching me!{w=2}{nw}"
             hacker "Help!{w=2}{nw}"
             hacker "I'm coming closer to the spaceship...{w=3}{nw}"
             hacker "A huge door is opening right now... {w=3}{nw}"
@@ -734,11 +734,11 @@ label term_commands:
     ssh isc
     [ascii_line]
     
-    Welcome to isc remote control.
+    Welcome to ISC remote control.
     
-    Crane position : x[isc_crane_pos_x], y[isc_crane_pos_y]
+    Crane position: x[isc_crane_pos_x], y[isc_crane_pos_y]
     
-    Position name : [crane_pos_name]
+    Position name: [crane_pos_name]
     """
         show text Text(showtext,text_align=termtext_align) at termtextpos
         
@@ -856,7 +856,7 @@ label term_commands:
     ssh cargo
     [ascii_line]
     
-    Welcome to space cargo remote control.
+    Welcome to Space Cargo remote control.
     
     
     Cargo reactor state: [cargo_reactor_state]
@@ -898,7 +898,7 @@ label term_commands:
     ssh cargo 
     [ascii_line]
     
-    Remote Connection rejected!
+    Remote connection rejected!
     """
                             show text Text(showtext,text_align=termtext_align) at termtextpos
                             call sound_beep from _call_sound_beep_25
@@ -918,7 +918,7 @@ label term_commands:
     ssh cargo 
     [ascii_line]
     
-    Remote Connection rejected!
+    Remote connection rejected!
     """
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 call sound_beep from _call_sound_beep_26

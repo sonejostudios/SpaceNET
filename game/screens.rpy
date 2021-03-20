@@ -718,7 +718,7 @@ screen file_slots(title):
             grid gui.file_slot_cols gui.file_slot_rows:
                 style_prefix "slot"
 
-                xalign 0.3
+                xalign 1.0#0.3
                 yalign 0.5
 
                 spacing gui.slot_spacing
@@ -751,17 +751,17 @@ screen file_slots(title):
 
         spacing gui.page_spacing
 
-        textbutton _("{size=20}<") action FilePagePrevious()
-
-        textbutton _("{#auto_page}{size=20}A") action FilePage("auto")
+        #textbutton _("{size=20}<") action FilePagePrevious()
 
         #textbutton _("{#quick_page}Q") action FilePage("quick")
 
         ## range(1, 10) gives the numbers from 1 to 9.
         for page in range(1, 5):
             textbutton "{size=20}[page]" action FilePage(page)
+            
+        textbutton _("{#auto_page}{size=20}A") action FilePage("auto")
 
-        textbutton _("{size=20}>") action FilePageNext()
+        #textbutton _("{size=20}>") action FilePageNext()
         
         
             ## The page name, which can be edited by clicking on a button.

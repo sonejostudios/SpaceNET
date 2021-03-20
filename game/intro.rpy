@@ -118,10 +118,10 @@ label intro_logo:
         with Dissolve(1)
 
         menu:
-            "yes":
+            "Yes":
                 call sound_beep from _call_sound_beep_72
                 jump tutorial_room1
-            "no":
+            "No":
                 call sound_beep from _call_sound_beep_73
     
     hide text
@@ -193,7 +193,7 @@ label intro1:
     pause 2
         
     m "That's strange...{w=2.0} {nw}"
-    m "I can't move the spaceship anymore...{w=2.0} {nw}"
+    m "I can't move my spaceship anymore...{w=2.0} {nw}"
     
     
     

@@ -15,7 +15,7 @@ label xylo_village1:
     image xylo_village1 = imagemapsdir + "xylo_village1.png"
     
     scene bgcolor
-    show screen notify("xylo's colony village")
+    show screen notify("Xylo's colony village")
     
     image waves3 = SnowBlossom("images/wave.png", count=400, border=50, xspeed=(0), yspeed=(10), start=0, fast=True, horizontal=False)
     show waves3

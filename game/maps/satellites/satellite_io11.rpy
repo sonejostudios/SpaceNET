@@ -21,7 +21,7 @@ label satellite_io11:
     call show_space from _call_show_space_11
     show satellite_io11 at inspace_idle
     
-    show screen notify("satellite io11")
+    show screen notify("Satellite io11")
     
     $ inventory_button = True
     
@@ -119,7 +119,7 @@ label satellite_io11_computer:
     
     $ showtext = """
     Welcome to 
-    Satellite Io-11 Direct Control
+    Satellite io-11 Direct Control
     [ascii_line]
     
     Enable/disable Remote Control?

@@ -186,8 +186,7 @@ safety hook = 99c
 
 label isc_city_shop_vendor:
     if inventory_select != "":
-        $ inventory_select = ""
-        vendor "[text_i_dont_need_anything]"
+        call npc_dont_need_item(vendor) from _call_npc_dont_need_item_1
         return
     
     
@@ -196,10 +195,10 @@ label isc_city_shop_vendor:
     menu:
         #"{image=images/inventory/lamp_idle.png}":
         #    pass
-        "card game\n15c":
+        "Card game\n15c":
             call buy_item("cards", 15) from _call_buy_item
         
-        "light bulb\n10c":
+        "Light bulb\n10c":
             if isc_crane_repared == True:
                 m "This is a stupid idea...{w=2.0} {nw}"
                 m "I already bought one and gave it to the system administrator.{w=4} {nw}"
@@ -207,10 +206,10 @@ label isc_city_shop_vendor:
             else:    
                 call buy_item("bulb", 10) from _call_buy_item_1
         
-        "safety hook\n99c":
+        "Safety hook\n99c":
             call buy_item("hook", 99) from _call_buy_item_2
         
-        "nothing, thanks.":
+        "Nothing, thanks.":
             m "Nothing, thanks.{w=2.0} {nw}"
             vendor "Okay!{w=2.0} {nw}"
             vendor "Come back if you need anything.{w=3.0} {nw}"

@@ -17,14 +17,14 @@ label server_menu:
         #"start":
         #    call sound_beep
         #    jump server_start
-        "files":
+        "Files":
             call sound_beep from _call_sound_beep_58
             jump server_files
-        "[inbox_new_message]inbox[inbox_new_message]":
+        "[inbox_new_message]Inbox[inbox_new_message]":
             call sound_beep from _call_sound_beep_59
             $ inbox_new_message = ""
             jump server_inbox
-        "exit":
+        "Exit":
             call sound_beep from _call_sound_beep_60
             jump terminal
         
@@ -47,7 +47,7 @@ label server_fileitems:
             call sound_beep from _call_sound_beep_63
             $ server_itemchoice = 3
         
-        "back":
+        "Back":
             call sound_beep from _call_sound_beep_64
             $ server_itemchoice = 0
             return

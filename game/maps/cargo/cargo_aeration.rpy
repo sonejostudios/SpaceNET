@@ -9,7 +9,7 @@ label cargo_aeration:
     
     
     scene bgcolor
-    show screen notify("cargo reactor")
+    show screen notify("cargo aeration")
     
     image cargo_aeration = imagemapsdir + "cargo_aeration.png"
     show cargo_aeration

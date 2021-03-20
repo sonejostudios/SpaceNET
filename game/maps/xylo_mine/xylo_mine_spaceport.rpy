@@ -123,7 +123,7 @@ label loop_xylo_mine:
                 
                 if inventory_select == "minidroid":
                     
-                    m "I can use the minidroid... let's go! {w=2.5} {nw}"
+                    m "I could use the minidroid... let's go! {w=2.5} {nw}"
                     call use_and_keep_item from _call_use_and_keep_item_14
                     call sound_connected from _call_sound_connected_24
                     with flash

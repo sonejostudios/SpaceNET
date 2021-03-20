@@ -44,16 +44,16 @@ label server_helpfile:
     
     You have a file folder and an inbox folder.
     
-    In the file folder are all files saved
+    In the file folder, you'll find all files
     on your server.
     
-    In the inbox folder are all messages
+    In the inbox folder, you'll find all messages
     sent to your private messaging system.
     """
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
     menu:
-        "back":
+        "Back":
             call sound_beep from _call_sound_beep_40
             jump server_files
                 
@@ -96,7 +96,7 @@ label server_file2:
     TOP SECRET.
     
     Copy this software to a disk. 
-    This will also create an  autostart for the 
+    This will also create an autostart for the 
     installer. As soon as the disk is ready, just 
     insert it in a computer. SpaceNET will 
     automatically install and configure itself.
@@ -107,7 +107,7 @@ label server_file2:
     Once the software is installed on a computer
     node, it will show information about the 
     SpaceNET network. It will also create a bridge
-    to the terminal, type 'spacenet' in a terminal 
+    to the terminal. Type 'spacenet' in a terminal 
     to access it.
     
     Good luck.
@@ -119,7 +119,7 @@ label server_file2:
 
         while True:
             menu:
-                "copy to disk" if spacenet_copied == False:
+                "Copy to disk" if spacenet_copied == False:
                     call sound_beep from _call_sound_beep_43
                     if inventory_select == "spacenet":
                         call use_and_keep_item from _call_use_and_keep_item_29
@@ -139,7 +139,7 @@ label server_file2:
                     
                     
                     
-                "back":
+                "Back":
                     call sound_beep from _call_sound_beep_44
 
                     jump server_files
@@ -148,10 +148,10 @@ label server_file2:
 label server_install:
     show text "Do you want to install it?" at termtextpos2
     menu:
-        "install":
+        "Install":
             call sound_beep from _call_sound_beep_45
             pass
-        "back":
+        "Back":
             call sound_beep from _call_sound_beep_46
             jump server_start
                 
@@ -179,7 +179,7 @@ label server_uncrypter:
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
     menu:
-        "back":
+        "Back":
             call sound_beep from _call_sound_beep_47
             jump server_files
 

@@ -32,7 +32,7 @@ label xylo_sea_bunker_liftroom:
     show xylo_sea_bunker_liftroom at truecenter
     
 
-    show screen notify("lift maintenance room")
+    show screen notify("Lift maintenance room")
     
     
     #doors (comment to disable)

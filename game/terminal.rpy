@@ -51,7 +51,7 @@ label terminal:
 # main menu
 label term_menu:
     menu:
-        "terminal":
+        "Terminal":
             call sound_beep from _call_sound_beep_71
             $ showtext = """
     Terminal
@@ -67,19 +67,19 @@ label term_menu:
 
             jump term_commands
             
-        "login" if loginmenu == True:
+        "Login" if loginmenu == True:
             $ termtext = "login"
             jump term_login
             #jump term_menu
             
-        "spacenet" if spacenetmenu == True:
+        "Spacenet" if spacenetmenu == True:
             $ termtext = "spacenet"
             jump term_commands
             
         #"missions":
         #    jump term_missions
         
-        "exit":
+        "Exit":
             $ landing = False
             
             $ pnc_nodes_visible = True
@@ -115,7 +115,7 @@ label term_login:
     
     
     if superdev == 1:
-        "try ID: [playername], Password: freedom"
+        "Try ID: [playername], Password: freedom"
     
     python:
         termlogin = renpy.input(_("ID:"))
@@ -174,7 +174,7 @@ label terminal_locate(i):
     Locate
     [ascii_line]
     
-    [i] - object found in universe!
+    [i] - Object found in universe!
     
     DATA:
 
@@ -197,9 +197,9 @@ label terminal_locate(i):
     
 
     menu:
-        "add [planet] to cockpit map" if space_terminal == True:
+        "Add [planet] to cockpit map" if space_terminal == True:
             pass
-        "exit":
+        "Exit":
             $ termtext = "help"
             $ planet = planet2
             jump terminal
@@ -234,13 +234,13 @@ label terminal_locate(i):
         "[planetlist]"
     
     menu:
-        "go to cockpit":
+        "Go to cockpit":
             #scene bgcolor
             #call show_space
             #jump cockpit_map
             jump cockpit
         
-        "exit":
+        "Exit":
             pass
     
     return

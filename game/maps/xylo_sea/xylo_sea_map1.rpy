@@ -14,7 +14,7 @@ label xylo_map1:
     image xylo_map1 = imagemapsdir + "xylo_sea_map1.png"
     
     scene bgcolor
-    show screen notify("xylo sea colony")
+    show screen notify("Xylo sea colony")
     
     show xylo_map1
 

@@ -10,7 +10,7 @@ label xylo_mountain2:
     image xylo_mountain2 = imagemapsdir + "xylo_mountain2.png"
     
     scene bgcolor
-    show screen notify("sacred lake of the mountain")
+    show screen notify("Sacred lake of the mountain")
     
     image waves2 = SnowBlossom("images/wave.png", count=200, border=50, xspeed=(5), yspeed=(1), start=0, fast=True, horizontal=True)
     show waves2
@@ -233,12 +233,12 @@ label xylo_mountain2_spacenet_guy:
     
     sam "Do you remember the IOnet?{w=1} No? {w=1}Okay...{w=1} {nw}"
     sam "The IOnet was a free knowledge network. {w=3} {nw}"
-    sam "We are a groupe of scientist which is close to figure out a new energy source. {w=5} {nw}"
+    sam "We are a groupe of scientists which is close to figure out a new energy source. {w=5} {nw}"
     sam "Really powerful.{w=1} We wanted to use this free energy to create a new world.{w=4} A better one... {w=2}{nw}"
     sam "But the corrupt governement stopped us and put in jail almost all of us. {w=5} {nw}"
     sam "And you were the guy who helped us restarting the network! {w=4} {nw}"
     m "I'm sorry, but I can't remember anything! {w=3} {nw}"
-    sam "Okay...{w=1} maybe they gave you some serum to forget your past... {w=4} {nw}"
+    sam "Okay...{w=1} maybe they gave you some serum to erase your memory... {w=4.5} {nw}"
     sam "...{w=1} {nw}"
     sam "Okay...{w=1} {nw}"
     sam "...{w=1} {nw}"

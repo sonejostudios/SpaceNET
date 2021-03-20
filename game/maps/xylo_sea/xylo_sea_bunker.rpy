@@ -105,7 +105,7 @@ label xylo_sea_bunker:
     
     #$ xylo_bunker_lift_level = liftlevel[liftpos]
     
-    show screen notify("bunker level [liftlevelname]")
+    show screen notify("Bunker level [liftlevelname]")
     
     
     #doors (comment to disable)
@@ -232,7 +232,7 @@ label loop_xylo_sea_bunker:
             if startpos == 11:
                 m "I'm at level [liftlevelname]. {w=2} {nw}"
                 if liftpos == 2:
-                    m "Exept a lift control panel and an info board, there is absolutely nothing in this room! {w=6} {nw}"
+                    m "Except a lift control panel and an info board, there is absolutely nothing in this room! {w=6} {nw}"
                     m "This is quite strange... {w=1.5} {nw}"
                     
                 if liftpos == 1:

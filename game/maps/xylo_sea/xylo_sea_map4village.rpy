@@ -16,7 +16,7 @@ label xylo_map4:
     
     scene bgcolor
     show xylo_map4
-    show screen notify("xylo sea village")
+    show screen notify("Xylo sea village")
 
   
     show light:
@@ -138,15 +138,25 @@ Go east to go to the sea and enjoy the coast road!
 
 
 
-label xylo_sea_village_fisher: 
-    
+label xylo_sea_village_fisher:
     show npc:
         linear 1 pos (550,360) rotate 180
     pause 1.5
+    
+    if inventory_select != "":
+        call npc_dont_need_item(fisher) from _call_npc_dont_need_item_6
+        show npc:
+            linear 1 pos (600,360) rotate 270
+            linear 1 rotate 90
+        pause 2
+        hide npc
+        jump loop_xylo_map4
+    
+    
     fisher "Hello. How can I help you? {w=2.5} {nw}"
       
     
-    $ questions = ["What is it this the house?{w=2.5} {nw}", 
+    $ questions = ["What is it inside this the house?{w=3.5} {nw}", 
                     "What about the private property up there?{w=3.0} {nw}", 
                     "What about the sea? {w=2.0} {nw}", 
                     "I would like to rent a boat. {w=2.0} {nw}", 
@@ -181,7 +191,7 @@ label xylo_sea_village_fisher:
                 fisher "I have no boat to rent, sorry. {w=2} {nw}"
                 fisher "I had a boat before, but I sold it to the boat management company. {w=4} {nw}"
                 fisher "I don't know if they rent boats, sorry. {w=3} {nw}"
-                fisher "Just go to your right, there is an information table I think. {w=3.5} {nw}"
+                fisher "Just go to your right, I think there is an information table. {w=3.5} {nw}"
                 $ xylo_sea_village_fisher_flags[3] = 1
             
             "[questions[4]]":

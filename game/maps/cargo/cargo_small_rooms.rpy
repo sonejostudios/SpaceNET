@@ -277,11 +277,11 @@ label loop_cargo_smallroom_tube:
                 
                 if cargo_grate == True:
                     if inventory_select == "":
-                        m "This is a thin aeration shaft.{w=2}{nw}"
-                        m "There is a grate to close it.{w=2}{nw}"
+                        m "This is a thin aeration shaft.{w=2.5}{nw}"
+                        m "There is a grate to close it.{w=2.5}{nw}"
                     
                     if inventory_select == "laser":
-                        m "Let's see if I can open it.{w=2}{nw}"
+                        m "Let's see if I can open it.{w=2.5}{nw}"
                         call use_and_keep_item from _call_use_and_keep_item_2
                         call sound_electroshock from _call_sound_electroshock
                         with flash

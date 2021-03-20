@@ -9,7 +9,7 @@ label xylo_map6spaceport:
     image xylo_map6spaceport = imagemapsdir + "spaceportlift.png"
     
     scene bgcolor
-    show screen notify("xylo sea colony spaceport")
+    show screen notify("Xylo sea colony spaceport")
     
     show xylo_map6spaceport
     
@@ -84,14 +84,7 @@ label loop_xylo_map6spaceport:
             
         if exitpos == 3: # switch board
             if startpos == 3:
-                
-                if inventory_select == "cable":
-                    call xylo_use_cable_with_switchboard from _call_xylo_use_cable_with_switchboard
-                
-                if superdev == True:
-                    call xylo_shipchoice from _call_xylo_shipchoice
-                if superdev == False:
-                    call terminal from _call_terminal_7
+                call terminal from _call_terminal_7
             
             $ startpos = 3
             
@@ -147,49 +140,6 @@ label loop_xylo_map6spaceport:
                 jump surface_xylo
 
 
-
-
-label xylo_shipchoice:
-    
-    #call hidepaths
-    
-    menu:
-        
-        "spaceship 1":
-            $ spaceshiptype = "1"
-            call sound_connected from _call_sound_connected_30
-            return
-        
-        "spaceship 2":
-            $ spaceshiptype = "2"
-            call sound_connected from _call_sound_connected_31
-            return
-        
-        "spaceship 3":
-            $ spaceshiptype = "3"
-            call sound_connected from _call_sound_connected_32
-            return
-            
-        "terminal":
-            call terminal from _call_terminal_8
-            jump loop_xylo_map6spaceport
-        
-        "exit":
-            return
-
-    
-    
-
-label xylo_use_cable_with_switchboard:
-    
-    if inventory_select == "cable":
-        call sound_electroshock from _call_sound_electroshock_15
-        with hpunch
-        m "Wow, I made a short circuit! I hope everything is okay! {w=4.0} {nw}"
-            
-    return
-    
-    
     
   
     

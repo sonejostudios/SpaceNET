@@ -80,7 +80,7 @@ label planet_info:
     if planet == "xylo":
         $ planet_name = "xylo"
         $ planet_type = "Planet"
-        $ planet_size = "10000 km^3"
+        $ planet_size = "176659 km^3"
         $ planet_moons = "2"
         $ planet_atmosphere = "Yes"
         $ planet_temperature = "22"
@@ -108,7 +108,7 @@ label planet_info:
     if planet == "io11":
         $ planet_name = "Io-11"
         $ planet_type = "Satellite"
-        $ planet_size = "10 m^3"
+        $ planet_size = "20 m^3"
         $ planet_moons = "none"
         $ planet_atmosphere = "No"
         $ planet_temperature = "-60"
@@ -122,7 +122,7 @@ label planet_info:
     if planet == "cargo":
         $ planet_name = "Space Cargo"
         $ planet_type = "Spaceship"
-        $ planet_size = "1 km^3"
+        $ planet_size = "2 km^3"
         $ planet_moons = "none"
         $ planet_atmosphere = "Yes"
         $ planet_temperature = "19"

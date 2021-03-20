@@ -49,13 +49,12 @@ label hacker_meeting:
                 hacker "Okay... first, we need to install the new SpaceNET software on all SpaceNet nodes.{w=6} {nw}"
                 hacker "I will transfer this software to your private terminal account.{w=4} {nw}"
                 hacker "Of course, as an encrypted file!{w=3.5} {nw}"
-                hacker "Go to a terminal type 'login'.{w=3} {nw}"
+                hacker "Go to a terminal and type 'login'.{w=3.5} {nw}"
                 hacker "Then log in with your name.{w=3} {nw}"
                 hacker "The password is 'freedom'.{w=3} {nw}"
                 
                 $ terminal_login_text = "Login ID: " + playername + ", Password: freedom"
                 call add_note(terminal_login_text) from _call_add_note
-                #call add_note("Terminal login password: freedom")
                 
                 hacker "Once you are in, go to your mailbox.{w=2.5} I'll send you more instructions.{w=3}{nw}"
                 hacker "Copy it to a disk as soon as you have it.{w=4} {nw}"

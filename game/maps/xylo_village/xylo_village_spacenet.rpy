@@ -84,7 +84,7 @@ label xylo_village_spacenet:
                 
     
     
-    show screen notify("server room")
+    show screen notify("Server room")
     
     #doors (comment to disable)
     #show doorh as doorA:

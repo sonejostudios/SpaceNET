@@ -63,15 +63,6 @@ image side player = ConditionSwitch(
         "playertype=='minidroid'", "sides/minidroid.png")
 
 
-# avatar choose test
-#image side player = ConditionSwitch(
-#        "planet=='xylo'", "sides/sam.png",
-#        "planet=='demo'", "sides/hacker.png",
-#        "planet=='cargo'", "sides/barman.png",
-#        "planet=='isc'", "sides/barman2.png")
-
-
-
 
 image side sam = "sides/sam.png"
 image side hacker = "sides/hacker.png"
@@ -80,8 +71,7 @@ image side barman = "sides/barman.png"
 image side barman2 = "sides/barman2.png"
 image side barman3 = "sides/barman3.png"
 
-#image side vendor = "sides/vendor.png"
-#image side vendor2 = "sides/vendor2.png"
+
 
 image side vendor = ConditionSwitch(
         "planet=='xylo'", "sides/vendor.png",
@@ -154,9 +144,6 @@ image nodeanime:
     rotate 0
     repeat
     
-    
-    
-#image pathnodeA = At("images/node.png", nodeanime) # create image and apply transform on it
 
 
 image propeller:
@@ -322,7 +309,7 @@ image galaxy_intro:
 define config.main_menu_music = "music/space-amb.ogg"
 
 
-# set retro mouse and deactivate it
+# set retro mouse and deactivate it if touch device
 define config.mouse = {"default" : [("images/cursor_default.png", 30, 30)]}
 default preferences.system_cursor = True
 
@@ -377,10 +364,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.06"
+    define config.version = "1.07"
     
     # build date. Set date for release.
-    $ build_date = "2021-03-16"
+    $ build_date = "2021-03-20"
     
     # game name
     define config.name = "SpaceNET"
@@ -391,6 +378,7 @@ init :
     
     # use dev-keys and show superdev prefs button. For release = False
     $ use_dev_keys = False
+    
     
     # allow roll back and forward for superdev
     if superdev == True:
@@ -562,6 +550,10 @@ label start:
     if superdev == False:
         jump intro
         
+        
+    # show renderer performance screen
+    #show screen _performance
+    
     
     show screen setpos
     show screen buttons
@@ -603,17 +595,20 @@ label start:
     
     
     # for final end only
-    #$ active_nodes_amount = 4
-    #$ cargo_exploded = 2
-    #$ intercom_sat = True 
-    #$ sat_connected_to = "SpaceNET"
+    $ active_nodes_amount = 4
+    $ cargo_exploded = 2
+    $ intercom_sat = True 
+    $ sat_connected_to = "SpaceNET"
+    $ spacenet_state = "online"
+    $ game_end = True
     
-    #$ game_end = True
     
     $ spacenet_copied = True
 
 
     $ isc_spaceport_auth = True
+    
+    $ isc_spaceship_interchange = False
 
 
     #jump to first map

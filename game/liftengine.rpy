@@ -23,22 +23,22 @@ label liftengine:
     
     
     if liftpos == 0:
-        show screen notify("level [liftlevel[0]]") 
+        show screen notify("Level [liftlevel[0]]") 
         show lift:
             yanchor 938
             
     if liftpos == 1:
-        show screen notify("level [liftlevel[1]]") 
+        show screen notify("Level [liftlevel[1]]") 
         show lift:
             yanchor 600
             
     if liftpos == 2:
-        show screen notify("level [liftlevel[2]]") 
+        show screen notify("Level [liftlevel[2]]") 
         show lift:
             yanchor 300
             
     if liftpos == 3:
-        show screen notify("level [liftlevel[3]]") 
+        show screen notify("Level [liftlevel[3]]") 
         show lift:
             yanchor 56
     
@@ -66,7 +66,7 @@ label liftengine:
                 ease 3 yanchor 56
             pass
             
-        "[liftlevel[3]]\nexit" if liftpos == 3 :
+        "[liftlevel[3]]\nExit" if liftpos == 3 :
             #call sound_door
             #stop music
             $ pnc_nodes_visible = True
@@ -79,7 +79,7 @@ label liftengine:
                 ease 3 yanchor 300
             pass
             
-        "[liftlevel[2]]\nexit" if liftpos == 2 :
+        "[liftlevel[2]]\nExit" if liftpos == 2 :
             #call sound_door
             #stop music
             $ pnc_nodes_visible = True
@@ -92,7 +92,7 @@ label liftengine:
                 ease 3 yanchor 600
             pass
             
-        "[liftlevel[1]]\nexit" if liftpos == 1 :
+        "[liftlevel[1]]\nExit" if liftpos == 1 :
             #call sound_door
             #stop music
             $ pnc_nodes_visible = True
@@ -105,7 +105,7 @@ label liftengine:
                 ease 3 yanchor 938 
             pass
             
-        "[liftlevel[0]]\nexit" if liftpos == 0 :
+        "[liftlevel[0]]\nExit" if liftpos == 0 :
             #call sound_door
             #stop music
             $ pnc_nodes_visible = True
