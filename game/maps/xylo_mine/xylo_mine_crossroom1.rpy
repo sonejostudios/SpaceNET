@@ -10,7 +10,7 @@ label xylo_mine_crossroom1:
     
     scene bgcolor
     show crossroom at truecenter
-    show screen notify("maintenance room")
+    show screen notify("Maintenance room")
     
     show bgcolor behind crossroom
     
@@ -77,7 +77,7 @@ label loop_xylo_mine_crossroom1:
         $ pathC = (nodeA, nodeB, nodeC, nodeD, nodeAA, (0, 0), (0, 0), (0, 0))
         $ pathD = (nodeA, nodeB, nodeC, nodeD, nodeAA, (0, 0), (0, 0), (0, 0))
         
-        $ inventory_select = "lamp"
+        $ inventory_select = "flashlight"
         call use_and_keep_item from _call_use_and_keep_item_18
         
         
@@ -98,7 +98,7 @@ label loop_xylo_mine_crossroom1:
         $ startpos = 2
         
         # special use of node B with darkroom
-        if inventory_select == "lamp":
+        if inventory_select == "flashlight":
             call use_and_keep_item from _call_use_and_keep_item_19
             call sound_connected from _call_sound_connected_29
             #with flash
@@ -115,7 +115,7 @@ label loop_xylo_mine_crossroom1:
     if exitpos == 3: # jump to xylo mine multimap
         
         # special use of node D with darkroom
-        if inventory_select == "lamp":
+        if inventory_select == "flashlight":
             $ startpos = 3
             $ darkroom = False
             jump loop_xylo_mine_crossroom1
@@ -132,7 +132,7 @@ label loop_xylo_mine_crossroom1:
         $ startpos = 4
 
         # special use of node D with darkroom
-        if inventory_select == "lamp":
+        if inventory_select == "flashlight":
             $ darkroom = False
             jump loop_xylo_mine_crossroom1
         else:

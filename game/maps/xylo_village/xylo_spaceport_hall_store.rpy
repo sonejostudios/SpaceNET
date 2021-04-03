@@ -33,8 +33,8 @@ label xylo_spaceport_hall_store:
         repeat
         
     
-    image item_lamp = "images/inventory/lamp_idle.png"
-    show item_lamp:
+    image item_flashlight = "images/inventory/flashlight_idle.png"
+    show item_flashlight:
         anchor (0.5,0.5)
         zoom 0.7
         pos (0.4,175)
@@ -175,7 +175,7 @@ label xylo_spaceport_shop_info:
 
 Today's special prices:
 
-lamp = 100c
+flashlight = 100c
 knife = 70c
 mirror = 50c
 
@@ -201,10 +201,8 @@ label xylo_spaceport_hall_vendor:
     vendor "Hello, what do you want to buy?{w=3.0} {nw}"
 
     menu:
-        #"{image=images/inventory/lamp_idle.png}":
-        #    pass
-        "Lamp\n100c":
-            call buy_item("lamp", 100) from _call_buy_item_3
+        "Flashlight\n100c":
+            call buy_item("flashlight", 100) from _call_buy_item_3
         
         "Knife\n70c":
             call buy_item("knife", 70) from _call_buy_item_4

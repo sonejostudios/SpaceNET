@@ -45,7 +45,7 @@ init:
     
 # shops
 #xylo
-# lamp = 100
+# flashlight = 100
 # knife = 70
 # mirror = 50
 

@@ -5,7 +5,7 @@
 
 label isc_city_gateway_crane:
     
-    #$ inventory = ["newspaper", "screwdriver", "spacesuit", "lamp", "bulb", "mirror", "spacenet", "accesscard", "rope", 
+    #$ inventory = ["newspaper", "screwdriver", "spacesuit", "flashlight", "bulb", "mirror", "spacenet", "accesscard", "rope", 
     #                "cable", "pick", "dynamite", "minidroid", "gem", "star", "notebook", "laser", "key", "letter", "hook", "magnet"]
     
     #$ inventory = []

@@ -8,7 +8,7 @@ label isc_bar_lift_room:
     
     scene bgcolor
     show crossroomsmall at truecenter
-    show screen notify("lift room")
+    show screen notify("Lift room")
     
     show doorv:
         pos (305,240)
@@ -43,7 +43,7 @@ label isc_bar_lift_room:
     $ pathDD = (nodeA, nodeB, nodeC, nodeD, (0, 0), (0, 0), (0, 0), (0, 0))
     
     
-    #"it is too dark, use the lamp"
+
 
 
 label loop_isc_bar_lift_room:

@@ -1,0 +1,2001 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg2464"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
+   sodipodi:docname="spaceships.svg">
+  <defs
+     id="defs2458">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1097"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="506.30955"
+     inkscape:cy="277.22627"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="true"
+     inkscape:window-width="1896"
+     inkscape:window-height="1017"
+     inkscape:window-x="0"
+     inkscape:window-y="1050"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="true"
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1093" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata2461">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
+       d="m -75.787745,66.1412 -13.567256,-11.69004 -31.486289,0.0853 -0.0853,11.86069 z"
+       id="path3274"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
+       d="m -120.96244,57.05456 -3.37884,-2.53413 0.0603,11.46392 3.43916,-1.81009 z"
+       id="path4055"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
+       d="m -90.471966,57.03374 -2.353098,6.0035 9.321989,0.0302 z"
+       id="path4057"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       d="m -118.44268,49.55513 4.56507,0.0853 13.22596,4.7784 h -17.7057 z"
+       id="rect4059"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path4068"
+       d="m -118.25025,57.71411 17.88951,2.99331 -17.98772,2.05142 z"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       transform="scale(0.97257305,1.0282004)"
+       id="text3431"
+       y="62.966148"
+       x="-104.67336"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none;stroke-width:0.264583;enable-background:new"
+       xml:space="preserve"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         id="tspan3443"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.75519px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.264583"
+         y="62.966148"
+         x="-104.67336"
+         sodipodi:role="line">SD-2</tspan><tspan
+         id="tspan3445"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.75519px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.264583"
+         y="67.343742"
+         x="-104.67336"
+         sodipodi:role="line"> </tspan><tspan
+         id="tspan3447"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.75519px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.264583"
+         y="71.721336"
+         x="-104.67336"
+         sodipodi:role="line"> </tspan><tspan
+         id="tspan3449"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.75519px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.264583"
+         y="76.09893"
+         x="-104.67336"
+         sodipodi:role="line"> </tspan></text>
+    <g
+       id="g3499"
+       transform="matrix(0.26458333,0,0,0.26458333,-224.48604,-175.29585)"
+       style="enable-background:new">
+      <path
+         sodipodi:nodetypes="cccccc"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 562,1007.3436 -51.27783,-27.99251 -119.00327,0.41594 -0.3225,57.81577 124.78539,-0.9127 z"
+         id="path3411"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 391.26105,993.19063 -12.77043,-9.57782 0.22804,43.32819 12.99848,-6.8413 z"
+         id="path3413"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 497.5,992.30134 9.94946,12.38546 25.22077,-0.088 z"
+         id="path3415"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 400.78449,960.84632 17.25386,0.32251 49.98782,18.06011 h -66.91918 z"
+         id="path3417"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3419"
+         d="m 400.81553,1055.8434 17.25387,-0.3225 49.98782,-18.0602 h -66.91918 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3421"
+         d="m 401.5118,997.68345 67.61387,11.31325 -67.98505,7.7535 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3425"
+         d="m 497.5,1022.2813 10.12624,-10.8399 25.22077,0.088 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         transform="scale(1.2248132,0.81645103)"
+         id="text3471"
+         y="1263.3104"
+         x="378.2847"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan3473"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1263.3104"
+           x="378.2847"
+           sodipodi:role="line">SD-2</tspan><tspan
+           id="tspan3475"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1276.4484"
+           x="378.2847"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan3477"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1289.5862"
+           x="378.2847"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan3479"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1302.7241"
+           x="378.2847"
+           sodipodi:role="line"> </tspan></text>
+    </g>
+    <g
+       id="g3621"
+       transform="matrix(0.26458333,0,0,0.26458333,-224.48604,-175.29585)"
+       style="enable-background:new">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/spaceship1l.png"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 378.38368,822.7155 51.27783,-44.18278 119.00327,0.32251 0.3225,44.82777 z"
+         id="path3515"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/spaceship1l.png"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 549.12263,788.3723 12.77043,-9.57782 -0.22804,43.32824 -12.99848,-6.8413 z"
+         id="path3517"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/spaceship1l.png"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 433.88305,788.29367 8.89369,22.69032 -35.23271,0.11402 z"
+         id="path3519"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/spaceship1l.png"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 539.59919,760.02799 -17.25386,0.32251 -49.98782,18.06011 h 66.91918 z"
+         id="path3521"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/spaceship1l.png"
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3523"
+         d="m 538.87188,790.86512 -67.61387,11.31327 67.98505,7.75348 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3628"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-226.07354,-145.64554)"
+       style="enable-background:new">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3547"
+         d="m 655.92024,631.6261 -27.99251,51.27783 0.41594,119.00327 57.81577,0.3225 -0.9127,-124.78539 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3549"
+         d="m 644.94925,802.7186 -9.57782,12.77043 43.32819,-0.22804 -6.8413,-12.99848 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path3551"
+         d="m 640.87798,696.1261 12.38546,-9.94946 -0.088,-25.22077 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3553"
+         d="m 609.42296,792.84161 0.32251,-17.25386 18.06011,-49.98782 v 66.91918 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 704.42004,792.81057 -0.3225,-17.25387 -18.0602,-49.98782 v 66.91918 z"
+         id="path3555"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 646.26009,792.1143 11.31325,-67.61387 7.7535,67.98505 z"
+         id="path3557"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 670.85794,696.1261 -10.8399,-10.12624 0.088,-25.22077 z"
+         id="path3559"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         x="-596.25256"
+         y="832.88245"
+         id="text3561"
+         transform="matrix(0,-1.2248132,0.81645103,0,0,0)"><tspan
+           sodipodi:role="line"
+           x="-596.25256"
+           y="832.88245"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan3563">SD-2</tspan><tspan
+           sodipodi:role="line"
+           x="-596.25256"
+           y="846.02032"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan3565"> </tspan><tspan
+           sodipodi:role="line"
+           x="-596.25256"
+           y="859.15826"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan3567"> </tspan><tspan
+           sodipodi:role="line"
+           x="-596.25256"
+           y="872.29614"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan3569"> </tspan></text>
+    </g>
+    <g
+       id="g3654"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/spaceship1d.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-226.07354,-145.64554)"
+       style="enable-background:new">
+      <path
+         sodipodi:nodetypes="cccccc"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 654.50603,1027.58 -27.99251,-51.27783 0.41594,-119.00327 57.81577,-0.3225 -0.9127,124.78539 z"
+         id="path3573"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 642.53688,856.5286 -9.57782,-12.7705 43.32819,0.2281 -6.8413,12.9984 z"
+         id="path3575"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 608.00875,866.3645 0.32251,17.25385 18.06011,49.98782 V 866.687 Z"
+         id="path3579"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path3581"
+         d="m 703.00583,866.3955 -0.3225,17.2539 -18.0602,49.98782 V 866.718 Z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <circle
+       id="path4421"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       cx="-102.45459"
+       cy="161.28719"
+       r="2.8174939" />
+    <g
+       transform="matrix(0.31876306,0,0,0.31876306,-258.15887,-243.03082)"
+       inkscape:export-ydpi="90.446495"
+       inkscape:export-xdpi="90.446495"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship2.png"
+       id="g4328"
+       style="enable-background:new">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:connector-curvature="0"
+         id="path4331"
+         d="m 561.78134,1312.955 -26.5015,-13.0383 -24.77633,-31.1445 -119.00327,0.3225 -0.3225,44.8278 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:nodetypes="cccccc" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4333"
+         d="m 378.49999,1250.2675 22.91584,0.3225 66.39167,18.0601 h -88.87918 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 378.9936,1281.1046 89.9134,11.3133 -90.407,7.7534 z"
+         id="path4335"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         x="476.52759"
+         y="1271.8005"
+         id="text4337"
+         transform="scale(0.97257305,1.0282004)"><tspan
+           sodipodi:role="line"
+           x="476.52759"
+           y="1271.8005"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.0905px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4339">IO-1</tspan><tspan
+           sodipodi:role="line"
+           x="476.52759"
+           y="1288.3458"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.0905px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4341"> </tspan><tspan
+           sodipodi:role="line"
+           x="476.52759"
+           y="1304.891"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.0905px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4343"> </tspan><tspan
+           sodipodi:role="line"
+           x="476.52759"
+           y="1321.4363"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.0905px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4345"> </tspan></text>
+      <path
+         style="fill:none;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 497.5,1279.9215 10.5,0.2275 14.88034,18.8168 -25.38034,0.1767 z"
+         id="path4348"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       transform="matrix(0.31876306,0,0,0.31876306,-258.15887,-230.40845)"
+       id="g4350"
+       style="enable-background:new">
+      <path
+         sodipodi:nodetypes="cccccccc"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 562,1463.3681 -26.72016,-10.3588 -24.55767,-17.6337 -119.00327,0.4159 -0.3225,57.8158 124.78539,-0.9127 19.09805,-16.1988 z"
+         id="path4353"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 378.50001,1416.8708 22.97194,0.3225 66.55423,18.0602 h -89.09679 z"
+         id="path4355"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4357"
+         d="m 378.50002,1511.8679 22.97992,-0.3225 66.5773,-18.0602 h -89.12768 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="scale(1.2248132,0.81645103)"
+         id="text4359"
+         y="1821.8552"
+         x="378.2847"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           id="tspan4361"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1821.8552"
+           x="378.2847"
+           sodipodi:role="line">IO-1</tspan><tspan
+           id="tspan4364"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1834.9932"
+           x="378.2847"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan4366"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1848.131"
+           x="378.2847"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan4368"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1861.2689"
+           x="378.2847"
+           sodipodi:role="line"> </tspan></text>
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4370"
+         d="m 378.99478,1453.708 90.13088,11.3132 -90.62567,7.7535 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4372"
+         d="m 497.5,1445.1652 10.5,0.2275 14.88034,18.8168 -25.38034,0.1767 z"
+         style="fill:none;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 497.5,1483.5994 10.5,-0.2275 14.88034,-18.8168 -25.38034,-0.1767 z"
+         id="path4374"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <circle
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="path3736"
+       cx="-114.58715"
+       cy="191.56731"
+       r="2.8174939" />
+    <g
+       transform="matrix(0.31876306,0,0,0.31876306,-258.15887,-243.03082)"
+       inkscape:export-ydpi="90.450371"
+       inkscape:export-xdpi="90.450371"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship2l.png"
+       id="g4376"
+       style="enable-background:new">
+      <path
+         sodipodi:nodetypes="cccccc"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 378.49999,1407.7073 26.5015,-13.0383 24.77633,-31.1445 119.00327,0.3225 0.3225,44.8278 z"
+         id="path4378"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 561.78134,1345.0198 -22.91584,0.3225 -66.39167,18.0601 h 88.87918 z"
+         id="path4380"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4382"
+         d="m 561.28773,1375.8569 -89.9134,11.3133 90.407,7.7534 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4384"
+         d="m 442.78133,1374.6738 -10.5,0.2275 -14.88034,18.8168 25.38034,0.1767 z"
+         style="fill:none;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       transform="matrix(0.31876306,0,0,0.31876306,-258.15887,-243.03082)"
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship2u.png"
+       id="g4386"
+       style="enable-background:new">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4388"
+         d="m 647.43964,1219.4878 -10.3588,26.7202 -17.6337,24.5576 0.4159,119.0033 57.8158,0.3225 -0.0288,-120.366 -17.08268,-23.5174 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         sodipodi:nodetypes="cccccccc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4390"
+         d="m 600.94234,1402.9878 0.3225,-22.9719 18.0602,-66.5543 v 89.0968 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 695.93944,1402.9878 -0.3225,-22.9799 -18.0602,-66.5773 v 89.1276 z"
+         id="path4392"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         x="-1076.2129"
+         y="822.4953"
+         id="text4394"
+         transform="matrix(0,-1.2248132,0.81645103,0,0,0)"><tspan
+           sodipodi:role="line"
+           x="-1076.2129"
+           y="822.4953"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4396">IO-1</tspan><tspan
+           sodipodi:role="line"
+           x="-1076.2129"
+           y="835.63318"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4398"> </tspan><tspan
+           sodipodi:role="line"
+           x="-1076.2129"
+           y="848.77112"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4400"> </tspan><tspan
+           sodipodi:role="line"
+           x="-1076.2129"
+           y="861.909"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4403"> </tspan></text>
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 637.77954,1402.493 11.3132,-90.1309 7.7535,90.6257 z"
+         id="path4405"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+      <path
+         style="fill:none;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 629.23674,1283.9878 0.2275,-10.5 18.8168,-14.8803 0.1767,25.3803 z"
+         id="path4407"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4409"
+         d="m 667.67094,1283.9878 -0.2275,-10.5 -18.8168,-14.8803 -0.1767,25.3803 z"
+         style="fill:none;stroke:#8dd35f;stroke-width:4.15016;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <g
+       id="g3725"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship2d.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-224.48604,-175.29585)"
+       style="enable-background:new">
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4413"
+         d="m 641.9646,1469.2824 13.62984,108.5874 9.34122,-109.1835 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccccccc"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 653.60283,1689.7623 -12.48001,-32.1918 -21.24462,-29.5863 0.50107,-143.3721 69.65496,-0.3885 -0.24769,142.884 -20.3678,30.4629 z"
+         id="path4415"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 597.5841,1468.6863 0.38854,27.6761 21.75846,80.1827 v -107.3415 z"
+         id="path4417"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4419"
+         d="m 712.03412,1468.6863 -0.38854,27.6856 -21.75845,80.2106 v -107.3786 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <text
+         transform="matrix(0,-0.97257304,1.0282004,0,0,0)"
+         id="text4423"
+         y="646.1557"
+         x="-1619.6342"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           id="tspan4425"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.2002px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="646.1557"
+           x="-1619.6342"
+           sodipodi:role="line">IO-1</tspan><tspan
+           id="tspan4427"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.2002px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="683.30756"
+           x="-1619.6342"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan4429"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.2002px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="720.45947"
+           x="-1619.6342"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan4431"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:69.2002px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="757.61133"
+           x="-1619.6342"
+           sodipodi:role="line"> </tspan></text>
+    </g>
+    <g
+       id="g4797"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship3.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-588.2186,-191.12191)"
+       style="enable-background:new">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:connector-curvature="0"
+         id="path4575"
+         d="m 877.40019,1414.6153 -37.01895,-11.8747 0.66105,53.7191 37.67997,-8.4818 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="scccccsss"
+         inkscape:connector-curvature="0"
+         id="path4435"
+         d="m 1046.7839,1360.7638 c -19.452,0 -36.6148,9.7515 -46.89435,24.6494 l -145.54064,0.3657 0.14501,21.6494 16.93953,55.0524 127.1047,-14.3104 c 10.08475,16.0375 27.92145,26.6974 48.24575,26.6974 31.4661,0 56.9744,-25.543 56.9744,-57.0519 0,-31.509 -25.5083,-57.052 -56.9744,-57.052 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 873.13552,1362.9677 32.34112,0.3895 93.69851,21.8052 H 873.74001 Z"
+         id="path4437"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <text
+         transform="matrix(0.96490077,-0.11653881,0.12337178,1.0214754,0,0)"
+         id="text4441"
+         y="1498.5144"
+         x="719.51031"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         xml:space="preserve"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"><tspan
+           id="tspan4443"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1498.5144"
+           x="719.51031"
+           sodipodi:role="line">SF-3</tspan><tspan
+           id="tspan4445"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1521.9954"
+           x="719.51031"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan4447"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1545.4762"
+           x="719.51031"
+           sodipodi:role="line"> </tspan><tspan
+           id="tspan4449"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           y="1568.9572"
+           x="719.51031"
+           sodipodi:role="line"> </tspan></text>
+      <path
+         inkscape:connector-curvature="0"
+         id="path4551"
+         d="m 1009.9726,1391.7561 73.5803,0.092 c -2.4738,-3.3071 -5.384,-6.3402 -8.8213,-8.9765 -20.1769,-15.4745 -49.0611,-11.6401 -64.5146,8.5642 -0.082,0.1065 -0.1638,0.2121 -0.2444,0.3194 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4439"
+         d="m 816.11747,1395.7007 180.64288,15.951 -181.63456,10.9318 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+    </g>
+    <g
+       id="g4810"
+       transform="matrix(0.26458333,0,0,0.26458333,-588.2186,-191.12191)"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship3l.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="enable-background:new">
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1041.484,1595.6346 37.0189,-11.8747 -0.661,53.7191 -37.68,-8.4818 z"
+         id="path4642"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 872.1002,1541.7831 c 19.452,0 36.6148,9.7515 46.8944,24.6494 l 145.5406,0.3657 -0.145,21.6494 -16.9395,55.0524 -127.1047,-14.3104 c -10.0848,16.0375 -27.9215,26.6974 -48.2458,26.6974 -31.4661,0 -56.9744,-25.543 -56.9744,-57.0519 0,-31.509 25.5083,-57.052 56.9744,-57.052 z"
+         id="path4644"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="scccccsss" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4646"
+         d="m 1045.7486,1543.987 -32.3411,0.3895 -93.6985,21.8052 h 125.4351 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 908.9115,1572.7754 -73.5803,0.092 c 2.4738,-3.3071 5.384,-6.3402 8.8213,-8.9765 20.1769,-15.4745 49.0611,-11.6401 64.5146,8.5642 0.082,0.1065 0.1638,0.2121 0.2444,0.3194 z"
+         id="path4659"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1102.7667,1576.72 -180.6429,15.951 181.6346,10.9318 z"
+         id="path4661"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc" />
+    </g>
+    <g
+       id="g4784"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship3u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-598.27277,-191.65107)"
+       style="enable-background:new">
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1255.4019,1415.1915 -11.8586,37.0692 53.6462,-0.6619 -8.4703,-37.7312 z"
+         id="path4606"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4489"
+         d="m 1274.4709,1188.1293 c -32.1769,0 -58.2528,26.1114 -58.2528,58.3319 0,14.9637 5.6153,28.6221 14.8645,38.9489 l 0.5112,144.7144 81.4079,0.4388 -0.036,-140.3258 c 12.1183,-10.6908 19.7951,-26.3325 19.7951,-43.7763 0,-32.2205 -26.1125,-58.3319 -58.2893,-58.3319 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1204.9455,1466.8838 0.4541,-37.0419 25.4293,-107.3181 v 143.6677 z"
+         id="path4491"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4493"
+         d="m 1338.7041,1466.8838 -0.4542,-37.0547 -25.4292,-107.3552 v 143.7172 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path4505"
+         d="m 1256.8134,1405.2503 15.9292,-84.2829 10.9171,84.7455 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1237.4039,1221.133 73.5803,0.092 c -2.4738,-3.3071 -5.384,-6.3401 -8.8213,-8.9765 -20.1769,-15.4744 -49.0611,-11.6401 -64.5146,8.5643 -0.082,0.1065 -0.1637,0.212 -0.2444,0.3193 z"
+         id="path4608"
+         inkscape:connector-curvature="0" />
+      <text
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+         x="1279.0586"
+         y="1278.4714"
+         id="text4769"
+         transform="matrix(0.97189234,-0.00632953,0.00670064,1.0288769,0,0)"><tspan
+           sodipodi:role="line"
+           x="1279.0586"
+           y="1278.4714"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4771">SF-3</tspan><tspan
+           sodipodi:role="line"
+           x="1279.0586"
+           y="1301.9524"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4773"> </tspan><tspan
+           sodipodi:role="line"
+           x="1279.0586"
+           y="1325.4332"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4775"> </tspan><tspan
+           sodipodi:role="line"
+           x="1279.0586"
+           y="1348.9142"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:46.303px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+           id="tspan4777"> </tspan></text>
+    </g>
+    <g
+       id="g4818"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/spaceship3d.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-598.27277,-191.65107)"
+       style="enable-background:new">
+      <path
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/sources/text3431.png"
+         inkscape:connector-curvature="0"
+         id="path4681"
+         d="m 1252.5735,1591.9608 -11.8586,-37.0692 53.6462,0.6619 -8.4703,37.7312 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 1271.6425,1819.023 c -32.1769,0 -58.2528,-26.1114 -58.2528,-58.3319 0,-14.9637 5.6153,-28.6221 14.8645,-38.9489 l 0.5112,-144.7144 81.4079,-0.4388 -0.036,140.3258 c 12.1183,10.6908 19.7951,26.3325 19.7951,43.7763 0,32.2205 -26.1125,58.3319 -58.2893,58.3319 z"
+         id="path4683"
+         inkscape:connector-curvature="0" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="path4685"
+         d="m 1202.1171,1540.2685 0.4541,37.0419 25.4293,107.3181 v -143.6677 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 1335.8757,1540.2685 -0.4542,37.0547 -25.4292,107.3552 v -143.7172 z"
+         id="path4687"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc" />
+      <circle
+         transform="translate(0.5,32.5)"
+         id="path4782"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="1269.5"
+         cy="1615.8622"
+         r="17" />
+    </g>
+    <circle
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.32292;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="path3738"
+       cx="-51.356934"
+       cy="170.89153"
+       r="2.8174939" />
+    <rect
+       style="fill:#112119;fill-opacity:1;stroke:none;stroke-width:0.264583;enable-background:new"
+       id="rect5395"
+       width="181.04195"
+       height="21.7701"
+       x="-111.20399"
+       y="-220.33446"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/rail5.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g5354"
+       transform="matrix(0.26458333,0,0,0.26458333,-1204.7447,-1232.7267)"
+       style="enable-background:new">
+      <rect
+         y="3852.1572"
+         x="4093.6543"
+         height="29.941128"
+         width="745.32007"
+         id="rect4960"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4962"
+         d="m 4114.6802,3840.1278 v 54"
+         style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <use
+         transform="translate(19.002993)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4964" />
+      <use
+         transform="translate(57.00866)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4966" />
+      <use
+         transform="translate(38.005587)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4968" />
+      <use
+         transform="translate(95.014464)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4970" />
+      <use
+         transform="translate(76.011606)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4972" />
+      <use
+         transform="translate(114.01774)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4974" />
+      <use
+         transform="translate(152.02342)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4976" />
+      <use
+         transform="translate(133.02047)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4978" />
+      <use
+         transform="translate(171.02624)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4980" />
+      <use
+         transform="translate(190.02862)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4982" />
+      <use
+         transform="translate(209.03156)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4984" />
+      <use
+         transform="translate(247.03758)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4986" />
+      <use
+         transform="translate(266.04058)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4988" />
+      <use
+         transform="translate(228.03459)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4990" />
+      <use
+         transform="translate(380.05784)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4992" />
+      <use
+         transform="translate(304.04652)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4994" />
+      <use
+         transform="translate(323.04948)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4996" />
+      <use
+         transform="translate(285.04355)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use4998" />
+      <use
+         transform="translate(399.06117)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5000" />
+      <use
+         transform="translate(342.05212)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5002" />
+      <use
+         transform="translate(361.05529)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5004" />
+      <use
+         transform="translate(494.07568)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5006" />
+      <use
+         transform="translate(456.06978)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5008" />
+      <use
+         transform="translate(475.07266)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5010" />
+      <use
+         transform="translate(437.06664)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5012" />
+      <use
+         transform="translate(418.06404)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5014" />
+      <use
+         transform="translate(513.07806)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5016" />
+      <use
+         transform="translate(551.08391)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5018" />
+      <use
+         transform="translate(532.08113)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5020" />
+      <use
+         transform="translate(570.08689)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5032" />
+      <use
+         transform="translate(608.09282)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5062" />
+      <use
+         transform="translate(589.08961)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5066" />
+      <use
+         transform="translate(646.09865)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5068" />
+      <use
+         transform="translate(627.09572)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5072" />
+      <use
+         transform="translate(665.10142)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5146" />
+      <use
+         transform="translate(684.10465)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5150" />
+      <use
+         transform="translate(703.10748)"
+         height="1052.3622"
+         width="744.09448"
+         y="0"
+         x="0"
+         xlink:href="#path4962"
+         id="use5154" />
+    </g>
+    <g
+       id="g5975"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/train.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-1239.3337,-1685.4358)"
+       style="enable-background:new">
+      <g
+         id="g5846"
+         transform="translate(344.25554,452.45566)">
+        <g
+           transform="translate(-234.75592,43.06252)"
+           id="g5848">
+          <rect
+             style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="rect5850"
+             width="401.66696"
+             height="85.372581"
+             x="4300.7598"
+             y="4895.2017"
+             ry="28.828938"
+             rx="28.828938" />
+          <path
+             style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1"
+             d="m 4314.4874,4954.8315 v -33.8871"
+             id="path5852"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="cc" />
+          <path
+             sodipodi:nodetypes="cc"
+             inkscape:connector-curvature="0"
+             id="path5854"
+             d="m 4689.4308,4954.8315 v -33.8871"
+             style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1" />
+        </g>
+        <text
+           transform="scale(0.97257305,1.0282004)"
+           id="text5856"
+           y="4851.5444"
+           x="4331.915"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan5858"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.2452px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             y="4851.5444"
+             x="4331.915"
+             sodipodi:role="line">WAGON - 2</tspan></text>
+      </g>
+      <g
+         id="g5860"
+         transform="translate(346.73448,451.45568)">
+        <rect
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="rect5862"
+           width="401.66696"
+           height="85.372581"
+           x="3633.4763"
+           y="4939.2642"
+           ry="28.828938"
+           rx="28.828938" />
+        <path
+           style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 3647.204,4998.8939 v -33.8871"
+           id="path5864"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="path5866"
+           d="m 4022.1474,4998.8939 v -33.8871"
+           style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+           x="3887.1899"
+           y="4852.5171"
+           id="text5868"
+           transform="scale(0.97257305,1.0282004)"><tspan
+             sodipodi:role="line"
+             x="3887.1899"
+             y="4852.5171"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.2452px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             id="tspan5870">WAGON - 1</tspan></text>
+      </g>
+      <g
+         id="g5872"
+         transform="translate(341.77679,452.45566)">
+        <g
+           id="g5874"
+           transform="translate(197.77165,43.06252)">
+          <g
+             id="g5876">
+            <rect
+               ry="28.828938"
+               y="4895.2017"
+               x="4300.7598"
+               height="85.372581"
+               width="401.66696"
+               id="rect5878"
+               style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               rx="28.828938" />
+            <path
+               sodipodi:nodetypes="cc"
+               inkscape:connector-curvature="0"
+               id="path5880"
+               d="m 4314.4874,4954.8315 v -33.8871"
+               style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1" />
+            <path
+               style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1"
+               d="m 4689.4308,4954.8315 v -33.8871"
+               id="path5882"
+               inkscape:connector-curvature="0"
+               sodipodi:nodetypes="cc" />
+          </g>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+             x="4573.291"
+             y="4809.6631"
+             id="text5884"
+             transform="scale(0.97257305,1.0282004)"><tspan
+               id="tspan5886"
+               sodipodi:role="line"
+               x="4573.291"
+               y="4809.6631"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:51.2452px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start">WAGON - 3</tspan></text>
+        </g>
+      </g>
+      <path
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+         d="m 3887.1857,5390.7199 h 35.8146 c 15.9712,0 28.8289,12.8577 28.8289,28.8289 v 27.7147 c 0,15.9712 -12.8577,28.8289 -28.8289,28.8289 h -35.8146 c -15.9712,0 -88.8289,-42.6863 -88.8289,-42.6863 0,0 71.1217,-41.8531 88.8289,-42.6862 z"
+         id="path5890"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cssssscc" />
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+         d="m 3871.4361,5409.0807 c -16.9848,6.7585 -45.8125,23.4375 -45.8125,23.4375 0,0 29.0552,16.7407 45.8125,23.4687 z"
+         id="path5892" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5894"
+         d="m 3938.6861,5450.3497 v -33.8871"
+         style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssssscc"
+         inkscape:connector-curvature="0"
+         id="path5898"
+         d="m 5335.0005,5476.0928 h -35.8146 c -15.9712,0 -28.8289,-12.8577 -28.8289,-28.8289 v -27.7147 c 0,-15.9712 12.8577,-28.8289 28.8289,-28.8289 h 35.8146 c 15.9712,0 88.8289,42.6863 88.8289,42.6863 0,0 -71.1217,41.8531 -88.8289,42.6862 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+      <path
+         id="path5900"
+         d="m 5350.7501,5457.732 c 16.9848,-6.7585 45.8125,-23.4375 45.8125,-23.4375 0,0 -29.0552,-16.7407 -45.8125,-23.4687 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:15, 5;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 5283.5001,5416.4626 v 33.8871"
+         id="path5902"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-1206.2415,-1194.1864)"
+       id="g6044"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/rails.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="enable-background:new">
+      <rect
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect6046"
+         width="745.32007"
+         height="29.941128"
+         x="4093.6543"
+         y="3852.1572" />
+      <path
+         style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 4114.6802,3840.1278 v 54"
+         id="path6048"
+         inkscape:connector-curvature="0" />
+      <use
+         id="use6050"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(19.002993)" />
+      <use
+         id="use6052"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(57.00866)" />
+      <use
+         id="use6054"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(38.005587)" />
+      <use
+         id="use6056"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(95.014464)" />
+      <use
+         id="use6058"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(76.011606)" />
+      <use
+         id="use6060"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(114.01774)" />
+      <use
+         id="use6062"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(152.02342)" />
+      <use
+         id="use6064"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(133.02047)" />
+      <use
+         id="use6066"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(171.02624)" />
+      <use
+         id="use6068"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(190.02862)" />
+      <use
+         id="use6070"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(209.03156)" />
+      <use
+         id="use6072"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(247.03758)" />
+      <use
+         id="use6074"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(266.04058)" />
+      <use
+         id="use6076"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(228.03459)" />
+      <use
+         id="use6078"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(380.05784)" />
+      <use
+         id="use6080"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(304.04652)" />
+      <use
+         id="use6082"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(323.04948)" />
+      <use
+         id="use6084"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(285.04355)" />
+      <use
+         id="use6086"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(399.06117)" />
+      <use
+         id="use6088"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(342.05212)" />
+      <use
+         id="use6090"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(361.05529)" />
+      <use
+         id="use6092"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(494.07568)" />
+      <use
+         id="use6094"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(456.06978)" />
+      <use
+         id="use6096"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(475.07266)" />
+      <use
+         id="use6098"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(437.06664)" />
+      <use
+         id="use6100"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(418.06404)" />
+      <use
+         id="use6102"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(513.07806)" />
+      <use
+         id="use6104"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(551.08391)" />
+      <use
+         id="use6106"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(532.08113)" />
+      <use
+         id="use6108"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(570.08689)" />
+      <use
+         id="use6110"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(608.09282)" />
+      <use
+         id="use6112"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(589.08961)" />
+      <use
+         id="use6114"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(646.09865)" />
+      <use
+         id="use6116"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(627.09572)" />
+      <use
+         id="use6118"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(665.10142)" />
+      <use
+         id="use6120"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(684.10465)" />
+      <use
+         id="use6122"
+         xlink:href="#path4962"
+         x="0"
+         y="0"
+         width="744.09448"
+         height="1052.3622"
+         transform="translate(703.10748)" />
+    </g>
+    <g
+       id="g5997"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/al_sship.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(0.26458333,0,0,0.26458333,-246.82537,-358.59491)"
+       style="enable-background:new">
+      <g
+         transform="rotate(31.143457,414.07298,443.07633)"
+         id="g5965">
+        <path
+           sodipodi:nodetypes="cccccc"
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 562,1007.3436 -51.27783,-27.99251 -119.00327,0.41594 -0.3225,57.81577 124.78539,-0.9127 z"
+           id="path5967"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 391.26105,993.19063 -12.77043,-9.57782 0.22804,43.32819 12.99848,-6.8413 z"
+           id="path5969"
+           inkscape:connector-curvature="0" />
+        <path
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 497.5,992.30134 9.94946,12.38546 25.22077,-0.088 z"
+           id="path5971"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccc" />
+        <path
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1"
+           d="m 400.78449,960.84632 17.25386,0.32251 49.98782,18.06011 h -66.91918 z"
+           id="path5973"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path5975"
+           d="m 400.81553,1055.8434 17.25387,-0.3225 49.98782,-18.0602 h -66.91918 z"
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           id="path5977"
+           d="m 401.5118,997.68345 67.61387,11.31325 -67.98505,7.7535 z"
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+        <path
+           sodipodi:nodetypes="cccc"
+           inkscape:connector-curvature="0"
+           id="path5979"
+           d="m 497.5,1022.2813 10.12624,-10.8399 25.22077,0.088 z"
+           style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <text
+           transform="scale(1.2248132,0.81645103)"
+           id="text5981"
+           y="1263.3104"
+           x="378.2847"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan5983"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             y="1263.3104"
+             x="378.2847"
+             sodipodi:role="line">SD-2</tspan><tspan
+             id="tspan5985"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             y="1276.4484"
+             x="378.2847"
+             sodipodi:role="line"> </tspan><tspan
+             id="tspan5987"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             y="1289.5862"
+             x="378.2847"
+             sodipodi:role="line"> </tspan><tspan
+             id="tspan5989"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.2758px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start"
+             y="1302.7241"
+             x="378.2847"
+             sodipodi:role="line"> </tspan></text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path5991"
+         d="m 184.83217,884.22714 -2.84188,18.77126 c 0,0 14.07257,0.88899 2.64097,15.21606 -11.4316,14.32708 -18.44476,20.32021 -18.19148,31.57075 0.25328,11.25055 -8.48313,4.45027 -14.59585,14.18849 -6.11273,9.73822 -2.59738,18.38174 12.75539,34.06487 15.35277,15.68313 -14.0263,11.98623 12.25761,23.20383 26.28391,11.2176 64.71566,8.262 80.20611,-9.9415 15.49042,-18.2034 -2.90914,-70.46929 -15.24142,-84.4899 -12.33229,-14.0206 -56.98945,-42.58386 -56.98945,-42.58386 z"
+         style="fill:#112119;fill-opacity:1;stroke:none" />
+      <path
+         sodipodi:nodetypes="csssc"
+         inkscape:connector-curvature="0"
+         id="path5993"
+         d="m 182.53432,896.95383 c -3.84792,41.28082 -12.48834,42.91472 -15.35922,52.10154 -2.87088,9.18682 -2.2967,6.89011 -7.46429,10.33517 -5.16758,3.44506 -11.48352,10.33517 -9.76099,14.35441 1.72252,4.01923 10.33517,18.37364 12.0577,21.81869"
+         style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g6801"
+       transform="matrix(0.26458333,0,0,0.26458333,-397.98146,13.88853)"
+       inkscape:export-filename="/home/vinz/RenPIGames/Rooms/game/pics/boat.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       style="enable-background:new">
+      <path
+         sodipodi:nodetypes="cczcczc"
+         inkscape:connector-curvature="0"
+         id="rect6790"
+         d="m 396.39598,-101.25281 v 0 c 0,0 13.9892,17.443756 17.89598,35.498134 3.90678,18.054379 0,68.5348372 0,68.5348372 H 378.5 c 0,0 -3.90678,-50.4804582 0,-68.5348372 3.90678,-18.054378 17.89598,-35.498134 17.89598,-35.498134 z"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cccc"
+         inkscape:connector-curvature="0"
+         id="path6797"
+         d="m 396.43657,-83.832058 -8.19804,12.601275 h 16.3149 z"
+         style="fill:none;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="-18.879164"
+         x="386.14438"
+         height="11.509246"
+         width="20.503199"
+         id="rect6799"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:5;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+    </g>
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="M 141.69906,64.639177 127,61.184896 v 3.454281 z"
+       id="path1108"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4s.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 119.59166,66.711747 6.90858,1.439283 v 5.757137 l -6.90858,1.439285 z"
+       id="path1110"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4s.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 171.06046,75.002022 -1.72713,-3.454281 -15.54428,-1.727141 -5.18142,-5.181423 -24.17998,10e-7 -0.0735,9.973322 2.64583,2.116667 h 18.52081 l 16.90392,-3e-6 z"
+       id="path1099"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4s.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 148.01546,66.366318 3.45429,3.454282 h -5.18143 z"
+       id="path1103"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4s.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="rect1101"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 141.93531,70.480999 -14.69906,-3.557464 v 7.114921 l 15.63875,0.04488 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4s.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="rect1114"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85209;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 121.49308,71.777679 h 18.26359 v 0.600225 h -18.26359 z"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4s.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       transform="scale(0.97257306,1.0282004)"
+       id="text3431-3"
+       y="72.78196"
+       x="149.35417"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none;enable-background:new"
+       xml:space="preserve"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4s.png"><tspan
+         id="tspan3449-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none"
+         y="72.78196"
+         x="149.35417"
+         sodipodi:role="line">io-4</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none"
+         y="73.44342"
+         x="149.35417"
+         sodipodi:role="line"
+         id="tspan1368" /></text>
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 47.624999,91.753711 1.795387,-7.181558 h 7.181547 l 1.795388,7.181558 z"
+       id="path1110-6"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g1226"
+       transform="matrix(0.80266072,0,0,0.67857132,12.211592,36.096727)"
+       style="stroke-width:2.50955529;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path1216"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:2.50955529;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 64.951521,55.5625 -10e-7,15.875 h -5.291667 l -2e-6,-17.46249 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path1218"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:2.50955529;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 67.597354,79.375013 v -21.16668 h -1.451521 v 21.16668 z" />
+    </g>
+    <g
+       id="g1222"
+       transform="matrix(0.80266072,0,0,0.67857132,13.879522,36.096727)"
+       style="stroke-width:2.50955529;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="rect1101-1"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:2.50955529;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 34.395833,55.5625 10e-7,15.875 h 5.291667 l 2e-6,-17.46249 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="rect1114-2"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:2.50955529;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 31.75,79.375013 v -21.16668 h 1.451521 v 21.16668 z" />
+    </g>
+    <path
+       id="path1099-2"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 52.916667,39.6875 -2.393848,1.795387 -1.196925,16.158478 -3.590773,5.38616 v 25.135412 l 7.181546,-1.889879 7.181547,1.889879 V 63.027525 L 56.50744,57.641365 55.310518,41.482887 Z"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="M 52.916667,69.831097 51.12128,84.194189 h 3.590774 z"
+       id="path1108-5"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 48.418753,63.027525 2.633232,-3.949849 h 0.452128 v 3.949849 z"
+       id="path1103-9"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208333;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 57.414582,63.027525 -2.633233,-3.949849 h -0.452127 v 3.949849 z"
+       id="path1230"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <text
+       transform="matrix(0,-0.97257305,1.0282004,0,0,0)"
+       id="text3431-3-2"
+       y="62.129444"
+       x="-84.689308"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none;enable-background:new"
+       xml:space="preserve"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"><tspan
+         id="tspan3449-3-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none"
+         y="62.129444"
+         x="-84.689308"
+         sodipodi:role="line">io-4</tspan></text>
+  </g>
+</svg>

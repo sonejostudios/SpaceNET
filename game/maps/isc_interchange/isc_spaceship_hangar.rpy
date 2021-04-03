@@ -45,6 +45,11 @@ label isc_spaceshipport:
             pos (326,95)
             rotate 180
             zoom 0.6
+            
+    if spaceshiptype != "4":
+        show spaceship4u:
+            pos (326,384)
+            zoom 0.6
     
 
     
@@ -80,9 +85,8 @@ label isc_spaceshipport:
 
 
 
-label loop_isc_spaceshipport:
-    
 
+label loop_isc_spaceshipport:
     
     while True:
 
@@ -136,7 +140,11 @@ label loop_isc_spaceshipport:
             
         if exitpos == 22:
             if startpos == 22:
-                call dialog_nothing from _call_dialog_nothing_55
+                if spaceshiptype != "4":
+                    m "This spaceship looks amazing! {w=2.5} {nw}"
+                    m "I'd love to fly it one day. {w=2.5} {nw}"
+                else:
+                    call dialog_nothing from _call_dialog_nothing_55
             $ startpos = 22
 
             
@@ -172,6 +180,7 @@ label select_spaceship:
     hide spaceship1s
     hide spaceship2s
     hide spaceship3s
+    hide spaceship4s
     
     hide text
     
@@ -192,6 +201,9 @@ label select_spaceship:
         
     if spaceship_choice_number == 3:
         jump crane_anime3
+        
+    if spaceship_choice_number == 4:
+        jump crane_anime4
         
 
 label crane_anime1:
@@ -245,7 +257,8 @@ label crane_anime2:
     $ startpos = 1
     jump isc_interchange
 
-    
+
+
 label crane_anime3:
     show crane zorder 910:
         pos (62, 240)
@@ -270,13 +283,40 @@ label crane_anime3:
     call sound_door from _call_sound_door_168
     $ startpos = 1
     jump isc_interchange
+    
+    
+    
+label crane_anime4:
+    show crane zorder 910:
+        pos (62, 240)
+        ease 3 xpos 325
+    pause 4
+    show crane zorder 910:
+        ease 3 xpos 62
+    show spaceship4u zorder 900:
+        ease 3 xpos 62
+    pause 4
+    show spaceship4u:
+        ease 4 ypos 550
+    pause 4
+    
+    $ spaceshiptype = "4"
+    
+    #pause 1
+    show player:
+        ease 0.5 pos nodeA
+    pause 0.5
+    
+    call sound_door from _call_sound_door_177
+    $ startpos = 1
+    jump isc_interchange
 
 
 
 
 
 
-
+###################################################################################################
 # spaceship interchange display
 
 screen isc_hangar_screen() zorder -999:
@@ -295,10 +335,10 @@ screen isc_hangar_screen() zorder -999:
             pos (70,70)
             #text "{color=#8dd35f}DATA"
             #null height 10
-            text "{color=#8dd35f}ID : [spaceship_choice_number]"
-            text "{color=#8dd35f}Name : [spaceship_choice_infotext[0]]"
-            text "{color=#8dd35f}Speed : [spaceship_choice_infotext[1]]"
-            text "{color=#8dd35f}Container : [spaceship_choice_infotext[2]]"
+            text "{color=#8dd35f}ID: [spaceship_choice_number]"
+            text "{color=#8dd35f}Name: [spaceship_choice_infotext[0]]"
+            text "{color=#8dd35f}Speed: [spaceship_choice_infotext[1]]"
+            text "{color=#8dd35f}Container: [spaceship_choice_infotext[2]]"
             #text "{color=#8dd35f}Price : [spaceship_choice_infotext[3]]"
 
     
@@ -367,6 +407,14 @@ label isc_spaceship_info:
             ypos 0.3
             xpos 400
         $ spaceship_choice_infotext = ["sf-3", "700 km/h", "20 m^2", "2000 c", "a scientific spaceship"]
+        
+        
+    if spaceship_choice_number == 4:
+        show spaceship4s zorder 100:
+            ypos 0.3
+            xpos 400
+        $ spaceship_choice_infotext = ["io-4", "3500 km/h", "5 m^2", "3000 c", "a really fast spaceship"]
+        
     
     show screen isc_hangar_screen
     
@@ -400,7 +448,7 @@ label isc_spaceship_info:
     
 
 label spaceship_choice_next:
-    if spaceship_choice_number < 3:
+    if spaceship_choice_number < 4:
 
         $ spaceship_choice_info = False
         hide text
@@ -428,6 +476,18 @@ label spaceship_choice_next:
                 ypos 0.3
                 xpos 1000
                 ease 1 xpos 400
+                
+        # 3
+        if spaceship_choice_number == 3:
+            show spaceship3s:
+                ypos 0.3
+                xpos 400
+                ease 1 xpos -200
+            
+            show spaceship4s:
+                ypos 0.3
+                xpos 1000
+                ease 1 xpos 400
               
         
         pause 1
@@ -444,6 +504,20 @@ label spaceship_choice_previous:
         
         $ spaceship_choice_info = False
         hide text
+        
+        
+        # 4
+        if spaceship_choice_number == 4:
+            show spaceship4s:
+                ypos 0.3
+                xpos 400
+                ease 1 xpos 1000
+            
+            show spaceship3s:
+                ypos 0.3
+                xpos -200
+                ease 1 xpos 400
+                
         
         # 3
         if spaceship_choice_number == 3:

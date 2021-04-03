@@ -7,7 +7,7 @@ label isc_city_shop:
     call music_shop from _call_music_shop
     
     
-    #$ inventory = ["newspaper", "screwdriver", "spacesuit", "lamp", "bulb", "mirror", "spacenet", "accesscard", "rope", 
+    #$ inventory = ["newspaper", "screwdriver", "spacesuit", "flashlight", "bulb", "mirror", "spacenet", "accesscard", "rope", 
     #                    "cable", "pick", "dynamite", "minidroid", "gem", "star", "notebook", "laser", "key", "letter", "hook"]
     
     image isc_city_shop = imagemapsdir + "crossroom.png"
@@ -193,8 +193,6 @@ label isc_city_shop_vendor:
     vendor "Hello, what do you want to buy?{w=3.0} {nw}"
 
     menu:
-        #"{image=images/inventory/lamp_idle.png}":
-        #    pass
         "Card game\n15c":
             call buy_item("cards", 15) from _call_buy_item
         

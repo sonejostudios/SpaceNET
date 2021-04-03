@@ -70,12 +70,12 @@ screen inventory():
                         action SelectedIf(inventory_select == "spacesuit"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
 
 
-            if inventory_item == "lamp":
-                imagebutton idle inventory_dir + "lamp_idle.png" selected_idle inventory_dir + "lamp_selected_idle.png" selected_hover inventory_dir + "lamp_selected_idle.png":
-                    if inventory_select != "lamp":
-                        action SelectedIf(inventory_select == "lamp"), SetVariable("inventory_select", "lamp"), SetVariable("item_info", "This is a lamp.\nIt could be useful in dark rooms.")
+            if inventory_item == "flashlight":
+                imagebutton idle inventory_dir + "flashlight_idle.png" selected_idle inventory_dir + "flashlight_selected_idle.png" selected_hover inventory_dir + "flashlight_selected_idle.png":
+                    if inventory_select != "flashlight":
+                        action SelectedIf(inventory_select == "flashlight"), SetVariable("inventory_select", "flashlight"), SetVariable("item_info", "This is a flashlight.\nIt could be useful in dark rooms.")
                     else:
-                        action SelectedIf(inventory_select == "lamp"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
+                        action SelectedIf(inventory_select == "flashlight"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
  
  
             if inventory_item == "cable":

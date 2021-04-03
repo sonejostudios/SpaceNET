@@ -167,7 +167,8 @@ image spaceship:
     ConditionSwitch(
         "spaceshiptype=='1'", "images/spaceship/spaceship1u.png",
         "spaceshiptype=='2'", "images/spaceship/spaceship2u.png",
-        "spaceshiptype=='3'", "images/spaceship/spaceship3u.png")
+        "spaceshiptype=='3'", "images/spaceship/spaceship3u.png",
+        "spaceshiptype=='4'", "images/spaceship/spaceship4u.png")
 
 # spaceship side 
 image spaceshipside:
@@ -175,7 +176,8 @@ image spaceshipside:
     ConditionSwitch(
         "spaceshiptype=='1'", "images/spaceship/spaceship1s.png",
         "spaceshiptype=='2'", "images/spaceship/spaceship2s.png",
-        "spaceshiptype=='3'", "images/spaceship/spaceship3s.png")
+        "spaceshiptype=='3'", "images/spaceship/spaceship3s.png",
+        "spaceshiptype=='4'", "images/spaceship/spaceship4s.png")
 
 
 # spaceship up
@@ -191,6 +193,11 @@ image spaceship3u:
     "images/spaceship/spaceship3u.png"
     anchor (0.5,0.5)
     
+image spaceship4u:
+    "images/spaceship/spaceship4u.png"
+    anchor (0.5,0.5)
+    
+    
     
 # spaceship side
 image spaceship1s:
@@ -204,8 +211,14 @@ image spaceship2s:
 image spaceship3s:
     "images/spaceship/spaceship3s.png"
     anchor (0.5,0.5)
+    
+image spaceship4s:
+    "images/spaceship/spaceship4s.png"
+    anchor (0.5,0.5)
 
 
+     
+     
         
         
 image doorh:
@@ -364,10 +377,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.07"
+    define config.version = "1.08"
     
     # build date. Set date for release.
-    $ build_date = "2021-03-20"
+    $ build_date = "2021-04-03"
     
     # game name
     define config.name = "SpaceNET"
@@ -450,8 +463,8 @@ init :
     $ pathDD = ()
     
     #default inventory = []
-    #default inventory = ["cable", "lamp", "mirror", "bulb", "spacenet", "screwdriver", "gem"]
-    default inventory = ["newspaper", "screwdriver", "spacesuit", "lamp", "bulb", "mirror", "spacenet", "accesscard", "rope", 
+    #default inventory = ["cable", "flashlight", "mirror", "bulb", "spacenet", "screwdriver", "gem"]
+    default inventory = ["newspaper", "screwdriver", "spacesuit", "flashlight", "bulb", "mirror", "spacenet", "accesscard", "rope", 
                         "cable", "pick", "dynamite", "minidroid", "gem", "star", "notebook", "laser", "key", "letter", "hook", "magnet", "robotcard", "knife", "cards"]
     
     $ inventory_select = ""
@@ -595,12 +608,12 @@ label start:
     
     
     # for final end only
-    $ active_nodes_amount = 4
-    $ cargo_exploded = 2
-    $ intercom_sat = True 
-    $ sat_connected_to = "SpaceNET"
-    $ spacenet_state = "online"
-    $ game_end = True
+    #$ active_nodes_amount = 4
+    #$ cargo_exploded = 2
+    #$ intercom_sat = True 
+    #$ sat_connected_to = "SpaceNET"
+    #$ spacenet_state = "online"
+    #$ game_end = True
     
     
     $ spacenet_copied = True
