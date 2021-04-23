@@ -132,7 +132,7 @@ label loop_isc_spaceshipport:
         if exitpos == 11:
             if startpos == 11:
                 if spaceshiptype != "3":
-                    m "This spaceship looks weird, but it seems to have a lot of space in it!{w=4} {nw}"
+                    m "This spaceship looks weird, but it has a lot of space in it!{w=4} {nw}"
                 else:
                     call dialog_nothing from _call_dialog_nothing_54 
             $ startpos = 11  
@@ -210,15 +210,20 @@ label crane_anime1:
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 479
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show crane zorder 910:
         ease 3 xpos 62
     show spaceship1u zorder 900:
         ease 3 xpos 62
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show spaceship1u:
         ease 4 ypos 550
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
     
     $ spaceshiptype = "1"
     
@@ -236,15 +241,20 @@ label crane_anime2:
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 479
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show crane zorder 910:
         ease 3 xpos 62
     show spaceship2u zorder 900:
         ease 3 xpos 62
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show spaceship2u:
         ease 4 ypos 550
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
     
     $ spaceshiptype = "2"
     
@@ -263,15 +273,20 @@ label crane_anime3:
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 325
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show crane zorder 910:
         ease 3 xpos 62
     show spaceship3u zorder 900:
         ease 3 xpos 62
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show spaceship3u:
         ease 4 ypos 550
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
     
     $ spaceshiptype = "3"
     
@@ -290,15 +305,20 @@ label crane_anime4:
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 325
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show crane zorder 910:
         ease 3 xpos 62
     show spaceship4u zorder 900:
         ease 3 xpos 62
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
+    
     show spaceship4u:
         ease 4 ypos 550
-    pause 4
+    #pause 4
+    $ renpy.pause(4, hard='True')
     
     $ spaceshiptype = "4"
     
@@ -392,28 +412,28 @@ label isc_spaceship_info:
         show spaceship1s zorder 100:
             ypos 0.3
             xpos 400
-        $ spaceship_choice_infotext = ["sd-2", "1500 km/h", "1 m^2", "0 c", "a basic spaceship"]
+        $ spaceship_choice_infotext = ["SD-2", "1500 km/h", "1 m^2", "0 c", "a basic spaceship"]
             
             
     if spaceship_choice_number == 2:
         show spaceship2s zorder 100:
             ypos 0.3
             xpos 400
-        $ spaceship_choice_infotext = ["io-1", "2000 km/h", "6 m^2", "1000 c", "an advanced spaceship with a docking hatch"]
+        $ spaceship_choice_infotext = ["IO-1", "2000 km/h", "6 m^2", "1000 c", "an advanced spaceship with a docking hatch"]
             
             
     if spaceship_choice_number == 3:
         show spaceship3s zorder 100:
             ypos 0.3
             xpos 400
-        $ spaceship_choice_infotext = ["sf-3", "700 km/h", "20 m^2", "2000 c", "a scientific spaceship"]
+        $ spaceship_choice_infotext = ["SF-3", "700 km/h", "20 m^2", "2000 c", "a scientific spaceship"]
         
         
     if spaceship_choice_number == 4:
         show spaceship4s zorder 100:
             ypos 0.3
             xpos 400
-        $ spaceship_choice_infotext = ["io-4", "3500 km/h", "5 m^2", "3000 c", "a really fast spaceship"]
+        $ spaceship_choice_infotext = ["IO-4", "3500 km/h", "5 m^2", "3000 c", "a really fast spaceship"]
         
     
     show screen isc_hangar_screen

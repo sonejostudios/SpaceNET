@@ -67,7 +67,7 @@ label loop_xylo_map1:
     # do something at node?
     if exitpos == 1:   
         if startpos == 1:
-            m "This is the xylo sea colony. {w=2} {nw}"
+            m "This is the Xylo sea colony. {w=2} {nw}"
             m "It looks like an industrial harbour. {w=2} {nw}"
           
         $ startpos = 1   
@@ -79,7 +79,7 @@ label loop_xylo_map1:
             
             if inventory_select == "screwdriver":
                 m "I could remove the screws...{w=2} {nw}"
-                m "Remove the board...{w=1.5} {nw}"
+                m "Remove the sign...{w=1.5} {nw}"
                 m "And go through!{w=1.5} {nw}"
                 
                 call use_and_keep_item from _call_use_and_keep_item_6
@@ -91,6 +91,7 @@ label loop_xylo_map1:
             
             if xylo_sea_bunker_info == False:
                 call xylo_sea_bunker_info from _call_xylo_sea_bunker_info
+                m "This sign is blocking the way to the north!{w=3} {nw}"
             
             else:
                 hide buttonscreen

@@ -1,7 +1,7 @@
 # cash and gems variables and places
 
 
-# gems
+# gems (True = in place, Flase = found)
 init:
 
 # xylo village bar gems guy (first gem)
@@ -30,6 +30,9 @@ init:
 
 # isc city bar player
     $ cardgame_gem = True
+
+# isc client3 gem
+    $ isc_bar_client3_gem = True
     
 # isc city spaceport crane
     $ isc_spaceport_gem = True
@@ -39,6 +42,12 @@ init:
     
 # isc sysadmin gem
     $ isc_bar_sysadmin_gem = True
+    
+# asteroid3 gem
+    $ asteroid3_gem = True
+    
+# asteroid4 gem
+    $ asteroid4_gem = True
     
 
     
@@ -94,6 +103,10 @@ init:
     
 # tutorial
     $ tutorial_cash = 5
+    
+    
+# asteroids
+    $ asteroid2_cash = 12
     
     
 

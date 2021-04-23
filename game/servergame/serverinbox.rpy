@@ -223,9 +223,7 @@ label server_satellitemsg:
     
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
-    #if server_mail_page == 2:
-    #    call add_note("io11 SpaceNET new orbit: X=350, Y=150")
-    
+
     
     menu:
         "Page 1":

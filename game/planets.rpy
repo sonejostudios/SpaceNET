@@ -106,7 +106,7 @@ label planet_info:
         
         
     if planet == "io11":
-        $ planet_name = "Io-11"
+        $ planet_name = "IO-11"
         $ planet_type = "Satellite"
         $ planet_size = "20 m^3"
         $ planet_moons = "none"
@@ -116,7 +116,7 @@ label planet_info:
         $ planet_habitable = "No"
         $ planet_inhabited = "No"
         $ planet_auth_needed = "No"
-        $ planet_required_ship = "SD2+"
+        $ planet_required_ship = "IO-1"
         
         
     if planet == "cargo":
@@ -158,6 +158,20 @@ label planet_info:
         $ planet_inhabited = "No"
         $ planet_auth_needed = "No"
         $ planet_required_ship = "-"
+        
+        
+    if planet == "asteroids":
+        $ planet_name = "Asteroid field"
+        $ planet_type = "Asteroids"
+        $ planet_size = "220 km^3"
+        $ planet_moons = "0"
+        $ planet_atmosphere = "No"
+        $ planet_temperature = "-125"
+        $ planet_radiations = "No"
+        $ planet_habitable = "No"
+        $ planet_inhabited = "No"
+        $ planet_auth_needed = "No"
+        $ planet_required_ship = "IO-4"
     
     
     return

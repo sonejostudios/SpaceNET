@@ -136,7 +136,7 @@ label loop_isc_city_spaceport:
                     pos nodeB
                     ease 0.5 pos nodeBB
                 pause 0.5
-                m "No way I'll climb there without safety equiment!{w=3} {nw}"
+                m "No way I'll climb there without safety equipment!{w=3} {nw}"
 
                 $ startpos = 22
             

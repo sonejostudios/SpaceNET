@@ -139,7 +139,7 @@ label dialog_joke:
 
 label npc_dont_need_item(npc):
     
-    if inventory_select in ["accesscard", "spacenet", "robotcard", "bulb", "gem", "cards"]:
+    if inventory_select in ["accesscard", "spacenet", "robotcard", "bulb", "gem", "cards", "magnetcord", "asteroid"]:
         $ npc_noneed_say = renpy.random.randint(1, 3)
     else:
         $ npc_noneed_say = renpy.random.randint(1, 9)

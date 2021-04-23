@@ -212,7 +212,7 @@ label xylo_village_barman:
         linear 1 rotate 0
     #pause 2
     if xylo_bar_barman_flags[0] == 0:
-        barman_xvil "Hi, welcome to the official bar of xylo village. {w=2}{nw}"
+        barman_xvil "Hi, welcome to the official bar of Xylo Village. {w=2}{nw}"
         barman_xvil "How can I help you? {w=2}{nw}"
     
     $ questions = ["I want a drink... {w=2.5} {nw}", 
@@ -240,7 +240,7 @@ label xylo_village_barman:
                 menu:
                     "[drinks[0]]\n1c" if coins >= 1:
                         m "A [drinks[0]]. {w=1.5}{nw}"
-                        m "This realy doesn't sound good, but I will try.{w=2.5}{nw}"
+                        m "This really doesn't sound good, but I will try.{w=2.5}{nw}"
                         barman_xvil "1c, please. {w=1.5}{nw}"
                         call io_cash(-1) from _call_io_cash_1
                         m "Beark! {w=1.5}{nw}"
@@ -682,7 +682,7 @@ label xylo_village_client4:
                 "Hey Sam. We need help!" if "laser" not in inventory:
                     m "Hey Sam! We need help!{w=2}{nw}"
                     sam "What happened?{w=2}{nw}"
-                    m "I was talking with 4n0nym0us as she got cought!{w=3.5}{nw}"
+                    m "I was talking with 4n0nym0u5 as she got cought!{w=3.5}{nw}"
                     m "I think I know where she is, but I'll need a metal cutting tool to get there.{w=4}{nw}"
                     sam "Hm... I see.{w=2}{nw}"
                     sam "I have this small laser here, do you think it is strong enough for that task?{w=4}{nw}"
@@ -690,7 +690,7 @@ label xylo_village_client4:
                     sam "Okay, just take this laser.{w=2}{nw}"
                     call take_item("laser") from _call_take_item_7
                     if "laser" in inventory:
-                        sam "Okay, please go now and free 4n0nym0us!{w=3}{nw}"
+                        sam "Okay, please go now and free 4n0nym0u5!{w=3}{nw}"
                         sam "Good luck.{w=2}{nw}"
                     
                     return
@@ -698,7 +698,7 @@ label xylo_village_client4:
 
                 "[questions_client[3]]":
                     m "[questions_client[3]]"
-                    sam "bye.{w=1}{nw}"
+                    sam "Bye.{w=1}{nw}"
                     return
                     
         
@@ -706,27 +706,27 @@ label xylo_village_client4:
             #if sam_numpad_mission == 1 or sam_numpad_mission == 2 :
             sam "Hey [playername]!{w=1.5}{nw}"
             sam "I'm happy you've seen my message in your inbox.{w=2.5}{nw}"
-            sam "I just met 4n0nym0us.{w=2}{nw}"
-            sam "She told me she just figured out a very important information about A.R.K. Corporation.{w=3}{nw}"
-            sam "They sent a big cargo ship full of weapons to the government.{w=3}{nw}"
-            sam "They propably want to start a civil war!{w=2}{nw}"
-            sam "We really need to stop this before it is too late!{w=2.5}{nw}"
-            sam "I will organize a meeting with 4n0nym0us for you.{w=2.5}{nw}"
-            sam "She has a good idea how to stop this cargo ship and how you could help us.{w=3.5}{nw}"
-            sam "4n0nym0us is close to the industrial space city right now...{w=3.5}{nw}"
-            sam "She will pick you up there at the space gateway.{w=2.5}{nw}"
-            sam "It is a prohibided area, but I'll tell you how to get there.{w=3}{nw}"
-            sam "The secret entrance is located in the bar, it is door number 4 in the bathroom.{w=3.5}{nw}"
-            sam "But you will need a pin to access it.{w=2}{nw}"
+            sam "I just met 4n0nym0u5.{w=2}{nw}"
+            sam "She told, me she just figured out a very important information about A.R.K. Corporation.{w=5}{nw}"
+            sam "They sent a big cargo ship full of weapons to the government.{w=4}{nw}"
+            sam "They propably want to start a civil war!{w=3}{nw}"
+            sam "We really need to stop this before it is too late!{w=3.5}{nw}"
+            sam "I will organize a meeting with 4n0nym0u5 for you.{w=3.5}{nw}"
+            sam "She has a good idea how to stop this cargo ship and how you could help us.{w=4.5}{nw}"
+            sam "4n0nym0u5 is close to the Industrial Space City right now...{w=3.5}{nw}"
+            sam "She will pick you up there at the space gateway.{w=3.5}{nw}"
+            sam "It is a prohibided area, but I'll tell you how to get there.{w=3.5}{nw}"
+            sam "The secret entrance is located in the bar, it is door number 4 in the bathroom.{w=4.5}{nw}"
+            sam "But you will need a PIN to access it.{w=3}{nw}"
             sam "The pin is 12458.{w=2}{nw}"
-            sam "It doesn't matter in which order you enter the numbers.{w=3}{nw}"
+            sam "It doesn't matter in which order you enter the numbers.{w=3.5}{nw}"
             
             call add_note("isc space gateway pin : 12458") from _call_add_note_2
             
-            sam "When you are done, just open the door.{w=2.5}{nw}"
-            sam "Now let me see when you could meet 4n0nym0us there.{w=3}{nw}"
+            sam "When you are done, just open the door.{w=3}{nw}"
+            sam "Now let me see when you could meet 4n0nym0u5 there.{w=3.5}{nw}"
             sam "... {w=1}... {w=1}... {w=1}... {w=1}... {w=1}... {w=1}{nw}"
-            sam "Okay. She will pass by now!{w=2.5}{nw}"
+            sam "Okay. She will pass by now!{w=3}{nw}"
             sam "Are you ready?{w=2}{nw}"
             menu:
                 "Okay, let's go!":

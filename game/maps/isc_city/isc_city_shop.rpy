@@ -171,9 +171,9 @@ label isc_city_shop_info:
 
 Today's special prices:
 
-card game = 15c
-light bulb = 10c
-safety hook = 99c
+Card game = 15c
+Light bulb = 10c
+Safety hook = 99c
 
 """
     call info_panel from _call_info_panel_11 # in animations

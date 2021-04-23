@@ -41,6 +41,15 @@ label isc_rail5:
                 ease 0.2 pos (705, 420)
                 ease 0.2 pos (700, 420)
                 repeat
+            
+            # smoking
+            show smoking1:
+                pos (700, 243)
+            show smoking2:
+                pos (700, 243)
+            show smoking3:
+                pos (700, 243)
+        
         else:
             show crane:
                 pos (700, 420)
@@ -159,9 +168,9 @@ label loop_isc_rail5:
                         sysadmin "Great! Thanks! {w=2} {nw}"
                         sysadmin "Okay... could you help me more? {w=1} {nw}"
                         m "Sure. {w=1} {nw}"
-                        sysadmin "Please, go to the terminal and log in to the isc system. {w=3.5} {nw}"
+                        sysadmin "Please, go to the terminal and log in to the ISC system. {w=4} {nw}"
                         sysadmin "The command is: ssh isc{w=2.5} {nw}"
-                        sysadmin "Please, set the crane position to the city center (x1, y1){w=2.5} {nw}"
+                        sysadmin "Please, set the crane position to the city center, at (x1, y1). {w=4.5} {nw}"
                         
                         call add_note("ISC remote access: ssh isc") from _call_add_note_6
                         
@@ -226,7 +235,7 @@ Remote control only.
 
 ---
 
-Crane position : [crane_pos_name] (x[isc_crane_pos_x], y[isc_crane_pos_y])
+Crane position: [crane_pos_name] (x[isc_crane_pos_x], y[isc_crane_pos_y])
 
     """
 

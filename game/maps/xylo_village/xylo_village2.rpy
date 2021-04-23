@@ -245,7 +245,7 @@ label loop_xylo_village2:
 
 label xylo_village2_mirror_take:
     menu:
-        "take it":
+        "Take it":
             
             hide laser
             hide lasermirror
@@ -270,7 +270,7 @@ label xylo_village2_mirror_take:
             
         
             
-        "leave it":
+        "Leave it":
             pass
     return
 

@@ -10,7 +10,7 @@ label xylo_mountain2:
     image xylo_mountain2 = imagemapsdir + "xylo_mountain2.png"
     
     scene bgcolor
-    show screen notify("Sacred lake of the mountain")
+    show screen notify("Sacred lake of the mountains")
     
     image waves2 = SnowBlossom("images/wave.png", count=200, border=50, xspeed=(5), yspeed=(1), start=0, fast=True, horizontal=True)
     show waves2
@@ -79,7 +79,7 @@ label loop_xylo_mountain2:
             if startpos == 2:
                 if inventory_select == "":
                     call xylo_mountain2_info from _call_xylo_mountain2_info
-                elif inventory_select == "pick":
+                elif inventory_select == "pick" or inventory_select == "shovel":
                     call sound_dig from _call_sound_dig_2
                     call use_and_keep_item from _call_use_and_keep_item_33
                     pause 1.5
@@ -101,7 +101,7 @@ label loop_xylo_mountain2:
                     else:
                         call dialog_nothing from _call_dialog_nothing_42
                     
-                elif inventory_select == "pick":
+                elif inventory_select == "pick" or inventory_select == "shovel":
                     call sound_dig from _call_sound_dig_3
                     call use_and_keep_item from _call_use_and_keep_item_34
                     pause 1.5
@@ -123,7 +123,7 @@ label loop_xylo_mountain2:
                     else:
                         call dialog_nothing from _call_dialog_nothing_43
                     
-                elif inventory_select == "pick":
+                elif inventory_select == "pick" or inventory_select == "shovel":
                     call sound_dig from _call_sound_dig_4
                     call use_and_keep_item from _call_use_and_keep_item_35
                     pause 1.5
@@ -143,7 +143,7 @@ label loop_xylo_mountain2:
                 if inventory_select == "":
                     call dialog_nothing from _call_dialog_nothing_44       #if going out at AA
                 
-                elif inventory_select == "pick":
+                elif inventory_select == "pick" or inventory_select == "shovel":
                     call sound_dig from _call_sound_dig_5
                     call use_and_keep_item from _call_use_and_keep_item_36
                     pause 1.5
@@ -167,7 +167,7 @@ label loop_xylo_mountain2:
                     m "There is a lake. {w=2.5} {nw}"
                     m "It seems to be really deep. {w=2.5} {nw}"     
                 
-                elif inventory_select == "pick":
+                elif inventory_select == "pick" or inventory_select == "shovel":
                     call sound_dig from _call_sound_dig_6
                     call use_and_keep_item from _call_use_and_keep_item_37
                     pause 1.5
@@ -233,9 +233,9 @@ label xylo_mountain2_spacenet_guy:
     
     sam "Do you remember the IOnet?{w=1} No? {w=1}Okay...{w=1} {nw}"
     sam "The IOnet was a free knowledge network. {w=3} {nw}"
-    sam "We are a groupe of scientists which is close to figure out a new energy source. {w=5} {nw}"
+    sam "We are a group of scientists and we are close to figure out a new energy source. {w=5} {nw}"
     sam "Really powerful.{w=1} We wanted to use this free energy to create a new world.{w=4} A better one... {w=2}{nw}"
-    sam "But the corrupt governement stopped us and put in jail almost all of us. {w=5} {nw}"
+    sam "But the corrupt government stopped us and put in jail almost all of us. {w=5} {nw}"
     sam "And you were the guy who helped us restarting the network! {w=4} {nw}"
     m "I'm sorry, but I can't remember anything! {w=3} {nw}"
     sam "Okay...{w=1} maybe they gave you some serum to erase your memory... {w=4.5} {nw}"
@@ -247,7 +247,7 @@ label xylo_mountain2_spacenet_guy:
     sam "It is called... {w=2} {nw}"
     sam "- SpaceNET -{w=2} {nw}"
     sam "...{w=2} {nw}"
-    sam "And we need you to help us. {w=3} {nw}"
+    sam "And we need your help. {w=3} {nw}"
     sam "Please, accept! {w=3} {nw}"
     sam "This new free energy will help us all... {w=3} {nw}"
     sam "I'm sure, with it, we will achieve to bring your memory back. {w=4} {nw}"
@@ -282,7 +282,7 @@ label xylo_mountain2_spacenet_guy:
     sam "You will meet her there.{w=2} {nw}"
     sam "Good luck!{w=1.5} {nw}"
     
-    $ sam_hacker_meeting_text_workaround = "Meet 4n0nym0u5 in space around " + str(hacker_pos)
+    #$ sam_hacker_meeting_text_workaround = "Meet 4n0nym0u5 in space around " + str(hacker_pos)
     call add_note(sam_hacker_meeting_text_workaround) from _call_add_note_11
     
     

@@ -13,7 +13,7 @@
    inkscape:export-xdpi="96"
    inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/game/images/infopanel.png"
    sodipodi:docname="engine.svg"
-   inkscape:version="1.0 (1.0+r73+1)"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
    version="1.1"
    id="svg2"
    height="480"
@@ -4107,6 +4107,14 @@
          stdDeviation="7.1284057"
          inkscape:collect="always" />
     </filter>
+    <filter
+       id="filter6303-3"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur6305-6"
+         stdDeviation="0.85232172"
+         inkscape:collect="always" />
+    </filter>
   </defs>
   <sodipodi:namedview
      inkscape:document-rotation="0"
@@ -4127,9 +4135,9 @@
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
-     inkscape:cy="464.42963"
-     inkscape:cx="114.61998"
-     inkscape:zoom="0.26207145"
+     inkscape:cy="91.093109"
+     inkscape:cx="-751.2936"
+     inkscape:zoom="2.0965716"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -7620,6 +7628,25 @@
        inkscape:randomized="0"
        d="m 472.79734,-88.22671 -12.58284,12.582846 -17.18849,-4.605641 -4.60564,-17.188488 12.58284,-12.582847 17.18849,4.60564 z"
        transform="matrix(1.3779311,0,0,1.3779311,-1565.9055,289.54083)" />
+    <path
+       inkscape:export-ydpi="90"
+       inkscape:export-xdpi="90"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/node2.png"
+       sodipodi:type="star"
+       style="display:inline;opacity:1;fill:none;stroke:#8dd35f;stroke-width:2.97548;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:8.92643, 8.92642999999999986;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter6303-3)"
+       id="path5485-7"
+       sodipodi:sides="6"
+       sodipodi:cx="455.60886"
+       sodipodi:cy="-92.832352"
+       sodipodi:r1="17.794832"
+       sodipodi:r2="15.410777"
+       sodipodi:arg1="0.26179939"
+       sodipodi:arg2="0.78539816"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       transform="matrix(1.3779311,0,0,1.3779311,-1500.0084,232.50367)"
+       d="m 472.79734,-88.22671 -12.58284,12.582846 -17.18849,-4.605641 -4.60564,-17.188488 12.58284,-12.582847 17.18849,4.60564 z" />
   </g>
   <g
      sodipodi:insensitive="true"

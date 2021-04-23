@@ -90,7 +90,7 @@ label map5_talk1:
     
     if inventory_select == "bulb":
         call use_item from _call_use_item_4
-        sam "Thank you for the light bulb!!{w=3.0} {nw}"
+        sam "Thank you for the light bulb!{w=3.0} {nw}"
         $ m_step_eileen1 = 2
     
     if m_step_eileen1 == 1:

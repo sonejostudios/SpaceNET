@@ -163,7 +163,7 @@ label loop_tutorial_room1:
                     call sound_door from _call_sound_door_175
                     $ inventory_select = ""
                     m "The door is now open!{w=3.0} {nw}"
-                    m "Now I'm ready... let's go!{w=3.0} {nw}"
+                    m "Now I'm ready... Let's go!{w=3.0} {nw}"
                     #with pixellate
                     $ inventory = []
                     $ coins = 0

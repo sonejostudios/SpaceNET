@@ -181,14 +181,14 @@ label xylo_sea_village_fisher:
                 
             "[questions[2]]"if xylo_sea_village_fisher_flags[2]  == 0:
                 m "[questions[2]]"
-                fisher "Oh the sea. {w=2} {nw}"
+                fisher "Oh, the sea. {w=2} {nw}"
                 fisher "I love it. {w=2} {nw}"
                 fisher "But unfortunately I'm not allowed to go there anymore... {w=3.5} {nw}"
                 $ xylo_sea_village_fisher_flags[2] = 1
                 
             "[questions[3]]"if xylo_sea_village_fisher_flags[3]  == 0:
                 m "[questions[3]]"
-                fisher "I have no boat to rent, sorry. {w=2} {nw}"
+                fisher "I have no boat for rent, sorry. {w=2} {nw}"
                 fisher "I had a boat before, but I sold it to the boat management company. {w=4} {nw}"
                 fisher "I don't know if they rent boats, sorry. {w=3} {nw}"
                 fisher "Just go to your right, I think there is an information table. {w=3.5} {nw}"

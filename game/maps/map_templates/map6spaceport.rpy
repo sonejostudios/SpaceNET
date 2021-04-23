@@ -150,7 +150,7 @@ label use_cable_with_switchboard:
     if inventory_select == "cable":
         call sound_electroshock from _call_sound_electroshock_16
         with hpunch
-        m "Wow, I made a short circuit! I hope everything is okay. !!!!! {w=4.0} {nw}"
+        m "Wow, I made a short circuit! I hope everything is okay. {w=4.0} {nw}"
             
     return
     

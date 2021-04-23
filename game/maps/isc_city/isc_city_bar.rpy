@@ -8,8 +8,10 @@ init:
     
     $ sam_numpad_mission = 0
     
-    default isc_bar_client1_flags = [0, 0, 0, 0]
     default isc_bar_barman_flags = [0, 0, 0, 0]
+    default isc_bar_client1_flags = [0, 0, 0, 0]
+    default isc_bar_client3_flags = [0, 0, 1, 0]
+    
     
     $ isc_sysadmin_move = 0
     $ isc_sysadmin_sun = 0
@@ -192,11 +194,25 @@ label loop_isc_city_bar:
 
 # client east
 label isc_bar_client_east:
+    
+    if isc_bar_client3_gem == True and inventory_select == "asteroid":
+        call use_item from _call_use_item_11
+        m "Here, I brought you a piece of an asteroid. {w=4} {nw}"
+        clientisc3 "Oh thank you!{w=2.5} {nw}"
+        clientisc3 "Here, this gem is for you.{w=3} {nw}"
+        call take_gem from _call_take_gem_14
+        $ isc_bar_client3_gem = False
+        m "Thank you very much! {w=2.5} {nw}"
+        clientisc3 "Thank you for the asteroid piece!{w=3.5} {nw}"
+        return
+        
+    
+    
     if inventory_select != "":
         call npc_dont_need_item(clientisc3) from _call_npc_dont_need_item_7
         return
         
-    clientisc3 "Hi! {w=2}{nw}"
+
     
     if drunktime > 0:
         call dialog_joke from _call_dialog_joke_3
@@ -229,14 +245,53 @@ label isc_bar_client_east:
         return
         
     
-    m "hello... {w=1.5}{nw}"
-    m "hey... {w=1.5}... {w=1}...{w=1}{nw}"
-    clientisc3 "? {w=1.5}{nw}"
-    m "...Have you heard about SpaceNET? {w=3}{nw}"
-    clientisc3 "No, sorry. {w=1.5}{nw}"
+    clientisc3 "Hi! {w=2}{nw}"
     
-    m "Okay, bye... {w=1.5}{nw}"
-    clientisc3 "Bye bye! {w=1.5}{nw}"
+    $ questions = ["Hello...{w=2.0} {nw}", 
+                    "What are you doing here?{w=3} {nw}", 
+                    "What do you think about the gems? {w=3}{nw}", 
+                    "Bye! {w=2} {nw}"]
+    
+    
+    $ asteroids_available = False # need to be removed after asteroid release
+    while True:
+        menu:
+            "[questions[0]]" if isc_bar_client3_flags[0]  == 0:
+                m "[questions[0]]"
+                clientisc3 "Yes? {w=2}{nw}"
+                m "Hey... {w=1.5}... {w=1}...{w=1}{nw}"
+                clientisc3 "? {w=1.5}{nw}"
+                $ isc_bar_client3_flags[0] = 1
+                
+            "[questions[1]]" if isc_bar_client3_flags[1]  == 0 and asteroids_available == True:
+                m "[questions[1]]"
+                clientisc3 "I'm having a drink in the bar. {w=3.5}{nw}"
+                clientisc3 "But I'm also thinking about all these gems. {w=4.5}{nw}"
+                $ isc_bar_client3_flags[1] = 1
+                $ isc_bar_client3_flags[2] = 0
+                
+            "[questions[2]]" if isc_bar_client3_flags[2]  == 0:
+                m "[questions[2]]"
+                clientisc3 "Do you know something about them? {w=3.5}{nw}"
+                m "Well, I heard there are somehow powerful. {w=3.5}{nw}"
+                clientisc3 "Might be, but they are also beautiful! {w=4}{nw}"
+                clientisc3 "Look! {w=2}{nw}"
+                m "Yeah, this is a nice one. {w=3}{nw}"
+                m "Actually, I collect them.\nDo you want to give it to me? {w=4.5}{nw}"
+                clientisc3 "No way! {w=2.5}{nw}"
+                clientisc3 "Do you know where they are coming from? {w=4}{nw}"
+                clientisc3 "I heard they are coming from an asteroid field. {w=4.5}{nw}"
+                clientisc3 "If you want one, then try to locate 'asteroids' in the terminal and have a look by yourself. {w=6.5}{nw}"
+                call add_note(note_locate_asteroids) from _call_add_note_14
+                clientisc3 "Actually, I really prefer asteroids. {w=3.5}{nw}"
+                clientisc3 "If you bring me a small piece, I'll give you this gem. {w=4.5}{nw}"
+                m "Okay, good to know! {w=2}{nw}"
+                $ isc_bar_client3_flags[2] = 1
+                
+            "[questions[3]]":
+                m "[questions[3]]"
+                clientisc3 "Bye bye! {w=1.5}{nw}"
+                return
     
     return
 
@@ -267,8 +322,8 @@ label isc_bar_sysadmin:
                 
                 "[questions[1]]" if isc_bar_client1_flags[1]  == 0:
                     m "[questions[1]]"
-                    clientsysadmin "I'm the system administrator of the Industrial Space Station.{w=4} {nw}"
-                    clientsysadmin "I'm just having a rest before I'll fix the next problem here.{w=4} {nw}"
+                    clientsysadmin "I'm the system administrator of the Industrial Space City.{w=4} {nw}"
+                    clientsysadmin "I'm just having a rest before I'll fix the next problem.{w=4} {nw}"
                     clientsysadmin "They are tons of things to do here!{w=2} {nw}"
                     $ isc_bar_client1_flags[1] = 1
                 
@@ -385,7 +440,7 @@ label isc_bar_player:
         m "What about a joke? {w=2} {nw}"
         clientplayer "Okay, if you insist... {w=2.5} {nw}"
         
-        clientplayer "What is an spaceship pilote's favourite place on a computer?{w=5} {nw}"
+        clientplayer "What is the spaceship pilote's favourite place on a computer?{w=5} {nw}"
         m "Well... {w=2} {nw}"
         clientplayer "The space bar! {w=2.5} {nw}"
         m "Hihi.... that's funny! {w=2.5} {nw}"
@@ -415,7 +470,7 @@ label isc_bar_player:
         clientplayer "Very nice...{w=3}{nw}"
         clientplayer "If you win the game, I'll give you something!{w=4}{nw}"
         menu:
-            "let's play!":
+            "Let's play!":
                 clientplayer "Alright, try to get the same cards.{w=4}{nw}"
                 clientplayer "You have one minute, let's go!{w=3}{nw}"
                 

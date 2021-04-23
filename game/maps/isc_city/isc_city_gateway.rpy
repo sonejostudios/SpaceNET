@@ -114,7 +114,7 @@ label loop_isc_city_gateway:
             if startpos == 2:
 
                 if sam_numpad_mission == 2 and countdown_sec > 0:
-                    m "I think this is the place I should wait for 4n0nym0us.{w=2.5} {nw}"
+                    m "I think this is the place I should wait for 4n0nym0u5.{w=2.5} {nw}"
                     pause countdown_sec
                     jump isc_city_gateway_spaceship
                     
@@ -144,7 +144,7 @@ label loop_isc_city_gateway:
                     pos nodeC
                     ease 0.5 pos nodeB
                 pause 0.5
-                m "No way I'll climb there without safety equiment!{w=3} {nw}"
+                m "No way I'll climb there without safety equipment!{w=3} {nw}"
                 $ startpos = 2
                 
             else:
@@ -213,7 +213,7 @@ label isc_city_gateway_spaceship:
             $ sam_numpad_mission = 3
             
         "No, thanks":
-            m "no, thanks! {w=1.5} {nw}"
+            m "No, thanks! {w=1.5} {nw}"
             stop music fadeout 1.0
     
     
@@ -294,7 +294,7 @@ label isc_spaceflight:
                 hacker "I'll archive a voice message for you.{w=3} {nw}"
                 hacker "Just call 111999 in the terminal.{w=3} {nw}"
 
-                call add_note("cargo mission voice message : 111999") from _call_add_note_3
+                call add_note("Cargo mission voice message: 111999") from _call_add_note_3
                 
                 hacker "Okay... {w=2} {nw}"
                 hacker "I'll bring you back to the gateway.{w=3} {nw}"
@@ -322,7 +322,8 @@ label isc_spaceflight_cargo_mission:
     hacker "Infiltrate the space cargo of A.R.K. Corporation.{w=4} {nw}"
     hacker "You'll find it in the terminal.\nJust 'locate cargo' in the terminal.{w=5} {nw}"
     
-    # add note?
+    # add note
+    call add_note(note_locate_cargo) from _call_add_note_15
     
     hacker "Then go there and find a way to go to the main reactor.{w=4} {nw}"
     hacker "Once there, activate the remote control.{w=4} {nw}"

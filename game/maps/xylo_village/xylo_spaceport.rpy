@@ -131,10 +131,10 @@ label loop_xylo_spaceport:
         if exitpos == 1:  
             if startpos == 1 and game_end == True and spacenet_state == "online":
                 $ inventory_select = ""
-                sam "You've done a great job, thank you!{w=2}{nw}"
-                sam "Now we can live...{w=2}{nw}"
+                sam "You've done a great job, thank you!{w=3}{nw}"
+                sam "Now we can live a normal life...{w=3}{nw}"
                 sam "With the SpaceNET network, anybody has now access to information.{w=4}{nw}"
-                sam "This will be a great step toward peace.{w=4}{nw}"
+                sam "This will be a great step toward peace.{w=3}{nw}"
                 m "This is great!{w=2}{nw}"
                 sam "Thank you very...{w=1} very...{w=1} very much!{w=2}{nw}"
                 sam "Now we can start a new life!{w=3}{nw}"

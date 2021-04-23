@@ -129,9 +129,13 @@ label loop_isc_city_gateway_crane:
         if exitpos == 22:
             if startpos == 22:
                 if "magnet" not in inventory:
-                    m "There is something glueing to the crane...{w=2} {nw}"
-                    m "Wait... {w=1}this is a magnet! {w=2} {nw}"
-                    call take_item("magnet") from _call_take_item_14
+                    if "magnetcord" not in inventory:
+                        m "There is something glueing to the crane...{w=2} {nw}"
+                        m "Wait... {w=1}This is a magnet! {w=2} {nw}"
+                        call take_item("magnet") from _call_take_item_14
+                    else:
+                        call dialog_nothing from _call_dialog_nothing_76
+                
                 else:
                     m "The view is unbelievable!{w=2} {nw}"
                     

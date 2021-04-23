@@ -517,7 +517,7 @@ label xylo_village1_building_level3: # level 3
                 
             "[questions[2]]" if xylo_building_level3_flages[2] == 0:
                 m "[questions[2]]"
-                worker3 "Oh... hello inspector. {w=2} {nw}"
+                worker3 "Oh... Hello inspector. {w=2} {nw}"
                 worker3 "I'm so sorry I thought you were an annoying guy. {w=3} {nw}"
                 worker3 "Here is nothing you need to worry about! {w=3} {nw}"
                 worker3 "What can I do for you? {w=2} {nw}"
@@ -533,7 +533,7 @@ label xylo_village1_building_level3: # level 3
             
             "[questions[3]]":
                 m "[questions[3]]"
-                worker3 "Okay bye! {w=2} {nw}"
+                worker3 "Okay, bye! {w=2} {nw}"
                 jump loop_xylo_village1_building
                 
                 

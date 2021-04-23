@@ -171,6 +171,8 @@ label atmo_reactor:
     $ renpy.music.play("sounds/reactor.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
     
+
+    
     
 label sound_title:
     play sound "sounds/title.ogg"
@@ -322,9 +324,9 @@ label music_outro_deep:
    
    
    
-label music_surface:
-    $ renpy.music.play("music/surface.ogg", channel="music", fadein=1, fadeout=1, tight=True, if_changed=True)
-    return   
+#label music_surface:
+#    $ renpy.music.play("music/surface.ogg", channel="music", fadein=1, fadeout=1, tight=True, if_changed=True)
+#    return   
 
 
 # village building

@@ -59,7 +59,7 @@ label loop_megaship_aeration:
                 if megaship_cell2 == False:
                     if inventory_select == "laser":
                         
-                        m "I could cut the areation grid with this laser tool. {w=3.0} {nw}"
+                        m "I could cut the aeration grid with this laser tool. {w=3.0} {nw}"
                         m "Let's do it! {w=1.5} {nw}"
                         call use_and_keep_item from _call_use_and_keep_item_24
                         call sound_electroshock from _call_sound_electroshock_18

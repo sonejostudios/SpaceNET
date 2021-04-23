@@ -175,9 +175,9 @@ label xylo_spaceport_shop_info:
 
 Today's special prices:
 
-flashlight = 100c
-knife = 70c
-mirror = 50c
+Flashlight = 100c
+Knife = 70c
+Mirror = 50c
 
 """
     call info_panel from _call_info_panel_14 # in animations

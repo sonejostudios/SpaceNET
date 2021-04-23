@@ -123,7 +123,7 @@ label loop_xylo_mine:
                 
                 if inventory_select == "minidroid":
                     
-                    m "I could use the minidroid... let's go! {w=2.5} {nw}"
+                    m "I could use the minidroid... Let's go! {w=2.5} {nw}"
                     call use_and_keep_item from _call_use_and_keep_item_14
                     call sound_connected from _call_sound_connected_24
                     with flash
@@ -251,6 +251,6 @@ Just 'locate isc' in a terminal!
     
     
     call info_panel from _call_info_panel_6 # in animations
-    call add_note("terminal: locate isc") from _call_add_note_5
+    call add_note(note_locate_isc) from _call_add_note_5
 
     return

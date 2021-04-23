@@ -129,7 +129,7 @@ freesound.org
 - Special Thanks to -
 
 Dirk Schippers
-(beta-testing/english)
+(beta-testing/proofreading)
 
 
 

@@ -157,12 +157,12 @@ label loop_megaship_cell:
                 if inventory_select == "newspaper" and m_megaship_cell_escape == 0:
                     
                     menu:
-                        "use newspaper with sink":
+                        "Use newspaper with sink":
                             call use_and_keep_item from _call_use_and_keep_item_7
                             call sound_paper from _call_sound_paper
                             #with flash
-                            m "now the sink is blocked.{w=2.0} {nw}"
-                            m "what will happen if I open the tap?{w=2.0} {nw}"
+                            m "Now the sink is blocked.{w=2.0} {nw}"
+                            m "What will happen if I open the tap?{w=2.0} {nw}"
                             
                             call sound_tap from _call_sound_tap_1
                             show puddle behind sink:
@@ -176,12 +176,12 @@ label loop_megaship_cell:
 
                             pass
                         
-                        "back":
+                        "Back":
                             pass
                             
                 if m_megaship_cell_escape == 2:
-                    m "the repair-robot is working.{w=2.0} {nw}"
-                    m "there is a screw driver...{w=2.0} {nw}"
+                    m "The repair-robot is working.{w=2.0} {nw}"
+                    m "There is a screw driver...{w=2.0} {nw}"
                     m "I could take it... {w=2.0} {nw}"
                     
                     call take_item("screwdriver") from _call_take_item_11

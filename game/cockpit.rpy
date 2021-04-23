@@ -16,6 +16,7 @@ init:
     $ isc_pos = (270, 72)
     $ hacker_pos = (400,200)
     $ sun_pos = (340, 260)
+    $ asteroids_pos = (50, 140) #(500, 100)
     
     
     
@@ -38,7 +39,6 @@ screen cockpit_screen():
         pos (30,380)
         text "{color=#8dd35f}DATA"
         null height 10
-        #text "{color=#8dd35f}Position: [spaceship_pos]"
         text "{color=#8dd35f}Distance: [space_distance] km"
         text "{color=#8dd35f}Velocity: [space_velocity] km/h"
 
@@ -74,7 +74,7 @@ screen mini_planets():
     # satellite
     if "io11" in planetlist:
         add "images/planets/miniplanet.png" anchor (0.5,0.5) pos satellite_pos
-        text "{color=#8dd35f}{size=12}  satellite io-11" anchor (0,0.5) pos satellite_pos
+        text "{color=#8dd35f}{size=12}  satellite IO11" anchor (0,0.5) pos satellite_pos
     
     # cargo
     if "cargo" in planetlist:
@@ -90,12 +90,22 @@ screen mini_planets():
     if "sun" in planetlist:
         add "images/planets/miniplanet.png" anchor (0.5,0.5) pos sun_pos
         text "{color=#8dd35f}{size=12}  sun" anchor (0,0.5) pos sun_pos
+        
+        
+    # asteroids
+    if "asteroids" in planetlist:
+        add "images/planets/miniplanet.png" anchor (0.5,0.5) pos asteroids_pos
+        text "{color=#8dd35f}{size=12}  asteroid field" anchor (0,0.5) pos asteroids_pos
 
 
 
 
 # cockpit
 label cockpit:
+    
+    #hide screen buttons
+    #hide screen cockpit_screen
+    
     
     #$ space_terminal = True
     
@@ -370,6 +380,10 @@ label planet_match:
     if sun_pos[0]-flight_match < destination_pos[0] < sun_pos[0]+flight_match and sun_pos[1]-flight_match < destination_pos[1] < sun_pos[1]+flight_match :
         $ destination_pos = sun_pos
         
+    # asteroids
+    if asteroids_pos[0]-flight_match < destination_pos[0] < asteroids_pos[0]+flight_match and asteroids_pos[1]-flight_match < destination_pos[1] < asteroids_pos[1]+flight_match :
+        $ destination_pos = asteroids_pos
+        
         
     return
 
@@ -383,7 +397,6 @@ label cockpit_map_menu:
     menu:
         
         "Fly to" if destination_pos != spaceship_pos:
-            $ hacker_space_meeting_done = False
             call flight from _call_flight
             jump space
         
@@ -421,6 +434,21 @@ label cockpit_map_menu:
 #flight through hyperspace
 label flight:
     
+    if spaceship_broken == True or spaceshiptype == "4b":
+        call sound_electroshock from _call_sound_electroshock_29
+        with hpunch
+        m "My spaceship is broken! {w=3} {nw}"
+        m "I can't fly through hyperspace right now. {w=3} {nw}"
+        m "I think I'm stuck here until my spaceship is repaired...{w=4} {nw}"
+        hide screen cockpit_map_screen
+        hide screen mini_planets
+        jump space
+        #jump cockpit_map
+        #jump cockpit
+        
+
+    
+    
     # destination check and set planets
     if destination_pos == megaship_pos:
         $ planet = "megaship"
@@ -442,6 +470,9 @@ label flight:
 
     elif destination_pos == sun_pos:
         $ planet = "sun"
+        
+    elif destination_pos == asteroids_pos:
+        $ planet = "asteroids"
     
     
     
@@ -459,7 +490,7 @@ label flight:
     
     # demo end
     if demo_version == True:
-        if planet in ["hacker", "io11", "cargo", "isc"]:
+        if planet in ["hacker", "io11", "cargo", "isc", "asteroids"]:
             jump end_demo
     
     

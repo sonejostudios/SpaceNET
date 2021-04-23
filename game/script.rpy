@@ -137,6 +137,14 @@ image minidroid:
     anchor (0.5,0.5)
 
 
+image node:
+    "images/node.png"
+    anchor (0.5,0.5)
+    
+image node2:
+    "images/node2.png"
+    anchor (0.5,0.5)
+
 image nodeanime:
     "images/node.png"
     anchor (0.5,0.5)
@@ -168,7 +176,8 @@ image spaceship:
         "spaceshiptype=='1'", "images/spaceship/spaceship1u.png",
         "spaceshiptype=='2'", "images/spaceship/spaceship2u.png",
         "spaceshiptype=='3'", "images/spaceship/spaceship3u.png",
-        "spaceshiptype=='4'", "images/spaceship/spaceship4u.png")
+        "spaceshiptype=='4'", "images/spaceship/spaceship4u.png",
+        "spaceshiptype=='4b'", "images/spaceship/spaceship4ub.png")
 
 # spaceship side 
 image spaceshipside:
@@ -177,7 +186,8 @@ image spaceshipside:
         "spaceshiptype=='1'", "images/spaceship/spaceship1s.png",
         "spaceshiptype=='2'", "images/spaceship/spaceship2s.png",
         "spaceshiptype=='3'", "images/spaceship/spaceship3s.png",
-        "spaceshiptype=='4'", "images/spaceship/spaceship4s.png")
+        "spaceshiptype=='4'", "images/spaceship/spaceship4s.png",
+        "spaceshiptype=='4b'", "images/spaceship/spaceship4sb.png")
 
 
 # spaceship up
@@ -316,6 +326,64 @@ image galaxy_intro:
     repeat
     
 
+image asteroid_small:
+    "images/asteroid_small.png"
+    anchor (0.5, 0.5)
+    
+image asteroid_small2:
+    "images/asteroid_small2.png"
+    anchor (0.5, 0.5)
+    
+    
+image asteroid_small2b:
+    "images/asteroid_small2b.png"
+    anchor (0.5, 0.5)
+
+
+
+image solarpanel:
+    "images/solarpanel.png"
+    anchor (0.5, 0.5)
+    
+image lift_top:
+    "images/lift_top.png"
+    anchor (0.5, 0.5)
+    
+image cord:
+    "images/inventory/cord_idle.png"
+    anchor (0.5, 0.5)
+
+
+# smoking
+image smoking1:
+    "images/smoke.png"
+    anchor (0.5, 0.5)
+    alpha 1
+    zoom 0.0
+    linear 3.2 zoom 1.5 alpha 0 anchor (1.0, 1.0)
+    repeat
+    
+image smoking2:
+    pause 0.3
+    "images/smoke.png"
+    rotate 90
+    anchor (0.5, 0.5)
+    alpha 1
+    zoom 0.0
+    linear 4.4 zoom 1.5 alpha 0 anchor (1.0, 1.0)
+    repeat
+    
+image smoking3:
+    pause 0.8
+    "images/smoke.png"
+    rotate 90
+    anchor (0.5, 0.5)
+    alpha 1
+    zoom 0.0
+    linear 5.1 zoom 1.5 alpha 0 anchor (1.0, 1.0)
+    repeat 
+    
+
 
 
 # main menu music
@@ -336,6 +404,7 @@ define config.side_image_requires_attributes = False
 
 
 # disable renpy keys
+#(/renpy-7.4.1-sdk/renpy/common/00keymap.rpy)
 define config.keymap['self_voicing'] = []
 define config.keymap['clipboard_voicing'] = []
 define config.keymap['debug_voicing'] = []
@@ -359,6 +428,7 @@ define config.keymap['full_inspector'] = []
 define config.keymap['launch_editor'] = []
 define config.keymap['rollback'] = []
 define config.keymap['rollforward'] = []
+define config.keymap['game_menu'] = [ 'K_ESCAPE', 'K_MENU', 'K_PAUSE']
 
 
 
@@ -377,10 +447,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.08"
+    define config.version = "1.10"
     
     # build date. Set date for release.
-    $ build_date = "2021-04-03"
+    $ build_date = "2021-04-23"
     
     # game name
     define config.name = "SpaceNET"
@@ -393,10 +463,12 @@ init :
     $ use_dev_keys = False
     
     
-    # allow roll back and forward for superdev
+    # allow roll back and forward for superdev and set devkey == True
     if superdev == True:
-        define config.keymap['rollback'] = ['mousedown_4']
-        define config.keymap['rollforward'] = ['mousedown_5']
+        $ use_dev_keys = True
+        define config.keymap['rollback'] = ['K_PAGEUP']#, 'mousedown_4']
+        define config.keymap['rollforward'] = ['K_PAGEDOWN']#, 'mousedown_5']
+        
     
     
     
@@ -416,6 +488,9 @@ init :
 
     # spaceship type, as string, so it is possible to add 1b, 1c etc.
     $ spaceshiptype = "1"
+    
+    $ spaceship_broken = False
+    $ asteroid_collision = False
     
     
     # player types: "player", "minidroid"
@@ -464,20 +539,22 @@ init :
     
     #default inventory = []
     #default inventory = ["cable", "flashlight", "mirror", "bulb", "spacenet", "screwdriver", "gem"]
-    default inventory = ["newspaper", "screwdriver", "spacesuit", "flashlight", "bulb", "mirror", "spacenet", "accesscard", "rope", 
-                        "cable", "pick", "dynamite", "minidroid", "gem", "star", "notebook", "laser", "key", "letter", "hook", "magnet", "robotcard", "knife", "cards"]
+    default inventory = ["newspaper", "screwdriver", "spacesuit", "bulb", "mirror", "spacenet", "accesscard", "rope", 
+                        "cable", "pick", "dynamite", "minidroid", "gem", "star", "notebook", "laser", "key", "letter", "hook",  
+                        "robotcard", "knife", "cards", "shovel", "cord", "magnetcord", "module", "magnet", "asteroid", "lamp"]#"flashlight"]
     
     $ inventory_select = ""
     $ inventory_notify = ""
+    $ inventory_select_number = -1
     
-    default planetlist = ["sun", "megaship", "xylo", "isc", "cargo", "io11"]
+    default planetlist = ["sun", "megaship", "xylo", "isc", "cargo", "io11", "asteroids"]
     #default planetlist = ["megaship", "xylo"]
     
     $ gems = 0
-    $ maxgems = 12
+    $ maxgems = 15
     
     $ active_nodes_amount = 0
-    $ max_nodes_amount = 4
+    $ max_nodes_amount = 4 # set it to 5 when asteroids is released!
     
     
     $ inventory_button = True
@@ -507,6 +584,8 @@ init :
     
     
     
+    
+    
 ## settings
     # point'n'click mode
     $ pnc_mode = False
@@ -521,6 +600,7 @@ init :
     $ shadow_enable = 1
     $ galaxy_enable = 1
     
+
     # multiplicator for stars amount. for android = 1, for pc = 4
     # this as to set at compile time
     #$ starsamount = 1 this is set in animations.rpy
@@ -608,7 +688,7 @@ label start:
     
     
     # for final end only
-    #$ active_nodes_amount = 4
+    #$ active_nodes_amount = 5
     #$ cargo_exploded = 2
     #$ intercom_sat = True 
     #$ sat_connected_to = "SpaceNET"
@@ -662,6 +742,8 @@ label start:
             $ planet = "sun"
         "cargo":
             $ planet = "cargo"
+        "asteroids":
+            $ planet = "asteroids"
             
     jump space
     #jump xylo_map5house

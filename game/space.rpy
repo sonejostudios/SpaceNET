@@ -25,13 +25,16 @@ init:
         transform_anchor True
         "images/orbitmeter.png"
         anchor (24,26)
-        pos (50,110)
+        pos (54,110)
         #pos (50,430)
         linear 10 rotate 360.0
         rotate 0
         repeat
         
     image spacemenu = "images/spacemenu.png"
+    
+
+        
         
     
     transform inspace_idle:
@@ -92,6 +95,19 @@ label space:
     
     # show spaceship with transform
     show spaceshipside at inspace_idle
+    
+    
+    if spaceship_broken == True:
+        if renpy.showing("smoking1") != True:
+            show smoking1:
+                pos (400,220)
+        if renpy.showing("smoking2") != True:
+            show smoking2:
+                pos (400,220)
+        if renpy.showing("smoking3") != True:
+            show smoking3:
+                pos (400,220)
+    
         
     if shadow_enable == 1:
         show shadow at truecenter
@@ -116,10 +132,10 @@ label space:
             linear 1 alpha 1
         
         show text "{color=#8dd35f}[planet]" as text_planet:
-            pos (50,150)
+            pos (54,150)
             alpha 0.5
-            linear 1 pos (50,148)
-            linear 1 pos (50,150)
+            linear 1 pos (54,148)
+            linear 1 pos (54,150)
             repeat 
         
         if planet == "sun":
@@ -136,6 +152,29 @@ label space:
     if planet == "hacker":
         call hacker_meeting from _call_hacker_meeting
         $ planet = "none"
+        
+
+
+    if planet == "asteroids":
+        $ asteroidzoom = renpy.random.random()*0.9 + 0.1
+        show asteroid_small behind orbitmeter, text_planet, spaceshipside:
+            zoom asteroidzoom
+            rotate 0
+            ypos 100
+            xpos 900
+            linear 10 xpos -200 rotate -560
+            repeat
+            
+        $ asteroidzoom2 = renpy.random.random()*0.9 + 0.1
+        show asteroid_small as asteroid_small2 behind orbitmeter, text_planet, spaceshipside:
+            zoom asteroidzoom2
+            rotate 0
+            ypos 350
+            xpos 1200
+            linear 13 xpos -200 rotate -460
+            repeat
+            
+        
 
         
     jump space_loop
@@ -224,6 +263,8 @@ label space_loop:
     return
     
     
+    
+    
 label land_to_planet:
     
     $ pnc_nodes_visible = False
@@ -295,6 +336,39 @@ label land_to_planet:
         m "No way I will land on the sun! {w=3.0}{nw}"
         jump space_loop
         
+        
+    if planet == "asteroids":
+
+        if spaceshiptype not in ["4", "4b"]:
+            call sound_beep from _call_sound_beep_74
+            with hpunch
+            m "No way I will do it! {w=2.5}{nw}"
+            m "My spaceship is way too slow... {w=3.0}{nw}"
+            m "Entering an asteroid field with it is just too dangerous! {w=4.0}{nw}"
+            m "I definitely need a faster spaceship if I want to fly though this asteroid field. {w=5.0}{nw}"
+            jump space_loop
+        
+        else:
+            if "pick" in inventory and "laser" in inventory:
+                call landing_space_anim from _call_landing_space_anim_5
+                $ landing = True
+
+                if asteroid_collision == False:
+                    jump asteroid_collision_anim
+                else:
+                    jump surface_asteroids
+                
+            else:    
+                call sound_beep from _call_sound_beep_75
+                with hpunch
+                m "Right now, I really have better to do than shooting a sci-fi movie scene inside these asteroids! {w=6.0}{nw}"
+                jump space_loop
+            
+            
+
+        
+
+
 
 
 # orbital view    
@@ -310,6 +384,7 @@ label orbital_view:
     image megaspaceship_small = "images/planets/megaspaceship_small.png"
     image cargo_small = "images/planets/cargo_small.png"
     image isc_small = "images/planets/isc_small.png"
+    image asteroids_small = "images/planets/asteroids_small.png"
 
     image sunbig = "images/planets/sunbig.png"
     
@@ -357,6 +432,9 @@ label orbital_view:
     if planet == "sun":
         show sunbig at truecenter, inspace_idle:
             zoom 0.35
+            
+    if planet == "asteroids":
+        show asteroids_small at truecenter, inspace_idle
     
     
     pause 0.1
@@ -438,6 +516,7 @@ label map_view:
     hide isc_small
     hide sunbig
     hide xylo_small
+    hide asteroids_small
     
     if planet == "megaship":
         show megaspaceship:
@@ -480,6 +559,13 @@ label map_view:
             anchor (0.5,0.5)
             pos (0.5,0.5)
             alpha 0.8
+            
+            
+    if planet == "asteroids":
+        show surface:
+            zoom 0.24
+            align (0.5,0.5)
+            alpha 0.5
 
 
 

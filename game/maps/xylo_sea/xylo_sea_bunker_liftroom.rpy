@@ -183,7 +183,7 @@ label xylo_sea_bunker_liftroom_computer:
             call dialog_nosense from _call_dialog_nosense_3
             
         "Lock -01" if xylo_sea_bunker_liftroom_lock1 == False:
-            m "Why should I actally do that? {w=2} {nw}"
+            m "Why should I actually do that? {w=2} {nw}"
             m "Okay... let's have a try. {w=2} {nw}"
             $ xylo_sea_bunker_liftroom_lock1 = True
             #call server_progressbar

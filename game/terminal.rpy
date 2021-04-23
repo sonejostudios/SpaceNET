@@ -60,7 +60,7 @@ label term_menu:
             show text Text(showtext,text_align=termtext_align) at termtextpos
             #hide text
             python:
-                termtext = renpy.input(_("type a command:"))
+                termtext = renpy.input(_("Type a command:"))
                 termtext = termtext.strip().lower()
                 if not termtext:
                     termtext = "no entry"
@@ -197,8 +197,9 @@ label terminal_locate(i):
     
 
     menu:
-        "Add [planet] to cockpit map" if space_terminal == True:
+        "Add '[planet]' to cockpit map" if space_terminal == True and planet not in planetlist:
             pass
+        
         "Exit":
             $ termtext = "help"
             $ planet = planet2
@@ -221,7 +222,8 @@ label terminal_locate(i):
     
     Success!
     
-    [i] is copied to cockpit map.
+    The coordinates of '[i]'
+    are copied to your cockpit map.
     """
     show text Text(showtext,text_align=termtext_align) at termtextpos
     
@@ -232,6 +234,20 @@ label terminal_locate(i):
         
     if superdev == True:
         "[planetlist]"
+        
+        
+    
+    # delete notes
+    if i == "isc":
+        call remove_note(note_locate_isc) from _call_remove_note_1
+    
+    if i == "asteroids":
+        call remove_note(note_locate_asteroids) from _call_remove_note_2
+        
+    if i == "cargo":
+        call remove_note(note_locate_cargo) from _call_remove_note_3
+    
+    
     
     menu:
         "Go to cockpit":

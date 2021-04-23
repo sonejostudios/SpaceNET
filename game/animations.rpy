@@ -66,11 +66,61 @@ init:
 
 # surface to spaceport
 label takeoff_anim(x):
+    
+    #$ spaceship_broken = True 
+    
+    # spaceship repair (asteroids)
+    if spaceshiptype == "4b" and inventory_select == "screwdriver":
+        m "Let's try to repair the wing. {w=3} {nw}"
+        call use_and_keep_item from _call_use_and_keep_item_40
+        call sound_screw from _call_sound_screw_13
+        pause 3
+        call sound_connected from _call_sound_connected_30
+        
+        $ spaceshiptype = "4"
+        with flash
+
+        $ landing = False
+        $ pnc_nodes_visible = True
+        
+        m "Yes, it worked! {w=2} {nw}"
+        if spaceship_broken == True:
+            m "But I still need to replace the hyperspace module. {w=4} {nw}"
+        
+        return
+        
+        
+    if spaceship_broken == True and inventory_select == "module":
+        m "Let's try to replace the hyperspace module. {w=3} {nw}"
+        call use_item from _call_use_item_10
+        call sound_screw from _call_sound_screw_14
+        pause 3
+        call sound_connected from _call_sound_connected_31
+        
+        hide smoking1
+        hide smoking2
+        hide smoking3
+        
+        $ spaceship_broken = False
+        with flash
+
+        $ landing = False
+        $ pnc_nodes_visible = True
+        
+        m "Yes, it worked! {w=2} {nw}"
+        
+        return
+    
+    
+    
+    # take off menu + anim
     $ pnc_nodes_visible = False
     
+    $ inventory_select = ""
+    call sound_door from _call_sound_door_179
     call hidepaths from _call_hidepaths
     hide player
-    
+
     if x != "nomenu":
         menu:
             "Take off to space":
@@ -78,9 +128,11 @@ label takeoff_anim(x):
                 $ ingame = False
                 $ isc_spaceship_interchange = False
                 pass
+                
             "Take off to surface":
                 $ isc_spaceship_interchange = False
                 pass
+                
             "Exit":
                 $ landing = False
                 call sound_door from _call_sound_door_82
@@ -88,6 +140,11 @@ label takeoff_anim(x):
                 return
     
     #pause 1
+    if spaceship_broken == True:
+        hide smoking1
+        hide smoking2
+        hide smoking3
+        with dissolve
     
     show spaceship:
         pos (250, 240)
@@ -97,6 +154,7 @@ label takeoff_anim(x):
         show shadow:
             pos (250, 240)
             easeout 4 pos (-300, 240)
+            
     
     call sound_take_off from _call_sound_take_off_2
     pause 4
@@ -116,12 +174,19 @@ label takeoff_anim(x):
 label landing_anim:
     $ pnc_nodes_visible = True
     
+        
     if landing == False:
         show spaceship:
             pos (250, 240)
             zoom 0.75
-    
+            
+
     else:
+        
+        hide smoking1
+        hide smoking2
+        hide smoking3
+    
         show spaceship:
             rotate direction
             zoom 2.0
@@ -140,11 +205,22 @@ label landing_anim:
         show spaceship:
             pos (250, 240)
             zoom 0.75
+            rotate 0
         
         call sound_door from _call_sound_door_83
         
         # show inventory button
         $ inventory_button = True
+        
+    
+    # smoking
+    if spaceship_broken == True:
+        show smoking1:
+            pos (250,240)
+        show smoking2:
+            pos (250,240)
+        show smoking3:
+            pos (250,240)
     
     return
 
@@ -153,6 +229,12 @@ label landing_anim:
 # surface to space transition animation
 label takeoff_tospace_anime:
     $ pnc_nodes_visible = False
+    
+    if spaceship_broken == True:
+        hide smoking1
+        hide smoking2
+        hide smoking3
+        with dissolve
     
     show spaceship:
         pos (0.5, 0.5)
@@ -173,10 +255,9 @@ label takeoff_tospace_anime:
     jump space
 
 
-
+# from space to surface
 label landing_fromspace_anim:
     $ pnc_nodes_visible = False
-    
     
     show spaceship:
         rotate 90
@@ -220,10 +301,17 @@ label takeoff_space_anim:
     return
     
 
-    
+
+# in space go down to surface
 label landing_space_anim:
     
     call sound_take_off from _call_sound_take_off_5
+    
+    if spaceship_broken == True:
+        hide smoking1
+        hide smoking2
+        hide smoking3
+        with dissolve
     
     show spaceshipside:
         pos (0.5, 0.5)
@@ -401,7 +489,7 @@ label info_panel:
             xpos 0.5  
             
     if info_panel_symbol == "node":
-        show node as sysnode: 
+        show node2 as sysnode: 
             ypos 0.17
             xpos 0.5
             anchor (0.5, 0.5)
@@ -628,7 +716,7 @@ label end_demo:
     call sound_scan from _call_sound_scan_9
     call show_space from _call_show_space_23
     with flash
-    centered "{color=#8dd35f}End of the demo.\n\nBut you still have to save the universe!"
+    centered "{color=#8dd35f}End of the demo.\n\nBut you still have to save the universe!{/color}"
     hide screen buttons
     jump credits
     

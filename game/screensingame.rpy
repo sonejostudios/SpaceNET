@@ -83,12 +83,41 @@ screen buttons():
 
     
     
+    # mute all sounds
+    key "m" action [Preference("all mute", "toggle"), Notify("Mute toggled")]
+    
+    # show inventory
+    #key "i" action Show("inventory"), Hide("selected_item")
+    key "mousedown_3" action Show("inventory"), Hide("selected_item")
 
+    # inventory select up
+    key 'mousedown_5':
+        if inventory_select_number < len(inventory)-1:
+            action SetVariable("inventory_select_number", inventory_select_number+1), SetVariable("inventory_select", inventory[inventory_select_number+1]), Show("selected_item")
+
+    # inventory select down
+    key 'mousedown_4':
+        if inventory_select_number > 0:
+            action SetVariable("inventory_select_number", inventory_select_number-1), SetVariable("inventory_select", inventory[inventory_select_number-1]), Show("selected_item")
+        else:
+            action SetVariable("inventory_select_number", -1), SetVariable("inventory_select", ""), Hide("selected_item")
+        
+
+
+    # workaround to not crash from old saves (because in old version cash/lamp was added but not shown)
+    # remove "cash" from inventory
+    if "cash" in inventory:
+        $ inventory.remove("cash")
+    
+    # replace "lamp" with "flashlight"
+    if "lamp" in inventory:
+        if "flashlight" not in inventory:
+            $ inventory.append("flashlight")
+        $ inventory.remove("lamp")
+    
+    
     
     if use_dev_keys == True:
-        # mute all sounds
-        key "m" action Preference("all mute", "toggle")
-        
         # TOGGLE SUPERDEV
         key "d" action ToggleVariable("superdev")
     
@@ -127,31 +156,6 @@ screen termfx():
         add "#ffffff"
 
         
-    
-    # shadow points
-    # maybe better  not as screen, but in moveengine, and show shadowpoints behind the nodes
-    # or through the idea, and implement path finding instead
-    
-    #if path[0] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeA
-    #if path[1] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeB
-    #if path[2] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeC
-    #if path[3] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeD
-        
-    #if path[4] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeAA
-    #if path[5] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeBB
-    #if path[6] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeCC
-    #if path[7] == (0,0):
-    #    add "images/shadowpoint.png" anchor (0.5,0.5) pos nodeDD
-        
-        
-        
 
     
     # if red glasses on / in fire
@@ -185,6 +189,9 @@ screen superdev() zorder 2000:
         
         # mousepos
         timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())]
+        
+        
+
         
         
         

@@ -182,7 +182,7 @@ label cargo_explosion_anim:
     m "Mission accomplished!{w=2}{nw}"
     m "All the weapons are destroyed.{w=2}{nw}"
     m "They won't hurt anybody anymore.{w=2}{nw}"
-    m "I think I should call 4n0nym0us now.{w=3}{nw}"
+    m "I think I should call 4n0nym0u5 now.{w=3}{nw}"
     
     
     

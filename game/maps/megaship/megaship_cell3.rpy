@@ -69,8 +69,9 @@ label loop_megaship_cell3:
                         hacker "Listen... {w=2.0} {nw}"
                         hacker "I really need to leave for my next mission. {w=3.5} {nw}"
                         hacker "While the guards were trying to put me in this cell, I managed to steal their key. {w=4.5} {nw}"
-                        hacker "But I have no clue as where to use it. {w=2.5} {nw}"
+                        hacker "But I have no clue where to use it. {w=2.5} {nw}"
                         hacker "Maybe you'll find the place? {w=2.5} {nw}"
+                        hacker "I think it belongs to a door inside this megaship. {w=3.5} {nw}"
 
                         call take_item("key") from _call_take_item_9
                         

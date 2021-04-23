@@ -139,7 +139,7 @@ label megaship_spaceport:
             pos nodeA
         
         with flash
-        m "haaa! there is no air to breathe!{w=3.0} {nw}"
+        m "Haaa! There is no air to breathe!{w=3.0} {nw}"
         call sound_door from _call_sound_door
         jump megaship_lift2
     
@@ -210,7 +210,7 @@ label loop_megaship_spaceport:
             hide player
             
             menu:
-                "take off":
+                "Take off":
                     # get bigdoor bound position
                     $ bigdoor_bounds = renpy.get_image_bounds("megaship_bigdoor")
                     $ bigdoor_bounds = (int(bigdoor_bounds[0]), int(bigdoor_bounds[1]))
@@ -236,7 +236,7 @@ label loop_megaship_spaceport:
                     else:
                         m "I don't want to take off now while the door is closed! {w=3.0} {nw}"
                     
-                "leave":
+                "Leave":
                     call sound_door from _call_sound_door_3
                     show player
                     pass
@@ -247,7 +247,7 @@ label loop_megaship_spaceport:
             
         if exitpos == 33:
             if startpos == 33 and hacker_in_prison == 1:
-                m "This is 4n0nym0us' spaceship. {w=2.5} {nw}"
+                m "This is 4n0nym0u5' spaceship. {w=2.5} {nw}"
             else:
                 call dialog_nothing from _call_dialog_nothing_3
             $ startpos = 33

@@ -34,5 +34,6 @@ label megaship_lift2:
     if liftpos == 3:
         m "There are lots of people out there...{w=2.0} {nw}"
         m "Too many for my taste. {w=2.0} {nw}"
+        m "Actually, I should escape from this spaceship instead of visiting it! {w=4.0} {nw}"
         #call sound_door_locked
         jump megaship_lift2

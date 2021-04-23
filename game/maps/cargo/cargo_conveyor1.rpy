@@ -157,9 +157,9 @@ label loop_cargo_conveyor1:
                     m "This is a container.{w=2}{nw}"
                     m "What is inside?{w=2}{nw}"
                     if cargo_container_cash > 0:
-                        m "Hey, there is something metalic under the container!{w=3}{nw}"
+                        m "Hey, there is something metallic under the container!{w=3}{nw}"
                 
-                elif inventory_select == "magnet" and cargo_container_cash > 0:
+                elif inventory_select == "magnet" or inventory_select == "magnetcord" and cargo_container_cash > 0:
                     call use_and_keep_item from _call_use_and_keep_item_11
                     m "Hey, there are some coins!{w=2}{nw}"
                     call io_cash(cargo_container_cash) from _call_io_cash_3

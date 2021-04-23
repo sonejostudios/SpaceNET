@@ -30,20 +30,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="506.30955"
-     inkscape:cy="277.22627"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="388.36488"
+     inkscape:cy="339.91023"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="true"
-     inkscape:window-width="1896"
-     inkscape:window-height="1017"
-     inkscape:window-x="0"
-     inkscape:window-y="1050"
+     inkscape:window-width="1680"
+     inkscape:window-height="1014"
+     inkscape:window-x="116"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-bbox="true"
-     showguides="false">
+     showguides="false"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid1093" />
@@ -1997,5 +1998,170 @@
          y="62.129444"
          x="-84.689308"
          sodipodi:role="line">io-4</tspan></text>
+    <path
+       id="path1117"
+       style="opacity:0.7;fill:#8dd35f;fill-opacity:1;stroke:none;stroke-width:1.32292;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:37.7953;paint-order:stroke markers fill"
+       d="m -23.498746,9.9922227 c -1.641903,0.0034 -2.971229,1.3351293 -2.971227,2.9770383 8.7e-5,0.08675 0.0039,0.173481 0.01164,0.259906 -0.481497,-0.171872 -0.988919,-0.259782 -1.500161,-0.259906 -2.466262,0 -4.465562,1.999301 -4.465562,4.465563 -1.94e-4,2.280292 1.717672,4.194427 3.984702,4.439975 -0.100839,0.378816 -0.151859,0.769162 -0.151761,1.161164 1.93e-4,2.490499 2.019259,4.509298 4.509753,4.509175 1.81406,-1.02e-4 3.451457,-1.087195 4.155646,-2.759 0.295596,0.06076 0.596581,0.09125 0.898348,0.09125 2.46626,0 4.465561,-1.999301 4.465561,-4.465562 4.5e-5,-0.580064 -0.112926,-1.154583 -0.332592,-1.691451 0.559733,-0.808994 0.859522,-1.769416 0.859389,-2.753173 0,-2.671787 -2.165908,-4.837693 -4.837693,-4.837693 -0.688887,-4.5e-5 -1.369841,0.14705 -1.997292,0.43144 -0.518695,-0.966058 -1.526439,-1.5687843 -2.622935,-1.5687613 z"
+       sodipodi:nodetypes="sccccccscscccccss"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/smoke.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 47.624999,159.50595 1.795387,-7.18156 h 7.181547 l 1.795388,7.18156 z"
+       id="path1118"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4ub.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <g
+       id="g1130"
+       transform="matrix(0.80266072,0,0,0.67857132,13.879522,103.84896)"
+       style="stroke-width:2.50956;stroke-miterlimit:4;stroke-dasharray:none"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4ub.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path1126"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:2.50956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 34.395833,55.5625 10e-7,15.875 h 5.291667 l 2e-6,-17.46249 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path1128"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:2.50956;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 31.75,79.375013 v -21.16668 h 1.451521 v 21.16668 z" />
+    </g>
+    <g
+       id="g1185"
+       transform="rotate(-12.021915,59.969528,148.96597)"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4ub.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <path
+         id="path1120"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85209;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 64.345627,141.55208 -10e-7,10.77232 h -4.247413 l -2e-6,-11.84955 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="path1122"
+         style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85209;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+         d="m 66.469333,157.71057 v -14.3631 h -1.165079 v 14.3631 z"
+         inkscape:transform-center-x="-0.088438216"
+         inkscape:transform-center-y="6.0681051" />
+      <text
+         transform="matrix(0,-0.97257305,1.0282004,0,0,0)"
+         id="text1142"
+         y="62.129444"
+         x="-154.35219"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none;enable-background:new"
+         xml:space="preserve"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4u.png"><tspan
+           id="tspan1140"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none"
+           y="62.129444"
+           x="-154.35219"
+           sodipodi:role="line">io-4</tspan></text>
+    </g>
+    <path
+       id="path1132"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 52.916667,107.43974 -2.393848,1.79538 -1.196925,16.15848 -3.590773,5.38616 v 25.13541 l 7.181546,-1.88988 7.181547,1.88988 V 130.77976 L 56.50744,125.3936 55.310518,109.23512 Z"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4ub.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 52.916667,137.58333 -1.795387,14.3631 h 3.590774 z"
+       id="path1134"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4ub.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 48.418753,130.77976 2.633232,-3.94985 h 0.452128 v 3.94985 z"
+       id="path1136"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4ub.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 57.414582,130.77976 -2.633233,-3.94985 h -0.452127 v 3.94985 z"
+       id="path1138"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4ub.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 139.52572,130.44483 -14.69906,-3.45428 v 3.45428 z"
+       id="path1144"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4sb.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 117.41832,132.5174 6.90858,1.43928 v 5.75714 l -6.90858,1.43929 z"
+       id="path1146"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4sb.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 168.88712,140.80768 -1.72713,-3.45428 -15.54428,-1.72715 -5.18142,-5.18142 -24.17998,0 -0.0735,9.97332 2.64583,2.11667 h 18.52081 l 16.90392,0 z"
+       id="path1148"
+       sodipodi:nodetypes="cccccccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4sb.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 145.84212,132.17197 3.45429,3.45428 h -5.18143 z"
+       id="path1150"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4sb.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       id="path1152"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85208;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 139.87206,136.44308 -14.38536,-4.66683 -0.54198,7.09425 15.58989,1.23606 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4sb.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:transform-center-x="5.0267674"
+       inkscape:transform-center-y="-1.8665604" />
+    <path
+       id="path1154"
+       style="fill:#112119;fill-opacity:1;stroke:#8dd35f;stroke-width:1.85209;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:37.7953;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 120.26292,143.614 17.18156,-6.19295 0.20353,0.56468 -17.18156,6.19295 z"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4sb.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:transform-center-x="8.0940731"
+       inkscape:transform-center-y="2.9003355" />
+    <text
+       transform="scale(0.97257306,1.0282004)"
+       id="text1160"
+       y="136.78276"
+       x="147.11955"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:0%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;letter-spacing:0px;word-spacing:0px;fill:#8dd35f;fill-opacity:1;stroke:none;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none;enable-background:new"
+       xml:space="preserve"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/spaceship/spaceship4sb.png"><tspan
+         id="tspan1156"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none"
+         y="136.78276"
+         x="147.11955"
+         sodipodi:role="line">io-4</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.64583px;line-height:50%;font-family:ISL_Andvari;-inkscape-font-specification:ISL_Andvari;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.85208;stroke-miterlimit:4;stroke-dasharray:none"
+         y="137.44423"
+         x="147.11955"
+         sodipodi:role="line"
+         id="tspan1158" /></text>
   </g>
 </svg>

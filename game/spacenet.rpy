@@ -31,7 +31,7 @@ label spacenet_comp(snetnode):
     SpaceNET
     [ascii_line]
     
-    Node Name: [snetnode]
+    Node name: [snetnode]
     
     State: [node_state]
     """

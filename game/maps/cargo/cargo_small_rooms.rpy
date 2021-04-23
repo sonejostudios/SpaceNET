@@ -18,7 +18,7 @@ label cargo_smallroom:
     scene bgcolor
     
     show crossroomsmall at truecenter
-    show screen notify("cargo room")
+    show screen notify("Cargo room")
 
         
     #show tube behind crossroomsmall at truecenter
@@ -110,7 +110,7 @@ label loop_cargo_smallroom:
                 
                 if "robotcard" not in inventory:
                     m "Hey! There is something there.{w=3}{nw}"
-                    m "It looks like an id card.{w=3}{nw}"
+                    m "It looks like an ID card.{w=3}{nw}"
                     
                     call take_item("robotcard") from _call_take_item_1
 

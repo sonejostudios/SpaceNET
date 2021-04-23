@@ -64,6 +64,10 @@ label hacker_meeting:
                 $ x = 1
                 
                 #$ inventory_select = ""
+                
+                $ hacker_space_meeting_done = True
+                
+                call remove_note(sam_hacker_meeting_text_workaround) from _call_remove_note
             
 
             
@@ -89,8 +93,7 @@ label hacker_meeting:
     
     pause 5
     
-    $ hacker_space_meeting_done = True
-    # (this is to False in cockpit)
+
     
     return
 

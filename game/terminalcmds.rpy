@@ -36,7 +36,7 @@ label term_commands:
     Hello World!
     [ascii_line]
     
-    The terminal gives you the access to your 
+    The terminal gives you the access to the 
     entire system.
     Type a command and press enter.
 
@@ -81,6 +81,12 @@ label term_commands:
         locate sun
         locate megaship
         locate xylo
+        
+    Important:
+        Using this command from your
+        spaceship's terminal will allow
+        you to copy the coordinates 
+        to you cockpit map.
 
     """
             
@@ -115,7 +121,7 @@ label term_commands:
             
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 menu:
-                    "Restart io-11":
+                    "Restart IO-11":
                         m "Okay let's do this. {w=1.5} {nw}"
                         call server_progressbar from _call_server_progressbar
                         $ sat_connected_to = "-"
@@ -277,7 +283,7 @@ label term_commands:
         call sound_beep from _call_sound_beep_21
         
         menu:
-            "Send sos":
+            "Send SOS":
                 pass
             "Exit":
                 $ termtext = "help"
@@ -601,6 +607,12 @@ label term_commands:
         call terminal_locate("isc") from _call_terminal_locate_5
         jump terminal
         
+        
+# command locate asteroids - needs to be uncommented for asteroids release!
+    #if termtext == "locate asteroids" :
+    #    call terminal_locate("asteroids")
+    #    jump terminal
+        
 
         
     
@@ -686,7 +698,7 @@ label term_commands:
                     m "[questions[5]]"
                     
             
-            m "You are capturated by the prison megaship of the government. {w=4}{nw}"
+            m "You are captured by the prison megaship of the government. {w=4}{nw}"
             m "They will put you into a prison cell. {w=3}{nw}"
             m "But there is a way out! {w=3}{nw}"
             m "I could try to get there, but I'll need some tools. {w=3.5}{nw}"   
@@ -841,7 +853,7 @@ label term_commands:
     if termtext == "ssh cargo" and cargo_remote_control != "none":
         
         python:
-            cargo_pass_entry = renpy.input(_("ssh cargo Password:"))
+            cargo_pass_entry = renpy.input(_("ssh cargo password:"))
             cargo_pass_entry = cargo_pass_entry.strip()
             if not cargo_pass_entry:
                 cargo_pass_entry = ""

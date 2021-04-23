@@ -29,7 +29,7 @@ __Features:__
 * Use a full featured terminal to hack things in the game
 * Find money, buy objects
 * Dock to a satellite
-* Choose between 3 different spaceships
+* Fly with different spaceships
 * Collect gems
 * Find the network nodes
 * Save the universe!

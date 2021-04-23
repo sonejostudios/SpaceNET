@@ -330,6 +330,9 @@ style quick_button_text:
 ## to other menus, and to start the game.
 
 screen navigation():
+    
+    # mute all sounds
+    key "m" action [Preference("all mute", "toggle"), Notify("Mute toggled")]
 
     vbox:
         style_prefix "navigation"
@@ -359,6 +362,10 @@ screen navigation():
 
         textbutton _("Preferences") action ShowMenu("preferences") activate_sound "sounds/beep.ogg"
 
+        if renpy.variant("pc"):
+            ## Help isn't necessary or relevant to mobile devices.
+            textbutton _("Help") action ShowMenu("help") activate_sound "sounds/beep.ogg"
+        
         if main_menu:
             textbutton _("Credits") action Jump("credits") activate_sound "sounds/beep.ogg"
             
@@ -369,19 +376,12 @@ screen navigation():
             if use_dev_keys == True:
                 textbutton "Superdev" action ToggleVariable("superdev")
             
-
-            
-            
         
         #textbutton _("About") action ShowMenu("about")
 
-        #if renpy.variant("pc"):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            #textbutton _("Help") action ShowMenu("help")
-
+        if renpy.variant("pc"):
             ## The quit button is banned on iOS and unnecessary on Android.
-        textbutton _("Quit Game") action Quit(confirm=not main_menu) activate_sound "sounds/beep.ogg"
+            textbutton _("Quit Game") action Quit(confirm=not main_menu) activate_sound "sounds/beep.ogg"
             
             
     #if termfx_enable == 1:
@@ -946,6 +946,14 @@ screen preferences():
             #null height (4 * gui.pref_spacing)
             null height 20
             label _("Music and Sounds")
+
+            null height 10
+            
+            #textbutton _("Mute All"):
+            #    action Preference("all mute", "toggle")
+            #    style "mute_all_button"
+                
+            #null height 20
             
             hbox:
                 style_prefix "slider"
@@ -964,11 +972,11 @@ screen preferences():
                     #bar value Preference("auto-forward time")
 
                 vbox:
-                    #textbutton _("Mute All"):
-                    #    action Preference("all mute", "toggle")
-                    #    style "mute_all_button"
+                    textbutton _("Mute All"):
+                        action Preference("all mute", "toggle")
+                        style "mute_all_button"
                         
-                    null height 20
+                    null height 10
 
                     if config.has_music:
                         text _("Music Volume")
@@ -1008,12 +1016,17 @@ screen preferences():
                     
                     #null height gui.pref_spacing
                     null height 20
+                    label _("{size=10}Please use headphones or a proper sound system!{/size}")
+                    null height 20
 
-                    textbutton _("Mute All"):
-                        action Preference("all mute", "toggle")
-                        style "mute_all_button"
                             
         
+            null height 20
+            #label _("Shortcuts")
+            #null height 10
+            #label _("Shortcuts")
+    
+    
     #null height 20
     label "[config.version] [pre_version] [build_date]":
         align (0.99,0.02)
@@ -1188,99 +1201,146 @@ screen help():
 
     tag menu
 
-    default device = "keyboard"
+    #default device = "mouse"
 
     use game_menu(_("Help"), scroll="viewport"):
 
-        style_prefix "help"
+        #style_prefix "help"
 
         vbox:
-            spacing 15
+            #spacing 15
+            #hbox:
+            #    textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+            #    textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
+                
+                #if GamepadExists():
+                #    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
 
-            hbox:
+            #if device == "keyboard":
+            #    use keyboard_help
+            #elif device == "mouse":
+            #    use mouse_help
+            #elif device == "gamepad":
+            #    use gamepad_help
+            
+            #spacing 10   
+            
+            grid 2 14:
+                xfill True
+                spacing 15
 
-                textbutton _("Keyboard") action SetScreenVariable("device", "keyboard")
-                textbutton _("Mouse") action SetScreenVariable("device", "mouse")
+                add "images/position.png":
+                    xpos 0
+                text _("[playername]")
+                
+                add "images/node2.png":
+                    zoom 0.55
+                text _("Action Point")
+                
+                add "images/dockup_idle.png":
+                    zoom 0.25
+                text _("Take off to Space, Move Spaceship")
+                
+                
+                add "images/inventory/inventory_button_idle.png":
+                    xpos 2
+                    zoom 0.8
+                text _("Inventory")
+                
+                
+                
+                label _("0C"):
+                    xpos 5
+                text _("Cash")
+                
+                add "images/menuicon.png":
+                    xpos 4
+                    zoom 1.0
+                text _("Game Menu")
+                
+            
+                label _("Left Click"):
+                    xpos 5
+                text _("Move, Look, Select, Take, Give, Talk, Use...")
 
-                if GamepadExists():
-                    textbutton _("Gamepad") action SetScreenVariable("device", "gamepad")
+                label _("Right Click"):
+                    xpos 5
+                text _("Show/Hide Inventory")
 
-            if device == "keyboard":
-                use keyboard_help
-            elif device == "mouse":
-                use mouse_help
-            elif device == "gamepad":
-                use gamepad_help
+                label _("Mouse Wheel Up"):
+                    xpos 5
+                text _("Select previous Item from Inventory")
 
+                label _("Mouse Wheel Down"):
+                    xpos 5
+                text _("Select next Item from Inventory")
+                
+                label "F / F11":
+                    xpos 5
+                text _("Toggle Fullscreen")
+                
+                label "M":
+                    xpos 5
+                text _("Toggle Mute")
 
-screen keyboard_help():
-
-    hbox:
-        label _("Enter")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Space")
-        text _("Advances dialogue without selecting choices.")
-
-    hbox:
-        label _("Arrow Keys")
-        text _("Navigate the interface.")
-
-    hbox:
-        label _("Escape")
-        text _("Accesses the game menu.")
-
-    hbox:
-        label _("Ctrl")
-        text _("Skips dialogue while held down.")
-
-    hbox:
-        label _("Tab")
-        text _("Toggles dialogue skipping.")
-
-    hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
-
-    hbox:
-        label "H"
-        text _("Hides the user interface.")
-
-    hbox:
-        label "S"
-        text _("Takes a screenshot.")
-
-    hbox:
-        label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
+                label "S":
+                    xpos 5
+                text _("Take a Screenshot")
+                
+                label _("Escape"):
+                    xpos 5
+                text _("Show Game Menu")
+    
+    
+    
+    
+    if termfx_enable == 1:
+        add "images/termfx.png"
 
 
 screen mouse_help():
 
     hbox:
         label _("Left Click")
-        text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Middle Click")
-        text _("Hides the user interface.")
+        text _("Do everything: Move, Select, Talk, Use...")
 
     hbox:
         label _("Right Click")
-        text _("Accesses the game menu.")
+        text _("Show/Hide Inventory")
 
     hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
+        label _("Mouse Wheel Up")
+        text _("Quick select item from inventory, previous item")
 
     hbox:
         label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
+        text _("Quick select item from inventory, next item")
+
+
+
+screen keyboard_help():
+
+    hbox:
+        label "I"
+        text _("Show/Hide inventory")
+        
+    hbox:
+        label "F or F11"
+        text _("Fullscreen on/off")
+        
+    hbox:
+        label "M"
+        text _("Mute/Unmute all sounds")
+
+    hbox:
+        label "S"
+        text _("Takes a screenshot.")
+        
+    hbox:
+        label _("Escape")
+        text _("Accesses the game menu.")
+
+
 
 
 screen gamepad_help():
@@ -1326,13 +1386,13 @@ style help_button_text:
     properties gui.button_text_properties("help_button")
 
 style help_label:
-    xsize 250
+    xsize 130#250
     right_padding 20
 
 style help_label_text:
     size gui.text_size
-    xalign 1.0
-    text_align 1.0
+    xalign 0.0
+    text_align 0.0
 
 
 

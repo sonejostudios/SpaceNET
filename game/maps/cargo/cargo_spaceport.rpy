@@ -7,7 +7,7 @@ label cargo_spaceport:
     call atmo_spaceport from _call_atmo_spaceport_1
     
     
-    image xylo_mine = imagemapsdir + "cargo_spaceport.png"
+    image cargo_spaceport = imagemapsdir + "cargo_spaceport.png"
     
     scene bgcolor
     show screen notify("maintenance shaft")

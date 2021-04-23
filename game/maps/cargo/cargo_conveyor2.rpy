@@ -12,7 +12,7 @@ label cargo_conveyor2:
     call atmo_conveyor from _call_atmo_conveyor_1
     
     scene bgcolor
-    show screen notify("cargo conveyor room")
+    show screen notify("Cargo conveyor room")
     
     show cargo_conveyor:
         yzoom -1
@@ -57,7 +57,7 @@ label cargo_conveyor2:
     #boxes     
     show box:
         pos (200,390)
-        
+    
     show box as box2:
         pos (300,390)
         

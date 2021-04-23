@@ -94,14 +94,14 @@ label loop_xylo_spaceport_hall:
                 call terminal from _call_terminal_4
             
             if startpos == 3 and xylo_spaceport_hall_term == False:
-                if inventory_select != "screwdriver":
+                if inventory_select == "":
                     call sound_electroshock from _call_sound_electroshock_25
                     with hpunch
                     m "This terminal is broken... {w=1.5} {nw}"
                 
-                if inventory_select == "screwdriver":
+                elif inventory_select == "screwdriver":
                     call use_and_keep_item from _call_use_and_keep_item_10
-                    m "Let's see if I can repaire it... {w=2.0} {nw}"
+                    m "Let's see if I can repair it... {w=2.0} {nw}"
                     $ xylo_spaceport_hall_term = True
                     call sound_screw from _call_sound_screw_6
                     pause 1
@@ -110,6 +110,10 @@ label loop_xylo_spaceport_hall:
                     call sound_connected from _call_sound_connected_8
                     #with flash
                     m "Yeah, I fixed it! Now it seems to work again. {w=2.0} {nw}"
+                    
+                else:
+                    call dialog_nosense from _call_dialog_nosense_43
+                    
                 
             $ startpos = 3
 

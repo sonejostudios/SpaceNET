@@ -70,21 +70,21 @@ label server_file2:
         show text Text(showtext,text_align=termtext_align) at termtextpos
         
         menu:
-            "decrypt with uncrypter" if server_filelist[2] == "3. uncrypter":
+            "Decrypt with uncrypter" if server_filelist[2] == "3. uncrypter":
                 $ server_filelist[1] = "2. SpaceNET"
 
                 call sound_beep from _call_sound_beep_41
                 pause 1
                 call sound_connected from _call_sound_connected_38
                 
-                $ server_msglist[2] = "3. well done!"
+                $ server_msglist[2] = "3. Well done!"
                 
                 #call notify_new_message
                 $ inbox_new_message = "*"
                 
                 jump server_files
                 
-            "back":
+            "Back":
                 call sound_beep from _call_sound_beep_42
                 jump server_files
                 

@@ -41,9 +41,6 @@ label startpos:
         jump positionDD
         
     
-    "end of startpos label - wrong startpos code given"
-
-    
     return
 
 

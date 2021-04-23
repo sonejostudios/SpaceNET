@@ -222,7 +222,7 @@ label xylo_sea_bar_client1:
                 "[questions_client[1]]" if xylo_sea_bar_client1_flags[1] == 0: #how are you
                     m "[questions_client[1]]"
                     clientsea "What I'm doing here? Drinking to forget! {w=3} {nw}"
-                    clientsea "I worked in the silver mine in the north. {w=3} {nw}"
+                    clientsea "I worked in the silver mine in the north-west. {w=3} {nw}"
                     clientsea "But they closed it, so now I don't know what to do! {w=4} {nw}"
                     clientsea "The worse, they didn't give me back my personal documents. {w=4} {nw}"
                     clientsea "So I can't apply for a new job anywhere... {w=3} {nw}"
@@ -234,7 +234,7 @@ label xylo_sea_bar_client1:
                 "[questions_client[2]]" if xylo_sea_bar_client1_flags[2] == 0: # spacenet?
                     m "[questions_client[2]]"
                     clientsea "SpaceNET?... {w=1}{nw}"
-                    clientsea "I heard it is a project from the Rebel Alliance. {w=3}{nw}"
+                    clientsea "I heard, it is a project from the Rebel Alliance. {w=3}{nw}"
                     clientsea "But that's all I know. {w=2}{nw}"
                     $ xylo_sea_bar_client1_flags[2] = 1
                         
@@ -250,7 +250,7 @@ label xylo_sea_bar_client1:
     elif inventory_select == "letter":
         call use_item from _call_use_item_3
         m "I think this belongs to you.{w=2}{nw}"
-        m " I met a miner in xylos colony bar. He gave me this letter for you.{w=4.5}{nw}"
+        m "I met a miner in Xylo's colony bar. He gave me this letter for you.{w=4.5}{nw}"
         
         clientsea "Oh, that's amazing!{w=2}{nw}"
         clientsea "This are my personal documents!{w=2}{nw}"

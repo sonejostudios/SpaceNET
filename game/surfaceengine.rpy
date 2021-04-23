@@ -10,7 +10,8 @@ image surface:
         "planet=='xylo'", "images/surfaces/surface1.png",
         "planet=='demo'", "images/surfaces/surface1.png",
         "planet=='cargo'", "images/surfaces/surface_cargo.png",
-        "planet=='isc'", "images/surfaces/surface_isc.png")
+        "planet=='isc'", "images/surfaces/surface_isc.png",
+        "planet=='asteroids'", "images/surfaces/surface_asteroids.png")
 
 
 #######
@@ -68,16 +69,22 @@ label surface:
     
     scene bgcolor
     
-    if planet == "cargo" or planet == "isc":
+    
+    if planet in ["cargo", "isc", "asteroids"]:
         call show_space from _call_show_space_22
+        
+    
     
     
     if shadow_enable == 1:
         show shadow at truecenter
+        
     
     $ ingame = False
     
     jump scroll
+
+
 
 
 label scroll:
@@ -95,10 +102,25 @@ label scroll:
             
     if space_anim == True:
         call landing_fromspace_anim from _call_landing_fromspace_anim
+        
 
     show spaceship:
         pos (0.5,0.5)
         zoom 0.5
+
+
+
+    # smoking
+    if spaceship_broken == True:
+        if renpy.showing("smoking1") != True:
+            show smoking1:
+                pos (400,240)
+        if renpy.showing("smoking2") != True:
+            show smoking2:
+                pos (400,240)
+        if renpy.showing("smoking3") != True:
+            show smoking3:
+                pos (400,240)
 
 
     
@@ -305,19 +327,40 @@ label landing:
             
             if planet == "cargo":
                 if shippos == (800,1200):
-                    #m "it seems to be closed right now..."
                     $ startpos = 44
                     jump cargo_anim_down
                     
+            
             if planet == "isc":
                 if shippos == (0,1000):
-                    #m "it seems to be closed right now..."
                     $ startpos = 44
                     jump isc_interchange
                 if shippos == (1000,800):
-                    #m "it seems to be closed right now..."
                     $ startpos = 44
                     jump isc_city_spaceport
+                    
+                    
+            if planet == "asteroids":
+                if shippos == (0,400): # asteroid1
+                    $ startpos = 44
+                    jump asteroid1
+                    
+                if shippos == (1000,200): # asteroid2
+                    $ startpos = 44
+                    jump asteroid2
+                    
+                if shippos == (200,1600): # asteroid3
+                    $ startpos = 44
+                    jump asteroid3
+                    
+                if shippos == (1200,1200): # asteroid4
+                    $ startpos = 44
+                    jump asteroid4
+
+                    
+                    
+                    
+                
         
 
             
