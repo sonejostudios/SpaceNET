@@ -288,16 +288,7 @@ label music_bar_village_deep:
     $ renpy.music.play("music/bar-village-deep.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
    
-#    
-label music_bar_sea:
-    $ renpy.music.play("music/bar.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
-    return
-#    
-label music_bar_sea_deep:
-    $ renpy.music.play("music/bar-deep.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
-    return
-   
-   
+ 
 label music_bar_chill:
     $ renpy.music.play("music/bar-chill.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
@@ -313,6 +304,7 @@ label music_outro:
     $ renpy.music.play("music/outro.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
     
+    
 label music_outro_bar:
     $ renpy.music.play("<from 19.83>music/outro.ogg", channel="music", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
@@ -322,11 +314,7 @@ label music_outro_deep:
     return
    
    
-   
-   
-#label music_surface:
-#    $ renpy.music.play("music/surface.ogg", channel="music", fadein=1, fadeout=1, tight=True, if_changed=True)
-#    return   
+
 
 
 # village building

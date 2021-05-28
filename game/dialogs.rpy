@@ -41,19 +41,19 @@ label dialog_nothing:
 label dialog_closed:
     
     if inventory_select == "screwdriver":
-        m "Unscrewing this door is definitely a bad idea, forget it! {w=3.0} {nw}"
+        m "Unscrewing this door is definitely a bad idea, forget it! {w=4.0} {nw}"
     elif inventory_select == "accesscard" or inventory_select == "robotcard":
-        m "This access card doesn't fit to this door! {w=3.0} {nw}"
+        m "This access card doesn't fit to this door! {w=3.5} {nw}"
     elif inventory_select == "cable":
-        m "I could make a short circuit... {w=1.5} {nw}"
+        m "I could make a short circuit... {w=2.5} {nw}"
         call sound_electroshock from _call_sound_electroshock_1
         with hpunch
-        m "Haaa... bad idea! {w=1.5} {nw}"
-        m "Nothing happens... {w=1.5} {nw}"
+        m "Haaa... bad idea! {w=2.5} {nw}"
+        m "Nothing happens... {w=2.5} {nw}"
     elif inventory_select == "pick":
-        m "I don't want to destroy this door. {w=2} {nw}"
+        m "I don't want to destroy this door. {w=3} {nw}"
     elif inventory_select == "dynamite":
-        m "I really - really - really - don't want to destroy this door! {w=3.5} {nw}"
+        m "I really, really, really don't want to destroy this door! {w=4} {nw}"
     elif inventory_select == "laser":
         m "This laser is not strong enough to cut this door. {w=3.5} {nw}"
     elif inventory_select == "key":
@@ -107,8 +107,8 @@ label dialog_notfitting:
 label dialog_ndd:
     call sound_electroshock from _call_sound_electroshock_2
     with hpunch
-    md "This is a ndd, a non-droid door...{w=2} {nw}" 
-    md "I can't go through there! {w=2} {nw}"
+    md "This is a NDD, a non-droid door...{w=3} {nw}" 
+    md "I can't go through! {w=2} {nw}"
     return
     
     
@@ -117,12 +117,12 @@ label dialog_joke:
     m "What about a joke? {w=2} {nw}"
     menu:
         
-        "What is a spaceships' pilote's favourite place on a computer?" if spacebar_joke == True:
-            m "What is a spaceships' pilote's favourite place on a computer?{w=5} {nw}"
+        "What is a spaceship pilot's favorite place on a computer?" if spacebar_joke == True:
+            m "What is a spaceship pilot's favorite place on a computer?{w=5} {nw}"
             $ joke = 3
         
-        "What is the difference between the government and the A.R.K Corporation?" if gov_joke == True:
-            m "What is the difference between the government and the A.R.K Corporation? {w=5} {nw}"
+        "What is the difference between the government and the A.R.K. Corporation?" if gov_joke == True:
+            m "What is the difference between the government and the A.R.K. Corporation? {w=5} {nw}"
             $ joke = 2
             
         
@@ -139,11 +139,14 @@ label dialog_joke:
 
 label npc_dont_need_item(npc):
     
-    if inventory_select in ["accesscard", "spacenet", "robotcard", "bulb", "gem", "cards", "magnetcord", "asteroid"]:
+    if inventory_select in ["gem", "magnetcord"]:
         $ npc_noneed_say = renpy.random.randint(1, 3)
     else:
         $ npc_noneed_say = renpy.random.randint(1, 9)
-    
+        
+        
+    # set item real name
+    $ item_name = item_name_dict[inventory_select]
     
     # unspecific items
     if npc_noneed_say == 1:
@@ -156,21 +159,22 @@ label npc_dont_need_item(npc):
         
     # talk about item
     if npc_noneed_say == 4:
-        npc "I don't need any [inventory_select], thanks. {w=3}{nw}"
+        npc "I don't need any [item_name], thanks. {w=3}{nw}"
     if npc_noneed_say == 5:
-        npc "Do I look like I would really need any [inventory_select]? {w=4}{nw}"
+        npc "Do I look like I would really need any [item_name]? {w=4}{nw}"
     if npc_noneed_say == 6:
-        npc "Please, don't bother me with your [inventory_select]. {w=3.5}{nw}"
+        npc "Please, don't bother me with your [item_name]. {w=3.5}{nw}"
     if npc_noneed_say == 7:
-        npc "What do your want with your [inventory_select]? {w=3.5}{nw}"
+        npc "What do you want with your [item_name]? {w=3.5}{nw}"
     if npc_noneed_say == 8:
-        npc "What's the thing with this [inventory_select]? {w=3}{nw}"
+        npc "What's the thing with this [item_name]? {w=3}{nw}"
         npc "Please don't bother me with it. {w=3.5}{nw}"
     if npc_noneed_say == 9:
-        npc "If I need your [inventory_select], I'll let you know. {w=4}{nw}"
+        npc "If I need your [item_name], I'll let you know. {w=4}{nw}"
         
     
     $ inventory_select = ""
+    $ item_name = ""
     
     return
 

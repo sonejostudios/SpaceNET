@@ -16,7 +16,7 @@ label isc_city_shop:
     show isc_city_shop at truecenter
     
     if startpos != 11:
-        show screen notify("ISC City Shop")
+        show screen notify("ISC Center Shop")
     
 
     show store_table:

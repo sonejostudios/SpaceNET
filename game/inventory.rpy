@@ -14,6 +14,44 @@ init:
     
     $ spacenet_copied = False
     
+    $ inventory_visible = False
+    
+    
+    $ item_name_dict = {"":"",
+    "newspaper": "newspaper",
+    "screwdriver": "screwdriver",
+    "spacesuit": "spacesuit",
+    "flashlight": "flashlight",
+    "cable": "electric cable",
+    "bulb": "light bulb",
+    "mirror": "mirror",
+
+    "spacenet": "computer disk",
+    
+    "accesscard": "access card",
+    "rope": "rope",
+    "pick": "pick",
+    "shovel": "This is a shovel.\nGood for digging.",
+    "dynamite": "shovel",
+    "minidroid": "minidroid",
+    
+    "gem": "gems",
+    
+    "star": "star of the rebel alliance",
+    "notebook": "notebook",
+    "laser": "laser tool",
+    "key": "old key",
+    "letter": "letter",
+    "hook": "safety hook",
+    "magnet": "magnet",
+    "robotcard": "robot card",
+    "knife": "knife",
+    "cards": "card game",
+    "module": "hyperspace module",
+    "cord": "cord",
+    "magnetcord": "cord with a magnet",
+    "asteroid": "asteroid piece" }
+    
     
     
     
@@ -60,11 +98,6 @@ screen inventory():
         text "\n[inventory]":
             ypos 280
             
-        
-    
-    
-        
-
 
 
     hbox:
@@ -86,7 +119,7 @@ screen inventory():
             if inventory_item == "screwdriver":
                 imagebutton idle inventory_dir + "screwdriver_idle.png" selected_idle inventory_dir + "screwdriver_selected_idle.png" selected_hover inventory_dir + "screwdriver_selected_idle.png":
                     if inventory_select != "screwdriver":
-                        action SelectedIf(inventory_select == "screwdriver"), SetVariable("inventory_select", "screwdriver")#, SetVariable("item_info", "This is a very good screw driver.\nI stole it from a robot.")
+                        action SelectedIf(inventory_select == "screwdriver"), SetVariable("inventory_select", "screwdriver")#, SetVariable("item_info", "This is a very good screwdriver.\nI stole it from a robot.")
                     else:
                         action SelectedIf(inventory_select == "screwdriver"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
 
@@ -338,7 +371,7 @@ screen inventory():
     #item info
     $ item_info_dict = {"":"",
     "newspaper": "This is an old newspaper.\nNothing interesting inside.",
-    "screwdriver": "This is a very good screw driver.\nI stole it from a robot.",
+    "screwdriver": "This is a very good screwdriver.\nI stole it from a robot.",
     "spacesuit": "This is a space suit.\nI'll need it to breathe in space.",
     "flashlight": "This is a flashlight.\nIt could be useful in dark rooms.",
     "cable": "This is a piece of electric cable.\nIt could be useful.",
@@ -351,8 +384,8 @@ screen inventory():
     "rope": "This is a big rope.\nI'm sure I'll need it soon.",
     "pick": "This is a pick.\nGood to break big stones.",
     "shovel": "This is a shovel.\nGood for digging.",
-    "dynamite": "This is a dynamite!\nI should be careful with it.",
-    "minidroid": "This is a remote controlled minidroid.\nIt is great to explore dangerous or narrow places.",
+    "dynamite": "This is a stick of dynamite!\nI should be careful with it.",
+    "minidroid": "This is a remote-controlled minidroid.\nIt is great to explore dangerous or narrow places.",
     
     "gem": "These are some precious gems.\nI've got [gems] out of [maxgems].",
     
@@ -360,7 +393,7 @@ screen inventory():
     "notebook": "This is a notebook.\nI can write notes and reminders in it.",
     "laser": "This is a small but powerful laser tool.\nPerfect for cutting hard materials.",
     "key": "This is an old key.\nI don't think it is for a regular door.",
-    "letter": "This is a simple old school letter.\nIt is sealed.",
+    "letter": "This is a simple old-school letter.\nIt is sealed.",
     "hook": "This is a safety hook.\nI'll need it if I want to climb somewhere.",
     "magnet": "This is a quite strong magnet.\nIt could be useful.",
     "robotcard": "This is an ID card of a crew robot.\nIt has holes in it.",
@@ -375,6 +408,8 @@ screen inventory():
     # change spacenet item info if copied to disk
     if spacenet_copied == True:
         $ item_info_dict["spacenet"] = "This is the spaceNET software.\nI should install it on the computer nodes."
+    
+    
     
     
     # set info
@@ -397,10 +432,19 @@ screen inventory():
     text item_info:
         pos (80,380)
         
+        
+    # set pnc_nodes_visible for pnc mode and highlights
+    on "show" action SetVariable("inventory_visible", True)
+    on "hide" action SetVariable("inventory_visible", False)
     
-    # 
-    on "show" action SetVariable("pnc_nodes_visible", False)#, SetVariable("item_info", item_info_dict[inventory_select])
-    on "hide" action SetVariable("pnc_nodes_visible", True)
+    
+    if engine == "move":
+        on "show" action SetVariable("pnc_nodes_visible", False)
+        on "hide" action SetVariable("pnc_nodes_visible", True)
+        
+        on "replace" action SetVariable("pnc_nodes_visible", False)
+        on "replaced" action SetVariable("pnc_nodes_visible", False)
+
         
 
 
@@ -590,7 +634,7 @@ label add_note(i):
             call sound_collect from _call_sound_collect_7
             with flash
     else:
-        m "This is an interesting information, but unfortunately I have nothing to write it down...{w=5}{nw}"
+        m "This is an interesting information, but unfortunately, I have nothing to write it down...{w=5}{nw}"
     
     return
 

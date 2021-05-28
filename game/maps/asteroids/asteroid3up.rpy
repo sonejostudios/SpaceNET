@@ -143,8 +143,10 @@ label loop_asteroid3_up:
                         m "Maybe another kind of asteroid? {w=3} {nw}"
                         m "This is interesting! {w=3} {nw}"
                     else:
+                        $ inventory_select2 = ""
                         call asteroid_dig(1) from _call_asteroid_dig_8
-                        if inventory_notify == "pick":
+                        
+                        if inventory_select2 == "pick":
                             with hpunch
                             call sound_earthquake from _call_sound_earthquake_4
                             
@@ -155,11 +157,14 @@ label loop_asteroid3_up:
                             
                             $ rock_asteroid3up = True
                                 
-                        elif inventory_notify == "shovel":
+                        elif inventory_select2 == "shovel":
                             call dialog_nothing from _call_dialog_nothing_72
                         
                         else:
-                            call dialog_nothing from _call_dialog_nothing_73
+                            pass
+                            
+                            
+                        $ inventory_select2 = ""
                 
                 else:
                     if "asteroid" not in inventory:

@@ -145,11 +145,11 @@ label xylo_spaceport_hall_bar_wcs_info:
     $ info_panel_symbol = "" #"exit"
 
     $ showtext = """
-- THE BEAUTIFUL XYLO SEA -
+- The beautiful Xylo Sea -
 
 
 Do you need some holidays?
-Spend some time at the Xylo sea. 
+Spend some time at the sea settlement. 
 
 Enjoy its beautiful coast, the sunsets, 
 the beach and the boat trips.
@@ -166,7 +166,7 @@ too many galactic beers!
 
 Please, 
 don't forget to flush the toilet
-when you are done!
+when you are done.
 
 
 """

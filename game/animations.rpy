@@ -113,6 +113,12 @@ label takeoff_anim(x):
     
     
     
+    if inventory_select != "":
+        call dialog_nosense from _call_dialog_nosense_50
+        pause 1
+        return
+        
+    
     # take off menu + anim
     $ pnc_nodes_visible = False
     
@@ -120,6 +126,17 @@ label takeoff_anim(x):
     call sound_door from _call_sound_door_179
     call hidepaths from _call_hidepaths
     hide player
+    
+    
+    hide pathnodeA
+    hide pathnodeB
+    hide pathnodeC
+    hide pathnodeD
+    hide pathnodeAA
+    hide pathnodeBB
+    hide pathnodeCC
+    hide pathnodeDD
+    
 
     if x != "nomenu":
         menu:
@@ -127,10 +144,12 @@ label takeoff_anim(x):
                 $ takeoftospace = True
                 $ ingame = False
                 $ isc_spaceship_interchange = False
+                
                 pass
                 
             "Take off to surface":
                 $ isc_spaceship_interchange = False
+                
                 pass
                 
             "Exit":
@@ -172,8 +191,8 @@ label takeoff_anim(x):
 
 # landing to ground
 label landing_anim:
-    $ pnc_nodes_visible = True
-    
+    #$ pnc_nodes_visible = True
+    $ pnc_nodes_visible = False
         
     if landing == False:
         show spaceship:
@@ -212,6 +231,7 @@ label landing_anim:
         # show inventory button
         $ inventory_button = True
         
+
     
     # smoking
     if spaceship_broken == True:
@@ -221,6 +241,11 @@ label landing_anim:
             pos (250,240)
         show smoking3:
             pos (250,240)
+            
+    
+    # show highights and pnc nodes       
+    $ pnc_nodes_visible = True
+    
     
     return
 
@@ -395,6 +420,7 @@ label alarm_check:
 # info panel
 label info_panel:
     $ pnc_nodes_visible = False
+    
     
     if inventory_select != "":
         call dialog_nosense from _call_dialog_nosense_9

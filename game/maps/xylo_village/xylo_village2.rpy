@@ -14,7 +14,7 @@ label xylo_village2:
     image xylo_village2 = imagemapsdir + "xylo_village2.png"
     
     scene bgcolor
-    #show screen notify("xylo's colony village"
+    #show screen notify("A.R.K. Area"
     show xylo_village2
     
 
@@ -155,7 +155,7 @@ label loop_xylo_village2:
             if inventory_select == "mirror" and xylo_village_mirror_state == 0:
                 
                 m "A laser and a mirror, that's a good idea!{w=3} {nw}"
-                m "I'm looking forward to see the result... {w=3} {nw}"
+                m "I'm looking forward seeing the result... {w=3} {nw}"
                 call use_and_keep_item from _call_use_and_keep_item_30
                 
                 call sound_electroshock from _call_sound_electroshock_22

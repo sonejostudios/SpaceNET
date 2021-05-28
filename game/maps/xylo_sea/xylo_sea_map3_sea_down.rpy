@@ -7,7 +7,7 @@ label xylo_map3:
     image xylo_map3 = imagemapsdir + "xylo_sea_p3.png"
     
     scene bgcolor
-    show screen notify("Sea colony coast")
+    show screen notify("Pier")
     
     show xylo_map3
     show waves behind xylo_map3
@@ -42,25 +42,33 @@ label loop_xylo_map3:
     
     # do something at node?
     if exitpos == 1:       #if at node A
+        if startpos == 1:
+            m "Somehow, I like this coastal road. {w=3} {nw}"
         $ startpos = 1     # stay in A
         jump loop_xylo_map3          # map to jump to
         
     if exitpos == 2:
         if startpos == 2:
-            m "This way is very interesting! {w=3.0} {nw}"
+            m "This way is very interesting... {w=3.0} {nw}"
+            m "Why is it like this? {w=3.0} {nw}"
         $ startpos = 2
         jump loop_xylo_map3
         
     if exitpos == 3:
         if startpos == 3:
             if inventory_select == "":
-                m "There is an info board. {w=2.0} {nw}"
-            call xylo_sea_map3_info from _call_xylo_sea_map3_info
+                #m "There is an info board. {w=2.0} {nw}"
+                call xylo_sea_map3_info from _call_xylo_sea_map3_info
+            else:
+                call dialog_nosense from _call_dialog_nosense_44
+            
 
         $ startpos = 3
         jump loop_xylo_map3
         
     if exitpos == 4:
+        if startpos == 4:
+            m "The view is quite nice here. {w=3} {nw}"
         $ startpos = 4
         jump loop_xylo_map3 
     
@@ -90,20 +98,20 @@ label xylo_sea_map3_info:
     $ showtext = """
     
     
-- Sea View Boat Company -
+- Sea View Boat Rental Company -
 
 
-If you are interested for a boat trip, 
+If you are interested in a boat trip, 
 please call 05060708.
 
 Just type our phone number in the terminal,
-we will be happy to give you more info.
+we will be happy to give you more information.
 
 
     """
     
     call info_panel from _call_info_panel_9
     
-    call add_note("Xylo sea boat company number: 05060708") from _call_add_note_9
+    call add_note("Boat Rental Company number: 05060708") from _call_add_note_9
     
     return

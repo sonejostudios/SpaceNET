@@ -193,20 +193,26 @@ label select_spaceship:
 
     call sound_crane from _call_sound_crane
     
+
     if spaceship_choice_number == 1:
+        $ spaceshiptype_name = "SD-2"
         jump crane_anime1
     
     if spaceship_choice_number == 2:
+        $ spaceshiptype_name = "IO-1"
         jump crane_anime2
         
     if spaceship_choice_number == 3:
+        $ spaceshiptype_name = "SF-3"
         jump crane_anime3
         
     if spaceship_choice_number == 4:
+        $ spaceshiptype_name = "IO-4"
         jump crane_anime4
         
 
 label crane_anime1:
+    $ pnc_nodes_visible = False
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 479
@@ -238,6 +244,7 @@ label crane_anime1:
 
     
 label crane_anime2:
+    $ pnc_nodes_visible = False
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 479
@@ -254,6 +261,7 @@ label crane_anime2:
     show spaceship2u:
         ease 4 ypos 550
     #pause 4
+
     $ renpy.pause(4, hard='True')
     
     $ spaceshiptype = "2"
@@ -270,6 +278,7 @@ label crane_anime2:
 
 
 label crane_anime3:
+    $ pnc_nodes_visible = False
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 325
@@ -281,6 +290,7 @@ label crane_anime3:
     show spaceship3u zorder 900:
         ease 3 xpos 62
     #pause 4
+
     $ renpy.pause(4, hard='True')
     
     show spaceship3u:
@@ -302,6 +312,7 @@ label crane_anime3:
     
     
 label crane_anime4:
+    $ pnc_nodes_visible = False
     show crane zorder 910:
         pos (62, 240)
         ease 3 xpos 325

@@ -193,7 +193,7 @@ label xylo_mine_level1_info:
     
 Danger! Seismic Activity!
     
-This mine is abandonned and really dangerous.
+This mine is abandoned and really dangerous.
 
 Do not mine here, 
 this could trigger small earthquakes!
@@ -217,7 +217,7 @@ label xylo_mine_level1_earthquake:
         $ xylo_mine_used_dynamite_dialog = True
         m "I think the explosion was too loud... {w=2} {nw}"
         m "And it has triggered seismic activity! {w=2} {nw}"
-        m "I definitely should't stay here longer... {w=2} {nw}"
+        m "I definitely shouldn't stay here longer... {w=2} {nw}"
         
     
     

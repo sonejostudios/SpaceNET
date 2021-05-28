@@ -121,13 +121,14 @@ label loop_asteroid2_down:
         if exitpos == 2: # asteroid2 down
             if startpos == 2:
                 if asteroid2down_solarpanel == False:
-                    $ inventory_notify = ""
+                    $ inventory_select2 = ""
                     call asteroid_dig(1) from _call_asteroid_dig
-                    if inventory_notify == "pick":
+                    
+                    if inventory_select2 == "pick":
                         m "There is something. {w=3.5} {nw}"
                         m "But the pick is useless against this asteroid dust. {w=3.5} {nw}"
                     
-                    elif inventory_notify == "shovel":
+                    elif inventory_select2 == "shovel":
                         show solarpanel behind pathnodeB:
                             pos (367, 75)
                             rotate -45
@@ -141,6 +142,9 @@ label loop_asteroid2_down:
                         
                     else:
                         pass
+                        
+                    $ inventory_select2 = ""
+                    
                 else:
                     if inventory_select == "":
                         m "This is a solar panel. {w=2.5} {nw}"
@@ -171,9 +175,10 @@ label loop_asteroid2_down:
             if startpos == 11:
                 #"asteroid2down_lift [asteroid2down_lift]"
                 if asteroid2down_lift == False:
-                    $ inventory_notify = ""
+                    $ inventory_select2 = ""
                     call asteroid_dig(1) from _call_asteroid_dig_2
-                    if inventory_notify == "pick":
+                    
+                    if inventory_select2 == "pick":
                         with hpunch
                         call sound_earthquake from _call_sound_earthquake_3
                         
@@ -187,11 +192,15 @@ label loop_asteroid2_down:
                         
                         $ asteroid2down_lift = True
                             
-                    elif inventory_notify == "shovel":
+                    elif inventory_select2 == "shovel":
                         call dialog_nothing from _call_dialog_nothing_67
+                        m "Except for rocks. {w=2.5} {nw}"
                     
                     else:
-                        m "Except rocks. {w=2.5} {nw}"
+                        pass
+                        
+                        
+                    $ inventory_select2 = ""
                         
                 else:
                     if asteroid2down_solarpanel == True and asteroid2right_solarpanel == True:
@@ -201,10 +210,13 @@ label loop_asteroid2_down:
                         jump asteroid_lift1
                     
                     else:
-                        m "There is a small cabin! {w=3} {nw}"
-                        m "What is it doing here on this lost asteroid? {w=4} {nw}"
-                        m "That's really weird! {w=2.5} {nw}"
-                        call dialog_closed from _call_dialog_closed_51
+                        if inventory_select == "":
+                            m "There is a small cabin! {w=3} {nw}"
+                            m "What is it doing here on this lost asteroid? {w=4} {nw}"
+                            m "That's really weird! {w=2.5} {nw}"
+                            call dialog_closed from _call_dialog_closed_51
+                        else:
+                            call dialog_nosense from _call_dialog_nosense_53
            
             
             $ startpos = 11   

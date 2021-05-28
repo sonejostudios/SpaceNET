@@ -14,7 +14,7 @@ label xylo_map1:
     image xylo_map1 = imagemapsdir + "xylo_sea_map1.png"
     
     scene bgcolor
-    show screen notify("Xylo sea colony")
+    show screen notify("Sea Settlement")
     
     show xylo_map1
 
@@ -24,10 +24,30 @@ label xylo_map1:
         rotate 0
         repeat
         
+        
     
     if xylo_sea_bunker_info == 0:
         show buttonscreen:
             pos (400,130)
+            
+          
+    show minicircle:
+        pos (276, 409)
+        zoom 0.6
+    if renpy.showing("smoking1") != True:
+        show smoking1:
+            pos (277, 410)
+    if renpy.showing("smoking2") != True:
+        show smoking2:
+            pos (277, 410)
+    if renpy.showing("smoking3") != True:
+        show smoking3:
+            pos (277, 410)
+            
+            
+    show minicircle as minicircle2:
+        pos (481, 93)
+        zoom 0.6
 
     
     # set all variables for the map (nodes and path)
@@ -67,8 +87,13 @@ label loop_xylo_map1:
     # do something at node?
     if exitpos == 1:   
         if startpos == 1:
-            m "This is the Xylo sea colony. {w=2} {nw}"
-            m "It looks like an industrial harbour. {w=2} {nw}"
+            if inventory_select == "":
+                m "This is the sea settlement. {w=3} {nw}"
+                m "This part really looks like... {w=3}a dirty industrial harbor. {w=3} {nw}"
+                m "I can see a smoking chimney and a huge propeller... {w=4} {nw}"
+                m "This is not so nice like they said in the advertisement! {w=4.5} {nw}"
+            else:
+                call dialog_nosense from _call_dialog_nosense_54
           
         $ startpos = 1   
         jump loop_xylo_map1        
@@ -78,9 +103,9 @@ label loop_xylo_map1:
         if startpos == 2:
             
             if inventory_select == "screwdriver":
-                m "I could remove the screws...{w=2} {nw}"
-                m "Remove the sign...{w=1.5} {nw}"
-                m "And go through!{w=1.5} {nw}"
+                m "I could remove the screws...{w=2.5} {nw}"
+                m "Remove the sign...{w=2} {nw}"
+                m "And go through!{w=2} {nw}"
                 
                 call use_and_keep_item from _call_use_and_keep_item_6
                 call sound_screw from _call_sound_screw_3
@@ -90,19 +115,19 @@ label loop_xylo_map1:
                 $ pathB = (nodeA, nodeB, (0,0), (0,0), nodeAA, (0,0), nodeCC, nodeDD)
             
             if xylo_sea_bunker_info == False:
-                call xylo_sea_bunker_info from _call_xylo_sea_bunker_info
-                m "This sign is blocking the way to the north!{w=3} {nw}"
+                if inventory_select == "":
+                    call xylo_sea_bunker_info from _call_xylo_sea_bunker_info
+                    m "This sign is blocking the way to the north!{w=3.5} {nw}"
+                else:
+                    call dialog_nosense from _call_dialog_nosense_46
             
             else:
                 hide buttonscreen
                 
-                
-            
-        
-            
-        
+
         $ startpos = 2
         jump loop_xylo_map1
+        
         
     if exitpos == 3:
         $ startpos = 3
@@ -144,8 +169,8 @@ label xylo_sea_bunker_info:
 - A.R.K. Corporation -
 
 
-Private property
-You shall not pass
+Private property.
+You shall not pass.
 
 
     """

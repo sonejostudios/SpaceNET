@@ -29,6 +29,7 @@ init:
 
 
 label terminal:
+    $ engine = "terminal"
     $ pnc_nodes_visible = False
     
     $ inventory_select = ""

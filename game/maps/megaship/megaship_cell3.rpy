@@ -77,7 +77,7 @@ label loop_megaship_cell3:
                         
                         if "key" in inventory:
                             m "Okay, thanks! I'll see what I can do. {w=3} {nw}"
-                            hacker "Okay I will leave now. {w=1}Bye!{w=2.5} {nw}"
+                            hacker "Okay, I will leave now. {w=1}Bye!{w=2.5} {nw}"
                             
                             $ hacker_in_prison = 2
                             

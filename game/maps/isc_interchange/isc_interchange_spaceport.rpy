@@ -10,6 +10,7 @@ init:
     
 
 label isc_interchange:
+    $ pnc_nodes_visible = True
     
     stop music fadeout 1.0
     call atmo_spaceport from _call_atmo_spaceport_5 
@@ -234,7 +235,7 @@ label loop_isc_interchange:
         if exitpos == 44:
             $ startpos = 44
             if isc_spaceship_interchange == True:
-                call sound_door from _call_sound_door_172
+                #call sound_door from _call_sound_door_172
                 call takeoff_anim("withmenu") from _call_takeoff_anim_9 # go to takeoff
                 
                 # straight to space

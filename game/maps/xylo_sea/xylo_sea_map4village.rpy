@@ -16,7 +16,7 @@ label xylo_map4:
     
     scene bgcolor
     show xylo_map4
-    show screen notify("Xylo sea village")
+    show screen notify("Settlement Center")
 
   
     show light:
@@ -74,7 +74,10 @@ label loop_xylo_map4:
         
     if exitpos == 2:
         if startpos == 2:
-            m "This is the center of the village. {w=2} {nw}"
+            if inventory_select == "":
+                m "This is the center of the settlement. {w=3} {nw}"
+            else:
+                call dialog_nosense from _call_dialog_nosense_51
         
         $ startpos = 2
         jump loop_xylo_map4
@@ -89,7 +92,6 @@ label loop_xylo_map4:
         jump loop_xylo_map4
         
     if exitpos == 4: #npc
-        
         if startpos == 4:
             jump xylo_sea_village_fisher
         
@@ -120,13 +122,17 @@ label xylo_sea_village_info:
     
     $ info_panel_symbol = ""
     $ showtext = """
-- Xylo sea colony -
+- Sea Settlement -
 
 
-Welcome to our beautiful sea coast village.
+Welcome to this beautiful place.
 
-Go north to go to the industrial harbour.
-Go east to go to the sea and enjoy the coast road!
+Go north to go to the industrial harbor.
+Go east to go to the sea and enjoy the coastal road.
+
+If it is the right season, 
+we also recommand to take a boat trip on the sea!
+Just call the boat rental company for more information.
 
 
     """
@@ -153,45 +159,95 @@ label xylo_sea_village_fisher:
         jump loop_xylo_map4
     
     
-    fisher "Hello. How can I help you? {w=2.5} {nw}"
+    fisher "Hello. How can I help you? {w=3.5} {nw}"
       
     
     $ questions = ["What is it inside this the house?{w=3.5} {nw}", 
-                    "What about the private property up there?{w=3.0} {nw}", 
-                    "What about the sea? {w=2.0} {nw}", 
-                    "I would like to rent a boat. {w=2.0} {nw}", 
-                    "Nothing, thank you. {w=1.0} {nw}"]
+                    "What about the private property up there?{w=4} {nw}", 
+                    "What about the sea? {w=3.0} {nw}", 
+                    "I would like to rent a boat. {w=3.0} {nw}", 
+                    "I'm fine, thanks. {w=2.0} {nw}"]
     
     while True:
         menu:
             "[questions[0]]" if xylo_sea_village_fisher_flags[0]  == 0:
                 m "[questions[0]]"
-                fisher "This is the local bar. {w=2} {nw}"
+                fisher "This is the local bar. {w=2.5} {nw}"
+                fisher "It is okay, but the barman is grumpy. {w=3} {nw}"
+                fisher "When I was younger, I enjoyed it a lot. {w=3} {nw}"
+                menu:
+                    "And now?":
+                        m "And now?{w=2.5} {nw}"
+                        
+                    "You don't like it anymore?":
+                        m "You don't like it anymore?{w=3.5} {nw}"
+                        
+                fisher "I'm too old now for that kind of stuff. {w=3.5} {nw}"
+                fisher "I prefer the fresh air from the sea.{w=3} {nw}"
+                fisher "And I'm tired of arguing around with the grumpy barman.{w=5} {nw}"
+                        
                 $ xylo_sea_village_fisher_flags[0] = 1
                 
             "[questions[1]]"if xylo_sea_village_fisher_flags[1]  == 0:
                 m "[questions[1]]"
-                fisher "Oh, this is a bunker... {w=2} {nw}"
-                fisher "It belongs to A.R.K. Corporation. {w=2} {nw}"
-                fisher "They just built it a while ago. {w=2} {nw}"
-                fisher "I don't knows nothing about, sorry. {w=2.5} {nw}"
-                fisher "I just know one thing: {w=2} {nw}"
-                fisher "Don't go there, otherwise the guard will kick you out! {w=3} {nw}"
+                fisher "Oh, this is a bunker... {w=3} {nw}"
+                fisher "It belongs to A.R.K. Corporation. {w=3} {nw}"
+                fisher "They just built it a while ago. {w=3} {nw}"
+                fisher "I don't know anyhing about it, sorry. {w=3.5} {nw}"
+                fisher "I just know one thing: {w=3} {nw}"
+                fisher "Don't go there, otherwise the robot guard will kick you out! {w=4.5} {nw}"
+                menu:
+                    "Who?":
+                        m "Who?{w=2.5} {nw}"
+                        fisher "Are you deaf? {w=2.5} {nw}"
+                        fisher "The robot guard! {w=2.5} {nw}"
+                        
+                    "Why?":
+                        m "Why?{w=2.5} {nw}"
+                        fisher "I really don't know... {w=2.5} {nw}"
+                        fisher "Just don't do it.{w=2.5} {nw}"
+                
+                m "Okay, thanks for the hint.{w=3.5} {nw}"
                 $ xylo_sea_village_fisher_flags[1] = 1
                 
             "[questions[2]]"if xylo_sea_village_fisher_flags[2]  == 0:
                 m "[questions[2]]"
-                fisher "Oh, the sea. {w=2} {nw}"
-                fisher "I love it. {w=2} {nw}"
-                fisher "But unfortunately I'm not allowed to go there anymore... {w=3.5} {nw}"
+                fisher "Oh, the sea. {w=3} {nw}"
+                fisher "I love it. {w=2.5} {nw}"
+                fisher "But unfortunately, I'm not allowed to go there anymore... {w=4.5} {nw}"
+                menu:
+                    "Why not?":
+                        m "Why not?{w=2.5} {nw}"
+                        
+                    "Who says that?":
+                        m "Who says that?{w=3.5} {nw}"
+                        
+                    "Tell me.":
+                        m "Tell me.{w=2.5} {nw}"
+                        
+                fisher "The government took away my fishing license. {w=4.5} {nw}"
+                fisher "A couple of weeks ago, a guy came to me. {w=4.5} {nw}"
+                fisher "He asked a lot of questions.{w=4.5} {nw}"
+                fisher "And then he said, I'm too old for fishing!{w=4.5} {nw}"
+                fisher "This small insolent jerk!{w=4.5} {nw}"
+                fisher "They are working for the government and they think they are kings!{w=5} {nw}"
+                fisher "At his age, I was one of the first who colonized this planet. {w=5} {nw}"
+                fisher "There was nothing here!{w=3.5} {nw}"
+                fisher "We built everything by hands!{w=3.5} {nw}"
+                fisher "And now, they are just coming around and think they can decide everything? {w=5} {nw}"
+                fisher "I don't think so!{w=2.5} {nw}"
+                fisher "I will never do what they want.{w=3.5} {nw}"
+                fisher "I don't care, I have nothing to lose anymore.{w=3.5} {nw}"
+                
                 $ xylo_sea_village_fisher_flags[2] = 1
                 
             "[questions[3]]"if xylo_sea_village_fisher_flags[3]  == 0:
                 m "[questions[3]]"
-                fisher "I have no boat for rent, sorry. {w=2} {nw}"
-                fisher "I had a boat before, but I sold it to the boat management company. {w=4} {nw}"
-                fisher "I don't know if they rent boats, sorry. {w=3} {nw}"
-                fisher "Just go to your right, I think there is an information table. {w=3.5} {nw}"
+                fisher "I have no boat for rent, sorry. {w=3} {nw}"
+                fisher "I had a boat before, but since I lost my fishing license, I sold it to the Boat Rental Company. {w=6} {nw}"
+                fisher "And I don't know if they rent boats in that season. {w=4.5} {nw}"
+                fisher "You should ask them by yourself. {w=3.5} {nw}"
+                fisher "Just go to your right, I think there is an information table. {w=4.5} {nw}"
                 $ xylo_sea_village_fisher_flags[3] = 1
             
             "[questions[4]]":

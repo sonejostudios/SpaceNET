@@ -278,7 +278,7 @@ label isc_spaceflight:
     pause 1
     
     hacker "Hey... nice to see you again.{w=3} {nw}"
-    hacker "I've just got a really bad information.{w=3} {nw}"
+    hacker "I've just got really bad information.{w=3} {nw}"
     
     while True:
         
@@ -302,8 +302,8 @@ label isc_spaceflight:
                 
                 jump isc_city_gateway
             
-            "No, please explain me again":
-                m "No, please explain me again.{w=2} {nw}"
+            "No, please explain it to me again":
+                m "No, please explain it to me again.{w=2} {nw}"
                 pass
             
 

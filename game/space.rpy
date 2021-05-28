@@ -12,8 +12,7 @@ init:
     
     $ space_terminal = False
 
-
-init:    
+ 
     image galaxy: 
         "images/galaxy.png"
         alpha 0.1
@@ -46,14 +45,72 @@ init:
         
 
     $ space_anim = True
+    
+    $ spacemenu_text = ""
+    $ spacemenu_visible = False
 
+
+
+# show menu hover text if not touch screen
+screen spacemenu_text():
+    if not renpy.variant("touch") and inventory_visible == False:
+        if spacemenu_visible == True:
+            if 310 < mousepos[0] < 490 and 210 < mousepos[1] < 270:
+                $ spacemenu_text = "Spaceship"
+            
+            
+            elif 155 < mousepos[0] < 240 and 68 < mousepos[1] < 154:
+                $ spacemenu_text = "Terminal"
+                
+            elif 557 < mousepos[0] < 642 and 68 < mousepos[1] < 154:
+                $ spacemenu_text = "Cockpit"
+                
+            elif 155 < mousepos[0] < 240 and 320 < mousepos[1] < 408:
+                $ spacemenu_text = "Orbital View"
+                
+            elif 557 < mousepos[0] < 642 and 320 < mousepos[1] < 408:
+                if planet == "asteroids":
+                    $ spacemenu_text = "Fly through the Asteroid Field"
+                elif planet == "io11":
+                    $ spacemenu_text = "Dock to the Satellite"
+                elif planet == "sun":
+                    $ spacemenu_text = "Try to land on the Sun"
+                elif planet == "cargo":
+                    $ spacemenu_text = "Fly to the Space Cargo"
+                    
+                elif planet == "megaship":
+                    $ spacemenu_text = "Fly into the Megaship"
+                
+                elif planet == "isc":
+                    $ spacemenu_text = "Fly to the Industrial Space City"
+                    
+                elif planet == "xylo":
+                    $ spacemenu_text = "Land on Xylo"
+                
+                else:
+                    $ spacemenu_text = "Fly to " + planet
+                
+            
+            else:
+                $ spacemenu_text = ""
+                
+        else:
+            if 310 < mousepos[0] < 490 and 210 < mousepos[1] < 270:
+                $ spacemenu_text = "Spaceship"
+            else:
+                $ spacemenu_text = ""
+            
+        text "{color=#8dd35f}[spacemenu_text]":
+            anchor (0.5, 1.0)
+            pos (400,472)
+        
 
 
 
 # main space label
 label space:
+    $ engine = "space"
     $ pnc_nodes_visible = False
-    
     $ space_terminal = True
     
     
@@ -133,13 +190,17 @@ label space:
         
         show text "{color=#8dd35f}[planet]" as text_planet:
             pos (54,150)
-            alpha 0.5
+            alpha 0.7
             linear 1 pos (54,148)
             linear 1 pos (54,150)
             repeat 
         
         if planet == "sun":
-            show screen notify("In orbit of the [planet]")
+            show screen notify("In orbit of the sun")
+            
+        elif planet == "asteroids":
+            show screen notify("Near the asteroid field")    
+        
         else:
             show screen notify("In orbit of [planet]")
         
@@ -147,7 +208,7 @@ label space:
     if planet == "none" or planet == "hacker":
         hide orbitmeter
         hide text_planet
-        show screen notify("free in space")
+        show screen notify("Free in space")
         
     if planet == "hacker":
         call hacker_meeting from _call_hacker_meeting
@@ -180,6 +241,85 @@ label space:
     jump space_loop
 
 
+
+
+
+
+#space loop
+label space_loop:
+    
+    show screen spacemenu_text
+    
+    $ inventory_select = ""
+
+    #wait for action
+    pause
+    
+    
+    #show screen spacemenu
+    #with irisout
+    
+    # open space menu with transform
+    call sound_scan from _call_sound_scan_2
+    show spacemenu at inspace_idle with irisout
+    
+    $ spacemenu_visible = True
+    
+    
+
+    
+    #wait for action
+    pause
+    $ clickpos = mousepos
+    
+
+    # close space menu
+    call sound_scan from _call_sound_scan_3
+    hide spacemenu with irisin
+    
+    
+    hide screen spacemenu_text
+    $ spacemenu_visible = False
+    
+    
+    
+    
+    
+    #space menu
+    # terminal
+    if 155 < clickpos[0] < 240 and 68 < clickpos[1] < 154:
+        call terminal from _call_terminal_2
+        jump space
+    
+    
+    # cockpit
+    if 557 < clickpos[0] < 642 and 68 < clickpos[1] < 154:
+        jump cockpit
+    
+    
+    # orbital view
+    if 155 < clickpos[0] < 240 and 320 < clickpos[1] < 408:
+        jump orbital_view
+        
+        
+    # landing
+    if 557 < clickpos[0] < 642 and 320 < clickpos[1] < 408:
+        $ space_terminal = False
+        jump land_to_planet
+        
+    
+
+        
+    
+
+    
+
+    jump space_loop 
+    
+    return
+    
+
+
 # show space background with background color, galaxy and stars
 label show_space:
 
@@ -201,68 +341,7 @@ label show_space:
 
 
 
-#space loop
-label space_loop:
-    
-    $ inventory_select = ""
 
-    #wait for action
-    pause
-    
-    
-    #show screen spacemenu
-    #with irisout
-    
-    # open space menu with transform
-    call sound_scan from _call_sound_scan_2
-    show spacemenu at inspace_idle with irisout
-    
-    #wait for action
-    pause
-    $ clickpos = mousepos
-    
-    # close space menu
-    call sound_scan from _call_sound_scan_3
-    hide spacemenu with irisin
-    
-    
-    #space menu
-    
-    # cockpit
-    #if (570,80) < mousepos < (640,140) : # this doesn't work properly!
-    if 570 < clickpos[0] < 640 and 80 < clickpos[1] < 140:
-        #m "the cockpit is not implemented yet!"
-        jump cockpit
-    
-    
-    # landing
-    if 570 < clickpos[0] < 640 and 330 < clickpos[1] < 400:
-        
-        $ space_terminal = False
-        
-        jump land_to_planet
-        
-    
-    # terminal
-    if 165 < clickpos[0] < 230 and 80 < clickpos[1] < 140:
-        
-        #$ space_terminal = True
-        
-        call terminal from _call_terminal_2
-        jump space
-        
-    
-    
-    # orbital view
-    if 165 < clickpos[0] < 230 and 330 < clickpos[1] < 390:
-        jump orbital_view
-    
-
-    jump space_loop 
-    
-    return
-    
-    
     
     
 label land_to_planet:
@@ -272,7 +351,7 @@ label land_to_planet:
     if planet == "none" or planet == "hacker":
         with hpunch
         call sound_beep from _call_sound_beep_3
-        m "I'm free in space, there is nothing for landing!"
+        m "I'm free in space, there is nothing where I can land!{w=3.5} {nw}"
         jump space_loop
     
     if planet == "megaship":
@@ -291,6 +370,7 @@ label land_to_planet:
             if planetxy_first == False:
                 $ startpos = 44
                 $ shippos = (400,0)
+                $ direction = 180
                 jump xylo_spaceport
             else:
                 jump surface_xylo
@@ -298,7 +378,7 @@ label land_to_planet:
         else:
             call sound_beep from _call_sound_beep_4
             with hpunch
-            radio "Landing autorization denied. {w=2.5} {nw}"
+            radio "Landing authorization denied. {w=2.5} {nw}"
             jump space_loop
             
     
@@ -333,6 +413,7 @@ label land_to_planet:
         #$ landing = True
         call sound_beep from _call_sound_beep_5
         with hpunch
+        m "Are you crazy?{w=2.0}{nw}"
         m "No way I will land on the sun! {w=3.0}{nw}"
         jump space_loop
         
@@ -345,7 +426,7 @@ label land_to_planet:
             m "No way I will do it! {w=2.5}{nw}"
             m "My spaceship is way too slow... {w=3.0}{nw}"
             m "Entering an asteroid field with it is just too dangerous! {w=4.0}{nw}"
-            m "I definitely need a faster spaceship if I want to fly though this asteroid field. {w=5.0}{nw}"
+            m "I definitely need a faster spaceship if I want to fly through this asteroid field. {w=5.0}{nw}"
             jump space_loop
         
         else:
@@ -389,7 +470,7 @@ label orbital_view:
     image sunbig = "images/planets/sunbig.png"
     
     
-    show screen notify("orbital view")
+    show screen notify("Orbital View")
     
     scene bgcolor
     
@@ -459,15 +540,17 @@ label orbital_view:
             
         "Ask for landing authorization" if planet_auth_needed == "Yes" and planetxy_auth == False:
             call sound_modem from _call_sound_modem
-            radio "Authorisation request.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0} {nw}"
+            radio "Authorization request.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0}.{w=1.0} {nw}"
             call sound_connected from _call_sound_connected_7
-            radio "Authorisation granted! {w=2.0} {nw}"
+            radio "Authorization granted! {w=2.0} {nw}"
             
             
             if planet == "xylo":
                 
-                radio "Please register your ship at Xylo Village. {w=3.0} {nw}"
-                m "Hmm... I think I should go there first. {w=2.0} Let's go! {w=1.0} {nw}"
+                radio "Please register your ship at [xylo_village_name]. {w=3.5} {nw}"
+                radio "It is the main settlement of the planet. {w=3} {nw}"
+                m "Alright. I think I should go there first. {w=3} {nw}"
+                m "Let's go! {w=2} {nw}"
                 
                 $ planetxy_auth = True
                 $ planetxy_register = False

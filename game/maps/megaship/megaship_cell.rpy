@@ -96,7 +96,7 @@ label loop_megaship_cell:
                 if m_megaship_cell_escape < 4 and m_megaship_cell_first_talk == 0:
                     m "I'm in prison! {w=2.0} {nw}"
                     m "And I don't remember anything... {w=2.5} {nw}"
-                    m "Except my name, [playername]... {w=2.5} {nw}"
+                    m "Except for my name, [playername]... {w=2.5} {nw}"
                     m "And another name: SpaceNET... {w=3.5} {nw}"
                     m "But what does it mean?... {w=2.5} {nw}"
                     m "SpaceNET... {w=2.5} {nw}"
@@ -131,7 +131,7 @@ label loop_megaship_cell:
         if exitpos == 3: 
             if startpos == 3:
                 if inventory_select == "newspaper":
-                    m "I don't think it's a good idea to lie down and read a newspaper now.{w=4} {nw}"
+                    m "I don't think it's a good idea to lie down and read a newspaper now!{w=5} {nw}"
                     #call dialog_nosense
                     
                 elif inventory_select == "screwdriver":
@@ -180,8 +180,8 @@ label loop_megaship_cell:
                             pass
                             
                 if m_megaship_cell_escape == 2:
-                    m "The repair-robot is working.{w=2.0} {nw}"
-                    m "There is a screw driver...{w=2.0} {nw}"
+                    m "The repair robot is working.{w=2.0} {nw}"
+                    m "There is a screwdriver...{w=2.0} {nw}"
                     m "I could take it... {w=2.0} {nw}"
                     
                     call take_item("screwdriver") from _call_take_item_11
@@ -225,27 +225,27 @@ label loop_megaship_cell:
                     menu:
                         "The sink is broken" if m_megaship_cell_escape == 1:
                             m "The sink is broken.{w=2.0} {nw}"
-                            radio "Okay, i'll send a repair-robot to your cell.{w=3.0} {nw}"
+                            radio "Okay, I'll send a repair robot to your cell.{w=3.0} {nw}"
                             call megaship_cell_robot from _call_megaship_cell_robot
                         
                         "I've found a newspaper" if "newspaper" in inventory and megaship_cell_door_radio != [1,1,1]:
-                            m "I've found a newspaper.{w=2} {nw}"
+                            m "I've found a newspaper.{w=2.5} {nw}"
                             radio "Good for you.{w=2.0} {nw}"
-                            radio "I hope it's interesting!{w=2.0} {nw}"
+                            radio "I hope it's interesting!{w=2.5} {nw}"
                             menu:
                                 "Not really" if megaship_cell_door_radio[0] == 0:
-                                    m "Not really.{w=2} {nw}"
-                                    radio "Well... then try to build a paper plane with it!{w=3.0} {nw}"
+                                    m "Not really.{w=2.5} {nw}"
+                                    radio "Well... then try to build a paper plane with it!{w=3.5} {nw}"
                                     $ megaship_cell_door_radio[0] = 1
                                     
                                 "It is really old" if megaship_cell_door_radio[1] == 0:
-                                    m "It is really old.{w=2} {nw}"
-                                    radio "Well... then read about history!{w=3.0} {nw}"
+                                    m "It is really old.{w=2.5} {nw}"
+                                    radio "Well... then read about history!{w=3.5} {nw}"
                                     $ megaship_cell_door_radio[1] = 1
                                     
                                 "There is nothing interesting inside" if megaship_cell_door_radio[2] == 0:
-                                    m "There is nothing interesting inside.{w=3} {nw}"
-                                    radio "Well... then read it backwards!{w=3.0} {nw}"
+                                    m "There is nothing interesting inside.{w=3.5} {nw}"
+                                    radio "Well... then read it backward!{w=3.5} {nw}"
                                     $ megaship_cell_door_radio[2] = 1
                             
                             radio "Ha{w=0.2} ha{w=0.2} ha{w=0.2} ha{w=0.2} ha! {w=2.0}{nw}"
@@ -323,7 +323,7 @@ label megaship_cell_robot:
 label megaship_cell_robot_back:
     
     pause 2
-    robot "I can't find my screw driver.{w=2.0} {nw}"
+    robot "I can't find my screwdriver.{w=2.0} {nw}"
     robot "I can't repair your sink right now.{w=3.0} {nw}"
     robot "I'll be back.{w=2.0} {nw}"
     

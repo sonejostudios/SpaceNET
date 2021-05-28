@@ -122,7 +122,7 @@ label loop_isc_rail4a:
                 
                 if inventory_select == "minidroid":
                     
-                    m "I could use the minidroid... let's go ! {w=2.5} {nw}"
+                    m "I could use the minidroid... let's go! {w=2.5} {nw}"
                     call use_and_keep_item from _call_use_and_keep_item_17
                     call sound_connected from _call_sound_connected_28
                     with flash

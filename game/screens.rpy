@@ -148,6 +148,16 @@ screen say(who, what):
     # autoskip?
     #timer 3 action Return
     #timer saytime action Return
+    
+    # set pnc_nodes_visible for pnc mode and highlights
+    if engine == "move":
+        on "show" action SetVariable("pnc_nodes_visible", False)
+        on "hide" action SetVariable("pnc_nodes_visible", True)
+        
+        on "replace" action SetVariable("pnc_nodes_visible", False)
+        on "replaced" action SetVariable("pnc_nodes_visible", False)
+    
+
 
 
 
@@ -221,6 +231,15 @@ screen input(prompt):
 
             text prompt style "input_prompt"
             input id "input"
+            
+    
+    if engine == "move":
+        on "show" action SetVariable("pnc_nodes_visible", False)
+        on "hide" action SetVariable("pnc_nodes_visible", False)
+        
+        on "replace" action SetVariable("pnc_nodes_visible", False)
+        on "replaced" action SetVariable("pnc_nodes_visible", False)
+
 
 
 style input_prompt is default
@@ -243,13 +262,25 @@ style input:
 ##
 ## http://www.renpy.org/doc/html/screen_special.html#choice
 
+
+
 screen choice(items):
     style_prefix "choice"
-
+    
     vbox:
         for i in items:
             textbutton i.caption action i.action
-
+            
+    
+    if engine == "move":
+        on "show" action SetVariable("pnc_nodes_visible", False)
+        on "hide" action SetVariable("pnc_nodes_visible", True)
+        
+        on "replace" action SetVariable("pnc_nodes_visible", False)
+        on "replaced" action SetVariable("pnc_nodes_visible", False)
+            
+            
+    
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -283,24 +314,24 @@ style choice_button_text is default:
 screen quick_menu():
 
     ## Ensure this appears on top of other screens.
-    zorder 100
+    zorder 10000
 
     #if quick_menu:
 
-    #    hbox:
-    #        style_prefix "quick"
+#~     hbox:
+#~         style_prefix "quick"
 
-    #        xalign 0.5
-    #        yalign 1.0
+#~         xalign 0.5
+#~         yalign 1.0
 
-    #        textbutton _("Back") action Rollback()
-    #        textbutton _("History") action ShowMenu('history')
-    #        textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-    #        textbutton _("Auto") action Preference("auto-forward", "toggle")
-    #        textbutton _("Save") action ShowMenu('save')
-    #        textbutton _("Q.Save") action QuickSave()
-    #        textbutton _("Q.Load") action QuickLoad()
-    #        textbutton _("Prefs") action ShowMenu('preferences')
+#~         textbutton _("Back") action Rollback()
+#~         textbutton _("History") action ShowMenu('history')
+#~         textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+#~         textbutton _("Auto") action Preference("auto-forward", "toggle")
+#~         textbutton _("Save") action ShowMenu('save')
+#~         textbutton _("Q.Save") action QuickSave()
+#~         textbutton _("Q.Load") action QuickLoad()
+#~         textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -349,28 +380,24 @@ screen navigation():
                 textbutton _("Map Editor") action Start("map_editor_init") activate_sound "sounds/beep.ogg"
 
             textbutton _("Start") action Start("intro") activate_sound "sounds/scan.ogg"
-            
             textbutton _("Tutorial") action Start("tutorial_room1") activate_sound "sounds/scan.ogg"
 
         else:
-
-            #textbutton _("History") action ShowMenu("history")
-
             textbutton _("Save") action ShowMenu("save") activate_sound "sounds/beep.ogg"
 
         textbutton _("Load") action ShowMenu("load") activate_sound "sounds/beep.ogg"
-
         textbutton _("Preferences") action ShowMenu("preferences") activate_sound "sounds/beep.ogg"
 
-        if renpy.variant("pc"):
+        #if not renpy.variant("touch"):
             ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help") activate_sound "sounds/beep.ogg"
+        textbutton _("Help") action ShowMenu("help") activate_sound "sounds/beep.ogg"
+        
         
         if main_menu:
             textbutton _("Credits") action Jump("credits") activate_sound "sounds/beep.ogg"
             
-        if not main_menu:
-
+        else:
+            textbutton _("History") action ShowMenu("history")
             textbutton _("Main Menu") action MainMenu() activate_sound "sounds/beep.ogg"
             
             if use_dev_keys == True:
@@ -868,16 +895,10 @@ screen preferences():
                     vbox:
                         style_prefix "radio"
                         label _("Cursor Style")
-                        textbutton _('System') action Preference('system cursor', 'enable')
-                        textbutton _('Retro') action Preference('system cursor', 'disable')
+                        textbutton _("System") action Preference('system cursor', 'enable')
+                        textbutton _("Point'n'Click") action Preference('system cursor', 'disable')
                     null height 20
                     
-                    vbox:
-                        style_prefix "radio"
-                        label _("Gameplay Mode*")
-                        textbutton _("Default") action SetVariable("pnc_mode", False)
-                        textbutton _("Point'n'Click") action SetVariable("pnc_mode", True)
-                    null height 20
                     
                     
                 vbox:
@@ -893,7 +914,7 @@ screen preferences():
                     
                     
                 null height 20
-                label _("{size=10}*Some of these settings only apply on the next scene.{/size}")
+                label _("{size=10}*Some of these settings only apply to the next scene.{/size}")
                 null height 20
 
                 if superdev == True:
@@ -1123,31 +1144,87 @@ screen history():
     predict False
 
     use game_menu(_("History"), scroll=("vpgrid" if gui.history_height else "viewport")):
-
         style_prefix "history"
 
+        add "images/dockdown_idle.png":
+            zoom 0.5
+            xalign 0.5
+            alpha 0.5
+        
+        null height 10
+        
+        $ last_history_who = _history_list[0]
+        $ last_history_what = _history_list[1]
+        
         for h in _history_list:
+        #for h in reversed(_history_list):
 
             window:
-
                 ## This lays things out properly if history_height is None.
                 has fixed:
                     yfit True
+                if h.who == playername:
+                    if h.who:
+                        if last_history_who != h.who:
+#~                             add "images/sides/cross.png":
+#~                                 zoom 0.5
+                            text h.who:
+                                style "history_name"
+                                ## Take the color of the who text from the Character, if
+                                ## set.
+                                #if "color" in h.who_args:
+                                #    text_color h.who_args["color"]
+                    
+                    if last_history_what != h.what:
+                        text h.what
+                        
 
-                if h.who:
+                    
+                    
+                elif h.who == "":
+                    if last_history_who != h.who:
+#~                         add "images/sides/radio.png":
+#~                             zoom 0.5
+                        text "{color=#8dd35f}" + "--":
+                            style "history_name"
+                    if last_history_what != h.what:
+                        text "{color=#8dd35f}" + h.what
+                        
+                
+                else:
+                    if last_history_who != h.who:
+#~                         if h.who == "Robot":
+#~                             add "images/sides/robotguard.png":
+#~                                 zoom 0.5
+#~                         if h.who == "Man":
+#~                             add "images/sides/oldman.png":
+#~                                 zoom 0.5
+                            
+                        text "{color=#8dd35f}" + h.who:
+                            style "history_name"
+                    if last_history_what != h.what:
+                        text "{color=#8dd35f}" + h.what
+                        
 
-                    label h.who:
-                        style "history_name"
-
-                        ## Take the color of the who text from the Character, if
-                        ## set.
-                        if "color" in h.who_args:
-                            text_color h.who_args["color"]
-
-                text h.what
+            if last_history_what != h.what:
+                null height 10
+            
+            $ last_history_who = h.who
+            $ last_history_what = h.what
+            
 
         if not _history_list:
             label _("The dialogue history is empty.")
+            
+            
+        add "images/dockdown_idle.png":
+            zoom 0.5
+            xalign 0.5
+            alpha 0.5
+            
+            
+    if termfx_enable == 1:
+        add "images/termfx.png"
 
 
 style history_window is empty
@@ -1165,6 +1242,7 @@ style history_window:
     xfill True
     ysize gui.history_height
 
+
 style history_name:
     xpos gui.history_name_xpos
     xanchor gui.history_name_xalign
@@ -1174,6 +1252,7 @@ style history_name:
 style history_name_text:
     min_width gui.history_name_width
     text_align gui.history_name_xalign
+    size gui.text_size
 
 style history_text:
     xpos gui.history_text_xpos
@@ -1183,6 +1262,7 @@ style history_text:
     min_width gui.history_text_width
     text_align gui.history_text_xalign
     layout ("subtitle" if gui.history_text_xalign else "tex")
+    size gui.text_size
 
 style history_label:
     xfill True
@@ -1225,7 +1305,7 @@ screen help():
             
             #spacing 10   
             
-            grid 2 14:
+            grid 2 6:#14:
                 xfill True
                 spacing 15
 
@@ -1253,43 +1333,50 @@ screen help():
                     xpos 5
                 text _("Cash")
                 
-                add "images/menuicon.png":
+                add "images/menuicon_idle.png":
                     xpos 4
                     zoom 1.0
                 text _("Game Menu")
                 
             
-                label _("Left Click"):
-                    xpos 5
-                text _("Move, Look, Select, Take, Give, Talk, Use...")
-
-                label _("Right Click"):
-                    xpos 5
-                text _("Show/Hide Inventory")
-
-                label _("Mouse Wheel Up"):
-                    xpos 5
-                text _("Select previous Item from Inventory")
-
-                label _("Mouse Wheel Down"):
-                    xpos 5
-                text _("Select next Item from Inventory")
+            if not renpy.variant("touch"):
+                null height 20
+                grid 2 8:#14:
+                    xfill True
+                    spacing 15
                 
-                label "F / F11":
-                    xpos 5
-                text _("Toggle Fullscreen")
                 
-                label "M":
-                    xpos 5
-                text _("Toggle Mute")
+                    label _("Left Click"):
+                        xpos 5
+                    text _("Move, Look, Select, Take, Give, Talk, Use...")
 
-                label "S":
-                    xpos 5
-                text _("Take a Screenshot")
-                
-                label _("Escape"):
-                    xpos 5
-                text _("Show Game Menu")
+                    label _("Right Click"):
+                        xpos 5
+                    text _("Show/Hide Inventory")
+
+                    label _("Mouse Wheel Up"):
+                        xpos 5
+                    text _("Select previous Item from Inventory")
+
+                    label _("Mouse Wheel Down"):
+                        xpos 5
+                    text _("Select next Item from Inventory")
+                    
+                    label "F/F11":
+                        xpos 5
+                    text _("Toggle Fullscreen")
+                    
+                    label "M":
+                        xpos 5
+                    text _("Toggle Mute")
+
+                    label "S":
+                        xpos 5
+                    text _("Take a Screenshot")
+                    
+                    label _("Escape"):
+                        xpos 5
+                    text _("Show Game Menu")
     
     
     

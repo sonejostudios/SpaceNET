@@ -51,6 +51,9 @@ screen surface_screen():
 
 
 label surface:
+    
+    $ engine = "surface"
+    
     $ pnc_nodes_visible = False
     
     $ inventory_select = ""
@@ -291,15 +294,15 @@ label landing:
             $ ingame = False
             pass
             
-        "Start landing":
+        "Land":
             hide screen surface_screen
             
             $ pnc_nodes_visible = True
             $ ingame = False
             
-            if planet == "demo":
-                $ startpos = 44
-                jump map6
+            #if planet == "demo":
+            #    $ startpos = 44
+            #    jump map6
                 
             
             if planet == "xylo":

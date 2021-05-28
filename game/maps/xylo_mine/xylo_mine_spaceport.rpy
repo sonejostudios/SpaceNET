@@ -12,7 +12,7 @@ label xylo_mine:
     image xylo_mine = imagemapsdir + "spaceportlift.png"
     
     scene xylo_mine
-    show screen notify("abandonned mine")
+    show screen notify("Abandoned mine")
     
     show bgcolor behind xylo_mine
     
@@ -183,7 +183,7 @@ label loop_xylo_mine:
             
         if exitpos == 44:
             $ startpos = 44
-            call sound_door from _call_sound_door_79
+            #call sound_door from _call_sound_door_79
             call takeoff_anim("withmenu") from _call_takeoff_anim_3 # go to takeoff
             
             
@@ -213,7 +213,7 @@ label xylo_mine_spaceport_info:
     
     
 Because of seismic activity, this mine is
-abandonned and absolutely not safe.
+abandoned and absolutely not safe.
 Do not enter!
 
 ---
@@ -236,7 +236,7 @@ label xylo_mine_spaceport_isc:
     
     $ info_panel_symbol = ""
     $ showtext = """
-Advertisement:
+- Advertisement -
 
 
 Are you looking for a new spaceship?

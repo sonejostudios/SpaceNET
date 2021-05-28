@@ -3,6 +3,7 @@
 ######################################################
 
 label spacenet_comp(snetnode):
+    $ engine = "terminal"
     $ pnc_nodes_visible = False
     
     show terminal at topleft
@@ -43,7 +44,7 @@ label spacenet_comp(snetnode):
             "Insert" if inventory_select != "spacenet":
                 if inventory_select != "spacenet":
                     if inventory_select == "":
-                        m "I have nothing to insert in this computer! {w=2.5} {nw}"
+                        m "I have nothing to insert into this computer! {w=3.5} {nw}"
                     else:
                         $ inventory_select = ""
                         call dialog_nosense from _call_dialog_nosense_19
@@ -72,7 +73,7 @@ label spacenet_comp(snetnode):
     SpaceNET
     [ascii_line]
     
-    Install sucessfull.
+    Install successfull.
     
     The SpaceNET software is now installed
     and ready to use.
@@ -100,7 +101,7 @@ label spacenet_comp(snetnode):
     SpaceNET
     [ascii_line]
     
-    Node connection successful!
+    The node connection was successful!
     
     This SpaceNET node is now connected
     and ready to use.
@@ -136,7 +137,7 @@ label spacenet_comp(snetnode):
     please insert the medium.
     
     For more information about the 
-    SpaceNET network, please type "spacenet" 
+    SpaceNET network, please type 'spacenet' 
     in the terminal.
     """
         

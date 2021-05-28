@@ -160,7 +160,7 @@ label xylo_mine_spacenet_earthquake:
         $ xylo_mine_used_dynamite_dialog = True
         m "I think the explosion was too loud... {w=2} {nw}"
         m "I just triggered seismic activity! {w=2} {nw}"
-        m "I definitely should't stay here longer... {w=2} {nw}"
+        m "I definitely shouldn't stay here longer... {w=2} {nw}"
         
 
     jump loop_xylo_mine_spacenet

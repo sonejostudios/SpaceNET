@@ -120,13 +120,14 @@ label loop_asteroid2_right:
         if exitpos == 2: # asteroid2 right
             if startpos == 2:
                 if asteroid2right_solarpanel == False:
-                    $ inventory_notify = ""
+                    $ inventory_select2 = ""
                     call asteroid_dig(1) from _call_asteroid_dig_21
-                    if inventory_notify == "pick":
+                    
+                    if inventory_select2 == "pick":
                         m "There is something inside the ground. {w=3.5} {nw}"
                         m "But I need another tool to get rid of this asteroid dust! {w=4.5} {nw}"
                     
-                    elif inventory_notify == "shovel":
+                    elif inventory_select2 == "shovel":
                         show solarpanel behind pathnodeB:
                             pos (206, 290)
                             alpha 0
@@ -139,10 +140,11 @@ label loop_asteroid2_right:
                         
                     else:
                         pass
+                    $ inventory_select2 = ""
                 else:
                     if inventory_select == "":
                         m "This is a solar panel. {w=2.5} {nw}"
-                        m "But I have no clue for what it is for. {w=3.5} {nw}"
+                        m "But I have no clue what it is for. {w=3.5} {nw}"
                     else:
                         call dialog_nosense from _call_dialog_nosense_42
                 
@@ -158,8 +160,10 @@ label loop_asteroid2_right:
                         m "This one looks slightly different than the others. {w=4.0} {nw}"
 
                     else:
+                        $ inventory_select2 = ""
                         call asteroid_dig(1) from _call_asteroid_dig_22
-                        if inventory_notify == "pick":
+                        
+                        if inventory_select2 == "pick":
                             with hpunch
                             call sound_earthquake from _call_sound_earthquake_5
                             
@@ -170,11 +174,12 @@ label loop_asteroid2_right:
                             
                             $ rock_asteroid2right = True
                                 
-                        elif inventory_notify == "shovel":
+                        elif inventory_select2 == "shovel":
                             call dialog_nothing from _call_dialog_nothing_79
                         
                         else:
                             call dialog_nothing from _call_dialog_nothing_80
+                        $ inventory_select2 = ""
                 else:
                     
                     if "asteroid" not in inventory:

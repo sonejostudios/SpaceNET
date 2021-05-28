@@ -75,7 +75,7 @@ label xylo_bunker_move_lift:
         $ xylo_bunker_lift_level = 1
         with hpunch
         hide screen xylo_sea_bunker_lift_control
-        m "I looks like this control panel is not working! {w=2.0} {nw}"
+        m "It looks like this control panel is not working! {w=2.0} {nw}"
         m "I see a broken cable outside the panel... {w=2.0} {nw}"
         if "cable" not in inventory:
             m "If I could find a piece of cable somewhere, I could fix it easily! {w=3.5} {nw}"
@@ -232,7 +232,7 @@ label loop_xylo_sea_bunker:
             if startpos == 11:
                 m "I'm at level [liftlevelname]. {w=2} {nw}"
                 if liftpos == 2:
-                    m "Except a lift control panel and an info board, there is absolutely nothing in this room! {w=6} {nw}"
+                    m "Except for a lift control panel and an info board, there is absolutely nothing in this room! {w=6} {nw}"
                     m "This is quite strange... {w=1.5} {nw}"
                     
                 if liftpos == 1:

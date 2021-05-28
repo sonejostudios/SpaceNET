@@ -119,16 +119,16 @@ label isc_city_bar_cardgame:
     #pause
     
     if clientcards != playercards:
-        #client "You loosed!{w=1.5}{nw}"
+        #client "You lost!{w=1.5}{nw}"
         
         call sound_beep from _call_sound_beep_2
         #with hpunch
         #clientplayer "You lost the game! {w=2.5}{nw}"
         
         menu:
-            "try again":
+            "Try again":
                 jump isc_city_bar_cardgame
-            "back":
+            "Back":
                 hide screen isc_cardgame_check
                 $ countdown = False
                 $ countdown_sec = 0
@@ -177,7 +177,7 @@ label isc_city_bar_cardgame_lost:
     hide screen isc_cardgame_check
     
     clientplayer "You lost the game!{w=3}{nw}"
-    clientplayer "Bye bye...{w=2}{nw}"
+    clientplayer "Bye-bye...{w=2}{nw}"
     jump isc_city_bar
     
     

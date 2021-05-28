@@ -16,7 +16,7 @@ init:
     $ isc_pos = (270, 72)
     $ hacker_pos = (400,200)
     $ sun_pos = (340, 260)
-    $ asteroids_pos = (50, 140) #(500, 100)
+    $ asteroids_pos = (100, 140) #(500, 100)
     
     
     
@@ -196,6 +196,7 @@ label cockpit:
     
 #cockpit menu
 label cockpit_menu:
+    $ pnc_nodes_visible = False
     
     $ inventory_button = True
     
@@ -245,6 +246,7 @@ label cockpit2space:
 
 #cockpit map
 label cockpit_map:
+    $ pnc_nodes_visible = False
     
     #$ space_terminal = True
     

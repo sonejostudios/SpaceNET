@@ -9,7 +9,7 @@ label xylo_map6spaceport:
     image xylo_map6spaceport = imagemapsdir + "spaceportlift.png"
     
     scene bgcolor
-    show screen notify("Xylo sea colony spaceport")
+    show screen notify("Xylo's sea colony spaceport")
     
     show xylo_map6spaceport
     
@@ -84,7 +84,10 @@ label loop_xylo_map6spaceport:
             
         if exitpos == 3: # switch board
             if startpos == 3:
-                call terminal from _call_terminal_7
+                if inventory_select == "":
+                    call terminal from _call_terminal_7
+                else:
+                    call dialog_nosense from _call_dialog_nosense_45
             
             $ startpos = 3
             
@@ -124,7 +127,7 @@ label loop_xylo_map6spaceport:
             
         if exitpos == 44:
             $ startpos = 44
-            call sound_door from _call_sound_door_104
+            #call sound_door from _call_sound_door_104
             call takeoff_anim("withmenu") from _call_takeoff_anim_4 # go to takeoff
             
             

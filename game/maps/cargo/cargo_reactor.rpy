@@ -163,7 +163,7 @@ label loop_cargo_reactor:
 
 
 label cargo_reactor_computer:
-    
+    $ engine = "terminal"
     $ pnc_nodes_visible = False
     
     
@@ -174,7 +174,7 @@ label cargo_reactor_computer:
     Cargo Reactor Control
     [ascii_line]
     
-    Reactor state: [cargo_reactor_state]
+    Reactor State: [cargo_reactor_state]
     
     Remote Control is: [cargo_remote_control]
 
@@ -217,7 +217,7 @@ label cargo_reactor_computer:
             $ showtext ="""
     Remote Control disabled!
             
-    No external access allowed."""
+    No external access is allowed."""
             show text Text(showtext,text_align=termtext_align) at termtextpos
             
             $ cargo_remote_control = "disabled" 

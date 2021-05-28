@@ -10,11 +10,10 @@ init:
     $ questions_client = ["Hello, how are you doing? {w=3}{nw}", 
                             "What are you doing here?{w=3} {nw}", 
                             "Have you heard about SpaceNET? {w=3} {nw}", 
-                            "Bye bye. {w=1.5} {nw}"]
+                            "Bye. {w=1.5} {nw}"]
                             
     $ sam_known = False
     $ sam_meeting_mountains = False
-    
     $ sam_numpad_mission = 0
     
     default xylo_bar_client1_flags = [0, 0, 0, 1, 1]
@@ -24,14 +23,10 @@ init:
     default xylo_bar_barman_flags = [0, 0, 0, 0]
 
     $ game_end = False
-    
     $ xylo_village_bar_music = 1
     
     
-    
-    
-    
-    
+
 
 label xylo_spaceport_hall_bar:
     
@@ -40,7 +35,7 @@ label xylo_spaceport_hall_bar:
     image xylo_spaceport_hall_bar = imagemapsdir + "xylo_spaceport_hall_bar.png"
     
     scene bgcolor
-    show screen notify("Xylo village bar")
+    show screen notify("The Bar")
     
     show xylo_spaceport_hall_bar
     
@@ -212,14 +207,14 @@ label xylo_village_barman:
         linear 1 rotate 0
     #pause 2
     if xylo_bar_barman_flags[0] == 0:
-        barman_xvil "Hi, welcome to the official bar of Xylo Village. {w=2}{nw}"
+        barman_xvil "Hi, welcome to the official bar of [xylo_village_name]. {w=2}{nw}"
         barman_xvil "How can I help you? {w=2}{nw}"
     
     $ questions = ["I want a drink... {w=2.5} {nw}", 
-                    "You have weird clients, I have to say.{w=2.5} {nw}", 
+                    "You have weird clients, I have to say.{w=3} {nw}", 
                     "May I use the bathroom?{w=2.0} {nw}", 
-                    "Have you heard about SpaceNET? {w=2.0} {nw}", 
-                    "I'm fine, thank you. {w=1.0} {nw}"]
+                    "Have you heard about SpaceNET? {w=2.5} {nw}", 
+                    "I'm fine, thank you. {w=1.5} {nw}"]
                     
     $ drinks = ["Recycled Water", 
                 "Galactic Beer"]
@@ -243,7 +238,7 @@ label xylo_village_barman:
                         m "This really doesn't sound good, but I will try.{w=2.5}{nw}"
                         barman_xvil "1c, please. {w=1.5}{nw}"
                         call io_cash(-1) from _call_io_cash_1
-                        m "Beark! {w=1.5}{nw}"
+                        m "Ugh! {w=1.5}{nw}"
                         m "This is horrible! {w=2}{nw}"
                         $ xylo_spaceport_hall_bar_client = True
                         $ xylo_spaceport_hall_wc_cash_wc += 1
@@ -285,8 +280,14 @@ label xylo_village_barman:
         
             "[questions[1]]" if xylo_bar_barman_flags[1] == 0:
                 m "[questions[1]]"
-                barman_xvil "Please don't say that, nobody is weird here. {w=3} {nw}"
-                barman_xvil "What do you want?{w=2} {nw}"
+                barman_xvil "Please don't say that, you just know nothing. {w=4} {nw}"
+                barman_xvil "As I can see, you are quite new here. {w=3.5} {nw}"
+                barman_xvil "You shouldn't ask too many questions. {w=3.5} {nw}"
+                barman_xvil "You just have no idea what is going on here. {w=4} {nw}"
+                barman_xvil "And some people have big ears...{w=4} {nw}"
+                barman_xvil "If I were you, I would be careful.{w=4} {nw}"
+                barman_xvil "You never know...{w=3} {nw}"
+                m "Okay...{w=1} thanks for the hint. {w=2.5}{nw}"
                 $ xylo_bar_barman_flags[1] = 1
             
             "[questions[2]]"if xylo_bar_barman_flags[2] == 0:
@@ -301,10 +302,10 @@ label xylo_village_barman:
                     
             "[questions[3]]" if xylo_bar_barman_flags[3] == 0:
                 m "[questions[3]]"
-                barman_xvil "About what? {w=2} {nw}"
-                barman_xvil "I don't know what are you talking about. {w=3} {nw}"
-                barman_xvil "Please don't bother me anymore. {w=2} {nw}"
-                barman_xvil "If you continue asking stupid things, I'll kick you out! {w=3.5} {nw}"
+                barman_xvil "About what? {w=2.5} {nw}"
+                barman_xvil "I don't know what are you talking about. {w=3.5} {nw}"
+                barman_xvil "Please don't bother me anymore. {w=3} {nw}"
+                barman_xvil "Just have a drink and enjoy your life as long as you can.{w=5} {nw}"
                 $ xylo_bar_barman_flags[3] = 1
             
             "[questions[4]]":
@@ -317,7 +318,7 @@ label xylo_village_barman:
 
 
 
-# drink to forget, talk about abanndonned mine. letter to sea coast bar client
+# drink to forget, talk about abandoned mine. letter to sea coast bar client
 label xylo_village_client1:
     
     if inventory_select != "":
@@ -354,53 +355,54 @@ label xylo_village_client1:
         menu:
             "[questions_client[0]]" if xylo_bar_client1_flags[0] == 0: #how are you
                 m "[questions_client[0]]"
-                client1 "Hi. I'm fine, thanks. {w=2} {nw}"
+                client1 "Hi. I'm okay, thanks. {w=2} {nw}"
                 $ xylo_bar_client1_flags[0] = 1
                 
             "[questions_client[1]]" if xylo_bar_client1_flags2 != [1, 1, 1, 1]: # doing?
                 m "[questions_client[1]]"
-                client1 "What am I doing? {w=2} {nw}"
-                client1 "I'm drinking to forget... {w=2} {nw}"
-                m "To forget what? {w=2} {nw}"
-                client1 "Well... {w=1} I'm really unhappy... {w=1}{nw}"
-                client1 "Because they just closed the mine where I was working.{w=3.5} {nw}"
-                client1 "So I don't have a job anymore! {w=2} {nw}"
-                client1 "What to do now? {w=2} {nw}"
+                client1 "What am I doing? {w=2.5} {nw}"
+                client1 "I'm drinking to forget... {w=3} {nw}"
+                m "To forget what? {w=2.5} {nw}"
+                client1 "Well... {w=1} Actually, I'm really unhappy... {w=3}{nw}"
+                client1 "Because they just closed the mine where I was working.{w=4} {nw}"
+                client1 "So I don't have a job anymore! {w=3} {nw}"
+                client1 "What to do now? {w=2.5} {nw}"
                 $ xylo_bar_client1_flags[3] = 0
                 
                 $ x = 0
-                
                 while x == 0:
                     menu:
                         "What kind of mine was it?" if xylo_bar_client1_flags2[0] == 0:
-                            m "What kind of mine was it?{w=2} {nw}"
-                            client1 "It was a silver mine. {w=2} {nw}"
-                            client1 "It was really nice to work there! {w=2} {nw}"
+                            m "What kind of mine was it?{w=3} {nw}"
+                            client1 "It was a silver mine. {w=3} {nw}"
+                            client1 "It was really nice to work there! {w=3} {nw}"
                             $ xylo_bar_client1_flags2[0] = 1
                             
                         "Where is it?"if xylo_bar_client1_flags2[1] == 0:
                             m "Where is it?{w=2} {nw}"
-                            client1 "It is just south-west of this colony village. {w=3.5} {nw}"
-                            client1 "But it is abandonned. {w=2} {nw}"
+                            client1 "It is just southwest of this colony town. {w=4} {nw}"
+                            client1 "But it is abandoned. {w=3} {nw}"
                             client1 "Going there is now just useless... {w=3} {nw}"
-                            client1 "Don't think about this. {w=2} {nw}"
+                            client1 "Don't think about this. {w=3} {nw}"
                             $ xylo_bar_client1_flags2[1] = 1
                             
                             
                         "Who is the owner?"if xylo_bar_client1_flags2[2] == 0:
-                            m "Who is the owner? {w=2} {nw}"
-                            client1 "The owner? It is General Mining Corporation.{w=4} {nw}"
+                            m "Who is the owner? {w=2.5} {nw}"
+                            client1 "The owner? It was General Mining Corporation.{w=4} {nw}"
                             client1 "But there is no office there.{w=3} {nw}"
                             $ xylo_bar_client1_flags2[2] = 1
                             
                         "Why did they close it?"if xylo_bar_client1_flags2[3] == 0:
-                            m "Why did they close it? {w=2} {nw}"
+                            m "Why did they close it? {w=3} {nw}"
                             client1 "They said, it is because of seismic activity.{w=4} {nw}"
                             client1 "It is now too dangerous to work there.{w=3} {nw}"
-                            client1 "But rumours are saying, they found something special there.{w=3} {nw}"
+                            client1 "But rumors are saying, they found something special there.{w=3} {nw}"
                             client1 "...{w=2} {nw}"
-                            client1 "I don't know if it is related, but the company was bought by A.R.K. Corporation.{w=4} {nw}"
-                            client1 "And all of the sudden, they closed the mine!{w=3} {nw}"
+                            client1 "I don't know if it is related, but the company was bought by A.R.K. Corporation.{w=5} {nw}"
+                            client1 "And all of the sudden, they closed the mine.{w=3} {nw}"
+                            m "Interesting. {w=2} {nw}"
+                            m "Thank you for the information. {w=3} {nw}"
                             $ xylo_bar_client1_flags2[3] = 1
                             
                             
@@ -425,8 +427,8 @@ label xylo_village_client1:
                 client1 "Maybe... {w=1}Look. {w=1}As I left, I found this letter.{w=3} {nw}"
                 client1 "There are some personal documents of a friend of mine.{w=3} {nw}"
                 client1 "I'm sure, he would love to have them back.{w=3} {nw}"
-                client1 "But unfortunately I can't go to him because I don't own any spaceship!{w=4} {nw}"
-                client1 "He is now living on the sea coast, in the really south-east. {w=4} {nw}"
+                client1 "But unfortunately, I can't go to him because I don't own a spaceship!{w=4} {nw}"
+                client1 "He is now living on the coast, in the really southeast. {w=4} {nw}"
                 client1 "Would you like to help and bring him the documents? {w=4} {nw}"
                 client1 "I'm sure he will be grateful.{w=3} {nw}"
                 menu:
@@ -447,7 +449,7 @@ label xylo_village_client1:
             
             "What should I do?" if "letter" in inventory and xylo_bar_client1_flags[4] == 0:
                 m "What should I do?{w=2} {nw}"
-                client1 "Please, bring the documents to my friend at the sea coast village.{w=4} {nw}"
+                client1 "Please, bring the documents to my friend at the seacoast village.{w=4} {nw}"
                 client1 "Thanks!{w=2} {nw}"
             
                 
@@ -476,15 +478,15 @@ label xylo_village_client2:
             return
         
         else:
-            client2gem "You collected all the [maxgems] gems, this is great, thanks! {w=4}{nw}"
-            client2gem "Now the government can't find them.{w=2.5}{nw}"
-            client2gem "Thank you very much!{w=2}{nw}"
-            client2gem "As a zen master, I don't need them.{w=2}{nw}"
-            client2gem "I don't need any precious stones to be happy.{w=3}{nw}"
+            client2gem "You collected all the [maxgems] gems, well done!{w=4}{nw}"
+            client2gem "Now the government can't find them.{w=3.5}{nw}"
+            client2gem "Thank you.{w=2}{nw}"
+            client2gem "As a zen master, I don't need them.{w=3.5}{nw}"
+            client2gem "I don't need any precious stones to be happy.{w=3.5}{nw}"
             client2gem "But...{w=2}{nw}"
-            client2gem "I feel you are a good person.{w=2}{nw}"
-            client2gem "Would you like to keep them for a while?{w=3}{nw}"
-            client2gem "At least until the peace is back here.{w=3}{nw}"
+            client2gem "I feel you are a good person.{w=3}{nw}"
+            client2gem "Would you like to keep them for a while?{w=3.5}{nw}"
+            client2gem "At least until the peace is back here.{w=3.5}{nw}"
             client2gem "Maybe one day, good people will know how to use them for good things.{w=5}{nw}"
             m "No problem.{w=2}{nw}"
             client2gem "Thank you very much!{w=3}{nw}"
@@ -518,32 +520,93 @@ label xylo_village_client2:
     
     if xylo_bar_client2_flags[1] == 1 and gems != maxgems:
         client2gem "What about the gems?{w=2.5} {nw}"
-        m "I've got [gems].{w=2}{nw}"
-        client2gem "When you'll find all the [maxgems] gems, come back to me.{w=4} {nw}"
+        m "I've got [gems].{w=2.5}{nw}"
+        client2gem "When you have found all the [maxgems] gems, please come back to me.{w=5} {nw}"
         
                     
     while True:
-        
         menu:
                  
             "[questions_client[0]]" if gems != maxgems and xylo_bar_client2_flags[0] == 0:#how are you
                 m "[questions_client[0]]"
-                client2gem "Hi. I'm fine, thanks. {w=2} {nw}"
+                client2gem "Hi. I'm fine, thanks. {w=3} {nw}"
+                client2gem "I'm thinking.{w=2.5} {nw}"
+                client2gem "I don't have too much time to talk.{w=3.5} {nw}"
+                m "What are you thinking about?{w=3} {nw}"
+                client2gem "Right now, I'm thinking about what matters in life. {w=5} {nw}"
+                m "This sounds interesting.{w=3} {nw}"
+                m "Tell me more about this.{w=3} {nw}"
+                client2gem "Well, there is a lot to say. {w=3.5} {nw}"
+                client2gem "But right now, it is really not a good idea to talk too much. {w=5} {nw}"
+                client2gem "Because...{w=2.5} {nw}"
+                m "Because?{w=2.5} {nw}"
+                client2gem "I don't know you.{w=2.5} {nw}"
+                client2gem "Forget it.{w=2.5} {nw}"
                 $ xylo_bar_client2_flags[0] = 1
                 #return
                 
             "[questions_client[1]]" if gems != maxgems and xylo_bar_client2_flags[1] == 0: # doing?
                 m "[questions_client[1]]"
-                client2gem "I am a zen master.{w=2} {nw}"
+                client2gem "I am a Zen Master.{w=2.5} {nw}"
+                client2gem "I'm thinking about what matters in life.{w=3.5} {nw}"
+                client2gem "And what we are experiencing right now.{w=3.5} {nw}"
                 client2gem "There are many things disturbing the peace of our world...{w=4} {nw}"
                 client2gem "Of course, bad people and their need for power.{w=4} {nw}"
-                client2gem "There are many precious gems full of energy in this world.{w=4} {nw}"
-                client2gem "If the government find them, this could be a disaster...{w=4} {nw}"
-                client2gem "Somebody has to collect them before they now their existance.{w=4} {nw}"
+                m "That's true.{w=2} I have the feeling, something is wrong here.{w=3.5}{nw}"
+                m "Nobody wants to talk to me.{w=3.5}{nw}"
+                m "But you know what? My memory is gone.{w=3.5}{nw}"
+                m "I just know nothing.{w=3}{nw}"
+                m "I even don't know where I am!{w=3}{nw}"
+                client2gem "...{w=2} {nw}"
+                client2gem "This sounds interesting.{w=2.5} {nw}"
+                client2gem "Where are you coming from?{w=2.5} {nw}"
+                m "I don't know... I just escaped from a huge spaceship.{w=4}{nw}"
+                m "And now I'm here.{w=2.5}{nw}"
+                client2gem "...{w=2} {nw}"
+                client2gem "Well, I trust you.{w=2} {nw}"
+                client2gem "I will tell you what I'm thinking about.{w=4} {nw}"
+                client2gem "Right now, I'm thinking mostly about security and freedom. {w=5} {nw}"
+                client2gem "What do you think, which one is more important? {w=5} {nw}"
+                m "Well...{w=2.5} {nw}"
+                menu:
+                    "Security":
+                        m "Security.{w=2.5} {nw}"
+                    "Freedom":
+                        m "Freedom.{w=2.5} {nw}"
+                    "I don't know":
+                        m "I don't know.{w=2.5} {nw}"
+                
+                client2gem "I see, you are young. {w=3} {nw}"
+                client2gem "And you still have a lot to learn. {w=4} {nw}"
+                client2gem "... {w=2} {nw}"
+                client2gem "Listen. {w=2} {nw}"
+                client2gem "It is really simple. {w=3} {nw}"
+                client2gem "We just need both of them. {w=3} {nw}"
+                client2gem "We need a balance. {w=3} {nw}"
+                client2gem "Right now, the new government puts a lot of pressure on us.{w=4} {nw}"
+                client2gem "They say, we need more security.{w=4} {nw}"
+                client2gem "For this, they want to know more about us.{w=4} {nw}"
+                client2gem "So they started collecting private data of the citizens. {w=5} {nw}"
+                m "Oh yes, I've seen that at the spaceport registration.{w=4}{nw}"
+                client2gem "They want to know what we think and what we do.{w=4} {nw}"
+                client2gem "They want to control us.{w=3} {nw}"
+                client2gem "They already put many people in prison.{w=3.5} {nw}"
+                client2gem "Because they were not accepting the new government's ideas.{w=4} {nw}"
+                client2gem "Maybe, you are one of them?{w=3} {nw}"
+                client2gem "Look...{w=2} {nw}"
+                client2gem "If the government continues like this, we are going to lose our freedom completely.{w=6} {nw}"
+                client2gem "...{w=2} {nw}"
+                client2gem "But there is something they don't know, which I figured out a couple of weeks ago.{w=6} {nw}"
+                
+                client2gem "There are some interesting gems in this world.{w=4} {nw}"
+                client2gem "I don't know where they are coming from.{w=4} {nw}"
+                client2gem "But they are full of energy!{w=3} {nw}"
+                client2gem "If the government finds them, this could be a disaster...{w=4.5} {nw}"
+                client2gem "Somebody has to collect them before they know their existence.{w=4.5} {nw}"
                 client2gem "To say it exactly, I know about [maxgems] gems.{w=4} {nw}"
                 client2gem "Could you collect them before it is too late?{w=4} {nw}"
                 m "Well... why not?{w=2.5} {nw}"
-                client2gem "Great!{w=2} {nw}"
+                client2gem "Great.{w=2} {nw}"
                 
                 if xylo_bar_gem == True:
                     client2gem "Here, I give you one sample. It is for you.{w=4} {nw}"
@@ -552,16 +615,16 @@ label xylo_village_client2:
                     
                     
                 
-                client2gem "Come back to me when you have all [maxgems] gems.{w=4} {nw}"
-                m "Okay!{w=2} {nw}"
+                client2gem "Come back to me when you've got all [maxgems] gems.{w=4} {nw}"
+                m "Okay.{w=2} {nw}"
                 client2gem "Then we'll see what we can do.{w=3} {nw}"
-                client2gem "Thank you!{w=2} {nw}"
+                client2gem "Thank you.{w=2} {nw}"
                 $ xylo_bar_client2_flags[1] = 1
                 #return
                 
             "[questions_client[2]]" if gems != maxgems and xylo_bar_client2_flags[2] == 0: # spacenet?
                 m "[questions_client[2]]"
-                client2gem "SpaceNET?... {w=1} No, I don't know. {w=1}{nw}"
+                client2gem "SpaceNET?... {w=1} No, I don't know. {w=2.5}{nw}"
                 $ xylo_bar_client2_flags[2] = 1
                 #return
                 
@@ -569,12 +632,12 @@ label xylo_village_client2:
             
             "I found all the gems!" if gems == maxgems:
                 $ inventory_select = "gem"
-                m "I found all the gems!{w=2} {nw}"
+                m "I found all the gems!{w=2.5} {nw}"
                 jump xylo_village_client2
             
             "[questions_client[3]]":
                 m "[questions_client[3]]"
-                client2gem "See you soon.{w=2} {nw}"
+                client2gem "See you soon.{w=2.5} {nw}"
                 return
 
                 
@@ -637,7 +700,7 @@ label xylo_village_client4:
                     samclient "Wait... {w=1} Who are you? {w=2} {nw}"
                     m "I'm [playername].{w=2}{nw}"
                     m "I just escaped from a huge spaceship...{w=2.5}{nw}"
-                    m "And I can't remember nothing except the name SpaceNET!{w=3.5}{nw}"
+                    m "And I can't remember anything, except for SpaceNET.{w=3.5}{nw}"
                     samclient "Did you say, you are [playername]? {w=2.5}{nw}"
                     m "Hmm... yes, that's my name.{w=2}{nw}"
                     samclient "Okay. My name is Sam. {w=2}{nw}"
@@ -682,7 +745,7 @@ label xylo_village_client4:
                 "Hey Sam. We need help!" if "laser" not in inventory:
                     m "Hey Sam! We need help!{w=2}{nw}"
                     sam "What happened?{w=2}{nw}"
-                    m "I was talking with 4n0nym0u5 as she got cought!{w=3.5}{nw}"
+                    m "I was talking with 4n0nym0u5 as she got caught!{w=3.5}{nw}"
                     m "I think I know where she is, but I'll need a metal cutting tool to get there.{w=4}{nw}"
                     sam "Hm... I see.{w=2}{nw}"
                     sam "I have this small laser here, do you think it is strong enough for that task?{w=4}{nw}"
@@ -707,15 +770,15 @@ label xylo_village_client4:
             sam "Hey [playername]!{w=1.5}{nw}"
             sam "I'm happy you've seen my message in your inbox.{w=2.5}{nw}"
             sam "I just met 4n0nym0u5.{w=2}{nw}"
-            sam "She told, me she just figured out a very important information about A.R.K. Corporation.{w=5}{nw}"
+            sam "She told me, she figured out very important information about A.R.K. Corporation.{w=5}{nw}"
             sam "They sent a big cargo ship full of weapons to the government.{w=4}{nw}"
-            sam "They propably want to start a civil war!{w=3}{nw}"
+            sam "They probably want to start a civil war!{w=3}{nw}"
             sam "We really need to stop this before it is too late!{w=3.5}{nw}"
             sam "I will organize a meeting with 4n0nym0u5 for you.{w=3.5}{nw}"
-            sam "She has a good idea how to stop this cargo ship and how you could help us.{w=4.5}{nw}"
+            sam "She has a good idea of how to stop this cargo ship and how you could help us.{w=4.5}{nw}"
             sam "4n0nym0u5 is close to the Industrial Space City right now...{w=3.5}{nw}"
             sam "She will pick you up there at the space gateway.{w=3.5}{nw}"
-            sam "It is a prohibided area, but I'll tell you how to get there.{w=3.5}{nw}"
+            sam "It is a prohibited area, but I'll tell you how to get there.{w=3.5}{nw}"
             sam "The secret entrance is located in the bar, it is door number 4 in the bathroom.{w=4.5}{nw}"
             sam "But you will need a PIN to access it.{w=3}{nw}"
             sam "The pin is 12458.{w=2}{nw}"
@@ -749,14 +812,14 @@ label xylo_village_client4:
 
             if  active_nodes_amount != max_nodes_amount:
                 sam "Well done with the space cargo! {w=2.5}{nw}"
-                sam "But we still need to activate all the spacenet nodes!{w=3}{nw}"
-                sam "[active_nodes_amount] of [max_nodes_amount] nodes are activated right now.{w=3}{nw}"
-                sam "When you are done, please start the SpaceNET network!{w=3}{nw}"
+                sam "But we still need to activate all the SpaceNET nodes!{w=3.5}{nw}"
+                sam "[active_nodes_amount] out of [max_nodes_amount] nodes are activated right now.{w=3.5}{nw}"
+                sam "When you are done, please start the SpaceNET network!{w=3.5}{nw}"
                 sam "Then come back to me.{w=2.5}{nw}"
                 
             
             if  active_nodes_amount == max_nodes_amount and spacenet_state == "offline":
-                sam "We are still not done with our tasks....{w=3}{nw}"
+                sam "We are still not done with our tasks...{w=3}{nw}"
                 sam "Please launch SpaceNET and come back to me.{w=3}{nw}"
             
             

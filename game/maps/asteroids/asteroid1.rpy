@@ -36,13 +36,13 @@ screen asteroid1_orbitpos():
     
     timer 0.1 repeat True action [SetVariable("module_orbit_pos_x", int(module_orbit_box[0])), SetVariable("module_orbit_pos_y", int(module_orbit_box[1]))]
     
-    if superdev == True:
-        text " asteroidsmall1 [asteroidsmall1_orbit_pos]\n\n asteroidsmall2 [asteroidsmall2_orbit_pos]\n\n module_orbit [module_orbit_pos]":
-            ypos 80
+#~     if superdev == True:
+#~         text " asteroidsmall1 [asteroidsmall1_orbit_pos]\n\n asteroidsmall2 [asteroidsmall2_orbit_pos]\n\n module_orbit [module_orbit_pos]":
+#~             ypos 80
             
-        if module_orbit_pos_x > 580 and 50 < module_orbit_pos_y < 190:
-            text "NOW!" as text2:
-                ypos 240
+#~         if module_orbit_pos_x > 580 and 50 < module_orbit_pos_y < 190:
+#~             text "NOW!" as text2:
+#~                 ypos 240
                 
 
 
@@ -259,7 +259,7 @@ label asteroid1_nodeB:
 
     elif inventory_select == "cord" and asteroid_cord_on_ground == False:
         m "A cord alone is not enough for fishing! {w=3.5} {nw}"
-        m "Let's try to attach the proper tool on it. {w=3.5} {nw}"
+        m "Let's try to attach the proper tool to it. {w=3.5} {nw}"
         
         call use_item from _call_use_item_7
         $ asteroid_cord_on_ground = True
@@ -271,7 +271,7 @@ label asteroid1_nodeB:
     elif inventory_select == "hook" and asteroid_cord_on_ground == True:
         m "This is a nice idea if I want to catch some fish. {w=3.5} {nw}"
         m "Well... {w=2} {nw}"
-        m "Actually this is really not a good idea! {w=3.5} {nw}"
+        m "Actually, this is really not a good idea! {w=3.5} {nw}"
         m "I'd rather save myself instead of trying to catch some fish in space! {w=5} {nw}"
         
 
@@ -352,7 +352,12 @@ label asteroid_dig(found):
     
     elif inventory_select == "pick" or inventory_select == "shovel":
         call sound_dig from _call_sound_dig_7
+        
+        $ inventory_select2 = inventory_select
+        
         call use_and_keep_item from _call_use_and_keep_item_39
+         
+        
         pause 1.5
         if found == 0:
             call dialog_nothing from _call_dialog_nothing_69
@@ -360,7 +365,7 @@ label asteroid_dig(found):
     elif inventory_select == "asteroid":
         m "I think I really don't need this asteroid.{w=3.5}{nw}"
         m "I'll throw it away.{w=2.5}{nw}"
-        m "Bye bye!{w=2}{nw}"
+        m "Bye-bye!{w=2}{nw}"
         call use_item from _call_use_item_9
         show asteroid_small as astrobullet:
             pos position
@@ -368,8 +373,11 @@ label asteroid_dig(found):
             rotate 0
             linear 4 pos (900, -100) rotate 360
     
-    else:
+    elif inventory_select != "pick" or inventory_select != "shovel":
         call dialog_nosense from _call_dialog_nosense_34
+    
+    else:
+        pass
 
     return
 

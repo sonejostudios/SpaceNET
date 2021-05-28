@@ -1400,9 +1400,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="-269.06179"
-     inkscape:cy="214.45944"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="146.61949"
+     inkscape:cy="-230.17853"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -6561,6 +6561,45 @@
        d="m -696.11443,1464.5831 c 0.24195,0.4155 0.66603,0.9353 1.34769,1.7198 3.7053,4.2632 6.23515,-3.1942 10.72177,-5.2796 1.16792,-0.5421 6.41945,2.3398 7.2394,1.8373 1.18167,-0.7247 1.20856,-3.3226 3.09875,-1.9218 0.53058,0.3933 4.24122,-1.7824 5.52039,-1.3349 6.48454,2.269 2.00047,-4.5659 3.07757,-6.988 0.81289,-1.8278 3.89615,-2.3433 5.46328,-2.9161 0.93025,-0.3409 1.75099,-0.8364 2.58544,-1.3509 0.87892,0.6204 1.72063,1.4298 3.38681,1.4262 3.23875,-0.011 1.19364,-5.5429 2.37935,-4.934 0.80299,0.4123 1.04778,1.0282 2.31808,0.7503 0.84838,-0.1849 4.45028,-2.9587 4.45952,-3.8243 0.004,-0.3258 -1.76928,-1.7204 -1.9724,-1.9542 -1.31771,-1.5171 -0.6898,-2.6659 -2.32664,-3.8804 -2.28612,-1.6964 -4.78324,-2.1912 -6.34559,-4.797 -0.2021,-0.3372 -0.67715,-0.5559 -0.68805,-0.9723 -0.0164,-0.6276 -0.5174,-1.0405 -0.44732,-1.6002 0.22812,-1.8214 5.69524,-5.406 4.76437,-8.7337 -0.93768,-3.3523 -2.63522,-1.7771 -5.77048,-1.5219 -1.1633,0.095 -1.0989,-2.6414 -1.79135,-2.9876 -1.75517,-0.8773 -3.4202,-2.2803 -5.29812,-3.0501 -2.1266,-0.8716 -5.50656,2.6702 -7.69131,3.196 -1.58958,0.3831 -3.17367,0.2646 -4.75515,0.5268 -0.91864,0.1528 -2.48111,2.372 -3.61226,2.4323 -3.4159,0.182 -2.64948,-0.7242 -6.22574,2.0793 -5.46649,4.2866 2.34007,5.1928 3.78658,8.9711 0.20916,0.5463 -0.99704,2.4653 -2.04793,4.1854 -1.13422,-0.405 -2.38403,-0.5322 -3.73329,-0.01 -3.91338,1.5275 -2.49089,2.804 -2.81789,5.6784 -0.12131,1.0667 -3.15378,1.5397 -3.67383,2.2531 -1.31834,1.8079 -3.20408,3.6343 -4.42655,5.5355 -1.38441,2.1534 1.89875,4.6162 2.05835,6.5513 0.11609,1.4081 -0.32418,2.9083 -0.3405,4.3323 -0.009,0.8272 2.15628,1.852 2.00292,2.8954 -0.33275,2.2643 -0.87007,2.6231 -0.24604,3.6813 z"
        sodipodi:nodetypes="ccssscsscssssccssssssssssssccsccsssc"
        inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/asteroid_small2b.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/game/images/inventory/inventory_button_idle.png"
+       id="g1759"
+       style="display:inline"
+       transform="translate(289.0504,-275.39688)">
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#8dd35f;stroke-width:2.87293;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect870"
+         width="31.217735"
+         height="21.593794"
+         x="-270.44785"
+         y="1005.6281"
+         rx="3.235162"
+         ry="4.2321997" />
+      <rect
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#8dd35f;stroke-width:3.23145;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect872"
+         width="15.159589"
+         height="9.3845081"
+         x="-262.41876"
+         y="1000.5957"
+         rx="2.3667333"
+         ry="2.3666306" />
+    </g>
+    <path
+       id="rect2217"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#8dd35f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
+       d="m 97.859238,724.62854 c -2.1783,0 -3.98243,1.80412 -3.98243,3.98242 v 1.22852 h -3.17773 c -1.40042,0 -2.63187,0.75448 -3.43164,1.80078 -0.79977,1.0462 -1.24023,2.40019 -1.24024,3.86719 v 13.13086 c 0,1.467 0.44047,2.82098 1.24024,3.86718 0.79977,1.0463 2.03122,1.80078 3.43164,1.80078 h 24.748052 c 1.40041,0 2.62991,-0.75448 3.42968,-1.80078 0.79977,-1.0462 1.24219,-2.40018 1.24219,-3.86718 v -13.13086 c 0,-1.467 -0.44242,-2.82099 -1.24219,-3.86719 -0.79977,-1.0463 -2.02927,-1.80078 -3.42968,-1.80078 h -3.17774 v -1.22852 c 0,-2.1783 -1.80412,-3.98242 -3.98242,-3.98242 z m 0,3.23047 h 10.427732 c 0.44404,0 0.75,0.30805 0.75,0.75195 v 1.22852 H 97.109238 v -1.22852 c 0,-0.4439 0.30595,-0.75195 0.75,-0.75195 z m -7.16016,4.85351 h 3.17773 c 14.760702,0 6.521302,0 18.392582,0 h 3.17774 c 0.39186,0 0.77869,0.19013 1.14843,0.67383 0.36975,0.4837 0.65039,1.2434 0.6504,2.1211 v 13.13086 c 0,0.8777 -0.28065,1.63934 -0.6504,2.12304 -0.36974,0.4837 -0.75657,0.67188 -1.14843,0.67188 H 90.699078 c -0.39186,0 -0.7787,-0.18818 -1.14844,-0.67188 -0.36974,-0.4837 -0.65039,-1.24534 -0.65039,-2.12304 v -13.13086 c 0,-0.8777 0.28065,-1.6374 0.65039,-2.1211 0.36974,-0.4837 0.75658,-0.67383 1.14844,-0.67383 z"
+       sodipodi:nodetypes="sscsccscsscsscscssssssccsssccsscsssssssss" />
+    <path
+       id="path2236"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#8dd35f;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"
+       d="m 159.98368,723.52427 c -2.33718,0 -4.2729,1.93571 -4.2729,4.27289 v 1.31813 h -3.40951 c -1.50257,0 -2.82384,0.80951 -3.68194,1.93212 -0.8581,1.12251 -1.33069,2.57526 -1.3307,4.14926 v 14.08861 c 0,1.574 0.4726,3.02674 1.3307,4.14925 0.8581,1.12261 2.17937,1.93212 3.68194,1.93212 h 26.55314 c 1.50256,0 2.82173,-0.80951 3.67984,-1.93212 0.8581,-1.12251 1.33279,-2.57525 1.33279,-4.14925 v -14.08861 c 0,-1.574 -0.47469,-3.02675 -1.33279,-4.14926 -0.85811,-1.12261 -2.17728,-1.93212 -3.67984,-1.93212 h -3.40952 v -1.31813 c 0,-2.33718 -1.93571,-4.27289 -4.27289,-4.27289 z m 0,3.46609 H 171.172 c 0.47643,0 0.8047,0.33052 0.8047,0.8068 v 1.31813 h -12.79772 v -1.31813 c 0,-0.47628 0.32826,-0.8068 0.8047,-0.8068 z m -7.68241,5.20752 h 3.40951 c 15.83733,0 6.99696,0 19.73411,0 h 3.40952 c 0.42044,0 0.83549,0.204 1.2322,0.72298 0.39672,0.51898 0.69783,1.33409 0.69784,2.27581 v 14.08861 c 0,0.94172 -0.30112,1.75891 -0.69784,2.27789 -0.39671,0.51898 -0.81176,0.72089 -1.2322,0.72089 h -26.55314 c -0.42044,0 -0.8355,-0.20191 -1.23221,-0.72089 -0.3967,-0.51898 -0.69783,-1.33617 -0.69783,-2.27789 v -14.08861 c 0,-0.94172 0.30113,-1.75683 0.69783,-2.27581 0.39671,-0.51898 0.81177,-0.72298 1.23221,-0.72298 z"
+       sodipodi:nodetypes="sscsccscsscsscscssssssccsssccsscsssssssss"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/inventory/inventory_button_hover.png"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
   </g>

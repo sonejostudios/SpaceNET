@@ -10,7 +10,7 @@ define guard = Character("Guard", image="guardian", color="#ffffff")
 define guardxylo = Character("Guard", image="guardxylo", color="#ffffff")
 define robotguard = Character("Guard", image="robotguard", color="#ffffff")
 
-define radio = Character(" ", image="radio", color="#ffffff")
+define radio = Character("", image="radio", color="#ffffff")
 define robot = Character("Robot", image="robotguard", color="#ffffff")
 
 define barman_xvil = Character("Barman", image="barman2", color="#ffffff")
@@ -141,7 +141,7 @@ image node:
     "images/node.png"
     anchor (0.5,0.5)
     
-image node2:
+image node2: # node without alpha
     "images/node2.png"
     anchor (0.5,0.5)
 
@@ -151,7 +151,7 @@ image nodeanime:
     linear 10 rotate 180.0
     rotate 0
     repeat
-    
+        
 
 
 image propeller:
@@ -268,6 +268,13 @@ image spacenetsender:
     pause 0.5
     repeat
     
+image dot:
+    anchor (0.5,0.5)
+    "/images/senderc.png"
+    
+image minicircle:
+    anchor (0.5,0.5)
+    "/images/minicircle.png"
     
 image guard:
     anchor (0.5, 0.9)
@@ -433,11 +440,7 @@ define config.keymap['game_menu'] = [ 'K_ESCAPE', 'K_MENU', 'K_PAUSE']
 
 
 
-
-
 # see also in option.py
-        
-
 init :
     
     # demo version
@@ -447,10 +450,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.10"
+    define config.version = "1.12.0"
     
     # build date. Set date for release.
-    $ build_date = "2021-04-23"
+    $ build_date = "2021-05-27"
     
     # game name
     define config.name = "SpaceNET"
@@ -488,6 +491,7 @@ init :
 
     # spaceship type, as string, so it is possible to add 1b, 1c etc.
     $ spaceshiptype = "1"
+    $ spaceshiptype_name = "SD-2"
     
     $ spaceship_broken = False
     $ asteroid_collision = False
@@ -502,6 +506,8 @@ init :
     
     
     $ planet = "megaship"
+    
+    $ engine = "none" # move, surface, space, terminal, anim
     
     
     $ flash = Fade(.10,0,.75,color="fff")
@@ -541,20 +547,20 @@ init :
     #default inventory = ["cable", "flashlight", "mirror", "bulb", "spacenet", "screwdriver", "gem"]
     default inventory = ["newspaper", "screwdriver", "spacesuit", "bulb", "mirror", "spacenet", "accesscard", "rope", 
                         "cable", "pick", "dynamite", "minidroid", "gem", "star", "notebook", "laser", "key", "letter", "hook",  
-                        "robotcard", "knife", "cards", "shovel", "cord", "magnetcord", "module", "magnet", "asteroid", "lamp"]#"flashlight"]
+                        "robotcard", "knife", "cards", "shovel", "cord", "magnetcord", "module", "magnet", "asteroid", "flashlight"]
     
     $ inventory_select = ""
     $ inventory_notify = ""
-    $ inventory_select_number = -1
+    $ inventory_select_number = -1 # -1 = none is selected
     
     default planetlist = ["sun", "megaship", "xylo", "isc", "cargo", "io11", "asteroids"]
     #default planetlist = ["megaship", "xylo"]
     
     $ gems = 0
-    $ maxgems = 15
+    $ maxgems = 15 
     
     $ active_nodes_amount = 0
-    $ max_nodes_amount = 4 # set it to 5 when asteroids is released!
+    $ max_nodes_amount = 5 
     
     
     $ inventory_button = True
@@ -582,6 +588,8 @@ init :
     
     $ triptime = False
     
+    $ xylo_village_name = "Olyx Town"
+    
     
     
     
@@ -594,6 +602,9 @@ init :
     
     # cursor style
     $ pnc_cursor = False
+    if not renpy.variant("touch"):
+        $ pnc_cursor = True
+    
 
     # display
     $ termfx_enable = 1
@@ -639,12 +650,12 @@ init :
 # The game starts here.
 
 label start:
-    #jump space
+    #jump straight to intro
     if superdev == False:
         jump intro
         
         
-    # show renderer performance screen
+    #show renderer performance screen
     #show screen _performance
     
     
@@ -664,10 +675,7 @@ label start:
     #show map6
     #centered "start the engine at position node [startpos] (DD) "
     
-    
-    
-   
-    
+
     
     $ ingame = False
     $ landing = False

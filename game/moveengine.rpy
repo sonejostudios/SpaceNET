@@ -220,6 +220,7 @@ label hidepaths:
 
 label clickngo:
     
+    $ engine = "move"
     
     window hide # hide say window while pausing
     
@@ -249,8 +250,8 @@ label clickngo:
     pause
 
 
-
-
+    # reset node type
+    $ nodetype = ""
 
     # flag moving
     if startpos != gotopos:
@@ -464,11 +465,9 @@ label darkroom:
         
     
     show black as darkroombg behind player
-    m "There is no light, it is to dark to see anything.{w=3} {nw}"
+    m "There is no light, it is too dark to see anything.{w=3} {nw}"
     
     return
-
-
 
 
 

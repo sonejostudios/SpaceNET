@@ -124,7 +124,6 @@ label loop_asteroid2_spaceship:
             if startpos == 4:
                 if inventory_select == "":
                     m "These boxes block the door to the cockpit. {w=3.5} {nw}"
-                    m "I can't go through. {w=3} {nw}"
                     if asteroid_cord_at_box == True:
                         m "There is a cord tighten around this box. {w=3.5} {nw}"
                 
@@ -148,10 +147,10 @@ label loop_asteroid2_spaceship:
             if startpos == 11:
                 if inventory_select == "module":
                     m "This spaceship is totally broken. {w=3} {nw}"
-                    m "I can't repaire it, even with this hyperspace module. {w=4} {nw}"
+                    m "I can't repair it, even with this hyperspace module. {w=4} {nw}"
                 
                 else:
-                    m "There should be the hyperspace module. {w=3} {nw}"
+                    m "There should be a hyperspace module. {w=3} {nw}"
                     m "But it is missing! {w=2} {nw}"
                     m "I guess it flew away during the accident... {w=3.5} {nw}"
                 

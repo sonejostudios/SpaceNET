@@ -77,7 +77,7 @@ label hacker_meeting:
                 hacker "I don't trust you, sorry.{w=2} {nw}"
                 $ x = 1
             
-            "It was a mistake, sorry....":
+            "It was a mistake, sorry...":
                 m "It was a mistake, sorry...{w=2} {nw}"
                 hacker "Okay, bye.{w=2} {nw}"
                 $ x = 1

@@ -158,7 +158,7 @@ Enjoy the bar, the shop, and many more!
 ---
 
 To access the spaceport, 
-you'll need a landing authorisation.
+you'll need a landing authorization.
 
     """
     
@@ -201,8 +201,8 @@ Some time ago,
 there was a huge knowledge network called 
 IOnet.
 
-The people were free and the life was good.
-But unfortunately the time changed and
+The people were free and life was good.
+But unfortunately, the time changed and
 a new military government took the power.
 
 They shut down the IOnet and since then,

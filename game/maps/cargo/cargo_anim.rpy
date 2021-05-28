@@ -132,45 +132,60 @@ label cargo_explosion_anim:
         anchor (0.5,0.5)
         
     show cargoship_anim at truecenter
-    
     pause 2
     
     
+
     image explosion:
         "images/explosion.png"
         anchor (0.5,0.5)
         
-    call sound_explosion from _call_sound_explosion_1    
+    call sound_explosion from _call_sound_explosion_1
+    with hpunch
+    show white:
+        alpha 0.0
+        linear 0.5 alpha 1
+        linear 0.5 alpha 0
     show explosion:
         alpha 0.5
         pos (400,240)
         zoom 0.5
         linear 1.5 zoom 3 alpha 0
-        #repeat
-        
+
+   
     pause 0.5
     
-    call sound_explosion from _call_sound_explosion_2  
+    call sound_explosion from _call_sound_explosion_2
+    with hpunch
+    show white:
+        alpha 0.0
+        linear 0.5 alpha 1
+        linear 0.5 alpha 0
     show explosion as explosion2:
         rotate 25
         alpha 0.5
         pos (400,240)
         zoom 0.5
         linear 1.5 zoom 3 alpha 0
-        #repeat
+
         
     pause 0.5
     
     hide cargoship_anim
     
-    call sound_explosion from _call_sound_explosion_3  
+    call sound_explosion from _call_sound_explosion_3
+    with hpunch
+    show white:
+        alpha 0.0
+        linear 0.5 alpha 1
+        linear 0.5 alpha 0
     show explosion as explosion3:
         rotate 40
         alpha 0.5
         pos (400,240)
         zoom 0.5
         linear 1.5 zoom 3 alpha 0
-        #repeat
+
     
     
     $ cargo_pos = (-100,-100)

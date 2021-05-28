@@ -204,7 +204,7 @@ label xylo_mountain2_info:
 This lake was an ancient sacred place.
 
 A long time ago, a temple was built here, 
-but it was abandonned and destroyed by winds and storms.
+but it was abandoned and destroyed by winds and storms.
 
 The legend says, there is a treasure. 
 But nobody has found it until now. 
@@ -278,7 +278,7 @@ label xylo_mountain2_spacenet_guy:
     
     sam "The meeting is set in space around [hacker_pos].{w=4} {nw}"
     
-    sam "Go to space and flight to this location.{w=3} {nw}"
+    sam "Go to space and fly to this location.{w=3} {nw}"
     sam "You will meet her there.{w=2} {nw}"
     sam "Good luck!{w=1.5} {nw}"
     

@@ -71,7 +71,7 @@ label xylo_map7:
         repeat
     
     scene xylo_map7
-    show screen notify("Xylo sea bunker")
+    show screen notify("Xylo's sea bunker")
 
         
     show xylo_sea_guard:

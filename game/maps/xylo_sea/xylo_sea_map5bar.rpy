@@ -13,14 +13,13 @@ init:
 label xylo_map5house:
     
     stop atmo fadeout 1.0
-    call music_bar_sea from _call_music_bar_sea
     
     image xylo_bar = imagemapsdir + "crossroom.png"
     
     image terminalmap = "images/terminalmap.png"
     
     scene bgcolor
-    show screen notify("xylo sea bar")
+    show screen notify("Sea Settlement Bar")
     
     show xylo_bar at truecenter
     
@@ -108,7 +107,12 @@ label loop_xylo_map5house:
             
             $ startpos = 1     # stay in A
             
-        if exitpos == 2:   
+        if exitpos == 2:
+            if startpos == 2:
+                if inventory_select == "":
+                    m "This is the settlement bar.{w=2.5}{nw}"
+                else:
+                    call dialog_nosense from _call_dialog_nosense_49
             $ startpos = 2
             
         if exitpos == 3:
@@ -139,6 +143,7 @@ label loop_xylo_map5house:
 
 
         if exitpos == 44:
+            #$ nodetype = "item"
             if startpos == 44:
                 show screen xylo_sea_bar_jukebox
             $ startpos = 44
@@ -152,13 +157,13 @@ label xylo_sea_bar_barman:
         barman_xsea "Hello, can I see your membership card? {w=3}{nw}"
         
         menu:
-            "I don't have one.": #if xylo_sea_barman_flags[0] == 0:
+            "I don't have one." if xylo_sea_barman_flags[0] == 0:
                 m "I don't have one.{w=2}{nw}"
                 barman_xsea "No card, nothing.{w=2}{nw}"
                 barman_xsea "Bye.{w=1}{nw}"
                 $ xylo_sea_barman_flags[0] = 1
             
-            "Is this the bar?": #if xylo_sea_barman_flags[1] == 0:
+            "Is this the bar?" if xylo_sea_barman_flags[1] == 0:
                 m "Is this the bar?{w=2}{nw}"
                 barman_xsea "This is a private bar, yes.{w=2}{nw}"
                 m "Do you know where I can buy a drink?{w=2}{nw}"
@@ -169,16 +174,18 @@ label xylo_sea_bar_barman:
                 barman_xsea "Bye.{w=1}{nw}"
                 $ xylo_sea_barman_flags[1] = 1
             
-            "Okay, thanks.":
-                m "Okay, bye.{w=1.5}{nw}"
+            "I'll go, bye.":
+                m "I'll go, bye.{w=1.5}{nw}"
 
         return
     
     
     elif inventory_select == "accesscard" or inventory_select == "robotcard":
         #barman "This is the wrong card, sorry. {w=3}{nw}"
-        barman_xsea "Whaat? Are you from A.R.K. Corporation? {w=3}{nw}"
-        barman_xsea "Go out this room, right now! {w=3}{nw}"
+        $ inventory_select = ""
+        barman_xsea "What? Are you from A.R.K. Corporation? {w=3.5}{nw}"
+        barman_xsea "Go out of this room, right now! {w=3}{nw}"
+        m "Okay, okay...{w=2}{nw}"
         
         show player:
             pos nodeA
@@ -205,9 +212,9 @@ label xylo_sea_bar_client1:
     
     if inventory_select == "":
         
-        clientsea "Hello! {w=2} {nw}"
+        clientsea "Hey. {w=2} {nw}"
         
-        $ questions_client = ["Hello, how are you doing? {w=3} {nw}", 
+        $ questions_client = ["Hi! My name is...{w=3} {nw}", 
                                 "What are you doing here?{w=3} {nw}", 
                                 "Have you heard about SpaceNET? {w=3} {nw}", 
                                 "Okay, bye. {w=1.5} {nw}"]
@@ -215,27 +222,71 @@ label xylo_sea_bar_client1:
         while True:
             menu:
                 "[questions_client[0]]" if xylo_sea_bar_client1_flags[0] == 0: #how are you
-                    m "[questions_client[0]]"
-                    clientsea "Hi. I'm fine, thanks. {w=2} {nw}"
+                    m "Hi! My name is [playername].{w=3.5} {nw}"
+                    clientsea "Hi [playername]. {w=3} {nw}"
+                    m "Do we know each other? {w=3.5} {nw}"
+                    clientsea "No, sorry, I've never seen you around. {w=3.5} {nw}"
+                    clientsea "Why are you asking? {w=2.5} {nw}"
+                    m "Oh, I was just wondering if somebody knows me. {w=3.5} {nw}"
+                    clientsea "... {w=2} {nw}"
+                    clientsea "Well, you don't need to know who knows you, if you already know the people, right? {w=6} {nw}"
+                    clientsea "I really don't understand why you are asking around... if somebody knows you or not. {w=6} {nw}"
+                    clientsea "Are you okay?{w=2.5} {nw}"
+                    m "... {w=2} {nw}"
+                    m "Listen, this is a weird story. {w=3.5} {nw}"
+                    m "I woke up this morning with no memory.{w=3.5} {nw}"
+                    m "I just forgot everything!{w=2.5} {nw}"
+                    m "... {w=2} {nw}"
+                    clientsea "You are a lucky person. {w=3} {nw}"
+                    clientsea "... {w=2} {nw}"
+                    m "I really don't think so. {w=3} {nw}"
+                    clientsea "I would like to forget everything. {w=3.5} {nw}"
+                    clientsea "I need a drink. {w=3} {nw}"
+                    m "What do you want to forget?{w=3.5} {nw}"
+                    clientsea "Nothing, that's private. {w=3.5} {nw}"
+                    clientsea "I don't want to talk about it. {w=3.5} {nw}"
+                    
                     $ xylo_sea_bar_client1_flags[0] = 1
                     
                 "[questions_client[1]]" if xylo_sea_bar_client1_flags[1] == 0: #how are you
                     m "[questions_client[1]]"
-                    clientsea "What I'm doing here? Drinking to forget! {w=3} {nw}"
-                    clientsea "I worked in the silver mine in the north-west. {w=3} {nw}"
+                    clientsea "What I'm doing here? Drinking to forget! {w=4} {nw}"
+                    clientsea "I worked in the silver mine in the northwest. {w=4} {nw}"
                     clientsea "But they closed it, so now I don't know what to do! {w=4} {nw}"
-                    clientsea "The worse, they didn't give me back my personal documents. {w=4} {nw}"
-                    clientsea "So I can't apply for a new job anywhere... {w=3} {nw}"
-                    clientsea "And if I want to renew all documents, I need to pay more than 1000c!{w=4} {nw}"
-                    clientsea "This is just crazy! {w=2} {nw}"
+                    clientsea "The worse, they didn't give me back my personal documents. {w=5} {nw}"
+                    clientsea "So I can't apply for a new job anywhere... {w=3.5} {nw}"
+                    clientsea "And if I want to renew all my documents, I need to pay...{w=5} {nw}"
+                    clientsea "Guess. {w=2} {nw}"
+                    
+                    menu:
+                        "10c?":
+                            m "10c?{w=2} {nw}"
+                            clientsea "Are you kidding?{w=3} {nw}"
+                        "50c?":
+                            m "50c?{w=2} {nw}"
+                            clientsea "That would be nice!{w=3} {nw}"
+                        "100c?":
+                            m "100c?{w=2} {nw}"
+                            clientsea "Way more!{w=3} {nw}"
+                        "I don't know.":
+                            m "I don't know.{w=2} {nw}"
+                            $ x=1
+                            
+                    clientsea "... {w=2} {nw}"
+                    clientsea "If I want to renew all my documents, I need to pay...{w=4} {nw}"
+                    clientsea "1000c! {w=2.5} {nw}"
+                    clientsea "This is just crazy! {w=2.5} {nw}"
+                    m "Oh yes, that's a lot of money.{w=3.5} {nw}"
                     $ xylo_sea_bar_client1_flags[1] = 1
                     
                  
                 "[questions_client[2]]" if xylo_sea_bar_client1_flags[2] == 0: # spacenet?
                     m "[questions_client[2]]"
-                    clientsea "SpaceNET?... {w=1}{nw}"
-                    clientsea "I heard, it is a project from the Rebel Alliance. {w=3}{nw}"
-                    clientsea "But that's all I know. {w=2}{nw}"
+                    clientsea "SpaceNET?... {w=2}{nw}"
+                    clientsea "I heard, it is a new project by the.... {w=4}{nw}"
+                    clientsea "...by the... {w=2.5}{nw}"
+                    clientsea "That's all I know. {w=3}{nw}"
+                    clientsea "Sorry. {w=2}{nw}"
                     $ xylo_sea_bar_client1_flags[2] = 1
                         
                 
@@ -249,18 +300,28 @@ label xylo_sea_bar_client1:
         
     elif inventory_select == "letter":
         call use_item from _call_use_item_3
-        m "I think this belongs to you.{w=2}{nw}"
-        m "I met a miner in Xylo's colony bar. He gave me this letter for you.{w=4.5}{nw}"
+        m "I think this belongs to you.{w=3}{nw}"
+        m "I met a miner in the bar in [xylo_village_name]. He gave me this letter for you.{w=5}{nw}"
         
-        clientsea "Oh, that's amazing!{w=2}{nw}"
-        clientsea "This are my personal documents!{w=2}{nw}"
-        clientsea "Thank you very much.{w=2}{nw}"
-        clientsea "I'll give you 100c for this favor!{w=2}{nw}"
-        clientsea "Thank you so much!{w=2}{nw}"
+        clientsea "Oh, that's amazing!{w=2.5}{nw}"
+        clientsea "These are my personal documents.{w=3}{nw}"
+        clientsea "Thank you very much.{w=2.5}{nw}"
+        clientsea "...{w=2}{nw}"
+        clientsea "You know what?{w=2.5}{nw}"
+        clientsea "I think I'm a bit drunk.{w=2.5}{nw}"
+        clientsea "But I don't care!{w=2.5}{nw}"
+        clientsea "I'll give you 100c for this favor.{w=3}{nw}"
+        clientsea "It's worth to me.{w=2.5}{nw}"
+        clientsea "Now I have all I need!{w=2.5}{nw}"
+        clientsea "And I can start a new life!{w=2.5}{nw}"
+        clientsea "That's the best thing ever.{w=2.5}{nw}"
         
         call io_cash(100) from _call_io_cash_10
 
-        m "Nice, thank you!{w=2}{nw}"
+        m "Nice, thank you!{w=2.5}{nw}"
+        clientsea "You are really welcome.{w=2.5}{nw}"
+        clientsea "Bye!{w=2.5}{nw}"
+        
         
         $ xylo_sea_bar_client1_letter = 1
         

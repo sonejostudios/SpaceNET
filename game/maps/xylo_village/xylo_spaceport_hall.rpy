@@ -19,7 +19,7 @@ label xylo_spaceport_hall:
     image xylo_spaceport_hall = imagemapsdir + "xylo_spaceport_hall.png"
     
     scene xylo_spaceport_hall
-    show screen notify("Xylo spaceport hall")
+    show screen notify("Spaceport Hall")
     
     show bgcolor behind xylo_spaceport_hall    
     
@@ -84,14 +84,21 @@ label loop_xylo_spaceport_hall:
             
         if exitpos == 2:
             if startpos == 2:
-                m "I'm in the hall of the spaceport.{w=3.0} {nw}"
+                if inventory_select == "":
+                    m "I'm in the hall of the spaceport.{w=3.0} {nw}"
+                else:
+                    call dialog_nosense from _call_dialog_nosense_55
             $ startpos = 2
 
             
         if exitpos == 3:
             
             if startpos == 3 and xylo_spaceport_hall_term == True:
-                call terminal from _call_terminal_4
+                if inventory_select == "":
+                    call terminal from _call_terminal_4
+                else:
+                    call dialog_nosense from _call_dialog_nosense_56
+                    
             
             if startpos == 3 and xylo_spaceport_hall_term == False:
                 if inventory_select == "":
@@ -186,7 +193,7 @@ label xylo_spaceport_hall_oldman:
             m "There is no difference! {w=2} {nw}"
             oldman "Ha! {w=0.1}ha! {w=0.1}ha! {w=0.1}ha! {w=2}{nw}"
             oldman "This was a really good one! {w=3}{nw}"
-            oldman "I haven't lough so much since a long time! {w=3.5}{nw}"
+            oldman "I haven't laughed so much for a long time! {w=3.5}{nw}"
             oldman "Thank you very much. {w=3}{nw}"
             if xylo_village_oldman_gem == True:
                 oldman "Here. {w=1}That's for you.{w=3}{nw}"
@@ -204,17 +211,20 @@ label xylo_spaceport_hall_oldman:
     #m "{a=jump:xylo_spaceport_hall}I'm just looking around.{/a} \n\n{a=jump:xylo_spaceport_hall}What are you doing here ?{/a}"
         
     
-    $ questions = ["I'm just looking around.{w=2.0} {nw}", 
-                    "What are you doing here?{w=2.0} {nw}", 
-                    "What a nice weather, isn't it? {w=2.0} {nw}", 
-                    "Have you heard about SpaceNET? {w=2.0} {nw}", 
-                    "Nothing, thank you. {w=1.0} {nw}"]
+    $ questions = ["Do you know me?{w=2.0} {nw}", 
+                    "What are you doing here?{w=2.5} {nw}", 
+                    "What a nice weather, isn't it? {w=3} {nw}", 
+                    "Have you heard about SpaceNET? {w=3} {nw}", 
+                    "Nothing. {w=2.0} {nw}"]
     
     while True:
         menu:
             "[questions[0]]" if xylo_village_oldman_flags[0]  == 0:
                 m "[questions[0]]"
-                oldman "Okay, then look around, hopefully you'll see something, hahaha! {w=4} {nw}"
+                oldman "No, and I don't want to. {w=3}{nw}"
+                oldman "So please stop bothering me. {w=3}{nw}"
+                m "Okay, I'm sorry. {w=2}{nw}"
+                m "Bye. {w=2}{nw}"
                 $ xylo_village_oldman_flags[0] = 1
                 
             "[questions[1]]" if xylo_village_oldman_flags[1]  == 0:
@@ -222,17 +232,32 @@ label xylo_spaceport_hall_oldman:
                 oldman "Did I ask you any question about you? {w=3} {nw}"
                 oldman "No. {w=1} {nw}"
                 oldman "So don't ask me stupid questions! {w=3} {nw}"
+                m "Okay, sorry. {w=2}{nw}"
                 $ xylo_village_oldman_flags[1] = 1
                 
             "[questions[2]]" if xylo_village_oldman_flags[2]  == 0:
                 m "[questions[2]]"
-                oldman "Yeah, it is. {w=2} {nw}"
+                oldman "No, it is not. {w=2.5} {nw}"
+                oldman "Do you have more silly questions?{w=4} {nw}"
+                oldman "I really had a bad day today, so please...{w=4} {nw}"
+                oldman "... stop bothering me!{w=3} {nw}"
+                m "Okay, I'm sorry. {w=2}{nw}"
                 $ xylo_village_oldman_flags[2] = 1
                 
             "[questions[3]]" if xylo_village_oldman_flags[3]  == 0:
                 m "[questions[3]]"
-                oldman "No, I don't know what are you talking about. {w=3} {nw}"
+                oldman "No, I don't know what are you talking about. {w=4} {nw}"
+                oldman "And I also don't want to know. {w=3.5} {nw}"
+                oldman "Did I tell you already to go away? {w=3} {nw}"
+                m "Well... no. {w=2.5}{nw}"
+                oldman "Okay. {w=2} {nw}"
+                oldman "Then: {w=2} {nw}"
+                oldman "Go away! {w=2} {nw}"
+                m "Okay...{w=1} okay...{w=1} sorry.{w=2.5}{nw}"
+                m "I'll go now. Bye.{w=2.5}{nw}"
+                oldman "Ugh. {w=2} {nw}"
                 $ xylo_village_oldman_flags[3] = 1
+                
             
             "[questions[4]]": #bye
                 m "[questions[4]]"

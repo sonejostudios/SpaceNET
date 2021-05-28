@@ -85,7 +85,7 @@ label asteroid3:
         m "Oh no! My spaceship is broken. {w=2.5} {nw}"
         m "One wing looks really bad. {w=2.5} {nw}"
         m "And the hyperspace module is smoking... {w=3.5} {nw}"
-        m "I think I'm trap on this asteroid field! {w=3.5} {nw}"
+        m "I think I'm trapped on this asteroid field! {w=3.5} {nw}"
         $ asteroid_collision = True
         $ startpos = 44
     
@@ -115,7 +115,7 @@ label loop_asteroid3:
         if exitpos == 2:
             if startpos == 2:
                 if inventory_select == "":
-                    m "This is a middle range asteroid. {w=2.5} {nw}"
+                    m "This is a middle-range asteroid. {w=2.5} {nw}"
                 else:
                     call asteroid_dig(0) from _call_asteroid_dig_17
                 

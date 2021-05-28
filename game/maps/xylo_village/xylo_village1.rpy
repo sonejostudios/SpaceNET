@@ -2,6 +2,9 @@
 
 init:
     $ gov_joke = False
+    
+    
+    
 
 
 ############################################
@@ -15,7 +18,7 @@ label xylo_village1:
     image xylo_village1 = imagemapsdir + "xylo_village1.png"
     
     scene bgcolor
-    show screen notify("Xylo's colony village")
+    show screen notify(xylo_village_name)
     
     image waves3 = SnowBlossom("images/wave.png", count=400, border=50, xspeed=(0), yspeed=(10), start=0, fast=True, horizontal=False)
     show waves3
@@ -66,6 +69,7 @@ label loop_xylo_village1:
             jump xylo_spaceport_hall        # map loop to jump to
             
         if exitpos == 2:
+            #$ nodetype = "npc"
             if startpos == 2:
                 m "I'm in the middle of the village. {w=2.0} {nw}"
                 m "What a beautiful place! {w=2.0} {nw}"
@@ -134,13 +138,20 @@ label xylo_village1_info:
     $ info_panel_symbol = "" #"exit"
     
     $ showtext = """
-- Xylo's Colony Village -
+- [xylo_village_name] -
 
 
-Welcome to xylo's colony village.
-We hope you'll have fun there.
+Welcome to our small town.
 
-Enjoy!
+[xylo_village_name] is the first and main settlement on the Xylo planet.
+In the spaceport hall, you'll find almost everything you need.
+On the other side of the river, 
+you'll find the private area of A.R.K. Corporation.
+
+If you have any questions, 
+please ask public services at the spaceport.
+
+And don't forget, enjoy your stay!
 
 """
 
@@ -152,7 +163,7 @@ Enjoy!
 
 
 What is the difference between the government
-and A.R.K Corporation?
+and A.R.K. Corporation?
 
 Answer:
 There is no difference!

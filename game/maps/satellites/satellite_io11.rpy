@@ -112,6 +112,7 @@ label loop_satellite_io11:
 
 
 label satellite_io11_computer:
+    $ engine = "terminal"
     $ pnc_nodes_visible = False
     
     scene terminal at topleft
@@ -156,7 +157,7 @@ label satellite_io11_computer:
             $ showtext ="""
     Remote Control disabled!
             
-    No external access allowed."""
+    No external access is allowed."""
             show text Text(showtext,text_align=termtext_align) at termtextpos
             
             $ io11_remote_control = "disabled" 

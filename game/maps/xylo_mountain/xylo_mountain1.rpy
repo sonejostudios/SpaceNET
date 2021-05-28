@@ -105,7 +105,7 @@ label loop_xylo_mountain1:
         
     if exitpos == 44:
         $ startpos = 44
-        call sound_door from _call_sound_door_125
+        #call sound_door from _call_sound_door_125
         call takeoff_anim("withmenu") from _call_takeoff_anim_8 # go to takeoff
         
         
@@ -129,10 +129,10 @@ label xylo_mountain1_info:
 
     $ info_panel_symbol = ""
     $ showtext = """
-- Montain view -
+- Mountain View -
 
 
-This is a ancient sacred place.
+This is an ancient sacred place.
 This tree was planted to remember this place.
 
 At night, it is possible to see the two moons of xylo 

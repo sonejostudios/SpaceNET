@@ -122,7 +122,7 @@ label term_commands:
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 menu:
                     "Restart IO-11":
-                        m "Okay let's do this. {w=1.5} {nw}"
+                        m "Okay, let's do this. {w=1.5} {nw}"
                         call server_progressbar from _call_server_progressbar
                         $ sat_connected_to = "-"
 
@@ -158,7 +158,7 @@ label term_commands:
                                 
                                             
                     "Change orbit":
-                        m "Okay let's try this... {w=1.5} {nw}"
+                        m "Okay, let's try this... {w=1.5} {nw}"
                         
                         python:
                             io11_new_orbit_x = renpy.input(_("New orbit X position:"), allow= "0123456789",  length= 3 )
@@ -207,7 +207,7 @@ label term_commands:
         
     Wrong position!
     
-    It is not possible to set an orbit at 
+    It is not possible to move the satellite to 
     the given position.
     
     Process aborded.
@@ -327,8 +327,8 @@ label term_commands:
         
         $ questions = ["Hello!{w=1} {nw}", 
                         "Have you heard about SpaceNET? {w=2.0} {nw}", 
-                        "I'd like to have some info about the boat trips on the Xylo sea.{w=4.0} {nw}", 
-                        "Bye bye.{w=2.0} {nw}"]
+                        "I'd like to have some info about the boat trips on the sea.{w=4.0} {nw}", 
+                        "Bye-bye.{w=2.0} {nw}"]
         
         while True:
             menu:
@@ -343,7 +343,7 @@ label term_commands:
                 "[questions[1]]" if xylo_sea_boat_company_call_flags[1] == 0:
                     m "[questions[1]]"
                     radio "No, I don't know what you are talking about.{w=3} {nw}"
-                    radio "We are a boat rental company, not a tourist information!{w=4} {nw}"
+                    radio "We are a boat rental company, not a tourist information center!{w=4.5} {nw}"
                     m "Okay, bye!{w=1.5} {nw}"
                     $ xylo_sea_boat_company_call_flags[1] = 1
                     
@@ -351,7 +351,7 @@ label term_commands:
                 "[questions[2]]" if xylo_sea_boat_company_call_flags[0] == 1:
                     m "[questions[2]]"
                     radio "Oh yes, for sure!{w=2.0} {nw}"
-                    radio "Unfortunatly we have no free boat for rent right now.{w=3.0} {nw}"
+                    radio "Unfortunately, we have no free boat for rent right now.{w=3.0} {nw}"
                     radio "Please call us later, thanks!{w=3.0} {nw}"
                 
                 "[questions[3]]":
@@ -375,25 +375,25 @@ label term_commands:
         call sound_connected from _call_sound_connected_14
         pause 1
         
-        radio "Hello, welcome to A.R.K. Corporation. {w=2.5} {nw}"
+        radio "Hello, welcome to A.R.K. Corporation. {w=3} {nw}"
         radio "How can I help you? {w=2} {nw}"
         
         
-        $ questions = ["Hi, I would like to visit your company. {w=2} {nw}",
+        $ questions = ["Hi, I would like to visit your company. {w=3} {nw}",
                         "I'm fine, thanks. {w=2.0} {nw}"]
         
         while True:
             menu:
                 "[questions[0]]":
                     m "[questions[0]]"
-                    radio "Yes, no problem. {w=1.5} {nw}"
-                    radio "We can make an appointment. {w=2} {nw}"
-                    radio "What is your name? {w=1.5} {nw}"
-                    m "My name is [playername]. {w=1.5} {nw}"
-                    radio "Alright!{w=1} Your are registered now. {w=2.5} {nw}"
-                    radio "Just come to our building, our guard at the reception will let you in. {w=4} {nw}"
-                    m "Okay, thanks! {w=1.5} {nw}"
-                    radio "See you soon, bye!{w=2} {nw}"
+                    radio "Yes, no problem. {w=2.5} {nw}"
+                    radio "We can make an appointment. {w=3} {nw}"
+                    radio "What is your name? {w=2.5} {nw}"
+                    m "My name is [playername]. {w=2.5} {nw}"
+                    radio "Alright!{w=1} You are registered now. {w=2.5} {nw}"
+                    radio "Just come to our building, our guard at the reception will let you in. {w=5} {nw}"
+                    m "Okay, thanks! {w=2.5} {nw}"
+                    radio "See you soon, bye!{w=2.5} {nw}"
                     $ xylo_village1_building_reception = 2
                     
                     $ termtext = "help"
@@ -542,7 +542,7 @@ label term_commands:
         radio "How can I help you? {w=2} {nw}"
         
         
-        $ questions = ["I need a landing authorisation. {w=2} {nw}",
+        $ questions = ["I need a landing authorization. {w=2} {nw}",
                         "I'm fine, thanks. {w=2.0} {nw}"]
         
         while True:
@@ -555,7 +555,7 @@ label term_commands:
                     $ isc_spaceport_auth = True
                     
                     radio "You are now allowed to land on the main Industrial Space City Spaceport! {w=3} {nw}"
-                    radio "Call anytime if you need something else.{w=2.5} {nw}"
+                    radio "Call anytime if you need anything else.{w=2.5} {nw}"
                     radio "Bye!{w=1} {nw}"
                     
 
@@ -608,10 +608,10 @@ label term_commands:
         jump terminal
         
         
-# command locate asteroids - needs to be uncommented for asteroids release!
-    #if termtext == "locate asteroids" :
-    #    call terminal_locate("asteroids")
-    #    jump terminal
+# command locate asteroids
+    if termtext == "locate asteroids" :
+        call terminal_locate("asteroids") from _call_terminal_locate_6
+        jump terminal
         
 
         
@@ -634,10 +634,10 @@ label term_commands:
             pause 1
             
             hacker "Hello! {w=1.5} {nw}"
-            hacker "Well done [playername]! Now all the weapons are destroyed.{w=4} {nw}"
-            hacker "This is great! {w=2} {nw}"
-            hacker "Please go to Sam and talk to him. {w=3} {nw}"
-            hacker "I think he will know what we can do now. {w=3} {nw}"
+            hacker "Well done [playername]! Now all the weapons are destroyed.{w=4.5} {nw}"
+            hacker "This is great! {w=2.5} {nw}"
+            hacker "Please go to Sam and talk to him. {w=3.5} {nw}"
+            hacker "I think he will know what we can do now. {w=4} {nw}"
             hacker "Bye! {w=1.5} {nw}"
             jump terminal
             
@@ -647,11 +647,11 @@ label term_commands:
             call sound_connected from _call_sound_connected_19
             pause 1
             
-            hacker "Hello [playername]. Thank you for calling.{w=2.5} {nw}"
-            hacker "I need to tell you a couple of important things... {w=4.5} {nw}"
-            hacker "First, thank you for the help. {w=2} {nw}"
-            hacker "Without you we would not be able to accomplish our mission! {w=3} {nw}"
-            hacker "Second, wait... {w=2} {nw}"
+            hacker "Hello [playername]. Thank you for calling.{w=3.5} {nw}"
+            hacker "I need to tell you a couple of important things... {w=4} {nw}"
+            hacker "First, thank you for the help. {w=3} {nw}"
+            hacker "Without you, we would not be able to accomplish our mission! {w=5} {nw}"
+            hacker "Second, wait... {w=2.5} {nw}"
             
             call music_intro from _call_music_intro
             
@@ -659,10 +659,10 @@ label term_commands:
             
             $ questions = ["Are you okay? {w=2} {nw}",
                             "What's wrong? {w=2.0} {nw}",
-                            "I think I know what's happening! {w=2.0} {nw}",
-                            "I experienced something similar. {w=2.0} {nw}",
-                            "I think I know where you are. {w=2.0} {nw}",
-                            "Please, keep calm and listen. {w=2.0} {nw}"]
+                            "I think I know what's happening! {w=2.5} {nw}",
+                            "I experienced something similar. {w=2.5} {nw}",
+                            "I think I know where you are. {w=2.5} {nw}",
+                            "Please, keep calm and listen. {w=2.5} {nw}"]
 
             menu:
                 "[questions[0]]":
@@ -672,9 +672,9 @@ label term_commands:
                     m "[questions[1]]"
             
             
-            hacker "Something strange is happening... {w=2.5} {nw}"
-            hacker "I can't move my spaceship anymore... {w=2.5} {nw}"
-            hacker "And it is moving by itself! {w=2.5} {nw}"
+            hacker "Something strange is happening... {w=3} {nw}"
+            hacker "I can't move my spaceship anymore... {w=3} {nw}"
+            hacker "And it is moving by itself! {w=3} {nw}"
 
             menu:
                 "[questions[2]]":
@@ -683,12 +683,12 @@ label term_commands:
                 "[questions[3]]":
                     m "[questions[3]]"
                     
-            m "Is there a huge spaceship close to you? {w=3} {nw}"
-            hacker "Yes... {w=1} And it is controlling my spaceship!{w=2} They are catching me!{w=2}{nw}"
+            m "Is there a huge spaceship close to you? {w=3.5} {nw}"
+            hacker "Yes... {w=1} And it is controlling my spaceship!{w=2} They are catching me!{w=3}{nw}"
             hacker "Help!{w=2}{nw}"
-            hacker "I'm coming closer to the spaceship...{w=3}{nw}"
-            hacker "A huge door is opening right now... {w=3}{nw}"
-            hacker "My spaceship is going straight into it!{w=3}{nw}"
+            hacker "I'm coming closer to the spaceship...{w=3.5}{nw}"
+            hacker "A huge door is opening right now... {w=3.5}{nw}"
+            hacker "My spaceship is going straight into it!{w=3.5}{nw}"
             
             menu:
                 "[questions[4]]":
@@ -699,9 +699,9 @@ label term_commands:
                     
             
             m "You are captured by the prison megaship of the government. {w=4}{nw}"
-            m "They will put you into a prison cell. {w=3}{nw}"
+            m "They will put you into a prison cell. {w=3.5}{nw}"
             m "But there is a way out! {w=3}{nw}"
-            m "I could try to get there, but I'll need some tools. {w=3.5}{nw}"   
+            m "I could try to get there, but I'll need some tools. {w=4}{nw}"   
             hacker "If you need anything, go to Sam.{w=3.5}{nw}"
             hacker "He might help you.{w=2.5}{nw}"
             hacker "Please help me out!{w=2.5}{nw}"
@@ -709,7 +709,7 @@ label term_commands:
             
             stop music fadeout 3.0
             
-            m "4n0nym0u5?{w=1} 4n0nym0u5?{w=1} 4n0nym0u5...{w=1}{nw}"
+            m "4n0nym0u5?{w=1} 4n0nym0u5?{w=1} 4n0nym0u5...{w=2}{nw}"
             
             m "...{w=1}{nw}"
             m "Okay, let see what I can do. {w=3}{nw}"
@@ -730,17 +730,7 @@ label term_commands:
 
 
 # command ssh isc
-    if termtext == "ssh isc" :
-        
-        #python:
-        #    io11_pass_entry = renpy.input(_("ssh isc Password:"))
-        #    io11_pass_entry = io11_pass_entry.strip()
-        #    if not io11_pass_entry:
-        #        io11_pass_entry = ""
-                
-        
-        #if io11_pass_entry == "isccrane":
-            
+    if termtext == "ssh isc" : 
         call sound_connected from _call_sound_connected_20
         $ showtext = """
     ssh isc
@@ -959,6 +949,48 @@ label term_commands:
         
         jump terminal
         
+
+
+    
+#~     if termtext == "sarah" : 
+#~         call sound_connected
+#~         $ showtext = """
+#~     identify [termtext]
+#~     [ascii_line]
+    
+#~     Name: Sarah C.
+#~     Age: 28
+#~     Height: 1.60m
+#~     Weight: 65kg
+#~     Hair: Brown
+#~     Eyes: Blue
+#~     Married: No
+#~     Children: None
+#~     Profession: Vendor
+#~     Works at: [xylo_village_name]
+#~     Registered at: [xylo_village_name], Xylo Sea
+#~     Spaceship Driving License: No
+#~     Located at: [xylo_village_name]
+
+#~     """
+#~         show text Text(showtext,text_align=termtext_align) at termtextpos
+        
+#~         image vendor_xylo = "sides/vendor.png"
+#~         show vendor_xylo:
+#~             anchor (1.0,0.0)
+#~             pos (500, 105)
+        
+#~         menu:
+#~             "Delete":
+#~                 call sound_electroshock
+#~                 with hpunch
+#~                 "Error!{w=2} {nw}"
+#~                 jump term_commands
+#~             "Back":
+#~                 hide vendor_xylo
+#~                 jump terminal
+        
+
 
 
 

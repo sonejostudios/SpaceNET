@@ -124,7 +124,7 @@ label loop_megaship_store:
             if startpos == 33:
                 
                 if "spacesuit" not in inventory:
-                    m "There is a space suit!{w=2.0} {nw}"
+                    m "There is a spacesuit!{w=2.0} {nw}"
                     call take_item("spacesuit") from _call_take_item_5
                 
                 else:

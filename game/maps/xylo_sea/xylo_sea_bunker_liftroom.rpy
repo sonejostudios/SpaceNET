@@ -148,6 +148,7 @@ label loop_xylo_sea_bunker_liftroom:
 
 
 label xylo_sea_bunker_liftroom_computer:
+    $ engine = "terminal"
     $ pnc_nodes_visible = False
     
     scene terminal at topleft

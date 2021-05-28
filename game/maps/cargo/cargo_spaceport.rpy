@@ -112,7 +112,7 @@ label loop_cargo_spaceport:
         
     if exitpos == 44:
         $ startpos = 44
-        call sound_door from _call_sound_door_48
+        #call sound_door from _call_sound_door_48
         call takeoff_anim("withmenu") from _call_takeoff_anim_2 # go to takeoff
         $ pnc_nodes_visible = True
         

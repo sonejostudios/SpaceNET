@@ -9,7 +9,7 @@ label xylo_map2:
     image xylo_map2 = imagemapsdir + "xylo_sea_p2.png"
     
     scene bgcolor
-    show screen notify("Xylo sea coast")
+    show screen notify("Coastal Road")
     
     show xylo_map2
 
@@ -88,7 +88,7 @@ label loop_xylo_map2:
                     
                     
                 else:
-                    call dialog_nothing from _call_dialog_nothing_45
+                    m "This sea view is beautiful. {w=2.5} {nw}"
                 
             $ startpos = 3
 
@@ -102,7 +102,7 @@ label loop_xylo_map2:
                     $ cash_xylo_sea_map2 = 0
                     
                 else:
-                    call dialog_nothing from _call_dialog_nothing_46
+                    m "This coastal road is way nicer than the harbor! {w=3.5} {nw}"
             
             $ startpos = 4
 

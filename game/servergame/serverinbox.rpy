@@ -146,7 +146,7 @@ label server_welldonemsg:
     [ascii_line]
     
     I've seen you decrypted the file 
-    sucessfully, that's great!
+    successfully, that's great!
     
     Now insert a disk in the terminal and
     copy the SpaceNET software to the disk.
@@ -204,9 +204,9 @@ label server_satellitemsg:
     Satellite io-11
     [ascii_line]
     
-    You mission: 
+    Your mission: 
     
-    1. Locate the statellite named io11 
+    1. Locate the satellite named io11 
        (use 'locate io11' in the terminal).
     2. Dock on the satellite. You'll need 
        a spaceship with a docking hatch.
@@ -216,7 +216,7 @@ label server_satellitemsg:
        stellite's remote control via a terminal.
     5. Restart the satellite to disconnect it.
     6. Set a new orbit. Set it to X=350 and Y=150.
-    7. Send the satellite to new orbit.
+    7. Send the satellite to the new orbit.
     8. Connect to the SpaceNET Network.
 
     """    
@@ -253,11 +253,11 @@ label server_numpad_sam_msg:
     Hi!
     
     Here is Sam. 
-    I have an secret information for you.
+    I have a secret information for you.
     It is too dangerous to send it to you 
     via the terminal.
     
-    Please meet me at the bar of Xylo village.
+    Please meet me at the bar in [xylo_village_name].
     See you there,
         
     - Sam -

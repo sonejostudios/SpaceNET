@@ -84,7 +84,7 @@ label loop_asteroid4:
         if exitpos == 1:
             if startpos == 1:
                 if inventory_select == "":
-                    m "The view is beautiful. {w=2.5} {nw}"
+                    m "The view is quite nice here. {w=3} {nw}"
                 else:
                     call asteroid_dig(0) from _call_asteroid_dig_13
             $ startpos = 1   

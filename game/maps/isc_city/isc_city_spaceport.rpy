@@ -25,7 +25,7 @@ label isc_city_spaceport:
     
     call show_space from _call_show_space_13
     
-    show screen notify("ISC City Spaceport")
+    show screen notify("ISC Center Spaceport")
     
     show isc_city_spaceport
     
@@ -197,7 +197,7 @@ label loop_isc_city_spaceport:
             $ startpos = 44
             
             if isc_spaceship_interchange == False:
-                call sound_door from _call_sound_door_111
+                #call sound_door from _call_sound_door_111
                 call takeoff_anim("withmenu") from _call_takeoff_anim_6 # go to takeoff
                 
                 

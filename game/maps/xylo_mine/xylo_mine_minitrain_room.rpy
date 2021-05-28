@@ -26,7 +26,7 @@ label xylo_mine_minitrain_room:
     image xylo_mine_minitrain_room2 = imagemapsdir + "xylo_mine_minitrain_room2.png"
     
     scene bgcolor
-    show screen notify("Abandonned mine")
+    show screen notify("Abandoned mine")
     
     show xylo_mine_minitrain_room
     
@@ -162,7 +162,7 @@ label xylo_mine_minitrain_room_earthquake:
     
     if xylo_mine_minitrain_room_earthquake_dialog == False:
         $ xylo_mine_minitrain_room_earthquake_dialog = True
-        m "Wow! This feels like seismic actvity! {w=2.5} {nw}"
+        m "Wow! This feels like seismic activity! {w=2.5} {nw}"
         m "I think it would be better not to stay here longer! {w=3.5} {nw}"
         
     

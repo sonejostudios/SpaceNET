@@ -425,7 +425,7 @@ label xylo_village1_building_reception:
             "[questions[1]]" if xylo_building_reception_flags[1] == 0:
                 m "[questions[1]]"
                 guardxylo "This is the building of A.R.K. Corporation. {w=2.5} {nw}"
-                guardxylo "We are an universal company with the goal, {w=2.5} {nw}"
+                guardxylo "We are a universal company with the goal, {w=2.5} {nw}"
                 guardxylo "doing as much as possible to help the government. {w=2.5} {nw}"
                 guardxylo "If you have any questions, just ask me. {w=2.5} {nw}"
                 $ xylo_village1_building_reception = 1

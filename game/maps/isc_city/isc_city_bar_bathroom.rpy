@@ -158,7 +158,7 @@ label loop_isc_city_bar_toilets:
                 
                 if drunktime > 0:
                     if isc_bar_bathroom_gem== True:
-                        m "This sinks looks interesting. {w=2} {nw}"
+                        m "This sink looks interesting. {w=2} {nw}"
                         call take_gem from _call_take_gem
                         $ isc_bar_bathroom_gem = False
                     else:
@@ -166,7 +166,7 @@ label loop_isc_city_bar_toilets:
                     
                 else:
                     m "There are the sinks. {w=1.5} {nw}"
-                    m "I could wash my hands.... {w=1.5} {nw}"
+                    m "I could wash my hands... {w=1.5} {nw}"
                     menu:
                         "Wash your hands":
                             call sound_tap from _call_sound_tap

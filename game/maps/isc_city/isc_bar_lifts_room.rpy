@@ -112,8 +112,8 @@ label isc_bar_lift_info:
 - Restricted Area -
 
 
-This area is strictly prohibided. 
-Entering without a special authorisation
+This area is strictly prohibited. 
+Entering without a special authorization
 will be punished by law.
 
     """

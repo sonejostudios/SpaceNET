@@ -136,7 +136,8 @@ label loop_asteroid2_rightdown:
                         m "It is an old spaceship. It looks totally broken. {w=4} {nw}"
                         m "I guess it was an accident. {w=3} {nw}"
                         m "What happened? {w=2.5} {nw}"
-                        m "The door is hidden behind a big rock. {w=3.5} {nw}"
+                        m "The door is broken, but also covered by a big rock. {w=4} {nw}"
+                        m "I can't go through. {w=2.5} {nw}"
                     
                     elif inventory_select == "pick":
                         call sound_dig from _call_sound_dig_8

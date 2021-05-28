@@ -147,40 +147,40 @@ label loop_isc_rail5:
                 if isc_sysadmin_move == 1:
                     if inventory_select == "":
                         if isc_crane_repared == False:
-                            m "Hi! It's me again. {w=2} {nw}"
-                            sysadmin "Hi. You again? {w=2} {nw}"
-                            sysadmin "What do you want? {w=2} {nw}"
-                            m "May I give you a hand? {w=2} {nw}"
-                            sysadmin "Well... {w=1.5} Yes. {w=2.5} {nw}"
+                            m "Hi! It's me again. {w=2.5} {nw}"
+                            sysadmin "Hi. You again? {w=2.5} {nw}"
+                            sysadmin "What do you want? {w=2.5} {nw}"
+                            m "May I give you a hand? {w=2.5} {nw}"
+                            sysadmin "Well... {w=1.5}Yes. {w=2.5} {nw}"
                             sysadmin "I'm trying to repair the controller of the space crane. {w=3.5} {nw}"
-                            sysadmin "The light bulb of the light pipe seems to be broken. {w=3} {nw}"
-                            sysadmin "Do you have an idea how to fix it? {w=2.5} {nw}"
+                            sysadmin "The light bulb of the light pipe seems to be broken. {w=3.5} {nw}"
+                            sysadmin "Do you have an idea how to fix it? {w=3} {nw}"
                         else:
-                            sysadmin "The light pipe is working again, but the crane is still blocked... {w=4} {nw}"
-                            sysadmin "Please log in to the isc remote control and move the crane to the city center. {w=4} {nw}"
-                            sysadmin "I hope this will solve our problem! {w=3} {nw}"
+                            sysadmin "The light pipe is working again, but the crane is still blocked... {w=4.5} {nw}"
+                            sysadmin "Please log in to the isc remote control and move the crane to the city center. {w=5} {nw}"
+                            sysadmin "I hope this will solve our problem! {w=3.5} {nw}"
                         
                     elif inventory_select == "bulb":
                         call use_item from _call_use_item_5
                         $ isc_crane_repared = True
                         
-                        m "Here a light bulb. {w=2} {nw}"
-                        sysadmin "Great! Thanks! {w=2} {nw}"
-                        sysadmin "Okay... could you help me more? {w=1} {nw}"
+                        m "Here a light bulb. {w=2.5} {nw}"
+                        sysadmin "Great. Thanks! {w=2} {nw}"
+                        sysadmin "Okay... could you help me more? {w=3} {nw}"
                         m "Sure. {w=1} {nw}"
                         sysadmin "Please, go to the terminal and log in to the ISC system. {w=4} {nw}"
-                        sysadmin "The command is: ssh isc{w=2.5} {nw}"
-                        sysadmin "Please, set the crane position to the city center, at (x1, y1). {w=4.5} {nw}"
+                        sysadmin "The command is: ssh isc{w=3} {nw}"
+                        sysadmin "Please, set the crane position to the city center, at (x1, y1). {w=5} {nw}"
                         
                         call add_note("ISC remote access: ssh isc") from _call_add_note_6
                         
-                        sysadmin "Thanks!{w=1.5} {nw}"
+                        sysadmin "Thank you.{w=2} {nw}"
                         
                     elif inventory_select == "screwdriver":
-                        sysadmin "I have my own screw driver, thanks. {w=2.5} {nw}"
+                        sysadmin "I have my own screwdriver, thanks. {w=3} {nw}"
                         
                     elif inventory_select == "laser" or inventory_select == "dynamite" or inventory_select == "pick":
-                        sysadmin "Are you crazy? I want to fix it, not to break it. {w=3.5} {nw}"
+                        sysadmin "Are you crazy? I want to fix it, not to destroy it completely! {w=4} {nw}"
                         
                     else:
                         call npc_dont_need_item(sysadmin) from _call_npc_dont_need_item_5

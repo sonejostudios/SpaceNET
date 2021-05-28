@@ -104,10 +104,17 @@ label loop_xylo_mine_crossroom1:
             #with flash
             $ darkroom = False
             jump loop_xylo_mine_crossroom1
-        else:
+        
+        elif inventory_select == "":
             call sound_door from _call_sound_door_99
             $ liftpos = 0
             #stop music
+            jump xylo_mine_lift1
+        
+        else:
+            call dialog_nosense from _call_dialog_nosense_52
+            call sound_door from _call_sound_door_20
+            $ liftpos = 0
             jump xylo_mine_lift1
             
             

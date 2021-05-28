@@ -54,7 +54,7 @@ label asteroid_spacenet:
         rotate 90
         
 
-    show screen notify("Abandonned base")
+    show screen notify("Abandoned base")
     
     #doors (comment to disable)
     show doorh as doorA:
@@ -211,7 +211,7 @@ The main goal is to study the asteroid field,
 but also the stars around.
 
 Two solar panels are providing electricity for the base.
-They need to be maintened on a regular basis.
+They need to be maintained on a regular basis.
 
 
     """

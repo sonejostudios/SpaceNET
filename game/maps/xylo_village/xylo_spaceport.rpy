@@ -5,25 +5,24 @@
 
 init:
     $ xylo_spaceport_brokenwall = False
+    
+    default xylo_spaceport_register = [0,0,1]
 
 
 label xylo_spaceport:
     $ pnc_nodes_visible = True
     
-    
     stop music
     call atmo_village from _call_atmo_village
     
-    
     $ planet = "xylo"
-    
     $ planetxy_first = True
     
 
     image xylo_spaceport = imagemapsdir + "xylo_spaceport.png"
     
     scene xylo_spaceport
-    show screen notify("Xylo village spaceport")
+    show screen notify(xylo_village_name + " Spaceport")
     
     show bgcolor behind xylo_spaceport
     
@@ -241,34 +240,106 @@ label loop_xylo_spaceport:
             
         if exitpos == 22:
             if startpos == 22:
+
+                if inventory_select != "":
+                    call dialog_nosense from _call_dialog_nosense_47
+                    $ startpos = 22
+                    jump loop_xylo_spaceport
+                
                 m "There is a service screen.{w=2.5}{nw}"
                 m "Hello?{w=1.5}{nw}"
-                radio "Welcome to Xylo Village! What can I do for you?{w=3.5}{nw}"
+                radio "Welcome to [xylo_village_name].{w=2}\nWhat can I do for you?{w=2.5}{nw}"
                 
-                $ questions = ["Hi. Where I am? {w=1.5} {nw}",
-                                "I need to register my spaceship. {w=2.5} {nw}",
-                                "I'm fine, thank you. {w=1.0} {nw}"]
+                $ questions = ["Hi. Where I am? {w=2.5} {nw}",
+                                "I need to register my spaceship. {w=3} {nw}",
+                                "I'm fine, thank you. {w=2} {nw}"]
                 
                 menu:
                     "[questions[0]]":
                         m "[questions[0]]"
-                        radio "You are at Xylo Village Spaceport. {w=2.5}{nw}"
-                        radio "Go south and you'll find the hall with a shop and a bar. {w=3.5}{nw}"
-                        radio "Further, you'll find the village. {w=3.5}{nw}"
+                        radio "You are at the spaceport of [xylo_village_name]. {w=3.5}{nw}"
+                        radio "Go south and you'll find the hall with a shop and a bar. {w=4.5}{nw}"
+                        radio "Further, you'll find the town center. {w=3.5}{nw}"
                         radio "Enjoy! {w=1.5}{nw}"
                         
                     "[questions[1]]" if planetxy_register == False:
                         m "[questions[1]]"
-                        radio "Sure.{w=1} No problem.{w=1} {nw}"
+                        radio "Sure...{w=1} No problem.{w=3} {nw}"
+                        radio "What is your name?{w=3.5}{nw}"
+                        m "My name is [playername].{w=3.5}{nw}"
+                        radio "Thank you.{w=2} {nw}"
                         radio "Wait...{w=2} {nw}"
-                        call sound_connected from _call_sound_connected_3
-                        with flash
-                        $ planetxy_register = True
-                        radio "Your spaceship and you are now registered.{w=3} {nw}"
-                        radio "You are now allowed to land everywhere on Xylo.{w=3} {nw}"
-                        radio "Thank you for the registration.{w=2.5} {nw}"
-                        radio "Bye.{w=1} {nw}"
-                        #m "Oh, that's nice, thanks!{w=2.5} {nw}"
+                        radio "I don't find you in the database.{w=3.5}{nw}"
+                        radio "Why?{w=2}{nw}"
+                        
+                        $ x = 0
+                        while x == 0:
+                            menu:
+                                "I really don't know" if xylo_spaceport_register[0] == 0:
+                                    m "I really don't know...{w=2.5}{nw}"
+                                    m "And I can't tell you why.{w=2.5}{nw}"
+                                    m "Because I don't remember anything.{w=3}{nw}"
+                                    radio "That's too easy, anybody can say that!{w=3.5}{nw}"
+                                    radio "I'm sorry, but in that case, I can't register you.{w=4.5}{nw}"
+                                    m "Can you help me?{w=2.5}{nw}"
+                                    radio "No, sorry.{w=2.5}{nw}"
+                                    m "Please!{w=2}{nw}"
+                                    radio "Nope.{w=2}{nw}"
+                                    radio "Ask someone else.{w=2.5}{nw}"
+                                    radio "Bye.{w=2.5}{nw}"
+                                    m "...{w=2}{nw}"
+                                    m "These public services...{w=1} all the same!{w=3}{nw}"
+                                    radio "Excuse me?{w=2.5}{nw}"
+                                    m "Oh...{w=1} nothing...{w=1} sorry.{w=2}{nw}"
+                                    m "I will go now. Bye!{w=2}{nw}"
+                                    radio "Okay, bye.{w=2}{nw}"
+                                    $ xylo_spaceport_register[0] = 1
+                                    $ xylo_spaceport_register[2] = 0
+                                
+                                "I'm coming from another galaxy" if xylo_spaceport_register[1] == 0:
+                                    m "I'm coming from another galaxy.{w=3}{nw}"
+                                    radio "With this tiny spaceship?{w=3}{nw}"
+                                    radio "Ha!{w=0.1} Ha!{w=0.1} Ha!{w=2}{nw}"
+                                    radio "I don't think so!{w=3}{nw}"
+                                    m "Hey, my spaceship is way better than it looks!{w=4}{nw}"
+                                    radio "Sorry, but I really don't care about your tiny spaceship.{w=4.5}{nw}"
+                                    radio "If you are not in the database, there is nothing I can do for you.{w=5}{nw}"
+                                    m "Wait...{w=2}{nw}"
+                                    radio "Bye.{w=2.5}{nw}"
+                                    $ xylo_spaceport_register[1] = 1
+                                
+                                "I'm a public service inspector" if xylo_spaceport_register[2] == 0:
+                                    m "Listen.{w=2}{nw}"
+                                    m "...{w=2}{nw}"
+                                    m "I'm a public service inspector.{w=3}{nw}"
+                                    m "My entry was removed from the database because I'm on a secret mission.{w=5}{nw}"
+                                    m "But now, you know it. {w=3}{nw}"
+                                    m "...{w=2}{nw}"
+                                    m "I'm on a mission to inspect public services like yours.{w=5}{nw}"
+                                    m "To finally decide, if they are needed or not.{w=5}{nw}"
+                                    radio "Hey...{w=1} well...{w=1} okay...{w=1} okay...{w=2.5}{nw}"
+                                    radio "I will register your spaceship straight away.{w=4}{nw}"
+                                    radio "Because we really need to know where people are located.{w=5}{nw}"
+                                    radio "And what they are doing.{w=3}{nw}"
+                                    m "Yes, you got the point.{w=3}{nw}"
+                                    m "The government needs to know that.{w=3}{nw}"
+                                    m "So please just do your job.{w=3}{nw}"
+                                    radio "Sure, one minute...{w=3}{nw}"
+                                    call sound_connected from _call_sound_connected_3
+                                    with flash
+                                    $ planetxy_register = True
+                                    radio "Your spaceship and you are now registered.{w=4} {nw}"
+                                    radio "You are now allowed to land everywhere on Xylo.{w=4} {nw}"
+                                    m "Well done.{w=2}{nw}"
+                                    radio "Thank you very much for the registration.{w=4} {nw}"
+                                    radio "Bye.{w=1.5} {nw}"
+                                    $ xylo_spaceport_register[2] = 1
+                                    $ x = 1
+                                    
+                                "I have to go, bye":
+                                    m "I have to go, bye.{w=2.5}{nw}"
+                                    $ x = 1
+                                
                         
                     "[questions[2]]":
                         m "[questions[2]]"
@@ -284,7 +355,7 @@ label loop_xylo_spaceport:
             
         if exitpos == 44:
             $ startpos = 44
-            call sound_door from _call_sound_door_20
+            #call sound_door from _call_sound_door_20
             call takeoff_anim("withmenu") from _call_takeoff_anim_1 # go to takeoff
             
             

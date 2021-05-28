@@ -335,23 +335,23 @@ define gui.unscrollable = "hide"
 ## The history screen displays dialogue that the player has already dismissed.
 
 ## The number of blocks of dialogue history Ren'Py will keep.
-define config.history_length = 250
+define config.history_length = 150#250
 
 ## The height of a history screen entry, or None to make the height variable at
 ## the cost of performance.
-define gui.history_height = 140
+define gui.history_height = None#50 #140
 
 ## The position, width, and alignment of the label giving the name of the
 ## speaking character.
-define gui.history_name_xpos = 150
+define gui.history_name_xpos = 0.0#150
 define gui.history_name_ypos = 0
-define gui.history_name_width = 150
-define gui.history_name_xalign = 1.0
+define gui.history_name_width = 130
+define gui.history_name_xalign = 0.0
 
 ## The position, width, and alignment of the dialogue text.
-define gui.history_text_xpos = 170
-define gui.history_text_ypos = 5
-define gui.history_text_width = 740
+define gui.history_text_xpos = 110#170
+define gui.history_text_ypos = 0#5
+define gui.history_text_width = 330#740
 define gui.history_text_xalign = 0.0
 
 
@@ -440,8 +440,8 @@ init python:
         gui.navigation_spacing = 20
         gui.pref_button_spacing = 10
 
-        gui.history_height = 190
-        gui.history_text_width = 690
+        #gui.history_height = 190
+        #gui.history_text_width = 690
 
         ## File button layout.
         gui.file_slot_cols = 2

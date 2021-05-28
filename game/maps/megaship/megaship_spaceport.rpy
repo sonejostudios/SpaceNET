@@ -206,6 +206,11 @@ label loop_megaship_spaceport:
             #if startpos == 22:
             #m "This is my spaceship! {w=2.0} {nw}"
             
+            if inventory_select != "":
+                call dialog_nosense from _call_dialog_nosense_48
+                jump loop_megaship_spaceport
+                
+            
             call sound_door from _call_sound_door_2
             hide player
             
@@ -232,7 +237,11 @@ label loop_megaship_spaceport:
                         call sound_take_off from _call_sound_take_off
                         pause 3
                         stop music
+                        
+                        $ pnc_nodes_visible = False
+                        
                         jump space
+                        
                     else:
                         m "I don't want to take off now while the door is closed! {w=3.0} {nw}"
                     

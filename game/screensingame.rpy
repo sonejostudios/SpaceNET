@@ -17,15 +17,7 @@ init python:
 
 screen buttons():
     zorder 90
-    
-    # up right, time, coins, exit
-    #timer 3600.0 repeat True action [SetVariable("minutes", 0), SetVariable("seconds", 0),SetVariable("hours", int(hours) + 1)]
-    #timer 60.0 repeat True action [SetVariable("seconds", 0),SetVariable("minutes", int(minutes) + 1)]
-    #timer 1.0 repeat True action [SetVariable("seconds", int(seconds) +1)]
-    
-    #$ runtime = int(renpy.get_game_runtime())
-
-
+ 
     if superdev == True:
         textbutton "restart" action [Jump("start")]:
             xpos 0.7
@@ -33,24 +25,11 @@ screen buttons():
     
     
     # menu icon and time
-    frame:
-        style "menu"
-        xpos 795
-        ypos 005
-        xanchor 1.0
-        button:
-            #action ShowMenu("save")
-            action ShowMenu("preferences")
-            #style "menu_choice_button"
-            activate_sound "sounds/beep.ogg"
-            
-            add "/images/menuicon.png"
-            #text "save" #style "menu_choice"
-            xpos 1.0
-            xanchor 1.0
-
-        # timer
-        #text "[hours]:[minutes]:[seconds]" size 16  xpos 0.95  ypos 0.0 xanchor 1.0
+    imagebutton:
+        idle "images/menuicon_idle.png"
+        action ShowMenu("preferences")
+        anchor (0.5, 0.5)
+        pos (777, 025)
 
     
     # countdown
@@ -67,11 +46,11 @@ screen buttons():
         
     # inventory button
     if inventory_button == True:
-        imagebutton auto "images/inventory/inventory_button_%s.png": 
-                #action SetVariable("inventory_select", ""), Show("inventory")
-                action Show("inventory"), Hide("selected_item")
-                #pos (8,440)
-                pos (758, 442)
+        imagebutton:
+            idle "images/inventory/inventory_button_idle.png"
+            action Show("inventory"), Hide("selected_item")
+            anchor (0.5,0.5)
+            pos (775, 457)
                 
         text (_("{color=#8dd35f}[coins]c")) size 16 xpos 0.94 ypos 0.94 xanchor 1.0
     
@@ -86,22 +65,26 @@ screen buttons():
     # mute all sounds
     key "m" action [Preference("all mute", "toggle"), Notify("Mute toggled")]
     
+    
     # show inventory
     #key "i" action Show("inventory"), Hide("selected_item")
-    key "mousedown_3" action Show("inventory"), Hide("selected_item")
+    if inventory_button == True:
+        key "mousedown_3" action Show("inventory"), Hide("selected_item")
 
-    # inventory select up
-    key 'mousedown_5':
-        if inventory_select_number < len(inventory)-1:
-            action SetVariable("inventory_select_number", inventory_select_number+1), SetVariable("inventory_select", inventory[inventory_select_number+1]), Show("selected_item")
+        # inventory select up
+        key 'mousedown_5':
+            if inventory_select_number < len(inventory)-1:
+                action SetVariable("inventory_select_number", inventory_select_number+1), SetVariable("inventory_select", inventory[inventory_select_number+1]), Show("selected_item")
 
-    # inventory select down
-    key 'mousedown_4':
-        if inventory_select_number > 0:
-            action SetVariable("inventory_select_number", inventory_select_number-1), SetVariable("inventory_select", inventory[inventory_select_number-1]), Show("selected_item")
-        else:
-            action SetVariable("inventory_select_number", -1), SetVariable("inventory_select", ""), Hide("selected_item")
+        # inventory select down
+        key 'mousedown_4':
+            if inventory_select_number > 0:
+                action SetVariable("inventory_select_number", inventory_select_number-1), SetVariable("inventory_select", inventory[inventory_select_number-1]), Show("selected_item")
+            else:
+                action SetVariable("inventory_select_number", -1), SetVariable("inventory_select", ""), Hide("selected_item")
         
+
+
 
 
     # workaround to not crash from old saves (because in old version cash/lamp was added but not shown)
@@ -114,6 +97,8 @@ screen buttons():
         if "flashlight" not in inventory:
             $ inventory.append("flashlight")
         $ inventory.remove("lamp")
+    
+    
     
     
     
@@ -182,10 +167,12 @@ screen superdev() zorder 2000:
         text "exitpos: [exitpos]\nstartpos: [startpos]\ngotopos: [gotopos]\nmoving: [moving]\n\n" at right
         
         # surface values
-        text "shippos [shippos]  - maplink [maplink] - ingame [ingame]" at center
+        #text "shippos [shippos]  - maplink [maplink] - ingame [ingame]" at center
+        text "engine: [engine] - pnc_nodes_visible: [pnc_nodes_visible]\n\n" at center
+
         
         # inventory values
-        text "            inv_select : [inventory_select] - inv_notify : [inventory_notify] - planet : [planet] \n           nodes : [spacenetnodes]\n             liftpos - [liftpos] - isc_spaceship_interchange [isc_spaceship_interchange]" at topleft
+        text "         inv_select: [inventory_select] - inv_notify: [inventory_notify] - planet: [planet] \n         nodes: [spacenetnodes]\n         liftpos: [liftpos] - isc_spaceship_interchange: [isc_spaceship_interchange]" at topleft
         
         # mousepos
         timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())]
@@ -207,96 +194,128 @@ screen superdev() zorder 2000:
 
 init:
     $ nodeclicksize = 40
+    
+   
 
 screen setpos():
     zorder 100
     # get every 0.1 sec mouse position
     timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())]
+    #$ mousepos = renpy.get_mouse_pos()
+    
 
+    
     
     if (nodeA[0]-nodeclicksize ) < (mousepos[0]) < (nodeA[0]+nodeclicksize) and (nodeA[1]-nodeclicksize ) < (mousepos[1]) < (nodeA[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 1)]
         if superdev == True:
             text "A"
-
-        if pnc_mode == True and pnc_nodes_visible == True and nodeA in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeA") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeA
+                
+                
 
         
     elif (nodeB[0]-nodeclicksize ) < (mousepos[0]) < (nodeB[0]+nodeclicksize) and (nodeB[1]-nodeclicksize ) < (mousepos[1]) < (nodeB[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 2)]
         if superdev == True:
             text "B"
-            
-        if pnc_mode == True and pnc_nodes_visible == True and nodeB in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeB") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeB
+                
+       
+                      
         
     elif (nodeC[0]-nodeclicksize ) < (mousepos[0]) < (nodeC[0]+nodeclicksize) and (nodeC[1]-nodeclicksize ) < (mousepos[1]) < (nodeC[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 3)]
         if superdev == True:
             text "C"
-            
-        if pnc_mode == True and pnc_nodes_visible == True and nodeC in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeC") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeC
+                
+        
+                
              
     elif (nodeD[0]-nodeclicksize ) < (mousepos[0]) < (nodeD[0]+nodeclicksize) and (nodeD[1]-nodeclicksize ) < (mousepos[1]) < (nodeD[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 4)]
         if superdev == True:
             text "D"
-            
-        if pnc_mode == True and pnc_nodes_visible == True and nodeD in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeD") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeD
-               
+                
+        
+       
     ###    
 
     elif (nodeAA[0]-nodeclicksize ) < (mousepos[0]) < (nodeAA[0]+nodeclicksize) and (nodeAA[1]-nodeclicksize) < (mousepos[1]) < (nodeAA[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 11)]
         if superdev == True:
             text "AA"
-            
-        if pnc_mode == True and pnc_nodes_visible == True and nodeAA in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeAA") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeAA
+                
+        
+
         
     elif (nodeBB[0]-nodeclicksize ) < (mousepos[0]) < (nodeBB[0]+nodeclicksize) and (nodeBB[1]-nodeclicksize ) < (mousepos[1]) < (nodeBB[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 22)]
         if superdev == True:
             text "BB"
-        
-        if pnc_mode == True and pnc_nodes_visible == True and nodeBB in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeBB") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeBB
+                
+        
                 
             
     elif (nodeCC[0]-nodeclicksize ) < (mousepos[0]) < (nodeCC[0]+nodeclicksize) and (nodeCC[1]-nodeclicksize ) < (mousepos[1]) < (nodeCC[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 33)]
         if superdev == True:
             text "CC"
-            
-        if pnc_mode == True and pnc_nodes_visible == True and nodeCC in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeCC") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeCC
+                
+        
         
     elif (nodeDD[0]-nodeclicksize ) < (mousepos[0]) < (nodeDD[0]+nodeclicksize) and (nodeDD[1]-nodeclicksize ) < (mousepos[1]) < (nodeDD[1]+nodeclicksize):
         timer 0.1 repeat True action [SetVariable("gotopos", 44)]
         if superdev == True:
             text "DD"
-            
-        if pnc_mode == True and pnc_nodes_visible == True and nodeDD in path:
-            add "images/node.png":
+                
+        if pnc_nodes_visible == True and renpy.showing("pathnodeDD") == True:
+            add "images/node_hover.png":
+                alpha 0.5
                 anchor (0.5,0.5)
                 pos nodeDD
+                
+      
             
     ###
             
@@ -305,8 +324,9 @@ screen setpos():
         if superdev == True:
             text "NoMove"
             
-        
-        
+
+            
+
         
         
         
