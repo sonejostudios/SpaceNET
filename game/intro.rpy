@@ -52,10 +52,7 @@ label intro:
     
     $ coins = 0
     
-    
-    if pnc_cursor == True:
-        $ change_cursor(type="default")
-    
+
     jump intro_logo
 
 

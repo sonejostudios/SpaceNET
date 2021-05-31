@@ -162,7 +162,7 @@ label xylo_sea_village_fisher:
     fisher "Hello. How can I help you? {w=3.5} {nw}"
       
     
-    $ questions = ["What is it inside this the house?{w=3.5} {nw}", 
+    $ questions = ["What is inside this house?{w=3.5} {nw}", 
                     "What about the private property up there?{w=4} {nw}", 
                     "What about the sea? {w=3.0} {nw}", 
                     "I would like to rent a boat. {w=3.0} {nw}", 

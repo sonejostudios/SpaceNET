@@ -25,9 +25,6 @@ label megaship_cell:
     $ pnc_nodes_visible = True
     
     
-    if pnc_cursor == True:
-        $ change_cursor(type="pnc")
-    
     
     if in_intro == True:
         scene megaship_cell
