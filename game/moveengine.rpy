@@ -235,9 +235,7 @@ label clickngo:
         $ inventory_select = ""
     
 
-    #$ exitpos = startpos
-    
-    
+
     # unflag moving
     $ moving = False
     
@@ -246,12 +244,16 @@ label clickngo:
     
     
     
+    
+    
     # wait for click to move player to next node
     pause
+    
+    
+    
+    
 
 
-    # reset node type
-    $ nodetype = ""
 
     # flag moving
     if startpos != gotopos:

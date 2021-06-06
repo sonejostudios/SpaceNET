@@ -351,7 +351,7 @@ label land_to_planet:
     if planet == "none" or planet == "hacker":
         with hpunch
         call sound_beep from _call_sound_beep_3
-        m "I'm free in space, there is nothing where I can land!{w=3.5} {nw}"
+        m "I'm free in space, there is nothing to land on!{w=3.5} {nw}"
         jump space_loop
     
     if planet == "megaship":

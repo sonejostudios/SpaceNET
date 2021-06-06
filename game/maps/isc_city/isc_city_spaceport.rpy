@@ -136,7 +136,7 @@ label loop_isc_city_spaceport:
                     pos nodeB
                     ease 0.5 pos nodeBB
                 pause 0.5
-                m "No way I'll climb there without safety equipment!{w=3} {nw}"
+                m "No way I'll climb up there without safety equipment!{w=3} {nw}"
 
                 $ startpos = 22
             
@@ -182,9 +182,13 @@ label loop_isc_city_spaceport:
                             m "Dangerous idea... {w=2} {nw}"
                             $ walk_on_crane_idea = True
                         pass
-
                         
-            
+                else:
+                    if inventory_select == "":
+                        call dialog_nothing from _call_dialog_nothing_45
+                    else:
+                        call dialog_nosense from _call_dialog_nosense_58
+
             $ startpos = 22
             
 

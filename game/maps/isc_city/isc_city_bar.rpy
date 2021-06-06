@@ -13,7 +13,7 @@ init:
     default isc_bar_client3_flags = [0, 0, 1, 0]
     
     
-    $ isc_sysadmin_move = 0
+    $ isc_sysadmin_move = 0 #0=start at bar, 1=at crane, 2=crane repaired, 3=sun radiation and thanks
     $ isc_sysadmin_sun = 0
 
     $ spacebar_joke = False
@@ -238,7 +238,7 @@ label isc_bar_client_east:
             clientisc3 "Such a nice gem... {w=2.5} {nw}"
             clientisc3 "If you manage to get it out, you are a happy person!{w=4} {nw}"
             m "Oh... thanks for the hint! {w=2} {nw}"
-            clientisc3 "You are really welcome. {w=2.5} {nw}"
+            clientisc3 "You are welcome. {w=2.5} {nw}"
             clientisc3 "Bye! {w=1.5} {nw}"
 
         $ joke = 0    
@@ -359,7 +359,7 @@ label isc_bar_sysadmin:
                     m "Well...{w=2.5} {nw}"
                     m "I really don't know...{w=2.5} {nw}"
                     clientsysadmin "I'm the system administrator of the Industrial Space City.{w=5} {nw}"
-                    clientsysadmin "But this small thingie needs a lot of maintenance!{w=5} {nw}"
+                    clientsysadmin "But this small thingy needs a lot of maintenance!{w=5} {nw}"
                     clientsysadmin "It is just falling apart.{w=5} {nw}"
                     clientsysadmin "If you know a system administrator who could help me, please let me know.{w=5} {nw}"
                     m "Sure.{w=2.5} {nw}"
@@ -410,18 +410,19 @@ label isc_bar_sysadmin:
         else:    
             call dialog_nothing from _call_dialog_nothing_24 
     
+    
     if isc_sysadmin_move == 2:
         m "Hello again!{w=2} {nw}"
         sysadmin "Hi! Thank you very much for your help.{w=3} {nw}"
-        sysadmin "Without you, I couldn't fix the crane.{w=3} {nw}"
+        sysadmin "Without you, I couldn't have fixed the crane.{w=3} {nw}"
         sysadmin "I'd like to give you something for your help.{w=3} {nw}"
         sysadmin "Here! [isc_sysadmin_cash]c!{w=2} {nw}"
         call sound_collect from _call_sound_collect_3
         call io_cash(isc_sysadmin_cash) from _call_io_cash_4
         pause 1
         m "Oh, thanks!{w=2.5} {nw}"
-        sysadmin "You are really welcome. {w=2}{nw}"
-        sysadmin "Now that the crane is fixed, I can finally take a break in the bar. {w=5}{nw}"
+        sysadmin "You are welcome. {w=2}{nw}"
+        sysadmin "Now that the crane is fixed, I can finally take a break into the bar. {w=5}{nw}"
         sysadmin "I hope nobody will play with it or move it to another location!{w=4}{nw}"
         m "I don't think so, nobody except us knows how to access it remotely.{w=4} {nw}"
         sysadmin "You are right. And I trust you for now.{w=4}{nw}"
@@ -692,7 +693,7 @@ label isc_barman:
                 
             "[questions[1]]" if isc_bar_client == False:
                 m "[questions[1]]"
-                barman_isc "The bathroom is only for the clients. {w=2.5} {nw}"
+                barman_isc "The bathroom is only for clients. {w=2.5} {nw}"
                 barman_isc "I'm sorry. {w=1} {nw}"
 
                     

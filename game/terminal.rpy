@@ -42,7 +42,7 @@ label terminal:
         show shadow:
             pos (270, 240)
     
-    $ termtext = "help"
+    $ termtext = "home"
     
     hide spacenetsender
 
@@ -149,7 +149,7 @@ label term_login:
         call sound_electroshock from _call_sound_electroshock_27
         with hpunch
         pause 2
-        $ termtext = "help"
+        $ termtext = "home"
     
     jump terminal
 
@@ -202,7 +202,7 @@ label terminal_locate(i):
             pass
         
         "Exit":
-            $ termtext = "help"
+            $ termtext = "home"
             $ planet = planet2
             jump terminal
 
@@ -230,7 +230,7 @@ label terminal_locate(i):
     
     call sound_connected from _call_sound_connected_26
     #pause 3
-    $ termtext = "help"
+    $ termtext = "home"
     
         
     if superdev == True:

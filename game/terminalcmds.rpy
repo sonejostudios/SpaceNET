@@ -29,8 +29,8 @@ label term_commands:
     call sound_beep from _call_sound_beep_14
     
 
-# command help
-    if termtext == "help":
+# command home
+    if termtext == "home":
         
         $ showtext = """
     Hello World!
@@ -44,7 +44,7 @@ label term_commands:
 
     Commands:
     locate = search in the space databank.
-    help = show this help file.
+    home = show this screen.
     More: exit, login, cheat, sos...
     
     Phone:
@@ -68,7 +68,7 @@ label term_commands:
         #jump term_menu
         
         
-# command help
+# command locate
     if termtext == "locate":
         
         $ showtext = """
@@ -223,7 +223,7 @@ label term_commands:
  
                         
                     "Exit":
-                        $ termtext = "help"
+                        $ termtext = "home"
                         jump terminal
 
         
@@ -240,7 +240,7 @@ label term_commands:
         call sound_beep from _call_sound_beep_19
         with hpunch
         pause 3
-        $ termtext = "help"
+        $ termtext = "home"
         jump terminal
             
         
@@ -256,7 +256,7 @@ label term_commands:
         call sound_beep from _call_sound_beep_20
         with hpunch
         pause 3
-        $ termtext = "help"
+        $ termtext = "home"
         jump terminal
 
     
@@ -286,7 +286,7 @@ label term_commands:
             "Send SOS":
                 pass
             "Exit":
-                $ termtext = "help"
+                $ termtext = "home"
                 jump terminal
     
         
@@ -304,7 +304,7 @@ label term_commands:
         call sound_connected from _call_sound_connected_12
 
         pause 2.5
-        $ termtext = "help"
+        $ termtext = "home"
         jump terminal
    
    
@@ -358,7 +358,7 @@ label term_commands:
                     m "[questions[3]]"
                     radio "Bye!{w=1.0} {nw}"
                     
-                    $ termtext = "help"
+                    $ termtext = "home"
                     jump terminal
 
 
@@ -396,14 +396,14 @@ label term_commands:
                     radio "See you soon, bye!{w=2.5} {nw}"
                     $ xylo_village1_building_reception = 2
                     
-                    $ termtext = "help"
+                    $ termtext = "home"
                     jump terminal
                 
                 "[questions[1]]":
                     m "[questions[1]]"
                     radio "No problem, bye!{w=2.0} {nw}"
                     
-                    $ termtext = "help"
+                    $ termtext = "home"
                     jump terminal
     
 
@@ -419,7 +419,7 @@ label term_commands:
         with hpunch
         m "Cheating is not a good idea right now... {w=3} {nw}"
         call sound_beep from _call_sound_beep_22
-        $ termtext = "help"
+        $ termtext = "home"
         jump terminal
         
 
@@ -517,7 +517,7 @@ label term_commands:
             "Exit":
                 pass
                 
-        $ termtext = "help"
+        $ termtext = "home"
         jump terminal
 
 
@@ -559,14 +559,14 @@ label term_commands:
                     radio "Bye!{w=1} {nw}"
                     
 
-                    $ termtext = "help"
+                    $ termtext = "home"
                     jump terminal
                 
                 "[questions[1]]":
                     m "[questions[1]]"
                     radio "Okay, bye.{w=2.0} {nw}"
                     
-                    $ termtext = "help"
+                    $ termtext = "home"
                     jump terminal
 
     
@@ -816,7 +816,8 @@ label term_commands:
                         
                     elif isc_crane_pos_x == 1 and isc_crane_pos_y == 1:
                         $ crane_pos_name = "city center"
-                        $ isc_sysadmin_move = 2
+                        if isc_sysadmin_move == 1:
+                            $ isc_sysadmin_move = 2
                         
                     
                     elif isc_crane_pos_x == 1 and isc_crane_pos_y == 0:
@@ -829,10 +830,10 @@ label term_commands:
                 
             "Exit":
                 pass
-                $ termtext = "help"
+                $ termtext = "home"
                 jump terminal
     
-        $ termtext = "help"
+        $ termtext = "home"
         jump terminal
 
 
@@ -907,12 +908,12 @@ label term_commands:
                             $ cargo_remote_control = "disabled"
                             m "Oh no! I think the crew restarted the reactor and disabled the remote control!{w=5}{nw}"
                             #pause 3
-                            $ termtext = "help"
+                            $ termtext = "home"
                             jump terminal
                             
                     
                     "Exit":
-                        $ termtext = "help"
+                        $ termtext = "home"
                         jump terminal
                         
             if cargo_remote_control == "enabled":
@@ -925,7 +926,7 @@ label term_commands:
                 show text Text(showtext,text_align=termtext_align) at termtextpos
                 call sound_beep from _call_sound_beep_26
                 pause 3
-                $ termtext = "help"
+                $ termtext = "home"
                 jump terminal
             
 
@@ -949,6 +950,34 @@ label term_commands:
         
         jump terminal
         
+
+
+
+# access game menu from terminal
+    if termtext == "save" :
+        $ ShowMenu("save")() # extra () needed
+        jump terminal
+        
+    if termtext == "load" :
+        $ ShowMenu("load")() 
+        jump terminal
+        
+    if termtext == "preferences" :
+        $ ShowMenu("preferences")() 
+        jump terminal
+        
+    if termtext == "prefs" :
+        $ ShowMenu("preferences")() 
+        jump terminal
+        
+    if termtext == "help" :
+        $ ShowMenu("help")() 
+        jump terminal
+        
+    if termtext == "history" :
+        $ ShowMenu("history")() 
+        jump terminal
+
 
 
     
@@ -1007,7 +1036,7 @@ label term_commands:
     show text Text(showtext,text_align=termtext_align) at termtextpos
     #show text (_("Command: [termtext] - command not found.")) at termtextpos2
     pause 2
-    $ termtext = "help"
+    $ termtext = "home"
     jump terminal
     #jump term_menu
 

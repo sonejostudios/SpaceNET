@@ -365,6 +365,7 @@ screen navigation():
     # mute all sounds
     key "m" action [Preference("all mute", "toggle"), Notify("Mute toggled")]
 
+    
     vbox:
         style_prefix "navigation"
 

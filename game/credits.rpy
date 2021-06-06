@@ -128,6 +128,9 @@ freesound.org
 
 - Special Thanks to -
 
+Ivo Zeller
+(proofreading)
+
 Dirk Schippers
 (testing/proofreading)
 
@@ -136,6 +139,7 @@ Dirk Schippers
 - License -
 
 SpaceNET is licensed under GPL 3.0
+https://github.com/sonejostudios/SpaceNET
 
 
     """
@@ -143,11 +147,11 @@ SpaceNET is licensed under GPL 3.0
     show text Text(showtext,text_align=0.5):
         anchor (0.5, 1)
         pos (400, 480)
-        linear 33 pos (400, -1700) 
+        linear 34 pos (400, -1800) 
 
     
     
-    pause 34
+    pause 35
     hide text
 
 

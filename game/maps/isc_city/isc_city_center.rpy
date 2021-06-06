@@ -153,7 +153,7 @@ label isc_city_center_info:
 Welcome to the city center of the
 Industrial Space City.
 
-Enjoy the bar, the shop, and many more!
+Enjoy the bar, the shop, and much more!
 
 ---
 

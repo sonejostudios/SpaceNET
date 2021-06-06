@@ -12,7 +12,7 @@ screen planet_info():
         text "{color=#8dd35f}Moon(s): [planet_moons]"
         text "{color=#8dd35f}Atmosphere: [planet_atmosphere]"
         text "{color=#8dd35f}Temperature: [planet_temperature]"
-        text "{color=#8dd35f}Radiations: [planet_radiations]"  
+        text "{color=#8dd35f}Radiation: [planet_radiations]"  
         text "{color=#8dd35f}Habitable: [planet_habitable]"
         text "{color=#8dd35f}Inhabited: [planet_inhabited]"
         text "{color=#8dd35f}Auth. needed: [planet_auth_needed]"

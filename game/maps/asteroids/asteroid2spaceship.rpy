@@ -125,7 +125,7 @@ label loop_asteroid2_spaceship:
                 if inventory_select == "":
                     m "These boxes block the door to the cockpit. {w=3.5} {nw}"
                     if asteroid_cord_at_box == True:
-                        m "There is a cord tighten around this box. {w=3.5} {nw}"
+                        m "There is a cord wrapped around this box. {w=3.5} {nw}"
                 
                 elif inventory_select == "knife":
                     if asteroid_cord_at_box == True:

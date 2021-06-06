@@ -143,7 +143,6 @@ label loop_xylo_map5house:
 
 
         if exitpos == 44:
-            #$ nodetype = "item"
             if startpos == 44:
                 show screen xylo_sea_bar_jukebox
             $ startpos = 44
@@ -311,7 +310,7 @@ label xylo_sea_bar_client1:
         clientsea "I think I'm a bit drunk.{w=2.5}{nw}"
         clientsea "But I don't care!{w=2.5}{nw}"
         clientsea "I'll give you 100c for this favor.{w=3}{nw}"
-        clientsea "It's worth to me.{w=2.5}{nw}"
+        clientsea "It's worth it to me.{w=2.5}{nw}"
         clientsea "Now I have all I need!{w=2.5}{nw}"
         clientsea "And I can start a new life!{w=2.5}{nw}"
         clientsea "That's the best thing ever.{w=2.5}{nw}"

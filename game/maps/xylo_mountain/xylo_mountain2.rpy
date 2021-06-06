@@ -207,7 +207,7 @@ A long time ago, a temple was built here,
 but it was abandoned and destroyed by winds and storms.
 
 The legend says, there is a treasure. 
-But nobody has found it until now. 
+But nobody has found it yet. 
 Does it really exist?
 
     """

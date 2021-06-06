@@ -130,7 +130,7 @@ label loop_asteroid3:
                     m "But hey! There is nobody around to find me anyway...{w=4} {nw}"
                     m "Well...{w=1.5} {nw}"
                     m "What's the point?{w=2.5} {nw}"
-                    m "I really have better to do now!{w=3} {nw}"
+                    m "I really have better things to do now!{w=3.5} {nw}"
                 else:
                     call asteroid_dig(0) from _call_asteroid_dig_18
             $ startpos = 3

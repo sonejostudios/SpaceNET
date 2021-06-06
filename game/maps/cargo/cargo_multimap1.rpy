@@ -458,7 +458,7 @@ label cargo_multimap_info:
 
 This cargo container contains nuclear weapons.
 
-This area is strictly prohibited 
+Access to this area is strictly prohibited 
 and reserved for crew robots.
 
     """

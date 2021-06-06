@@ -144,7 +144,7 @@ label loop_isc_city_gateway:
                     pos nodeC
                     ease 0.5 pos nodeB
                 pause 0.5
-                m "No way I'll climb there without safety equipment!{w=3} {nw}"
+                m "No way I'll climb up there without safety equipment!{w=3} {nw}"
                 $ startpos = 2
                 
             else:
@@ -320,7 +320,7 @@ label isc_spaceflight_cargo_mission:
     hacker "...{w=2} {nw}"
     hacker "Here is your mission:{w=2} {nw}"
     hacker "Infiltrate the space cargo of A.R.K. Corporation.{w=4} {nw}"
-    hacker "You'll find it in the terminal.\nJust 'locate cargo' in the terminal.{w=5} {nw}"
+    hacker "You'll find it in the terminal.\nJust enter 'locate cargo' in the terminal.{w=5} {nw}"
     
     # add note
     call add_note(note_locate_cargo) from _call_add_note_15

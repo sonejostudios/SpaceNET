@@ -22,14 +22,14 @@ define vendor = Character("Vendor", image="vendor", color="#ffffff")
 define oldman = Character("Man", image="oldman", color="#ffffff")
 define fisher = Character("Fisher", image="fisher", color="#ffffff")
 
-define worker = Character("Worker", image="person", color="#ffffff")
+#define worker = Character("Worker", image="person", color="#ffffff")
 define worker1 = Character("Worker", image="worker1", color="#ffffff")
 define worker2 = Character("Worker", image="worker2", color="#ffffff")
 define worker3 = Character("Worker", image="worker3", color="#ffffff")
 
-define officer = Character("Officer", image="person", color="#ffffff")
+#define officer = Character("Officer", image="person", color="#ffffff")
 
-define client = Character("Client", image="person", color="#ffffff")
+#define client = Character("Client", image="person", color="#ffffff")
 define client1 = Character("Client", image="client1", color="#ffffff")
 define client2gem = Character("Client", image="client2gem", color="#ffffff")
 
@@ -410,6 +410,10 @@ define config.side_image_requires_attributes = False
 #define config.gl2 = True
 
 
+# autosaves
+define config.autosave_slots = 4
+
+
 # disable renpy keys
 #(/renpy-7.4.1-sdk/renpy/common/00keymap.rpy)
 define config.keymap['self_voicing'] = []
@@ -450,10 +454,10 @@ init :
     $ pre_version = ""
     
     ## The version of the game.
-    define config.version = "1.12.1"
+    define config.version = "1.12.3"
     
     # build date. Set date for release.
-    $ build_date = "2021-05-31"
+    $ build_date = "2021-06-06"
     
     # game name
     define config.name = "SpaceNET"
@@ -492,9 +496,6 @@ init :
     # spaceship type, as string, so it is possible to add 1b, 1c etc.
     $ spaceshiptype = "1"
     $ spaceshiptype_name = "SD-2"
-    
-    $ spaceship_broken = False
-    $ asteroid_collision = False
     
     
     # player types: "player", "minidroid"
@@ -591,11 +592,17 @@ init :
     $ xylo_village_name = "Olyx Town"
     
     
+    # asteroids
+    $ spaceship_broken = False
+    $ asteroid_collision = False
+    
+    
+    
     
     
     
 ## settings
-    # point'n'click mode
+    # point'n'click mode and node hover
     $ pnc_mode = False
     $ pnc_nodes_visible = True
     

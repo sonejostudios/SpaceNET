@@ -69,7 +69,6 @@ label loop_xylo_village1:
             jump xylo_spaceport_hall        # map loop to jump to
             
         if exitpos == 2:
-            #$ nodetype = "npc"
             if startpos == 2:
                 m "I'm in the middle of the village. {w=2.0} {nw}"
                 m "What a beautiful place! {w=2.0} {nw}"

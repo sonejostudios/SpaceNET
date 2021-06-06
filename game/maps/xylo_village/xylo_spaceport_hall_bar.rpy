@@ -293,7 +293,7 @@ label xylo_village_barman:
             "[questions[2]]"if xylo_bar_barman_flags[2] == 0:
                 m "[questions[2]]"
                 if xylo_spaceport_hall_bar_client == False:
-                    barman_xvil "The bathroom is only for the clients. {w=2.5} {nw}"
+                    barman_xvil "The bathroom is only for clients. {w=2.5} {nw}"
                     barman_xvil "I'm sorry. {w=1} {nw}"
                 else:
                     barman_xvil "Sure. {w=1} {nw}"
@@ -303,7 +303,7 @@ label xylo_village_barman:
             "[questions[3]]" if xylo_bar_barman_flags[3] == 0:
                 m "[questions[3]]"
                 barman_xvil "About what? {w=2.5} {nw}"
-                barman_xvil "I don't know what are you talking about. {w=3.5} {nw}"
+                barman_xvil "I don't know what you are talking about. {w=3.5} {nw}"
                 barman_xvil "Please don't bother me anymore. {w=3} {nw}"
                 barman_xvil "Just have a drink and enjoy your life as long as you can.{w=5} {nw}"
                 $ xylo_bar_barman_flags[3] = 1
@@ -400,7 +400,7 @@ label xylo_village_client1:
                             client1 "But rumors are saying, they found something special there.{w=3} {nw}"
                             client1 "...{w=2} {nw}"
                             client1 "I don't know if it is related, but the company was bought by A.R.K. Corporation.{w=5} {nw}"
-                            client1 "And all of the sudden, they closed the mine.{w=3} {nw}"
+                            client1 "And suddently, they closed the mine.{w=3} {nw}"
                             m "Interesting. {w=2} {nw}"
                             m "Thank you for the information. {w=3} {nw}"
                             $ xylo_bar_client1_flags2[3] = 1
@@ -556,7 +556,7 @@ label xylo_village_client2:
                 m "Nobody wants to talk to me.{w=3.5}{nw}"
                 m "But you know what? My memory is gone.{w=3.5}{nw}"
                 m "I just know nothing.{w=3}{nw}"
-                m "I even don't know where I am!{w=3}{nw}"
+                m "I don't even know where I am!{w=3}{nw}"
                 client2gem "...{w=2} {nw}"
                 client2gem "This sounds interesting.{w=2.5} {nw}"
                 client2gem "Where are you coming from?{w=2.5} {nw}"
@@ -601,8 +601,8 @@ label xylo_village_client2:
                 client2gem "There are some interesting gems in this world.{w=4} {nw}"
                 client2gem "I don't know where they are coming from.{w=4} {nw}"
                 client2gem "But they are full of energy!{w=3} {nw}"
-                client2gem "If the government finds them, this could be a disaster...{w=4.5} {nw}"
-                client2gem "Somebody has to collect them before they know their existence.{w=4.5} {nw}"
+                client2gem "If the government finds them, it could be a disaster...{w=4.5} {nw}"
+                client2gem "Somebody has to collect them before they find out about their existence.{w=4.5} {nw}"
                 client2gem "To say it exactly, I know about [maxgems] gems.{w=4} {nw}"
                 client2gem "Could you collect them before it is too late?{w=4} {nw}"
                 m "Well... why not?{w=2.5} {nw}"
@@ -680,7 +680,7 @@ label xylo_village_client4:
             menu:
                 "[questions_client[0]]" if sam_known == False and xylo_bar_client4_flags[0] == 0: #how are you
                     m "[questions_client[0]]"
-                    samclient "Please, let me alone. {w=2} {nw}"
+                    samclient "Please, leave me alone. {w=2} {nw}"
                     $ xylo_bar_client4_flags[0] = 1
                     
                 "[questions_client[1]]"if sam_known == False and xylo_bar_client4_flags[1] == 0: # doing?
@@ -777,8 +777,8 @@ label xylo_village_client4:
             sam "I will organize a meeting with 4n0nym0u5 for you.{w=3.5}{nw}"
             sam "She has a good idea of how to stop this cargo ship and how you could help us.{w=4.5}{nw}"
             sam "4n0nym0u5 is close to the Industrial Space City right now...{w=3.5}{nw}"
-            sam "She will pick you up there at the space gateway.{w=3.5}{nw}"
-            sam "It is a prohibited area, but I'll tell you how to get there.{w=3.5}{nw}"
+            sam "She will pick you up at the space gateway.{w=3.5}{nw}"
+            sam "It is a restricted area, but I'll tell you how to get there.{w=3.5}{nw}"
             sam "The secret entrance is located in the bar, it is door number 4 in the bathroom.{w=4.5}{nw}"
             sam "But you will need a PIN to access it.{w=3}{nw}"
             sam "The pin is 12458.{w=2}{nw}"

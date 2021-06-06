@@ -183,7 +183,7 @@ label server_satellitemsg:
     In order to accelerate the speed of SpaceNET,
     we will need to have our own satellite.
     
-    I figured out a satellite from the A.R.K Corp.,
+    I identified a satellite from the A.R.K Corp.,
     which could help us with this task. But first,
     we need to hack it and send it into a new 
     orbit. The satellite is named io11.
@@ -208,12 +208,12 @@ label server_satellitemsg:
     
     1. Locate the satellite named io11 
        (use 'locate io11' in the terminal).
-    2. Dock on the satellite. You'll need 
+    2. Dock at the satellite. You'll need 
        a spaceship with a docking hatch.
-    3. Hack the computer, set a new password 
+    3. Hack the computer, set a new password,
        and enable remote control.
-    4. Go out the satellite and log into the 
-       stellite's remote control via a terminal.
+    4. Leave the satellite and log into the 
+       satellite's remote control via a terminal.
     5. Restart the satellite to disconnect it.
     6. Set a new orbit. Set it to X=350 and Y=150.
     7. Send the satellite to the new orbit.

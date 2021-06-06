@@ -45,7 +45,7 @@ label dialog_closed:
     elif inventory_select == "accesscard" or inventory_select == "robotcard":
         m "This access card doesn't fit to this door! {w=3.5} {nw}"
     elif inventory_select == "cable":
-        m "I could make a short circuit... {w=2.5} {nw}"
+        m "I could create a short circuit... {w=2.5} {nw}"
         call sound_electroshock from _call_sound_electroshock_1
         with hpunch
         m "Haaa... bad idea! {w=2.5} {nw}"

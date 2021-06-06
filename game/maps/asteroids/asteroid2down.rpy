@@ -204,17 +204,24 @@ label loop_asteroid2_down:
                         
                 else:
                     if asteroid2down_solarpanel == True and asteroid2right_solarpanel == True:
-                        $ startpos = 1
-                        $ liftpos = 3
-                        call sound_door from _call_sound_door_178
-                        jump asteroid_lift1
+                        if inventory_select == "":
+                            $ startpos = 1
+                            $ liftpos = 3
+                            call sound_door from _call_sound_door_178
+                            jump asteroid_lift1
+                        else:
+                            call dialog_nosense from _call_dialog_nosense_59
                     
                     else:
                         if inventory_select == "":
-                            m "There is a small cabin! {w=3} {nw}"
-                            m "What is it doing here on this lost asteroid? {w=4} {nw}"
-                            m "That's really weird! {w=2.5} {nw}"
-                            call dialog_closed from _call_dialog_closed_51
+                            if asteroid2down_solarpanel == True or asteroid2right_solarpanel == True:
+                                call sound_door_locked from _call_sound_door_locked_7
+                                m "The light is on inside but the door is still locked.{w=3.5} {nw}"
+                            else:
+                                m "There is a small cabin! {w=3} {nw}"
+                                m "What is it doing here on this lost asteroid? {w=4} {nw}"
+                                m "That's really weird! {w=2.5} {nw}"
+                                call dialog_closed from _call_dialog_closed_51
                         else:
                             call dialog_nosense from _call_dialog_nosense_53
            

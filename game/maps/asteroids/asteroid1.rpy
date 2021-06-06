@@ -273,6 +273,7 @@ label asteroid1_nodeB:
         m "Well... {w=2} {nw}"
         m "Actually, this is really not a good idea! {w=3.5} {nw}"
         m "I'd rather save myself instead of trying to catch some fish in space! {w=5} {nw}"
+        $ inventory_select = ""
         
 
     elif inventory_select == "magnet" and asteroid_cord_on_ground == True:
@@ -334,7 +335,7 @@ label asteroid1_nodeB:
             
 
     elif inventory_select == "magnetcord" and module_in_orbit == False:
-        m "I really have better to do right now than fishing around!{w=4.5}{nw}"
+        m "I really have better things to do right now than fishing around!{w=4.5}{nw}"
     
     else:
         call asteroid_dig(0) from _call_asteroid_dig_5
@@ -363,7 +364,7 @@ label asteroid_dig(found):
             call dialog_nothing from _call_dialog_nothing_69
             
     elif inventory_select == "asteroid":
-        m "I think I really don't need this asteroid.{w=3.5}{nw}"
+        m "I think, I really don't need this asteroid piece.{w=3.5}{nw}"
         m "I'll throw it away.{w=2.5}{nw}"
         m "Bye-bye!{w=2}{nw}"
         call use_item from _call_use_item_9

@@ -89,6 +89,11 @@ label loop_isc_rail4b:
 
         # do something at node?
         if exitpos == 1:
+            if startpos == 1:
+                if inventory_select == "":
+                    m "It looks like I'm close to the city center.{w=3.5} {nw}"
+                else:
+                    call dialog_nosense from _call_dialog_nosense_57
             $ startpos = 1
 
         
@@ -184,7 +189,7 @@ label loop_isc_rail4b:
 
             
         if exitpos == 44:
-            m "I can see on the other side....  but...{w=2} {nw}"
+            m "I can see on the other side....  but...{w=3} {nw}"
             call dialog_nothing from _call_dialog_nothing_51
             $ startpos = 44
 

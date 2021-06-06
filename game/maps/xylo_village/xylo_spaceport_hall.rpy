@@ -213,7 +213,7 @@ label xylo_spaceport_hall_oldman:
     
     $ questions = ["Do you know me?{w=2.0} {nw}", 
                     "What are you doing here?{w=2.5} {nw}", 
-                    "What a nice weather, isn't it? {w=3} {nw}", 
+                    "The weather is nice, isn't it? {w=3} {nw}", 
                     "Have you heard about SpaceNET? {w=3} {nw}", 
                     "Nothing. {w=2.0} {nw}"]
     

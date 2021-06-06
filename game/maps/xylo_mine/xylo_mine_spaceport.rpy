@@ -245,7 +245,7 @@ A better - faster - stronger - bigger one?
 Just go to Spaceship Interchange at
 the Industrial Space City.
 
-Just 'locate isc' in a terminal!
+Just enter 'locate isc' in a terminal!
     """
     
     

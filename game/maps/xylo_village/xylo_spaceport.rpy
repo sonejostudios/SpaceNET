@@ -250,7 +250,7 @@ label loop_xylo_spaceport:
                 m "Hello?{w=1.5}{nw}"
                 radio "Welcome to [xylo_village_name].{w=2}\nWhat can I do for you?{w=2.5}{nw}"
                 
-                $ questions = ["Hi. Where I am? {w=2.5} {nw}",
+                $ questions = ["Hi. Where am I? {w=2.5} {nw}",
                                 "I need to register my spaceship. {w=3} {nw}",
                                 "I'm fine, thank you. {w=2} {nw}"]
                 

@@ -131,7 +131,7 @@ Go north to go to the industrial harbor.
 Go east to go to the sea and enjoy the coastal road.
 
 If it is the right season, 
-we also recommand to take a boat trip on the sea!
+we also recommend to take a boat trip on the sea!
 Just call the boat rental company for more information.
 
 
@@ -193,7 +193,7 @@ label xylo_sea_village_fisher:
                 fisher "Oh, this is a bunker... {w=3} {nw}"
                 fisher "It belongs to A.R.K. Corporation. {w=3} {nw}"
                 fisher "They just built it a while ago. {w=3} {nw}"
-                fisher "I don't know anyhing about it, sorry. {w=3.5} {nw}"
+                fisher "I don't know anything about it, sorry. {w=3.5} {nw}"
                 fisher "I just know one thing: {w=3} {nw}"
                 fisher "Don't go there, otherwise the robot guard will kick you out! {w=4.5} {nw}"
                 menu:
@@ -233,7 +233,7 @@ label xylo_sea_village_fisher:
                 fisher "They are working for the government and they think they are kings!{w=5} {nw}"
                 fisher "At his age, I was one of the first who colonized this planet. {w=5} {nw}"
                 fisher "There was nothing here!{w=3.5} {nw}"
-                fisher "We built everything by hands!{w=3.5} {nw}"
+                fisher "We built everything by hand!{w=3.5} {nw}"
                 fisher "And now, they are just coming around and think they can decide everything? {w=5} {nw}"
                 fisher "I don't think so!{w=2.5} {nw}"
                 fisher "I will never do what they want.{w=3.5} {nw}"

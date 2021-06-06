@@ -73,7 +73,7 @@ label spacenet_comp(snetnode):
     SpaceNET
     [ascii_line]
     
-    Install successfull.
+    Install successful.
     
     The SpaceNET software is now installed
     and ready to use.
@@ -133,7 +133,7 @@ label spacenet_comp(snetnode):
     SpaceNET
     [ascii_line]
     
-    To install or update software, 
+    To install or update the software, 
     please insert the medium.
     
     For more information about the 

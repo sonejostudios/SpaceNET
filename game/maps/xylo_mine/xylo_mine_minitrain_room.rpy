@@ -120,7 +120,7 @@ label loop_xylo_mine_minitrain_room:
                 
                 if xylo_mine_minitrain_room_pick == False:
                     m "There are a lot of stones there.{w=2} {nw}"
-                    m "These stones don't look really stable...{w=2.5} {nw}"
+                    m "These stones don't look stable...{w=2.5} {nw}"
                     m "They look like they just have fallen down from the ceiling.{w=3} {nw}"
                     m "Maybe there is a way behind?{w=2} {nw}"
                 #call dialog_nothing 

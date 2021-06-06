@@ -54,6 +54,8 @@ label asteroid_collision_anim:
     
     pause 3
     call sound_explosion from _call_sound_explosion_4
+    with hpunch
+    #with flash
     pause 3
     $ pnc_nodes_visible = True
     

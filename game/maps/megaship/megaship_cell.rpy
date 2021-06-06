@@ -97,7 +97,7 @@ label loop_megaship_cell:
                     m "And another name: SpaceNET... {w=3.5} {nw}"
                     m "But what does it mean?... {w=2.5} {nw}"
                     m "SpaceNET... {w=2.5} {nw}"
-                    m "And what to do now? {w=2.5} {nw}"
+                    m "And what do I do now? {w=2.5} {nw}"
                     $ m_megaship_cell_first_talk = 1
                 else:
                     m "I'm in cell number 1. {w=2.0} {nw}"

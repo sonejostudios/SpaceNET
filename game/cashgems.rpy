@@ -10,7 +10,7 @@ init:
 # xylo village spaceport broken wall
     $ xylo_village_brokenwall_gem = True
     
-# xylo village oldman joke
+# xylo village hall man joke
     $ xylo_village_oldman_gem = True
     
 # xylo mine tube
@@ -22,16 +22,16 @@ init:
 # megaship cell2
     $ megaship_cell2_gem = True
     
-# isc interchange spaceport
+# isc interchange spaceport (land on isc city center and walk back)
     $ isc_interchange_gem = True
 
-# isc city bar wc
+# isc city bar toilet
     $ isc_bar_wc_gem = True
 
 # isc city bar player
     $ cardgame_gem = True
 
-# isc client3 gem
+# isc client3 (girl) gem for asteroid piece
     $ isc_bar_client3_gem = True
     
 # isc city spaceport crane
