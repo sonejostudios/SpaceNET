@@ -141,19 +141,25 @@ label loop_xylo_mine:
             
         if exitpos == 2:
             if startpos == 2:
-                if xylo_mine_spaceport > 0:
-                    m "There are [xylo_mine_spaceport]c on the floor... {w=2.5} {nw}"
-                    call io_cash(xylo_mine_spaceport) from _call_io_cash_9
-                    m "Nice! {w=1.5} {nw}"
-                    $ xylo_mine_spaceport = 0
+                if inventory_select == "":
+                    if xylo_mine_spaceport > 0:
+                        m "There are [xylo_mine_spaceport]c on the floor... {w=2.5} {nw}"
+                        call io_cash(xylo_mine_spaceport) from _call_io_cash_9
+                        m "Nice! {w=1.5} {nw}"
+                        $ xylo_mine_spaceport = 0
+                    else:
+                        call dialog_nothing from _call_dialog_nothing_61
                 else:
-                    call dialog_nothing from _call_dialog_nothing_61
+                    call dialog_nosense from _call_dialog_nosense_69
             $ startpos = 2
 
             
         if exitpos == 3:
             if startpos == 3:
-                call xylo_mine_spaceport_isc from _call_xylo_mine_spaceport_isc # advertisement isc
+                if inventory_select == "":
+                    call xylo_mine_spaceport_isc from _call_xylo_mine_spaceport_isc # advertisement isc
+                else:
+                    call dialog_nosense from _call_dialog_nosense_70
             $ startpos = 3
 
 

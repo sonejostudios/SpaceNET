@@ -211,7 +211,7 @@ screen setpos():
         if superdev == True:
             text "A"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeA") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeA") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)
@@ -225,7 +225,7 @@ screen setpos():
         if superdev == True:
             text "B"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeB") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeB") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)
@@ -239,7 +239,7 @@ screen setpos():
         if superdev == True:
             text "C"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeC") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeC") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)
@@ -253,7 +253,7 @@ screen setpos():
         if superdev == True:
             text "D"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeD") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeD") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)
@@ -268,7 +268,7 @@ screen setpos():
         if superdev == True:
             text "AA"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeAA") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeAA") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)
@@ -282,7 +282,7 @@ screen setpos():
         if superdev == True:
             text "BB"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeBB") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeBB") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)
@@ -296,7 +296,7 @@ screen setpos():
         if superdev == True:
             text "CC"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeCC") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeCC") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)
@@ -309,7 +309,7 @@ screen setpos():
         if superdev == True:
             text "DD"
                 
-        if pnc_nodes_visible == True and renpy.showing("pathnodeDD") == True:
+        if pnc_nodes_visible == True and renpy.showing("pathnodeDD") == True and not renpy.variant("touch"):
             add "images/node_hover.png":
                 alpha 0.5
                 anchor (0.5,0.5)

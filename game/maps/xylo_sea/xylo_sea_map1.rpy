@@ -112,12 +112,13 @@ label loop_xylo_map1:
                 
                 $ xylo_sea_bunker_info = True
                 
-                $ pathB = (nodeA, nodeB, (0,0), (0,0), nodeAA, (0,0), nodeCC, nodeDD)
+                $ pathB = (nodeA, nodeB, (0,0), (0,0), nodeAA, (0,0), nodeCC, (0,0))
             
             if xylo_sea_bunker_info == False:
                 if inventory_select == "":
                     call xylo_sea_bunker_info from _call_xylo_sea_bunker_info
                     m "This sign is blocking the way to the north!{w=3.5} {nw}"
+                    m "I need to find a way to remove it if I want to go there.{w=3.5} {nw}"
                 else:
                     call dialog_nosense from _call_dialog_nosense_46
             

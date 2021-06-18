@@ -217,15 +217,18 @@ label loop_xylo_village2:
             
         if exitpos == 22:
             if startpos == 22:
-                m "This area is really well protected with this laser fence... {w=3} {nw}"
-                m "It seems to be important... {w=2} {nw}"
-                m "Interesting! {w=1.5} {nw}"
-                
-                if xylo_village2_cash > 0:
-                    m "... {w=1.5} {nw}"
-                    m "There is something on the floor... {w=2} {nw}"
-                    call io_cash(xylo_village2_cash) from _call_io_cash_21
-                    $ xylo_village2_cash = 0
+                if inventory_select == "":
+                    m "This area is really well protected with this laser fence... {w=3} {nw}"
+                    m "It seems to be important... {w=2} {nw}"
+                    m "Interesting! {w=1.5} {nw}"
+                    
+                    if xylo_village2_cash > 0:
+                        m "... {w=1.5} {nw}"
+                        m "There is something on the floor... {w=2} {nw}"
+                        call io_cash(xylo_village2_cash) from _call_io_cash_21
+                        $ xylo_village2_cash = 0
+                else:
+                    call dialog_nosense from _call_dialog_nosense_67
                     
                     
             $ startpos = 22

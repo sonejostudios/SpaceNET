@@ -450,14 +450,11 @@ init :
     # demo version
     $ demo_version = False
     
-    # version type (alpha/beta). For release = ""
-    $ pre_version = ""
-    
     ## The version of the game.
-    define config.version = "1.12.3"
+    define config.version = "1.12.6"
     
     # build date. Set date for release.
-    $ build_date = "2021-06-06"
+    $ build_date = "2021-06-18"
     
     # game name
     define config.name = "SpaceNET"
@@ -469,6 +466,8 @@ init :
     # use dev-keys and show superdev prefs button. For release = False
     $ use_dev_keys = False
     
+    # version type (alpha/beta). For release = ""
+    $ pre_version = ""
     
     # allow roll back and forward for superdev and set devkey == True
     if superdev == True:
@@ -611,6 +610,8 @@ init :
     $ pnc_cursor = False
     if not renpy.variant("touch"):
         $ pnc_cursor = True
+        # force pnc cursor on pc on start?
+        #$ preferences.system_cursor = False
     
 
     # display

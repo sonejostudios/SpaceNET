@@ -78,7 +78,7 @@ label xylo_bunker_move_lift:
         m "It looks like this control panel is not working! {w=2.0} {nw}"
         m "I see a broken cable outside the panel... {w=2.0} {nw}"
         if "cable" not in inventory:
-            m "If I could find a piece of cable somewhere, I could fix it easily! {w=3.5} {nw}"
+            m "If I could find a piece of cable somewhere, I could fix it easily. {w=3.5} {nw}"
         jump loop_xylo_sea_bunker
     
     
@@ -200,18 +200,43 @@ label loop_xylo_sea_bunker:
         
         if exitpos == 2:
             if startpos == 2:
-                if xylo_bunker_lift_control_broken == True and inventory_select == "cable":
+                if liftpos == 2: 
+                    if xylo_bunker_lift_control_broken == True:
+                        
+                        if inventory_select == "":
+                            show screen xylo_sea_bunker_lift_control # lift control
+                        
+                        elif inventory_select == "cable":
+                            m "I can try to fix it with this cable. {w=3} {nw}"
+                            call use_item from _call_use_item
+                            pause 1
+                            call sound_electroshock from _call_sound_electroshock_4
+
+                            #with flash
+                            $ xylo_bunker_lift_control_broken = False
+                            m "Yes, it works! {w=2} {nw}"
+                            
+                            show screen xylo_sea_bunker_lift_control
+                        
+                        elif inventory_select == "screwdriver" or inventory_select == "knife":
+                            m "I need a cable to repair it. {w=2} {nw}"
+                            m "Playing around with the [inventory_select] won't help! {w=3.5} {nw}"
+                        
+                        else:
+                            call dialog_nosense from _call_dialog_nosense_60
+                            
                     
-                    call sound_electroshock from _call_sound_electroshock_4
-                    call use_item from _call_use_item
-                    m "I can try to fix it with this cable. {w=2} {nw}"
-                    
-                    #with flash
-                    $ xylo_bunker_lift_control_broken = False
-                    show screen xylo_sea_bunker_lift_control
-                    m "Yes, it works! {w=2} {nw}"
+                    else:
+                        if inventory_select == "":
+                            show screen xylo_sea_bunker_lift_control # lift control
+                        else:
+                            call dialog_nosense from _call_dialog_nosense_61
                 
-                show screen xylo_sea_bunker_lift_control # lift control
+                else: #(liftpos == 1)
+                    if inventory_select == "":
+                        show screen xylo_sea_bunker_lift_control
+                    else:
+                        call dialog_nosense from _call_dialog_nosense_62
             
             $ startpos = 2
 
@@ -230,13 +255,16 @@ label loop_xylo_sea_bunker:
         if exitpos == 11:  
             
             if startpos == 11:
-                m "I'm at level [liftlevelname]. {w=2} {nw}"
-                if liftpos == 2:
-                    m "Except for a lift control panel and an info board, there is absolutely nothing in this room! {w=6} {nw}"
-                    m "This is quite strange... {w=1.5} {nw}"
-                    
-                if liftpos == 1:
-                    call dialog_nothing from _call_dialog_nothing_14
+                if inventory_select == "":
+                    m "I'm at level [liftlevelname]. {w=2} {nw}"
+                    if liftpos == 2:
+                        m "Except for a lift control panel and an info board, there is absolutely nothing in this room! {w=6} {nw}"
+                        m "This is quite strange... {w=1.5} {nw}"
+                        
+                    if liftpos == 1:
+                        call dialog_nothing from _call_dialog_nothing_14
+                else:
+                    call dialog_nosense from _call_dialog_nosense_63
 
              
             $ startpos = 11     

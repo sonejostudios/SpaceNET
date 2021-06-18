@@ -907,7 +907,7 @@ screen preferences():
                     #style_prefix "radio"
                     
                     label _("Graphics*")
-                    textbutton _("Disable TV-FX") action ToggleVariable("termfx_enable", true_value=0, false_value=1)
+                    textbutton _("Disable CRT") action ToggleVariable("termfx_enable", true_value=0, false_value=1)
                     textbutton _("Disable Shadow") action ToggleVariable("shadow_enable", true_value=0, false_value=1)
                     textbutton _("Disable Galaxy") action ToggleVariable("galaxy_enable", true_value=0, false_value=1)
                     #textbutton _("No Stars") action InvertSelected(Preference("transitions", "toggle"))

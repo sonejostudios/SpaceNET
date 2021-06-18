@@ -70,8 +70,11 @@ label loop_xylo_village1:
             
         if exitpos == 2:
             if startpos == 2:
-                m "I'm in the middle of the village. {w=2.0} {nw}"
-                m "What a beautiful place! {w=2.0} {nw}"
+                if inventory_select == "":
+                    m "I'm in the middle of the village. {w=2.0} {nw}"
+                    m "What a beautiful place! {w=2.0} {nw}"
+                else:
+                    call dialog_nosense from _call_dialog_nosense_72
             $ startpos = 2
             
             
@@ -98,13 +101,16 @@ label loop_xylo_village1:
             
         if exitpos == 22:
             if startpos == 22:
-                m "Nice river. {w=1.0} {nw}"
-                if xylo_village1_cash > 0:
-                    m "There is something on the floor... {w=2} {nw}"
-                    m "This is one coin! {w=2} {nw}"
-                    m "I'm rich! {w=1.5} {nw}"
-                    call io_cash(xylo_village1_cash) from _call_io_cash_20
-                    $ xylo_village1_cash = 0
+                if inventory_select == "":
+                    m "Nice river. {w=1.0} {nw}"
+                    if xylo_village1_cash > 0:
+                        m "There is something on the floor... {w=2} {nw}"
+                        m "This is one coin! {w=2} {nw}"
+                        m "I'm rich! {w=1.5} {nw}"
+                        call io_cash(xylo_village1_cash) from _call_io_cash_20
+                        $ xylo_village1_cash = 0
+                else:
+                    call dialog_nosense from _call_dialog_nosense_73
                     
             $ startpos = 22
 

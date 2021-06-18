@@ -78,7 +78,10 @@ label loop_xylo_map6spaceport:
         
         if exitpos == 2:
             if startpos == 2:
-                m "This spaceport is on the top of the building. {w=3.5} {nw}"
+                if inventory_select == "":
+                    m "This spaceport is on the top of the building. {w=3.5} {nw}"
+                else:
+                    call dialog_nosense from _call_dialog_nosense_68
             $ startpos = 2
 
             

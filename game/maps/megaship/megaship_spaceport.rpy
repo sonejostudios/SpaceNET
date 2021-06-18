@@ -1,6 +1,7 @@
 # MAPS
 
-# prison cell start of game
+init:
+    $ megaship_escaped = False
 
 ############################################
 label megaship_spaceport:
@@ -235,15 +236,17 @@ label loop_megaship_spaceport:
                         
                         #pause 1
                         call sound_take_off from _call_sound_take_off
+                        $ pnc_nodes_visible = False
                         pause 3
                         stop music
-                        
-                        $ pnc_nodes_visible = False
+
+                        $ megaship_escaped = True
                         
                         jump space
                         
                     else:
-                        m "I don't want to take off now while the door is closed! {w=3.0} {nw}"
+                        m "I'm not crazy enough to take off while the door is closed! {w=4.5} {nw}"
+                        m "I think I need to wait until it is completely open. {w=3.5} {nw}"
                     
                 "Leave":
                     call sound_door from _call_sound_door_3

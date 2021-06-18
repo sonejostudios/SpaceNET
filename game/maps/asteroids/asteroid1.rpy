@@ -270,7 +270,7 @@ label asteroid1_nodeB:
 
     elif inventory_select == "hook" and asteroid_cord_on_ground == True:
         m "This is a nice idea if I want to catch some fish. {w=3.5} {nw}"
-        m "Well... {w=2} {nw}"
+        m "Well... {w=1.5} {nw}"
         m "Actually, this is really not a good idea! {w=3.5} {nw}"
         m "I'd rather save myself instead of trying to catch some fish in space! {w=5} {nw}"
         $ inventory_select = ""
@@ -286,6 +286,13 @@ label asteroid1_nodeB:
             $ asteroid_cord_on_ground = False
             
 
+    elif inventory_select not in ["magnet","hook"] and asteroid_cord_on_ground == True:
+        m "This could be an interesting piece of art. {w=3.5} {nw}"
+        m "But actually... {w=2.5} {nw}"
+        m "It is not the right moment to be an artist! {w=3.5} {nw}"
+        $ inventory_select = ""
+         
+    
     elif inventory_select == "hook" or inventory_select == "magnet":
         m "This is a nice idea but it is not long enough. {w=3.5} {nw}"
         

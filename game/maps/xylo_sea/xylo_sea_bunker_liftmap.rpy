@@ -83,7 +83,7 @@ label xylo_sea_bunker_liftmap:
         m "This is very high! {w=2} {nw}"
         m "But... {w=1} {nw}"
         
-        if "cable" not in inventory:
+        if "cable" not in inventory and xylo_bunker_lift_control_broken == True:
             m "There is a cable... {w=2} {nw}"
             call take_item("cable") from _call_take_item_12
         
@@ -101,7 +101,7 @@ label xylo_sea_bunker_liftmap:
         if xylo_sea_bunker_rope == False:
             $ pathDD = ((0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), nodeDD)
             m "Wow! {w=1} {nw}"
-            m "This is very high! {w=2} {nw}"
+            m "This is very, very high! {w=2.5} {nw}"
             m "Interesting... There is a door on the other side. {w=3.5} {nw}"
             
         if xylo_sea_bunker_rope == True:

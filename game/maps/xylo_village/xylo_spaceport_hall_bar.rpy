@@ -709,6 +709,7 @@ label xylo_village_client4:
                     
                     sam "We need to have a talk. {w=2}{nw}"
                     sam "Please meet me in 2 minutes at the mountain's lake. {w=4}{nw}"
+                    sam "Just fly to the south until you see the mountain. {w=4}{nw}"
                     sam "I won't wait, so hurry up! {w=2}{nw}"
                     sam "See you there.{w=1.5}{nw}"
                    

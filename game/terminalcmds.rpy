@@ -86,7 +86,7 @@ label term_commands:
         Using this command from your
         spaceship's terminal will allow
         you to copy the coordinates 
-        to you cockpit map.
+        to your cockpit map.
 
     """
             

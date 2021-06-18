@@ -524,7 +524,10 @@ label isc_bar_player:
         m "Here, a card game. {w=2}{nw}"
         clientplayer "You've got a card game!{w=3}{nw}"
         clientplayer "Very nice...{w=3}{nw}"
-        clientplayer "If you win the game, I'll give you something!{w=4}{nw}"
+        
+        if cardgame_gem == True:
+            clientplayer "If you win the game, I'll give you something!{w=4}{nw}"
+        
         menu:
             "Let's play!":
                 clientplayer "Alright, try to get the same cards.{w=4}{nw}"

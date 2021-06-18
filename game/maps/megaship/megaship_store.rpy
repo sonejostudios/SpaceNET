@@ -13,7 +13,7 @@ label megaship_store:
     image megaship_store = imagemapsdir + "megaship_store.png"
     
     scene megaship_store
-    show screen notify("staff room")
+    show screen notify("Staff Room")
     
     show bgcolor behind megaship_store
     
@@ -84,6 +84,11 @@ label loop_megaship_store:
                 if "spacesuit" not in inventory:
                     m "This looks like a terminal.{w=2.0} {nw}"
                 call terminal from _call_terminal_1
+                if megaship_escaped == False:
+                    m "Actually... {w=2.0} {nw}"
+                    m "I really should escape from this spaceship...{w=3.5} {nw}"
+                    m "...instead of playing video games with that terminal!{w=3.5} {nw}"
+                
             $ startpos = 4
             
 

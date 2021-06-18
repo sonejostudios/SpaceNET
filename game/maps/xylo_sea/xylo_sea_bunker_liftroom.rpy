@@ -111,26 +111,43 @@ label loop_xylo_sea_bunker_liftroom:
         if exitpos == 3: # software disk
             if startpos == 3:
                 if "spacenet" not in inventory:
-                    m "There is a computer disk on the desk. {w=2.5} {nw}"
+                    m "There is a computer disk on the desk. {w=3} {nw}"
                     m "It seems to be empty. {w=2} {nw}"
                     call take_item("spacenet") from _call_take_item_2
                 else:
-                    call dialog_nothing from _call_dialog_nothing_10
+                    if inventory_select == "":
+                        call dialog_nothing from _call_dialog_nothing_10
+                        $ inventory_select = ""
+                    else:
+                        call dialog_nosense from _call_dialog_nosense_64
                     
             $ startpos = 3
 
             
         if exitpos == 4:
             if startpos == 4:
-                m "This computer is really old, but it is still working! {w=3} {nw}"
-                jump xylo_sea_bunker_liftroom_computer
+                if inventory_select == "":
+                    m "This computer is really old, but it is still working! {w=3.5} {nw}"
+                    jump xylo_sea_bunker_liftroom_computer
+                    
+                elif inventory_select == "spacenet":
+                    call sound_electroshock from _call_sound_electroshock_30
+                    with hpunch
+                    m "This disk doesn't fit into this computer. {w=3.5} {nw}"
+                    $ inventory_select = ""
+                    
+                else:
+                    call dialog_nosense from _call_dialog_nosense_65
             $ startpos = 4
 
 
         #exits routing "got to map and set position for next map"
         if exitpos == 11:
             if startpos == 11:
-                m "This looks like a maintenance room. {w=2} {nw}"
+                if inventory_select == "":
+                    m "This looks like a maintenance room. {w=2} {nw}"
+                else:
+                    call dialog_nosense from _call_dialog_nosense_66
             $ startpos = 11     
  
             

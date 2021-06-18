@@ -185,7 +185,10 @@ label loop_xylo_spaceport:
 
         if exitpos == 2:
             if startpos == 2:
-                call dialog_nothing from _call_dialog_nothing_9
+                if inventory_select == "":
+                    call dialog_nothing from _call_dialog_nothing_9
+                else:
+                    call dialog_nosense from _call_dialog_nosense_71
             $ startpos = 2
          
 
