@@ -158,7 +158,9 @@ screen termfx():
 
 
 
-screen superdev() zorder 2000:
+screen superdev():
+    zorder 2000
+    
     if superdev == True:
         # show mouse position for devs
         text "[mousepos]" at left
@@ -175,15 +177,19 @@ screen superdev() zorder 2000:
         text "         inv_select: [inventory_select] - inv_notify: [inventory_notify] - planet: [planet] \n         nodes: [spacenetnodes]\n         liftpos: [liftpos] - isc_spaceship_interchange: [isc_spaceship_interchange]" at topleft
         
         # mousepos
-        timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())]
+        timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())] # original for pc
+        #$ mousepos = renpy.get_mouse_pos()
         
         
-
-        
-        
+        # show click position
+        if renpy.variant("touch"):
+            add "images/target.png":
+                anchor (0.5,0.5)
+                pos mousepos
+            
         
         # copy mouse position to clipboard
-        key "c" action [Function(copytext, t=str(mousepos)), Notify("Mouse Position copied to Clipboard !")]
+        key "c" action [Function(copytext, t=str(mousepos)), Notify("Mouse position copied to clipboard!")]
         
         
         #text "pnc_nodes_visible: [pnc_nodes_visible]\n\n\n" at center
@@ -200,7 +206,7 @@ init:
 screen setpos():
     zorder 100
     # get every 0.1 sec mouse position
-    timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())]
+    timer 0.1 repeat True action [SetVariable("mousepos", renpy.get_mouse_pos())] # original for pc
     #$ mousepos = renpy.get_mouse_pos()
     
 

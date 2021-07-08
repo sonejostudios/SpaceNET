@@ -110,7 +110,6 @@ define config.window = "hide"
 
 
 ## Transitions used to show and hide the dialogue window
-
 define config.window_show_transition = Dissolve(.2)
 define config.window_hide_transition = Dissolve(.2)
 
@@ -120,7 +119,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 100
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0

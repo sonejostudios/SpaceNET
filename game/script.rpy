@@ -406,16 +406,13 @@ default preferences.system_cursor = True
 define config.hw_video = True
 define config.side_image_requires_attributes = False
 
-# enable model-based renderer, otherwise the game freezes on mobile devices
-#define config.gl2 = True
-
 
 # autosaves
 define config.autosave_slots = 4
 
 
 # disable renpy keys
-#(/renpy-7.4.1-sdk/renpy/common/00keymap.rpy)
+#(/renpy-7.4.4-sdk/renpy/common/00keymap.rpy)
 define config.keymap['self_voicing'] = []
 define config.keymap['clipboard_voicing'] = []
 define config.keymap['debug_voicing'] = []
@@ -444,6 +441,8 @@ define config.keymap['game_menu'] = [ 'K_ESCAPE', 'K_MENU', 'K_PAUSE']
 
 
 
+
+
 # see also in option.py
 init :
     
@@ -451,10 +450,10 @@ init :
     $ demo_version = False
     
     ## The version of the game.
-    define config.version = "1.12.6"
+    define config.version = "1.12.8"
     
     # build date. Set date for release.
-    $ build_date = "2021-06-18"
+    $ build_date = "2021-07-8"
     
     # game name
     define config.name = "SpaceNET"
@@ -475,8 +474,8 @@ init :
         define config.keymap['rollback'] = ['K_PAGEUP']#, 'mousedown_4']
         define config.keymap['rollforward'] = ['K_PAGEDOWN']#, 'mousedown_5']
         
-    
-    
+        
+        
     
     # overwrites for the demo version
     if demo_version == True:
@@ -484,8 +483,6 @@ init :
         define config.name = "SpaceNET-Demo"
         define build.name = "SpaceNET-Demo"
     
-
-
 
 
 
@@ -618,6 +615,12 @@ init :
     $ termfx_enable = 1
     $ shadow_enable = 1
     $ galaxy_enable = 1
+    
+    
+    # input promp position: 0=default (bottom), 1=top (for touch devices)
+    $ input_prompt_pos = 0
+    if renpy.variant("touch"):
+        $ input_prompt_pos = 1
     
 
     # multiplicator for stars amount. for android = 1, for pc = 4

@@ -218,8 +218,9 @@ label hidepaths:
     return
 
 
+
+
 label clickngo:
-    
     $ engine = "move"
     
     window hide # hide say window while pausing
@@ -235,24 +236,34 @@ label clickngo:
         $ inventory_select = ""
     
 
-
     # unflag moving
     $ moving = False
     
     
     
+
+
+    # needed for touch screen
+    if renpy.variant("touch"):
+        $ renpy.set_mouse_pos(position[0], position[1], duration=0)
     
     
     
     
     
-    # wait for click to move player to next node
+    # WAIT FOR CLICK to move player to next node
     pause
     
     
-    
-    
 
+
+    
+    # force get-set mousepos + short delay - needed for touch screen
+    if renpy.variant("touch"):
+        $ mousepos = renpy.get_mouse_pos()
+        pause 0.11
+    
+    
 
 
     # flag moving

@@ -229,8 +229,17 @@ label xylo_mountain2_spacenet_guy:
     sam "Welcome back, [playername]! {w=2.5} {nw}"
     m "Welcome to what? {w=2.} {nw}"
     sam "You don't remember? The Rebel Alliance! {w=3} {nw}"
-    m "Nope... {w=2.} {nw}"
     
+    menu:
+        "Nope...":
+            m "Nope... {w=2} {nw}"
+        
+        "The Rebel-what?":
+            m "The Rebel-what? {w=2.5} {nw}"
+            
+        "Tell me more!":
+            m "Tell me more! {w=2.5} {nw}"
+            
     sam "Do you remember the IOnet?{w=1} No? {w=1}Okay...{w=1} {nw}"
     sam "The IOnet was a free knowledge network. {w=3} {nw}"
     sam "We are a group of scientists and we are close to figure out a new energy source. {w=5} {nw}"
@@ -251,8 +260,18 @@ label xylo_mountain2_spacenet_guy:
     sam "Please, accept! {w=3} {nw}"
     sam "This new free energy will help us all... {w=3} {nw}"
     sam "I'm sure, with it, we will achieve to bring your memory back. {w=4} {nw}"
-    m "That sounds like a good deal... {w=3} {nw}"
-    m "I accept.{w=1.5}{nw}"
+    
+    menu:
+        "I accept.":
+            pass
+        
+        "That sounds like a good deal.":
+            m "That sounds like a good deal. {w=3} {nw}"
+        
+        "Well...":
+            m "Well...{w=1.5}{nw}"
+    
+    m "I accept.{w=2}{nw}"
     sam "This is great! {w=1.5} {nw}"
     
     
@@ -265,7 +284,15 @@ label xylo_mountain2_spacenet_guy:
         with flash
         m "Thank you very much.{w=1.5}{nw}"
         
-    m "What can I do?{w=1.5}{nw}"
+    menu:
+        "What can I do?":
+            m "What can I do?{w=2.5}{nw}"
+        
+        "How can I help?":
+            m "How can I help?{w=2.5}{nw}"
+        
+        "Go on!":
+            m "Go on!{w=2}{nw}"
     
     sam "Please, go to 4n0nym0u5, our main hacker.{w=3} {nw}"
     sam "She will inform you about the software side of SpaceNET.{w=3} {nw}"

@@ -192,7 +192,7 @@ label loop_isc_city_bar:
 
 
 
-# client east
+# client east girl
 label isc_bar_client_east:
     
     if isc_bar_client3_gem == True and inventory_select == "asteroid":

@@ -77,8 +77,9 @@ init:
     
 
 
-# xylo sea map2 sea up
+# xylo sea settlement
     $ cash_xylo_sea_map2 = 25
+    $ cash_xylo_sea_bar_letter = 100
     
     
 # xylo mountain map2

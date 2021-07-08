@@ -309,13 +309,13 @@ label xylo_sea_bar_client1:
         clientsea "You know what?{w=2.5}{nw}"
         clientsea "I think I'm a bit drunk.{w=2.5}{nw}"
         clientsea "But I don't care!{w=2.5}{nw}"
-        clientsea "I'll give you 100c for this favor.{w=3}{nw}"
+        clientsea "I'll give you [cash_xylo_sea_bar_letter]c for this favor.{w=3}{nw}"
         clientsea "It's worth it to me.{w=2.5}{nw}"
         clientsea "Now I have all I need!{w=2.5}{nw}"
         clientsea "And I can start a new life!{w=2.5}{nw}"
         clientsea "That's the best thing ever.{w=2.5}{nw}"
         
-        call io_cash(100) from _call_io_cash_10
+        call io_cash(cash_xylo_sea_bar_letter) from _call_io_cash_10
 
         m "Nice, thank you!{w=2.5}{nw}"
         clientsea "You are really welcome.{w=2.5}{nw}"

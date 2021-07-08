@@ -203,7 +203,7 @@ style say_dialogue:
     ypos gui.text_ypos
     
     #slow text mode
-    slow_cps 100
+    #slow_cps 100
 
     text_align gui.text_xalign
     layout ("subtitle" if gui.text_xalign else "tex")
@@ -223,12 +223,13 @@ screen input(prompt):
     style_prefix "input"
 
     window:
-
+        if input_prompt_pos == 1:
+            ypos 180
         vbox:
             xpos gui.text_xpos
             xanchor gui.text_xalign
             ypos gui.text_ypos
-
+            
             text prompt style "input_prompt"
             input id "input"
             
@@ -891,8 +892,8 @@ screen preferences():
                 
                 null height 20
                 
-                if not renpy.variant("touch"):
-                    
+                
+                if not renpy.variant("touch") or superdev == True:
                     vbox:
                         style_prefix "radio"
                         label _("Cursor Style")
@@ -906,19 +907,38 @@ screen preferences():
                     style_prefix "check"
                     #style_prefix "radio"
                     
-                    label _("Graphics*")
+                    label _("Graphics")
                     textbutton _("Disable CRT") action ToggleVariable("termfx_enable", true_value=0, false_value=1)
                     textbutton _("Disable Shadow") action ToggleVariable("shadow_enable", true_value=0, false_value=1)
                     textbutton _("Disable Galaxy") action ToggleVariable("galaxy_enable", true_value=0, false_value=1)
-                    #textbutton _("No Stars") action InvertSelected(Preference("transitions", "toggle"))
                     textbutton _("Disable Moving") action ToggleVariable("moving_speed", true_value=0, false_value=0.5)
                     
                     
                 null height 20
-                label _("{size=10}*Some of these settings only apply to the next scene.{/size}")
+                label _("{size=10}Some of these settings only apply to the next scene.{/size}")
                 null height 20
+                
+                
+                # Text Input position
+#~                 if renpy.variant("touch"):
+#~                     null height 20
+#~                     vbox:
+#~                         style_prefix "radio"
+#~                         label _("Text Input position")
+#~                         textbutton _("default") action SetVariable("input_prompt_pos", 0)
+#~                         textbutton _("on top") action SetVariable("input_prompt_pos", 1)
+#~                     null height 20
+#~                     #label _("{size=10}Needed for some touch devices, in case the virtual keyboard is hiding the input prompt.{/size}")
+                    
+                    
+                
+                
+                
+                #null height 20
+                
 
                 if superdev == True:
+                    
                     #null height 10
                     #vbox:
                     #    textbutton _("Enable OpenGL") action ToggleVariable("config.gl_enable", true_value=True, false_value=False)
