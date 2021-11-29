@@ -245,7 +245,7 @@ label xylo_mountain2_spacenet_guy:
     sam "We are a group of scientists and we are close to figure out a new energy source. {w=5} {nw}"
     sam "Really powerful.{w=1} We wanted to use this free energy to create a new world.{w=4} A better one... {w=2}{nw}"
     sam "But the corrupt government stopped us and put in jail almost all of us. {w=5} {nw}"
-    sam "And you were the guy who helped us restarting the network! {w=4} {nw}"
+    sam "And you were the person who helped us restarting the network! {w=4} {nw}"
     m "I'm sorry, but I can't remember anything! {w=3} {nw}"
     sam "Okay...{w=1} maybe they gave you some serum to erase your memory... {w=4.5} {nw}"
     sam "...{w=1} {nw}"

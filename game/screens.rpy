@@ -233,6 +233,8 @@ screen input(prompt):
             text prompt style "input_prompt"
             input id "input"
             
+
+            
     
     if engine == "move":
         on "show" action SetVariable("pnc_nodes_visible", False)

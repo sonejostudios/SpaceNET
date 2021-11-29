@@ -135,9 +135,7 @@ label xylo_sea_bunker:
         alpha 0.05
         
         
-    if liftpos == 1:  # level -2
-        show box:
-            pos (260,240)
+
             
 
     
@@ -150,7 +148,7 @@ label xylo_sea_bunker:
     
 
     $ nodeAA = (400, 200)
-    $ nodeBB = (-100, -100)
+    $ nodeBB = (325, 240)
     $ nodeCC = (-100, -100)
     $ nodeDD = (-100, -100)
 
@@ -163,6 +161,19 @@ label xylo_sea_bunker:
     $ pathBB = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, nodeCC, nodeDD)
     $ pathCC = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, nodeCC, nodeDD)
     $ pathDD = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, nodeCC, nodeDD)
+    
+    
+    if liftpos == 1:  # level -2
+        show box:
+            pos (260,240)
+        
+        $ pathA = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, (0, 0), (0, 0))
+        $ pathB = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, (0, 0), (0, 0))
+        $ pathC = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, (0, 0), (0, 0))
+        $ pathD = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, (0, 0), (0, 0))
+         
+        $ pathAA = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, (0, 0), (0, 0))
+        $ pathBB = (nodeA, nodeB, (0, 0), nodeD, nodeAA, nodeBB, (0, 0), (0, 0))
     
     
 
@@ -271,6 +282,12 @@ label loop_xylo_sea_bunker:
  
             
         if exitpos == 22:
+            if startpos == 22:
+                if inventory_select != "":
+                    call dialog_nosense from _call_dialog_nosense_74
+                else:
+                    m "This is a container. {w=2} {nw}"
+                    m "Nothing special. {w=2} {nw}"
             $ startpos = 22
 
             

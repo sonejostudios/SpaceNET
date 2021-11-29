@@ -86,6 +86,9 @@ screen spacemenu_text():
                     
                 elif planet == "xylo":
                     $ spacemenu_text = "Land on Xylo"
+                    
+                elif planet == "none":
+                    $ spacemenu_text = "Space"
                 
                 else:
                     $ spacemenu_text = "Fly to " + planet

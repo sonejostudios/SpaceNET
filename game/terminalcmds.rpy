@@ -45,7 +45,7 @@ label term_commands:
     Commands:
     locate = search in the space databank.
     home = show this screen.
-    More: exit, login, cheat, sos...
+    More: exit, login, cheat, reboot, sos...
     
     Phone:
     You can also make phone calls. For this,
@@ -976,6 +976,32 @@ label term_commands:
         
     if termtext == "history" :
         $ ShowMenu("history")() 
+        jump terminal
+        
+        
+        
+# reboot
+    if termtext == "reboot" :
+        call server_progressbar from _call_server_progressbar_17
+        call sound_scan from _call_sound_scan_10
+        with flash
+        jump terminal
+        
+        
+        
+# player's name
+    if termtext == playername:
+        call sound_connected from _call_sound_connected_43
+        $ showtext = """
+    [playername]
+    [ascii_line]
+    
+    That's you!
+    """
+        show text Text(showtext,text_align=termtext_align) at termtextpos
+        menu:
+            "Exit":
+                pass
         jump terminal
 
 
