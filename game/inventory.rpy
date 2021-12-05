@@ -348,6 +348,37 @@ screen inventory():
                         action SelectedIf(inventory_select == "asteroid"), SetVariable("inventory_select", "asteroid")
                     else:
                         action SelectedIf(inventory_select == "asteroid"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
+                        
+            
+            if inventory_item == "wood":
+                imagebutton idle inventory_dir + "wood_idle.png" selected_idle inventory_dir + "wood_selected_idle.png" selected_hover inventory_dir + "wood_selected_idle.png":
+                    if inventory_select != "wood":
+                        action SelectedIf(inventory_select == "wood"), SetVariable("inventory_select", "wood")
+                    else:
+                        action SelectedIf(inventory_select == "wood"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
+                        
+            
+            if inventory_item == "lighter":
+                imagebutton idle inventory_dir + "lighter_idle.png" selected_idle inventory_dir + "lighter_selected_idle.png" selected_hover inventory_dir + "lighter_selected_idle.png":
+                    if inventory_select != "lighter":
+                        action SelectedIf(inventory_select == "lighter"), SetVariable("inventory_select", "lighter")
+                    else:
+                        action SelectedIf(inventory_select == "lighter"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
+                        
+                        
+            if inventory_item == "batterywet":
+                imagebutton idle inventory_dir + "batterywet_idle.png" selected_idle inventory_dir + "batterywet_selected_idle.png" selected_hover inventory_dir + "batterywet_selected_idle.png":
+                    if inventory_select != "batterywet":
+                        action SelectedIf(inventory_select == "batterywet"), SetVariable("inventory_select", "batterywet")
+                    else:
+                        action SelectedIf(inventory_select == "batterywet"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
+                        
+            if inventory_item == "batterydry":
+                imagebutton idle inventory_dir + "batterydry_idle.png" selected_idle inventory_dir + "batterydry_selected_idle.png" selected_hover inventory_dir + "batterydry_selected_idle.png":
+                    if inventory_select != "batterydry":
+                        action SelectedIf(inventory_select == "batterydry"), SetVariable("inventory_select", "batterydry")
+                    else:
+                        action SelectedIf(inventory_select == "batterydry"), Hide("selected_item"), Show("selected_item"), Hide("inventory")
                 
             
     
@@ -387,7 +418,12 @@ screen inventory():
     "module": "This is the hyperspace module of a spaceship.\nI guess it is from the spaceship wreck.",
     "cord": "This is a thin cord.\nI'm sure it will be useful.",
     "magnetcord": "This is a thin cord with a magnet.\nGreat tool for fishing metal things.",
-    "asteroid": "This is a tiny piece of an asteroid.\nNice souvenir." }
+    "asteroid": "This is a tiny piece of an asteroid.\nNice souvenir.",
+    "wood": "These are some driftwood sticks from the beach.\nThey could be useful.",
+    "lighter": "This is an old lighter.\nIt is still working!",
+    "batterywet": "This is the boat's battery pack.\nIt is totally wet and not usable like this.",
+    "batterydry": "This is the boat's battery pack.\nNow it is dry, but still empty." }
+    
     
 
     # change spacenet item info if copied to disk
@@ -397,6 +433,10 @@ screen inventory():
     # change gem to singular if only one
     if gems == 1:
         $ item_info_dict["gem"] = "It is a precious gem.\nI've got [gems] out of [maxgems] gems."
+        
+    # sett batery charget
+    if battery_full == True:
+        $ item_info_dict["batterydry"] = "This is the boat's battery pack.\nNow it is dry, full and functional!"
     
     
     
@@ -629,7 +669,7 @@ label remove_note(i):
 
 
 
-# removable notes
+# removable notes on notebook
 init:
     $ sam_hacker_meeting_text_workaround = "Meet 4n0nym0u5 in space around " + str(hacker_pos)
     $ note_locate_asteroids = "Terminal: locate asteroids"

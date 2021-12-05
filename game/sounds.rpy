@@ -4,8 +4,6 @@
 
 
 init:
-    $ steps_sound = "concrete"
-    
     $ renpy.music.register_channel("alarm_channel", mixer=None, loop=None, stop_on_mute=True, tight=False, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=False)
     $ renpy.music.set_volume(0.5, delay=0, channel='music')
     
@@ -13,6 +11,8 @@ init:
     # atmo channel
     $ renpy.music.register_channel("atmo", mixer="atmo", loop=True, stop_on_mute=True, tight=True, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=False)
     #$ renpy.music.set_volume(0.5, delay=0, channel='atmo')
+    $ renpy.music.register_channel("atmo2", mixer="atmo", loop=True, stop_on_mute=True, tight=True, file_prefix='', file_suffix='', buffer_queue=True, movie=False, framedrop=False)
+    
     
     
     # register atmo and alarm to sound instead of music???
@@ -147,7 +147,32 @@ label sound_small_propulsion:
     play audio "sounds/small-propulsion.ogg"
     return
     
+
+label sound_title:
+    play sound "sounds/title.ogg"
+    return
+
+
+
+label sound_waterstone:
+    play audio "sounds/water-stone.ogg"
+    return
+
+
+label sound_boat_start:
+    play sound "sounds/boat-start.ogg"
+    return
     
+label sound_motor_broken:
+    play sound "sounds/motor-broken.ogg"
+    return
+    
+
+
+
+
+
+
     
 #label sound_steps:
     #if steps_sound == "concrete":
@@ -174,9 +199,7 @@ label atmo_reactor:
 
     
     
-label sound_title:
-    play sound "sounds/title.ogg"
-    return
+
     
     
     
@@ -198,9 +221,20 @@ label atmo_village:
     $ renpy.music.play("sounds/village.ogg", channel="atmo", fadein=0.5, fadeout=0.5, tight=True, if_changed=True)
     return
     
+    
+    
 label atmo_sea:
     $ renpy.music.play("sounds/sea.ogg", channel="atmo", fadein=1, fadeout=1, tight=True, if_changed=True)
     return
+    
+label atmo_boat:
+    $ renpy.music.play("sounds/boat-loop.ogg", channel="atmo2", fadein=1, fadeout=1, tight=True, if_changed=True, loop=True)
+    return
+    
+label atmo_nature:
+    $ renpy.music.play("sounds/nature.ogg", channel="atmo2", fadein=1, fadeout=1, tight=True, if_changed=True)
+    return
+    
     
     
 label atmo_ground:
@@ -231,10 +265,7 @@ label atmo_spaceship_station:
     $ renpy.music.play("sounds/spaceship-station.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
     return
     
-    
-#label atmo_nature:
-#    $ renpy.music.play("sounds/nature.ogg", channel="atmo", fadein=0, fadeout=0, tight=True, if_changed=True)
-#    return
+
 
 
 

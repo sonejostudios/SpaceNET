@@ -105,6 +105,7 @@ image bgcolor = "#112119"
 image black = "#000000"
 image white = "#ffffff"
 image green = "#8dd35f"
+image blue = "#0000FF" 
 
 
 
@@ -177,7 +178,9 @@ image spaceship:
         "spaceshiptype=='2'", "images/spaceship/spaceship2u.png",
         "spaceshiptype=='3'", "images/spaceship/spaceship3u.png",
         "spaceshiptype=='4'", "images/spaceship/spaceship4u.png",
-        "spaceshiptype=='4b'", "images/spaceship/spaceship4ub.png")
+        "spaceshiptype=='4b'", "images/spaceship/spaceship4ub.png",
+        "spaceshiptype=='boat'", "images/boat.png")
+        
 
 # spaceship side 
 image spaceshipside:
@@ -225,8 +228,13 @@ image spaceship3s:
 image spaceship4s:
     "images/spaceship/spaceship4s.png"
     anchor (0.5,0.5)
+    
+    
+    
 
-
+image boat:
+    "images/boat.png"
+    anchor (0.5,0.5)
      
      
         
@@ -359,6 +367,22 @@ image lift_top:
 image cord:
     "images/inventory/cord_idle.png"
     anchor (0.5, 0.5)
+    
+image lighthouse:
+    "images/lighthouse.png"
+    anchor (0.5, 0.06)
+    
+image bonfire:
+    "images/bonfire.png"
+    anchor (0.5, 0.5)
+    
+image batterywet:
+    "images/inventory/batterywet_idle.png"
+    anchor (0.5, 0.5)
+    
+image batterydry:
+    "images/inventory/batterydry_idle.png"
+    anchor (0.5, 0.5)
 
 
 # smoking
@@ -450,10 +474,10 @@ init :
     $ demo_version = False
     
     ## The version of the game.
-    define config.version = "1.12.9"
+    define config.version = "1.13.0"
     
     # build date. Set date for release.
-    $ build_date = "2021-11-29"
+    $ build_date = "2021-12-05"
     
     # game name
     define config.name = "SpaceNET"
@@ -491,6 +515,7 @@ init :
 
     # spaceship type, as string, so it is possible to add 1b, 1c etc.
     $ spaceshiptype = "1"
+    $ spaceshiptype_bak = spaceshiptype
     $ spaceshiptype_name = "SD-2"
     
     
@@ -500,6 +525,8 @@ init :
     $ playername = "hero"
     
     $ tutorial_done = False
+
+    $ game_end = False
     
     
     $ planet = "megaship"
@@ -544,7 +571,8 @@ init :
     #default inventory = ["cable", "flashlight", "mirror", "bulb", "spacenet", "screwdriver", "gem"]
     default inventory = ["newspaper", "screwdriver", "spacesuit", "bulb", "mirror", "spacenet", "accesscard", "rope", 
                         "cable", "pick", "dynamite", "minidroid", "gem", "star", "notebook", "laser", "key", "letter", "hook",  
-                        "robotcard", "knife", "cards", "shovel", "cord", "magnetcord", "module", "magnet", "asteroid", "flashlight"]
+                        "robotcard", "knife", "cards", "shovel", "cord", "magnetcord", "module", "magnet", "asteroid", "flashlight", 
+                        "wood", "lighter", "batterywet", "batterydry"]
     
     $ inventory_select = ""
     $ inventory_notify = ""
@@ -554,7 +582,7 @@ init :
     #default planetlist = ["megaship", "xylo"]
     
     $ gems = 0
-    $ maxgems = 15 
+    $ maxgems = 16
     
     $ active_nodes_amount = 0
     $ max_nodes_amount = 5 
@@ -591,6 +619,11 @@ init :
     # asteroids
     $ spaceship_broken = False
     $ asteroid_collision = False
+    
+    
+    #boat trip
+    $ xylo_boat_trip = False
+
     
     
     
@@ -706,7 +739,7 @@ label start:
     #$ xylo_mine_minitrain_room_pick = False
     
     
-    # for final end only
+    # for final end only - uncomment all for real end
     #$ active_nodes_amount = 5
     #$ cargo_exploded = 2
     #$ intercom_sat = True 

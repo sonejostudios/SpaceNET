@@ -473,6 +473,14 @@ label info_panel:
     image symnoentry:
         "images/symbols/symnoentry.png"
         anchor (0.5,0.5)
+        
+    image symisland:
+        "images/symbols/symisland.png"
+        anchor (0.5,0.5)
+        
+    image symboat:
+        "images/symbols/symboat.png"
+        anchor (0.5,0.5)
     
     
     
@@ -520,6 +528,16 @@ label info_panel:
             xpos 0.5
             anchor (0.5, 0.5)
             
+    if info_panel_symbol == "island":
+        show symisland: 
+            ypos 0.25
+            xpos 0.5 
+            
+    if info_panel_symbol == "boat":
+        show symboat: 
+            ypos 0.25
+            xpos 0.5 
+            
                    
         
     #shadow
@@ -563,6 +581,8 @@ label info_panel:
     hide symquake
     hide symnoentry
     hide sysnode
+    hide symisland
+    hide symboat
     
     $ info_panel_symbol = ""
     $ showtext = ""
@@ -579,7 +599,6 @@ label info_panel:
 
 
 # GAME END
-    
 label game_end_anim:
     $ pnc_nodes_visible = False
     
@@ -598,12 +617,15 @@ label game_end_anim:
         
     if shadow_enable == 1:
         show shadow at truecenter
-    #m "Yeah!{w=2}{nw}"
+    
+    # spaceship away anim
     show spaceshipside:
         pos (400,240)
         linear 10 zoom 0 pos (700, 240)
         
     pause 10
+    
+    
     #"YOU WON THE GAME!"
     call end_background from _call_end_background_1
     
@@ -703,17 +725,12 @@ label end_background:
 
 label end_finished:
     $ pnc_nodes_visible = False
-        
-    # SpaceNET
     
     #set percents - gems
     $ game_percents = 100 - maxgems + gems
  
-    
-    with dissolve
 
-    #call music_bar_village
-    
+    with dissolve
     call sound_hyperspace from _call_sound_hyperspace_6
     
     show spacenet_logo
@@ -722,14 +739,9 @@ label end_finished:
         pos (400,360)
         alpha 0.5
         
-    
     with Dissolve(2)
     
     pause
-    
-    #hide spacenet_logo
-    #with Dissolve(2)
-    
     hide spacenet_logo
     hide text
     with Dissolve(2)

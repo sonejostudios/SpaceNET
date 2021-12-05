@@ -5,11 +5,11 @@
 label surface_cargo:
     
     
-    show screen notify("space cargo")
+    show screen notify("Space Cargo")
     
     
     $ airport1 = (800,1200)
-    $ airportname1 = "aeration tube"
+    $ airportname1 = "Aeration Tube"
     
     $ airport2 = (0,0)
     $ airportname2 = ""

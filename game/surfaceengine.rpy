@@ -11,7 +11,8 @@ image surface:
         "planet=='demo'", "images/surfaces/surface1.png",
         "planet=='cargo'", "images/surfaces/surface_cargo.png",
         "planet=='isc'", "images/surfaces/surface_isc.png",
-        "planet=='asteroids'", "images/surfaces/surface_asteroids.png")
+        "planet=='asteroids'", "images/surfaces/surface_asteroids.png",
+        "planet=='xylo_sea'", "images/surfaces/surface_xylo_sea.png")
 
 
 #######
@@ -46,7 +47,8 @@ init:
 
 
 screen surface_screen():
-    imagebutton auto "images/tospace_%s.png" action Jump("takeoff_from_surface_to_space") align (1.0, 1.0)
+    if xylo_boat_trip == False:
+        imagebutton auto "images/tospace_%s.png" action Jump("takeoff_from_surface_to_space") align (1.0, 1.0)
 
 
 
@@ -59,13 +61,7 @@ label surface:
     $ inventory_select = ""
     
     show screen surface_screen
-    
-    
-    stop atmo
-    #call atmo_spaceship_hum
-    call music_intro from _call_music_intro_2
-    
-    
+
     
     # hide inventory button
     $ inventory_button = False
@@ -73,10 +69,26 @@ label surface:
     scene bgcolor
     
     
+    # show space
     if planet in ["cargo", "isc", "asteroids"]:
         call show_space from _call_show_space_22
         
     
+    # if sea boat trip
+    if xylo_boat_trip == False:
+        stop atmo
+        call music_intro from _call_music_intro_2
+    else:
+        call atmo_sea from _call_atmo_sea_3
+        call atmo_boat from _call_atmo_boat
+        
+        show blue:
+            alpha 0.0
+            ease 2 alpha 0.14
+            ease 2 alpha 0.0
+            repeat
+    
+
     
     
     if shadow_enable == 1:
@@ -167,6 +179,8 @@ label movescroll:
         call surface_borders from _call_surface_borders_2
     if shippos[1] == 1600 and mousepos[1] > 340: #1400
         call surface_borders from _call_surface_borders_3
+        
+        
 
     
     # set new position if position is not over bg boundaries 
@@ -286,15 +300,23 @@ label takeoff_from_surface_to_space:
 
 # landing to spaceports
 label landing:
+    
+    
+    
+    
  
     menu:
         #"take off to space":
         #    jump takeoff_from_surface_to_space
-        "Fly":
+        "Fly" if planet != "xylo_sea":
             $ ingame = False
             pass
             
-        "Land":
+        "Navigate" if planet == "xylo_sea":
+            $ ingame = False
+            pass
+            
+        "Land" if planet != "xylo_sea":
             hide screen surface_screen
             
             $ pnc_nodes_visible = True
@@ -361,7 +383,22 @@ label landing:
                     jump asteroid4
 
                     
-                    
+        "Berth" if planet == "xylo_sea":
+            hide screen surface_screen
+            
+            $ pnc_nodes_visible = True
+            $ ingame = False
+
+            if planet == "xylo_sea":
+                # xylo sea colony
+                if shippos == (0,800):
+                    $ startpos = 4
+                    jump xylo_map3
+                            
+                # xylo sea island
+                if shippos == (1400,0):
+                    $ startpos = 4
+                    jump xylo_sea_island
                     
                 
         

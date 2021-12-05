@@ -1,8 +1,11 @@
 
+
+
 ###########################################
 label xylo_map3:
     
     call atmo_sea from _call_atmo_sea
+    stop atmo2
     
     image xylo_map3 = imagemapsdir + "xylo_sea_p3.png"
     
@@ -11,8 +14,41 @@ label xylo_map3:
     
     show xylo_map3
     show waves behind xylo_map3
+    
+    $ inventory_button = True
+    
 
 
+    if xylo_boat_trip == True:
+        if planet == "xylo":
+            show boat:
+                pos (546,420)
+                rotate 90
+        else:
+            if shadow_enable == 1:
+                show shadow:
+                    pos (546,420)
+            
+            show boat:
+                pos (300,550)
+                rotate 0
+                easein 3 pos (546,420) rotate 90
+            
+            call sound_propulsion from _call_sound_propulsion_1
+            pause 3
+            call sound_door from _call_sound_door_79
+            show boat:
+                pos (546,420) 
+                rotate 90
+            
+    
+    # reset planet and spaceship to xylo
+    $ planet = "xylo"
+    $ spaceshiptype = spaceshiptype_bak
+    #"[spaceshiptype]"
+
+    
+    
     
     # set all variables for the map (nodes and path)
     $ nodeA = (300,150)
@@ -21,7 +57,7 @@ label xylo_map3:
     $ nodeD = (540,360)
     
     $ nodeAA = (260,40)
-    $ nodeBB = (780,240)
+    $ nodeBB = (538, 417)
     $ nodeCC = (400,460)
     $ nodeDD = (40,350)
     
@@ -34,6 +70,9 @@ label xylo_map3:
     $ pathBB = ((0,0), nodeB, (0,0), (0,0), (0,0), (0,0), (0,0), (0,0))
     $ pathCC = ((0,0), (0,0), nodeC, (0,0), (0,0), (0,0), (0,0), (0,0))
     $ pathDD = ((0,0), (0,0), (0,0), nodeD, (0,0), (0,0), (0,0), nodeDD)
+    
+    
+    
 
 label loop_xylo_map3:
 
@@ -68,7 +107,41 @@ label loop_xylo_map3:
         
     if exitpos == 4:
         if startpos == 4:
-            m "The view is quite nice here. {w=3} {nw}"
+            
+            
+            
+            if xylo_boat_trip == False:
+                m "The view is quite nice here. {w=3} {nw}"
+            
+            
+            
+            else:
+                $ planet = "xylo_sea"
+                $ shippos = (0,800)
+                $ spaceshiptype_bak = spaceshiptype
+                $ spaceshiptype = "boat"
+                
+                call sound_door from _call_sound_door_104
+                hide player
+                pause 0.5
+                
+                #call sound_propulsion
+                call sound_boat_start from _call_sound_boat_start
+                pause 1
+                show boat:
+                    pos (546,420)
+                    rotate 90
+                    easeout 3 pos (1000,420)
+                
+                pause 3
+                
+                $ direction = 90
+                jump surface_xylo_sea
+                
+                m "This boat looks great. {w=3} {nw}"
+                m "I'd love to use it! {w=3} {nw}"
+           
+            
         $ startpos = 4
         jump loop_xylo_map3 
     
@@ -94,7 +167,7 @@ label loop_xylo_map3:
 
 label xylo_sea_map3_info:
     
-    $ info_panel_symbol = ""
+    $ info_panel_symbol = "boat"
     $ showtext = """
     
     
@@ -106,7 +179,6 @@ please call 05060708.
 
 Just type our phone number in the terminal,
 we will be happy to give you more information.
-
 
     """
     

@@ -166,7 +166,7 @@ screen superdev():
         text "[mousepos]" at left
         
         # move engine values
-        text "exitpos: [exitpos]\nstartpos: [startpos]\ngotopos: [gotopos]\nmoving: [moving]\n\n" at right
+        text "exitpos: [exitpos]\nstartpos: [startpos]\ngotopos: [gotopos]\nmoving: [moving]\nshippos: [shippos]\n\n" at right
         
         # surface values
         #text "shippos [shippos]  - maplink [maplink] - ingame [ingame]" at center

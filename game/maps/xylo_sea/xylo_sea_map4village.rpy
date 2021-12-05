@@ -6,8 +6,10 @@ init:
     
     default xylo_sea_village_fisher_flags = [0,0,0,0]
 
-
+# settlement center
 label xylo_map4:
+    
+    $ spaceshiptype_bak = spaceshiptype
     
     stop music fadeout 1.0
     call atmo_ground from _call_atmo_ground_1

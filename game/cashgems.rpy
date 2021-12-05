@@ -1,7 +1,7 @@
 # cash and gems variables and places
 
 
-# gems (True = in place, Flase = found)
+# gems (True = in place, False = found)
 init:
 
 # xylo village bar gems guy (first gem)
@@ -18,6 +18,9 @@ init:
     
 # xylo mountain2
     $ xylo_mountain_gem = True
+    
+# xylo island cabin
+    $ xylo_island_cabin_gem = True
     
 # megaship cell2
     $ megaship_cell2_gem = True
@@ -77,9 +80,10 @@ init:
     
 
 
-# xylo sea settlement
+# xylo sea
     $ cash_xylo_sea_map2 = 25
     $ cash_xylo_sea_bar_letter = 100
+    $ cash_xylo_sea_cabin = 49
     
     
 # xylo mountain map2

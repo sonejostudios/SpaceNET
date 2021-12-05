@@ -199,16 +199,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.49999999"
-     inkscape:cx="-65.945151"
-     inkscape:cy="929.18235"
+     inkscape:zoom="3.9999999"
+     inkscape:cx="741.1764"
+     inkscape:cy="124.99598"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1680"
-     inkscape:window-height="1014"
-     inkscape:window-x="116"
-     inkscape:window-y="0"
+     inkscape:window-width="1896"
+     inkscape:window-height="1017"
+     inkscape:window-x="1680"
+     inkscape:window-y="1050"
      inkscape:window-maximized="1"
      inkscape:snap-global="false"
      showguides="true"
@@ -2149,5 +2149,35 @@
        inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SfIoEngine2/game/images/lift.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
+    <path
+       id="path1134"
+       style="fill:#8dd35f;fill-opacity:1;stroke-width:0.0514722"
+       d="m 194.86269,46.008787 c 0.006,0.0061 0.77696,-0.18122 1.39562,-0.27217 0.98934,-0.145443 1.72112,0.27787 1.75999,0.29279 0.0389,0.01492 0.0707,0.06291 0.0707,0.106731 0,0.117584 -0.79738,-0.01291 -1.50795,0.278998 l -0.26331,0.133352 0.4395,0.165543 c 1.92043,0.722387 2.91252,2.451286 3.35368,4.473504 0.0733,0.335854 0.15039,1.119128 0.11835,1.202599 -0.0142,0.03708 -0.0612,0.06728 -0.10431,0.06728 -0.0431,0 -0.45225,-0.364892 -0.90927,-0.810768 -0.45702,-0.445876 -1.10822,-1.049968 -1.44728,-1.342486 -0.68331,-0.589506 -1.4765,-1.578523 -1.51335,-1.54167 -0.013,0.01298 -6.3e-4,0.09109 0.0271,0.173529 0.10874,0.321738 0.45499,1.090001 0.45499,1.616937 0,1.535602 -0.55233,2.987658 -1.56659,4.117734 -0.31505,0.351022 -0.54862,0.53031 -0.61014,0.468792 -0.0272,-0.02715 -0.0118,-0.317954 0.0373,-0.707669 0.18133,-1.439539 0.24083,-2.209566 0.27034,-3.495012 0.0295,-1.286712 -0.2752,-2.397404 -0.38046,-2.585504 -0.0714,-0.127667 -0.83963,1.154416 -1.30376,2.176006 -0.81597,1.796035 -1.38929,4.423295 -1.58645,6.826668 0.21253,-0.0082 0.42558,-0.01233 0.63869,-0.01232 3.75978,6e-6 7.08856,1.271581 8.23451,3.145537 h -16.46876 c 0.8031,-1.31333 2.70678,-2.363321 5.17076,-2.851967 0.0992,-0.703138 0.2972,-1.674877 0.47896,-2.320978 0.61423,-2.1835 1.58243,-4.118858 3.26001,-6.516879 0.32461,-0.464 0.5694,-0.850754 0.54406,-0.859414 -0.0582,-0.0199 -0.60968,0.256542 -0.98114,0.492028 -0.76663,0.485999 -1.81868,1.894784 -2.90764,3.065671 -0.39494,0.424642 -0.75012,0.790622 -0.78923,0.81343 -0.12647,0.07377 -0.14419,-0.122108 -0.0569,-0.631431 0.3922,-2.287793 1.86095,-4.469011 4.06449,-5.105177 l 0.42717,-0.12343 -0.30446,-0.114718 c -1.00504,-0.378825 -3.05433,-0.371332 -5.28452,-0.371743 -1.13601,-2.14e-4 -1.17151,-0.02337 -0.60118,-0.392315 0.94938,-0.614148 2.09629,-0.945352 3.27381,-0.945816 1.05416,-4.16e-4 2.16615,0.114519 2.8574,0.352365 0.69126,0.237846 1.08763,0.377279 1.70927,1.031969 z"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/symbols/symisland.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       sodipodi:nodetypes="cssscccsssssscssssssscccccsssssscccsssszcc" />
+    <g
+       id="g1149"
+       inkscape:export-filename="/media/sda7/Programming/RenPy/RenPIGames/SpaceNET/game/images/symbols/symboat.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         id="path1121"
+         style="fill:#8dd35f;stroke:#8dd35f;stroke-width:0.489674;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:37.7953;stroke-opacity:1"
+         d="m 183.38047,29.109455 a 8.2106795,6.0339773 0 0 0 7.74536,4.033118 8.2106795,6.0339773 0 0 0 7.74633,-4.033118 z" />
+      <rect
+         style="fill:#8dd35f;stroke-width:0.417511;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:37.7953"
+         id="rect1126"
+         width="1.7818643"
+         height="5.3265696"
+         x="190.23538"
+         y="23.798822"
+         ry="0.089664206" />
+      <path
+         id="rect1132"
+         style="fill:#8dd35f;fill-opacity:1;stroke:#8dd35f;stroke-width:0.629135;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:37.7953;stroke-opacity:1"
+         d="m 192.55175,15.758076 -7.82766,11.041781 h 7.68238 c 0.0804,0 0.14528,-0.05287 0.14528,-0.118936 z" />
+    </g>
   </g>
 </svg>

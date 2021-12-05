@@ -11,8 +11,18 @@ label surface_borders:
                                                 "Why going so far?", 
                                                 "No no, I don't want to fly there.", 
                                                 "I don't have time to fly around..."])
+    
+    if xylo_boat_trip == True:
+        $ say_surfaceborder = renpy.random.choice(  ["I should not navigate too far away...", 
+                                                    "This seems interesting, but it is too far away.", 
+                                                    "Why going so far?", 
+                                                    "No no, I don't want to navigate there.", 
+                                                    "I don't have time to navigate around..."])
+                                            
     m "[say_surfaceborder] {w=2.0} {nw}"
     return
+    
+
     
 
 
@@ -102,6 +112,13 @@ label dialog_nosense:
 label dialog_notfitting:
     m "There's no way I'm fitting into this!{w=2} {nw}"
     return
+    
+    
+label dialog_nobonfire:
+    if inventory_select == "wood":
+        m "This is not a good place for a bonfire... {w=3.5} {nw}"
+        $ inventory_select = ""
+    return
      
      
 label dialog_ndd:
@@ -139,7 +156,7 @@ label dialog_joke:
 
 label npc_dont_need_item(npc):
     
-    if inventory_select in ["gem", "magnetcord"]:
+    if inventory_select in ["gem", "magnetcord", "batterywet", "batterydry"]:
         $ npc_noneed_say = renpy.random.randint(1, 3)
     else:
         $ npc_noneed_say = renpy.random.randint(1, 9)
@@ -181,4 +198,11 @@ label npc_dont_need_item(npc):
 
 
 
+label xylo_island_waiting:
+    m "Now I need to wait...{w=2.5} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} {nw}"
+    pause 2
+    m "and wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} wait...{w=1} {nw}"
+    pause 1
+    m "Okay, that should be enough now. {w=3} {nw}"
+    return
 

@@ -2,8 +2,11 @@
 
 
 label credits:
+
+    $ final_music = renpy.music.get_playing(channel=u'music')
     
-    stop music fadeout 1.0
+    if final_music != "music/outro.ogg":
+        stop music fadeout 1.0
     
 
     hide spacenet_logo
@@ -18,11 +21,11 @@ label credits:
         call end_background from _call_end_background
         with Dissolve(2)
 
-        
-    
+
     pause 1
     
-    call music_outro from _call_music_outro
+    if final_music != "music/outro.ogg":
+        call music_outro from _call_music_outro
 
 
     show text "A game by\nVincent Rateau" at truecenter
@@ -121,6 +124,9 @@ proaudioninja
 anoesj
 frankelmedico
 yevgverh
+bone666138
+sunupi
+lonemonk
 
 freesound.org
 
@@ -147,7 +153,7 @@ https://github.com/sonejostudios/SpaceNET
     show text Text(showtext,text_align=0.5):
         anchor (0.5, 1)
         pos (400, 480)
-        linear 34 pos (400, -1800) 
+        linear 34 pos (400, -1850) 
 
     
     

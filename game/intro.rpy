@@ -144,8 +144,6 @@ label intro1:
 
 
     
-    
-    
     show screen notify("Somewhere in space")
 
     show screen termfx

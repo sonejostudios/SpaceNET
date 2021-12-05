@@ -322,13 +322,14 @@ label term_commands:
         call sound_connected from _call_sound_connected_13
         pause 1
         
-        radio "Welcome to the Sea View Boat Company.{w=3.0} {nw}"
+        radio "Welcome to the Sea View Boat Company.{w=3.5} {nw}"
+        radio "What can I do for you?{w=3.0} {nw}"
         
         
         $ questions = ["Hello!{w=1} {nw}", 
-                        "Have you heard about SpaceNET? {w=2.0} {nw}", 
-                        "I'd like to have some info about the boat trips on the sea.{w=4.0} {nw}", 
-                        "Bye-bye.{w=2.0} {nw}"]
+                        "Have you heard about SpaceNET? {w=2.5} {nw}", 
+                        "I'd like to rent a boat.{w=2.5} {nw}", 
+                        "I'm fine, thanks.{w=2.0} {nw}"]
         
         while True:
             menu:
@@ -344,15 +345,43 @@ label term_commands:
                     m "[questions[1]]"
                     radio "No, I don't know what you are talking about.{w=3} {nw}"
                     radio "We are a boat rental company, not a tourist information center!{w=4.5} {nw}"
-                    m "Okay, bye!{w=1.5} {nw}"
                     $ xylo_sea_boat_company_call_flags[1] = 1
                     
                     
-                "[questions[2]]" if xylo_sea_boat_company_call_flags[0] == 1:
+                "[questions[2]]" if xylo_boat_trip == False:
                     m "[questions[2]]"
-                    radio "Oh yes, for sure!{w=2.0} {nw}"
-                    radio "Unfortunately, we have no free boat for rent right now.{w=3.0} {nw}"
-                    radio "Please call us later, thanks!{w=3.0} {nw}"
+
+                    radio "Oh yes, for sure.{w=2.5} {nw}"
+                    radio "You can rent a boat for one, two or three days.{w=4} {nw}"
+                    radio "Which offer do you want?{w=3} {nw}"
+                    
+                    menu:
+                        "1 day = 49c":
+                            $ cash_xylo_sea_cabin = 49
+                        "2 days = 89c":
+                            $ cash_xylo_sea_cabin = 89
+                        "3 days = 119c":
+                            $ cash_xylo_sea_cabin = 119
+                        
+                        "Nothing, thanks.":
+                            m "Nothing, thanks.{w=2.0} {nw}"
+                            $ termtext = "home"
+                            jump terminal
+                            
+                    if coins >= cash_xylo_sea_cabin:
+                        call io_cash(-cash_xylo_sea_cabin) from _call_io_cash_26
+
+                        # set amount (rounded) for island cabin
+                        $ cash_xylo_sea_cabin = cash_xylo_sea_cabin + 1
+                        
+                        radio "Alright!{w=2.0} {nw}"
+                        radio "A boat will wait for you at the pier.{w=3.5} {nw}"
+                        radio "Enjoy the trip!{w=2.0} {nw}"
+                        $ xylo_boat_trip = True
+                        
+                    else:
+                        m "I don't have enough money!{w=3.5} {nw}"
+
                 
                 "[questions[3]]":
                     m "[questions[3]]"
@@ -360,6 +389,73 @@ label term_commands:
                     
                     $ termtext = "home"
                     jump terminal
+
+
+
+
+# command 00003477 - Paradise Island Company
+    if termtext == "003477" :
+        $ showtext = """
+    Calling 
+    [ascii_line]
+    
+    Calling [termtext]...
+    """
+        show text Text(showtext,text_align=termtext_align) at termtextpos
+        
+        call sound_connected from _call_sound_connected_44
+        pause 1
+        
+        radio "Welcome to the Paradise Island Company!{w=3.5} {nw}"
+        
+        if xylo_sea_cabin_door_open == False:
+            menu:
+                "Help!":
+                    m "Help!{w=1.5} {nw}"
+                "I have to tell you something.":
+                    m "I have to tell you something.{w=3} {nw}"
+                "Do you know what?":
+                    m "Do you know what?{w=2} {nw}"
+                    
+            m "I was on Paradise Island, but my boat ran out of power.{w=4} {nw}"
+            m "I was trapped on the island!{w=3.5} {nw}"
+            radio "Well... there is a cabin with some emergency battery packs.{w=4.0} {nw}"
+            radio "You didn't find them, did you?{w=3} {nw}"
+            m "Well, the cabin was closed...{w=3} {nw}"
+            radio "Really? Let me see...{w=2.5} {nw}"
+            m "But don't worry, I managed to...{w=3} {nw}"
+            menu:
+                "...escape the island!":
+                    m "...escape the island!{w=2.5}{nw}"
+                "...recharge my battery pack!":
+                    m "...recharge my battery pack!{w=2.5}{nw}"
+                "...make a bonfire!":
+                    m "...make a bonfire!{w=2.5}{nw}"
+                "...electrocute myself!":
+                    m "...electrocute myself!{w=2.5}{nw}"
+                
+            radio "Wait. Well, you are right. The cabin's door is closed. This is strange.{w=4.5} {nw}"
+            m "...as I said, I figured out a way...{w=3} {nw}"
+            radio "I'm really sorry. Somebody closed the door and didn't tell me.{w=4} {nw}"
+            m "...as I said, this...{w=2} {nw}"
+            radio "I will open it remotely.{w=3} {nw}"
+            m "...I mean, I don't need...{w=3} {nw}"
+            radio "Wait...{w=1.5} {nw}"
+            m "...but...{w=1.5} {nw}"
+            radio "Okay! Now it is open again.{w=3} {nw}"
+            radio "Good.{w=1.5} {nw}"
+            radio "What do you want to say?{w=3} {nw}"
+            $ xylo_sea_cabin_door_open = True
+            
+        m "...{w=1.5} {nw}"
+        m "Never mind.{w=2} {nw}"
+        radio "Alright. If you need anything, just call again.{w=3.5} {nw}"
+        radio "Bye!{w=1.5} {nw}"
+
+        $ termtext = "home"
+        jump terminal
+
+
 
 
 # command 01020304 - a.r.k corporation
@@ -953,6 +1049,9 @@ label term_commands:
 
 
 
+
+
+
 # access game menu from terminal
     if termtext == "save" :
         $ ShowMenu("save")() # extra () needed
@@ -1045,6 +1144,8 @@ label term_commands:
 #~                 hide vendor_xylo
 #~                 jump terminal
         
+
+
 
 
 
