@@ -106,7 +106,6 @@ label cockpit:
     #hide screen buttons
     #hide screen cockpit_screen
     
-    
     #$ space_terminal = True
     
     $ inventory_select = ""

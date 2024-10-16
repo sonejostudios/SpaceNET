@@ -433,7 +433,7 @@ label land_to_planet:
             jump space_loop
         
         else:
-            if "pick" in inventory and "laser" in inventory:
+            if "pick" in inventory and "laser" in inventory: # the two item needed to repair the spaceship and escape the asteroids
                 call landing_space_anim from _call_landing_space_anim_5
                 $ landing = True
 

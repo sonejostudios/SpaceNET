@@ -42,9 +42,10 @@ label xylo_map3:
                 rotate 90
             
     
-    # reset planet and spaceship to xylo
+    # reset planet and spaceship to xylo and surface type (back to normal)
     $ planet = "xylo"
     $ spaceshiptype = spaceshiptype_bak
+    $ surface_boat = False
     #"[spaceshiptype]"
 
     

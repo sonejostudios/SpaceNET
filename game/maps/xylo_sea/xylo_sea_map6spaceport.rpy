@@ -19,6 +19,11 @@ label xylo_map6spaceport:
     show terminalmap:
         anchor (0.5, 0.5)
         pos (468, 425) 
+        
+        
+        
+    # set surface sound back to normal (spaceship)
+    $ surface_boat = False
     
 
     

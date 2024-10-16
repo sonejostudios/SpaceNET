@@ -25,6 +25,8 @@ init:
     $ ingame = False
     $ landing = False
     
+    $ surface_boat = False # if true, boat sound are played instead of surface spaceship sounds
+    
     
 
 #surface
@@ -75,10 +77,11 @@ label surface:
         
     
     # if sea boat trip
-    if xylo_boat_trip == False:
+    if surface_boat == False: # normal spaceship surface
         stop atmo
         call music_intro from _call_music_intro_2
-    else:
+    
+    else: # boat trip surface
         call atmo_sea from _call_atmo_sea_3
         call atmo_boat from _call_atmo_boat
         

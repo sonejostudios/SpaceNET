@@ -23,6 +23,8 @@ label surface_xylo_sea:
     
     $ planet = "xylo_sea"
     
+    $ surface_boat = True # set surface to boat surface (boat sounds)
+    
     
 
     

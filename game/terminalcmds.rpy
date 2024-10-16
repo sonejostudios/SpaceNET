@@ -25,8 +25,8 @@ init:
 
 
 label term_commands:
-    
     call sound_beep from _call_sound_beep_14
+    $ termtext = termtext.lower()
     
 
 # command home
@@ -45,7 +45,7 @@ label term_commands:
     Commands:
     locate = search in the space databank.
     home = show this screen.
-    More: exit, login, cheat, reboot, sos...
+    More: exit, login, cheat, reboot, ssh, sos...
     
     Phone:
     You can also make phone calls. For this,
@@ -99,14 +99,14 @@ label term_commands:
         
         python:
             io11_pass_entry = renpy.input(_("Satellite Remote Control Password:"))
-            io11_pass_entry = io11_pass_entry.strip()
+            io11_pass_entry = io11_pass_entry.strip().lower()
             if not io11_pass_entry:
                 io11_pass_entry = ""
                 
         
         
         
-        if io11_pass_entry == io11_pass:
+        if io11_pass_entry.lower() == io11_pass.lower():
             while True:
                 $ showtext = """
     Satellite io-11
@@ -822,11 +822,31 @@ label term_commands:
         jump terminal
         
         
+
+
+# command ssh
+    if termtext == "ssh":
+        
+        $ showtext = """
+    ssh
+    [ascii_line]
+
+    ssh = remote control other computers.
+    
+    Usage:
+        ssh 'remote_computer_name'
+
+    """
+            
+        show text Text(showtext,text_align=termtext_align) at termtextpos
+        jump term_menu
+
+
         
 
 
 # command ssh isc
-    if termtext == "ssh isc" : 
+    if termtext == "ssh isc": 
         call sound_connected from _call_sound_connected_20
         $ showtext = """
     ssh isc
@@ -1027,6 +1047,11 @@ label term_commands:
             
 
 
+
+
+
+
+
 # cargo mission reminder
     if termtext == "111999" :
         $ showtext = """
@@ -1106,47 +1131,6 @@ label term_commands:
 
 
     
-#~     if termtext == "sarah" : 
-#~         call sound_connected
-#~         $ showtext = """
-#~     identify [termtext]
-#~     [ascii_line]
-    
-#~     Name: Sarah C.
-#~     Age: 28
-#~     Height: 1.60m
-#~     Weight: 65kg
-#~     Hair: Brown
-#~     Eyes: Blue
-#~     Married: No
-#~     Children: None
-#~     Profession: Vendor
-#~     Works at: [xylo_village_name]
-#~     Registered at: [xylo_village_name], Xylo Sea
-#~     Spaceship Driving License: No
-#~     Located at: [xylo_village_name]
-
-#~     """
-#~         show text Text(showtext,text_align=termtext_align) at termtextpos
-        
-#~         image vendor_xylo = "sides/vendor.png"
-#~         show vendor_xylo:
-#~             anchor (1.0,0.0)
-#~             pos (500, 105)
-        
-#~         menu:
-#~             "Delete":
-#~                 call sound_electroshock
-#~                 with hpunch
-#~                 "Error!{w=2} {nw}"
-#~                 jump term_commands
-#~             "Back":
-#~                 hide vendor_xylo
-#~                 jump terminal
-        
-
-
-
 
 
 

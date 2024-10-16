@@ -50,7 +50,12 @@ init:
     "module": "hyperspace module",
     "cord": "cord",
     "magnetcord": "cord with a magnet",
-    "asteroid": "asteroid piece" }
+    "asteroid": "asteroid piece",
+        
+    "wood": "driftwood",
+    "lighter": "lighter",
+    "batterywet": "wet battery",
+    "batterydry": "dry battery" }
     
     
     

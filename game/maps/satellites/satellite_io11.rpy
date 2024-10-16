@@ -166,7 +166,7 @@ label satellite_io11_computer:
         "Reset password" if io11_pass == "none":
             python:
                 io11_pass = renpy.input(_("Enter a new password:"))
-                io11_pass = io11_pass.strip()
+                io11_pass = io11_pass.strip().lower()
                 if not io11_pass:
                     io11_pass = "none"
             

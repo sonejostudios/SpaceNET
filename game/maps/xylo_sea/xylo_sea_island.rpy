@@ -300,7 +300,7 @@ label loop_xylo_sea_island:
                         m "I need to repair the battery, not the boat. {w=3.5} {nw}"
                         $ inventory_select = ""
                     else:
-                        call dialog_nosense
+                        call dialog_nosense from _call_dialog_nosense_85
                     
                 elif inventory_select == "batterywet":
                     m "The battery is empty... and wet. {w=3} {nw}"

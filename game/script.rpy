@@ -474,10 +474,10 @@ init :
     $ demo_version = False
     
     ## The version of the game.
-    define config.version = "1.13.0"
+    define config.version = "1.13.4"
     
     # build date. Set date for release.
-    $ build_date = "2021-12-05"
+    $ build_date = "2024-10-16"
     
     # game name
     define config.name = "SpaceNET"
